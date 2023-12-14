@@ -125,7 +125,7 @@ input.render = function (type, data, regexp) {
   switch (type) {
     case "textfield":
       if (data.length > 3 && data[3]) {
-        params.value = data[3];
+        params.placeholder = data[3];
       }
       html += `<div class="govuk-form-group">
       <label class="govuk-label" for="${params.id}">
