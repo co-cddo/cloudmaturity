@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - "v*.*.*"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - uses: actions/setup-node@8f152de45cc393bb48ce5d89d36b731f54556e65 # v4.0.0
+        with:
+          node-version-file: ".nvmrc"
+      - run: npm install
+      - run: npm run build
+
+      - name: Tar files
+        run: tar -cf site.tar ./_site
+      - uses: actions/upload-artifact@a8a3f3ad30e3422c9c7b888a15615d19a852ae32 # v3.1.3
+        with:
+          name: site.tar
+          path: site.tar
+
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    needs:
+      - build
+    if: ${{ github.ref == 'refs/heads/main' }}
+    steps:
+      - uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a # v3.0.2
+        with:
+          name: site.tar
+      - name: Untar files
+        run: tar -xf site.tar _site
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@373f7f263a76c20808c831209c920827a82a2847 # v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./_site
+
+  semver:
+    name: Generate a semantic version number
+    runs-on: ubuntu-latest
+    outputs:
+      semantic_version: ${{ steps.semver.outputs.semantic_version }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+        with:
+          fetch-depth: "0"
+      - name: Semver run
+        id: semver
+        uses: lukaszraczylo/semver-generator@129acb3cfe8e9d244d19e93eecbaf04a2636425c # 1.10.160
+        with:
+          config_file: .github/semver.yaml
+          repository_local: true
