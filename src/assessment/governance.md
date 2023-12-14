@@ -1,11 +1,9 @@
 ---
 layout: sub-navigation
-order: 4
-title: Security
+order: 5
+title: Governance
 eleventyNavigation:
   parent: Assessment
 ---
-
-TODO: insert GovAssure or excerpt from?
 
 {% include 'nextAssessmentButton.njk' %}
