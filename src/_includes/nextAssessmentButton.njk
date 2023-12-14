@@ -1,0 +1,17 @@
+{% set navPages = collections.ordered | eleventyNavigation("Assessment") %}
+{% set nextEntry = false %}
+{% set foundEntry = false %}
+
+{%- for entry in navPages %}
+{% if nextEntry == true and foundEntry == false %}
+<a href="{{ entry.url }}" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Save and continue
+</a>
+  {% set foundEntry = true %}
+{% endif %}
+
+{% if entry.key == eleventyNavigation.key %}
+  {% set nextEntry = true %}
+{% endif %}
+
+{%- endfor %}
