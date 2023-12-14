@@ -1,0 +1,15 @@
+# node
+node_modules/
+
+# MacOS
+.DS_Store
+
+# build directory
+_site
+
+# sass
+*.map
+
+# remote images
+.cache/
+*.css

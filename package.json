@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "start": "eleventy --serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/co-cddo/cloudmaturity/issues"
   },
-  "homepage": "https://github.com/co-cddo/cloudmaturity#readme"
+  "homepage": "https://github.com/co-cddo/cloudmaturity#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@x-govuk/govuk-eleventy-plugin": "^5.0.7"
+  }
 }
