@@ -167,9 +167,9 @@ input.render = function (type, data, regexp) {
       html += `<div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-          <h1 class="govuk-fieldset__heading">
-          ${label}
-          </h1>
+          <h2 class="govuk-fieldset__heading">
+          ${label.replace("##", "")}
+          </h2>
         </legend>
         <div class="govuk-radios" data-module="govuk-radios">`;
       for (let i = 0; i < options.length; i++) {
