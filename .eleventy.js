@@ -1,8 +1,15 @@
 const govukEleventyPlugin = require("@x-govuk/govuk-eleventy-plugin");
+const markdownItinput = require("./plugins/inputs");
 
 module.exports = function (eleventyConfig) {
-  // Register the plugin
-  eleventyConfig.addPlugin(govukEleventyPlugin);
+  eleventyConfig.addPlugin(govukEleventyPlugin, {
+    header: {
+      productName: "Cloud Maturity Model",
+    },
+  });
+
+  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItinput, {}));
+  eleventyConfig.addPassthroughCopy("./src/assets");
 
   return {
     dataTemplateEngine: "njk",
