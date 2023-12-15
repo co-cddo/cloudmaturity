@@ -7,7 +7,7 @@ image:
   src: /assets/cloud_maturity_illustration.png
   alt: Cloud Maturity Model.
 startButton:
-  href: /assessment
+  href: /assessment/
 eleventyComputed:
   title: Cloud Maturity Model and Assessment Tool
 ---
