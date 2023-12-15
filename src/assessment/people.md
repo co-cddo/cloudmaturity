@@ -1,6 +1,5 @@
 ---
 layout: sub-navigation
-order: 2
 title: People
 eleventyNavigation:
   parent: Assessment
