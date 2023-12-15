@@ -11,6 +11,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItinput, {}));
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
+  eleventyConfig.addPassthroughCopy({
+    "./node_modules/govuk-frontend/dist/govuk/assets/images": "./assets/images",
+    "./node_modules/govuk-frontend/dist/govuk/assets/fonts": "./assets/fonts",
+  });
 
   return {
     pathPrefix: process.env.PATH_PREFIX || "/",
