@@ -20,7 +20,7 @@ jobs:
         with:
           node-version-file: ".nvmrc"
       - run: npm install
-      - run: npm run build
+      - run: PATH_PREFIX=/cloudmaturity/ npm run build
 
       - name: Tar files
         run: tar -cf site.tar ./_site

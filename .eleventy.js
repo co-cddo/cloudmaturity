@@ -13,6 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
   return {
+    pathPrefix: process.env.PATH_PREFIX || "/",
     dataTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
