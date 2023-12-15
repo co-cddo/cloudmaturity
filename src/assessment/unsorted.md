@@ -8,13 +8,22 @@ eleventyNavigation:
 
 
 
-## Sponsorship: What type of executive sponsorship do you have for a 100% cloud adoption?[radios] = 
+## What type of executive sponsorship do you have for a 100% cloud adoption?[radios] = 
 
 () No executive sponsorship.
 () Sponsorship is from senior management.
 () Sponsorship is from one or more C-level executives.
 () Comprehensive C-level sponsorship with a shared roadmap for cloud adoption and migration.
 () Comprehensive C-level sponsorship consistently sets the tone for a culture of cloud-first adoption across the organization as well as experimentation and innovation within teams.
+
+## What are the success criteria for your cloud team?[radios] = 
+
+() No defined success criteria.
+() Successful outcomes include completion of either proofs of concept or 'minimum viable cloud/platform' efforts.
+() Successful outcomes and goals include putting one or more workloads into production.
+() Successful outcomes include scaling prototypes to operating the core technical services in the cloud that are consumed by business-critical applications.
+() The organization has success criteria that encourages cloud-based innovation and experimentation, and that ensures the creation of value through transformation initiatives aligned with the organization’s goals and strategy.
+
 
 ## Which of the following is your predominant means of provisioning cloud services?[radios] = 
 
