@@ -4,12 +4,13 @@ const markdownItinput = require("./plugins/inputs");
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
-      productName: "Cloud Maturity Model",
+      productName: `Cloud Maturity Model <strong class="govuk-tag govuk-phase-banner__content__tag">Alpha</strong>`,
     },
   });
 
   eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItinput, {}));
   eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy("./src/robots.txt");
 
   return {
     dataTemplateEngine: "njk",
