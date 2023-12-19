@@ -63,7 +63,60 @@ eleventyNavigation:
 () Most workloads are deployed in long-running VMs, right-sizing only increases the compute demand. There is some limited experimentation with containers or function-based services for noncritical workloads.
 () Some production workloads running in containers or function-based compute. There is some ad-hoc use of short-lived VMs based on workload characteristics and these are right-sized with no default VM size.
 () Regularly use short-lived VMs or containers. There is some use of function-based compute services or containers.
-() The selection of cloud services is driven by a 'fit for purpose' approach, rigorous right-sizing is continually applied, evaluation of solution is SaaS > FaaS > Containers as a Service > Platform/orchestrator as a Service > Infra as a Service.
+() The selection of cloud services is driven by a 'fit for purpose' approach, rigorous right-sizing is continually applied, evaluation of solution is exactly: SaaS > FaaS (serverless) > Containers as a Service > Platform/orchestrator as a Service > Infra as a Service.
+
+## How does the shared responsibility model factor in to your cloud consumption?[radios] =
+() .
+() .
+() .
+() .
+() The shared responsibility model is a critical factor taken into decision making for cloud consumption and regularly revisited to ensure the best value for money is being sought from the cloud vendor.
+
+
+## Builds and deployments: How do you ensure that your applications are built and deployed in a timely manner?[radios] =
+() .
+() .
+() .
+() .
+() .
+
+## How are build artifacts created and stored ?[radios] =
+() .
+() .
+() .
+() All dependencies are tightly pinned to a specific version with cryptographic signing or hashes.
+() Immutable build artifacts are created and cryptographically signed at least all artifacts that are deployed to production are kept in immutable storage for a 
+
+## How would you describe your branch strategy?[radios] =
+() Limited use of version control
+() .
+() .
+() Using a text book implementation of GitFlow
+() Using a text book implementation of GitHubFlow
+
+
+## How would you describe your deployment + QA pipeline?[radios] =
+() Manual scheduled QA process
+() .
+() .
+() .
+() Short lived ephemeral environments provisioned on demand
+
+## Cloud Management[radios] =
+() Manual clickops, manual documentation of steps followed is captured.
+() .
+() .
+() .
+() Fully managed by code with continual automated drift detection alerts in place and treated as significant incidents.
+
+## How do you manage updating the access policies and controls and communicating that?[radios] =
+() .
+() .
+() .
+() .
+() .
+
+
 
 
 {% include 'nextAssessmentButton.njk' %}

@@ -11,7 +11,7 @@ eleventyNavigation:
 () Training certifications and budget are supported at the discretion of managers, while team-level training goals are defined but not consistently monitored or reported.
 () Training certifications are strongly supported with allocated budgets and managerial encouragement, while team-level training goals are consistently defined, tracked, and reported at the corporate level.
 () Relevant certifications are recommended based on roles, incorporated into personal development plans, and individuals are encouraged to self-assess their progress against role-specific targets, in addition to team-level goals.
-() Employees completing certifications are rewarded with merit incentives in addition to receiving guidance and formalized development plans, and they also undergo periodic formal role-specific assessments. Badges are collected and published to XXX
+() Employees completing certifications are rewarded with merit incentives in addition to receiving guidance and formalized development plans, and they also undergo periodic formal role-specific assessments. Badges are collected and published to TODO: XXX
 
 ## How are you hiring individuals with cloud experience into your organization?[radios] = 
 
