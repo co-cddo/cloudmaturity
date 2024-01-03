@@ -5,7 +5,7 @@ eleventyNavigation:
   parent: Assessment
 ---
 
-## How do you track and drive the completion of training and certification goals?[radios] = 
+## -How do you track and drive the completion of training and certification goals?[radios] = 
 
 () No formal support for certification or training goals or targets are defined.
 () Training certifications and budget are supported at the discretion of managers, while team-level training goals are defined but not consistently monitored or reported.
@@ -13,7 +13,7 @@ eleventyNavigation:
 () Relevant certifications are recommended based on roles, incorporated into personal development plans, and individuals are encouraged to self-assess their progress against role-specific targets, in addition to team-level goals.
 () Employees completing certifications are rewarded with merit incentives in addition to receiving guidance and formalized development plans, and they also undergo periodic formal role-specific assessments. Badges are collected and published to TODO: XXX
 
-## How are you hiring individuals with cloud experience into your organization?[radios] = 
+## -How are you hiring individuals with cloud experience into your organization?[radios] = 
 
 () No job postings require candidates to have prior cloud experience.
 () Some job postings require candidates to have prior cloud experience.
@@ -21,7 +21,7 @@ eleventyNavigation:
 () In addition to job postings requiring cloud experience, some existing roles have been reviewed and, where needed, updated to reflect the requirements of a cloud-first IT organization.
 () In addition to all job postings requiring cloud experience, all existing roles have been reviewed and, where needed, updated to reflect the new requirements of a cloud-first IT organization.
 
-## How are you developing individuals with limited/no cloud experience into your organization to work on cloud initiatives?[radios] =
+## -How are you developing individuals with limited/no cloud experience into your organization to work on cloud initiatives?[radios] =
 
 () TODO: No accommodation is made for individuals with limited/cloud experience.
 ()
@@ -30,7 +30,7 @@ eleventyNavigation:
 () There is a mature apprenticeship or bootcamp program for individuals with limited/cloud experience that is providing accelerated learning and development to existing non-digital civil servants with significant aftercare support to continue their development and ensure the longevity of the investment.
 
 
-## To what extent are third parties (non civil/public servants) used in the development and support of the organization's cloud initiatives?[radios] = 
+## -To what extent are third parties (non civil/public servants) used in the development and support of the organization's cloud initiatives?[radios] = 
 
 () Third parties are relied upon to deliver all cloud work, and these parties have full access to the entire cloud account[s].
 () Third parties are relied upon to deliver some cloud work, and they have full access to the entire cloud account[s].
