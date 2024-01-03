@@ -20,7 +20,7 @@ TODO: insert GovAssure baseline? or excerpt from?
 () **Basic Dependency Management:** Dependencies and their versions are set when added to a project and are updated only during major releases or in response to high-profile advisories.
 () **Ad-Hoc Monitoring with Tools:** Some teams use tools to monitor supply chain security in an ad-hoc manner, scanning dependency manifests and applying updates periodically in line with project releases.
 () **Proactive Remediation Across Repositories:** All repositories are monitored, with proactive remediation steps automatically created. Updates are applied periodically, aligning with project release schedules.
-() **Centralized Monitoring and Risk Management:** A centralized Security Operations Center (SOC) maintains an aggregate view of all repositories, informing the organization's overarching risk posture and coordinating high-severity issue remediation.
+() **Centralized Monitoring and Risk Management:** A centralized Security Operations Center [SOC] maintains an aggregate view of all repositories, informing the organization's overarching risk posture and coordinating high-severity issue remediation.
 () **Context-Aware Triage and Focused Remediation:** In addition to centralized monitoring, the system automatically triages issues based on the context of dependency usage, focusing on the most critical issues and minimizing false positives.
 
 ## How does your organization monitor and manage threats, vulnerabilities, and misconfigurations?[radios] =
@@ -29,15 +29,7 @@ TODO: insert GovAssure baseline? or excerpt from?
 () **Participation in Responsible Disclosure Platforms:** Active participation in well-known responsible disclosure platforms to facilitate external reporting of vulnerabilities.
 () **Automated Scanning and Regular Assessments:** Implementation of automated tools for scanning vulnerabilities and misconfigurations, combined with regular security assessments.
 () **Proactive Threat Hunting and Incident Response:** Proactive threat hunting practices are in place. Incident response teams rapidly address identified threats and vulnerabilities, with some degree of automation in responses.
-() **Comprehensive Security Operations with Red/Purple Teams:** Utilization of red teams (offensive security) and purple teams (combined offensive and defensive) for a full-spectrum security assessment. An empowered Security Operations Center (SOC) conducts annual and major change-based Integrated Technical Health Checks (ITHC). Analysts prioritize and coordinate remediation of high-severity issues, with many mitigation actions automated and event-triggered.
-
-## -How do you monitor, evaluate, manage, and improve the effectiveness of your security and privacy programs?[radios] =
-
-() .
-() .
-() .
-() .
-() .
+() **Comprehensive Security Operations with Red/Purple Teams:** Utilization of red teams [offensive security] and purple teams [combined offensive and defensive] for a full-spectrum security assessment. An empowered Security Operations Center [SOC] conducts annual and major change-based Integrated Technical Health Checks [ITHC]. Analysts prioritize and coordinate remediation of high-severity issues, with many mitigation actions automated and event-triggered.
 
 ## How does your organization handle user provisioning for cloud systems, focusing on authentication for human users?[radios] =
 
@@ -55,15 +47,13 @@ TODO: insert GovAssure baseline? or excerpt from?
 () **Ephemeral Identities with Attestation:** Service accounts do not use long-lived secrets; instead, identity is established dynamically based on attestation mechanisms.
 () **Code-Managed Identities with Federated Trust:** Identities for non-human services are managed as part of the infrastructure-as-code paradigm, allowing seamless federation across the organization without needing point-to-point trust relationships.
 
-
 ## How does your organization authenticate and manage user identities?[radios] =
 
 () **Basic or No Identity Policies:** There are limited or no organization-wide identity policies, such as password policies, with minimal audit or enforcement mechanisms to ensure compliance.
 () **Manual Identity Policy Enforcement:** While a common set of identity policies may exist, their enforcement and audit rely on manual efforts, such as retrospective analysis of logs or reports.
 () **Partially Automated Identity Management:** Organization-wide identity policies, including 2FA/MFA for privileged accounts, are in place. Audit and enforcement processes are partially automated.
-() **Advanced and Mostly Automated Identity Management:** Centralized identity policies and audit procedures, possibly including 2FA/MFA for all users and leveraging Single Sign-On (SSO). Most audit and enforcement activities are automated.
+() **Advanced and Mostly Automated Identity Management:** Centralized identity policies and audit procedures, possibly including 2FA/MFA for all users and leveraging Single Sign-On [SSO]. Most audit and enforcement activities are automated.
 () **Fully Centralized and Automated Identity Management:** Comprehensive, fully centralized identity policies and audit procedures with complete automation in enforcement. Policies encompass enterprise-standard MFA and SSO. Automated certification processes for human users and system accounts are in place, especially for accessing sensitive data, along with on-demand reporting capabilities.
-
 
 ## TODO: add a question about single source of identity or multiple?
 
@@ -72,45 +62,47 @@ TODO: insert GovAssure baseline? or excerpt from?
 () **Basic User/Pass Credentials:** Non-human service accounts are managed using basic ID/secret pair credentials, with a user/password approach.
 () **API Key Usage:** Non-human service accounts are authenticated using API keys, which are less dynamic and might have longer lifespans.
 () **Centralized Secret Store with Some Credential Rotation:** A central secret store is in place, possibly supporting automated rotation of credentials for some systems, enhancing security and management efficiency.
-() **Mutual TLS for Authentication:** Mutual Transport Layer Security (mTLS) is used for non-human service accounts, providing a more secure, certificate-based authentication method.
+() **Mutual TLS for Authentication:** Mutual Transport Layer Security [mTLS] is used for non-human service accounts, providing a more secure, certificate-based authentication method.
 () **Short-Lived, Federated Identities with Strong Verification:** Non-human service accounts use short-lived, federated identities that are strongly verifiable and validated with each request, ensuring a high level of security and minimizing the risk of credential misuse.
 
-## -How do you think about network architecture for security?[radios] =
+## What approach does your organization take towards network architecture for security?[radios] =
 
-() Reliance is primarily on the network [e.g. IP-based allow-lists and firewall rules] to establish a secure logical perimeter around all hosted data and apps.
-() The network-based security perimeter is enhanced by a mechanism to verify user identity in the context of a request.
-() The network-based security perimeter is enhanced by a mechanism to verify user or service identity in the context of a request.
-() The network-based security perimeter is replaced in some parts by a mechanism to verify user and service identity in the context of a request, resulting in less reliance on VPN for secure access.
-() No reliance on a network-based security perimeter and/or VPN. Access controls are created around individual devices and users with strong attestations required to establish trust.
+() **Traditional Network Perimeter Security:** Security relies primarily on network-level controls like IP-based allow-lists and firewall rules to create a secure perimeter around hosted data and applications.
+() **Network Security with Basic Identity Verification:** The traditional network-based security perimeter is supplemented with mechanisms to verify user identity within the context of access requests.
+() **Enhanced Identity Verification:** Security includes verification of both user and service identities in the context of requests, augmenting the network-based security perimeter.
+() **Partial Shift to Identity-Centric Security:** In some areas, the network-based security perimeter is replaced by robust identity verification mechanisms for users and services, reducing the reliance on VPNs for secure access.
+() **No Reliance on Network Perimeter or VPN:** The organization has moved away from a network-based security perimeter. Access control is centered around individual devices and users, requiring strong attestations for trust establishment.
 
+## How does your organization ensure that users have appropriate permissions aligned with their roles?[radios] =
 
-## -How do you make sure that the users have the right permissions for their role? (NB excluding privileged escalated access management as covered above)[radios] =
+() **Ad-Hoc and Informal Review Process:** User entitlements and profiles are reviewed in an ad-hoc, informal manner with administrators manually managing these as they see fit.
+() **Periodic Manual Reviews with Limited Action:** Periodic manual reviews of access rights are conducted for some systems, but access is rarely revoked or reduced due to concerns about unintended consequences.
+() **Regular Manual Reviews, Primarily Additive:** Regular, manual reviews of access rights are conducted across most systems. However, changes to access are generally additive rather than reductive.
+() **Regular Reviews with Defined Expiry Dates:** Access is regularly reviewed, certified, and remediated. Role allocations include defined expiry dates, necessitating review and re-certification.
+() **Automated, Risk-Based Access Reviews:** Fully integrated, automated reviews ensure users have permissions appropriate to their roles. Access rights are dynamically adjusted based on role changes or review outcomes. Both access roles and their allocations have expiry dates for mandatory review and re-certification.
 
-() Entitlements and profiles are reviewed informally and in an ad hoc manner. Informal processes with administrators manually managing these entitlements and profiles as they see fit.
-() Periodic manual access reviews take place for some systems, access is very seldom revoked or reduced through fear of unintended consequences.
-() Regular access reviews take place across the majority of systems, though these are still manual, access still generally additive rather then reductive.
-() Access is reviewed and certified on a regular basis and remediated. On-demand reports are used to identify violators. All role allocations are reviewed have a defined expiry date after which the role needs to be reviewed/re-certified. 
-() Fully integrated, automated, risk-based reviews make sure that users have appropriate permissions for their roles, and access rights are removed in near-real-time based on role changes or review feedback. Access roles [groups of permissions] themselves in addition to the allocations have an expiry date after which the role itself needs to be reviewed/re-certified.
+## What is your organization's approach to implementing 2FA/MFA for securing access?[radios] =
 
-## -2FA/MFA:[radios] =
-() TODO: 2FA/MFA is broadly encouraged in guidance but not enforced or required in practice.
-() 2FA/MFA is mandated for all services and users though not consistently enforced.
-() .
-() Weaker forms of 2FA/MFA that are susceptible to sim swapping attacks such as SMS/phone are not permitted.
-() Any non SSO services that do not support 2FA/MFA are eliminated. Hardware based MFA keys are centrally managed and distributed.
+() **Encouraged but Not Enforced:** 2FA/MFA is broadly recommended in organizational guidelines, but it is not mandatory or consistently enforced across services and users.
+() **Mandated but Inconsistently Enforced:** 2FA/MFA is a requirement for all services and users, but enforcement is inconsistent and may have gaps.
+() **Uniform Enforcement with Some Exceptions:** 2FA/MFA is uniformly enforced across all services and users, with only a few exceptions based on specific use cases or risk assessments.
+() **Prohibition of Vulnerable 2FA/MFA Methods:** Stronger 2FA/MFA methods are enforced, explicitly excluding forms vulnerable to attacks like SIM swapping [e.g., SMS/phone-based methods].
+() **Stringent 2FA/MFA with Hardware Key Management:** Only services supporting robust 2FA/MFA are used. Hardware-based MFA keys are centrally managed and distributed, ensuring high-security standards for authentication.
 
-## -How do you handle risk management?[radios] =
-() TODO:
-() Ad-hoc spreadsheets to track risks on a project/program level
-() .
-() .
-() A shared risk management tool is in place that allows risks to be tracked across multiple projects/programs, supporting informed prioritization and proactively escalates un acceptable risk
+## How does your organization manage risks?[radios] =
 
-## -How do you mitigate against privileged internal threat actors?[radios] =
-() All users with privileged access are subject to Internal/UKSV or supplier/contractual vetting.
-() Audit log requirements are made of systems as an non-functional requirement, but no technical control or centralization is made.
-() Local audit log presences are checked as part of an ITHC or other go live process, but may not be routinely monitored.
-() Immutable system audit logs are kept centrally, their integrity is continually assured and the audit process is automated. Retention is defined and automated.
-() Regular spot check exercises are carried out with the help of auditors and lawyers to assure the integrity, completeness and accuracy of logs and that they would be admissible as key evidence in a criminal prosecution.
+() **Basic and Informal Risk Management:** Risk management is carried out in a basic and informal manner, often relying on individual judgement without structured processes.
+() **Ad-Hoc Spreadsheets for Risk Tracking:** Risks are tracked using ad-hoc spreadsheets at the project or program level, without a standardized or centralized system.
+() **Formalized Risk Registers with Periodic Reviews:** Formal risk registers are maintained for projects or programs, with risks reviewed and updated on a periodic basis.
+() **Integrated Risk Management with Central Oversight:** A centralized risk management system is used, integrating risks from various projects or programs, with regular updates and reviews.
+() **Advanced Risk Management Tool with Proactive Escalation:** A shared, advanced risk management tool is in place, allowing for tracking and managing risks across multiple projects or programs. This system supports informed prioritization and proactively escalates unacceptable risks.
+
+## How does your organization mitigate risks associated with privileged internal threat actors?[radios] =
+
+() **Vetting of Privileged Users:** All users with privileged access undergo thorough internal vetting [Internal/UKSV] or are vetted according to supplier/contractual requirements.
+() **Audit Logs as a Non-Functional Requirement:** Systems are required to maintain audit logs, although these logs lack technical controls for centralization or comprehensive monitoring.
+() **Local Audit Log Checks During Assessments:** Local audit log presence is verified as part of Integrated Technical Health Checks [ITHC] or other pre-launch processes, but routine monitoring may be absent.
+() **Centralized, Immutable Audit Logs with Automated Monitoring:** Immutable system audit logs are centrally stored. Their integrity is continuously assured, and the auditing process is automated. Log retention is defined and enforced automatically.
+() **Regular Audits and Legal Compliance Checks:** Regular spot-check exercises are conducted with the assistance of auditors and legal experts. These checks ensure the integrity, completeness, and legal admissibility of logs as key evidence in potential criminal prosecutions.
 
 {% include 'nextAssessmentButton.njk' %}
