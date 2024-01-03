@@ -70,6 +70,7 @@ input.render = function (type, data, regexp) {
   delete params.options;
 
   var label = "";
+  var enabled = true;
 
   var name = type;
   if (type == "textarea") {
@@ -164,11 +165,16 @@ input.render = function (type, data, regexp) {
       }
       break;
     case "radio":
+      label = label.replace("##", "").trim();
+      if (label.charAt(0) === "-") {
+        label = label.substring(1);
+        enabled = false;
+      }
       html += `<div class="govuk-form-group">
       <fieldset class="govuk-fieldset">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
           <h2 class="govuk-fieldset__heading">
-          ${label.replace("##", "")}
+          ${label}
           </h2>
         </legend>
         <div class="govuk-radios" data-module="govuk-radios">`;
@@ -177,12 +183,10 @@ input.render = function (type, data, regexp) {
         if (!optionsParams[i].id)
           optionsParams[i].id =
             input.prefix + input.sanitize(name + "-" + options[i]);
-
+        if (!enabled) optionsParams[i].disabled = true;
         html += `<div class="govuk-radios__item">
         ${input.addAttributes(
-          '<input class="govuk-radios__input" type="radio" name="' +
-            name +
-            '">',
+          `<input class="govuk-radios__input" type="radio" name="${name}">`,
           optionsParams[i]
         )}
         <label class="govuk-label govuk-radios__label" for="${
