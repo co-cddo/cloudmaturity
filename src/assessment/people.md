@@ -21,6 +21,15 @@ eleventyNavigation:
 () In addition to job postings requiring cloud experience, some existing roles have been reviewed and, where needed, updated to reflect the requirements of a cloud-first IT organization.
 () In addition to all job postings requiring cloud experience, all existing roles have been reviewed and, where needed, updated to reflect the new requirements of a cloud-first IT organization.
 
+## How are you developing individuals with limited/no cloud experience into your organization to work on cloud initiatives?[radios] =
+
+() TODO: No accommodation is made for individuals with limited/cloud experience.
+()
+()
+()
+() There is a mature apprenticeship or bootcamp program for individuals with limited/cloud experience that is providing accelerated learning and development to existing non-digital civil servants with significant aftercare support to continue their development and ensure the longevity of the investment.
+
+
 ## To what extent are third parties (non civil/public servants) used in the development and support of the organization's cloud initiatives?[radios] = 
 
 () Third parties are relied upon to deliver all cloud work, and these parties have full access to the entire cloud account[s].

@@ -49,4 +49,13 @@ eleventyNavigation:
 () A comprehensive understanding exists of data location, classification, and sensitivity. This information is regularly reviewed for compliance. Data lineage is broadly understood, but not reliably documented.
 () A data catalog exists, which documents what data the organization holds and the metadata that describes it. A business-friendly glossary outlining the source of the data, quality metrics and use cases exists. Tracking of data lineage (history of source, distribution, branching and modification) is in place.
 
+## Data Management: How do you mitigate against data breaches (exfiltration/corruption/deletion/non-availability)?[radios] =
+
+() Data access is manually classified.
+() Centralized standard set of policies and controls in place to prevent unauthorized access.
+() Centralized standard set of policies and controls with limited monitoring for exfiltration.
+() Risk is mitigated by implementing preventative, detective, and corrective controls and policies. Anomaly detection and correction is automated with a portfolio of platforms and tools.
+() Fully automated, preventative controls and anomaly detection, along with proactive monitoring, access review processes and regular auditing.
+  
+
 {% include 'nextAssessmentButton.njk' %}

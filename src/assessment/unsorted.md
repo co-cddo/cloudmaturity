@@ -103,7 +103,7 @@ eleventyNavigation:
 () Short lived ephemeral environments provisioned on demand
 
 ## Cloud Management[radios] =
-() Manual clickops, manual documentation of steps followed is captured.
+() Manual click-ops, manual documentation of steps followed is captured.
 () .
 () .
 () .
@@ -116,6 +116,19 @@ eleventyNavigation:
 () .
 () .
 
+## How are you leveraging your cloud provider(s) to develop your capabilities and services as a strategic partnerships?[radios] =
+() .
+() .
+() .
+() .
+() .
+
+## How are you able to gain real-time insights and answer questions about your business?[radios] = 
+() .
+() .
+() .
+() .
+() .
 
 
 

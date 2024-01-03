@@ -102,4 +102,11 @@ TODO: insert GovAssure baseline? or excerpt from?
 () .
 () A shared risk management tool is in place that allows risks to be tracked across multiple projects/programs, supporting informed prioritization and proactively escalates un acceptable risk
 
+## How do you mitigate against privileged internal threat actors?[radios] =
+() All users with privileged access are subject to Internal/UKSV or supplier/contractual vetting.
+() Audit log requirements are made of systems as an non-functional requirement, but no technical control or centralization is made.
+() Local audit log presences are checked as part of an ITHC or other go live process, but may not be routinely monitored.
+() Immutable system audit logs are kept centrally, their integrity is continually assured and the audit process is automated. Retention is defined and automated.
+() Regular spot check exercises are carried out with the help of auditors and lawyers to assure the integrity, completeness and accuracy of logs and that they would be admissible as key evidence in a criminal prosecution.
+
 {% include 'nextAssessmentButton.njk' %}

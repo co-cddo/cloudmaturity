@@ -19,5 +19,11 @@ eleventyNavigation:
 () Cloud teams leverage standard approaches and patterns established by the Cloud COE. Cross-functional roles are common in development teams.
 () The Cloud COE has evolved into an operating model consisting of fully autonomous and cross-functional teams with experts across all necessary technology and process domains.
 
+## How are you observing your cloud infrastructure and application data?[radios] = 
+() .
+() .
+() .
+() .
+() Single pane of glass with actionable insights from your infrastructure and application data
 
 {% include 'nextAssessmentButton.njk' %}
