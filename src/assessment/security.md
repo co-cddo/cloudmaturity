@@ -7,29 +7,29 @@ eleventyNavigation:
 
 TODO: insert GovAssure baseline? or excerpt from?
 
-## -What is your approach to privileged access management?[radios] =
+## What is your organization's approach to managing privileged access?[radios] =
 
-() Privileged credentials are managed ad hoc by system administrators.
-() Technology controls are in place to support centralized processes with initial password and key vaulting, integrated logs, and policy-based activities.
-() Identity administration controls and processes for privileged access and use of one-time passwords exist.
-() Automated, risk-based workflows and controls to grant privileged access into cloud environments, with a consistent platform-wide monitoring strategy.
-() Just-in-time privileges – using context to determine system access (i.e., time-based emergency break-glass access to perform critical maintenance). Real-time alerting of policy exceptions.
+() **Ad-Hoc Management by Administrators:** Privileged credentials are managed on an ad-hoc basis by individual system administrators, without standardized processes.
+() **Centralized Controls with Basic Vaulting:** Technology controls are in place for centralized management, including initial password and key vaulting, integrated logs, and policy-based activities.
+() **Structured Identity Administration with OTPs:** Identity administration controls and processes are established for managing privileged access, including the use of one-time passwords [OTPs].
+() **Automated Risk-Based Access Control:** Privileged access is managed through automated, risk-based workflows and controls. This includes consistent monitoring across cloud platforms.
+() **Context-Aware Just-in-Time Privileges:** Access is granted on a just-in-time basis, using contextual factors to determine necessity [e.g., time-based access for critical tasks]. Real-time alerting is in place for policy exceptions.
 
-## -How do you monitor and remediate supply chain security?[radios] =
+## How does your organization monitor and manage security within its software supply chain?[radios] =
 
-() Dependencies and versions are defined at when added to the project and only updated inline with overarching project releases when there are bug fixes provided or high profile advisories issued.
-() Some teams use tools to monitor and remediate supply chain security ad hoc, by scanning the repositories dependency manifests, updates are periodically applied in line with overarching project releases.
-() All repositories are monitored with proactive remediations automatically created. Updates are periodically applied in line with overarching project releases.
-() All repositories are monitored and an aggregate view visible to a empowered centralized SOC that is informing the overarching risk position of the organization, and capable of prioritizing and then coordinating remediation for high severity issues.
-() In addition to above, the aggregate view is automatically triaged based on the context of where and how the dependency is used in order to focus attention on the most relevant critical issues and avoid the risk of false positives.
+() **Basic Dependency Management:** Dependencies and their versions are set when added to a project and are updated only during major releases or in response to high-profile advisories.
+() **Ad-Hoc Monitoring with Tools:** Some teams use tools to monitor supply chain security in an ad-hoc manner, scanning dependency manifests and applying updates periodically in line with project releases.
+() **Proactive Remediation Across Repositories:** All repositories are monitored, with proactive remediation steps automatically created. Updates are applied periodically, aligning with project release schedules.
+() **Centralized Monitoring and Risk Management:** A centralized Security Operations Center (SOC) maintains an aggregate view of all repositories, informing the organization's overarching risk posture and coordinating high-severity issue remediation.
+() **Context-Aware Triage and Focused Remediation:** In addition to centralized monitoring, the system automatically triages issues based on the context of dependency usage, focusing on the most critical issues and minimizing false positives.
 
-## -How do you monitor and remediate threats, vulnerabilities and misconfigurations?[radios] =
+## How does your organization monitor and manage threats, vulnerabilities, and misconfigurations?[radios] =
 
-() Instructions on how to responsibly disclose a vulnerability are openly published and responded to promptly.
-() Published participation in a well known responsible disclosure platform.
-() .
-() .
-() Appropriate and ethical use of red teams and purple teams that looks at all exploitable areas of tech, people and process, ITHC conducted annually and on major changes. Empowered SOC analyst teams, risk based prioritization and coordination. SOC analysts are empowered to prioritize, coordinate and execute remediation for high severity issues. With many mitigation actions such as disabling service being automated and event triggered.
+() **Open Vulnerability Disclosure Policy:** Clear instructions for responsible vulnerability disclosure are published, with a commitment to prompt response upon receiving reports.
+() **Participation in Responsible Disclosure Platforms:** Active participation in well-known responsible disclosure platforms to facilitate external reporting of vulnerabilities.
+() **Automated Scanning and Regular Assessments:** Implementation of automated tools for scanning vulnerabilities and misconfigurations, combined with regular security assessments.
+() **Proactive Threat Hunting and Incident Response:** Proactive threat hunting practices are in place. Incident response teams rapidly address identified threats and vulnerabilities, with some degree of automation in responses.
+() **Comprehensive Security Operations with Red/Purple Teams:** Utilization of red teams (offensive security) and purple teams (combined offensive and defensive) for a full-spectrum security assessment. An empowered Security Operations Center (SOC) conducts annual and major change-based Integrated Technical Health Checks (ITHC). Analysts prioritize and coordinate remediation of high-severity issues, with many mitigation actions automated and event-triggered.
 
 ## -How do you monitor, evaluate, manage, and improve the effectiveness of your security and privacy programs?[radios] =
 
@@ -39,37 +39,41 @@ TODO: insert GovAssure baseline? or excerpt from?
 () .
 () .
 
-## -How do you handle user provisioning for cloud systems? (NB this is limited to AuthN for humans)[radios] =
+## How does your organization handle user provisioning for cloud systems, focusing on authentication for human users?[radios] =
 
-() Manual creation, deletion, update and allocation of users and/or system accounts.
-() Organizational identity repository [Active Directory, LDAP, or similar] is leveraged as the source of truth for users, but there are manual and/or inconsistent processes.
-() Common standards and protocols exist to manage and map user identities between identity providers across systems. Services that do not support the federated identity are not preferred during selection process.
-() Federated identity management and synchronization is fully automated and consistent across all systems. Services that do not support the federated identity are isolated and/or mitigations are in place.
-() A fully cloud-based user directory or identity provider is the unified single source of truth, with centralized management of users based on on-boarding/move/termination of users and/or system accounts. Services that do not support the federated identity have been eliminated.
+() **Manual Account Management:** User accounts are manually created, deleted, updated, and assigned, involving significant manual effort and potential for inconsistency.
+() **Identity Repository with Manual Processes:** An organizational identity repository [like Active Directory or LDAP] is used as the user source of truth, but processes for cloud system integration are manual or inconsistent.
+() **Common Standards for Identity Management:** Standardized protocols and practices are in place for managing and mapping user identities between identity providers and cloud systems. Non-compliant services are less preferred.
+() **Automated Federated Identity Management:** Federated identity management is fully automated, ensuring consistent user provisioning across all systems. Non-compliant services are isolated with appropriate mitigations.
+() **Unified Cloud-Based Identity Provider:** A fully cloud-based user directory or identity provider acts as the single source of truth. Centralized management is aligned with user onboarding, movements, and terminations. Services not supporting federated identity have been phased out.
 
-## -How do you handle non-human service account provisioning for cloud systems? (NB this is limited to AuthN for non-humans)[radios] =
+## How does your organization manage authentication for non-human service accounts in cloud systems?[radios] =
 
-() Create normal human accounts for non-human service accounts with long lived credentials shared.
-() Long lived API Keys locally managed at a project/program level
-() A centralized secret store exists for all non-human service accounts and its use is mandated.
-() No secrets are long lived, identity is established on attestation identity 
-() Identities are all locally managed in code with the rest of the infrastructure as code and can seamlessly be used via federated trust across the organization as required without point to point trust relationships being established.
+() **Human-like Accounts for Services:** Non-human service accounts are set up similarly to human accounts, with long-lived credentials that are often shared.
+() **Locally Managed Long-Lived API Keys:** Long-lived API keys are used for service accounts, with management handled locally at the project or program level.
+() **Centralized Secret Store for Service Accounts:** A centralized repository or secret store is in place for all non-human service accounts, and its use is mandatory across the organization.
+() **Ephemeral Identities with Attestation:** Service accounts do not use long-lived secrets; instead, identity is established dynamically based on attestation mechanisms.
+() **Code-Managed Identities with Federated Trust:** Identities for non-human services are managed as part of the infrastructure-as-code paradigm, allowing seamless federation across the organization without needing point-to-point trust relationships.
 
 
-## -How do you authenticate and manage user identities?[radios] =
+## How does your organization authenticate and manage user identities?[radios] =
 
-() Limited/no organization-wide identity policies [e.g., password policies] and audit/enforcement to validate compliance.
-() A common set of identity policies, audit, and enforcement procedures may exist, but these policies rely on manual efforts [e.g. retrospectively manually analyzing logs or reports] to validate user/system account compliance.
-() Org-wide identity policies, audit, and enforcement procedures exist. Identity policies include a 2FA/MFA requirement for privileged accounts. Audit and enforcement may be partially automated.
-() Identity policies and audit procedures are centralized and may include 2FA/MFA requirements for all users, and SSO may be leveraged. Audit and enforcement is mostly automated.
-() Fully centralized identity policies and audit procedures with fully automated enforcement. Policies include enterprise-standard MFA and SSO. If required, automated certification process in place for human users and/or system accounts used for accessing sensitive data along with on-demand reporting.
+() **Basic or No Identity Policies:** There are limited or no organization-wide identity policies, such as password policies, with minimal audit or enforcement mechanisms to ensure compliance.
+() **Manual Identity Policy Enforcement:** While a common set of identity policies may exist, their enforcement and audit rely on manual efforts, such as retrospective analysis of logs or reports.
+() **Partially Automated Identity Management:** Organization-wide identity policies, including 2FA/MFA for privileged accounts, are in place. Audit and enforcement processes are partially automated.
+() **Advanced and Mostly Automated Identity Management:** Centralized identity policies and audit procedures, possibly including 2FA/MFA for all users and leveraging Single Sign-On (SSO). Most audit and enforcement activities are automated.
+() **Fully Centralized and Automated Identity Management:** Comprehensive, fully centralized identity policies and audit procedures with complete automation in enforcement. Policies encompass enterprise-standard MFA and SSO. Automated certification processes for human users and system accounts are in place, especially for accessing sensitive data, along with on-demand reporting capabilities.
 
-## -How do you authenticate and manage non-human service accounts?[radios] =
-() TODO:user/pass id/secret pair credentials used
-() api keys
-() central secret store that may support automated rotation of credentials to some systems
-() Mutual TLS
-() short lived, federated and strongly verifiable system identities, validated on each request
+
+## TODO: add a question about single source of identity or multiple?
+
+## How does your organization authenticate and manage non-human service accounts?[radios] =
+
+() **Basic User/Pass Credentials:** Non-human service accounts are managed using basic ID/secret pair credentials, with a user/password approach.
+() **API Key Usage:** Non-human service accounts are authenticated using API keys, which are less dynamic and might have longer lifespans.
+() **Centralized Secret Store with Some Credential Rotation:** A central secret store is in place, possibly supporting automated rotation of credentials for some systems, enhancing security and management efficiency.
+() **Mutual TLS for Authentication:** Mutual Transport Layer Security (mTLS) is used for non-human service accounts, providing a more secure, certificate-based authentication method.
+() **Short-Lived, Federated Identities with Strong Verification:** Non-human service accounts use short-lived, federated identities that are strongly verifiable and validated with each request, ensuring a high level of security and minimizing the risk of credential misuse.
 
 ## -How do you think about network architecture for security?[radios] =
 
