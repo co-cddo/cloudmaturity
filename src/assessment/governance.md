@@ -5,57 +5,60 @@ eleventyNavigation:
   parent: Assessment
 ---
 
-## -New project tech choices[radios] = 
-() Each project starts afresh with a blank slate of technology choices resulting in a divergent estate
-() strictly controlled, fixed homogeneous consistent design
-() some patterns and shared documentation such as a tech radar exist, but are not maintained or promoted
-() documentation and patterns that cover most use cases exist, are maintained and actively promoted
-() show+tells and collaboration with existing teams, reuse and extension rewarded, innovation and experimentation encouraged
+## How are technology selections made for new projects within your organization?[radios] =
 
-## -How do you choose where and when to run cloud workloads and store data?[radios] = 
-() Single region approved for use, data and/or workload limited to single availability zone within that region, workloads typically run constantly.
-() Workloads and data are spread/replicated/distributed over multiple availability zones within a single region
-() An additional non-UK regions has been evaluated for legal equivalence, non-production and/or select data and workloads may run in the non-primary region, or it may be used as part of a disaster recovery solution.
-() Regions are not technically important or relevant and are selected entirely based on the capabilities, cost and sustainability credentials.
-() Workloads dynamically distribute over available regions and availability zones, and viable workloads time-shift execution based on cost and sustainability.
+() **Ad-Hoc and Independent Selections:** Each project independently selects technologies, leading to a diverse and often incompatible technology estate.
+() **Uniform Technology Mandate:** Technology choices are highly regulated, with a uniform, organization-wide technology stack that all projects must adhere to.
+() **Guided by Outdated Resources:** A technology radar and some documented patterns exist, but they are outdated and not widely regarded as useful or relevant.
+() **Current and Maintained Guidance:** A regularly updated technology radar, along with current documentation and patterns, covers a wide range of use cases and is actively used for guidance.
+() **Collaborative and Evolving Ecosystem:** Regular show-and-tell sessions and collaboration with existing teams are encouraged. There's a strong emphasis on reusing and extending existing solutions, alongside rewarding innovation and experimentation.
 
-## -How do you plan, measure, and optimize your compute environmental sustainability and carbon footprint?[radios] = 
-() .
-() .
-() .
-() .
-() .
+## What strategies guide your decisions on geographical distribution and operational management of cloud workloads and data storage?[radios] =
 
-## -How do you plan for incident response?[radios] = 
-() TODO: Planned required at point of service introduction to live.
-() .
-() Blame free retros
-() .
-() Rehearsed and successful recovery of critical systems within a working day
+() **Single Zone, Constant Operation:** All data and workloads are confined to a single availability zone within an approved region, with workloads typically running continuously.
+() **Intra-Region Distribution:** Workloads and data are spread across multiple availability zones within a single region to enhance availability and resilience.
+() **Selective Multi-Region Utilization:** An additional, legally compliant non-UK region is used for specific purposes, such as non-production workloads, certain data types, or as part of disaster recovery planning.
+() **Capability and Sustainability-Driven Selection:** Regions are chosen based solely on their technical capabilities, cost-effectiveness, and environmental sustainability credentials, without any specific technical constraints.
+() **Dynamic and Cost-Sustainable Distribution:** Workloads are dynamically allocated across various regions and availability zones, with scheduling optimized for cost-efficiency and sustainability, adapting in real-time to changing conditions.
 
-## -How do you manage data retention?[radios] = 
-() TODO: Has been defined at an organization level and projects/programs are aware of their responsibilities.
-() Projects and programs are required to attest their compliance.
-() .
-() Edge case scenarios are tracked in the risk register
-() Retention is fully monitored and enforced
+## How does your organization plan, measure, and optimize the environmental sustainability and carbon footprint of its cloud compute resources?[radios] =
 
+() **Basic Vendor Reliance:** Sustainability isn't actively measured internally; reliance is placed on cloud vendors who are contractually obligated to work towards carbon neutrality, likely through offsetting.
+() **Initial Awareness and Basic Policies:** Some basic policies and goals for sustainability are set. Efforts are primarily focused on awareness and selecting vendors with better environmental records.
+() **Active Measurement and Target Setting:** The organization actively measures its cloud compute carbon footprint and sets specific targets for reduction. This includes choosing cloud services based on their sustainability metrics.
+() **Integrated Sustainability Practices:** Sustainability is integrated into cloud resource planning and usage. This includes regular monitoring and reporting on sustainability metrics and making adjustments to improve environmental impact.
+() **Advanced Optimization and Dynamic Management:** Advanced strategies are in place, like automatic time and location shifting of workloads to minimize impact. Data retention and cloud product selection are deeply aligned with sustainability goals and carbon footprint metrics.
 
-## -How do you determine what kind of data is being stored and where?
+## What is your organization's approach to planning and preparing for incident response?[radios] =
 
-() Data is managed in a decentralized and ad hoc manner with little organizational awareness of where data is stored.
-() Documentation of the data stored, the schema, and data sensitivity exist on a team-by-team basis. Teams adhere to organization policy on data through manual review and interpretation.
-() An inventory of data exists, developed either by hand or by using scanning / discovery tools. Data is classified by type (for example PII, card data, company confidential), sensitivity (impact if corrupted / breached), and regulatory requirement (retention, location, etc.).
-() A comprehensive understanding exists of data location, classification, and sensitivity. This information is regularly reviewed for compliance. Data lineage is broadly understood, but not reliably documented.
-() A data catalog exists, which documents what data the organization holds and the metadata that describes it. A business-friendly glossary outlining the source of the data, quality metrics and use cases exists. Tracking of data lineage (history of source, distribution, branching and modification) is in place.
+() **Ad-Hoc and Basic Efforts:** Incident response is primarily ad-hoc, with some basic efforts in place but no formalized plan or structured approach.
+() **Initial Documentation at Service Launch:** A documented incident response plan is required and established at the point of introducing a new service to the live environment.
+() **Regularly Updated Incident Plan:** The incident response plan is not only documented but also periodically reviewed and updated to ensure its relevance and effectiveness.
+() **Integrated and Tested Plans:** Incident response planning is integrated into the broader IT and business continuity planning. Regular testing of the plan is conducted to validate procedures and roles.
+() **Rehearsed and Proven Response Capability:** Incident response plans are not only documented and regularly updated but also rigorously rehearsed. The organization is capable of successfully recovering critical systems within a working day.
 
-## -Data Management: How do you mitigate against data breaches (exfiltration/corruption/deletion/non-availability)?[radios] =
+## What is your approach to managing data retention within your organization?[radios] =
 
-() Data access is manually classified.
-() Centralized standard set of policies and controls in place to prevent unauthorized access.
-() Centralized standard set of policies and controls with limited monitoring for exfiltration.
-() Risk is mitigated by implementing preventative, detective, and corrective controls and policies. Anomaly detection and correction is automated with a portfolio of platforms and tools.
-() Fully automated, preventative controls and anomaly detection, along with proactive monitoring, access review processes and regular auditing.
-  
+() **Organization-Level Policy Awareness:** Data retention policies are defined at the organization level, and all projects/programs are aware of their specific responsibilities.
+() **Compliance Attestation by Projects:** Projects and programs are not only aware but also required to formally attest their compliance with the data retention policies.
+() **Regular Audits and Reviews:** Data retention practices are periodically audited and reviewed for compliance, with findings addressed through action plans.
+() **Inclusion in Risk Management:** Edge cases and exceptions in data retention are specifically identified and managed within the organization’s risk register.
+() **Automated Enforcement with Cloud Tools:** Data retention is actively monitored and enforced using native cloud services and tools, ensuring adherence to policies through automation.
+
+## How does your organization identify, classify, and manage its data storage and usage?[radios] =
+
+() **Decentralized and Ad Hoc Management:** Data management is largely uncoordinated and informal, with limited organizational oversight of data storage locations and types.
+() **Team-Based Documentation and Manual Policy Adherence:** Each team documents the data they handle, including its schema and sensitivity. Compliance with organizational data policies is managed manually by individual teams.
+() **Inventoried and Classified Data:** An inventory of data, created manually or via scanning tools, exists. Data is classified by type [e.g., PII, card data], sensitivity, and regulatory requirements [e.g., retention, location].
+() **Reviewed and Partially Documented Data Understanding:** There’s a comprehensive understanding of data location, classification, and sensitivity, with regular compliance reviews. Data lineage is generally understood but not consistently documented.
+() **Advanced Data Catalog and Lineage Tracking:** A detailed data catalog exists, encompassing data types and metadata. It includes a user-friendly glossary, quality metrics, use cases, and thorough tracking of data lineage.
+
+## What measures are in place in your organization to mitigate the risk of data breaches, including exfiltration, corruption, deletion, and non-availability?[radios] =
+
+() **Manual Data Access Classification:** Data access is primarily managed through manual classification, with minimal automation or centralized control.
+() **Centralized Policies and Controls:** A centralized set of policies and controls is in place to prevent unauthorized data access, forming the core of the data security strategy.
+() **Policies with Limited Monitoring:** In addition to centralized policies and controls, limited monitoring for data exfiltration is conducted to identify potential breaches.
+() **Comprehensive Controls with Automated Detection:** Preventative, detective, and corrective controls are implemented. Anomaly detection and correction are automated using a range of platforms and tools, providing a more robust defense.
+() **Fully Automated Security and Proactive Monitoring:** Advanced, fully automated controls and anomaly detection systems are in place. This includes proactive monitoring, regular access reviews, and continuous auditing to ensure data security and compliance.
 
 {% include 'nextAssessmentButton.njk' %}
