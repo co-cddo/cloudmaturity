@@ -28,7 +28,7 @@ eleventyNavigation:
 () **Limited Scripting with No Standards:** Provisioning involves some scripting, but there are no formal standards or consistency across project teams.
 () **Partial Declarative Automation:** Declarative automation is used for provisioning some cloud services across their lifecycle, but this practice is not uniform across all teams.
 () **Widespread Use of Declarative Automation:** Most project teams employ declarative automation for cloud service provisioning, indicating a higher level of maturity in automation practices.
-() **Mandatory Declarative Automation via CI/CD:** Declarative automation is mandated for provisioning all production services, and it is exclusively executed through Continuous Integration/Continuous Deployment [CI/CD] pipelines.
+() **Mandatory Declarative Automation via CI/CD:** Declarative automation is mandated for provisioning all production services, and it is exclusively executed through Continuous Integration/Continuous Deployment (CI/CD) pipelines.
 
 ## How does your organization release updates to its applications and services?[radios] =
 
@@ -56,7 +56,7 @@ eleventyNavigation:
 
 ## How does your organization approach the use of compute services in the cloud?[radios] =
 
-() **Long-Running Homogeneous VMs:** Workloads are consistently deployed on long-running, homogeneously sized Virtual Machines [VMs], without variation or optimization.
+() **Long-Running Homogeneous VMs:** Workloads are consistently deployed on long-running, homogeneously sized Virtual Machines (VMs), without variation or optimization.
 () **Primarily Long-Running VMs with Limited Experimentation:** Most workloads are on long-running VMs, with some limited experimentation in containers or function-based services for non-critical tasks.
 () **Mixed Use with Some Advanced Compute Options:** Some production workloads are run in containers or function-based compute services. Ad-hoc use of short-lived VMs is practiced, with efforts to right-size based on workload needs.
 () **Regular Use of Short-Lived VMs and Containers:** There is regular use of short-lived VMs and containers, along with some function-based compute services. This indicates a move towards more flexible and scalable compute options.
@@ -90,7 +90,7 @@ eleventyNavigation:
 
 () **Limited Version Control Usage:** Version control is used minimally, indicating a lack of robust processes for managing code changes and history.
 () **Custom, Unconventional Branch Strategy:** An invented branch strategy is in use, not aligning with standard methodologies and potentially leading to confusion or inefficiencies.
-() **Adapted Recognized Branch Strategy:** The organization adapts a recognized branch strategy [like GitFlow or GitHubFlow], tailoring it to specific needs while maintaining some standard practices.
+() **Adapted Recognized Branch Strategy:** The organization adapts a recognized branch strategy (like GitFlow or GitHubFlow), tailoring it to specific needs while maintaining some standard practices.
 () **Textbook Implementation of GitFlow:** The organization adheres strictly to the GitFlow model, a recognized branch strategy suitable for managing complex development processes.
 () **Textbook Implementation of GitHubFlow:** The organization follows the GitHubFlow model precisely, a streamlined branch strategy ideal for continuous delivery and simplified collaboration.
 
@@ -99,7 +99,7 @@ eleventyNavigation:
 () **Manual Scheduled QA Process:** Deployment and QA are handled through a manually scheduled process, lacking automation and continuous integration.
 () **Basic Automation with Infrequent Deployments:** Some level of automation exists in the QA process, but deployments are infrequent and partially manual.
 () **Integrated Deployment and Regular QA Checks:** Deployment is integrated with regular QA checks, featuring a moderate level of automation and consistency in the pipeline.
-() **CI/CD with Automated Testing:** A Continuous Integration/Continuous Deployment [CI/CD] pipeline is in place, including automated testing and frequent, reliable deployments.
+() **CI/CD with Automated Testing:** A Continuous Integration/Continuous Deployment (CI/CD) pipeline is in place, including automated testing and frequent, reliable deployments.
 () **On-Demand Ephemeral Environments:** Deployment and QA utilize short-lived, ephemeral environments provisioned on demand, indicating a highly sophisticated, efficient, and agile pipeline.
 
 ## How does your organization manage its cloud environment?[radios] =

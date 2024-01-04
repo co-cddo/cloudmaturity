@@ -290,7 +290,7 @@ input.rules = [
     // Turns expressions like 'label[name] = () option 1 | value 1 () option 2 | value 2 () option 3 | value 3' into radio buttons
     type: "radio",
     regexp:
-      /([^\n\[]*)(?:\[(.+)\])?\s*=\s*((?:\(\s?\)[^\(\r\n]+\r?\n?)+)\s*(?:<!--\s*input:\s*({.*})\s*-->)?/gy,
+      /([^\n\[]*)(?:\[(.+)\])?\s*=\s*((?:\(\s?\)[^\r\n]+\r?\n?)+)\s*(?:<!--\s*input:\s*({.*})\s*-->)?/gy,
     options: /\s*\(\s?\)\s*/,
   },
   {
