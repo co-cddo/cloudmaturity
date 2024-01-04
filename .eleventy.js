@@ -1,10 +1,29 @@
 const govukEleventyPlugin = require("@x-govuk/govuk-eleventy-plugin");
 const markdownItinput = require("./plugins/inputs");
+const fs = require("fs");
+
+function gitRev() {
+  const rev = fs.readFileSync(".git/HEAD").toString().trim();
+  if (rev.indexOf(":") === -1) return rev;
+  else
+    return fs
+      .readFileSync(".git/" + rev.substring(5))
+      .toString()
+      .trim();
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
       productName: `Cloud Maturity Model <strong class="govuk-tag govuk-phase-banner__content__tag">Alpha</strong>`,
+    },
+    footer: {
+      meta: {
+        text: `Page built from <a href="https://github.com/co-cddo/cloudmaturity/commit/${gitRev()}">${gitRev().slice(
+          0,
+          8
+        )}</a> at ${new Date().toISOString()}`,
+      },
     },
   });
 
