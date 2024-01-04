@@ -16,7 +16,11 @@ function input(md, config) {
     md.renderer.rules[rule.type] = function (tokens, id, options, env) {
       var result;
       try {
-        result = input.render(rule.type, tokens[id].content, rule.options);
+        result = input.render(rule.type, tokens[id].content, rule.options, {
+          md,
+          options,
+          env,
+        });
       } catch (err) {
         console.error(
           "Failed rendering " +
@@ -51,7 +55,7 @@ input.sanitize = function (name) {
   return name.replace(/\t/g, " ").trim().replace(/[ \t]/g, "_").toLowerCase();
 };
 
-input.render = function (type, data, regexp) {
+input.render = function (type, data, regexp, md) {
   if (data.length == 0) {
     console.error("No data for element to render!");
   }
@@ -192,7 +196,7 @@ input.render = function (type, data, regexp) {
         <label class="govuk-label govuk-radios__label" for="${
           optionsParams[i].id
         }">
-          ${options[i]}
+          ${md.md.renderInline(options[i], md.options, md.env)}
         </label>
         </div>`;
       }
