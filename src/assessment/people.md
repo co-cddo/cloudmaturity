@@ -37,4 +37,20 @@ eleventyNavigation:
 () **Specialized Knowledge without Privileged Access:** Third parties provide specialized expertise but do not have any form of privileged access to cloud infrastructure.
 () **Minimal or Augmentative Third-Party Role:** Third parties are either not used at all or serve purely as staff augmentation, without any privileged access or holding exclusive knowledge.
 
+## What are the success criteria for your cloud team?[radios] =
+
+() **No Defined Success Criteria:** The cloud team operates without specific, defined criteria for measuring success.
+() **Initial Achievements with Proofs of Concept:** Success is measured by completing initial proofs of concept or developing a 'minimum viable cloud/platform'.
+() **Launching Workloads in Production:** Success includes transitioning one or more workloads into a live production environment on the cloud.
+() **Scaling Prototypes to Core Services:** Success involves scaling initial prototypes to operate core technical services in the cloud, supporting business-critical applications.
+() **Innovation and Value Creation Alignment:** The organization has established success criteria that not only focus on cloud-based innovation and experimentation but also on creating tangible value through transformation initiatives, all aligned with the organization’s broader goals and strategy.
+
+## How does your organization engage with cloud providers to develop capabilities and services?[radios] =
+
+() **Minimal Interaction with Cloud Providers:** The relationship with cloud providers is transactional, limited to accessing their services without any significant contact or support from their account or technical teams.
+() **Basic Support Utilization:** Some basic support services from cloud providers are utilized, such as occasional technical assistance or access to standard documentation and resources.
+() **Regular Interaction and Support:** There is regular interaction with cloud provider account managers, including access to standard training and support services to assist in leveraging cloud capabilities.
+() **Proactive Engagement and Tailored Support:** The organization engages proactively with cloud providers, receiving tailored support, training, and workshops that align with specific needs and goals.
+() **Strategic Partnership with Comprehensive Support:** Cloud providers are engaged as strategic partners, offering comprehensive support, including regular training, workshops, and active collaboration. This partnership is instrumental in realizing strategic goals and includes opportunities for the organization to showcase its work through the provider's platforms.
+
 {% include 'nextAssessmentButton.njk' %}
