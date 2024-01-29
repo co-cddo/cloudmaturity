@@ -56,7 +56,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
-  
 
   semver:
     name: Generate a semantic version number

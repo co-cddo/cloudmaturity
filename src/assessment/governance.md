@@ -78,6 +78,7 @@ eleventyNavigation:
 () **Policy as Code with Transparent, Collaborative Updates:** Policy intent and implementation are maintained in version control, accessible to all. The process for proposing updates is clear and well-understood, allowing for regular, transparent updates akin to software releases. Policies have testable side effects, ensuring clarity and comprehension.
 
 ## TODO:How does your organization apply and enforce policies?[radios] =
+
 () **no application**
 () **no enforcement**
 () **process only**

@@ -26,7 +26,7 @@ function input(md, config) {
           "Failed rendering " +
             rule.type +
             " input: " +
-            JSON.stringify(tokens[id].content)
+            JSON.stringify(tokens[id].content),
         );
         console.error(err);
         if (tokens[id].content.length) {
@@ -162,7 +162,7 @@ input.render = function (type, data, regexp, md) {
             input.prefix + input.sanitize(name + "-" + options[i]);
         html += input.addAttributes(
           '<input type="checkbox" name="' + name + '">',
-          optionsParams[i]
+          optionsParams[i],
         );
         html +=
           '<label for="' + optionsParams[i].id + '">' + options[i] + "</label>";
@@ -191,7 +191,7 @@ input.render = function (type, data, regexp, md) {
         html += `<div class="govuk-radios__item">
         ${input.addAttributes(
           `<input class="govuk-radios__input" type="radio" name="${name}">`,
-          optionsParams[i]
+          optionsParams[i],
         )}
         <label class="govuk-label govuk-radios__label" for="${
           optionsParams[i].id

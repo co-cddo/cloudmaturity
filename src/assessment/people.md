@@ -22,6 +22,7 @@ eleventyNavigation:
 () **Comprehensive Cloud Experience Requirement and Role Adaptation:** All job postings require cloud experience, and every existing role within the organization has been evaluated and updated where necessary to align with the needs of a cloud-first IT organization.
 
 ## TODO: How does your organization qualify suppliers and partners involved in your organization's cloud initiatives?[radios] =
+
 () .
 () .
 () .
@@ -34,7 +35,7 @@ eleventyNavigation:
 () **Basic On-the-Job Training:** Individuals with limited cloud experience are provided basic on-the-job training to help them adapt to cloud-related tasks.
 () **Structured Training and Mentorship Programs:** The organization offers structured training programs, including mentorship and peer learning, to develop cloud skills among employees with limited cloud experience.
 () **Integrated Learning and Development Initiatives:** Comprehensive learning initiatives, such as in-house training courses or collaborations with external training providers, are in place to up-skill employees in cloud technologies.
-() **Mature Apprenticeship/Bootcamp Program with Aftercare:** A robust apprenticeship, bootcamp,  career change programs exists for rapid skill development in cloud technologies. This program includes significant aftercare support to ensure long-term development and retention of the investment in these individuals.
+() **Mature Apprenticeship/Bootcamp Program with Aftercare:** A robust apprenticeship, bootcamp, career change programs exists for rapid skill development in cloud technologies. This program includes significant aftercare support to ensure long-term development and retention of the investment in these individuals.
 
 ## To what extent are third parties involved in the development and support of your organization's cloud initiatives?[radios] =
 
