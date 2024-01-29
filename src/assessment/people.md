@@ -13,7 +13,7 @@ eleventyNavigation:
 () **Role-Based Training Recommendations and Self-Assessment:** Relevant certifications are recommended based on specific roles and incorporated into personal development plans. Employees are encouraged to self-assess their progress against role-specific and team-level goals.
 () **Incentivized and Assessed Training Programs:** Employees completing certifications are rewarded with merit incentives and receive structured guidance and development plans. Periodic formal role-specific assessments are conducted, with achievements recognized through systems like GovUKCloudBadges.
 
-## How does your organization prioritize cloud experience in its hiring practices?[radios] =
+## How does your organization prioritize cloud experience in its hiring practices of senior/executive/leadership roles, suppliers and contingent labour?[radios] =
 
 () **No Specific Cloud Experience Requirement:** Cloud experience is not a requirement in job postings; candidates are not specifically sought out for their cloud skills.
 () **Selective Requirement for Cloud Experience:** Some job postings, particularly those in relevant areas, require candidates to have prior cloud experience.
@@ -21,13 +21,21 @@ eleventyNavigation:
 () **Updated Role Requirements and Cloud-Focused Hiring:** In addition to requiring cloud experience for new hires, existing roles have been reviewed and updated as necessary to reflect a cloud-first IT organization.
 () **Comprehensive Cloud Experience Requirement and Role Adaptation:** All job postings require cloud experience, and every existing role within the organization has been evaluated and updated where necessary to align with the needs of a cloud-first IT organization.
 
+## How does your organization qualify suppliers and partners for cloud initiatives?[radios] =
+
+() **Basic Qualification Based on Marketing and Framework Presence:** Selection is based primarily on the supplier's sales literature and their presence on commercial buying frameworks.
+() **Initial Due Diligence and Basic Compliance Checks:** Suppliers are chosen through basic due diligence, focusing on compliance with minimum standards and requirements.
+() **Moderate Screening for Experience and Compliance:** Partners are qualified based on their industry experience, compliance with relevant standards, and basic alignment with organizational needs.
+() **Comprehensive Evaluation Including Technical and Ethical Alignment:** Suppliers are thoroughly vetted for technical competence, ethical alignment with organizational values, and their ability to support specific cloud objectives.
+() **Strategic Selection with Emphasis on Long-Term Value and Leadership Vision:** Suppliers are selected based on a track record of excellence, recommendations from other departments, relevant certifications, demonstrable technical leadership, alignment with the civil service code, support for programs like apprenticeships, strong engagement with the leadership vision, clear articulation of risks, measurable KPIs, and long-term value for money.
+
 ## How does your organization support and develop individuals with limited or no cloud experience for roles in cloud initiatives?[radios] =
 
 () **No Specific Development Path:** There is no special accommodation or development path for individuals with limited or no cloud experience.
 () **Basic On-the-Job Training:** Individuals with limited cloud experience are provided basic on-the-job training to help them adapt to cloud-related tasks.
 () **Structured Training and Mentorship Programs:** The organization offers structured training programs, including mentorship and peer learning, to develop cloud skills among employees with limited cloud experience.
-() **Integrated Learning and Development Initiatives:** Comprehensive learning initiatives, such as in-house training courses or collaborations with external training providers, are in place to upskill employees in cloud technologies.
-() **Mature Apprenticeship/Bootcamp Program with Aftercare:** A robust apprenticeship or bootcamp program exists for rapid skill development in cloud technologies. This program includes significant aftercare support to ensure long-term development and retention of the investment in these individuals.
+() **Integrated Learning and Development Initiatives:** Comprehensive learning initiatives, such as in-house training courses or collaborations with external training providers, are in place to up-skill employees in cloud technologies.
+() **Mature Apprenticeship/Bootcamp Program with Aftercare:** A robust apprenticeship, bootcamp, career change programs exists for rapid skill development in cloud technologies. This program includes significant aftercare support to ensure long-term development and retention of the investment in these individuals.
 
 ## To what extent are third parties involved in the development and support of your organization's cloud initiatives?[radios] =
 

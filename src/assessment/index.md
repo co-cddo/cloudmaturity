@@ -8,7 +8,7 @@ title: Assessment
 
 TODO:
 
-Your department [dept] = __Name of report__
+Your department [department] = __Name of report__
 
 <a href="{{ (collections.ordered | eleventyNavigation('Assessment') | first).url }}" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
   Save and continue
