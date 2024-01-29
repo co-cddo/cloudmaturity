@@ -45,13 +45,13 @@ eleventyNavigation:
 () **Integrated Policy Management with Stakeholder Engagement:** Policy updates are managed through an integrated process involving key stakeholders. Changes are communicated effectively, ensuring clear understanding across the organization.
 () **Policy as Code with Transparent, Collaborative Updates:** Policy intent and implementation are maintained in version control, accessible to all. The process for proposing updates is clear and well-understood, allowing for regular, transparent updates akin to software releases. Policies have testable side effects, ensuring clarity and comprehension.
 
-## TODO:How does your organization apply and enforce policies?[radios] =
+## How is policy application and enforcement managed in your organization?[radios] =
 
-() **no application**
-() **no enforcement**
-() **process only**
-() **comprehensive process, limited technical control**
-() **comprehensive process, comprehensive technical controls executed at all stages**
+() **No Policy Application:** Policies are not actively applied within the organization.
+() **Policy Existence Without Enforcement:** Policies exist but are not actively enforced or monitored.
+() **Process-Driven Application:** Policies are applied primarily through organizational processes without significant technical support.
+() **Process-Driven with Limited Technical Control:** Policies are comprehensively applied through processes, supported by limited technical control mechanisms.
+() **Fully Integrated Application and Enforcement:** Policies are applied and enforced comprehensively through well-established processes, with robust technical controls executed at all stages.
 
 ## How does the shared responsibility model influence your organization's approach to cloud consumption?[radios] =
 

@@ -55,7 +55,17 @@ TODO: insert GovAssure baseline? or excerpt from?
 () **Advanced and Mostly Automated Identity Management:** Centralized identity policies and audit procedures, possibly including 2FA/MFA for all users and leveraging Single Sign-On (SSO). Most audit and enforcement activities are automated.
 () **Fully Centralized and Automated Identity Management:** Comprehensive, fully centralized identity policies and audit procedures with complete automation in enforcement. Policies encompass enterprise-standard MFA and SSO. Automated certification processes for human users and system accounts are in place, especially for accessing sensitive data, along with on-demand reporting capabilities.
 
-## TODO: add a question about single source of identity or multiple?
+## How does your organization manage staff identities?[radios] =
+
+() **Independent Identity Management:** Each service manages identities independently, without integration or synchronization across systems.
+
+() **Basic Centralized Identity System:** There is a centralized system for identity management, but it's not fully integrated across all services.
+
+() **Integrated Identity Management with Some Exceptions:** Identities are mostly managed through an integrated system, with a few services still operating independently.
+
+() **Advanced Integrated Identity Management:** A comprehensive system manages identities, integrating most services and applications, with efforts to ensure synchronization and uniformity.
+
+() **Mandatory Single Source of Identity:** A single source of identity is mandated for all services, with a strict one-to-one mapping of human to identity, ensuring consistency and security across the organization.
 
 ## How does your organization authenticate and manage non-human service accounts?[radios] =
 
