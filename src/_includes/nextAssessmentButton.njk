@@ -1,7 +1,9 @@
+<a href="/assessment" id="resetButton" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+Reset
+</a>
 {% set navPages = collections.ordered | eleventyNavigation("Assessment") %}
 {% set nextEntry = false %}
 {% set foundEntry = false %}
-
 {%- for entry in navPages %}
   {% if nextEntry == true and foundEntry == false %}
 <a href="{{ entry.url }}" role="button" draggable="false" class="govuk-button" data-module="govuk-button">

@@ -21,8 +21,8 @@ module.exports = function (eleventyConfig) {
       meta: {
         text: `Page built from <a href="https://github.com/co-cddo/cloudmaturity/commit/${gitRev()}">${gitRev().slice(
           0,
-          8,
-        )}</a> at ${new Date().toISOString()}`,
+          8
+        )}</a> at ${new Date().toISOString()} <script src="/assets/cmm.js"></script>`,
       },
     },
   });
