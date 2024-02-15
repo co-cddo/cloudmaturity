@@ -6,8 +6,6 @@ title: Report
 
 ## Report goes here
 
-
-
 <style>
   :root {
     --foreground-lightness: 0%;

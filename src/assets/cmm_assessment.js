@@ -6,8 +6,8 @@ document
   .querySelectorAll("input")
   .forEach((input) =>
     input.addEventListener("change", (event) =>
-      localStorage.setItem(event.target.name, event.target.value)
-    )
+      localStorage.setItem(event.target.name, event.target.value),
+    ),
   );
 
 function clearFormValues() {
@@ -40,7 +40,7 @@ if (document.getElementById("resetButton"))
     .addEventListener("click", (e) =>
       confirm("Are you sure you want to reset the entire report?")
         ? clearFormValues()
-        : e.preventDefault()
+        : e.preventDefault(),
     );
 
 function getReport() {

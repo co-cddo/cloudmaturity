@@ -70,7 +70,7 @@ function getScorePercent(category) {
 function getScore(category) {
   return Object.values(cmm.categories[category].questions).reduce(
     (a, c) => a + c,
-    0
+    0,
   );
 }
 

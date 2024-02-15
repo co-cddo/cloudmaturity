@@ -199,7 +199,7 @@ input.render = function (type, data, regexp, md) {
           `<input class="govuk-radios__input" type="radio" name="cmm_${
             md.env.page.fileSlug
           }_${hash(label)}">`,
-          optionsParams[i]
+          optionsParams[i],
         )}
         <label class="govuk-label govuk-radios__label" for="${
           optionsParams[i].id
@@ -276,10 +276,10 @@ input.parseLine = function (rule) {
 
 input.rules = [
   {
-    // Turns 'label[name] = ___' or 'label[name] = __value_' into form input element
+    // Turns 'label[name] = ****' or 'label[name] = **value**' into form input element
     type: "textfield",
     regexp:
-      /([^\n\[]*)(?:\[(.+)\])?\s*=\s*__+([^\n_]+)?_+\s*(?:<!--\s*input:\s*({.*})\s*-->)?/gy,
+      /([^\n\[]*)(?:\[(.+)\])?\s*=\s*\*\*+([^\n\*]+)?\*+\s*(?:<!--\s*input:\s*({.*})\s*-->)?/gy,
   },
   {
     // Turns '\"\"\"lang\nvalue\n\"\"\"[name]'  into text area element
