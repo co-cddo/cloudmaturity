@@ -196,7 +196,7 @@ input.render = function (type, data, regexp, md) {
 
         html += `<div class="govuk-radios__item">
         ${input.addAttributes(
-          `<input class="govuk-radios__input" type="radio" name="${
+          `<input class="govuk-radios__input" type="radio" name="cmm_${
             md.env.page.fileSlug
           }_${hash(label)}">`,
           optionsParams[i]

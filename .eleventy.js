@@ -22,7 +22,7 @@ module.exports = function (eleventyConfig) {
         text: `Page built from <a href="https://github.com/co-cddo/cloudmaturity/commit/${gitRev()}">${gitRev().slice(
           0,
           8
-        )}</a> at ${new Date().toISOString()} <script src="/assets/cmm.js"></script>`,
+        )}</a> at ${new Date().toISOString()}`,
       },
     },
   });
@@ -33,6 +33,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./node_modules/govuk-frontend/dist/govuk/assets/images": "./assets/images",
     "./node_modules/govuk-frontend/dist/govuk/assets/fonts": "./assets/fonts",
+    "./node_modules/chaarts/dist/chaarts.min.css": "./assets/chaarts.min.css",
   });
 
   return {

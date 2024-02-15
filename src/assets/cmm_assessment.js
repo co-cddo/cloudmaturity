@@ -1,5 +1,7 @@
 if (typeof Storage === "undefined") alert("Browser has disabled local storage");
 
+// TODO: if you change a question title, the old will still be in local storage and then added to the total when the report runs
+
 document
   .querySelectorAll("input")
   .forEach((input) =>
@@ -22,7 +24,15 @@ function restoreFormValues() {
   }
 }
 
+function collectTotals() {
+  document.querySelectorAll("input[type=checkbox]").forEach((el) => {
+    console.log(el);
+  });
+  // .forEach((el) => el.addEventListener("change", renderReport));
+}
+
 window.addEventListener("load", restoreFormValues);
+window.addEventListener("load", collectTotals);
 
 if (document.getElementById("resetButton"))
   document
@@ -37,10 +47,20 @@ function getReport() {
   const report = {};
   for (var i = 0, len = localStorage.length; i < len; i++) {
     const key = localStorage.key(i);
-    const section = key.split("_")[0];
-    report[section] = (report[section] || 0) + parseInt(localStorage[key]);
+    if (key.split("_")[0] !== "cmm") continue;
+    const section = key.split("_")[1];
+    report[section] = report[section] || {};
+    report[section].total = (report[section].total || 0) + 4;
+    report[section].score =
+      (report[section].score || 0) + parseInt(localStorage[key] - 1);
+    report[section].percent = report[section].score / report[section].total;
   }
-  console.log(report);
   return report;
 }
-getReport();
+
+function setScoreMax(category, max) {
+  localStorage.setItem(`cmm_${category}_max`, max);
+}
+function setScore(category, score) {
+  localStorage.setItem(`cmm_${category}`, score);
+}
