@@ -11,7 +11,6 @@ document
   );
 
 function clearFormValues() {
-  console.log("fo");
   localStorage.clear();
 }
 
