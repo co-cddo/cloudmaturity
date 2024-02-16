@@ -6,10 +6,8 @@ title: Assessment
 
 ## How to use this tool
 
-TODO:
+Name of report [cmm_intro_department] = **My Organisation**
 
-Your department [department] = __Name of report__
+> This could be the name of your department or directorate, or any other name you like, it isn't saved and only displayed on the report at the end.
 
-<a href="{{ (collections.ordered | eleventyNavigation('Assessment') | first).url }}" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-  Save and continue
-</a>
+{% include 'nextAssessmentButton.njk' %}

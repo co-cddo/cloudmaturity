@@ -33,6 +33,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "./node_modules/govuk-frontend/dist/govuk/assets/images": "./assets/images",
     "./node_modules/govuk-frontend/dist/govuk/assets/fonts": "./assets/fonts",
+    "./node_modules/chaarts/dist/chaarts.min.css": "./assets/chaarts.min.css",
   });
 
   return {

@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getScore should return the score 1`] = `2`;
+
+exports[`getScoreMax should return max score 1`] = `10`;
+
+exports[`getScorePercent should return a percent score 1`] = `0.2`;
+
+exports[`getScoreTable should return the table 1`] = `
+<table
+  class="radar chaarts"
+  id="report_radar"
+  style="--1: 0.28; --2: 0.2; --3: 0.2571428571428571; --4: 0.2; --5: 0.2; --6: 0.2; --7: 0.2; --items: 7; --8: var(--1);"
+>
+  <thead>
+    <tr>
+      <th
+        scope="col"
+      >
+        Cost & Sustainability
+      </th>
+      <th
+        scope="col"
+      >
+        Data
+      </th>
+      <th
+        scope="col"
+      >
+        Governance
+      </th>
+      <th
+        scope="col"
+      >
+        Operations
+      </th>
+      <th
+        scope="col"
+      >
+        People
+      </th>
+      <th
+        scope="col"
+      >
+        Security
+      </th>
+      <th
+        scope="col"
+      >
+        Technology
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span>
+          0.28
+        </span>
+      </td>
+      <td>
+        <span>
+          0.2
+        </span>
+      </td>
+      <td>
+        <span>
+          0.2571428571428571
+        </span>
+      </td>
+      <td>
+        <span>
+          0.2
+        </span>
+      </td>
+      <td>
+        <span>
+          0.2
+        </span>
+      </td>
+      <td>
+        <span>
+          0.2
+        </span>
+      </td>
+      <td>
+        <span>
+          0.2
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

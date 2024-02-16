@@ -4,6 +4,12 @@
  *--------------------------------------------------------------------------------------------*/
 "use strict";
 
+const { createHash } = require("crypto");
+
+function hash(string) {
+  return createHash("sha256").update(string).digest("hex");
+}
+
 function input(md, config) {
   input.config = config;
   input.prefix = "";
@@ -184,13 +190,15 @@ input.render = function (type, data, regexp, md) {
         <div class="govuk-radios" data-module="govuk-radios">`;
       for (let i = 0; i < options.length; i++) {
         if (!optionsParams[i]) optionsParams[i] = {};
-        if (!optionsParams[i].id)
-          optionsParams[i].id =
-            input.prefix + input.sanitize(name + "-" + options[i]);
+        optionsParams[i].id = `${hash(label)}_${i}`;
+        optionsParams[i].value = i + 1;
         if (!enabled) optionsParams[i].disabled = true;
+
         html += `<div class="govuk-radios__item">
         ${input.addAttributes(
-          `<input class="govuk-radios__input" type="radio" name="${name}">`,
+          `<input class="govuk-radios__input" type="radio" name="cmm_${
+            md.env.page.fileSlug
+          }_${hash(label)}">`,
           optionsParams[i],
         )}
         <label class="govuk-label govuk-radios__label" for="${
@@ -268,10 +276,10 @@ input.parseLine = function (rule) {
 
 input.rules = [
   {
-    // Turns 'label[name] = ___' or 'label[name] = __value_' into form input element
+    // Turns 'label[name] = ****' or 'label[name] = **value**' into form input element
     type: "textfield",
     regexp:
-      /([^\n\[]*)(?:\[(.+)\])?\s*=\s*__+([^\n_]+)?_+\s*(?:<!--\s*input:\s*({.*})\s*-->)?/gy,
+      /([^\n\[]*)(?:\[(.+)\])?\s*=\s*\*\*+([^\n\*]+)?\*+\s*(?:<!--\s*input:\s*({.*})\s*-->)?/gy,
   },
   {
     // Turns '\"\"\"lang\nvalue\n\"\"\"[name]'  into text area element
