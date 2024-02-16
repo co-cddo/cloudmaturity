@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getScoreTable should return the table 1`] = `
+<table
+  class="radar chaarts"
+  id="report_radar"
+  style="--1: 0.45; --2: 0.45; --3: 0.24; --4: 0.2; --5: 0.3; --6: 0.25; --7: 0.07; --items: 7; --8: var(--1);"
+>
+  <thead>
+    <tr>
+      <th
+        scope="col"
+      >
+        Cost & Sustainability
+      </th>
+      <th
+        scope="col"
+      >
+        Data
+      </th>
+      <th
+        scope="col"
+      >
+        Governance
+      </th>
+      <th
+        scope="col"
+      >
+        Operations
+      </th>
+      <th
+        scope="col"
+      >
+        People
+      </th>
+      <th
+        scope="col"
+      >
+        Security
+      </th>
+      <th
+        scope="col"
+      >
+        Technology
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span>
+          0.45
+        </span>
+      </td>
+      <td>
+        <span>
+          0.45
+        </span>
+      </td>
+      <td>
+        <span>
+          0.24
+        </span>
+      </td>
+      <td>
+        <span>
+          0.2
+        </span>
+      </td>
+      <td>
+        <span>
+          0.3
+        </span>
+      </td>
+      <td>
+        <span>
+          0.25
+        </span>
+      </td>
+      <td>
+        <span>
+          0.07
+        </span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

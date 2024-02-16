@@ -58,7 +58,6 @@ var cmm = {
     },
   },
 };
-
 function getCategories() {
   return Object.keys(cmm.categories);
 }
@@ -135,3 +134,16 @@ function renderReport() {
 }
 
 window.addEventListener("load", renderReport);
+
+if (typeof module === "object")
+  module.exports = {
+    getCategories,
+    getScorePercent,
+    getScore,
+    getScoreMax,
+    getCategoryTitle,
+    getScoreTable,
+    createEl,
+    addRule,
+    renderReport,
+  };
