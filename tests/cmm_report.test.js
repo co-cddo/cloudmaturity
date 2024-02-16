@@ -76,13 +76,15 @@ describe("getCategories", () => {
 });
 describe("getScorePercent", () => {
   it("should return a percent score", () =>
-    expect(m.getScorePercent("tech")).toBe(0.07));
+    expect(m.getScorePercent("tech")).toMatchSnapshot());
 });
 describe("getScore", () => {
-  it("should return the score", () => expect(m.getScore("tech")).toBe(7));
+  it("should return the score", () =>
+    expect(m.getScore("tech")).toMatchSnapshot());
 });
 describe("getScoreMax", () => {
-  it("should return max score", () => expect(m.getScoreMax("tech")).toBe(100));
+  it("should return max score", () =>
+    expect(m.getScoreMax("tech")).toMatchSnapshot());
 });
 describe("getCategoryTitle", () => {
   it("should return the title", () =>

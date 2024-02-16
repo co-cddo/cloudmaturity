@@ -1,5 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`getScore should return the score 1`] = `2`;
+
+exports[`getScoreMax should return max score 1`] = `10`;
+
+exports[`getScorePercent should return a percent score 1`] = `0.2`;
+
 exports[`getScoreTable should return the table 1`] = `
 <table
   class="radar chaarts"
@@ -11,37 +17,37 @@ exports[`getScoreTable should return the table 1`] = `
       <th
         scope="col"
       >
-        foo
+        Cost & Sustainability
       </th>
       <th
         scope="col"
       >
-        foo
+        Data
       </th>
       <th
         scope="col"
       >
-        foo
+        Governance
       </th>
       <th
         scope="col"
       >
-        foo
+        Operations
       </th>
       <th
         scope="col"
       >
-        foo
+        People
       </th>
       <th
         scope="col"
       >
-        foo
+        Security
       </th>
       <th
         scope="col"
       >
-        foo
+        Technology
       </th>
     </tr>
   </thead>

@@ -1,3 +1,12 @@
+const titles = {
+  cost: "Cost & Sustainability",
+  data: "Data",
+  governance: "Governance",
+  operations: "Operations",
+  people: "People",
+  security: "Security",
+  tech: "Technology",
+};
 function cmm() {
   const data = { categories: {} };
   const payload = JSON.parse(localStorage.getItem("cmm"));
@@ -9,7 +18,7 @@ function cmm() {
     });
     data.categories[category] = {
       questions,
-      title: "foo",
+      title: titles[category],
       max: Object.keys(v).length * 5,
     };
   });
