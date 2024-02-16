@@ -1,65 +1,23 @@
-var cmm = {
-  categories: {
-    cost: {
-      questions: {
-        question1: 4,
-        question2: 5,
-      },
-      max: 20,
-      title: "Cost & Sustainability",
-    },
-    data: {
-      questions: {
-        question1: 4,
-        question2: 5,
-      },
-      max: 20,
-      title: "Data",
-    },
-    governance: {
-      questions: {
-        question1: 1,
-        question2: 5,
-      },
-      max: 25,
-      title: "Governance",
-    },
-    operations: {
-      questions: {
-        question1: 1,
-        question2: 2,
-      },
-      max: 15,
-      title: "Operations",
-    },
-    people: {
-      questions: {
-        question1: 4,
-        question2: 2,
-      },
-      max: 20,
-      title: "People",
-    },
-    security: {
-      questions: {
-        question1: 4,
-        question2: 1,
-      },
-      max: 20,
-      title: "Security",
-    },
-    tech: {
-      questions: {
-        question1: 4,
-        question2: 3,
-      },
-      max: 100,
-      title: "Technology",
-    },
-  },
-};
+function cmm() {
+  const data = { categories: {} };
+  const payload = JSON.parse(localStorage.getItem("cmm"));
+  Object.entries(payload).forEach(([category, v]) => {
+    if (category === "intro") return;
+    const questions = {};
+    Object.entries(v).forEach(([question, answer]) => {
+      questions[question] = parseInt(answer) || 1;
+    });
+    data.categories[category] = {
+      questions,
+      title: "foo",
+      max: Object.keys(v).length * 5,
+    };
+  });
+  return data;
+}
+
 function getCategories() {
-  return Object.keys(cmm.categories);
+  return Object.keys(cmm().categories);
 }
 
 function getScorePercent(category) {
@@ -67,18 +25,18 @@ function getScorePercent(category) {
 }
 
 function getScore(category) {
-  return Object.values(cmm.categories[category].questions).reduce(
+  return Object.values(cmm().categories[category].questions).reduce(
     (a, c) => a + c,
     0,
   );
 }
 
 function getScoreMax(category) {
-  return cmm.categories[category].max;
+  return cmm().categories[category].max;
 }
 
 function getCategoryTitle(category) {
-  return cmm.categories[category].title;
+  return cmm().categories[category].title;
 }
 
 function createEl(tag, parent) {
