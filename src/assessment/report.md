@@ -24,5 +24,5 @@ title: Report
     transition: background 1s;
   }
 </style>
-<link rel="stylesheet" href="/assets/chaarts.min.css">
-<script src="/assets/cmm_report.js"></script>
+<link rel="stylesheet" href="../../assets/chaarts.min.css">
+<script src="../../assets/cmm_report.js"></script>
