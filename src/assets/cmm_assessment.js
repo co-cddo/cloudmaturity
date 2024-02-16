@@ -1,37 +1,76 @@
-if (typeof Storage === "undefined") alert("Browser has disabled local storage");
-
-// TODO: if you change a question title, the old will still be in local storage and then added to the total when the report runs
-
-document
-  .querySelectorAll("input")
-  .forEach((input) =>
-    input.addEventListener("change", (event) =>
-      localStorage.setItem(event.target.name, event.target.value),
-    ),
+if (typeof Storage === "undefined")
+  alert(
+    "Browser has disabled local storage, you will be unable to save your results from one page to another or generate a report.",
   );
 
-function clearFormValues() {
-  localStorage.clear();
+function getFormValues() {
+  const save = {};
+  const field_names = Array.from(document.querySelectorAll("input"))
+    .map((el) => el.name)
+    .filter((item, index, self) => self.indexOf(item) === index);
+
+  field_names.forEach((name) => {
+    const [model, section, question] = name.split("_");
+    setPropertySafely(save, [model, section, question], "");
+    document
+      .querySelectorAll(
+        `input[type=text][name=${name}], input[type=radio][name=${name}]:checked`,
+      )
+      .forEach((el) =>
+        setPropertySafely(save, [model, section, question], el.value),
+      );
+  });
+  return save;
 }
 
 function restoreFormValues() {
-  for (var i = 0, len = localStorage.length; i < len; i++) {
-    const key = localStorage.key(i);
-    document
-      .querySelectorAll(`input[name='${key}'][value='${localStorage[key]}']`)
-      .forEach((el) => (el.checked = true));
-  }
+  Array.from(document.querySelectorAll("input")).forEach((el) => {
+    const [model, section, question] = el.name.split("_");
+    const value = JSON.parse(localStorage.getItem(model))?.[section]?.[
+      question
+    ];
+    if (el.type === "text" && value) el.value = value;
+    if (el.type === "radio" && value && el.value === value) el.checked = true;
+  });
+}
+function setPropertySafely(obj, keys, value) {
+  keys.reduce((acc, key, index) => {
+    if (index === keys.length - 1) {
+      acc[key] = value;
+    } else {
+      acc[key] = acc[key] || {};
+    }
+    return acc[key];
+  }, obj);
+}
+document
+  .querySelectorAll("input")
+  .forEach((input) => input.addEventListener("change", saveFormValues));
+
+function saveFormValues() {
+  Object.entries(getFormValues()).forEach(([model, sections]) => {
+    const workingModel = JSON.parse(localStorage.getItem(model)) || {};
+    Object.entries(sections).forEach(
+      ([sectionName, section]) => (workingModel[sectionName] = section),
+    );
+
+    localStorage.setItem(model, JSON.stringify(workingModel));
+  });
 }
 
-function collectTotals() {
-  document.querySelectorAll("input[type=checkbox]").forEach((el) => {
-    console.log(el);
-  });
-  // .forEach((el) => el.addEventListener("change", renderReport));
+function clearFormValues(model) {
+  localStorage.removeItem(model);
 }
+
+if (typeof module === "object")
+  module.exports = {
+    getFormValues,
+    setPropertySafely,
+    saveFormValues,
+    clearFormValues,
+  };
 
 window.addEventListener("load", restoreFormValues);
-window.addEventListener("load", collectTotals);
 
 if (document.getElementById("resetButton"))
   document
@@ -41,25 +80,3 @@ if (document.getElementById("resetButton"))
         ? clearFormValues()
         : e.preventDefault(),
     );
-
-function getReport() {
-  const report = {};
-  for (var i = 0, len = localStorage.length; i < len; i++) {
-    const key = localStorage.key(i);
-    if (key.split("_")[0] !== "cmm") continue;
-    const section = key.split("_")[1];
-    report[section] = report[section] || {};
-    report[section].total = (report[section].total || 0) + 4;
-    report[section].score =
-      (report[section].score || 0) + parseInt(localStorage[key] - 1);
-    report[section].percent = report[section].score / report[section].total;
-  }
-  return report;
-}
-
-function setScoreMax(category, max) {
-  localStorage.setItem(`cmm_${category}_max`, max);
-}
-function setScore(category, score) {
-  localStorage.setItem(`cmm_${category}`, score);
-}
