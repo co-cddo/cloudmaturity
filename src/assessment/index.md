@@ -2,6 +2,8 @@
 layout: sub-navigation
 order: 1
 title: Assessment
+eleventyNavigation:
+  key: Assessment
 ---
 
 ## How to use this tool
