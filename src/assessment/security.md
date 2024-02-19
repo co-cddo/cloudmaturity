@@ -7,8 +7,9 @@ eleventyNavigation:
 
 TODO: insert GovAssure baseline? or excerpt from?
 
-{%- for post in collections[page.fileSlug] -%}
-{{ post.content }}
-{%- endfor -%}
-
-{% include 'nextAssessmentButton.njk' %}
+<form name="{{page.fileSlug}}">
+  {%- for post in collections[page.fileSlug] -%}
+    {% include 'question.njk' %}
+  {%- endfor -%}
+  {% include 'nextAssessmentButton.njk' %}
+</form>

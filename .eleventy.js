@@ -1,6 +1,8 @@
 const govukEleventyPlugin = require("@x-govuk/govuk-eleventy-plugin");
-const markdownItinput = require("./plugins/inputs");
+const tagFilter = require("./plugins/tagFilter");
+const hashFilter = require("./plugins/hashFilter");
 const fs = require("fs");
+const util = require("util");
 
 function gitRev() {
   const rev = fs.readFileSync(".git/HEAD").toString().trim();
@@ -11,6 +13,9 @@ function gitRev() {
       .toString()
       .trim();
 }
+function gitSHA() {
+  return gitRev().slice(0, 8);
+}
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(govukEleventyPlugin, {
@@ -19,15 +24,19 @@ module.exports = function (eleventyConfig) {
     },
     footer: {
       meta: {
-        text: `Page built from <a href="https://github.com/co-cddo/cloudmaturity/commit/${gitRev()}">${gitRev().slice(
-          0,
-          8,
-        )}</a> at ${new Date().toISOString()}`,
+        text: `Page built from <a href="https://github.com/co-cddo/cloudmaturity/commit/${gitRev()}">${gitSHA()}</a> at ${new Date().toISOString()}`,
       },
     },
   });
 
-  eleventyConfig.amendLibrary("md", (mdLib) => mdLib.use(markdownItinput, {}));
+  eleventyConfig.addFilter("tagfilter", tagFilter);
+  eleventyConfig.addFilter("hash", hashFilter);
+
+  eleventyConfig.addFilter("console", function (value) {
+    const str = util.inspect(value);
+    return `<div style="white-space: pre-wrap;">${unescape(str)}</div>;`;
+  });
+
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/robots.txt");
   eleventyConfig.addPassthroughCopy({
