@@ -24,7 +24,7 @@ transition: background 1s;
 }
 </style>
 
-<link rel="stylesheet" href="../../assets/chaarts.min.css">
 {% include 'report.njk' %}
 
-<script src="../../assets/cmm_report.js"></script>
+<script src="/{{"assets/cmm_report.js" | htmlBaseUrl}}"></script>
+<link rel="stylesheet" href="/{{"assets/chaarts.min.css" | htmlBaseUrl}}"/>
