@@ -94,6 +94,20 @@ function getScoreTable() {
   return tbl;
 }
 
+function renderFullReport() {
+  for (const elem of document.querySelectorAll(".report_answer_section")) {
+    const [category, question, answer] = elem.id.split("_");
+    if (
+      parseInt(cmm()?.categories[category]?.questions[question]) ===
+      parseInt(answer)
+    ) {
+      elem.style.display = "";
+      continue;
+    }
+    elem.style.display = "none";
+  }
+}
+
 function renderReport() {
   document
     .getElementById("report-goes-here")
@@ -101,6 +115,7 @@ function renderReport() {
 }
 
 window.addEventListener("load", renderReport);
+window.addEventListener("load", renderFullReport);
 
 if (typeof module === "object")
   module.exports = {
@@ -113,4 +128,5 @@ if (typeof module === "object")
     createEl,
     addRule,
     renderReport,
+    renderFullReport,
   };

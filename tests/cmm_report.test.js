@@ -118,3 +118,59 @@ describe("renderReport", () => {
     );
   });
 });
+
+describe("renderFullReport", () => {
+  beforeEach(() => {
+    localStorage.setItem(
+      "cmm",
+      JSON.stringify({
+        cat1: {
+          ques1: "2",
+        },
+        cat2: {
+          ques2: "3",
+        },
+      }),
+    );
+    // Setup our document body for testing
+    document.body.innerHTML = `
+      <div id="cat1_ques1_1" class="report_answer_section">Answer 1</div>
+      <div id="cat1_ques1_2" class="report_answer_section">Answer 2</div>
+      <div id="cat2_ques2_2" class="report_answer_section">Answer 3</div>
+      <div id="cat2_ques2_3" class="report_answer_section">Answer 4</div>
+    `;
+  });
+
+  it("should display the correct answer sections", () => {
+    m.renderFullReport();
+
+    const actual = {
+      elem1: document.getElementById("cat1_ques1_1").style.display,
+      elem2: document.getElementById("cat1_ques1_2").style.display,
+      elem3: document.getElementById("cat2_ques2_2").style.display,
+      elem4: document.getElementById("cat2_ques2_3").style.display,
+    };
+    const expected = {
+      elem1: "none",
+      elem2: "",
+      elem3: "none",
+      elem4: "",
+    };
+    expect(actual).toEqual(expected);
+  });
+
+  it("should hide all sections if no answers match", () => {
+    localStorage.setItem(
+      "cmm",
+      JSON.stringify({
+        cat3: { ques1: "2" },
+        cat4: { ques2: "3" },
+      }),
+    );
+    m.renderFullReport();
+
+    for (const elem of document.querySelectorAll(".report_answer_section")) {
+      expect(elem.style.display).toBe("none");
+    }
+  });
+});

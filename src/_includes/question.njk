@@ -1,0 +1,21 @@
+<div id="radios">
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h2 class="govuk-fieldset__heading">
+        {{post.data.title}}
+        </h2>
+      </legend>
+      <div class="govuk-radios" data-module="govuk-radios">
+        {%- for answer in post.content | tagfilter("h3") -%}
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" type="radio" name="cmm_{{post.data.eleventyNavigation.parent | safe}}_{{post.data.title | hash|safe}}" value="{{loop.index}}" id="cmm_{{post.data.eleventyNavigation.parent | safe}}_{{post.data.title | hash|safe}}_{{loop.index}}"/>
+            <label class="govuk-label govuk-radios__label" for="cmm_{{post.data.eleventyNavigation.parent | safe}}_{{post.data.title | hash|safe}}_{{loop.index}}">
+              {{answer|safe}}
+            </label>
+          </div>
+        {%- endfor -%}
+      </div>
+    </fieldset>
+  </div>
+</div>

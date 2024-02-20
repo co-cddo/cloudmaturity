@@ -1,0 +1,9 @@
+{% for section in collections.cmm %}
+<h2 class="govuk-heading-l">{{section.data.title}}</h2>
+  {% for question in collections[section.fileSlug] %}
+    <h3 class="govuk-heading-m">{{question.data.title | safe}}</h3>
+    {% for answer in question.content | getContentsAfterTags("h3") %}
+      <div id="{{section.fileSlug}}_{{question.data.title | hash}}_{{loop.index}}" class="report_answer_section">{{answer}}</div>
+    {% endfor %}
+  {% endfor %}
+{% endfor %}
