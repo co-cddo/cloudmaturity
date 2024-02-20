@@ -4,8 +4,7 @@ order: 2
 title: Report
 ---
 
-## Report goes here
-
+<div id="report-goes-here"></div>
 <style>
   :root {
     --foreground-lightness: 0%;
@@ -17,12 +16,15 @@ title: Report
     --step: 0.3;
   }
 
-  #report_radar:hover {
-    --chaarts-purple: rgba(29,112,184,0.9);
-  }
-  .chaarts[class*=radar] span {
-    transition: background 1s;
-  }
+#report_radar:hover {
+--chaarts-purple: rgba(29,112,184,0.9);
+}
+.chaarts[class*=radar] span {
+transition: background 1s;
+}
 </style>
+
 <link rel="stylesheet" href="../../assets/chaarts.min.css">
+{% include 'report.njk' %}
+
 <script src="../../assets/cmm_report.js"></script>

@@ -1,6 +1,7 @@
 ---
 layout: sub-navigation
 title: Security
+tags: cmm
 eleventyNavigation:
   parent: Assessment
 ---

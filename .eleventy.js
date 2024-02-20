@@ -1,6 +1,7 @@
 const govukEleventyPlugin = require("@x-govuk/govuk-eleventy-plugin");
 const tagFilter = require("./plugins/tagFilter");
 const hashFilter = require("./plugins/hashFilter");
+const getContentsAfterTags = require("./plugins/getContentsAfterTags");
 const fs = require("fs");
 const util = require("util");
 
@@ -31,10 +32,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("tagfilter", tagFilter);
   eleventyConfig.addFilter("hash", hashFilter);
+  eleventyConfig.addFilter("getContentsAfterTags", getContentsAfterTags);
 
   eleventyConfig.addFilter("console", function (value) {
     const str = util.inspect(value);
-    return `<div style="white-space: pre-wrap;">${unescape(str)}</div>;`;
+    return `<code style="white-space: pre-wrap;">${unescape(str)}</code>;`;
   });
 
   eleventyConfig.addPassthroughCopy("./src/assets");

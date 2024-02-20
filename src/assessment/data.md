@@ -1,5 +1,6 @@
 ---
 layout: sub-navigation
+tags: cmm
 title: Data
 eleventyNavigation:
   parent: Assessment

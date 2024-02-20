@@ -1,5 +1,6 @@
 ---
 layout: sub-navigation
+tags: cmm
 title: Cost & Sustainability
 eleventyNavigation:
   parent: Assessment

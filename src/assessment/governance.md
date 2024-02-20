@@ -1,5 +1,6 @@
 ---
 layout: sub-navigation
+tags: cmm
 title: Governance
 eleventyNavigation:
   parent: Assessment

@@ -1,6 +1,7 @@
 ---
 layout: sub-navigation
 title: Technology
+tags: cmm
 eleventyNavigation:
   parent: Assessment
 ---
