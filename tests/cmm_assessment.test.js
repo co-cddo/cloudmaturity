@@ -122,3 +122,25 @@ describe("clearFormValues", () => {
     expect(localStorage.getItem("bar")).toEqual("foo"));
   it.todo("should ask for confirmation before acting");
 });
+
+describe("clearCategoryValues", () => {
+  beforeAll(() => {
+    localStorage.setItem(
+      "foo",
+      JSON.stringify({
+        categoryA: "a",
+        categoryB: "b",
+      }),
+    );
+    localStorage.setItem("bar", "foo");
+    m.clearCategoryValues("foo", "categoryA");
+  });
+  afterAll(() => localStorage.clear());
+
+  it("should update the object in localStorage", () =>
+    expect(localStorage.getItem("foo")).toEqual(
+      JSON.stringify({ categoryB: "b" }),
+    ));
+  it("should not remove other items from localStorage", () =>
+    expect(localStorage.getItem("bar")).toEqual("foo"));
+});

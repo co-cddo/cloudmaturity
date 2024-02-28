@@ -1,13 +1,13 @@
-<a href="/assessment" id="resetButton" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
-Reset
-</a>
 {% set navPages = collections.ordered | eleventyNavigation("Assessment") %}
 {% set nextEntry = false %}
 {% set foundEntry = false %}
 {%- for entry in navPages %}
   {% if nextEntry == true and foundEntry == false %}
+<a href="{{ window.location.href }}" id="resetSectionButton" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Reset Section
+</a>
 <a href="{{ entry.url }}" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
-Save and continue
+  Save and continue
 </a>
     {% set foundEntry = true %}
   {% endif %}
@@ -19,6 +19,9 @@ Save and continue
 {%- endfor %}
 
 {% if foundEntry == false %}
+<a href="{{ entry.url }}" id="resetButton" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+  Reset
+</a>
 <a href="/assessment/report" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
   Get report
 </a>
