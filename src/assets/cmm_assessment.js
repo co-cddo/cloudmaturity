@@ -89,15 +89,15 @@ if (document.getElementById("resetButton"))
     );
 
 if (document.getElementById("resetSectionButton")) {
-  // Get the name of the category, based on the current window href
-  const href = window.location.href.replace(/\/$/, "");
-  const category = href.substring(href.lastIndexOf("/") + 1);
+  // Take any element of the document input (we take the first)
+  // Then split it by _ to [model, section, question], taking the section
+  const section = document.querySelectorAll("input")[0].name.split("_")[1];
 
   document
     .getElementById("resetSectionButton")
     .addEventListener("click", (e) =>
       confirm("Are you sure you want to reset this section?")
-        ? clearCategoryValues("cmm", category)
+        ? clearCategoryValues("cmm", section)
         : e.preventDefault(),
     );
 }
