@@ -63,11 +63,8 @@ function clearFormValues(item) {
 }
 
 function clearCategoryValues(storageItem, category) {
-  // Get the current data object in storage
   var data = JSON.parse(localStorage.getItem(storageItem));
-  // Remove the current category value from the object
   delete data[category];
-  // Set the updated data object as the new cmm link
   localStorage.setItem(storageItem, JSON.stringify(data));
 }
 
@@ -83,11 +80,13 @@ if (typeof module === "object")
 window.addEventListener("load", restoreFormValues);
 
 if (document.getElementById("resetButton"))
-  document.getElementById("resetButton").addEventListener("click", (e) =>
-    confirm("Are you sure you want to reset the entire report?")
-      ? clearFormValues("cmm") // to reset all, remove "cmm" object
-      : e.preventDefault(),
-  );
+  document
+    .getElementById("resetButton")
+    .addEventListener("click", (e) =>
+      confirm("Are you sure you want to reset the entire report?")
+        ? clearFormValues("cmm")
+        : e.preventDefault(),
+    );
 
 if (document.getElementById("resetSectionButton")) {
   // Get the name of the category, based on the current window href
