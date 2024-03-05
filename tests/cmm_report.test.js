@@ -152,9 +152,9 @@ describe("renderFullReport", () => {
     };
     const expected = {
       elem1: "none",
-      elem2: "",
+      elem2: "initial",
       elem3: "none",
-      elem4: "",
+      elem4: "initial",
     };
     expect(actual).toEqual(expected);
   });
@@ -172,5 +172,41 @@ describe("renderFullReport", () => {
     for (const elem of document.querySelectorAll(".report_answer_section")) {
       expect(elem.style.display).toBe("none");
     }
+  });
+});
+
+describe("getPreviousSibling", () => {
+  beforeEach(() => {
+    document.body.innerHTML = `
+      <div id="elem1"></div>
+      <p id="elem2"></p>
+      <div id="elem4" class="target"></div>
+      <span id="elem3"></span>
+      <div id="elem5"></div>
+    `;
+  });
+
+  it("should return the immediate previous sibling element when no selector is given", () => {
+    const elem = document.getElementById("elem5");
+    const previousSibling = m.getPreviousSibling(elem);
+    expect(previousSibling.id).toBe("elem3");
+  });
+
+  it("should return null if there is no previous sibling and no selector is given", () => {
+    const elem = document.getElementById("elem1");
+    const previousSibling = m.getPreviousSibling(elem);
+    expect(previousSibling).toBeNull();
+  });
+
+  it("should return the previous sibling that matches the selector", () => {
+    const elem = document.getElementById("elem5");
+    const previousSibling = m.getPreviousSibling(elem, ".target");
+    expect(previousSibling.id).toBe("elem4");
+  });
+
+  it("should return null if no previous siblings match the selector", () => {
+    const elem = document.getElementById("elem2");
+    const previousSibling = m.getPreviousSibling(elem, ".target");
+    expect(previousSibling).toBeUndefined();
   });
 });
