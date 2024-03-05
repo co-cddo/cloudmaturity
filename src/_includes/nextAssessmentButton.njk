@@ -3,7 +3,7 @@
 {% set foundEntry = false %}
 {%- for entry in navPages %}
   {% if nextEntry == true and foundEntry == false %}
-<a href="{{ window.location.href }}" id="resetSectionButton" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
+<a href="#" id="resetSectionButton" role="button" draggable="false" class="govuk-button govuk-button--warning" data-module="govuk-button">
   Reset Section
 </a>
 <a href="{{ entry.url }}" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
