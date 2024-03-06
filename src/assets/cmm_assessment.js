@@ -58,8 +58,14 @@ function saveFormValues() {
   });
 }
 
-function clearFormValues(model) {
-  localStorage.removeItem(model);
+function clearFormValues(item) {
+  localStorage.removeItem(item);
+}
+
+function clearCategoryValues(storageItem, category) {
+  var data = JSON.parse(localStorage.getItem(storageItem));
+  delete data[category];
+  localStorage.setItem(storageItem, JSON.stringify(data));
 }
 
 if (typeof module === "object")
@@ -68,6 +74,7 @@ if (typeof module === "object")
     setPropertySafely,
     saveFormValues,
     clearFormValues,
+    clearCategoryValues,
   };
 
 window.addEventListener("load", restoreFormValues);
@@ -77,6 +84,20 @@ if (document.getElementById("resetButton"))
     .getElementById("resetButton")
     .addEventListener("click", (e) =>
       confirm("Are you sure you want to reset the entire report?")
-        ? clearFormValues()
+        ? clearFormValues("cmm")
         : e.preventDefault(),
     );
+
+if (document.getElementById("resetSectionButton")) {
+  // Take any element of the document input (we take the first)
+  // Then split it by _ to [model, section, question], taking the section
+  const section = document.querySelectorAll("input")[0].name.split("_")[1];
+
+  document
+    .getElementById("resetSectionButton")
+    .addEventListener("click", (e) =>
+      confirm("Are you sure you want to reset this section?")
+        ? clearCategoryValues("cmm", section)
+        : e.preventDefault(),
+    );
+}
