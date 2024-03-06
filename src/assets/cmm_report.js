@@ -10,18 +10,19 @@ const titles = {
 function cmm() {
   const data = { categories: {} };
   const payload = JSON.parse(localStorage.getItem("cmm"));
-  Object.entries(payload).forEach(([category, v]) => {
-    if (category === "intro") return;
-    const questions = {};
-    Object.entries(v).forEach(([question, answer]) => {
-      questions[question] = parseInt(answer) || 1;
+  if (payload)
+    Object.entries(payload).forEach(([category, v]) => {
+      if (category === "intro") return;
+      const questions = {};
+      Object.entries(v).forEach(([question, answer]) => {
+        questions[question] = parseInt(answer) || 0;
+      });
+      data.categories[category] = {
+        questions,
+        title: titles[category],
+        max: Object.keys(v).length * 5,
+      };
     });
-    data.categories[category] = {
-      questions,
-      title: titles[category],
-      max: Object.keys(v).length * 5,
-    };
-  });
   return data;
 }
 
@@ -94,14 +95,24 @@ function getScoreTable() {
   return tbl;
 }
 
+function getPreviousSibling(elem, selector) {
+  var sibling = elem.previousElementSibling;
+  if (!selector) return sibling;
+  while (sibling) {
+    if (sibling.matches(selector)) return sibling;
+    sibling = sibling.previousElementSibling;
+  }
+}
+
 function renderFullReport() {
   for (const elem of document.querySelectorAll(".report_answer_section")) {
     const [category, question, answer] = elem.id.split("_");
-    if (
-      parseInt(cmm()?.categories[category]?.questions[question]) ===
-      parseInt(answer)
-    ) {
-      elem.style.display = "";
+    const provided_answer = cmm()?.categories[category]?.questions[question];
+    if (provided_answer && parseInt(provided_answer) === parseInt(answer)) {
+      elem.style.display = "initial";
+      console.log(cmm());
+      if (getPreviousSibling(elem, "h2"))
+        getPreviousSibling(elem, "h2").style.display = "block";
       continue;
     }
     elem.style.display = "none";
@@ -129,4 +140,5 @@ if (typeof module === "object")
     addRule,
     renderReport,
     renderFullReport,
+    getPreviousSibling,
   };

@@ -15,13 +15,16 @@ title: Report
     --scale: 1;
     --step: 0.3;
   }
+  main .app-prose-scope>h2.govuk-heading-l, main .app-prose-scope>h3.govuk-heading-m {
+    display: none;
+  }
+  #report_radar:hover {
+  --chaarts-purple: rgba(29,112,184,0.9);
+  }
+  .chaarts[class*=radar] span {
+  transition: background 1s;
+  }
 
-#report_radar:hover {
---chaarts-purple: rgba(29,112,184,0.9);
-}
-.chaarts[class*=radar] span {
-transition: background 1s;
-}
 </style>
 
 {% include 'report.njk' %}

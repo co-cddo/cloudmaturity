@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getScore should return the score 1`] = `2`;
+exports[`getScore should return the score 1`] = `1`;
 
 exports[`getScoreMax should return max score 1`] = `10`;
 
-exports[`getScorePercent should return a percent score 1`] = `0.2`;
+exports[`getScorePercent should return a percent score 1`] = `0.1`;
 
 exports[`getScoreTable should return the table 1`] = `
 <table
   class="radar chaarts"
   id="report_radar"
-  style="--1: 0.28; --2: 0.2; --3: 0.2571428571428571; --4: 0.2; --5: 0.2; --6: 0.2; --7: 0.2; --items: 7; --8: var(--1);"
+  style="--1: 0.16; --2: 0.1; --3: 0.08571428571428572; --4: 0.022222222222222223; --5: 0.025; --6: 0.014285714285714285; --7: 0.1; --items: 7; --8: var(--1);"
 >
   <thead>
     <tr>
@@ -55,37 +55,37 @@ exports[`getScoreTable should return the table 1`] = `
     <tr>
       <td>
         <span>
-          0.28
+          0.16
         </span>
       </td>
       <td>
         <span>
-          0.2
+          0.1
         </span>
       </td>
       <td>
         <span>
-          0.2571428571428571
+          0.08571428571428572
         </span>
       </td>
       <td>
         <span>
-          0.2
+          0.022222222222222223
         </span>
       </td>
       <td>
         <span>
-          0.2
+          0.025
         </span>
       </td>
       <td>
         <span>
-          0.2
+          0.014285714285714285
         </span>
       </td>
       <td>
         <span>
-          0.2
+          0.1
         </span>
       </td>
     </tr>
