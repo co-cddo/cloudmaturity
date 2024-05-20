@@ -3,7 +3,7 @@
   {% for question in collections[section.fileSlug] %}
     <h3 class="govuk-heading-m">{{question.data.title | safe}}</h3>
     {% for answer in question.content | getContentsAfterTags("h3") %}
-      <div id="{{section.fileSlug}}_{{question.data.title | hash}}_{{loop.index}}" class="report_answer_section">{{answer}}</div>
+      <div id="{{section.fileSlug}}_{{question.data.title | hash}}_{{loop.index}}" class="report_answer_section">{{answer}}<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"></div>
     {% endfor %}
   {% endfor %}
 {% endfor %}
