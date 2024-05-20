@@ -62,8 +62,34 @@ You should look to migrate teams incrementally, and promote the benefits that th
 
 ### **Custom, Unconventional Branch Strategy:** An invented branch strategy is in use, not aligning with standard methodologies and potentially leading to confusion or inefficiencies.
 
+#### How to determine if this good enough?
+
+TODO
+
+#### How do I do better?
+
+TODO
+
 ### **Adapted Recognized Branch Strategy:** The organization adapts a recognized branch strategy (like GitFlow or GitHubFlow), tailoring it to specific needs while maintaining some standard practices.
+
+#### How to determine if this good enough?
+
+TODO
+
+#### How do I do better?
+
+TODO
 
 ### **Textbook Implementation of a recognized branch strategy:** The organization adheres strictly to a model such as GitFlow, a recognized branch strategy suitable for managing complex development processes.
 
+#### How to determine if this good enough?
+
+TODO
+
+#### How do I do better?
+
+TODO
+
 ### **Textbook Implementation of a streamlined branch strategy:** The organization follows a streamlined branch strategy ideal for continuous delivery and simplified collaboration such as GitHubFlow precisely.
+
+Keep doing what you're doing, write some blog posts and make pull requests to this guidance to help others.
