@@ -4,6 +4,9 @@ order: 2
 title: Report
 ---
 
+{% from "govuk/components/button/macro.njk" import govukButton %}
+{% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
 <div id="report-goes-here"></div>
 <style>
   :root {
@@ -26,6 +29,25 @@ title: Report
   }
 
 </style>
+
+{{ govukFileUpload({
+  id: "reportUpload",
+  name: "reportUpload",
+  classes: "govuk-!-display-none"
+}) }}
+{{ govukButton({
+  text: "Save this report",
+  attributes: {
+    onClick: "saveReport()"
+  }
+})}}
+{{ govukButton({
+  text: "Load a previous report",
+  attributes: {
+    onClick: "document.getElementById('reportUpload').click()"
+  },
+  classes: "govuk-button--secondary"
+})}}
 
 {% include 'report.njk' %}
 
