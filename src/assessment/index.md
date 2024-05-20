@@ -28,7 +28,10 @@ eleventyNavigation:
 {{ govukFileUpload({
   id: "reportUpload",
   name: "reportUpload",
-  classes: "govuk-!-display-none"
+  classes: "govuk-!-display-none",
+  attributes: {
+    onChange: "loadReport(event)"
+  }
 }) }}
 {% include 'nextAssessmentButton.njk' %}
 {{ govukButton({

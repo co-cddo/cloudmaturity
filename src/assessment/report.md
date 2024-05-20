@@ -33,7 +33,10 @@ title: Report
 {{ govukFileUpload({
   id: "reportUpload",
   name: "reportUpload",
-  classes: "govuk-!-display-none"
+  classes: "govuk-!-display-none",
+  attributes: {
+    onChange: "loadReport(event)"
+  }
 }) }}
 {{ govukButton({
   text: "Save this report",

@@ -110,7 +110,6 @@ function renderFullReport() {
     const provided_answer = cmm()?.categories[category]?.questions[question];
     if (provided_answer && parseInt(provided_answer) === parseInt(answer)) {
       elem.style.display = "initial";
-      console.log(cmm());
       if (getPreviousSibling(elem, "h2"))
         getPreviousSibling(elem, "h2").style.display = "block";
       continue;
@@ -169,9 +168,6 @@ function download(content, fileName, contentType) {
 
 window.addEventListener("load", renderReport);
 window.addEventListener("load", renderFullReport);
-document
-  .getElementById("reportUpload")
-  .addEventListener("change", loadReport, false);
 
 if (typeof module === "object")
   module.exports = {
