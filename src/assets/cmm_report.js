@@ -110,7 +110,6 @@ function renderFullReport() {
     const provided_answer = cmm()?.categories[category]?.questions[question];
     if (provided_answer && parseInt(provided_answer) === parseInt(answer)) {
       elem.style.display = "initial";
-      console.log(cmm());
       if (getPreviousSibling(elem, "h2"))
         getPreviousSibling(elem, "h2").style.display = "block";
       continue;
@@ -120,9 +119,51 @@ function renderFullReport() {
 }
 
 function renderReport() {
-  document
-    .getElementById("report-goes-here")
-    .insertAdjacentHTML("beforebegin", getScoreTable().outerHTML);
+  if (document.getElementById("report-goes-here"))
+    document
+      .getElementById("report-goes-here")
+      .insertAdjacentHTML("beforebegin", getScoreTable().outerHTML);
+}
+
+function saveReport() {
+  download(
+    localStorage.getItem("cmm"),
+    "Cloud Maturity Report.json",
+    "text/plain",
+  );
+}
+function loadReport(event) {
+  const file = event.target.files[0];
+
+  if (!file) {
+    return;
+  }
+
+  if (file.type && file.type !== "application/json") {
+    alert("File is not a JSON.");
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function (event) {
+    try {
+      const json = JSON.parse(event.target.result);
+      localStorage.setItem("cmm", JSON.stringify(json));
+      window.location.reload();
+    } catch (e) {
+      alert("Error parsing JSON: " + e.message);
+    }
+  };
+
+  reader.readAsText(file);
+}
+
+function download(content, fileName, contentType) {
+  var a = document.createElement("a");
+  var file = new Blob([content], { type: contentType });
+  a.href = URL.createObjectURL(file);
+  a.download = fileName;
+  a.click();
 }
 
 window.addEventListener("load", renderReport);
@@ -139,6 +180,8 @@ if (typeof module === "object")
     createEl,
     addRule,
     renderReport,
+    loadReport,
     renderFullReport,
+    saveReport,
     getPreviousSibling,
   };

@@ -1,0 +1,29 @@
+{
+  "name": "Cloud Maturity Model",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+
+  // "features": {},
+
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [8080],
+
+  // Use 'postCreateCommand' to run commands after the container is created.
+  "postCreateCommand": "ssh-keygen -f '/home/node/.ssh/known_hosts' -R 'github.com' && npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ban.spellright",
+        "Gruntfuggly.todo-tree",
+        "ronnidc.nunjucks",
+        "esbenp.prettier-vscode",
+        "GitHub.vscode-pull-request-github"
+      ]
+    }
+  }
+
+  // Configure tool-specific properties.
+  // "customizations": {},
+
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "root"
+}

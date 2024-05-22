@@ -1,0 +1,11 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.autoSaveDelay": 0,
+  "files.autoSave": "onFocusChange",
+  "prettier.documentSelectors": ["**/*.js", "**/*.md"],
+  "editor.formatOnSaveMode": "file",
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

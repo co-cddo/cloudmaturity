@@ -68,10 +68,34 @@ There may be scenarios where this needs to be overridden, for example during an 
 
 ### **Intra-Region Distribution:** Workloads and data are spread across multiple availability zones within a single region to enhance availability and resilience.
 
+#### How to determine if this good enough?
+
+TODO
+
+#### How do I do better?
+
+TODO
+
 ### **Selective Multi-Region Utilization:** An additional, legally compliant non-UK region is used for specific purposes, such as non-production workloads, certain data types, or as part of disaster recovery planning.
+
+#### How to determine if this good enough?
+
+TODO
+
+#### How do I do better?
+
+TODO
 
 ### **Capability and Sustainability-Driven Selection:** Regions are chosen based solely on their technical capabilities, cost-effectiveness, and environmental sustainability credentials, without any specific technical constraints.
 
+#### How to determine if this good enough?
+
+TODO
+
+#### How do I do better?
+
+TODO
+
 ### **Dynamic and Cost-Sustainable Distribution:** Workloads are dynamically allocated across various regions and availability zones, with scheduling optimized for cost-efficiency and sustainability, adapting in real-time to changing conditions.
 
-Keep doing what you're doing!
+Keep doing what you're doing, write some blog posts and make pull requests to this guidance to help others.
