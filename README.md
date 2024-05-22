@@ -24,4 +24,8 @@ The report in response to the attestations is structured firstly as helping the 
 
 Its important to clarify what this is not, this is not intended to be a assurance tool, or for results to be collected, it is first and foremost a tool to help provide targeted explicit guidance that will help organizations recognize where they are, what risks they're operating with, and specifically how to improve their position.
 
-## Pull requests are very welcome
+## Contributions / _❤️ Pull Requests_
+
+The repository is configured with [dev containers](https://containers.dev/) so should be able to use [Github Codespaces](https://github.com/features/codespaces) or your preferred [compatible editor](https://containers.dev/supporting#editors).
+
+You will find all the questions and guidance in [./src/assessment](./src/assessment/).
