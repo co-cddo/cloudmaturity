@@ -133,7 +133,7 @@ If you only need the secondary region for DR or test/dev, you can keep environme
 - You familiarize your team with deploying and operating in a second region.
 - Environment Scheduling & Infrastructure as Code
 
-Much like scheduling non-production instances within a single region, you can do the same across multiple regions to reduce cost. Using Infrastructure as Code (IaC) solutions (e.g., Terraform, AWS CloudFormation, Azure Bicep, or Ansible) allows you to spin up and tear down ephemeral environments quickly, giving you near on-demand usage while you test or develop.
+Much like scheduling non-production instances within a single region, you can do the same across multiple regions to reduce cost. Using [Infrastructure as Code (IaC)](https://en.wikipedia.org/wiki/Infrastructure_as_Code) solutions (e.g., [Terraform](https://www.terraform.io/), [AWS CloudFormation](https://aws.amazon.com/cloudformation/), [Azure Bicep](https://azure.microsoft.com/en-gb/products/azure-resource-manager/bicep), or [Ansible](https://www.ansible.com/)) allows you to spin up and tear down ephemeral environments quickly, giving you near on-demand usage while you test or develop.
 
 ##### Considerations for cost management in multiple regions
 
@@ -142,31 +142,31 @@ Much like scheduling non-production instances within a single region, you can do
   - Some providers have special rates or free tiers for cross-region backups, but these can be subject to limitations.
 - Compute & Storage Pricing Variations
   - Each region may have a different pricing structure for VMs, serverless functions, managed databases, and storage. Research if your chosen secondary region is more or less expensive than your primary region.
-  - Spot/Preemptible Instances: For test or dev workloads, you may consider these cost-saving instance types, even in a second region.
+  - **Spot/Preemptible Instances**: For test or dev workloads, you may consider these cost-saving instance types, even in a second region.
 - Long-Term Archival
-  - Cold storage or archival tiers (e.g. AWS Glacier, Azure Archive, GCP Archive Storage) across regions can be much cheaper, making it viable to maintain older snapshots or infrequently accessed data in multiple geographies.
+  - Cold storage or archival tiers (e.g. [AWS Glacier](https://aws.amazon.com/glacier/), [Azure Archive](https://azure.microsoft.com/en-gb/products/storage/archive/), [GCP Archive Storage](https://cloud.google.com/storage/docs/archive)) across regions can be much cheaper, making it viable to maintain older snapshots or infrequently accessed data in multiple geographies.
 
 ##### Managed services and advanced replication for improved RPO/RTO
 
 ###### Managed Database Replication
 
-Many cloud-managed database services (e.g., AWS RDS Read Replicas, Azure SQL Geo-Replication, GCP Cloud SQL Read Replicas) offer out-of-the-box support for replicating database changes to another region. This shortens both your Recovery Point Objective (RPO) (because data is nearly real-time) and potentially your RTO (since the secondary instance can become primary if needed).
+Many cloud-managed database services (e.g., [AWS RDS Read Replicas](https://aws.amazon.com/rds/features/read-replicas/), [Azure SQL Geo-Replication](https://azure.microsoft.com/en-gb/products/azure-sql/database/geo-replication), [GCP Cloud SQL Read Replicas](https://cloud.google.com/sql/docs/postgres/replication/managed-replica)) offer out-of-the-box support for replicating database changes to another region. This shortens both your Recovery Point Objective (RPO) (because data is nearly real-time) and potentially your RTO (since the secondary instance can become primary if needed).
 
 **Action:** Enable cross-region read replicas for critical databases, so that if your primary region fails, you can quickly promote the replica.
 
 ###### Global Load Balancing and Failover
 
-- AWS Route 53, Azure Traffic Manager, GCP Cloud DNS, or OCI DNS can be configured to automatically reroute traffic to a secondary region if the primary region’s health checks fail.
+- [AWS Route 53](https://aws.amazon.com/route53/), [Azure Traffic Manager](https://azure.microsoft.com/en-gb/products/traffic-manager/), [GCP Cloud DNS](https://cloud.google.com/dns), or [OCI DNS](https://www.oracle.com/cloud/dns/) can be configured to automatically reroute traffic to a secondary region if the primary region’s health checks fail.
 - **Action:** Define health checks and failover policies in your DNS or global load balancing service so you can redirect users seamlessly if your primary region is unavailable.
 
 ###### Managed DR Solutions
 
 Some providers now offer integrated DR solutions that coordinate many of the above tasks: replicating data, creating runbooks, orchestrating failover, and even testing your DR plan automatically.
 
-- AWS CloudEndure Disaster Recovery TODO: link
-- Azure Site Recovery TODO: link
-- GCP Backup and DR Service TODO: link
-- OCI Disaster Recovery TODO: link
+- [AWS CloudEndure Disaster Recovery](https://aws.amazon.com/cloudendure-disaster-recovery/)
+- [Azure Site Recovery](https://azure.microsoft.com/en-gb/products/site-recovery/)
+- [GCP Backup and DR Service](https://cloud.google.com/backup-for-vmware-engine/docs/overview)
+- [OCI Disaster Recovery](https://www.oracle.com/cloud/disaster-recovery/)
 
 ###### Operational considerations for multi-region usage
 
@@ -177,7 +177,7 @@ Some providers now offer integrated DR solutions that coordinate many of the abo
 - Automation & Observability
 
   - Instrument your applications and infrastructure with observability tools that can gather metrics, logs, and traces from both regions.
-  - Automated alerts (using services like AWS CloudWatch, Azure Monitor, GCP Cloud Monitoring, or OCI Monitoring) help teams quickly identify issues and decide when to trigger failover.
+  - Automated alerts (using services like [AWS CloudWatch](https://aws.amazon.com/cloudwatch/), [Azure Monitor](https://azure.microsoft.com/en-gb/products/monitor/), [GCP Cloud Monitoring](https://cloud.google.com/monitoring), or [OCI Monitoring](https://www.oracle.com/cloud/monitoring/)) help teams quickly identify issues and decide when to trigger failover.
 
 - **Compliance & Governance**
 
@@ -213,7 +213,7 @@ Finally, if you are not yet facing requirements that demand selecting regions ba
 
 #### How do I do better?
 
-A straightforward next step toward capability improvements is to begin exploring additional regions that offer specialized services or premium features. For instance, some workloads may benefit from GPU-accelerated compute (e.g., AWS EC2 P-Instances, Azure NV-Series, GCP GPU-based VMs, OCI BM.GPU shapes) or advanced database engines (e.g., AWS Aurora Global Database, Azure Cosmos DB, GCP Spanner). By selectively deploying certain services in regions known for these capabilities, you can expand your application portfolio without overhauling every environment.
+A straightforward next step toward capability improvements is to begin exploring additional regions that offer specialized services or premium features. For instance, some workloads may benefit from GPU-accelerated compute (e.g., [AWS EC2 P-Instances](https://aws.amazon.com/ec2/instance-types/#Accelerated_Computing), [Azure NV-Series](https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/gpu-accelerated/nv-series), [GCP GPU-based VMs](https://cloud.google.com/compute/docs/gpus), [OCI BM.GPU shapes](https://www.oracle.com/uk/cloud/compute/gpu/)) or advanced database engines (e.g., [AWS Aurora Global Database](https://aws.amazon.com/rds/aurora/global-database/), [Azure Cosmos DB](https://azure.microsoft.com/en-gb/products/cosmos-db), [GCP Spanner](https://cloud.google.com/spanner)). By selectively deploying certain services in regions known for these capabilities, you can expand your application portfolio without overhauling every environment.
 
 If sustainability is a growing organizational priority, you can target greener regions by actively scheduling or migrating workloads to facilities with higher renewable energy usage or better carbon-intensity metrics. For example, AWS, Azure, GCP, and OCI each publish sustainability data or highlight key "green regions." Consuming ephemeral workloads (like dev/test or batch processing) in one of these more environmentally friendly regions not only reduces your carbon footprint, but also gives your team real-world experience operating outside your primary region.
 
@@ -226,16 +226,16 @@ A next-level disaster recovery (DR) approach is to maintain near-synchronous or 
 - **[GCP Managed Replicas](https://cloud.google.com/sql/docs/postgres/replication/managed-replica)**: Configure Cloud SQL or Cloud Spanner with cross-region replicas for near real-time updates.
 - **[OCI Data Guard](https://www.oracle.com/cloud/data-guard/)**: Maintain standby databases across Oracle Cloud regions with near-zero data loss.
 
-By having multiple replication endpoints—beyond just one "legal fallback" region—you can incrementally adopt a broader range of options that address specific workload requirements. For example, high-latency analytics might move to a region with specialized ML accelerators, while cost-sensitive dev/test workloads remain in cheaper or existing secondary regions.
+By having multiple replication endpoints—beyond just one "fallback" region—you can incrementally adopt a broader range of options that address specific workload requirements. For example, high-latency analytics might move to a region with specialized ML accelerators, while cost-sensitive dev/test workloads remain in cheaper or existing secondary regions.
 
 ##### Orchestrated Deployment & Testing
 
-You can incorporate multi-region Infrastructure as Code (IaC) to fully automate your deployments:
+You can incorporate multi-region [Infrastructure as Code (IaC)](https://en.wikipedia.org/wiki/Infrastructure_as_Code) to fully automate your deployments:
 
 - **[Terraform](https://www.terraform.io/)**: Define each environment (network, VMs, container orchestrators) across the globe in a single codebase, parameterizing region choices.
 - **[Azure Bicep](https://azure.microsoft.com/en-gb/products/azure-resource-manager/bicep) / [AWS CloudFormation](https://aws.amazon.com/cloudformation/) / [GCP Deployment Manager](https://cloud.google.com/deployment-manager) / [OCI Resource Manager](https://www.oracle.com/cloud/resource-manager/)**: Use built-in native IaC solutions to mirror or shift your environment to different regions without a manual rebuild.
 
-With an automated deployment pipeline, you can run repeated "blue/green" deployments or "canary" releases in your secondary region. This not only validates that your services work in that region but also helps confirm performance or cost trade-offs. By orchestrating failover tests or incremental rollouts to more capable or greener regions, you continuously refine your multi-region architecture.
+With an automated deployment pipeline, you can run repeated ["blue/green" deployments](https://en.wikipedia.org/wiki/Blue%E2%80%93green_deployment) or ["canary" releases](https://martinfowler.com/bliki/CanaryRelease.html) in your secondary region. This not only validates that your services work in that region but also helps confirm performance or cost trade-offs. By orchestrating failover tests or incremental rollouts to more capable or greener regions, you continuously refine your multi-region architecture.
 
 ##### Scheduling & Workload Placement
 
@@ -262,7 +262,7 @@ Making these incremental steps helps your architecture become more portable and 
 
 To confidently adopt new regions based on capability or sustainability, enhance your observability:
 
-- **Unified Logging & Metrics:** Use a single platform (e.g., Datadog, Splunk, Elastic Observability, Azure Monitor, GCP Operations Suite, AWS CloudWatch/CloudTrail, or OCI Logging) for multiple regions, ensuring real-time visibility into performance, errors, and usage costs.
+- **Unified Logging & Metrics:** Use a single platform (e.g., [Datadog](https://www.datadoghq.com/), [Splunk](https://www.splunk.com/), [Elastic Observability](https://www.elastic.co/observability), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/), [GCP Operations Suite](https://cloud.google.com/blog/topics/developers-practitioners/introduction-google-clouds-operations-suite), [AWS CloudWatch](https://aws.amazon.com/cloudwatch/)/[CloudTrail](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html), or [OCI Logging](https://docs.oracle.com/iaas/Content/Logging/Concepts/loggingoverview.htm)) for multiple regions, ensuring real-time visibility into performance, errors, and usage costs.
 - **Cross-Region Alerting & Synthetic Monitoring:** Configure synthetic checks or distributed tracing in each region where workloads run, verifying response times and regional health. This approach pinpoints latency, networking, or cost anomalies that might occur only in newly adopted regions.
 - **Distributed Runbook Automation:** Update your operational documentation to address multi-region failure modes and partial region outages. Ensure your existing runbooks still apply if you adopt new "capability-oriented" or "sustainability-oriented" regions, covering tasks like re-pointing DNS or promoting database replicas.
 
