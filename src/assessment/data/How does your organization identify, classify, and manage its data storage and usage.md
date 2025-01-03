@@ -35,24 +35,24 @@ Here are **rapidly actionable** steps to establish foundational data management 
 1. **Identify and Tag All Existing Data Stores**
 
    - Start by running a quick inventory or "data discovery" across your cloud environment:
-     - [AWS: Use AWS Resource Tagging and AWS Config to identify S3 buckets, EBS volumes, RDS instances, etc.](https://TODO)
-     - [Azure: Azure Resource Graph or tagging to locate Storage Accounts, SQL Databases, etc.](https://TODO)
-     - [GCP: Cloud Asset Inventory to search for Cloud Storage buckets, BigQuery datasets, etc.](https://TODO)
-     - [OCI: Resource Search and tagging to find Object Storage buckets, block volumes, databases, etc.](https://TODO)
+     - [AWS: Use AWS Resource Tagging and AWS Config to identify S3 buckets, EBS volumes, RDS instances, etc.](https://docs.aws.amazon.com/config/latest/developerguide/tagging.html)
+     - [Azure: Azure Resource Graph or tagging to locate Storage Accounts, SQL Databases, etc.](https://docs.microsoft.com/en-us/azure/governance/resource-graph/first-query)
+     - [GCP: Cloud Asset Inventory to search for Cloud Storage buckets, BigQuery datasets, etc.](https://cloud.google.com/asset-inventory/docs/asset-inventory-overview)
+     - [OCI: Resource Search and tagging to find Object Storage buckets, block volumes, databases, etc.](https://docs.oracle.com/iaas/Content/Search/Tasks/queryingresources.htm)
    - Even if you only have partial naming standards, tag each discovered resource with "owner," "purpose," and "data type." This immediately lowers the risk of data sprawl.
 
 1. **Establish Basic Data Handling Guidelines**
 
    - Document a short set of rules about where teams should store data, who can access it, and minimal security classification steps (e.g., "Use only these approved folders/buckets for OFFICIAL-SENSITIVE data").
-   - Reference the [Government Security Classification Policy (GSCP)](https://TODO) or departmental guidelines to outline baseline compliance steps.
+   - Reference the [Government Security Classification Policy (GSCP)](https://www.gov.uk/government/publications/government-security-classifications) or departmental guidelines to outline baseline compliance steps.
 
 1. **Enable Basic Monitoring and Access Controls**
 
    - Ensure you have simple controls in place:
-     - [AWS: S3 Bucket Policies, AWS IAM Access Analyzer to detect overly open buckets](https://TODO)
-     - [Azure: Role-Based Access Control (RBAC) for storage accounts, Azure Policy for restricting public endpoints](https://TODO)
-     - [GCP: IAM policies for Cloud Storage, VPC Service Controls for perimeter security](https://TODO)
-     - [OCI: IAM compartments and security zone policies for restricting data exposure](https://TODO)
+     - [AWS: S3 Bucket Policies, AWS IAM Access Analyzer to detect overly open buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-analyzer.html)
+     - [Azure: Role-Based Access Control (RBAC) for storage accounts, Azure Policy for restricting public endpoints](https://learn.microsoft.com/en-us/azure/storage/common/policy-reference)
+     - [GCP: IAM policies for Cloud Storage, VPC Service Controls for perimeter security](https://cloud.google.com/vpc-service-controls/docs/overview)
+     - [OCI: IAM compartments and security zone policies for restricting data exposure](https://docs.oracle.com/en-us/iaas/security-zone/using/security-zones.htm)
    - This helps prevent accidental public exposure or misconfigurations.
 
 1. **Educate Teams on Data Sensitivity**
@@ -99,19 +99,19 @@ Below are **rapidly actionable** ways to improve upon team-based documentation:
 1. **Adopt Centralized Tagging/Labeling Policies**
 
    - Instead of each team inventing its own naming or classification, unify your approach:
-     - [AWS: Resource Tagging Strategy, e.g., "data_sensitivity=OFFICIAL" or "data_owner=TeamX"](https://TODO)
-     - [Azure Policy for enforcing tags, e.g., "Env=Production; DataClassification=PersonalData"](https://TODO)
-     - [GCP Organization Policy + labels for standard classification (like PII, OFFICIAL-SENSITIVE, etc.)](https://TODO)
-     - [OCI tag namespaces, e.g., "Department: HR; Sensitivity: OFFICIAL-SENSITIVE"](https://TODO)
+     - [AWS: Resource Tagging Strategy, e.g., "data_sensitivity=OFFICIAL" or "data_owner=TeamX"](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html)
+     - [Azure Policy for enforcing tags, e.g., "Env=Production; DataClassification=PersonalData"](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies)
+     - [GCP Organization Policy + labels for standard classification (like PII, OFFICIAL-SENSITIVE, etc.)](https://cloud.google.com/resource-manager/docs/organization-policy/tags-organization-policy)
+     - [OCI tag namespaces, e.g., "Department: HR; Sensitivity: OFFICIAL-SENSITIVE"](https://docs.oracle.com/en-us/iaas/Content/Tagging/Tasks/managingtagsandtagnamespaces.htm)
    - This fosters consistent data metadata across teams.
 
 1. **Introduce Lightweight Tools for Schema and Documentation**
 
    - Even if you can’t deploy a full data catalog, encourage teams to use a shared wiki or knowledge base that references cloud resources directly:
-     - [AWS Glue Data Catalog for structured data sets (if applicable), or simple Confluence/Jira links to S3 schemas](https://TODO)
-     - [Azure Purview (Microsoft Purview) for scanning and labeling data, or open-source data dictionaries](https://TODO)
-     - [GCP Data Catalog for managing metadata and simple search across datasets](https://TODO)
-     - [OCI Data Catalog for metadata management on Oracle Cloud data sources](https://TODO)
+     - [AWS Glue Data Catalog for structured data sets](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
+     - [Azure Purview (Microsoft Purview) for scanning and labeling data](https://learn.microsoft.com/en-us/purview/purview)
+     - [GCP Data Catalog for managing metadata and simple search across datasets](https://cloud.google.com/data-catalog)
+     - [OCI Data Catalog for metadata management on Oracle Cloud data sources](https://www.oracle.com/a/ocom/docs/ebook-cloud-infrastructure-data-catalog.pdf)
    - This can evolve into a more formal data inventory.
 
 1. **Standardize on Security and Compliance Checklists**
@@ -121,10 +121,10 @@ Below are **rapidly actionable** ways to improve upon team-based documentation:
      - Encryption enabled?
      - Access controls (RBAC/IAM) aligned with sensitivity?
    - Tools and references:
-     - [AWS IAM Access Analyzer + S3 Default Encryption checks](https://TODO)
-     - [Azure Policy/BluePrint to enforce encryption at rest, secure endpoints](https://TODO)
-     - [GCP Data Loss Prevention (DLP) scanning or default bucket encryption checks](https://TODO)
-     - [OCI Security Advisor for storage encryption and IAM best practices](https://TODO)
+     - [AWS IAM Access Analyzer + S3 Default Encryption checks](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-analyzer.html)
+     - [Azure Policy/Blueprint to enforce encryption at rest, secure endpoints](https://learn.microsoft.com/en-us/azure/security/fundamentals/encryption-atrest)
+     - [GCP Data Loss Prevention (DLP) scanning or default bucket encryption checks](https://cloud.google.com/dlp/docs)
+     - [OCI Security Advisor for storage encryption and IAM best practices](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityadvisor.htm)
 
 1. **Schedule Quarterly or Semi-Annual Data Reviews**
 
@@ -171,10 +171,10 @@ To refine your "Inventoried and Classified Data" approach, apply these **rapidly
 1. **Automate Scanning and Classification**
 
    - Supplement manual entries with scanning tools that detect PII, sensitive patterns, or regulated data:
-     - [AWS Macie for S3 data classification, or Amazon Comprehend for advanced text insights](https://TODO)
-     - [Azure Purview (Microsoft Purview) scanning storage accounts, Azure SQL DB, or Azure Synapse for sensitive info](https://TODO)
-     - [GCP Data Loss Prevention API for scanning Cloud Storage or BigQuery data](https://TODO)
-     - [OCI Data Catalog with data profiling and classification modules](https://TODO)
+     - [AWS Macie for S3 data classification, or Amazon Comprehend for advanced text insights](https://docs.aws.amazon.com/macie/)
+     - [Azure Purview (Microsoft Purview) scanning storage accounts, Azure SQL DB, or Azure Synapse for sensitive info](https://learn.microsoft.com/en-us/purview/)
+     - [GCP Data Loss Prevention (DLP) API for scanning Cloud Storage or BigQuery data](https://cloud.google.com/sensitive-data-protection/docs)
+     - [OCI Data Catalog with data profiling and classification modules](https://docs.oracle.com/en-us/iaas/data-catalog/home.htm)
    - Regularly schedule these scans so new data is automatically classified.
 
 1. **Introduce Basic Lineage Tracing**
@@ -182,19 +182,20 @@ To refine your "Inventoried and Classified Data" approach, apply these **rapidly
    - Even if partial, track how data flows from source to destination:
      - For instance, a CRM system exporting daily CSV to an S3 bucket for analytics, then into a data warehouse.
    - Tools like:
-     - [AWS Glue for ETL job lineage, combined with AWS Athena queries over logs](https://TODO)
-     - [Azure Data Factory lineage features or Microsoft Purview lineage mapping](https://TODO)
-     - [GCP Data Catalog + Dataflow or Dataproc lineage integration](https://TODO)
-     - [OCI Data Integration lineage capability or separate metadata tooling](https://TODO)
+     - [AWS Glue for ETL job lineage, combined with AWS Athena queries over logs](https://aws.amazon.com/blogs/big-data/build-data-lineage-for-data-lakes-using-aws-glue-amazon-neptune-and-spline/)
+     - [Azure Data Factory lineage features or Microsoft Purview lineage mapping](https://learn.microsoft.com/en-us/purview/concept-data-lineage)
+     - [GCP Data Catalog + Dataflow or Dataproc lineage integration](https://cloud.google.com/data-catalog/docs/how-to/lineage-gcp)
+     - [OCI Data Integration lineage capability or separate metadata tooling](https://blogs.oracle.com/cloud-infrastructure/post/where-did-the-data-come-from-data-lineage)
+   - This practice enhances data traceability and supports compliance efforts.
 
 1. **Align with Legal & Policy Requirements**
 
    - Mark data sets with relevant regulations—UK GDPR, FOI, PCI-DSS, etc.
    - Build retention policies that automatically archive or delete data when it meets disposal criteria:
-     - [AWS S3 Lifecycle rules, or versioning + replication for specific compliance domains](https://TODO)
-     - [Azure Blob Lifecycle management with tiering or timed deletion for certain containers](https://TODO)
-     - [GCP Object Lifecycle policies for buckets, or BigQuery partition expiration](https://TODO)
-     - [OCI Object Storage lifecycle management to archive or delete data automatically](https://TODO)
+     - [AWS S3 Lifecycle rules, or versioning + replication for specific compliance domains](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html)
+     - [Azure Blob Lifecycle management with tiering or timed deletion for certain containers](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-overview)
+     - [GCP Object Lifecycle policies for buckets, or BigQuery partition expiration](https://cloud.google.com/storage/docs/lifecycle)
+     - [OCI Object Storage lifecycle management to archive or delete data automatically](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/managinglifecyclepolicies.htm)
 
 1. **Create a Single "Data Inventory" Dashboard**
 
@@ -241,10 +242,10 @@ Below are **rapidly actionable** steps to deepen your data lineage and documenta
 1. **Adopt or Expand a Data Catalog with Lineage Features**
 
    - Introduce or enhance tooling that can map data flows automatically or semi-automatically:
-     - [AWS Glue Data Catalog lineage (part of AWS Glue Studio) or AWS Lake Formation cross-lake lineage features](https://TODO)
-     - [Azure Purview (Microsoft Purview) with lineage detection for Data Factory/Databricks pipelines](https://TODO)
-     - [GCP Data Catalog’s lineage extension or third-party lineage solutions (e.g., Collibra) integrated with BigQuery/Dataflow](https://TODO)
-     - [OCI Data Catalog lineage modules, or integrative metadata tools for Oracle DB, Object Storage, etc.](https://TODO)
+     - [AWS Glue Data Catalog lineage (part of AWS Glue Studio) or AWS Lake Formation cross-lake lineage features](https://aws.amazon.com/blogs/big-data/build-data-lineage-for-data-lakes-using-aws-glue-amazon-neptune-and-spline/)
+     - [Azure Purview (Microsoft Purview) with lineage detection for Data Factory/Databricks pipelines](https://learn.microsoft.com/en-us/azure/data-factory/tutorial-push-lineage-to-purview)
+     - [GCP Data Catalog’s lineage extension or third-party lineage solutions (e.g., Collibra) integrated with BigQuery/Dataflow](https://cloud.google.com/data-catalog/docs/how-to/lineage-gcp)
+     - [OCI Data Catalog lineage modules, or integrative metadata tools for Oracle DB, Object Storage, etc.](https://blogs.oracle.com/cloud-infrastructure/post/new-data-lineage-features-oci-data-catalog)
 
 1. **Create a Standard Operating Procedure for Lineage Updates**
 
@@ -261,10 +262,10 @@ Below are **rapidly actionable** steps to deepen your data lineage and documenta
 1. **Set Up Tiered Access Policies**
 
    - Understanding lineage helps define more granular access control. If you see that certain data flows from a core system to multiple departmental stores, you can apply consistent RBAC or attribute-based access control:
-     - [AWS Lake Formation for fine-grained table/column access in a data lake environment](https://TODO)
-     - [Azure Synapse RBAC / Purview classification-based access policies](https://TODO)
-     - [GCP BigQuery column-level security or row-level security with labels from Data Catalog classification](https://TODO)
-     - [OCI Data Lake security controls with IAM for detailed partition or schema-based policies](https://TODO)
+     - [AWS Lake Formation for fine-grained table/column access in a data lake environment](https://docs.aws.amazon.com/lake-formation/latest/dg/access-control-fine-grained.html)
+     - [Azure Synapse RBAC / Purview classification-based access policies](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-synapse-rbac-roles)
+     - [GCP BigQuery column-level security or row-level security with labels from Data Catalog classification](https://cloud.google.com/bigquery/docs/column-level-security)
+     - [OCI Data Lake security controls with IAM for detailed partition or schema-based policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 1. **Integrate with Risk and Compliance Dashboards**
    - If you have a departmental risk register, link data classification/lineage issues into that.
@@ -306,10 +307,10 @@ Even at the highest maturity, here are **actionable** ways to refine:
 1. **Incorporate Real-Time or Streaming Data**
 
    - Expand your catalog’s scope to include real-time pipelines, e.g., streaming from IoT devices or sensor networks:
-     - [AWS Kinesis Data Streams or AWS MSK lineage integration with Glue or Lake Formation](https://TODO)
-     - [Azure Event Hubs + Databricks or Stream Analytics lineage in Purview](https://TODO)
-     - [GCP Pub/Sub or Dataflow lineage detection in Data Catalog with advanced tags](https://TODO)
-     - [OCI Streaming service integrated with Data Integration or Data Catalog lineage updates](https://TODO)
+     - [AWS Kinesis Data Streams or AWS MSK lineage integration with Glue or Lake Formation](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-connect-kinesis-home.html)
+     - [Azure Event Hubs + Databricks or Stream Analytics lineage in Purview](https://learn.microsoft.com/en-us/samples/microsoft/purview-adb-lineage-solution-accelerator/azure-databricks-to-purview-lineage-connector/)
+     - [GCP Pub/Sub or Dataflow lineage detection in Data Catalog with advanced tags](https://cloud.google.com/data-catalog/docs/how-to/lineage-gcp)
+     - [OCI Streaming service integrated with Data Integration or Data Catalog lineage updates](https://blogs.oracle.com/cloud-infrastructure/post/where-did-the-data-come-from-data-lineage)
 
 1. **Add Automated Data Quality Rules and Alerts**
 
@@ -320,15 +321,15 @@ Even at the highest maturity, here are **actionable** ways to refine:
 1. **Leverage AI/ML to Classify and Suggest Metadata**
 
    - Let machine learning simplify classification:
-     - [AWS Macie for advanced PII detection, combined with AI-driven suggestions for new data sets in AWS Glue Data Catalog](https://TODO)
-     - [Azure Purview with AI-based classifiers, integrated with Azure Cognitive Services for text analysis](https://TODO)
-     - [GCP Data Catalog + DLP + Document AI to automatically label unstructured data](https://TODO)
-     - [OCI Data Catalog with Oracle Machine Learning add-ons for pattern recognition in large data sets](https://TODO)
+     - [AWS Macie for advanced PII detection, combined with AI-driven suggestions for new data sets in AWS Glue Data Catalog](https://aws.amazon.com/blogs/big-data/enrich-your-aws-glue-data-catalog-with-generative-ai-metadata-using-amazon-bedrock/)
+     - [Azure Purview with AI-based classifiers, integrated with Azure Cognitive Services for text analysis](https://techcommunity.microsoft.com/blog/microsoftmechanicsblog/ai-powered-data-classification--microsoft-purview/3919206)
+     - [GCP Data Catalog + DLP + Document AI to automatically label unstructured data](https://cloud.google.com/blog/products/ai-machine-learning/document-ai-custom-extractor-powered-by-generative-ai-is-now-ga)
+     - [OCI Data Catalog with Oracle Machine Learning add-ons for pattern recognition in large data sets](https://blogs.oracle.com/ai-and-datascience/post/using-ai-and-ml-to-enrich-metadata-in-data-catalog)
 
 1. **Integrate Catalog with Wider Public Sector Ecosystems**
 
    - If your data catalog can integrate with cross-government data registries or share metadata with partner organizations, you reduce duplication and improve interoperability. For instance:
-     - Some local authorities or NHS trusts might share standardized definitions or [GDS guidelines](https://TODO).
+     - Some local authorities or NHS trusts might share standardized definitions or [GDS guidelines](https://www.gov.uk/guidance/gds-data-standards).
      - Tools or APIs that facilitate federation with external catalogs can open up broad data collaboration.
 
 1. **Continuously Evaluate Security, Access, and Usage**

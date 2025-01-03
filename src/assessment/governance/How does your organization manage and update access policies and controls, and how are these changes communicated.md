@@ -36,10 +36,10 @@ Below are **rapidly actionable** steps to move away from ad-hoc management:
 1. **Centralize Identity and Access**
 
    - Instead of manual account creation or server-based user lists, consider cloud-native identity solutions:
-     - [AWS IAM: Roles, policies, or AWS SSO for single sign-on management](https://TODO)
-     - [Azure AD: Central user/group management, role-based access control for Azure resources](https://TODO)
-     - [GCP IAM: Granting roles at project/folder/organization level, or using Google Workspace for single sign-on](https://TODO)
-     - [OCI IAM: Managing users and groups in Oracle Cloud with policies defining resource access](https://TODO)
+     - [AWS IAM: Roles, policies, or AWS SSO for single sign-on management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
+     - [Azure AD: Central user/group management, role-based access control for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
+     - [GCP IAM: Granting roles at project/folder/organization level, or using Google Workspace for single sign-on](https://cloud.google.com/iam/docs/overview)
+     - [OCI IAM: Managing users and groups in Oracle Cloud with policies defining resource access](https://docs.oracle.com/iaas/Content/Identity/Concepts/overview.htm)
 
 1. **Record Exemptions in a Simple Tracker**
 
@@ -93,10 +93,10 @@ Here are **rapidly actionable** enhancements:
 1. **Establish a Basic Change Log**
 
    - Store the policy in version control (e.g., GitHub or an internal repo). Each update is a commit, so you have a clear history:
-     - [AWS CodeCommit or GitHub for storing policy documents, track changes like code](https://TODO)
-     - [Azure DevOps Repos for policy MD files or Word docs under version control](https://TODO)
-     - [GCP Cloud Source Repositories or GitHub for versioning policy files](https://TODO)
-     - [OCI DevOps Code Repository for maintaining policy documents in version control](https://TODO)
+     - [AWS CodeCommit or GitHub for storing policy documents, track changes like code](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html)
+     - [Azure DevOps Repos for policy MD files or Word docs under version control](https://learn.microsoft.com/en-us/azure/devops/repos/?view=azure-devops)
+     - [GCP Cloud Source Repositories or GitHub for versioning policy files](https://cloud.google.com/source-repositories)
+     - [OCI DevOps Code Repository for maintaining policy documents in version control](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
 1. **Use Consistent Communication Channels**
 
@@ -106,10 +106,10 @@ Here are **rapidly actionable** enhancements:
 1. **Apply or Update an RBAC Model**
 
    - For each system, define roles that map to policy privileges:
-     - [AWS IAM Roles or AWS SSO groups reflecting your policy structures](https://TODO)
-     - [Azure RBAC with custom roles if built-in ones don’t match your policy’s granularity](https://TODO)
-     - [GCP IAM role definitions aligned with your documented policy levels (Admin, Contributor, Viewer, etc.)](https://TODO)
-     - [OCI IAM with groups and policy statements reflecting your policy doc (e.g., "Allow group Developers to manage compute….")](https://TODO)
+     - [AWS IAM Roles or AWS SSO groups reflecting your policy structures](/TODO)
+     - [Azure RBAC with custom roles if built-in ones don’t match your policy’s granularity](/TODO)
+     - [GCP IAM role definitions aligned with your documented policy levels (Admin, Contributor, Viewer, etc.)](/TODO)
+     - [OCI IAM with groups and policy statements reflecting your policy doc (e.g., "Allow group Developers to manage compute….")](/TODO)
 
 1. **Create a Briefing Deck**
    - Summarize the policy in fewer than 10 slides or 1–2 pages, so teams quickly grasp their obligations.
@@ -156,10 +156,10 @@ Below are **rapidly actionable** ways to refine:
 1. **Leverage Automated Policy Tools**
 
    - Integrate policy definitions or changes with your cloud environment:
-     - [AWS Service Control Policies (SCPs) if you have multiple accounts in an AWS Organization, automatically enforce top-level rules](https://TODO)
-     - [Azure Policies to enforce or audit certain configurations globally, with updates tracked in Azure Policy resource versions](https://TODO)
-     - [GCP Organization Policy for wide-reaching constraints or custom constraints that reflect your documented policy changes](https://TODO)
-     - [OCI Security Zones or Organization-level IAM policy updates to align with your stated policies](https://TODO)
+     - [AWS Service Control Policies (SCPs) if you have multiple accounts in an AWS Organization, automatically enforce top-level rules](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
+     - [Azure Policies to enforce or audit certain configurations globally, with updates tracked in Azure Policy resource versions](https://learn.microsoft.com/en-us/azure/governance/policy/)
+     - [GCP Organization Policy for wide-reaching constraints or custom constraints that reflect your documented policy changes](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     - [OCI Security Zones or Organization-level IAM policy updates to align with your stated policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/overview.htm)
 
 1. **Conduct Impact Assessments**
 
@@ -207,11 +207,11 @@ Below are **rapidly actionable** strategies:
 
 1. **Use Version Control for Policy and Automated Testing**
 
-   - Host policy definitions (or partial automation code) in a Git repo:
-     - [AWS Config custom rules or AWS Policy-as-Code approaches for enforcing certain resource configurations](https://TODO)
-     - [Azure Policy definitions in GitHub/Azure Repos, with CI/CD to roll out new policy versions automatically](https://TODO)
-     - [GCP Organization Policy configs stored in Git for declarative policy deployment with Terraform or other IaC tools](https://TODO)
-     - [OCI Resource Manager/Policies stored in version control, allowing consistent environment updates](https://TODO)
+   - Host policy definitions (or partial automation code) in a Git repository:
+     - [AWS Config custom rules or AWS Policy-as-Code approaches for enforcing certain resource configurations](https://github.com/awslabs/aws-config-rules)
+     - [Azure Policy definitions in GitHub/Azure Repos, with CI/CD to roll out new policy versions automatically](https://github.com/Azure/azure-policy)
+     - [GCP Organization Policy configurations stored in Git for declarative policy deployment with Terraform or other IaC tools](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     - [OCI Resource Manager/Policies stored in version control, allowing consistent environment updates](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/overview.htm)
    - This fosters transparency, and each stakeholder can see exactly how changes are being deployed.
 
 1. **Schedule Interactive Workshops**
@@ -221,10 +221,10 @@ Below are **rapidly actionable** strategies:
 1. **Implement a Self-Service Portal or Dashboard**
 
    - Provide a simple interface where teams can request new access or see current policy constraints. For instance:
-     - [AWS Service Catalog or custom portal integrated with IAM to enforce policy limitations automatically](https://TODO)
-     - [Azure Blueprint or Azure DevOps pipeline tasks that check requests against policy definitions before provisioning](https://TODO)
-     - [GCP Deployment Manager with built-in validations for policy constraints, or custom form that references Organization Policy before changes](https://TODO)
-     - [OCI custom interface that references policy definitions and highlights potential conflicts or the need for exceptions](https://TODO)
+     - [AWS Service Catalog or custom portal integrated with IAM to enforce policy limitations automatically](/TODO)
+     - [Azure Blueprint or Azure DevOps pipeline tasks that check requests against policy definitions before provisioning](/TODO)
+     - [GCP Deployment Manager with built-in validations for policy constraints, or custom form that references Organization Policy before changes](/TODO)
+     - [OCI custom interface that references policy definitions and highlights potential conflicts or the need for exceptions](/TODO)
 
 1. **Link Policy Changes to Organizational Goals**
 
@@ -273,10 +273,10 @@ Below are **rapidly actionable** improvements, even at the highest level:
 1. **Adopt Advanced Policy Testing Frameworks**
 
    - For instance:
-     - [AWS: Use Open Policy Agent (OPA) integrated with AWS for evaluating custom IAM or resource-based policies in test pipelines](https://TODO)
-     - [Azure: Integrate Azure Policy with OPA or Terraform Compliance checks in your CI/CD for advanced scenario testing](https://TODO)
-     - [GCP: Use Terraform Validator or OPA to test GCP Organization Policy changes pre-deployment](https://TODO)
-     - [OCI: Utilize policy checks in a dev/test environment using custom OPA or third-party policy engines to simulate policy changes](https://TODO)
+     - [AWS: Use Open Policy Agent (OPA) integrated with AWS for evaluating custom IAM or resource-based policies in test pipelines](https://docs.aws.amazon.com/prescriptive-guidance/latest/saas-multitenant-api-access-authorization/opa.html)
+     - [Azure: Integrate Azure Policy with OPA or Terraform Compliance checks in your CI/CD for advanced scenario testing](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/policy-devops-pipelines)
+     - [GCP: Use Terraform Validator or OPA to test GCP Organization Policy changes pre-deployment](https://cloud.google.com/terraform/docs/validation)
+     - [OCI: Utilize policy checks in a dev/test environment using custom OPA or third-party policy engines to simulate policy changes](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/overview.htm)
 
 1. **Create a Sandbox for Policy Experiments**
 
@@ -286,10 +286,11 @@ Below are **rapidly actionable** improvements, even at the highest level:
 1. **Automate Documentation Generation**
 
    - Convert policy-as-code comments into readable documentation so staff see both the code logic and a plain-language explanation:
-     - [AWS: cfn-lint or cfn-docs, or custom scripts that parse AWS IAM JSON files for summarizing them in a doc](https://TODO)
-     - [Azure: Script that extracts Azure Policy definitions and describes them in Markdown with references to policy IDs](https://TODO)
-     - [GCP: Tooling that parses Organization Policy YAMLs or Terraform code to produce explanatory documents](https://TODO)
-     - [OCI: Automated doc generation from Terraform or resource manager templates describing policy statements and their rationale](https://TODO)
+     - [AWS: Use tools like cfn-docs or custom scripts that parse AWS IAM JSON files for summarizing them in a doc](https://github.com/awslabs/aws-cloudformation-templates/tree/master/tools/cfn-docs)
+     - [Azure: Script that extracts Azure Policy definitions and describes them in Markdown with references to policy IDs](https://github.com/Azure/PSDocs.Azure)
+     - [GCP: Tooling that parses Organization Policy YAMLs or Terraform code to produce explanatory documents](https://github.com/giantswarm/schemadocs)
+     - [OCI: Automated doc generation from Terraform or resource manager templates describing policy statements and their rationale](https://github.com/giantswarm/schemadocs)
+   - This fosters transparency, and each stakeholder can see exactly how changes are being deployed.
 
 1. **Extend Collaboration to Partner Agencies**
 

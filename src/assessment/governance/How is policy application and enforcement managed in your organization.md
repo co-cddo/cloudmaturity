@@ -39,10 +39,10 @@ Below are **rapidly actionable** steps to start applying policies:
 
    - Pick a single area (e.g., identity and access management) to apply a simple policy.
    - For instance:
-     - [AWS: Use AWS IAM best practices or AWS Organizations for top-level policy control (Service Control Policies)](https://TODO)
-     - [Azure: Enable baseline Azure RBAC roles or Azure Policies to restrict certain resource creation](https://TODO)
-     - [GCP: Use Organization Policy to disallow public IPs for VMs, or enforce encryption keys usage](https://TODO)
-     - [OCI: Set basic compartment policies restricting resource creation or apply a minimal Security Zone policy](https://TODO)
+     - [AWS: Use AWS IAM best practices or AWS Organizations for top-level policy control (Service Control Policies)](/TODO)
+     - [Azure: Enable baseline Azure RBAC roles or Azure Policies to restrict certain resource creation](/TODO)
+     - [GCP: Use Organization Policy to disallow public IPs for VMs, or enforce encryption keys usage](/TODO)
+     - [OCI: Set basic compartment policies restricting resource creation or apply a minimal Security Zone policy](/TODO)
 
 1. **Communicate the Policy**
 
@@ -82,25 +82,25 @@ Below are **rapidly actionable** ways to start enforcing existing policies:
 1. **Adopt Basic Monitoring or Reporting**
 
    - Use native cloud governance tools to see if resources match policy guidelines:
-     - [AWS Config to track resource configurations vs. rules, e.g., "All S3 buckets must be private."](https://TODO)
-     - [Azure Policy to assess if VMs are using managed disks, or if TLS versions meet policy standards](https://TODO)
-     - [GCP Organization Policy or Cloud Asset Inventory to detect resources violating your policy settings](https://TODO)
-     - [OCI Cloud Guard or Security Advisor for detecting non-compliant resources, e.g., public-facing services or unencrypted storage](https://TODO)
+     - [AWS Config to track resource configurations vs. rules, e.g., "All S3 buckets must be private."](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules_cfn-guard.html)
+     - [Azure Policy to assess if VMs are using managed disks, or if TLS versions meet policy standards](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
+     - [GCP Organization Policy or Cloud Asset Inventory to detect resources violating your policy settings](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     - [OCI Cloud Guard or Security Advisor for detecting non-compliant resources, e.g., public-facing services or unencrypted storage](https://docs.oracle.com/en-us/iaas/Content/CloudGuard/Concepts/cloudguard_overview.htm)
 
-1. **Automate Alerts for Major Breaches**
+2. **Automate Alerts for Major Breaches**
 
    - If a policy states "No public buckets," set an alert that triggers if a bucket becomes public:
-     - [AWS SNS or Amazon EventBridge to notify Slack or email on AWS Config rule violation](https://TODO)
-     - [Azure Monitor alerts for Azure Policy non-compliant resources](https://TODO)
-     - [GCP Cloud Monitoring + Pub/Sub triggers for Organization Policy or security anomalies](https://TODO)
-     - [OCI Event service + Notifications to detect and alert on security misconfigurations in compartments](https://TODO)
+     - [AWS SNS or Amazon EventBridge to notify Slack or email on AWS Config rule violation](https://docs.aws.amazon.com/config/latest/developerguide/notifications-for-AWS-Config.html)
+     - [Azure Monitor alerts for Azure Policy non-compliant resources](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/get-compliance-data)
+     - [GCP Cloud Monitoring + Pub/Sub triggers for Organization Policy or security anomalies](https://cloud.google.com/pubsub/docs/monitoring)
+     - [OCI Event service + Notifications to detect and alert on security misconfigurations in compartments](https://www.oracle.com/webfolder/technetwork/tutorials/FAQs/oci/Events-FAQ.pdf)
 
-1. **Introduce Basic Consequence Management**
+3. **Introduce Basic Consequence Management**
 
    - If a policy is violated, require the team to fill out an exception form or gain approval from a manager.
    - This ensures staff think twice before ignoring policy.
 
-1. **Incrementally Expand Enforcement**
+4. **Incrementally Expand Enforcement**
    - Start with "auditing mode," then gradually move to "deny mode." For example:
      - In AWS, use Service Control Policies or AWS Config rules in "detect-only" mode first, then enforce.
      - In Azure, run Azure Policy in "audit" effect, then shift to "deny" once comfortable.
@@ -136,10 +136,10 @@ Below are **rapidly actionable** ways to enhance process-driven application:
 1. **Introduce Lightweight Technical Automation**
 
    - Even if processes remain the backbone, add a few checks:
-     - [AWS IAM Access Analyzer or AWS Config rules to highlight policy compliance before manual sign-off is given](https://TODO)
-     - [Azure DevOps Pipeline tasks that verify resource settings align with your documented policy before deployment completes](https://TODO)
-     - [GCP Deployment Manager or Terraform with policy checks (e.g., TF OPA plugin) to confirm resources match your process-based policy steps](https://TODO)
-     - [OCI Resource Manager with custom pre-flight checks to ensure a requested resource meets policy criteria before final approval](https://TODO)
+     - [AWS IAM Access Analyzer or AWS Config rules to highlight policy compliance before manual sign-off is given](https://aws.amazon.com/blogs/security/validate-iam-policies-with-access-analyzer-using-aws-config-rules/)
+     - [Azure DevOps Pipeline tasks that verify resource settings align with your documented policy before deployment completes](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/azure-policy-check-gate-v0?view=azure-pipelines)
+     - [GCP Deployment Manager or Terraform with policy checks (e.g., TF OPA plugin) to confirm resources match your process-based policy steps](https://cloud.google.com/docs/terraform/policy-validation)
+     - [OCI Resource Manager with custom pre-flight checks to ensure a requested resource meets policy criteria before final approval](https://blogs.oracle.com/ateam/post/automate-cis-compliance-checking)
 
 1. **Use a Single Source of Truth**
 
@@ -190,26 +190,26 @@ Below are **rapidly actionable** ways to reinforce or extend your existing setup
 1. **Expand Technical Enforcement**
 
    - Implement more "deny by default" mechanisms:
-     - [AWS Service Control Policies or AWS Organizations guardrails to block unauthorized resource actions globally](https://TODO)
-     - [Azure Policy in "Deny" mode for known non-compliant resource configurations](https://TODO)
-     - [GCP Organization Policy with hard constraints, e.g. disallow external IP addresses on VMs if policy forbids them](https://TODO)
-     - [OCI Security Zones or integrated IAM policies that automatically reject certain resource settings](https://TODO)
+     - [AWS Service Control Policies or AWS Organizations guardrails to block unauthorized resource actions globally](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
+     - [Azure Policy in "Deny" mode for known non-compliant resource configurations](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-deny)
+     - [GCP Organization Policy with hard constraints, e.g., disallow external IP addresses on VMs if policy forbids them](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     - [OCI Security Zones or integrated IAM policies that automatically reject certain resource settings](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 1. **Integrate Observability and Alerting**
 
    - Use real-time or near-real-time monitoring to detect policy breaches quickly:
-     - [AWS CloudWatch or Amazon EventBridge triggers for changes that violate policy rules](https://TODO)
-     - [Azure Monitor alerts on policy compliance drifts or suspicious activities](https://TODO)
-     - [GCP Security Command Center notifications for flagged policy violations in near real time](https://TODO)
-     - [OCI Cloud Guard alerting on anomalies or known policy contraventions](https://TODO)
+     - [AWS CloudWatch or Amazon EventBridge triggers for changes that violate policy rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Acting_Alarm_Changes.html)
+     - [Azure Monitor alerts on policy compliance drifts or suspicious activities](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview)
+     - [GCP Security Command Center notifications for flagged policy violations in near real time](https://cloud.google.com/security-command-center/docs/notifications)
+     - [OCI Cloud Guard alerting on anomalies or known policy contraventions](https://docs.oracle.com/en-us/iaas/Content/CloudGuard/Concepts/cloudguard_overview.htm)
 
 1. **Adopt "Immutability" or "Infrastructure as Code"**
 
    - If possible, define infrastructure states in code. Your policy steps can be embedded:
-     - [AWS CloudFormation with StackSets and AWS Config to align with known "gold" standards](https://TODO)
-     - [Azure Resource Manager (Bicep) or Terraform that references Azure Policies in code, ensuring compliance from the start](https://TODO)
-     - [GCP Terraform with policy constraints integrated, automatically validated at plan time](https://TODO)
-     - [OCI Resource Manager stacks that validate resource definitions against your policies before applying changes](https://TODO)
+     - [AWS CloudFormation with StackSets and AWS Config to align with known "gold" standards](https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudformation.html)
+     - [Azure Resource Manager (Bicep) or Terraform that references Azure Policies in code, ensuring compliance from the start](https://learn.microsoft.com/en-us/azure/developer/terraform/comparing-terraform-and-bicep)
+     - [GCP Terraform with policy constraints integrated, automatically validated at plan time](https://cloud.google.com/docs/terraform/policy-validation)
+     - [OCI Resource Manager stacks that validate resource definitions against your policies before applying changes](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
 
 1. **Push for More Cross-Team Training**
 
@@ -252,10 +252,10 @@ Below are **rapidly actionable** refinements, even at the highest maturity:
 1. **Adopt Policy-as-Code with Automated Testing**
 
    - Store policy definitions in version control, run them through pipeline tests:
-     - [AWS: Service Control Policies or AWS Config rules in Git, tested with custom scripts or frameworks like OPA (Open Policy Agent)](https://TODO)
-     - [Azure: Policies, RBAC templates in a Git repo, validated with Azure DevOps or GitHub Actions before rollout](https://TODO)
-     - [GCP: Organization Policy or Terraform policies tested in a staging environment with OPA or Terraform Validator pipelines](https://TODO)
-     - [OCI: Policy definitions or Security Zones config in code, automatically tested with custom scripts or OPA-based solutions before applying to production](https://TODO)
+     - [AWS: Service Control Policies or AWS Config rules in Git, tested with custom scripts or frameworks like OPA (Open Policy Agent)](https://github.com/aws-samples/service-control-policy-examples)
+     - [Azure: Policies, RBAC templates in a Git repo, validated with Azure DevOps or GitHub Actions before rollout](https://github.com/marketplace/actions/manage-azure-policy)
+     - [GCP: Organization Policy or Terraform policies tested in a staging environment with OPA or Terraform Validator pipelines](https://cloud.google.com/docs/terraform/policy-validation)
+     - [OCI: Policy definitions or Security Zones config in code, automatically tested with custom scripts or OPA-based solutions before applying to production](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 1. **Enable Dynamic, Real-Time Adjustments**
 

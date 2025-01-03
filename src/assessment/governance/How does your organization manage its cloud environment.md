@@ -20,9 +20,9 @@ Your organization relies on the cloud provider’s GUIs or consoles to handle ta
    - You’re testing new cloud services for proof-of-concept or pilot projects, with no immediate scaling needs.
 
 1. **Limited Compliance Pressures**
-   - No strong mandates from [NCSC supply chain or DevOps security guidelines](https://www.ncsc.gov.uk/) or internal governance requiring rigorous configuration management.
+   - No strong mandates from [NCSC supply chain or DevOps security guidelines](/TODO) or internal governance requiring rigorous configuration management.
 
-However, purely manual approaches risk misconfigurations, leftover resources, security oversights, and inconsistent environments. [NIST SP 800-53 CM controls](https://csrc.nist.gov/) and [NCSC best practices](https://www.ncsc.gov.uk/) encourage structured management to reduce such risks.
+However, purely manual approaches risk misconfigurations, leftover resources, security oversights, and inconsistent environments. [NIST SP 800-53 CM controls](https://csrc.nist.gov/) and [NCSC best practices](/TODO) encourage structured management to reduce such risks.
 
 #### **How to do better**
 
@@ -34,15 +34,15 @@ However, purely manual approaches risk misconfigurations, leftover resources, se
    - Referencing:
      - [AWS Runbook/Playbook concepts](https://wa.aws.amazon.com/wat.concept.runbook.en.html)
      - [Azure Runbook in Azure Automation](https://docs.microsoft.com/azure/automation/runbook-gallery)
-     - [GCP equivalent (Cloud Functions with step-by-step scripts)](https://TODO)
-     - [OCI Runbooks (Resource Manager/Operations)](https://TODO)
+     - [GCP Runbook examples](https://cloud.google.com/docs/runbooks)
+     - [OCI Runbooks in Fleet Application Management](https://docs.oracle.com/en-us/iaas/Content/fleet-management/runbooks.htm)
 
-1. **Ensure Accessibility & Security**
+2. **Ensure Accessibility & Security**
 
    - Store runbooks in a version-controlled repository (e.g., GitHub, GitLab).
-   - Avoid passwords or secrets in the documentation, referencing [NCSC guidelines on secure storage of credentials](https://www.ncsc.gov.uk/).
+   - Avoid passwords or secrets in the documentation, referencing [NCSC guidelines on secure storage of credentials](/TODO).
 
-1. **Enforce Update Discipline**
+3. **Enforce Update Discipline**
    - Each time an admin modifies the environment, they must update the runbook.
    - Prevents drift where docs become irrelevant or untrusted.
 
@@ -50,7 +50,7 @@ However, purely manual approaches risk misconfigurations, leftover resources, se
 
 1. **Enable Cloud Provider Audit Logging**
 
-   - e.g., [AWS CloudTrail for AWS, Azure Activity Logs, GCP Audit Logs, OCI Audit Service](https://TODO).
+   - e.g., [AWS CloudTrail for AWS](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html), [Azure Activity Logs](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log), [GCP Audit Logs](https://cloud.google.com/logging/docs/audit), [OCI Audit Service](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm).
    - Familiarize yourself with how to query logs and set retention.
 
 1. **Capture the "Why"**
@@ -89,7 +89,7 @@ Below are **rapidly actionable** improvements:
 1. **Use Scripting for Repetitive Tasks**
 
    - Even if you remain "click-ops" at large, certain steps can be scripted:
-     - e.g., [AWS CLI or PowerShell scripts, Azure CLI, GCP CLI, OCI CLI](https://TODO).
+     - e.g., [AWS CLI or PowerShell scripts](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html), [Azure CLI](https://docs.microsoft.com/azure/azure-functions/functions-run-local), [GCP CLI](https://cloud.google.com/sdk/docs), [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm).
    - Minimizes errors between test and production.
 
 1. **Track Environment Differences**
@@ -104,10 +104,10 @@ Below are **rapidly actionable** improvements:
 1. **Plan a Shift to Infrastructure-as-Code**
 
    - Over the next 3–6 months, adopt IaC for at least one main service:
-     - e.g., [AWS CloudFormation, Azure Bicep or ARM templates, GCP Deployment Manager, OCI Resource Manager, or HashiCorp Terraform/Ansible](https://TODO).
+     - e.g., [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html), [Azure Bicep or ARM templates](https://docs.microsoft.com/azure/azure-resource-manager/bicep/overview), [GCP Deployment Manager](https://cloud.google.com/deployment-manager/docs), [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm), [HashiCorp Terraform/Ansible](https://www.terraform.io/docs/index.html).
 
 1. **Initiate Basic Drift Detection**
-   - Tools like [AWS Config, Azure Resource Graph, GCP Config Controller, or OCI Resource Discovery](https://TODO) can highlight differences across environments or changes made outside your runbooks.
+   - Tools like [AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html), [Azure Resource Graph](https://docs.microsoft.com/azure/governance/resource-graph/overview), [GCP Config Controller](https://cloud.google.com/config-connector/docs/overview), or [OCI Resource Discovery](https://docs.oracle.com/en-us/iaas/Content/Resource/Concepts/resource-discovery.htm) can highlight differences across environments or changes made outside your runbooks.
 
 By partially automating recurring tasks, carefully recording environment discrepancies, verifying deployments, piloting Infrastructure-as-Code, and implementing drift checks, you mitigate errors and pave the way for more complete automation.
 
@@ -137,15 +137,15 @@ Below are **rapidly actionable** ways to evolve from partial scripting:
 1. **Expand Scripting to Complex Tasks**
 
    - Tackle the next biggest source of manual changes—e.g., managing load balancer rules, rotating credentials, or updating complex network rules.
-   - referencing [AWS CLI scripts, Azure CLI or PowerShell, GCP CLI, OCI CLI integrations](https://TODO).
+   - referencing [AWS CLI scripts](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html), [Azure CLI or PowerShell](https://docs.microsoft.com/azure/azure-functions/functions-run-local), [GCP CLI](https://cloud.google.com/sdk/docs), [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm).
 
 1. **Adopt an IaC Framework**
 
-   - Convert major scripts into [Terraform, AWS CloudFormation, Azure Bicep/ARM, GCP Deployment Manager, OCI Resource Manager](https://TODO) templates for more uniform deployment.
+   - Convert major scripts into [Terraform](https://www.terraform.io/docs/index.html), [AWS CloudFormation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html), [Azure Bicep/ARM](https://docs.microsoft.com/azure/azure-resource-manager/bicep/overview), [GCP Deployment Manager](https://cloud.google.com/deployment-manager/docs), [OCI Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) templates for more uniform deployment.
 
 1. **Introduce Basic CI/CD**
 
-   - If you have a central Git repo for scripts, integrate them with [AWS CodePipeline, Azure DevOps, GCP Cloud Build, OCI DevOps pipeline](https://TODO) for consistent application across dev/test/prod.
+   - If you have a central Git repo for scripts, integrate them with [AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html), [Azure DevOps](https://docs.microsoft.com/azure/devops/pipelines/get-started/what-is-azure-pipelines), [GCP Cloud Build](https://cloud.google.com/build/docs), [OCI DevOps pipeline](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/devopsoverview.htm) for consistent application across dev/test/prod.
 
 1. **Set up a "Review & Approve" Process**
 
@@ -153,7 +153,7 @@ Below are **rapidly actionable** ways to evolve from partial scripting:
      - referencing [NCSC guidance on secure code reviews or NIST secure development frameworks](https://www.ncsc.gov.uk/).
 
 1. **Leverage Cloud Vendor Tools**
-   - e.g., [AWS Systems Manager Automation runbooks, Azure Automation runbooks, GCP Workflows, OCI Automation and Orchestration](https://TODO) to handle advanced tasks with minimal manual input.
+   - e.g., [AWS Systems Manager Automation runbooks](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-working-with-runbooks.html), [Azure Automation runbooks](https://docs.microsoft.com/azure/automation/automation-runbook-types), [GCP Workflows](https://cloud.google.com/workflows/docs), [OCI Automation and Orchestration](https://docs.oracle.com/en-us/iaas/Content/Automation/Concepts/automationoverview.htm) to handle advanced tasks with minimal manual input.
 
 By incrementally automating complex changes, standardizing on an IaC framework, establishing a basic CI/CD workflow, ensuring code reviews, and utilizing vendor orchestration tools, you reduce your reliance on manual interventions and strengthen cloud environment consistency.
 
@@ -173,7 +173,7 @@ Your organization employs a robust Infrastructure-as-Code or automation-first ap
    - referencing [NCSC’s DevSecOps approach or NIST SP 800-160 Vol 2 for secure engineering](https://www.ncsc.gov.uk/).
 
 1. **Adherence to Security & Compliance**
-   - Automated pipelines incorporate security scanning or compliance checks, referencing [AWS Config, Azure Policy, GCP Org Policy, OCI Security Zones](https://TODO).
+   - Automated pipelines incorporate security scanning or compliance checks, referencing [AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html), [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityzones.htm).
 
 To push further, you could adopt advanced drift detection, code-based policy enforcement, or real-time security scanning for each pipeline. [NIST SP 800-137 for continuous monitoring](https://csrc.nist.gov/) and [NCSC’s protective monitoring approaches](https://www.ncsc.gov.uk/) might guide deeper expansions.
 
@@ -184,16 +184,16 @@ Below are **rapidly actionable** ways to refine a highly automated approach:
 1. **Implement Automatic Drift Remediation**
 
    - If changes are made outside your IaC pipeline, the system automatically reverts them or alerts the team:
-     - e.g., [AWS Config auto-remediation, Azure Policy with remediation tasks, GCP Config Controller with policy-based management, OCI drift detection & auto-correction](https://TODO).
+     - e.g., [AWS Config auto-remediation](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html), [Azure Policy with remediation tasks](https://docs.microsoft.com/azure/governance/policy/how-to/remediate-resources), [GCP Config Controller with policy-based management](https://cloud.google.com/config-connector/docs/overview), [OCI drift detection & auto-correction](https://docs.oracle.com/en-us/iaas/Content/Resource/Concepts/resource-discovery.htm).
 
 1. **Incorporate Policy-as-Code**
 
-   - Tools like [Open Policy Agent, AWS SCP, Azure Policy, GCP Org Policy, OCI Security Zones policy definitions](https://TODO) define governance rules in code, preventing non-compliant configs from deploying.
+   - Tools like [Open Policy Agent](https://www.openpolicyagent.org/), [AWS SCP](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html), [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityzones.htm) define governance rules in code, preventing non-compliant configs from deploying.
 
 1. **Extend DevSecOps Tooling**
 
    - e.g., scanning IaC templates for security issues, verifying recommended best practices in each pipeline step:
-     - referencing [NCSC’s secure developer guidelines or NIST SP 800-53 R5 for secure configurations](https://www.ncsc.gov.uk/).
+     - referencing NCSC’s secure developer guidelines or NIST SP 800-53 R5 for secure configurations.
 
 1. **Perform Regular Architecture Reviews**
 
@@ -231,17 +231,17 @@ Below are **rapidly actionable** methods to maximize a fully declarative, drift-
 1. **Integrate Real-Time Security & Cost Checks**
 
    - Each code merge triggers scanning for known misconfigurations or cost anomalies:
-     - e.g., [Terraform Sentinel policies, AWS CFN Guard, Azure Bicep policy enforcement, GCP Config Controller, OCI Security Zones with policy checks](https://TODO).
+     - e.g., [Terraform Sentinel policies](https://www.terraform.io/docs/cloud/sentinel/index.html), [AWS CFN Guard](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cfn-guard-what-is-cfn-guard.html), [Azure Bicep policy enforcement](https://docs.microsoft.com/azure/azure-resource-manager/bicep/policy-reference), [GCP Config Controller](https://cloud.google.com/config-connector/docs/overview), [OCI Security Zones with policy checks](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityzones.htm).
 
 1. **Adopt Multi-Cloud or Hybrid Templates**
 
    - If you operate across multiple clouds or on-prem, unify definitions in a single code base:
-     - referencing [HashiCorp Terraform, Pulumi, Crossplane with GCP, AWS, Azure, OCI providers, or a consistent multi-cloud approach](https://TODO).
+     - referencing [HashiCorp Terraform](https://www.terraform.io/docs/index.html), [Pulumi](https://www.pulumi.com/docs/), [Crossplane](https://crossplane.io/docs/) with GCP, AWS, Azure, OCI providers, or a consistent multi-cloud approach.
 
 1. **Enhance Observability**
 
    - Introduce robust logging and distributed tracing for infrastructure-level events:
-     - e.g., correlating IaC changes with performance or cost trends in [AWS CloudWatch, Azure Monitor, GCP Operations Suite, OCI Observability and Management](https://TODO).
+     - e.g., correlating IaC changes with performance or cost trends in [AWS CloudWatch](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html), [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview), [GCP Operations Suite](https://cloud.google.com/operations-suite), [OCI Observability and Management](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm).
 
 1. **Foster a Culture of Peer Reviews**
 
@@ -250,7 +250,7 @@ Below are **rapidly actionable** methods to maximize a fully declarative, drift-
 
 1. **Pursue Cross-Government Collaboration**
    - If possible, share or open-source reusable modules or templates:
-     - referencing [GOV.UK guidance on open source, NCSC supply chain security for code reuse across agencies](https://www.gov.uk/service-manual).
+     - referencing [GOV.UK guidance on open source](https://www.gov.uk/service-manual), NCSC supply chain security for code reuse across departments.
 
 By adding real-time security and cost checks in your pipeline, adopting multi-cloud/hybrid IaC, enhancing observability, promoting peer reviews, and collaborating with other UK public sector bodies, you reinforce an already advanced, fully declarative environment with robust drift detection—ensuring secure, consistent, and efficient cloud management.
 

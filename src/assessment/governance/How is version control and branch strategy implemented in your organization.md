@@ -30,7 +30,7 @@ Below are **rapidly actionable** next steps:
 
 1. **Pick a Git-based Platform**
 
-   - e.g., [GitHub, GitLab, Bitbucket, or a cloud vendor’s service (AWS CodeCommit, Azure Repos, GCP Source Repos, OCI DevOps Repos)](https://TODO).
+   - e.g., [GitHub](https://github.com/), [GitLab](https://gitlab.com/), [Bitbucket](https://bitbucket.org/), or a cloud vendor’s service ([AWS CodeCommit](https://aws.amazon.com/codecommit/), [Azure Repos](https://azure.microsoft.com/en-gb/services/devops/repos/), [GCP Source Repos](https://cloud.google.com/source-repositories), [OCI DevOps Repos](https://www.oracle.com/devops/)).
    - Start by simply pushing your code there.
 
 1. **Require Commits for Every Change**
@@ -78,7 +78,7 @@ Below are **rapidly actionable** methods to move from a custom approach to a sta
 
 1. **Map Existing Branching to a Known Strategy**
 
-   - Compare your custom steps to recognized flows like [GitFlow, GitHub Flow, trunk-based, or Azure DevOps typical branching](https://TODO).
+   - Compare your custom steps to recognized flows like [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow), [trunk-based](https://trunkbaseddevelopment.com/), or [Azure DevOps typical branching](https://learn.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance).
    - Identify similarities or differences.
 
 1. **Document a Cross-Reference**
@@ -135,7 +135,7 @@ Below are **rapidly actionable** improvements:
 1. **Incorporate CI/CD Automation**
 
    - Whenever a new branch is pushed, run automated tests or security scans:
-     - e.g., [AWS CodePipeline or CodeBuild triggers, Azure DevOps pipelines, GCP Cloud Build triggers, OCI DevOps pipelines](https://TODO).
+     - e.g., [AWS CodePipeline](https://aws.amazon.com/codepipeline/), [CodeBuild triggers](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html), [Azure DevOps pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines), [GCP Cloud Build triggers](https://cloud.google.com/build/docs/automating-builds/build-triggers), [OCI DevOps pipelines](https://www.oracle.com/devops/pipelines/).
 
 1. **Train New Team Members**
 
@@ -173,7 +173,7 @@ Below are **rapidly actionable** ways to optimize a textbook GitFlow-like approa
 1. **Apply Automated Merges/Sync**
 
    - Tools that automatically keep "develop" and "main" in sync after merges reduce manual merges or missed fixes:
-     - referencing [GitHub Actions or Azure DevOps auto-merge solutions, AWS CodeBuild-based auto merges, GCP Cloud Build triggers](https://TODO).
+     - referencing [GitHub Actions](https://docs.github.com/en/actions/automating-builds-and-tests/about-continuous-integration), [Azure DevOps auto-merge solutions](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines), [AWS CodeBuild-based auto merges](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html), [GCP Cloud Build triggers](https://cloud.google.com/build/docs/automating-builds/build-triggers).
 
 1. **Monitor Branch Sprawl**
 
@@ -220,12 +220,12 @@ Below are **rapidly actionable** ways to refine a minimal branch strategy:
 1. **Expand Test Coverage**
 
    - Ensure automated tests (unit, integration, security scans) run on every PR or push to `main`:
-     - referencing [AWS CodeBuild with check runs, Azure DevOps build pipelines, GCP Cloud Build triggers, OCI DevOps test stages](https://TODO).
+     - referencing [AWS CodeBuild with check runs](https://docs.aws.amazon.com/codebuild/latest/userguide/build-spec-ref.html), [Azure DevOps build pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines), [GCP Cloud Build triggers](https://cloud.google.com/build/docs/automating-builds/build-triggers), [OCI DevOps test stages](https://www.oracle.com/devops/pipelines/).
 
 1. **Establish Feature Flags**
 
    - If new code is not fully ready for users, hide it behind toggles:
-     - referencing [LaunchDarkly, Azure App Configuration with feature flags, AWS AppConfig, GCP config toggles, OCI config solutions](https://TODO).
+     - referencing [LaunchDarkly](https://launchdarkly.com/), [Azure App Configuration with feature flags](https://learn.microsoft.com/en-us/azure/azure-app-configuration/concept-feature-flags), [AWS AppConfig](https://aws.amazon.com/appconfig/), [GCP config toggles](https://cloud.google.com/config-toggles), [OCI config solutions](https://www.oracle.com/devops/pipelines/).
 
 1. **Enforce Peer Review**
 
@@ -234,7 +234,7 @@ Below are **rapidly actionable** ways to refine a minimal branch strategy:
 1. **Set Real-Time Release Observability**
 
    - After merges, watch metrics and logs for anomalies. Roll back quickly if issues arise:
-     - referencing [AWS CloudWatch + CodeDeploy auto-rollback, Azure DevOps pipeline with canary checks, GCP Rolling updates with GKE, OCI deployment checks and auto-rollback](https://TODO).
+     - referencing [AWS CloudWatch + CodeDeploy auto-rollback](https://docs.aws.amazon.com/codedeploy/latest/userguide/deployments-view-events.html), [Azure DevOps pipeline with canary checks](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines), [GCP Rolling updates with GKE](https://cloud.google.com/kubernetes-engine/docs/concepts/rollouts), [OCI deployment checks and auto-rollback](https://www.oracle.com/devops/pipelines/).
 
 1. **Encourage Short-Lived Branches**
    - Keep branches open for days or less, not weeks, ensuring minimal drift from `main` and fewer merge conflicts.

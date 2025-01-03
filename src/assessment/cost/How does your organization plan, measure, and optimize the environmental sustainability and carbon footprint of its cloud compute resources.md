@@ -21,7 +21,7 @@ In this stage, your organization trusts its cloud provider to meet green commitm
    - Your contract or statements of work (SoW) reassure you that the provider is pursuing net zero or carbon neutrality.
    - You have no immediate impetus to verify or go deeper into the supply chain or usage details.
 
-If you are in this situation and operate with minimal complexity, "Basic Vendor Reliance" might be temporarily "good enough." However, the UK public sector is increasingly required to evidence sustainability efforts, particularly under initiatives like the [Greening Government Commitments](https://TODO). Larger or rapidly growing workloads will likely outgrow this approach. If you anticipate expansions, cost concerns, or scrutiny from oversight bodies, it is wise to move beyond vendor reliance.
+If you are in this situation and operate with minimal complexity, "Basic Vendor Reliance" might be temporarily "good enough." However, the UK public sector is increasingly required to evidence sustainability efforts, particularly under initiatives like the [Greening Government Commitments](https://www.gov.uk/government/publications/greening-government-commitments-2021-to-2025). Larger or rapidly growing workloads will likely outgrow this approach. If you anticipate expansions, cost concerns, or scrutiny from oversight bodies, it is wise to move beyond vendor reliance.
 
 #### **How to do better**
 
@@ -29,26 +29,30 @@ Below are **rapidly actionable** steps that provide greater visibility and ensur
 
 1. **Request Vendor Transparency**
 
-   - Ask your provider for UK-region-specific energy usage info and carbon intensity data. For example:
-     - [AWS Customer Carbon Footprint Tool](https://TODO)
-     - [Azure Sustainability Calculator](https://TODO)
-     - [Google Cloud Carbon Footprint](https://TODO)
-     - [OCI Sustainability Dashboards](https://TODO)
+   - Ask your provider for UK-region-specific energy usage information and carbon intensity data. For example:
+     - [AWS Customer Carbon Footprint Tool](https://aws.amazon.com/aws-cost-management/aws-customer-carbon-footprint-tool/)
+     - [Azure Emissions Impact Dashboard](https://www.microsoft.com/en-us/sustainability/emissions-impact-dashboard)
+     - [Google Cloud Carbon Footprint](https://cloud.google.com/sustainability/carbon-footprint)
+     - [OCI Sustainability Dashboards](https://www.oracle.com/cloud/sustainability/)
    - Even if the data is approximate, it helps you begin to monitor trends.
 
 1. **Enable Basic Billing and Usage Reports**
 
    - Activate native cost-and-usage tooling to gather baseline compute usage:
-     - [AWS Cost Explorer](https://TODO) with daily or hourly granularity
-     - [Azure Cost Management](https://TODO)
-     - [GCP Billing Export to BigQuery](https://TODO)
-     - [OCI Cost Analysis](https://TODO)
-   - While these tools focus on monetary spend, you can correlate usage data with the vendor’s sustainability info.
+     - [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/) with daily or hourly granularity.
+     - [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/)
+     - [GCP Billing Export to BigQuery](https://cloud.google.com/billing/docs/how-to/export-data-bigquery)
+     - [OCI Cost Analysis](https://www.oracle.com/cloud/cost-management/)
+   - While these tools focus on monetary spend, you can correlate usage data with the vendor’s sustainability information.
 
 1. **Incorporate Sustainability Clauses in Contracts**
 
-   - When renewing or issuing new calls on frameworks like [G-Cloud](https://TODO), add explicit language for carbon reporting.
-   - Request quarterly or annual updates on how your usage ties into the vendor’s net zero or carbon offset strategies.
+   - When renewing or issuing new calls on frameworks like [G-Cloud](https://www.gov.uk/guidance/g-cloud-templates-and-legal-documents), add explicit language for carbon reporting.
+   - Request quarterly or annual updates on how your usage ties into the vendor’s net-zero or carbon offset strategies.
+
+   Incorporating sustainability clauses into your contracts is essential for ensuring that your cloud service providers align with your environmental goals. The [Crown Commercial Service](https://www.crowncommercial.gov.uk/g-cloud-13-contract-terms-and-conditions) offers guidance on integrating such clauses into the G-Cloud framework. Additionally, the [Chancery Lane Project](https://chancerylaneproject.org/clauses/carbon-contract-clauses-for-environmental-performance-and-associated-incentives-and-remedies) provides model clauses for environmental performance, which can be adapted to your contracts.
+
+   By proactively including these clauses, you can hold vendors accountable for their sustainability commitments and ensure that your organization's operations contribute positively to environmental objectives.
 
 1. **Track Internal Workload Growth**
 
@@ -81,7 +85,7 @@ At this stage, you have moved beyond "vendor says they’re green." You may have
    - You might not yet be required to publish detailed carbon metrics in annual reports or meet stringent net zero timelines.
    - The policy helps reduce reputational risk, but you have not turned it into tangible workflows.
 
-This approach is a step up from total vendor reliance. However, it often lacks robust measurement or accountability. If your workload, budget, or public scrutiny around environmental impact is increasing—particularly in line with the [Greening Government Commitments](https://TODO)—you will likely need more rigorous strategies soon.
+This approach is a step up from total vendor reliance. However, it often lacks robust measurement or accountability. If your workload, budget, or public scrutiny around environmental impact is increasing—particularly in line with the [Greening Government Commitments](https://www.gov.uk/government/publications/greening-government-commitments-2021-to-2025) you will likely need more rigorous strategies soon.
 
 #### **How to do better**
 
@@ -90,10 +94,10 @@ Here are quick wins to strengthen your approach and make it more actionable:
 1. **Use Vendor Sustainability Tools for Basic Estimation**
 
    - Enable the carbon or sustainability dashboards in your chosen cloud platform to get monthly or quarterly snapshots:
-     - [AWS Well-Architected Tool with Sustainability Pillar](https://TODO)
-     - [Azure Sustainability Calculator with Power BI integration](https://TODO)
-     - [GCP Carbon Footprint with BigQuery export](https://TODO)
-     - [Oracle Cloud Advisor for sustainability insights](https://TODO)
+     - [AWS Well-Architected Tool with Sustainability Pillar](https://aws.amazon.com/well-architected-tool/)
+     - [Azure Sustainability Calculator with Power BI integration](https://www.microsoft.com/en-us/sustainability/emissions-impact-dashboard)
+     - [GCP Carbon Footprint with BigQuery export](https://cloud.google.com/sustainability/carbon-footprint)
+     - [Oracle Cloud Advisor for sustainability insights](https://www.oracle.com/cloud/solutions/sustainability.html)
 
 1. **Create Simple Internal Guidelines**
 
@@ -111,10 +115,10 @@ Here are quick wins to strengthen your approach and make it more actionable:
 1. **Offer Quick Training or Knowledge Sessions**
 
    - Host short lunch-and-learn events or internal micro-training on "Cloud Sustainability 101" for staff. Show them how they can use:
-     - [AWS Trusted Advisor’s Basic Cost and usage recommendations](https://TODO)
-     - [Azure Advisor energy efficiency recommendations](https://TODO)
-     - [Google Cloud Recommender for VM sizing and usage patterns](https://TODO)
-     - [OCI Advisor for environment optimization](https://TODO)
+     - [AWS Trusted Advisor’s Basic Cost and Usage Recommendations](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+     - [Azure Advisor Energy Efficiency Recommendations](https://learn.microsoft.com/en-us/azure/advisor/advisor-reference-performance-recommendations)
+     - [Google Cloud Recommender for VM Sizing and Usage Patterns](https://cloud.google.com/recommender)
+     - [OCI Advisor for Environment Optimization](https://docs.oracle.com/en/cloud/paas/oci-advisor/)
 
    The point is to connect cost optimization with sustainability—over-provisioned resources burn more carbon.
 
@@ -155,39 +159,41 @@ Focus on **rapid, vendor-native steps** to convert targets into tangible reducti
 1. **Automate Right-Sizing**
 
    - Many providers have native tools to recommend more efficient instance sizes:
-     - [AWS Compute Optimizer](https://TODO) to identify underutilized EC2, EBS, or Lambda resources
-     - [Azure Advisor Right-Sizing](https://TODO) for VMs and databases
-     - [GCP Recommender for VM rightsizing](https://TODO)
-     - [OCI Adaptive Intelligence for resource optimization](https://TODO)
+     - [AWS Compute Optimizer](https://aws.amazon.com/compute-optimizer/) to identify underutilized EC2, EBS, or Lambda resources
+     - [Azure Advisor Right-Sizing](https://docs.microsoft.com/en-us/azure/advisor/advisor-right-sizing-recommendations) for VMs and databases
+     - [GCP Recommender for VM rightsizing](https://cloud.google.com/recommender/docs/compute/instance-rightsizing)
+     - [OCI Adaptive Intelligence for resource optimization](https://docs.oracle.com/en/cloud/paas/oci-advisor/)
 
    By automatically resizing or shifting to lower-tier SKUs, you reduce both cost and emissions.
 
 1. **Implement Scheduled Autoscaling**
 
    - Introduce or refine your autoscaling policies so that workloads scale down outside peak times:
-     - [AWS Auto Scaling groups with scheduled actions](https://TODO)
-     - [Azure Scale Sets with auto-scale schedules](https://TODO)
-     - [GCP Managed Instance Group Autoscaling](https://TODO)
-     - [OCI Instance Configuration and Autoscaling](https://TODO)
+     - [AWS Auto Scaling groups with scheduled actions](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-scheduled-scaling.html)
+     - [Azure Scale Sets with auto-scale schedules](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview)
+     - [GCP Managed Instance Group Autoscaling](https://cloud.google.com/compute/docs/autoscaler)
+     - [OCI Instance Configuration and Autoscaling](https://docs.oracle.com/en/cloud/paas/compute-cloud/creating-a-schedule-based-autoscaling-policy.html)
 
    This directly lowers carbon usage by removing idle capacity.
 
 1. **Leverage Serverless or Container Services**
 
    - Where feasible, re-platform certain workloads to serverless or container-based architectures that scale to zero. Rapid wins can be found by:
-     - [AWS Fargate or Lambda for ephemeral tasks](https://TODO)
-     - [Azure Functions or Container Apps for event-driven usage](https://TODO)
-     - [GCP Cloud Run or Functions for on-demand scaling](https://TODO)
-     - [OCI Functions for serverless patterns](https://TODO)
+     - [AWS Fargate or Lambda for ephemeral tasks](https://aws.amazon.com/fargate/)
+     - [Azure Functions or Container Apps for event-driven usage](https://azure.microsoft.com/en-us/services/functions/)
+     - [GCP Cloud Run or Functions for on-demand scaling](https://cloud.google.com/run)
+     - [OCI Functions for serverless patterns](https://www.oracle.com/cloud/compute/functions.html)
 
    Serverless can significantly cut wasted resources, which aligns with your reduction targets.
 
 1. **Adopt "Carbon Budgets" in Project Plans**
 
    - For every new app or service, define a carbon allowance. If estimates exceed the budget, require design changes. Incorporate vendor solutions that show region-level carbon data:
-     - [Azure Region Carbon Intensity Mapping](https://TODO)
-     - [AWS Region carbon differences in Well-Architected Tool](https://TODO)
-     - [GCP Region Picker with carbon insight](https://TODO)
+     - [Azure Region Carbon Intensity Mapping](https://learn.microsoft.com/en-us/azure/carbon-optimization/view-emissions)
+     - [AWS Region Carbon Differences in Well-Architected Tool](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/region-selection.html)
+     - [GCP Region Picker with Carbon Insight](https://cloud.google.com/sustainability/carbon-footprint)
+
+These tools provide insights into the carbon emissions associated with different regions, enabling more sustainable decision-making.
 
 1. **Align with Departmental or National Sustainability Goals**
    - Update your internal reporting to reflect how your targets link to national net zero obligations or departmental commitments (e.g., the NHS net zero plan, local authority climate emergency pledges). This ensures your measurement and goals remain relevant to broader public sector accountability.
@@ -228,10 +234,12 @@ Actionable steps to deepen your integrated approach:
 1. **Set Up Automated Governance Rules**
 
    - Enforce region-based or instance-based policies automatically:
-     - [AWS Service Control Policies to block high-carbon region usage in non-essential cases](https://TODO)
-     - [Azure Policy for "Allowed Locations" or "Tagging Enforcement" with sustainability tags](https://TODO)
-     - [GCP Organization Policy to limit usage to certain carbon-friendly regions](https://TODO)
-     - [OCI Security Zones or policies restricting resource deployment](https://TODO)
+     - [AWS Service Control Policies to block high-carbon region usage in non-essential cases](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
+     - [Azure Policy for "Allowed Locations" or "Tagging Enforcement" with sustainability tags](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/govern-tags)
+     - [GCP Organization Policy to limit usage to certain carbon-friendly regions](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-policies)
+     - [OCI Security Zones or policies restricting resource deployment](https://docs.oracle.com/en/cloud/paas/compute-cloud/oci-security-zones.html)
+
+Implementing these policies ensures that resources are deployed in regions with lower carbon footprints, aligning with your sustainability objectives.
 
 1. **Adopt Full Lifecycle Management**
 
@@ -246,10 +254,10 @@ Actionable steps to deepen your integrated approach:
 1. **Use Vendor-Specific Sustainability Advisors**
 
    - Some providers offer "sustainability pillars" or specialized frameworks:
-     - [AWS Well-Architected Sustainability Pillar Recommendations](https://TODO)
-     - [Azure Advisor – Sustainability category (Preview/Trial)](https://TODO)
-     - [GCP’s Carbon Sense tools in the console](https://TODO)
-     - [OCI Advisor checks for unused resources or energy-saving configurations](https://TODO)
+     - [AWS Well-Architected Sustainability Pillar Recommendations](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html)
+     - [Azure Advisor – Sustainability category (Preview/Trial)](https://learn.microsoft.com/en-us/azure/carbon-optimization/reduce-emissions)
+     - [GCP’s Carbon Sense tools in the console](https://cloud.google.com/sustainability/carbon-sense)
+     - [OCI Advisor checks for unused resources or energy-saving configurations](https://docs.oracle.com/en/cloud/paas/compute-cloud/oci-advisor.html)
 
    Incorporate these suggestions directly into sprint backlogs or monthly improvement tasks.
 
@@ -257,7 +265,7 @@ Actionable steps to deepen your integrated approach:
 
    - Modify build/deployment pipelines to check resource usage or region selection:
      - If a new environment is spun up in a high-carbon region or with large instance sizes, the pipeline can prompt a warning or require an override.
-     - Tools like [GitHub Actions](https://TODO) or [Azure DevOps Pipelines](https://TODO) can call vendor APIs to fetch sustainability metrics and fail a build if it’s non-compliant.
+     - Tools like [GitHub Actions](https://docs.github.com/en/actions) or [Azure DevOps Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-pipelines&tabs=yaml) can call vendor APIs to fetch sustainability metrics and fail a build if it’s non-compliant.
 
 1. **Promote Cross-Functional "Green Teams"**
    - Form a small working group or "green champions" network across procurement, DevOps, governance, and finance, meeting monthly to share best practices and track new optimization opportunities.
@@ -298,10 +306,10 @@ Even at this advanced level, below are further actions to refine your dynamic ma
 1. **Build or Leverage Carbon-Aware Autoscaling**
 
    - Many providers offer advanced scaling rules that consider multiple signals. Integrate carbon signals:
-     - [AWS EventBridge + Lambda triggers that check region carbon intensity before scaling up large clusters](https://TODO)
-     - [Azure Monitor + Azure Functions to re-schedule HPC tasks when the grid is greener](https://TODO)
-     - [GCP Cloud Scheduler + Dataflow for time-shifted batch jobs based on carbon metrics](https://TODO)
-     - [OCI Notifications + Functions to enact advanced scheduling policies](https://TODO)
+     - [AWS EventBridge + Lambda triggers that check region carbon intensity before scaling up large clusters](https://docs.aws.amazon.com/autoscaling/ec2/userguide/automating-ec2-auto-scaling-with-eventbridge.html)
+     - [Azure Monitor + Azure Functions to re-schedule HPC tasks when the grid is greener](https://devblogs.microsoft.com/ise/saving-co2-using-location-and-time-shifting-in-azure/)
+     - [GCP Cloud Scheduler + Dataflow for time-shifted batch jobs based on carbon metrics](https://cloud.google.com/scheduler/docs/)
+     - [OCI Notifications + Functions to enact advanced scheduling policies](https://docs.oracle.com/en-us/iaas/Content/Notification/home.htm)
 
 1. **Collaborate with BEIS or Relevant Government Bodies**
 
@@ -311,30 +319,30 @@ Even at this advanced level, below are further actions to refine your dynamic ma
 1. **AI or ML-Driven Forecasting**
 
    - Incorporate predictive analytics that forecast your usage spikes and align them with projected carbon intensity (peak/off-peak). Tools like:
-     - [AWS Forecast](https://TODO)
-     - [Azure Machine Learning Predictive Services](https://TODO)
-     - [GCP Vertex AI Time Series Predictions](https://TODO)
-     - [OCI Data Science for forecasting modules](https://TODO)
+     - [AWS Forecast](https://aws.amazon.com/forecast/)
+     - [Azure Machine Learning Predictive Services](https://azure.microsoft.com/en-us/services/machine-learning/)
+     - [GCP Vertex AI Time Series Predictions](https://cloud.google.com/vertex-ai/docs/tabular-data/forecasting/overview)
+     - [OCI Data Science for forecasting modules](https://www.oracle.com/cloud/data-science/)
 
    Then automatically shift or throttle workloads accordingly.
 
 1. **Innovate with Low-Power Hardware**
 
    - Evaluate next-gen or specialized hardware solutions with lower energy profiles:
-     - [AWS Graviton (ARM-based) Instances for better performance-per-watt](https://TODO)
-     - [Azure Arm-based VMs (Preview/limited release)](https://TODO)
-     - [GCP Tau T2A (ARM-based) Instances](https://TODO)
-     - [OCI Ampere A1 Compute for ARM workloads](https://TODO)
+     - [AWS Graviton (ARM-based) Instances for better performance-per-watt](https://aws.amazon.com/ec2/graviton/)
+     - [Azure Arm-based VMs (Preview/limited release)](https://azure.microsoft.com/en-us/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/)
+     - [GCP Tau T2A (ARM-based) Instances](https://cloud.google.com/blog/products/compute/tau-t2a-is-first-compute-engine-vm-on-an-arm-chip)
+     - [OCI Ampere A1 Compute for ARM workloads](https://www.oracle.com/cloud/compute/arm/)
 
    Typically, these instance families consume less energy for similar workloads, further reducing carbon footprints.
 
 1. **Automated Data Classification and Tiering**
 
    - For advanced data management, use AI to classify data in real-time and automatically place it in the most sustainable storage tier:
-     - [AWS S3 Intelligent Tiering + S3 Glacier for archived data](https://TODO)
-     - [Azure Blob Storage Lifecycle with Intelligent Tiering rules](https://TODO)
-     - [GCP Storage Auto Class transitions with object metadata scanning](https://TODO)
-     - [OCI Archive Storage with auto-tiering policies](https://TODO)
+     - [AWS S3 Intelligent-Tiering + S3 Glacier for archived data](https://aws.amazon.com/s3/storage-classes/intelligent-tiering/)
+     - [Azure Blob Storage Lifecycle with Intelligent Tiering rules](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure)
+     - [GCP Storage Auto Class transitions with object metadata scanning](https://cloud.google.com/storage/docs/autoclass)
+     - [OCI Archive Storage with auto-tiering policies](https://docs.oracle.com/en-us/iaas/Content/ArchiveStorage/Concepts/archivestorageoverview.htm)
 
    This ensures minimal energy overhead for data retention.
 
