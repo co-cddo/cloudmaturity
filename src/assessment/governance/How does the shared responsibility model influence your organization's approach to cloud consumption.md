@@ -34,19 +34,19 @@ Below are **rapidly actionable** steps to move beyond minimal consideration of s
 1. **Identify Your Specific Obligations**
 
    - Review provider documentation on the shared responsibility model:
-     - [AWS Shared Responsibility Model Overview](https://TODO)
-     - [Azure Shared Responsibility in Cloud Adoption Framework](https://TODO)
-     - [GCP Shared Responsibility Guidelines](https://TODO)
-     - [OCI Shared Responsibility Model Documentation](https://TODO)
+     - [AWS Shared Responsibility Model Overview](/TODO)
+     - [Azure Shared Responsibility in Cloud Adoption Framework](/TODO)
+     - [GCP Shared Responsibility Guidelines](/TODO)
+     - [OCI Shared Responsibility Model Documentation](/TODO)
    - Make a short list or matrix of tasks you must own (patching certain layers, data backups, encryption management, etc.) vs. what the vendor handles (infrastructure security, certain managed services).
 
 1. **Apply Basic Tagging for Ownership**
 
    - Use resource tags or labels to clarify who is responsible for tasks like patching, rotating encryption keys, or daily backups:
-     - [AWS: Resource Tagging and AWS Config to track compliance in your domain](https://TODO)
-     - [Azure: Tagging strategy with Azure Policy to enforce consistent labeling of responsibilities](https://TODO)
-     - [GCP: Labels for identifying resource owners, e.g., "Owner=TeamX," "Responsibility=KeyRotation"](https://TODO)
-     - [OCI: Tagging namespaces to define "PatchingOwner=PlatformTeam" or "BackupOwner=DataOps"](https://TODO)
+     - [AWS: Resource Tagging and AWS Config to track compliance in your domain](https://docs.aws.amazon.com/config/latest/developerguide/tagging.html)
+     - [Azure: Tagging strategy with Azure Policy to enforce consistent labeling of responsibilities](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies)
+     - [GCP: Labels for identifying resource owners, e.g., "Owner=TeamX," "Responsibility=KeyRotation"](https://cloud.google.com/resource-manager/docs/creating-managing-labels)
+     - [OCI: Tagging namespaces to define "PatchingOwner=PlatformTeam" or "BackupOwner=DataOps"](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 1. **Conduct a Simple Risk Assessment**
 
@@ -108,10 +108,10 @@ Here are **rapidly actionable** ways to convert basic awareness into structured 
 1. **Set Up Basic Compliance Rules**
 
    - Use native policy or configuration tools to ensure teams don’t forget their portion of security:
-     - [AWS Config + AWS Security Hub with rules verifying encryption at rest, correct patch levels, etc.](https://TODO)
-     - [Azure Policy for ensuring OS images are from trusted sources, or that all VMs meet your baseline security standard](https://TODO)
-     - [GCP Organization Policy to restrict usage of certain machine types or images that aren’t part of your approved sets](https://TODO)
-     - [OCI Security Zones or Cloud Guard for checking compliance against known good configurations](https://TODO)
+     - [AWS Config + AWS Security Hub with rules verifying encryption at rest, correct patch levels, etc.](https://docs.aws.amazon.com/securityhub/latest/userguide/backup-controls.html)
+     - [Azure Policy for ensuring OS images are from trusted sources, or that all VMs meet your baseline security standard](https://learn.microsoft.com/en-us/azure/virtual-machines/policy-reference)
+     - [GCP Organization Policy to restrict usage of certain machine types or images that aren’t part of your approved sets](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     - [OCI Security Zones or Cloud Guard for checking compliance against known good configurations](https://docs.oracle.com/en-us/iaas/Content/CloudGuard/Concepts/cloudguard_overview.htm)
 
 1. **Create a Minimum Standards Document**
 
@@ -159,28 +159,28 @@ Below are **rapidly actionable** improvements to reinforce your informed decisio
      - Security responsibilities (e.g., OS patching, identity management).
      - Data responsibilities (e.g., encryption key ownership, backups).
      - Operational responsibilities (e.g., scaling, monitoring, incident response).
-   - Tools and references:
-     - [AWS Well-Architected Tool with the Security and Operational Excellence pillars](https://TODO)
-     - [Azure Well-Architected Framework for sharing responsibilities in IaaS/PaaS/SaaS contexts](https://TODO)
-     - [GCP Architecture Framework covering responsibilities for different services](https://TODO)
-     - [OCI Well-Architected Review focusing on shared responsibility best practices](https://TODO)
+   - Tools and References:
+     - [AWS Well-Architected Tool with the Security and Operational Excellence pillars](https://aws.amazon.com/well-architected/)
+     - [Azure Well-Architected Framework for sharing responsibilities in IaaS/PaaS/SaaS contexts](https://learn.microsoft.com/en-us/azure/architecture/framework/)
+     - [GCP Architecture Framework covering responsibilities for different services](https://cloud.google.com/architecture/framework)
+     - [OCI Well-Architected Review focusing on shared responsibility best practices](https://www.oracle.com/cloud/well-architected/)
 
-1. **Integrate with Governance Boards or Change Advisory Boards (CAB)**
+2. **Integrate with Governance Boards or Change Advisory Boards (CAB)**
 
    - Whenever a major cloud solution is proposed, the governance board ensures the shared responsibility breakdown is explicit.
    - This formal gate fosters consistent compliance with your model.
 
-1. **Track "Responsibility Gaps" in Risk Registers**
+3. **Track "Responsibility Gaps" in Risk Registers**
 
    - If you discover any mismatch—like you thought the vendor handled container OS patching, but it’s actually your job—log it in your risk register until resolved.
    - This encourages a quick fix and ensures no gap remains unaddressed.
 
-1. **Conduct Periodic "Mock Incident" Exercises**
+4. **Conduct Periodic "Mock Incident" Exercises**
 
    - For key services, run a tabletop exercise or test scenario: e.g., a severe OS vulnerability or unexpected data leak.
    - Evaluate how well the team knows who must patch or respond. Document lessons learned to refine your decision-making process.
 
-1. **Refine Cost Transparency**
+5. **Refine Cost Transparency**
    - Show how responsibilities can affect cost:
      - If you’re using a fully managed database, you pay a premium but shift more patching or upgrades to the vendor.
      - If you choose IaaS, you do more patching but may see lower direct service charges.
@@ -225,10 +225,10 @@ Here are **rapidly actionable** ideas to refine your strategic integration:
 1. **Implement Joint Incident-Response Protocols**
 
    - For critical workloads, define a response plan that involves both your team and the vendor:
-     - [AWS: Enhanced Support escalations or Enterprise Support for AWS services you rely on heavily](https://TODO)
-     - [Azure: Premier Support or mission-critical support with integrated escalation paths](https://TODO)
-     - [GCP: Premium Support with multi-layer incident response procedures](https://TODO)
-     - [OCI: Advanced Customer Support or Oracle Solution Support Center integration for escalations](https://TODO)
+     - [AWS Well-Architected Tool with the Security and Operational Excellence pillars](https://aws.amazon.com/well-architected/)
+     - [Azure Well-Architected Framework for sharing responsibilities in IaaS/PaaS/SaaS contexts](https://learn.microsoft.com/en-us/azure/architecture/framework/)
+     - [GCP Architecture Framework covering responsibilities for different services](https://cloud.google.com/architecture/framework)
+     - [OCI Well-Architected Review focusing on shared responsibility best practices](https://www.oracle.com/cloud/well-architected/)
    - This ensures everyone knows their role if an incident arises—no confusion about who must take the first steps.
 
 1. **Regular Joint Reviews of SLAs and MoUs**
@@ -279,10 +279,10 @@ Even at the pinnacle, there are **actionable** strategies to maintain and refine
 1. **Incorporate Real-Time Observability of Shared Responsibilities**
 
    - Extend your monitoring dashboards to highlight any newly provisioned resources that don’t align with known responsibilities or best practices:
-     - [AWS: Real-time dashboards from AWS Config or Amazon EventBridge that alert on resource misconfigurations or missing patches your team must handle](https://TODO)
-     - [Azure: Azure Monitor with custom rules that detect if a new service is launched without the correct security or compliance settings (yours or vendor’s)](https://TODO)
-     - [GCP: Event notifications for newly created resources that trigger a Cloud Function to check if they meet shared responsibility tags or compliance states](https://TODO)
-     - [OCI: Cloud Guard configured to detect resources not matching your assigned responsibilities, generating immediate alerts](https://TODO)
+     - [AWS: Utilize AWS Config and Amazon EventBridge to monitor resource configurations and trigger alerts for non-compliant changes](https://docs.aws.amazon.com/config/latest/developerguide/monitor-config-with-cloudwatchevents.html)
+     - [Azure: Configure Azure Monitor with custom alert rules to detect the deployment of services without the required security or compliance settings](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-create-activity-log-alert-rule)
+     - [GCP: Set up EventArc and Cloud Functions to receive notifications of new resource creations and enforce compliance checks based on shared responsibility tags](https://cloud.google.com/eventarc/docs/tutorials/cloud-functions)
+     - [OCI: Leverage Cloud Guard to detect resources that do not align with assigned responsibilities, generating immediate alerts](https://docs.oracle.com/en-us/iaas/Content/CloudGuard/Concepts/cloudguard_overview.htm)
 
 1. **Conduct Regular Cost-Benefit Re-Evaluations**
 
@@ -301,7 +301,7 @@ Even at the pinnacle, there are **actionable** strategies to maintain and refine
    - Constantly question: "Where does the boundary lie, and is it cost-effective or compliance-aligned to shift it?"
 
 1. **Prepare for Regulatory Changes**
-   - Monitor updates to UK data protection laws, the [National Cyber Security Centre (NCSC) guidelines](https://TODO), or changes in vendor compliance certifications.
+   - Monitor updates to UK data protection laws, the National Cyber Security Centre (NCSC) guidelines, or changes in vendor compliance certifications.
    - Adjust responsibilities quickly if new standards require a different approach (e.g., more encryption or different backup retention mandated by a new policy).
 
 By ensuring real-time observability, frequent cost-benefit checks, sector-wide collaboration, and a readiness to pivot for regulatory shifts, you sustain a robust, adaptive shared responsibility model at the core of your cloud usage. This cements your organization’s position as a leader in cost-effective, secure, and compliant public sector cloud adoption.

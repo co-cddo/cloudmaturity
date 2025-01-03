@@ -32,26 +32,26 @@ Below are **rapidly actionable** steps to move away from ad-hoc methods:
 1. **Introduce a Basic CI/CD Pipeline**
 
    - Even a minimal pipeline can automatically build code from a version control system:
-     - [AWS CodePipeline + CodeBuild for building artifacts from your Git repo](https://TODO)
-     - [Azure DevOps Pipelines or GitHub Actions for .NET/Java/Python builds, storing results in Azure Artifacts](https://TODO)
-     - [GCP Cloud Build triggered on Git commits, storing images or binaries in Artifact Registry](https://TODO)
-     - [OCI DevOps service to build from your source repo, storing artifacts in OCI Container or Artifact Registry](https://TODO)
+     - [AWS CodePipeline + CodeBuild for building artifacts from your Git repo](https://docs.aws.amazon.com/codepipeline/latest/userguide/tutorials-github.html)
+     - [Azure DevOps Pipelines or GitHub Actions for .NET/Java/Python builds, storing results in Azure Artifacts](https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-pipelines&tabs=yaml)
+     - [GCP Cloud Build triggered on Git commits, storing images or binaries in Artifact Registry](https://cloud.google.com/build/docs)
+     - [OCI DevOps service to build from your source repo, storing artifacts in OCI Container or Artifact Registry](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
 1. **Ensure Everything Is in Version Control**
 
    - Do not edit code or configurations directly on servers. Instead:
-     - [AWS CodeCommit or GitHub for storing your repositories if not already used](https://TODO)
-     - [Azure Repos for central control of code and config files](https://TODO)
-     - [GCP Cloud Source Repositories for a secure, integrated Git environment](https://TODO)
-     - [OCI DevOps Code Repository for versioning your code within Oracle Cloud](https://TODO)
+     - [AWS CodeCommit or GitHub for storing your repositories if not already used](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html)
+     - [Azure Repos for central control of code and config files](https://learn.microsoft.com/en-us/azure/devops/repos/?view=azure-devops)
+     - [GCP Cloud Source Repositories for a secure, integrated Git environment](https://cloud.google.com/source-repositories)
+     - [OCI DevOps Code Repository for versioning your code within Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/coderepository.htm)
 
 1. **Create a Shared Storage for Build Outputs**
 
    - Set up a simple "build artifacts" bucket or file share for your compiled binaries or container images:
-     - [AWS S3 or ECR (Amazon Elastic Container Registry) for storing Docker images](https://TODO)
-     - [Azure Blob Storage or Azure Container Registry for storing artifacts](https://TODO)
-     - [GCP Cloud Storage or Artifact Registry for container images or Maven/NuGet packages](https://TODO)
-     - [OCI Object Storage or OCI Container Registry for storing build outputs](https://TODO)
+     - [AWS S3 or ECR (Amazon Elastic Container Registry) for storing Docker images](https://docs.aws.amazon.com/ecr/latest/userguide/what-is-ecr.html)
+     - [Azure Blob Storage or Azure Container Registry for storing artifacts](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-intro)
+     - [GCP Cloud Storage or Artifact Registry for container images or Maven/NuGet packages](https://cloud.google.com/artifact-registry/docs)
+     - [OCI Object Storage or OCI Container Registry for storing build outputs](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/overview.htm)
 
 1. **Document Basic Rollback Steps**
 
@@ -92,10 +92,10 @@ Below are **rapidly actionable** strategies:
 1. **Centralize Your Build Once**
 
    - Shift to a pipeline that builds the artifact once, then deploys the same artifact to dev, test, and production. For instance:
-     - [AWS CodeBuild creating a single artifact stored in S3 or ECR, then CodeDeploy or ECS/EKS uses that artifact for each environment](https://TODO)
-     - [Azure DevOps Pipelines creating a single artifact (e.g., .zip or container image), then multiple release stages pull that artifact from Azure Artifacts or Container Registry](https://TODO)
-     - [GCP Cloud Build building a Docker image once and pushing it to Artifact Registry, then Cloud Run or GKE references the same image in different environments](https://TODO)
-     - [OCI DevOps building a container or application binary once, storing it in Container Registry or Object Storage, then deploying to multiple OCI environments](https://TODO)
+     - [AWS CodeBuild creating a single artifact stored in S3 or ECR, then CodeDeploy or ECS/EKS uses that artifact for each environment](https://aws.amazon.com/blogs/devops/ci-cd-on-amazon-eks-using-aws-codecommit-aws-codepipeline-aws-codebuild-and-fluxcd/)
+     - [Azure DevOps Pipelines creating a single artifact (e.g., .zip or container image), then multiple release stages pull that artifact from Azure Artifacts or Container Registry](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/environments?view=azure-devops)
+     - [GCP Cloud Build building a Docker image once and pushing it to Artifact Registry, then Cloud Run or GKE references the same image in different environments](https://cloud.google.com/build/docs/deploying-builds/deploy-gke)
+     - [OCI DevOps building a container or application binary once, storing it in Container Registry or Object Storage, then deploying to multiple OCI environments](https://docs.oracle.com/en/solutions/cicd-pipeline-oci-devops-instances/index.html)
 
 1. **Define a Consistent Build Container**
 
@@ -149,18 +149,18 @@ Here are **rapidly actionable** enhancements:
 1. **Adopt Write-Once-Read-Many (WORM) or Immutable Storage**
 
    - Many cloud vendors offer immutable or tamper-resistant storage:
-     - [AWS S3 Object Lock for write-once-read-many compliance, or AWS CodeArtifact with strong immutability settings](https://TODO)
-     - [Azure Blob Storage immutable policies, or Azure Container Registry with "content trust"/immutable tags](https://TODO)
-     - [GCP Bucket Lock or using Artifact Registry with policy preventing image overwrites](https://TODO)
-     - [OCI Object Storage retention lock or enabling "write-once" compartments for immutable artifact storage](https://TODO)
+     - [AWS S3 Object Lock for write-once-read-many compliance, or AWS CodeArtifact with strong immutability settings](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html)
+     - [Azure Blob Storage immutable policies, or Azure Container Registry with "content trust"/immutable tags](https://learn.microsoft.com/en-us/azure/storage/blobs/immutable-storage-overview)
+     - [GCP Bucket Lock or using Artifact Registry with policy preventing image overwrites](https://cloud.google.com/storage/docs/object-versioning)
+     - [OCI Object Storage retention lock or enabling "write-once" compartments for immutable artifact storage](https://docs.oracle.com/en-us/iaas/Content/Storage/Concepts/objectstorageoverview.htm)
 
 1. **Set Up Access Controls and Auditing**
 
    - Restrict who can modify or delete artifacts. Log all changes:
-     - [AWS IAM + AWS CloudTrail logs for artifact actions in S3/ECR/CodeArtifact](https://TODO)
-     - [Azure RBAC for container registries, Storage accounts, plus Activity Log for changes](https://TODO)
-     - [GCP IAM roles restricting write/deletion in Artifact Registry or Cloud Storage, with Audit Logs capturing actions](https://TODO)
-     - [OCI IAM policy for container registry and object storage, plus Audit service for retention of event logs](https://TODO)
+     - [AWS IAM + AWS CloudTrail logs for artifact actions in S3/ECR/CodeArtifact](https://docs.aws.amazon.com/IAM/latest/UserGuide/cloudtrail-integration.html)
+     - [Azure RBAC for container registries, Storage accounts, plus Activity Log for changes](https://learn.microsoft.com/en-us/azure/role-based-access-control/change-history-report)
+     - [GCP IAM roles restricting write/deletion in Artifact Registry or Cloud Storage, with Audit Logs capturing actions](https://cloud.google.com/logging/docs/audit)
+     - [OCI IAM policy for container registry and object storage, plus Audit service for retention of event logs](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 1. **Enforce In-House or Managed Build Numbering Standards**
 
@@ -170,10 +170,10 @@ Here are **rapidly actionable** enhancements:
 1. **Extend to Container Images or Package Repositories**
 
    - If you produce Docker images or library packages (NuGet, npm, etc.), store them in:
-     - [AWS ECR for Docker images, or AWS CodeArtifact for package dependencies](https://TODO)
-     - [Azure Container Registry or Azure Artifacts for npm/Maven/NuGet feeds](https://TODO)
-     - [GCP Artifact Registry for container images and language packages](https://TODO)
-     - [OCI Container Registry or Artifacts for Docker images, Helms charts, language packages](https://TODO)
+     - [AWS ECR for Docker images, or AWS CodeArtifact for package dependencies](https://aws.amazon.com/blogs/containers/oci-artifact-support-in-amazon-ecr/)
+     - [Azure Container Registry or Azure Artifacts for npm/Maven/NuGet feeds](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-concepts)
+     - [GCP Artifact Registry for container images and language packages](https://cloud.google.com/artifact-registry)
+     - [OCI Container Registry or Artifacts for Docker images, Helm charts, language packages](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/overview.htm)
 
 1. **Introduce Minimal Integrity Checks**
    - Even if you don’t have full cryptographic signatures, consider generating checksums (e.g., SHA256) for each artifact to detect accidental corruption.
@@ -213,18 +213,18 @@ Below are **rapidly actionable** improvements:
 1. **Leverage Vendor Tools for Dependency Scanning**
 
    - Integrate automatic scanning to confirm pinned versions match known secure states:
-     - [AWS CodeGuru Security or Amazon Inspector scanning Docker images/dependencies in your builds](https://TODO)
-     - [Azure DevOps Dependency Checks or GitHub Dependabot integrated with Azure repos/pipelines](https://TODO)
-     - [GCP Artifact Analysis for container images, plus OS package vulnerability scanning](https://TODO)
-     - [OCI Vulnerability Scanning Service for images in OCI Container Registry or OS packages in compute instances](https://TODO)
+     - [AWS CodeGuru Security or Amazon Inspector scanning Docker images/dependencies in your builds](https://docs.aws.amazon.com/codeguru/latest/security-ug/start-scanning.html)
+     - [Azure DevOps Dependency Checks or GitHub Dependabot integrated with Azure repos/pipelines](https://learn.microsoft.com/en-us/azure/devops/repos/security/github-advanced-security-dependency-scanning?view=azure-devops)
+     - [GCP Artifact Analysis for container images, plus OS package vulnerability scanning](https://cloud.google.com/container-analysis)
+     - [OCI Vulnerability Scanning Service for images in OCI Container Registry or OS packages in compute instances](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/usingvulnerabilityscanning.htm)
 
 1. **Sign Your Artifacts**
 
    - Use code signing or digital signatures:
-     - [AWS Signer for code signing your Lambda code or Container images, verifying in the pipeline](https://TODO)
-     - [Azure Key Vault-based sign and verify processes for container images or package artifacts](https://TODO)
-     - [GCP Binary Authorization for container images, ensuring only signed/trusted images are deployed to GKE or Cloud Run](https://TODO)
-     - [OCI KMS for managing keys used to sign your build artifacts or images, with a policy to only deploy signed objects](https://TODO)
+     - [AWS Signer for code signing your Lambda code or container images, verifying in the pipeline](https://aws.amazon.com/blogs/containers/signing-and-validating-oci-artifacts-with-aws-signer/)
+     - [Azure Key Vault-based sign and verify processes for container images or package artifacts](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-sign-build-push)
+     - [GCP Binary Authorization for container images, ensuring only signed/trusted images are deployed to GKE or Cloud Run](https://cloud.google.com/binary-authorization)
+     - [OCI KMS for managing keys used to sign your build artifacts or images, with a policy to only deploy signed objects](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keymanagementoverview.htm)
 
 1. **Adopt a "Bill of Materials" (SBOM)**
 
@@ -272,10 +272,11 @@ Even at this pinnacle, there are **actionable** ways to refine:
 
 1. **Automate Artifact Verification on Deployment**
 
-   - E.g., [AWS CloudFormation custom resource or Lambda to verify the artifact signature before launching resources in production](https://TODO)
-   - [Azure Pipelines gating checks that confirm signature validity against Azure Key Vault or a signing certificate store](https://TODO)
-   - [GCP Binary Authorization requiring attestation for container images in GKE or Cloud Run, blocking unauthorized images](https://TODO)
-   - [OCI custom deployment pipeline step verifying signature or checksum before applying Terraform or container updates](https://TODO)
+   - For example:
+     - [AWS CloudFormation custom resource or Lambda to verify the artifact signature before launching resources in production](https://github.com/aws-samples/lambda-based-signature-verification)
+     - [Azure Pipelines gating checks that confirm signature validity against Azure Key Vault or a signing certificate store](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/approvals/gates?view=azure-devops)
+     - [GCP Binary Authorization requiring attestation for container images in GKE or Cloud Run, blocking unauthorized images](https://cloud.google.com/binary-authorization)
+     - [OCI custom deployment pipeline step verifying signature or checksum before applying Terraform or container updates](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/usingvulnerabilityscanning.htm)
 
 1. **Embed Forensic Analysis Hooks**
 
@@ -292,10 +293,10 @@ Even at this pinnacle, there are **actionable** ways to refine:
 1. **Apply Multi-Factor Access Control**
 
    - Protect your signing keys or artifact storage with strong MFA and hardware security modules (HSMs) if needed:
-     - [AWS CloudHSM or KMS with dedicated key policies for artifact signing](https://TODO)
-     - [Azure Key Vault HSM or Managed HSM for storing signing keys with strict RBAC controls](https://TODO)
-     - [GCP Cloud KMS HSM-protected keys with IAM fine-grained access for signing operations](https://TODO)
-     - [OCI Vault with dedicated HSM-based key management for signing and encryption tasks](https://TODO)
+     - [AWS CloudHSM or KMS with dedicated key policies for artifact signing](https://docs.aws.amazon.com/kms/latest/developerguide/keystore-cloudhsm.html)
+     - [Azure Key Vault HSM or Managed HSM for storing signing keys with strict RBAC controls](https://learn.microsoft.com/en-us/azure/key-vault/managed-hsm/access-control)
+     - [GCP Cloud KMS HSM-protected keys with IAM fine-grained access for signing operations](https://cloud.google.com/kms/docs/creating-keys#hsm)
+     - [OCI Vault with dedicated HSM-based key management for signing and encryption tasks](https://docs.oracle.com/en-us/iaas/Content/KeyManagement/Concepts/keymanagementoverview.htm)
 
 1. **Participate in Industry or Government Communities**
    - As you lead in artifact management maturity, share best practices with other public sector bodies or cross-governmental security groups.

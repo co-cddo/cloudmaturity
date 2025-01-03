@@ -31,10 +31,10 @@ Below are **rapidly actionable** steps to move beyond purely manual provisioning
 1. **Start Capturing Configurations in Scripts**
 
    - Even if you rely on the portal/console, record steps in a lightweight script. For example:
-     - [AWS CLI scripts stored in a GitHub repo for spinning up EC2 instances or S3 buckets](https://TODO)
-     - [Azure CLI or PowerShell scripts for creating resource groups, VMs, or storage accounts](https://TODO)
-     - [GCP CLI (gcloud) scripts for provisioning VMs, Cloud Storage, or networking](https://TODO)
-     - [OCI CLI scripts for creating compute instances, networking, or storage resources](https://TODO)
+     - [AWS CLI scripts stored in a GitHub repo for spinning up EC2 instances or S3 buckets](https://github.com/theadarshsaxena/AWS-CLI-Scripting)
+     - [Azure CLI or PowerShell scripts for creating resource groups, VMs, or storage accounts](https://github.com/azureautomation/create-azure-resource-group-using-powershell)
+     - [GCP CLI (gcloud) scripts for provisioning VMs, Cloud Storage, or networking](https://github.com/teradici/cloud_deployment_scripts/blob/master/docs/gcp/README.md)
+     - [OCI CLI scripts for creating compute instances, networking, or storage resources](https://github.com/Oracle/oci-cli)
 
 1. **Implement Basic Naming and Tagging Conventions**
 
@@ -50,10 +50,10 @@ Below are **rapidly actionable** steps to move beyond purely manual provisioning
 1. **Consider a Pilot with Infrastructure as Code (IaC)**
 
    - Select a small, low-risk environment to try:
-     - [AWS CloudFormation or Terraform templates for a simple set of EC2 instances or S3 buckets](https://TODO)
-     - [Azure Bicep or Terraform for a minimal web app environment in Azure App Service](https://TODO)
-     - [GCP Deployment Manager or Terraform for GCE, GKE, or Cloud Storage resources](https://TODO)
-     - [OCI Resource Manager or Terraform for provisioning compute, networking, or object storage](https://TODO)
+     - [AWS CloudFormation or Terraform templates for a simple set of EC2 instances or S3 buckets](/TODO)
+     - [Azure Bicep or Terraform for a minimal web app environment in Azure App Service](https://github.com/Azure-Samples/highly-available-zone-redundant-webapp)
+     - [GCP Deployment Manager or Terraform for GCE, GKE, or Cloud Storage resources](https://github.com/GoogleCloudPlatform/terraform-google-cloud-foundation)
+     - [OCI Resource Manager or Terraform for provisioning compute, networking, or object storage](https://github.com/oracle/oci-cloud-native)
 
 1. **Document Provisioning Steps**
    - Keep a simple runbook or wiki page. Summarize each manual provisioning step so you can easily shift these instructions into scripts or templates later.
@@ -88,7 +88,7 @@ Below are **rapidly actionable** ways to standardize your provisioning scripts:
 1. **Adopt a Common Repository for Scripts**
 
    - Create an internal Git repo (e.g., on GitHub, GitLab, or a cloud-hosted repo) for all provisioning scripts:
-     - [AWS CodeCommit, Azure DevOps Repos, or GCP Source Repositories can also be used for version control](https://TODO)
+     - [AWS CodeCommit](https://aws.amazon.com/codecommit/), [Azure DevOps Repos](https://azure.microsoft.com/en-gb/services/devops/repos/), or [GCP Source Repositories](https://cloud.google.com/source-repositories) can also be used for version control
    - Encourage teams to share and reuse scripts, aligning naming conventions and code structure.
 
 1. **Define Minimal Scripting Standards**
@@ -99,10 +99,12 @@ Below are **rapidly actionable** ways to standardize your provisioning scripts:
 1. **Use Infrastructure as Code Tools**
 
    - Instead of random scripts, consider a consistent IaC approach:
-     - [AWS CloudFormation or Terraform for AWS-based provisioning](https://TODO)
-     - [Azure Bicep or Terraform for Azure infrastructure templates](https://TODO)
-     - [GCP Deployment Manager or Terraform for GCP resources](https://TODO)
-     - [OCI Resource Manager or Terraform for Oracle Cloud resources](https://TODO)
+
+     - [AWS CloudFormation or Terraform for AWS-based provisioning](https://docs.aws.amazon.com/cloudformation/index.html)
+     - [Azure Bicep or Terraform for Azure infrastructure templates](https://learn.microsoft.com/en-us/azure/developer/terraform/comparing-terraform-and-bicep)
+     - [GCP Deployment Manager or Terraform for GCP resources](https://cloud.google.com/deployment-manager/docs)
+     - [OCI Resource Manager or Terraform for Oracle Cloud resources](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
+
    - Start with a small template, then expand as teams gain confidence.
 
 1. **Create a Shared Module or Template Library**
@@ -150,10 +152,12 @@ Below are **rapidly actionable** ways to expand your declarative automation:
 1. **Create a Reference Architecture or Template**
 
    - Provide an example repository for a standard environment:
-     - [AWS: Example CloudFormation or Terraform scripts for a typical 3-tier application with a load balancer, auto-scaling group, and RDS](https://TODO)
-     - [Azure: Bicep or Terraform example for a web app + database + VNet + IAM roles setup](https://TODO)
-     - [GCP: Terraform or Deployment Manager example for GCE or GKE with secure defaults, including networking and logging](https://TODO)
-     - [OCI: Resource Manager stack example that sets up an OCI compute instance, load balancer, and VCN with best practices](https://TODO)
+
+     - [AWS: Example CloudFormation or Terraform scripts for a typical 3-tier application with a load balancer, auto-scaling group, and RDS](https://github.com/aws-samples/three-tier-web-application-flask)
+     - [Azure: Bicep or Terraform example for a web app + database + VNet + IAM roles setup](https://github.com/Azure-Samples/virtual-network-integration-recipes)
+     - [GCP: Terraform or Deployment Manager example for GCE or GKE with secure defaults, including networking and logging](https://github.com/GoogleCloudPlatform/terraform-google-project-factory)
+     - [OCI: Resource Manager stack example that sets up an OCI compute instance, load balancer, and VCN with best practices](https://github.com/oracle/oci-cloud-native)
+
    - Encourage teams to clone and adapt these templates.
 
 1. **Extend IaC Usage to Lower Environments**
@@ -205,10 +209,10 @@ Below are **rapidly actionable** ways to continue refining:
 
    - If not already done, ensure every major deployment goes through a pipeline that runs:
      - Linting, security scans (e.g., checking for known misconfigurations), and policy compliance checks:
-       - [AWS: CodeBuild or GitHub Actions with CFN-lint, cfn_nag, or Terraform scanning for best practices](https://TODO)
-       - [Azure: DevOps Pipeline tasks for Bicep linter or Terraform security scanning (e.g., tfsec)](https://TODO)
-       - [GCP: Cloud Build triggers for Terraform linting or scanning with built-in security checks or OPA policies](https://TODO)
-       - [OCI: DevOps pipeline that runs `terraform plan` with custom scripts checking code quality, tagging compliance, etc.](https://TODO)
+       - [AWS: CodeBuild or GitHub Actions with CFN-lint, cfn_nag, or Terraform scanning for best practices](https://github.com/aws-cloudformation/cfn-lint)
+       - [Azure: DevOps Pipeline tasks for Bicep linter or Terraform security scanning (e.g., tfsec)](https://github.com/aquasecurity/tfsec-azure-pipelines-task)
+       - [GCP: Cloud Build triggers for Terraform linting or scanning with built-in security checks or OPA policies](https://cloud.google.com/docs/terraform/policy-validation)
+       - [OCI: DevOps pipeline that runs `terraform plan` with custom scripts checking code quality, tagging compliance, etc.](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
 
 1. **Establish a Platform Engineering or DevOps Guild**
 
@@ -261,10 +265,10 @@ Below are **rapidly actionable** ways to push the boundaries, even at the highes
 1. **Implement Policy-as-Code**
 
    - Ensure each pipeline run checks compliance automatically:
-     - [AWS: Use AWS Config or AWS Service Control Policies with Git-based definitions plus OPA or CFN-lint in your pipeline](https://TODO)
-     - [Azure: Combine Azure Policy with custom pipeline tasks that validate Bicep/Terraform templates pre-deployment](https://TODO)
-     - [GCP: Leverage OPA or Terraform Validator in Cloud Build to confirm resource definitions match your policies](https://TODO)
-     - [OCI: Integrate advanced policy checks using OPA or custom scripts in your DevOps pipeline for Terraform stacks](https://TODO)
+     - [AWS: Use AWS Config or AWS Service Control Policies with Git-based definitions plus OPA or CFN-lint in your pipeline](https://aws.amazon.com/blogs/mt/using-opa-to-create-aws-config-rules/)
+     - [Azure: Combine Azure Policy with custom pipeline tasks that validate Bicep/Terraform templates pre-deployment](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/policy-devops-pipelines)
+     - [GCP: Leverage OPA or Terraform Validator in Cloud Build to confirm resource definitions match your policies](https://cloud.google.com/docs/terraform/policy-validation)
+     - [OCI: Integrate advanced policy checks using OPA or custom scripts in your DevOps pipeline for Terraform stacks](https://github.com/oracle/oci-cloud-native)
 
 1. **Adopt Advanced Testing and Security Checks**
 
@@ -279,11 +283,11 @@ Below are **rapidly actionable** ways to push the boundaries, even at the highes
 
 1. **Evolve Toward Self-Service Platforms**
 
-   - Provide internal "portal" or "service catalog" for non-expert teams to request resources that are auto-provisioned via IaC + CI/CD:
-     - [AWS Service Catalog for standardized products, hooking into your pipeline under the hood](https://TODO)
-     - [Azure Managed Applications or custom Azure DevOps-based service catalogs for shared solutions](https://TODO)
-     - [GCP’s Deployment Manager templates plus a small UI or orchestration for internal requests](https://TODO)
-     - [OCI Service Catalog for common architectures, all referencing your Terraform modules or Resource Manager stacks](https://TODO)
+   - Provide an internal "portal" or "service catalog" for non-expert teams to request resources that are auto-provisioned via Infrastructure as Code (IaC) and Continuous Integration/Continuous Deployment (CI/CD):
+     - [AWS Service Catalog for standardized products, integrating with your pipeline](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is-service-catalog.html)
+     - [Azure Managed Applications or custom Azure DevOps-based service catalogs for shared solutions](https://azure.microsoft.com/en-us/products/managed-applications/)
+     - [GCP Deployment Manager templates plus a small UI or orchestration for internal requests](https://cloud.google.com/deployment-manager)
+     - [OCI Service Catalog for common architectures, all referencing your Terraform modules or Resource Manager stacks](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
 
 1. **Expand to True "GitOps" for Ongoing Management**
    - Continuously synchronize changes from Git to your runtime environment:

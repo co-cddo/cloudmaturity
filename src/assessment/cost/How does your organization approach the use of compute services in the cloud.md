@@ -39,38 +39,38 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
 1. **Enable Basic Monitoring and Cost Insights**
 
    - Even if you keep long-running VMs, gather usage metrics and financial data:
-     - [AWS CloudWatch Metrics and AWS Cost Explorer](https://TODO)
-     - [Azure Monitor and Cost Management](https://TODO)
-     - [GCP Monitoring and Billing Reports](https://TODO)
-     - [OCI Monitoring and Cost Analysis](https://TODO)
+     - [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) and [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/).
+     - [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/) and [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/).
+     - [GCP Monitoring](https://cloud.google.com/monitoring) and [Billing Reports](https://cloud.google.com/billing/docs/reports).
+     - [OCI Monitoring](https://www.oracle.com/cloud/monitoring/) and [Cost Analysis](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/costanalysisoverview.htm).
    - Check CPU, memory, and storage utilization. If these metrics show consistent underuse (like 10% CPU usage around the clock), it’s a sign you can downsize or re-architect.
 
 1. **Leverage Built-in Right-Sizing Tools**
 
    - Major cloud providers offer "right-sizing" recommendations:
-     - [AWS Compute Optimizer](https://TODO) to get suggestions for smaller/larger instance sizes.
-     - [Azure Advisor for VM right-sizing](https://TODO).
-     - [GCP Recommender for machine types](https://TODO).
-     - [OCI "Workload and Resource Optimization" or Advisor suggestions](https://TODO).
+     - [AWS Compute Optimizer](https://aws.amazon.com/compute-optimizer/) to get suggestions for smaller or larger instance sizes.
+     - [Azure Advisor for VM right-sizing](https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations) to identify underutilized virtual machines.
+     - [GCP Recommender for machine types](https://cloud.google.com/recommender/docs/understanding-vm-machine-type-recommendations) to optimize resource utilization.
+     - [OCI Workload and Resource Optimization](https://www.oracle.com/cloud/compute/) for tailored resource recommendations.
    - Make a plan to apply at least one or two right-sizing recommendations each quarter. This is a quick, low-risk path to cost savings and better resource use.
 
 1. **Introduce Simple Scheduling**
 
    - If some VMs are only needed during business hours, schedule automatic shutdown at night or on weekends:
-     - [AWS Instance Scheduler (Solution Implementation)](https://TODO).
-     - [Azure Automation for start/stop of VMs](https://TODO).
-     - [GCP Cloud Scheduler plus scripts for VM control](https://TODO).
-     - [OCI Scheduled Autoscaling or Cron-based scripts](https://TODO).
+     - [AWS Instance Scheduler (Solution Implementation)](https://aws.amazon.com/solutions/implementations/instance-scheduler/).
+     - [Azure Automation for start/stop of VMs](https://learn.microsoft.com/en-us/azure/automation/automation-solution-vm-management).
+     - [GCP Cloud Scheduler plus scripts for VM control](https://cloud.google.com/compute/docs/instances/schedule-instance-start-stop).
+     - [OCI Scheduled Autoscaling or Cron-based scripts](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/schedulinginstanceactions.htm).
    - A single action to stop dev/test or lightly used environments after hours can yield noticeable cost (and energy) savings.
 
 1. **Conduct a Feasibility Check for a Small Container Pilot**
 
    - Even if you retain most workloads on VMs, pick one small application or batch job and try containerizing it:
-     - [AWS ECS Fargate or EKS for containers](https://TODO).
-     - [Azure Container Instances or AKS (Azure Kubernetes Service)](https://TODO).
-     - [GCP Cloud Run or GKE (Google Kubernetes Engine)](https://TODO).
-     - [OCI Container Instances or OKE (Oracle Container Engine for Kubernetes)](https://TODO).
-   - By piloting a single container-based workload, you assess potential elasticity and find out whether container orchestrations truly solve your needs. This can be done quickly with minimal risk.
+     - [AWS Fargate](https://aws.amazon.com/fargate/) or [Amazon EKS](https://aws.amazon.com/eks/) for containers.
+     - [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/) or [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
+     - [Google Cloud Run](https://cloud.google.com/run) or [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine).
+     - [Oracle Cloud Infrastructure (OCI) Container Instances](https://www.oracle.com/cloud-native/container-engine-kubernetes/) or [Oracle Kubernetes Engine (OKE)](https://www.oracle.com/cloud-native/container-engine-kubernetes/).
+   - By piloting a single container-based workload, you can assess potential elasticity and determine whether container orchestration solutions meet your needs. This approach allows for quick experimentation with minimal risk.
 
 1. **Raise Awareness with Internal Stakeholders**
    - Share simple usage and cost graphs with your finance or leadership teams. Show them the difference between "always-on" vs. "scaled" or "scheduled" usage.
@@ -113,19 +113,19 @@ Here are **actionable** next steps to accelerate your modernization journey with
 
    - Identify a short list of low-risk workloads that could benefit from ephemeral compute, such as batch processing or data transformation.
    - Use native solutions to reduce complexity:
-     - [AWS Fargate with ECS/EKS for container-based tasks without server management](https://TODO).
-     - [Azure Container Apps or Azure Functions for event-driven workloads](https://TODO).
-     - [GCP Cloud Run for container-based microservices or GCP Functions](https://TODO).
-     - [OCI Functions or Container Instances for short-lived tasks](https://TODO).
+     - [AWS Fargate with ECS/EKS for container-based tasks without server management](https://aws.amazon.com/fargate/).
+     - [Azure Container Apps](https://azure.microsoft.com/en-us/products/container-apps/) or [Azure Functions](https://azure.microsoft.com/en-us/products/functions/) for event-driven workloads.
+     - [Google Cloud Run](https://cloud.google.com/run) for container-based microservices or [Google Cloud Functions](https://cloud.google.com/functions).
+     - [Oracle Cloud Infrastructure (OCI) Container Instances](https://www.oracle.com/cloud/cloud-native/container-instances/) or [OCI Functions](https://www.oracle.com/cloud-native/functions/) for short-lived tasks.
    - Document real cost/performance outcomes to present a stronger case for further expansion.
 
 1. **Implement Granular VM Auto-Scaling**
 
    - Even with VMs, you can configure auto-scaling groups or scale sets to handle changing loads:
-     - [AWS Auto Scaling Groups + Target Tracking Policies](https://TODO).
-     - [Azure Virtual Machine Scale Sets with rules for CPU/memory usage](https://TODO).
-     - [GCP Managed Instance Groups with auto-scaling policies](https://TODO).
-     - [OCI Instance Pool with autoscaling based on CPU or memory usage](https://TODO).
+     - [AWS Auto Scaling Groups with Target Tracking Policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-target-tracking.html).
+     - [Azure Virtual Machine Scale Sets with rules for CPU/memory usage](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview).
+     - [GCP Managed Instance Groups with auto-scaling policies](https://cloud.google.com/compute/docs/autoscaler/).
+     - [OCI Instance Pools with autoscaling based on CPU or memory usage](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm).
    - This ensures you pay only for the capacity you need during peak vs. off-peak times.
 
 1. **Use Container Services for Non-Critical Production**
@@ -144,10 +144,10 @@ Here are **actionable** next steps to accelerate your modernization journey with
 
    - Provide short courses or lunch-and-learns on container orchestration (Kubernetes, ECS, AKS, etc.) or serverless fundamentals.
    - Many vendors have free or low-cost training:
-     - [AWS Training and Certification on serverless/container topics](https://TODO).
-     - [Microsoft Learn modules for Azure Kubernetes Service, Azure Functions](https://TODO).
-     - [Google Cloud Skills Boost for Cloud Run or GKE fundamentals](https://TODO).
-     - [OCI Learning Paths for container and function deployments](https://TODO).
+     - [AWS Training and Certification on serverless/container topics](https://aws.amazon.com/training/).
+     - [Microsoft Learn modules for Azure Kubernetes Service, Azure Functions](https://learn.microsoft.com/en-us/training/).
+     - [Google Cloud Skills Boost for Cloud Run or GKE fundamentals](https://cloud.google.com/training/).
+     - [OCI Learning Paths for container and function deployments](https://learn.oracle.com/ols/learning-paths).
 
    Building confidence and skills helps teams adopt more advanced compute models.
 
@@ -187,47 +187,52 @@ Below are **rapidly actionable** ways to enhance your mixed compute model:
 1. **Adopt Unified Deployment Pipelines**
 
    - Strive for standard tooling that can deploy both VMs and container/serverless environments. For instance:
-     - [AWS CodePipeline or AWS CodeBuild integrated with ECS, Lambda, EC2, etc.](https://TODO).
-     - [Azure DevOps Pipelines or GitHub Actions for VMs, AKS, Azure Functions](https://TODO).
-     - [GCP Cloud Build for GCE, GKE, Cloud Run deployments](https://TODO).
-     - [OCI DevOps service for flexible deployments to OKE, Functions, or VMs](https://TODO).
+     - [AWS CodePipeline](https://aws.amazon.com/codepipeline/) or [AWS CodeBuild](https://aws.amazon.com/codebuild/) integrated with ECS, Lambda, EC2, etc.
+     - [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) or [GitHub Actions](https://github.com/features/actions) for VMs, AKS, Azure Functions.
+     - [Google Cloud Build](https://cloud.google.com/build) for GCE, GKE, Cloud Run deployments.
+     - [OCI DevOps service](https://www.oracle.com/devops/) for flexible deployments to OKE, Functions, or VMs.
    - This reduces fragmentation and fosters consistent best practices (code review, automated testing, environment provisioning).
 
 1. **Enhance Observability**
 
-   - Implement a single monitoring stack that captures logs, metrics, traces across VMs, containers, and functions:
-     - [AWS CloudWatch + AWS X-Ray for distributed tracing in containers or Lambda](https://TODO).
-     - [Azure Monitor + Application Insights with containers and serverless telemetry](https://TODO).
-     - [GCP Cloud Logging + Cloud Trace or OpenTelemetry for multi-service environments](https://TODO).
-     - [OCI Logging + Observability and Management Platform for cross-service insights](https://TODO).
-   - Unified observability ensures you quickly spot inefficiencies or scaling issues.
+   - Implement a single monitoring stack that captures logs, metrics, and traces across VMs, containers, and functions:
+     - [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) combined with [AWS X-Ray](https://aws.amazon.com/xray/) for distributed tracing in containers or Lambda.
+     - [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/) along with [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-trace-data) for containers and serverless telemetry.
+     - [Google Cloud's Operations Suite](https://cloud.google.com/products/operations) utilizing [Cloud Logging](https://cloud.google.com/logging) and [Cloud Trace](https://cloud.google.com/trace) for multi-service environments.
+     - [Oracle Cloud Infrastructure (OCI) Logging](https://www.oracle.com/observability/) integrated with the [Observability and Management Platform](https://www.oracle.com/manageability/) for cross-service insights.
+   - Unified observability ensures you can quickly identify inefficiencies or scaling issues.
 
 1. **Introduce a Tagging/Governance Policy**
 
-   - Standardize tags or labels for cost center, environment, application name. This helps track spend, performance, and potential carbon footprint across different compute services.
-   - Tools like:
-     - [AWS Resource Tagging and Cost Allocation Tags](https://TODO)
-     - [Azure Policy with Tag Inheritance](https://TODO)
-     - [GCP Labels for resources & GCP Organization Policy to enforce tagging](https://TODO)
-     - [OCI Tag Namespaces and Enforcement Policies](https://TODO)
-   - This fosters accountability and helps identify usage patterns needing optimization.
+   - Standardize tags or labels for cost center, environment, and application name. This practice aids in tracking spending, performance, and potential carbon footprint across various compute services.
+   - Utilize tools such as:
+     - [AWS Resource Tagging and Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html).
+     - [Azure Policy with Tag Inheritance](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies).
+     - [GCP Labels for Resources & GCP Organization Policy to Enforce Tagging](https://cloud.google.com/resource-manager/docs/organization-policy/tags-organization-policy).
+     - [OCI Tag Namespaces and Enforcement Policies](https://docs.oracle.com/en-us/iaas/Content/Tagging/Concepts/taggingoverview.htm).
+   - Implementing a unified tagging strategy fosters accountability and helps identify usage patterns that may require optimization.
 
 1. **Implement Automated or Dynamic Scaling**
 
-   - For container-based workloads, set CPU/memory usage thresholds for auto-scaling pods or tasks:
-     - [AWS Fargate/ECS auto-scaling based on CloudWatch metrics](https://TODO)
-     - [Azure Kubernetes Service HPA (Horizontal Pod Autoscaler)](https://TODO)
-     - [GCP GKE HPA or Cloud Run request-based autoscaling](https://TODO)
-     - [OCI OKE cluster autoscaler or container usage triggers](https://TODO)
-   - For serverless, set concurrency or usage limits to avoid unexpected cost spikes.
+   - For container-based workloads, set CPU and memory usage thresholds to enable auto-scaling of pods or tasks:
+     - [AWS Fargate/ECS auto-scaling based on CloudWatch metrics](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html).
+     - [Azure Kubernetes Service Horizontal Pod Autoscaler (HPA)](https://learn.microsoft.com/en-us/azure/aks/concepts-scale#horizontal-pod-autoscaler).
+     - [GCP GKE Horizontal Pod Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler) or [Cloud Run request-based autoscaling](https://cloud.google.com/run/docs/about-auto-scaling).
+     - [OCI OKE cluster autoscaler](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengautoscaling.htm) or container usage triggers.
+   - For serverless architectures, establish concurrency or usage limits to prevent unexpected cost spikes.
+
+   Implementing these scaling strategies ensures that your applications can efficiently handle varying workloads while controlling costs.
 
 1. **Leverage Reserved or Discounted Pricing for Steady Components**
+
    - If certain VMs or container clusters must run continuously, investigate vendor discount models:
-     - [AWS Savings Plans or Reserved Instances](https://TODO)
-     - [Azure Reservations for VMs or container node pools](https://TODO)
-     - [GCP Committed Use Discounts](https://TODO)
-     - [OCI Annual Flex or Reserved Capacity terms](https://TODO)
-   - Blend on-demand for elastic workloads with reservations for predictable baselines.
+     - [AWS Savings Plans](https://aws.amazon.com/savingsplans/) or [Reserved Instances](https://aws.amazon.com/ec2/pricing/reserved-instances/).
+     - [Azure Reservations for VMs or container node pools](https://azure.microsoft.com/en-us/pricing/reserved-vm-instances/).
+     - [GCP Committed Use Discounts](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts).
+     - [OCI Reserved Capacity](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/reserve-capacity.htm).
+   - Blend on-demand resources for elastic workloads with reservations for predictable baselines to optimize costs.
+
+   Implementing these strategies can lead to significant cost savings for workloads with consistent usage patterns.
 
 By unifying your deployment practices, consolidating observability, enforcing tagging, and refining autoscaling or discount usage, you move from an ad-hoc mix of compute styles to a more cohesive, cost-effective cloud ecosystem. This sets the stage for robust, consistent governance and significant agility gains.
 
@@ -272,37 +277,43 @@ Below are **actionable** expansions to push your ephemeral usage approach furthe
 1. **Enable Event-Driven Automation**
 
    - Use events to trigger ephemeral jobs:
-     - [AWS EventBridge or CloudWatch Events to invoke Lambda or spin up ECS tasks](https://TODO).
-     - [Azure Event Grid or Logic Apps triggering Functions or container jobs](https://TODO).
-     - [GCP Pub/Sub or EventArc calls Cloud Run services or GCE ephemeral jobs](https://TODO).
-     - [OCI Events Service integrated with Functions or autoscaling rules](https://TODO).
+     - [AWS EventBridge](https://aws.amazon.com/eventbridge/) or [CloudWatch Events](https://aws.amazon.com/cloudwatch/) to invoke [Lambda](https://aws.amazon.com/lambda/) or spin up [ECS](https://aws.amazon.com/ecs/) tasks.
+     - [Azure Event Grid](https://azure.microsoft.com/en-us/services/event-grid/) or [Logic Apps](https://azure.microsoft.com/en-us/services/logic-apps/) triggering [Functions](https://azure.microsoft.com/en-us/services/functions/) or container jobs.
+     - [GCP Pub/Sub](https://cloud.google.com/pubsub) or [EventArc](https://cloud.google.com/eventarc) calls [Cloud Run](https://cloud.google.com/run) services or GCE ephemeral jobs.
+     - [OCI Events Service](https://www.oracle.com/cloud/cloud-native/events/) integrated with [Functions](https://www.oracle.com/functions/) or [autoscaling rules](https://www.oracle.com/cloud/compute/autoscaling/).
    - This ensures resources only run when triggered, further minimizing idle time.
 
 1. **Implement Container Security Best Practices**
 
    - As ephemeral container usage grows, so do potential security concerns:
-     - Use [AWS ECR scanning, or Amazon Inspector for container images](https://TODO).
-     - Use [Azure Container Registry (ACR) image scanning, Microsoft Defender for Cloud](https://TODO).
-     - Use [GCP Container Registry / Artifact Registry with scanning, Google Cloud Security Command Center](https://TODO).
-     - Use [OCI Container Registry scanning, Security Zones for container compliance](https://TODO).
+     - Use [AWS ECR scanning](https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html) or [Amazon Inspector for container images](https://docs.aws.amazon.com/inspector/latest/user/scanning-ecr.html).
+     - Use [Azure Container Registry (ACR) image scanning](https://learn.microsoft.com/en-us/azure/container-registry/scan-images-defender) with [Microsoft Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-container-registries-introduction).
+     - Use [GCP Container Registry](https://cloud.google.com/container-registry/docs/container-analysis) or [Artifact Registry with scanning](https://cloud.google.com/artifact-registry/docs/enable-vulnerability-scanning) and [Google Cloud Security Command Center](https://cloud.google.com/security-command-center/docs).
+     - Use [OCI Container Registry scanning](https://docs.oracle.com/en-us/iaas/Content/Registry/Tasks/registryscanningimages.htm) and [Security Zones for container compliance](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/security_zones.htm).
    - Integrate scans into your CI/CD pipeline for immediate alerts and automation.
 
 1. **Refine Infrastructure as Code (IaC) and Pipeline Patterns**
 
    - Standardize ephemeral environment creation using:
-     - [AWS CloudFormation or AWS CDK, plus AWS CodePipeline](https://TODO).
-     - [Azure Resource Manager templates or Bicep, plus Azure DevOps or GitHub Actions](https://TODO).
-     - [GCP Deployment Manager or Terraform with Cloud Build triggers](https://TODO).
-     - [OCI Resource Manager for stack deployments, integrated with OCI DevOps pipeline](https://TODO).
+     - [AWS CloudFormation](https://aws.amazon.com/cloudformation/) or [AWS CDK](https://aws.amazon.com/cdk/), plus [AWS CodePipeline](https://aws.amazon.com/codepipeline/).
+     - [Azure Resource Manager templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) or [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview), plus [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) or [GitHub Actions](https://github.com/features/actions).
+     - [GCP Deployment Manager](https://cloud.google.com/deployment-manager) or [Terraform](https://cloud.google.com/docs/terraform), with [Cloud Build triggers](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers).
+     - [OCI Resource Manager](https://www.oracle.com/cloud/systems-management/resource-manager.html) for stack deployments, integrated with [OCI DevOps pipeline](https://www.oracle.com/devops/).
    - Encourage a shared library of environment definitions to accelerate new project spin-up.
 
 1. **Extend Tagging and Cost Allocation**
-   - Since ephemeral resources come and go quickly, ensure they are labeled or tagged on creation.
-   - Setup budgets or cost alerts to identify if ephemeral usage unexpectedly spikes:
-     - [AWS Budgets and Alerts integrated with Slack or email](https://TODO).
-     - [Azure Cost Management budgets with notifications](https://TODO).
-     - [GCP Budgets and Billing Alerts linked to Pub/Sub or email](https://TODO).
-     - [OCI Budgets with usage triggers and cost anomaly detection](https://TODO).
+
+   - Since ephemeral resources come and go quickly, ensure they are labeled or tagged upon creation.
+
+   - Set up budgets or cost alerts to identify if ephemeral usage unexpectedly spikes:
+
+     - [AWS Budgets and Alerts integrated with Slack or email](https://docs.aws.amazon.com/cost-management/latest/userguide/sns-alert-chime.html).
+
+     - [Azure Cost Management budgets with notifications](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/cost-mgt-alerts-monitor-usage-spending).
+
+     - [GCP Budgets and Billing Alerts linked to Pub/Sub or email](https://cloud.google.com/billing/docs/how-to/budgets).
+
+     - [OCI Budgets with usage triggers and cost anomaly detection](https://docs.oracle.com/en-us/iaas/Content/Billing/Tasks/usingbudgets.htm).
 
 By formalizing your decision framework, expanding event-driven architectures, ensuring container security, and strengthening IaC patterns, you solidify your short-lived compute model. This approach reduces overheads, fosters agility, and helps UK public sector teams remain compliant with cost and operational excellence targets.
 
@@ -346,36 +357,36 @@ Even at this advanced state, you can still hone practices. Below are suggestions
 1. **Deepen SaaS Exploration for Niche Needs**
 
    - Explore specialized SaaS options for areas like data analytics, content management, or identity services.
-   - Ensure your staff or solution architects regularly revisit the [G-Cloud listings](https://TODO) or other Crown Commercial Service frameworks to see if an updated SaaS solution can replace custom-coded or container-based systems.
+   - Ensure your staff or solution architects regularly revisit the [G-Cloud listings](https://www.contractawardservice.crowncommercial.gov.uk/projects/create-or-choose) or other Crown Commercial Service frameworks to see if an updated SaaS solution can replace custom-coded or container-based systems.
 
 1. **Further Standardize DevOps Across All Layers**
 
    - If you run FaaS on multiple clouds or keep some workloads on private cloud, unify your deployment approach.
    - Encourage a single pipeline style:
-     - [AWS CodePipeline or GitHub Actions for everything from Lambda to ECS, plus Terraform or CloudFormation for infra as code](https://TODO).
-     - [Azure DevOps for .NET-based function apps, container solutions, or VM templates under one roof](https://TODO).
-     - [GCP Cloud Build triggers that handle Cloud Run, GCE, or third-party SaaS integrations](https://TODO).
-     - [OCI DevOps pipeline for a mixed environment using OKE, Functions, or third-party webhooks](https://TODO).
+     - [AWS CodePipeline](https://aws.amazon.com/codepipeline/) or [GitHub Actions](https://github.com/features/actions) for everything from [AWS Lambda](https://aws.amazon.com/lambda/) to [Amazon ECS](https://aws.amazon.com/ecs/), plus [AWS CloudFormation](https://aws.amazon.com/cloudformation/) for infrastructure as code.
+     - [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) for .NET-based function apps, container solutions like [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/), or [Azure Virtual Machines](https://azure.microsoft.com/en-us/services/virtual-machines/) under one roof.
+     - [Google Cloud Build](https://cloud.google.com/build) triggers that handle [Cloud Run](https://cloud.google.com/run), [Google Compute Engine](https://cloud.google.com/compute), or third-party SaaS integrations.
+     - [Oracle Cloud Infrastructure (OCI) DevOps](https://www.oracle.com/devops/) pipeline for a mixed environment using [Oracle Kubernetes Engine (OKE)](https://www.oracle.com/cloud-native/container-engine-kubernetes/), [Oracle Functions](https://www.oracle.com/cloud-native/functions/), or third-party webhooks.
 
 1. **Maintain a Living Right-Sizing Strategy**
 
    - Expand beyond memory/CPU metrics to measure cost per request, concurrency, or throughput.
    - Tools like:
-     - [AWS Compute Optimizer advanced metrics for EBS I/O, Lambda concurrency, etc.](https://TODO).
-     - [Azure Monitor Workbooks with custom performance/cost insights](https://TODO).
-     - [GCP Recommenders for scaling beyond just CPU/memory (like disk usage suggestions)](https://TODO).
-     - [OCI Observability with granular resource usage metrics for compute and storage optimization](https://TODO).
+     - [AWS Compute Optimizer advanced metrics for EBS I/O, Lambda concurrency, etc.](https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html)
+     - [Azure Monitor Workbooks with custom performance/cost insights](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview)
+     - [GCP Recommenders for scaling beyond just CPU/memory (like disk usage suggestions)](https://cloud.google.com/recommender/docs)
+     - [OCI Observability with granular resource usage metrics for compute and storage optimization](https://www.oracle.com/observability/)
 
 1. **Focus on Energy Efficiency and Sustainability**
 
    - Refine your approach with a strong environmental lens:
      - Pick regions or times that yield lower carbon intensity, if permitted by data residency rules.
-     - Enforce ephemeral usage policies so you do not run resources unnecessarily.
-   - Each vendor offers some sustainability or carbon data you can feed into your "fit for purpose" decisions:
-     - [AWS Sustainability Pillar in Well-Architected](https://TODO).
-     - [Azure Emissions Impact Dashboard / Sustainability Calculator](https://TODO).
-     - [GCP Carbon Footprint tool integrated with cloud usage](https://TODO).
-     - [OCI Sustainability resources and region-level emission details](https://TODO).
+     - Enforce ephemeral usage policies to avoid running resources unnecessarily.
+   - Each vendor offers sustainability or carbon data to inform your "fit for purpose" decisions:
+     - [AWS Sustainability Pillar in Well-Architected](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html).
+     - [Azure Emissions Impact Dashboard](https://www.microsoft.com/en-gb/sustainability/emissions-impact-dashboard).
+     - [GCP Carbon Footprint tool integrated with cloud usage](https://cloud.google.com/carbon-footprint).
+     - [OCI Sustainability resources and region-level emission details](https://oci-global.com/sustainability/climate-change-action/).
 
 1. **Champion Cross-Public-Sector Collaboration**
    - Share lessons or templates with other departments or agencies. This fosters consistent best practices across local councils, NHS trusts, or central government bodies.
