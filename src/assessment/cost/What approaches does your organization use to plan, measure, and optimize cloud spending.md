@@ -7,7 +7,7 @@ eleventyNavigation:
 
 ### **Restricted Billing Visibility:** Billing details are only accessible to management and finance teams, with limited transparency across the organization.
 
-#### **How to determine if this good enough?**
+#### **How to determine if this good enough**
 
 Restricted Billing Visibility typically implies that your cloud cost data—such as monthly bills, usage breakdowns, or detailed cost analytics—remains siloed within a small subset of individuals or departments, usually finance or executive leadership. This might initially appear acceptable if you believe cost decisions do not directly involve engineering teams, product owners, or other stakeholders. It can also seem adequate when your organization is small, or budgets are centrally controlled. However, carefully assessing whether this arrangement still meets your current and emerging needs requires a closer look at multiple dimensions: stakeholder awareness, accountability for financial outcomes, cross-functional collaboration, and organizational growth.
 
@@ -47,10 +47,10 @@ Below are tangible ways to create a more open and proactive cost culture:
 
    - Most major cloud providers offer robust billing dashboards that can be securely shared with different levels of detail. For example, you can configure specialized read-only roles that allow developers to see usage patterns and daily cost breakdown without granting them access to critical financial settings.
    - Look into official documentation and solutions from your preferred cloud provider:
-     - AWS: [AWS Cost Explorer](https://TODO)
-     - Azure: [Azure Cost Management](https://TODO)
-     - GCP: [Cloud Billing Reports](https://TODO)
-     - OCI: [Oracle Cloud Cost Analysis](https://TODO)
+     - AWS: [AWS Cost Explorer](https://aws.amazon.com/cost-explorer/)
+     - Azure: [Azure Cost Management](https://azure.microsoft.com/en-gb/products/cost-management/)
+     - GCP: [Cloud Billing Reports](https://cloud.google.com/billing/docs/how-to/export-data-bigquery)
+     - OCI: [Oracle Cloud Cost Analysis](https://www.oracle.com/uk/cloud/cost-analysis/)
    - By carefully configuring role-based access, you enable various teams to monitor cost drivers without exposing sensitive billing details such as invoicing or payment methods.
 
 2. **Regular Cost Review Meetings**
@@ -63,10 +63,10 @@ Below are tangible ways to create a more open and proactive cost culture:
    - Integrating cost alerts into your organizational communication channels can be a game changer. Instead of passively waiting for monthly bills, set up cost thresholds, daily or weekly cost notifications, or usage anomalies that get shared in Slack, Microsoft Teams, or email distribution lists.
    - This approach ensures that the right people see cost increases in near real-time. If a developer spins up a large instance for testing and forgets to turn it off, you can catch that quickly.
    - Each major provider offers alerting and budgeting features:
-     - AWS: [Budgets and Alerts](https://TODO)
-     - Azure: [Budget Alerts and Advisor Recommendations](https://TODO)
-     - GCP: [Budget Notifications and Alerts](https://TODO)
-     - OCI: [Cost Tracking and Alerting](https://TODO)
+     - AWS: [Budgets and Alerts](https://aws.amazon.com/aws-cost-management/aws-budgets/)
+     - Azure: [Budget Alerts and Advisor Recommendations](https://azure.microsoft.com/en-gb/products/cost-management/)
+     - GCP: [Budget Notifications and Alerts](https://cloud.google.com/billing/docs/how-to/budgets)
+     - OCI: [Cost Tracking and Alerting](https://www.oracle.com/uk/cloud/cost-management/)
 
 4. **Cost Dashboards Embedded into Engineering Workflows**
 
@@ -81,7 +81,7 @@ Below are tangible ways to create a more open and proactive cost culture:
 6. **Use of FinOps Principles**
 
    - The emerging discipline of FinOps (short for “Financial Operations”) focuses on bringing together finance, engineering, and business stakeholders to drive financial accountability. Adopting a FinOps mindset means cost visibility becomes a shared responsibility, with iterative improvement at its core.
-   - Consider referencing frameworks like the FinOps Foundation’s guidelines at `https://TODO` (replace with actual official link) to learn about building a culture of cost ownership, unit economics, and cross-team collaboration.
+   - Consider referencing frameworks like the [FinOps Foundation’s Principles](https://www.finops.org/framework/principles/) to learn about building a culture of cost ownership, unit economics, and cross-team collaboration.
 
 7. **Security and Compliance Considerations**
    - Improving visibility does not mean exposing sensitive corporate finance data or violating compliance rules. Many organizations adopt an approach where top-level financial details (like credit card info or total monthly invoice) remain restricted, but usage-based metrics, daily cost reports, and resource-level data are made available.
@@ -91,7 +91,7 @@ By following these strategies, you shift from a guarded approach—where only fi
 
 ### **Proactive Spend Commitment by Finance:** The finance team uses billing information to make informed decisions about pre-committed cloud spending where it's deemed beneficial.
 
-#### **How to determine if this good enough?**
+#### **How to determine if this good enough**
 
 In many organizations, cloud finance teams or procurement specialists negotiate contracts with cloud providers for discounted rates based on committed spend, often referred to as “Reserved Instances,” “Savings Plans,” “Committed Use Discounts,” or other vendor-specific programs. This approach can result in significant cost savings if done correctly. Understanding when this level of engagement is “good enough” often depends on the maturity of your cost forecasting, the stability of your workloads, and the alignment of these financial decisions with actual technical usage patterns.
 
@@ -134,10 +134,10 @@ To enhance a “Proactive Spend Commitment by Finance” model, organizations of
 2. **Dynamic Monitoring of Reservation Coverage**
 
    - Use vendor-specific tools or third-party solutions to track your reservation utilization in near-real-time. For instance:
-     - AWS: [AWS Cost Explorer Reserved Instance Utilization](https://TODO)
-     - Azure: [Reservation Utilization and Coverage Reports](https://TODO)
-     - GCP: [Committed Use Discount Monitoring](https://TODO)
-     - OCI: [Oracle Cloud Reserved Capacity Tracking](https://TODO)
+     - AWS: [AWS Cost Explorer Reserved Instance Utilization](https://docs.aws.amazon.com/cost-management/latest/userguide/ce-ris.html)
+     - Azure: [Reservation Utilization and Coverage Reports](https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/reservation-utilization)
+     - GCP: [Committed Use Discount Monitoring](https://cloud.google.com/docs/cud)
+     - OCI: [Oracle Cloud Reserved Capacity Tracking](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/reserve-capacity.htm#)
    - Continuously reviewing coverage lets you adjust reservations if your provider or plan permits it. Some vendors allow you to modify instance families, shift reservations to different regions, or exchange them for alternative instance sizes, subject to specific constraints.
 
 3. **Cross-Functional Reservation Committees**
@@ -168,7 +168,7 @@ By progressively weaving in these improvements, you move from a purely finance-l
 
 ### **Cost-Effective Resource Management:** Cloud environments and applications are configured for cost-efficiency, such as automatically shutting down or scaling down non-production environments during off-hours.
 
-#### **How to determine if this good enough?**
+#### **How to determine if this good enough**
 
 Cost-Effective Resource Management typically reflects an environment where you have implemented proactive measures to eliminate waste in your cloud infrastructure. Common tactics include turning off development or testing environments at night, using auto-scaling to handle variable load, and continuously auditing for idle resources. The question becomes whether these tactics alone suffice for your organizational goals or if further improvements are necessary. To evaluate, consider the following:
 
@@ -211,10 +211,10 @@ If you wish to refine your cost-efficiency, consider adding more sophisticated p
 
    - Move beyond simple CPU-based or time-based triggers. Incorporate multiple metrics (memory usage, queue depth, request latency) so you scale up and down more precisely. This ensures that environments adjust capacity as soon as traffic drops, boosting your savings.
    - Evaluate advanced solutions from your cloud provider:
-     - AWS: [Target Tracking or Step Scaling Policies](https://TODO)
-     - Azure: [Autoscale with Metrics and Rules](https://TODO)
-     - GCP: [Autoscaler for Managed Instance Groups](https://TODO)
-     - OCI: [Autoscaling Based on Performance Metrics](https://TODO)
+     - AWS: [Target Tracking or Step Scaling Policies](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html)
+     - Azure: [Autoscale with Metrics and Rules](https://docs.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-get-started)
+     - GCP: [Autoscaler for Managed Instance Groups](https://cloud.google.com/compute/docs/autoscaler)
+     - OCI: [Autoscaling Based on Performance Metrics](https://www.oracle.com/uk/cloud/cost-management/)
 
 2. **Use Infrastructure as Code for Environment Management**
 
@@ -245,10 +245,10 @@ If you wish to refine your cost-efficiency, consider adding more sophisticated p
 
    - Implement scripts or tools that run daily or weekly to detect unattached volumes, unused IP addresses, idle load balancers, or dormant container images. Provide automated cleanup or at least raise alerts for manual review.
    - Many cloud providers have built-in recommendations engines:
-     - AWS: [AWS Trusted Advisor](https://TODO)
-     - Azure: [Azure Advisor](https://TODO)
-     - GCP: [Recommender Hub](https://TODO)
-     - OCI: [Oracle Cloud Advisor](https://TODO)
+     - AWS: [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
+     - Azure: [Azure Advisor](https://azure.microsoft.com/en-gb/products/cost-management/)
+     - GCP: [Recommender Hub](https://cloud.google.com/recommender)
+     - OCI: [Oracle Cloud Advisor](https://www.oracle.com/uk/cloud/cost-management/)
 
 8. **Track and Celebrate Savings**
    - Publicize cost optimization wins. If an engineering team shaved 20% off monthly bills by fine-tuning auto-scaling, celebrate that accomplishment in internal communications. Show the before/after metrics to encourage others to follow suit.
@@ -258,7 +258,7 @@ By layering these enhancements, you move beyond basic scheduling or minimal auto
 
 ### **Cost-Aware Development Practices:** Developers and engineers have daily visibility into cloud costs and are encouraged to consider the financial impact of their choices in the development phase.
 
-#### **How to determine if this good enough?**
+#### **How to determine if this good enough**
 
 Introducing “Cost-Aware Development Practices” means your engineering teams are no longer coding in a vacuum. Instead, they have direct or near-direct access to cost data and incorporate budget considerations throughout their software lifecycle. However, measuring if this approach is “good enough” requires assessing how deeply cost awareness is embedded in day-to-day technical activities, as well as the outcomes you achieve.
 
@@ -347,10 +347,10 @@ Comprehensive Cost Management and Optimization represents a mature stage in your
    - In a comprehensive model, you’ve configured multi-tier alerts that scale with the significance of cost changes. For instance, a modest daily threshold might notify a DevOps Slack channel, while a larger monthly threshold might email department heads, and an even bigger spike might trigger urgent notifications to executives.
    - Ensure these alerts are not just numeric triggers (e.g., “spend exceeded $X”), but also usage anomaly detections. For example, if a region’s usage doubles overnight or a new instance type’s cost surges unexpectedly, the right people receive immediate alerts.
    - Each major cloud provider offers flexible budgeting and cost anomaly detection:
-     - AWS: [AWS Budgets, Cost Anomaly Detection](https://TODO)
-     - Azure: [Cost Alerts and Advisor](https://TODO)
-     - GCP: [Budgets and Billing Alerts](https://TODO)
-     - OCI: [Budgets, Alerts, and Observability Tools](https://TODO)
+     - AWS: [AWS Budgets, Cost Anomaly Detection](https://aws.amazon.com/aws-cost-management/aws-budgets/)
+     - Azure: [Cost Alerts and Advisor](https://azure.microsoft.com/en-gb/products/cost-management/)
+     - GCP: [Budgets and Billing Alerts](https://cloud.google.com/billing/docs/how-to/budgets)
+     - OCI: [Budgets, Alerts, and Observability Tools](https://www.oracle.com/uk/cloud/cost-management/)
 
 2. **Cross-Functional Cost Review Cadences**
 
