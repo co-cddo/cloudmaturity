@@ -31,18 +31,18 @@ Below are **rapidly actionable** steps to enhance service account security beyon
 1. **Use Cloud-Native IAM for Service Accounts**
 
    - Instead of creating user credentials, define service accounts with least privilege:
-     - [AWS IAM roles or AWS STS tokens for services](https://TODO)
-     - [Azure Managed Identities for Azure resources](https://TODO)
-     - [GCP Service Accounts with keyless usage or short-lived credentials](https://TODO)
-     - [OCI Dynamic Groups and instance principals for service-level authentication](https://TODO)
+     - [AWS IAM roles or AWS STS tokens for services](https://aws.amazon.com/iam/features/sts/)
+     - [Azure Managed Identities for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
+     - [GCP Service Accounts with keyless usage or short-lived credentials](https://cloud.google.com/iam/docs/service-accounts)
+     - [OCI Dynamic Groups and instance principals for service-level authentication](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Adopt a Central Secret Manager**
 
    - Store credentials securely in:
-     - [AWS Secrets Manager or AWS SSM Parameter Store](https://TODO)
-     - [Azure Key Vault](https://TODO)
-     - [GCP Secret Manager](https://TODO)
-     - [OCI Vault](https://TODO)
+     - [AWS Secrets Manager or AWS SSM Parameter Store](https://aws.amazon.com/secrets-manager/)
+     - [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview)
+     - [GCP Secret Manager](https://cloud.google.com/secret-manager)
+     - [OCI Vault](https://www.oracle.com/cloud/free/oci-training/)
    - Reduces plaintext password usage, enabling future rotation.
 
 1. **Automate Rotation**
@@ -85,7 +85,7 @@ Below are **rapidly actionable** ways to move beyond static API keys:
 
 1. **Store Keys in a Central Secret Manager**
 
-   - e.g., [AWS Secrets Manager or AWS SSM Parameter Store with encryption](https://TODO), [Azure Key Vault with RBAC controls](https://TODO), [GCP Secret Manager with IAM-based access](https://TODO), [OCI Vault with KMS encryption](https://TODO).
+   - e.g., [AWS Secrets Manager or AWS SSM Parameter Store with encryption](https://aws.amazon.com/secrets-manager/), [Azure Key Vault with RBAC controls](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide), [GCP Secret Manager with IAM-based access](https://cloud.google.com/secret-manager), [OCI Vault with KMS encryption](https://www.oracle.com/cloud/free/oci-training/).
    - Avoid embedding keys in code or config files.
 
 1. **Automate API Key Rotation**
@@ -96,7 +96,7 @@ Below are **rapidly actionable** ways to move beyond static API keys:
 1. **Consider IAM Role or Token-Based Alternatives**
 
    - Where possible, use short-lived tokens or ephemeral credentials to reduce static API key usage:
-     - e.g., [AWS IAM roles with STS, Azure Managed Identities, GCP Service Accounts short-lived tokens, OCI dynamic groups/tokens](https://TODO).
+     - e.g., [AWS IAM roles with STS](https://aws.amazon.com/iam/features/sts/), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Service Accounts short-lived tokens](https://cloud.google.com/iam/docs/service-accounts), [OCI dynamic groups/tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Limit Scopes**
 
@@ -104,7 +104,7 @@ Below are **rapidly actionable** ways to move beyond static API keys:
 
 1. **Log & Alert on Key Usage**
    - Enable logs that track API calls with each key, setting alerts for unusual activity:
-     - e.g., [AWS CloudTrail, Azure Monitor, GCP Cloud Logging, OCI Audit Logs integrated with anomaly detection](https://TODO).
+     - e.g., [AWS CloudTrail](https://aws.amazon.com/cloudtrail/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [GCP Cloud Logging](https://cloud.google.com/logging), [OCI Audit Logs integrated with anomaly detection](https://www.oracle.com/cloud/free/oci-training/).
 
 By centrally managing keys, rotating them automatically, transitioning to role-based or token-based credentials, enforcing least privilege, and auditing usage, you substantially reduce the security risk associated with static API keys.
 
@@ -139,17 +139,17 @@ Below are **rapidly actionable** ways to refine a centralized secret store with 
 1. **Build Automated Pipelines**
 
    - Integrate secret retrieval or rotation scripts into your CI/CD:
-     - e.g., [AWS CodePipeline retrieving from Secrets Manager, Azure DevOps tasks pulling from Key Vault, GCP Cloud Build with Secret Manager, OCI DevOps pipeline with Vault integration](https://TODO).
+     - e.g., [AWS CodePipeline retrieving from Secrets Manager](https://aws.amazon.com/codepipeline/), [Azure DevOps tasks pulling from Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/key-vault-overview), [GCP Cloud Build with Secret Manager](https://cloud.google.com/build/docs/container-scanning), [OCI DevOps pipeline with Vault integration](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enforce Access Policies**
 
-   - Use [AWS IAM policies, Azure RBAC, GCP IAM, or OCI compartments] to strictly control who can read, update, or rotate secrets.
+   - Use [AWS IAM policies](https://aws.amazon.com/iam/features/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM](https://cloud.google.com/iam/docs/overview), [OCI compartments](https://www.oracle.com/cloud/free/oci-training/) to strictly control who can read, update, or rotate secrets.
    - Reference [NCSC’s least-privilege principle for secret operations](https://www.ncsc.gov.uk/).
 
 1. **Combine with Role-Based Authentication**
 
    - Shift away from credential-based if possible, using ephemeral roles or instance-based authentication for certain services:
-     - e.g., [AWS STS assume-role approach, Azure Managed Identities, GCP service account short-lived tokens, OCI dynamic groups/tokens](https://TODO).
+     - e.g., [AWS STS assume-role approach](https://aws.amazon.com/iam/features/sts/), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP service account short-lived tokens](https://cloud.google.com/iam/docs/service-accounts), [OCI dynamic groups/tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Monitor for Stale or Unused Secrets**
    - Regularly check your secret store for credentials not accessed in a while or older than a certain rotation threshold:
@@ -183,7 +183,7 @@ Below are **rapidly actionable** ways to improve your mTLS-based authentication 
 1. **Short-Lived Certificates**
 
    - Automate certificate issuance and renewal:
-     - e.g., [AWS Private CA with automated renewal, Azure Key Vault certificates, GCP Certificate Authority Service, OCI Certificates service](https://TODO).
+     - e.g., [AWS Private CA with automated renewal](https://aws.amazon.com/privateca/), [Azure Key Vault certificates](https://learn.microsoft.com/en-us/azure/key-vault/certificates/about-certificates), [GCP Certificate Authority Service](https://cloud.google.com/certificate-authority-service), [OCI Certificates service](https://www.oracle.com/cloud/free/oci-training/).
    - Minimizes risk if a certificate is compromised.
 
 1. **Adopt a Service Mesh**
@@ -198,7 +198,7 @@ Below are **rapidly actionable** ways to improve your mTLS-based authentication 
 1. **Monitor for Expiry and Potential Compromises**
 
    - Track certificate expiry dates, set alerts well in advance.
-   - Log all handshake errors in [AWS CloudWatch, Azure Monitor, GCP Logging, OCI Logging](https://TODO) to detect potential mismatches or malicious attempts.
+   - Log all handshake errors in [AWS CloudWatch](https://aws.amazon.com/cloudwatch/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [GCP Logging](https://cloud.google.com/logging), [OCI Logging](https://www.oracle.com/cloud/free/oci-training/) to detect potential mismatches or malicious attempts.
 
 1. **Combine with IAM for Additional Controls**
    - For advanced zero-trust, complement mTLS with role-based or token-based checks:
@@ -244,7 +244,7 @@ Even at this top level, below are **rapidly actionable** refinements:
 1. **Continuously Audit and Analyze Logs**
 
    - Check usage patterns: any suspicious repeated token fetch or abnormal expansions of privileges.
-   - Tools like [AWS CloudWatch Logs, Azure Monitor, GCP Logging, or OCI Monitoring + ML-based anomaly detection](https://TODO) can highlight anomalies.
+   - Tools like [AWS CloudWatch Logs](https://aws.amazon.com/cloudwatch/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [GCP Logging](https://cloud.google.com/logging), [OCI Monitoring + ML-based anomaly detection](https://www.oracle.com/cloud/free/oci-training/) can highlight anomalies.
 
 1. **Cross-Government Federated Services**
    - If multiple agencies need to collaborate, explore cross-government single sign-on or identity federation solutions that comply with [GOV.UK’s identity and digital standards](https://www.gov.uk/service-manual).

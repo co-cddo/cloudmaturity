@@ -31,7 +31,7 @@ Below are **rapidly actionable** steps to move beyond isolated identity manageme
 1. **Create a Basic Directory or SSO Pilot**
 
    - For new services, define a single user store or IDP:
-     - e.g., [AWS Directory Service or AWS SSO, Azure AD, GCP Identity, OCI IDCS](https://TODO).
+     - e.g., [AWS Directory Service or AWS SSO](https://aws.amazon.com/directoryservice/), [Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whatis), [GCP Identity](https://cloud.google.com/identity/docs/overview), or [OCI IDCS](https://www.oracle.com/cloud/free/oci-training/).
    - Minimizes further fragmentation for new apps.
 
 1. **Maintain a Simple User Inventory**
@@ -78,7 +78,7 @@ Below are **rapidly actionable** steps to further unify your basic centralized i
 1. **Mandate SSO for New Services**
 
    - All future cloud apps must integrate with your central ID system (SAML, OIDC, etc.).
-   - [AWS SSO, Azure AD App Registrations, GCP Identity Federation, OCI IDCS integrations](https://TODO).
+   - [AWS SSO](https://aws.amazon.com/sso/), [Azure AD App Registrations](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app), [GCP Identity Federation](https://cloud.google.com/identity/docs/overview), or [OCI IDCS integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Target Legacy Systems**
 
@@ -88,7 +88,7 @@ Below are **rapidly actionable** steps to further unify your basic centralized i
 1. **Introduce Periodic Role or Access Reviews**
 
    - Ensure the centralized identity system is coupled with a simple process for managers to confirm staff roles:
-     - referencing [AWS IAM Access Analyzer, Azure AD Access Reviews, GCP IAM Recommender, or OCI IAM policy checks](https://TODO).
+     - referencing [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [Azure AD Access Reviews](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP IAM Recommender](https://cloud.google.com/iam/docs/access-reviews), or [OCI IAM policy checks](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Extend MFA Requirements**
 
@@ -131,7 +131,7 @@ Below are **rapidly actionable** ways to incorporate the last few outliers:
 1. **Plan Legacy Replacement or Integration**
 
    - For each separate system, define a short project to incorporate them with SAML, OIDC, or SCIM:
-     - e.g., [Azure AD integration for older apps, AWS SSO bridging, GCP Identity front-end with IAP or custom IAM integration, OCI IDCS bridging](https://TODO).
+     - e.g., [Azure AD integration for older apps](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/tutorial-list), [AWS SSO bridging](https://aws.amazon.com/sso/), [GCP Identity front-end with IAP or custom IAM integration](https://cloud.google.com/identity/docs/overview), or [OCI IDCS bridging](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enhance Monitoring on Exceptions**
 
@@ -175,11 +175,11 @@ Below are **rapidly actionable** ways to enhance advanced integrated identity ma
 1. **Explore Zero-Trust or Risk-Adaptive Auth**
 
    - If a user tries to access a high-risk service from an unknown location or device, require step-up authentication:
-     - e.g., [Azure AD Conditional Access with risk-based sign-ins, AWS SSO with conditional logic, GCP Access Context Manager, OCI adaptive authentication features](https://TODO).
+     - e.g., [Azure AD Conditional Access with risk-based sign-ins](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [AWS SSO with conditional logic](https://aws.amazon.com/sso/), [GCP Access Context Manager](https://cloud.google.com/access-context-manager/docs/overview), or [OCI adaptive authentication features](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt Policy-as-Code for Identity**
 
-   - Use [Open Policy Agent or vendor-based solutions (e.g., AWS Organizations SCP, Azure Policy, GCP Org Policy, OCI Security Zones)](https://TODO) to define identity and resource controls in code for versioning and traceability.
+   - Use [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions (e.g., [AWS Organizations SCP](https://aws.amazon.com/organizations/features/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define identity and resource controls in code for versioning and traceability.
 
 1. **Enable Fine-Grained Roles and Minimal Privileges**
 
@@ -225,7 +225,7 @@ Below are **rapidly actionable** ways to refine a mandatory single source of ide
 1. **Implement Risk-Adaptive Authentication**
 
    - Combine the single identity with dynamic checks (like device compliance, location, or time) to apply additional verifications if risk is high:
-     - e.g., [Azure AD Identity Protection, AWS Cognito adaptive auth, GCP Identity-Aware Proxy, OCI adaptive authentication](https://TODO).
+     - e.g., [Azure AD Identity Protection](https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection), [AWS Cognito adaptive auth](https://aws.amazon.com/cognito/features/), [GCP Identity-Aware Proxy](https://cloud.google.com/identity-aware-proxy/docs/overview), or [OCI adaptive authentication](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Extend Identity to Multi-Cloud**
 
@@ -244,7 +244,7 @@ Below are **rapidly actionable** ways to refine a mandatory single source of ide
 
 1. **Continuously Review and Audit**
    - Maintain monthly or quarterly audits ensuring no system bypasses the single identity policy.
-   - Tools like [Azure AD application listing, AWS Organizations integration, GCP Organization-level IAM policy, OCI compartments integration](https://TODO) can detect any outliers.
+   - Tools like [Azure AD application listing](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app), [AWS Organizations integration](https://aws.amazon.com/organizations/features/), [GCP Organization-level IAM policy](https://cloud.google.com/iam/docs/organization-policy), or [OCI compartments integration](https://www.oracle.com/cloud/free/oci-training/) can detect any outliers.
 
 By adopting risk-based auth, ensuring multi-cloud identity unification, deploying passwordless approaches, collaborating with cross-government identity programs, and regularly auditing for compliance with the mandatory single source policy, you reinforce a top-tier security stance. This guarantees minimal identity sprawl and maximum accountability in the UK public sector environment.
 

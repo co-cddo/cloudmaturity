@@ -35,12 +35,12 @@ Below are **rapidly actionable** steps to handle unmanaged dependencies more saf
 
 1. **Begin Generating Simple SBOM**
 
-   - Tools like [Syft, CycloneDX CLI, or OWASP Dependency-Check](https://TODO) can produce a rudimentary SBOM from your current dependencies.
+   - Tools like [Syft](https://github.com/anchore/syft), [CycloneDX CLI](https://github.com/CycloneDX/cyclonedx-cli), or [OWASP Dependency-Check](https://github.com/jeremylong/DependencyCheck) can produce a rudimentary SBOM from your current dependencies.
    - This helps you see what libraries you’re actually using.
 
 1. **Enable Automatic or Regular Patch Checks**
 
-   - For OS packages, configure [AWS Systems Manager Patch Manager, Azure Automation Update Management, GCP OS Patch Management, OCI OS Management Service](https://TODO) if you’re running cloud-based VMs.
+   - For OS packages, configure [AWS Systems Manager Patch Manager](https://aws.amazon.com/systems-manager/features/), [Azure Automation Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview), [GCP OS Patch Management](https://cloud.google.com/os-patch-management/docs/overview), or [OCI OS Management Service](https://www.oracle.com/cloud/free/oci-training/) if you’re running cloud-based VMs.
 
 1. **Document a Basic Update Policy**
 
@@ -78,22 +78,22 @@ Below are **rapidly actionable** ways to strengthen basic dependency management:
 1. **Automate Regular Dependency Scans**
 
    - Integrate scanners into CI pipelines:
-     - e.g., [GitHub Dependabot, GitLab Dependency Scanning, Azure DevOps Security scanners, AWS CodeGuru Security, or 3rd-party solutions like Snyk or Sonatype Nexus](https://TODO).
+     - e.g., [GitHub Dependabot](https://docs.github.com/en/code-security/dependabot), [GitLab Dependency Scanning](https://docs.gitlab.com/ee/user/application_security/dependency_scanning/), [Azure DevOps Security scanners](https://learn.microsoft.com/en-us/azure/devops/security/overview), [AWS CodeGuru Security](https://aws.amazon.com/codeguru/security/), or 3rd-party solutions like [Snyk](https://snyk.io/) or [Sonatype Nexus](https://www.sonatype.com/nexus-repository-oss).
 
-1. **Define a Scheduled Update Policy**
+2. **Define a Scheduled Update Policy**
 
    - e.g., monthly or bi-weekly updates for critical libraries, referencing [NCSC’s patch management recommendations](https://www.ncsc.gov.uk/).
 
-1. **Maintain SBOM or Lock Files**
+3. **Maintain SBOM or Lock Files**
 
    - Ensure each repo has a "lock file" or a manifest. Also, consider generating SBOM data (CycloneDX, SPDX) for compliance:
      - Aligns with [NIST supply chain security guidance on EO 14028](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity).
 
-1. **Enable Alerting for Known Vulnerabilities**
+4. **Enable Alerting for Known Vulnerabilities**
 
-   - e.g., [AWS Security Hub or Lambda scanning solutions, Azure Security Center with container scanning, GCP Container Analysis, OCI Vulnerability Scanning](https://TODO) if container-based.
+   - e.g., [AWS Security Hub or Lambda scanning solutions](https://aws.amazon.com/security-hub/), [Azure Security Center with container scanning](https://learn.microsoft.com/en-us/azure/security-center/security-center-introduction), [GCP Container Analysis](https://cloud.google.com/container-analysis/docs/overview), or [OCI Vulnerability Scanning](https://www.oracle.com/cloud/free/oci-training/) if container-based.
 
-1. **Document Emergency Patching**
+5. **Document Emergency Patching**
    - Formalize an approach for urgent CVE patching outside major releases.
    - Minimizes ad-hoc panic when a high severity bug appears.
 
@@ -130,7 +130,7 @@ Below are **rapidly actionable** ways to strengthen proactive repository remedia
 1. **Adopt Container and OS Package Scanning**
 
    - If using Docker images or base OS packages, incorporate scanning in your CI/CD:
-     - [AWS ECR image scanning, Azure Container Registry scanning, GCP Container Analysis, OCI Vulnerability Scanning Service](https://TODO).
+     - [AWS ECR image scanning](https://aws.amazon.com/ecr/features/), [Azure Container Registry scanning](https://learn.microsoft.com/en-us/azure/container-registry/container-registry-image-scanning), [GCP Container Analysis](https://cloud.google.com/container-analysis/docs/overview), or [OCI Vulnerability Scanning Service](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Refine Automated Testing**
 
@@ -173,7 +173,7 @@ Below are **rapidly actionable** ways to refine centralized, context-aware triag
 1. **Add Real-Time Threat Intelligence**
 
    - Integrate intel feeds that highlight newly discovered exploits targeting specific libraries:
-     - e.g., [AWS Security Hub or Amazon Inspector with threat intel, Azure Defender’s threat DB, GCP threat intelligence, OCI security advisories](https://TODO).
+     - e.g., [AWS Security Hub or Amazon Inspector with threat intel](https://aws.amazon.com/security-hub/), [Azure Defender’s threat DB](https://learn.microsoft.com/en-us/azure/defender-for-cloud/threat-intelligence), [GCP threat intelligence](https://cloud.google.com/threat-intelligence), or [OCI security advisories](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Automate Contextual Analysis**
 
@@ -219,7 +219,7 @@ Below are **rapidly actionable** ways to refine advanced, integrated supply chai
 
 1. **Implement Automated Policy-as-Code**
 
-   - e.g., [Open Policy Agent (OPA) in CI/CD or vendor-based tools (AWS Service Control Policies, Azure Policy, GCP Org Policy, OCI Security Zones)](https://TODO) to enforce code scanning at pipeline gates.
+   - e.g., [Open Policy Agent (OPA) in CI/CD](https://www.openpolicyagent.org/docs/latest/how-to-guides/opa-in-ci-cd/) or vendor-based tools ([AWS Service Control](https://aws.amazon.com/service-control/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)).
 
 1. **Extend SBOM Generation & Validation**
 
@@ -230,7 +230,7 @@ Below are **rapidly actionable** ways to refine advanced, integrated supply chai
 1. **Adopt Multi-Factor Scanning**
 
    - Combine static code analysis, dependency scanning, container image scanning, and runtime threat detection:
-     - e.g., [AWS CodeGuru Security + ECR scanning, Azure DevOps SAST + Container Registry scans, GCP Cloud Build with Container Analysis + Snyk, OCI Vulnerability Scanning + DevOps scanning integrations](https://TODO).
+     - e.g., [AWS CodeGuru Security + ECR scanning](https://aws.amazon.com/codeguru/security/), [Azure DevOps SAST + Container Registry scans](https://learn.microsoft.com/en-us/azure/devops/security/overview), [GCP Cloud Build with Container Analysis + Snyk](https://cloud.google.com/container-analysis/docs/overview), or [OCI Vulnerability Scanning + DevOps scanning integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Coordinate with Supplier/Partner Security**
 

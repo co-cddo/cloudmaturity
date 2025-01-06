@@ -245,10 +245,10 @@ Implementing these policies ensures that resources are deployed in regions with 
 
    - Extend sustainability beyond compute:
      - **Automate data retention**: Move older data to cooler or archive storage for lower energy usage:
-       - [AWS S3 Lifecycle Policies](https://TODO)
-       - [Azure Blob Lifecycle Management](https://TODO)
-       - [GCP Storage Lifecycle Policies](https://TODO)
-       - [OCI Object Storage Lifecycle Policies](https://TODO)
+       - [AWS S3 Lifecycle Policies](https://aws.amazon.com/s3/lifecycle/)
+       - [Azure Blob Lifecycle Management](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure)
+       - [GCP Storage Lifecycle Policies](https://cloud.google.com/storage/docs/lifecycle)
+       - [OCI Object Storage Lifecycle Policies](https://www.oracle.com/cloud/free/oci-training/)
      - **Review ephemeral development**: Ensure test environments are automatically cleaned after a set period.
 
 1. **Use Vendor-Specific Sustainability Advisors**

@@ -38,10 +38,10 @@ Below are **rapidly actionable** steps to introduce basic measurements and reduc
 1. **Automate Basic Steps**
 
    - If you’re manually building code, add a script or minimal pipeline:
-     - [AWS CodeBuild or a simple Jenkins job to compile and package the application](https://TODO)
-     - [Azure DevOps Pipelines or GitHub Actions for automated builds of .NET/Java/Node.js apps](https://TODO)
-     - [GCP Cloud Build to package containers or run test scripts automatically](https://TODO)
-     - [OCI DevOps build pipelines for straightforward build tasks in Oracle Cloud environments](https://TODO)
+     - [AWS CodeBuild or a simple Jenkins job to compile and package the application](https://docs.aws.amazon.com/codebuild/latest/userguide/jenkins-plugin.html)
+     - [Azure DevOps Pipelines or GitHub Actions for automated builds of .NET/Java/Node.js apps](https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-pipelines&tabs=yaml)
+     - [GCP Cloud Build to package containers or run test scripts automatically](https://cloud.google.com/build/docs/configuring-builds/create-basic-configuration)
+     - [OCI DevOps build pipelines for straightforward build tasks in Oracle Cloud environments](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
 1. **Adopt a Central Version Control System**
 
@@ -86,10 +86,10 @@ Below are **rapidly actionable** ways to reduce delays and evolve your tracking:
 1. **Automate Testing**
 
    - Expand beyond a simple build script, adding automated tests (unit, integration):
-     - [AWS CodeBuild or AWS CodePipeline with unit test steps using tools like JUnit, NUnit, or PyTest](https://TODO)
-     - [Azure DevOps Pipelines or GitHub Actions to run your chosen language’s test frameworks automatically](https://TODO)
-     - [GCP Cloud Build with integrated testing steps or Tekton-based pipelines for containerized workflows](https://TODO)
-     - [OCI DevOps pipeline steps for automated testing before artifact promotion](https://TODO)
+     - [AWS CodeBuild or AWS CodePipeline with unit test steps using tools like JUnit, NUnit, or PyTest](https://aws.amazon.com/blogs/devops/test-reports-with-aws-codebuild/)
+     - [Azure DevOps Pipelines or GitHub Actions to run your chosen language’s test frameworks automatically](https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-pipelines&tabs=yaml)
+     - [GCP Cloud Build with integrated testing steps or Tekton-based pipelines for containerized workflows](https://cloud.google.com/build/docs/configuring-builds/create-basic-configuration)
+     - [OCI DevOps pipeline steps for automated testing before artifact promotion](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
 1. **Streamline Approvals**
 
@@ -145,21 +145,21 @@ Below are **rapidly actionable** ways to enhance your moderate efficiency:
    - Implement dashboards or Slack/Teams notifications for every build/deployment, capturing:
      - Duration, pass/fail status, and any QA feedback.
      - Tools:
-       - [AWS: Amazon CloudWatch, AWS CodeBuild/CodePipeline notifications, or a custom Slack integration](https://TODO)
-       - [Azure DevOps Dashboards, or GitHub Actions with webhooks for real-time alerts](https://TODO)
-       - [GCP: Cloud Logging or Pub/Sub-based triggers that notify on certain pipeline events](https://TODO)
-       - [OCI DevOps pipeline notifications, integrated with email or Slack-like channels](https://TODO)
+       - [AWS: Amazon CloudWatch, AWS CodeBuild/CodePipeline notifications, or a custom Slack integration](https://aws.amazon.com/blogs/devops/receive-aws-developer-tools-notifications-over-slack-using-aws-chatbot/)
+       - [Azure DevOps Dashboards, or GitHub Actions with webhooks for real-time alerts](https://learn.microsoft.com/en-us/azure/devops/pipelines/integrations/slack?view=azure-devops)
+       - [GCP: Cloud Logging or Pub/Sub-based triggers that notify on certain pipeline events](https://cloud.google.com/logging/docs/agent/installation)
+       - [OCI DevOps pipeline notifications, integrated with email or Slack-like channels](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
 1. **Optimize Build and Test Steps**
 
    - Identify any overly long test suites or build tasks:
      - e.g., parallelize tests or use caching to skip redundant steps.
-   - Tools like [AWS CodeBuild caching](https://TODO), [Azure Pipeline caching](https://TODO), or [GCP Cloud Build caching](https://TODO) can accelerate repeat builds.
+   - Tools like [AWS CodeBuild caching](https://docs.aws.amazon.com/codebuild/latest/userguide/build-caching.html), [Azure Pipeline caching](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/caching?view=azure-devops), or [GCP Cloud Build caching](https://cloud.google.com/build/docs/configuring-builds/build-caching) can accelerate repeat builds.
 
 1. **Adopt Infrastructure as Code (IaC)**
 
    - If you manage infrastructure changes manually, incorporate IaC to reduce environment setup delays:
-     - [AWS CloudFormation, Azure Bicep, GCP Deployment Manager, or Terraform for multi-cloud solutions](https://TODO)
+     - [AWS CloudFormation](https://docs.aws.amazon.com/cloudformation/index.html), [Azure Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/), [GCP Deployment Manager](https://cloud.google.com/deployment-manager), or [Terraform](https://www.terraform.io/) for multi-cloud solutions.
    - This ensures consistent provisioning for test and production environments.
 
 1. **Implement Rolling or Blue/Green Deployments**
@@ -206,28 +206,28 @@ Below are **rapidly actionable** ways to optimize an already streamlined process
 1. **Expand Shift-Left Testing and Security**
 
    - Integrate early security scanning, code quality checks, and performance tests into your pipeline:
-     - [AWS CodeGuru or Amazon Inspector hooking into CodePipeline to detect issues pre-deployment](https://TODO)
-     - [Azure DevOps or GitHub Advanced Security scanning code for vulnerabilities in each pull request](https://TODO)
-     - [GCP Cloud Build with embedded SAST or container vulnerability scanning before rolling out](https://TODO)
-     - [OCI DevOps pipeline steps for vulnerability scanning or compliance checks on container images](https://TODO)
+     - [AWS CodeGuru or Amazon Inspector hooking into CodePipeline to detect issues pre-deployment](https://docs.aws.amazon.com/codeguru/latest/security-ug/get-started-codepipeline.html)
+     - [Azure DevOps or GitHub Advanced Security scanning code for vulnerabilities in each pull request](https://learn.microsoft.com/en-us/azure/devops/repos/security/github-advanced-security-code-scanning?view=azure-devops)
+     - [GCP Cloud Build with embedded SAST or container vulnerability scanning before rolling out](https://cloud.google.com/build/docs/configuring-builds/create-basic-configuration)
+     - [OCI DevOps pipeline steps for vulnerability scanning or compliance checks on container images](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
-1. **Add Automated Rollback or Canary Analysis**
+2. **Add Automated Rollback or Canary Analysis**
 
    - If a new release fails performance or user acceptance checks, revert automatically:
-     - e.g., using canary deployments with [AWS AppConfig or Azure App Service Deployment Slots or GCP Cloud Run revisions, etc.](https://TODO)
+     - e.g., using canary deployments with [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) or [Azure App Service Deployment Slots](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/deployment-slots) or [GCP Cloud Run revisions](https://cloud.google.com/run/docs/deploying/revisions)
 
-1. **Adopt Feature Flags**
+3. **Adopt Feature Flags**
 
    - Further speed up deployment by decoupling feature rollout from the actual code release:
      - This allows partial or user-segmented rollouts, improving feedback loops.
 
-1. **Implement Detailed Pipeline Telemetry**
+4. **Implement Detailed Pipeline Telemetry**
 
    - If you only track overall build/deploy times, gather finer metrics:
      - Time spent in unit tests vs. integration tests, container image builds vs. scanning, environment creation vs. final validations.
    - These insights highlight your next optimization targets.
 
-1. **Formalize Continuous Improvement**
+5. **Formalize Continuous Improvement**
    - Host regular pipeline reviews or "build engineering" sprints.
    - Evaluate changes in build times, error rates, or frequency of hotfixes. Use these insights to plan enhancements.
 
@@ -270,9 +270,9 @@ Below are **rapidly actionable** ways to refine a near-optimal pipeline:
 1. **Expand Multi-Stage Testing and Observability**
 
    - Integrate performance, load, and chaos testing into your pipeline:
-     - [AWS Fault Injection Simulator or Azure Chaos Studio for resilience tests automatically triggered in your pipeline after staging deploys](https://TODO)
-     - [GCP can use chaos engineering frameworks in Cloud Build triggers, or custom steps for load tests in staging environments](https://TODO)
-     - [OCI can incorporate chaos testing scripts in DevOps pipelines for reliability checks pre-production](https://TODO)
+     - [AWS Fault Injection Simulator](https://aws.amazon.com/fis/) or [Azure Chaos Studio](https://azure.microsoft.com/en-us/services/chaos-studio/) for resilience tests automatically triggered in your pipeline after staging deploys
+     - [GCP can use chaos engineering frameworks in Cloud Build triggers, or custom steps for load tests in staging environments](https://cloud.google.com/build/docs/configuring-builds/create-basic-configuration)
+     - [OCI can incorporate chaos testing scripts in DevOps pipelines for reliability checks pre-production](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
 1. **Share Expertise Across Agencies**
 

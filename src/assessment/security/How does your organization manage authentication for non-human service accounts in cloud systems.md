@@ -31,7 +31,7 @@ Below are **rapidly actionable** steps to move beyond human-like accounts for se
 1. **Introduce Role-Based Service Accounts**
 
    - Use the cloud provider’s native service account or role concept:
-     - [AWS IAM roles for EC2 or ECS tasks, Azure Managed Identities, GCP Service Accounts, OCI Dynamic Groups](https://TODO)
+     - [AWS IAM roles for EC2 or ECS tasks](https://aws.amazon.com/iam/features/), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Service Accounts](https://cloud.google.com/iam/docs/service-accounts), [OCI Dynamic Groups](https://www.oracle.com/cloud/free/oci-training/)
    - Avoid user/password-based approaches.
 
 1. **Limit Shared Credentials**
@@ -78,18 +78,18 @@ Below are **rapidly actionable** steps to centralize and secure long-lived API k
 
 1. **Move Keys to a Central Secret Store**
 
-   - e.g., [AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, OCI Vault](https://TODO) for storing all API keys.
+   - e.g., [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview), [GCP Secret Manager](https://cloud.google.com/secret-manager/docs/overview), [OCI Vault](https://www.oracle.com/cloud/free/oci-training/) for storing all API keys.
    - Minimizes local sprawl and fosters consistent security controls.
 
 1. **Enforce Rotation Policies**
 
    - Implement at least quarterly or monthly rotation for API keys to reduce exposure window if compromised:
-     - Possibly automate via [AWS Lambda, Azure Functions, GCP Cloud Functions, or OCI functions](https://TODO).
+     - Possibly automate via [AWS Lambda](https://aws.amazon.com/lambda/), [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview), [GCP Cloud Functions](https://cloud.google.com/functions/docs/concepts/overview), or [OCI functions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Use Tooling for Local Key Discovery**
 
    - If keys might be in code repos, scan with open-source or vendor tools:
-     - e.g., [Trufflehog, Gitleaks, AWS CodeGuru Security, or Azure DevOps Security scanning](https://TODO).
+     - e.g., [Trufflehog](https://github.com/trufflesecurity/trufflehog), [Gitleaks](https://github.com/gitleaks/gitleaks), [AWS CodeGuru Security](https://aws.amazon.com/codeguru/security/), or [Azure DevOps Security scanning](https://learn.microsoft.com/en-us/azure/devops/security/overview/security-scanning).
    - Alert if secrets are committed to version control.
 
 1. **Document a Single Organizational Policy**
@@ -131,12 +131,12 @@ Below are **rapidly actionable** ways to strengthen your centralized secret stor
 1. **Automate Secret Rotation**
 
    - For each stored secret (e.g., a database password, a service’s API key), implement rotation:
-     - [AWS Secrets Manager rotation, Azure Key Vault rotation, GCP Secret Manager rotation, or OCI Vault rotation features](https://TODO).
+     - [AWS Secrets Manager rotation](https://aws.amazon.com/secrets-manager/), [Azure Key Vault rotation](https://learn.microsoft.com/en-us/azure/key-vault/general/rotate-keys), [GCP Secret Manager rotation](https://cloud.google.com/secret-manager/docs/rotation), or [OCI Vault rotation features](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Incorporate Access Control & Monitoring**
 
    - Strictly limit who can retrieve or update each secret, using fine-grained IAM or RBAC:
-     - e.g., [AWS IAM policies, Azure Key Vault RBAC, GCP Secret Manager IAM, OCI compartments/policies](https://TODO).
+     - e.g., [AWS IAM policies](https://aws.amazon.com/iam/features/), [Azure Key Vault RBAC](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide), [GCP Secret Manager IAM](https://cloud.google.com/secret-manager/docs/iam), or [OCI compartments/policies](https://www.oracle.com/cloud/free/oci-training/).
    - Monitor logs for unusual access patterns.
 
 1. **Reference a "Secret Lifecycle" Document**
@@ -150,7 +150,7 @@ Below are **rapidly actionable** ways to strengthen your centralized secret stor
 
 1. **Begin Adopting Ephemeral Credentials**
    - For new services, consider short-lived tokens or dynamic role assumption, stepping away from even stored secrets:
-     - e.g., [AWS STS, Azure Managed Identity tokens, GCP workload identity pools, OCI dynamic groups/tokens](https://TODO).
+     - e.g., [AWS STS](https://aws.amazon.com/sts/), [Azure Managed Identity tokens](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP workload identity pools](https://cloud.google.com/iam/docs/workload-identity-federation), or [OCI dynamic groups/tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 By automating secret rotation, refining access controls, documenting a secret lifecycle, hooking the store into CI/CD, and planning ephemeral credentials for new services, you build on your strong foundation of centralized secret usage to minimize risk further.
 
@@ -166,7 +166,7 @@ Your organization has moved beyond static credentials, using ephemeral tokens or
 
 1. **Cloud-Native Security**
 
-   - You heavily rely on [AWS instance profiles, Azure Managed Identities, GCP Service Account tokens, OCI dynamic groups + instance principals](https://TODO) to authenticate workloads.
+   - You heavily rely on [AWS instance profiles](https://aws.amazon.com/iam/features/), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Service Account tokens](https://cloud.google.com/iam/docs/service-accounts), or [OCI dynamic groups + instance principals](https://www.oracle.com/cloud/free/oci-training/) to authenticate workloads.
 
 1. **Robust Automation**
    - The pipeline or infrastructure automatically provisions ephemeral credentials, referencing [NCSC and NIST recommended ephemeral identity flows](https://www.ncsc.gov.uk/).
@@ -180,16 +180,16 @@ Below are **rapidly actionable** improvements to further secure ephemeral identi
 1. **Embed Short-Lived Tokens in CI/CD**
 
    - For instance, dev and build systems can assume roles or fetch tokens just-in-time:
-     - e.g., [AWS STS for container builds, Azure DevOps with Managed Identities, GCP Cloud Build using short-lived service account tokens, OCI DevOps ephemeral tokens](https://TODO).
+     - e.g., [AWS STS for container builds](https://aws.amazon.com/sts/), [Azure DevOps with Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Cloud Build using short-lived service account tokens](https://cloud.google.com/iam/docs/service-accounts), or [OCI DevOps ephemeral tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt Service Mesh or mTLS**
 
-   - If you have container/microservice architectures, combine ephemeral identity with [Istio, AWS App Mesh, Azure Service Fabric, GCP Anthos Service Mesh, OCI OKE with a mesh add-on](https://TODO) for strong mutual TLS:
+   - If you have container/microservice architectures, combine ephemeral identity with [Istio](https://istio.io/), [AWS App Mesh](https://aws.amazon.com/app-mesh/), [Azure Service Fabric](https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-overview), [GCP Anthos Service Mesh](https://cloud.google.com/anthos/service-mesh), or [OCI OKE with a mesh add-on](https://www.oracle.com/cloud/free/oci-training/) for strong mutual TLS:
      - Further ensures identities are validated end-to-end.
 
 1. **Leverage Policy-as-Code**
 
-   - e.g., [Open Policy Agent (OPA) or vendor-based policy solutions (AWS Organizations SCP, Azure Policy, GCP Org Policy, OCI Security Zones)](https://TODO) for dynamic authorization checks:
+   - e.g., [Open Policy Agent (OPA)](https://www.openpolicyagent.org/) or vendor-based policy solutions ([AWS Organizations SCP](https://aws.amazon.com/organizations/features/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) for dynamic authorization checks:
      - Grant ephemeral credentials only if a container or instance meets certain attestation criteria.
 
 1. **Regularly Audit Attestation Mechanisms**
@@ -241,7 +241,7 @@ Below are **rapidly actionable** ways to enhance code-managed identities with fe
 1. **Implement Zero-Trust Microsegmentation**
 
    - Each microservice identity obtains ephemeral credentials from a central authority:
-     - e.g., [HashiCorp Vault with dynamic secrets, AWS STS with short-lived tokens, Azure Managed Identities with per-service tokens, GCP Workload Identity Federation, OCI dynamic group tokens](https://TODO).
+     - e.g., [HashiCorp Vault with dynamic secrets](https://www.hashicorp.com/products/vault), [AWS STS with short-lived tokens](https://aws.amazon.com/sts/), [Azure Managed Identities with per-service tokens](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation), or [OCI dynamic group tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Expand to Multi-Cloud/Hybrid**
 
@@ -250,7 +250,7 @@ Below are **rapidly actionable** ways to enhance code-managed identities with fe
 
 1. **Regularly Validate & Audit**
    - Implement automated "drift detection" to confirm the code matches deployed reality, ensuring no manual overrides exist.
-   - Tools like [Terraform Cloud, AWS Config, Azure Resource Graph, GCP Config Controller, OCI resource search + CI/CD checks](https://TODO) can help.
+   - Tools like [Terraform Cloud](https://www.terraform.io/cloud), [AWS Config](https://aws.amazon.com/config/), [Azure Resource Graph](https://learn.microsoft.com/en-us/azure/azure-resource-graph/overview), [GCP Config Controller](https://cloud.google.com/config-connector/docs/overview), or [OCI resource search + CI/CD checks](https://www.oracle.com/cloud/free/oci-training/) can help.
 
 By employing policy-as-code, adopting DevSecOps scanning in your pipeline, embracing zero-trust microsegmentation, extending code-based identity to multi-cloud/hybrid, and continuously auditing for drift, you perfect a code-centric model that securely and efficiently manages service identities across your entire public sector environment.
 

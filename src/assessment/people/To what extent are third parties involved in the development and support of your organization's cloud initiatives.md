@@ -32,10 +32,10 @@ Below are **rapidly actionable** ways to reduce over-dependence on a single thir
 
    - Designate at least one in-house staff member with admin or break glass rights, ensuring your organization can still operate if the supplier is unavailable.
    - Cloud providers typically support delegated access models:
-     - [AWS Organizations or IAM for multiple accounts](https://TODO)
-     - [Azure RBAC with custom roles to limit or share admin permissions](https://TODO)
-     - [GCP Organization-level IAM to distribute ownership across internal staff](https://TODO)
-     - [OCI IAM compartments and policies for partial or full admin rights](https://TODO)
+     - [AWS Organizations or IAM for multiple accounts](https://aws.amazon.com/organizations/)
+     - [Azure RBAC with custom roles to limit or share admin permissions](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles)
+     - [GCP Organization-level IAM to distribute ownership across internal staff](https://cloud.google.com/iam/docs/organization-policy-management)
+     - [OCI IAM compartments and policies for partial or full admin rights](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Require Transparent Documentation**
 
@@ -54,7 +54,7 @@ Below are **rapidly actionable** ways to reduce over-dependence on a single thir
 
 1. **Begin In-House Skill Development**
    - While outsourcing can remain an option, create a roadmap for building minimal internal cloud literacy:
-     - e.g., sponsor staff to complete fundamental vendor certs or attend free training from [AWS Skill Builder, Azure Learn, GCP Skill Boost, or OCI Free Training](https://TODO).
+     - e.g., sponsor staff to complete fundamental vendor certs or attend free training from [AWS Skill Builder](https://aws.amazon.com/training/skill-builder/), [Azure Learn](https://learn.microsoft.com/en-us/training/), [GCP Skill Boost](https://cloud.google.com/training/free-tier), or [OCI Free Training](https://www.oracle.com/cloud/free/oci-training/).
 
 By retaining critical admin access, demanding thorough documentation, setting rigorous SLAs, auditing access, and growing your internal skill base, you hedge against supplier lock-in or failure and maintain some sovereignty over crucial cloud operations.
 
@@ -84,10 +84,10 @@ Below are **rapidly actionable** improvements:
 1. **Use Granular IAM Permissions**
 
    - Instead of giving suppliers full admin rights, adopt least privilege:
-     - e.g., [AWS IAM roles and permission boundaries, AWS Control Tower for policy governance](https://TODO)
-     - [Azure RBAC with custom roles, Azure Blueprints for multi-subscription security baselines](https://TODO)
-     - [GCP IAM with folder/project-level access, Organization Policy constraints for security controls](https://TODO)
-     - [OCI IAM compartments, tagging, and policy statements limiting scope of supplier access](https://TODO)
+     - e.g., [AWS IAM roles and permission boundaries](https://aws.amazon.com/iam/), [AWS Control Tower for policy governance](https://aws.amazon.com/controltower/)
+     - [Azure RBAC with custom roles](https://learn.microsoft.com/en-us/azure/role-based-access-control/custom-roles), [Azure Blueprints for multi-subscription security baselines](https://learn.microsoft.com/en-us/azure/governance/blueprints/overview)
+     - [GCP IAM with folder/project-level access](https://cloud.google.com/iam/docs/organization-policy-management), [Organization Policy constraints for security controls](https://cloud.google.com/iam/docs/organization-policy-management)
+     - [OCI IAM compartments, tagging, and policy statements limiting scope of supplier access](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Create Supplier-Specific Accounts or Subscriptions**
 
@@ -149,7 +149,7 @@ Below are **rapidly actionable** ways to refine specialized third-party support:
 1. **Enforce Accountability**
 
    - Keep robust logs of every action taken under break-glass credentials, analyzing for anomalies:
-     - [AWS CloudTrail, Azure Monitor, GCP Cloud Logging, OCI Audit, etc. with mandatory MFA for break-glass usage](https://TODO).
+     - [AWS CloudTrail](https://aws.amazon.com/cloudtrail/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/), [GCP Cloud Logging](https://cloud.google.com/logging), [OCI Audit](https://www.oracle.com/cloud/free/oci-training/) with mandatory MFA for break-glass usage.
 
 1. **Periodic Skills Transfer**
    - Let external experts run short workshops, training sessions, or knowledge transfers:
@@ -183,7 +183,7 @@ Below are **rapidly actionable** ways to leverage specialized knowledge further:
 1. **Add Read-Only or Auditor Roles**
 
    - If a supplier needs to see logs or metrics, create limited read-only access:
-     - [AWS IAM "Auditor" roles, Azure "Reader" role, GCP "Viewer" role, OCI "Read-Only" policy for compartments](https://TODO).
+     - [AWS IAM "Auditor" roles](https://aws.amazon.com/iam/), [Azure "Reader" role](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles#reader), [GCP "Viewer" role](https://cloud.google.com/iam/docs/understanding-roles), [OCI "Read-Only" policy for compartments](https://www.oracle.com/cloud/free/oci-training/).
    - This streamlines feedback without giving them admin powers.
 
 1. **Enable Collaborative Architecture Reviews**
@@ -193,7 +193,7 @@ Below are **rapidly actionable** ways to leverage specialized knowledge further:
 
 1. **Request Proactive Security or Cost Analysis**
 
-   - Possibly share cost usage dashboards ([AWS Cost Explorer, Azure Cost Management, GCP Billing, OCI Cost Analysis](https://TODO)) or security posture data so the supplier can offer suggestions.
+   - Possibly share cost usage dashboards ([AWS Cost Explorer](https://aws.amazon.com/cost-explorer/), [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/), [GCP Billing](https://cloud.google.com/billing), [OCI Cost Analysis](https://www.oracle.com/cloud/free/oci-training/)) or security posture data so the supplier can offer suggestions.
 
 1. **Formalize Knowledge Transfer**
 
@@ -231,7 +231,7 @@ Below are **rapidly actionable** ways to refine a minimal/augmentative third-par
 1. **Maintain Partnerships Without Access**
 
    - Keep a list of vetted specialized vendors (e.g., HPC, big data, AI/ML, security) for future on-demand projects:
-     - [AWS HPC Competency or Data Analytics Competency partners, Azure HPC specialized consultancies, GCP ML specialized partners, OCI HPC experts](https://TODO).
+     - [AWS HPC Competency or Data Analytics Competency partners](https://aws.amazon.com/partners/competencies/), [Azure HPC specialized consultancies](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-fast-track-solutions), [GCP ML specialized partners](https://cloud.google.com/partners/specialized-partners), [OCI HPC experts](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Ensure Proper Documentation and Knowledge Transfer**
 

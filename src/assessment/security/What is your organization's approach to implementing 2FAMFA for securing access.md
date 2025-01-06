@@ -30,7 +30,7 @@ Below are **rapidly actionable** steps to move from an "encouraged" MFA model to
 
 1. **Identify Privileged Accounts First**
 
-   - Immediately enforce MFA for admin or root-level users, referencing [AWS IAM MFA on privileged roles, Azure AD MFA on global admins, GCP IAM MFA, OCI IAM MFA](https://TODO).
+   - Immediately enforce MFA for admin or root-level users, referencing [AWS IAM MFA on privileged roles](https://aws.amazon.com/iam/features/mfa), [Azure AD MFA on global admins](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP IAM MFA](https://cloud.google.com/iam/docs/using-mfa), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Educate Staff on Risks**
 
@@ -44,7 +44,7 @@ Below are **rapidly actionable** steps to move from an "encouraged" MFA model to
 
 1. **Publish a Simple Internal FAQ**
 
-   - Outline how to set up [Google Authenticator, Microsoft Authenticator, hardware tokens, or other TOTP apps](https://TODO).
+   - Outline how to set up [Google Authenticator](https://support.google.com/accounts/answer/1066447), [Microsoft Authenticator](https://support.microsoft.com/en-us/microsoft-365/article/microsoft-authenticator-app-faq-80d941b9-333d-4817-936d-bdf4b7b0fdc9), [hardware tokens](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services/recommended-types-of-mfa), or other [TOTP apps](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services/recommended-types-of-mfa#app).
    - Minimizes friction for new adopters.
 
 1. **Plan a Timeline for Mandatory MFA**
@@ -77,12 +77,12 @@ Below are **rapidly actionable** methods to close the enforcement gap:
 
 1. **Enable Enforcement in Cloud IAM**
 
-   - E.g., [AWS IAM or AWS SSO policy to force MFA, Azure AD conditional access "MFA always required," GCP Organization Policy for MFA, OCI IAM policy for mandatory MFA](https://TODO).
+   - E.g., [AWS IAM or AWS SSO policy to force MFA](https://aws.amazon.com/iam/features/mfa), [Azure AD conditional access "MFA always required"](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [GCP Organization Policy for MFA](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI IAM policy for mandatory MFA](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Monitor for Noncompliance**
 
    - Generate monthly or weekly reports on which users still lack MFA:
-     - e.g., [AWS Security Hub or custom queries, Azure AD "Users without MFA" query, GCP Cloud Identity "MFA usage" checks, OCI IAM logging for no-MFA users](https://TODO).
+     - e.g., [AWS Security Hub or custom queries](https://aws.amazon.com/security-hub/), [Azure AD "Users without MFA" query](https://learn.microsoft.com/en-us/azure/active-directory/reports-monitoring/howto-find-mfa-enabled-users-azure-portal), [GCP Cloud Identity "MFA usage" checks](https://cloud.google.com/identity/docs/mfa-usage), or [OCI IAM logging for no-MFA users](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Apply a Hard Deadline**
 
@@ -93,7 +93,7 @@ Below are **rapidly actionable** methods to close the enforcement gap:
    - Provide hardware tokens for staff without suitable smartphones, referencing [FIDO2 or YubiKey-based methods recommended by NCSC or NIST](https://www.ncsc.gov.uk/).
 
 1. **Handle Legacy Systems**
-   - For older apps, implement an SSO or MFA proxy if direct integration isn’t possible, e.g., [Azure App Proxy or GCP IAP, AWS SSO bridging, or OCI integration with IDCS](https://TODO).
+   - For older apps, implement an SSO or MFA proxy if direct integration isn’t possible, e.g., [Azure App Proxy or GCP IAP](https://learn.microsoft.com/en-us/azure/active-directory/app-proxy/), [AWS SSO bridging](https://aws.amazon.com/sso/), or [OCI integration with IDCS](https://www.oracle.com/cloud/free/oci-training/).
 
 By enabling built-in forced MFA, monitoring compliance, communicating a strict cutoff date, supplying alternative authenticators, and bridging older systems with SSO or proxy solutions, you systematically remove any gaps that allow single-factor access.
 
@@ -128,7 +128,7 @@ Below are **rapidly actionable** ways to remove or mitigate the last few excepti
 1. **Risk-Base or Step-Up**
 
    - If certain actions are higher risk (e.g., large data exports), require a second factor again or hardware key.
-   - referencing [Azure Conditional Access, AWS contextual MFA, GCP BeyondCorp enterprise settings, OCI advanced IAM polices](https://TODO).
+   - referencing [Azure Conditional Access](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [AWS contextual MFA](https://aws.amazon.com/iam/features/mfa), [GCP BeyondCorp enterprise settings](https://cloud.google.com/beyondcorp), or [OCI advanced IAM polices](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Consider Device-Focused Security**
 
@@ -138,7 +138,7 @@ Below are **rapidly actionable** ways to remove or mitigate the last few excepti
 1. **Combine with Identity-Centric Security**
 
    - Move from perimeter to identity-based approach if not already, ensuring MFA is central in each request’s trust decision.
-   - referencing [NIST SP 800-207 zero-trust architecture, NCSC guidelines](https://www.ncsc.gov.uk/).
+   - referencing [NIST SP 800-207 zero-trust architecture](https://csrc.nist.gov/), [NCSC guidelines](https://www.ncsc.gov.uk/).
 
 1. **Review & Renew**
    - Periodically re-check each exception’s rationale—some may no longer be valid as technology or policies evolve.
@@ -170,17 +170,17 @@ Below are **rapidly actionable** enhancements:
 
 1. **Adopt FIDO2 or Hardware Security Keys**
 
-   - For highly privileged accounts, consider [YubiKey, Feitian, or other FIDO2-based solutions offering strong phishing resistance](https://TODO).
+   - For highly privileged accounts, consider [YubiKey](https://www.yubico.com/products/yubikey-5-series/), [Feitian](https://www.feitian.com/), or other [FIDO2-based solutions offering strong phishing resistance](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services/recommended-types-of-mfa#app).
 
 1. **Set Up Backup Mechanisms**
 
    - Provide staff a fallback if TOTP or hardware tokens are lost/stolen:
-     - e.g., secure self-service recovery using [AWS SSO with backup codes, Azure AD with alternative verification, GCP Identity fallback factors, OCI IAM backup tokens](https://TODO).
+     - e.g., secure self-service recovery using [AWS SSO with backup codes](https://aws.amazon.com/sso/), [Azure AD with alternative verification](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP Identity fallback factors](https://cloud.google.com/identity/docs/mfa-usage), or [OCI IAM backup tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Integrate Risk-Based Policies**
 
    - If an account attempts to log in from an unusual location, require a higher assurance factor:
-     - referencing [Azure Conditional Access location-based rules, AWS context keys, GCP Access Context Manager, OCI policy conditions](https://TODO).
+     - referencing [Azure Conditional Access location-based rules](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition), [AWS context keys](https://aws.amazon.com/iam/features/mfa), [GCP Access Context Manager](https://cloud.google.com/access-context-manager), or [OCI policy conditions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Consider Device Certificates**
 
@@ -217,7 +217,7 @@ Below are **rapidly actionable** ways to optimize hardware-based MFA:
 1. **Embrace Risk-Based Authentication**
 
    - If unusual attempts occur, force an additional step or token re-validation:
-     - referencing [Azure AD Conditional Access with hardware tokens, AWS context-based policies, GCP identity risk signals, OCI advanced IAM policies](https://TODO).
+     - referencing [Azure AD Conditional Access with hardware tokens](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [AWS context-based policies](https://aws.amazon.com/iam/features/mfa), [GCP identity risk signals](https://cloud.google.com/identity/docs/mfa-usage), or [OCI advanced IAM policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Implement Zero-Trust & Microsegmentation**
 

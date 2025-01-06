@@ -36,10 +36,10 @@ Below are **rapidly actionable** steps to move beyond shared/manual accounts:
 1. **Set Up Basic IAM**
 
    - Use vendor-native identity tools to define unique accounts, e.g.:
-     - [AWS IAM users/roles or AWS SSO for centralized user management](https://TODO)
-     - [Azure AD for custom roles plus Azure Portal user creation, or Azure DevOps user management](https://TODO)
-     - [GCP Cloud Identity for user provisioning, or short-lived tokens with GCP IAM roles](https://TODO)
-     - [OCI IAM compartments/policies with custom user accounts or integration to identity providers](https://TODO)
+     - [AWS IAM users/roles or AWS SSO for centralized user management](https://aws.amazon.com/iam/)
+     - [Azure AD for custom roles plus Azure Portal user creation, or Azure DevOps user management](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory)
+     - [GCP Cloud Identity for user provisioning, or short-lived tokens with GCP IAM roles](https://cloud.google.com/identity)
+     - [OCI IAM compartments/policies with custom user accounts or integration to identity providers](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Document a Minimal Process**
 
@@ -48,7 +48,7 @@ Below are **rapidly actionable** steps to move beyond shared/manual accounts:
 1. **Enable Basic Audit Logging**
 
    - Turn on logs for sign-in or role usage in each cloud environment:
-     - [AWS CloudTrail, Azure Activity Log, GCP Cloud Logging, OCI Audit Log](https://TODO).
+     - [AWS CloudTrail, Azure Activity Log, GCP Cloud Logging, OCI Audit Log](https://aws.amazon.com/cloudtrail/)
    - Identifies who does what in the system.
 
 1. **Move to a Single Sign-On Approach**
@@ -82,7 +82,7 @@ Below are **rapidly actionable** steps to unify and automate your on-prem identi
 
 1. **Enable Federation or SSO**
 
-   - e.g., [AWS Directory Service + AD trust, Azure AD Connect, GCP Cloud Identity Sync, OCI Identity Federation with AD/LDAP](https://TODO):
+   - e.g., [AWS Directory Service + AD trust](https://aws.amazon.com/directoryservice/), [Azure AD Connect](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect), [GCP Cloud Identity Sync](https://cloud.google.com/identity/docs/sync), [OCI Identity Federation with AD/LDAP](https://www.oracle.com/cloud/free/oci-training/):
    - Minimizes manual user creation in each cloud service.
 
 1. **Deploy Basic Automation Scripts**
@@ -133,12 +133,12 @@ Below are **rapidly actionable** ways to refine standard identity management:
 1. **Require SSO or Federation for All Services**
 
    - For new cloud apps, mandate SAML/OIDC/SCIM compliance:
-     - e.g., [AWS SSO integration, Azure AD enterprise apps, GCP Identity-Aware Proxy, OCI IDCS federation](https://TODO).
+     - e.g., [AWS SSO integration](https://aws.amazon.com/sso/), [Azure AD enterprise apps](https://learn.microsoft.com/en-us/azure/active-directory/manage-apps/manage-app-portal), [GCP Identity-Aware Proxy](https://cloud.google.com/identity-aware-proxy), [OCI IDCS federation](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Implement Access Workflows**
 
    - Use built-in or third-party approval workflows:
-     - e.g., [Azure AD Privileged Identity Management, AWS SSO access request workflows, GCP Identity Groups, OCI workflow integrations](https://TODO).
+     - e.g., [Azure AD Privileged Identity Management](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/), [AWS SSO access request workflows](https://aws.amazon.com/sso/), [GCP Identity Groups](https://cloud.google.com/identity/docs/groups), [OCI workflow integrations](https://www.oracle.com/cloud/free/oci-training/).
    - Ensures no direct admin changes bypass the standardized process.
 
 1. **Continuously Evaluate Cloud Services**
@@ -152,7 +152,7 @@ Below are **rapidly actionable** ways to refine standard identity management:
 
 1. **Expand Logging & Alerting**
    - If your identity bridging sees repeated login failures, quickly alert managers or security teams:
-     - e.g., [AWS Security Hub, Azure Sentinel, GCP SCC, or OCI security logs integrated with SIEM tools](https://TODO).
+     - e.g., [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP SCC](https://cloud.google.com/security-command-center/docs/overview), [OCI security logs integrated with SIEM tools](https://www.oracle.com/cloud/free/oci-training/).
 
 By enforcing SSO/federation for all services, deploying structured access workflows, continuously evaluating new cloud offerings, documenting role-to-privilege mappings, and bolstering security alerting, you ensure consistent, secure user identity alignment across your cloud ecosystem.
 
@@ -181,12 +181,12 @@ Below are **rapidly actionable** ways to reinforce automated federated identity:
 
 1. **Adopt Short-Lived Credentials**
 
-   - e.g., ephemeral tokens from your IDP for each session, referencing [AWS STS, Azure AD tokens, GCP short-lived tokens, OCI dynamic tokens](https://TODO).
+   - e.g., ephemeral tokens from your IDP for each session, referencing [AWS STS](https://aws.amazon.com/sts/), [Azure AD tokens](https://learn.microsoft.com/en-us/azure/active-directory/develop/access-tokens), [GCP short-lived tokens](https://cloud.google.com/iam/docs/creating-short-lived-service-account-keys), [OCI dynamic tokens](https://www.oracle.com/cloud/free/oci-training/).
    - Reduces standing privileges.
 
 1. **Implement Policy-as-Code for Identity**
 
-   - Use [Open Policy Agent or vendor-based solutions (AWS SCP, Azure Policy, GCP Org Policy, OCI Security Zones)](https://TODO) to define identity governance in code, ensuring version-controlled and auditable changes.
+   - Use [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions ([AWS SCP](https://aws.amazon.com/service-authorization/scps/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define identity governance in code, ensuring version-controlled and auditable changes.
 
 1. **Add Real-Time Security Monitoring**
 
@@ -230,17 +230,17 @@ Below are **rapidly actionable** ways to refine an already unified, cloud-based 
 
 1. **Implement Passwordless or Phishing-Resistant MFA**
 
-   - e.g., FIDO2 security keys, Microsoft Authenticator passwordless, or [AWS hardware MFA tokens, GCP Titan Security Keys, OCI-based FIDO solutions](https://TODO) to further reduce credential compromise risks.
+   - e.g., FIDO2 security keys, Microsoft Authenticator passwordless, or [AWS hardware MFA tokens](https://aws.amazon.com/iam/features/), [GCP Titan Security Keys](https://cloud.google.com/titan-security-key/docs/overview), [OCI-based FIDO solutions](https://www.oracle.com/cloud/free/oci-training/) to further reduce credential compromise risks.
 
 1. **Add Dynamic Risk Scoring**
 
    - Use advanced AI to evaluate user login contexts:
-     - e.g., abnormal location, device compliance checks, referencing [Azure AD Identity Protection or AWS Identity anomaly detection, GCP security analytics, OCI risk-based authentication features](https://TODO).
+     - e.g., abnormal location, device compliance checks, referencing [Azure AD Identity Protection](https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection) or [AWS Identity anomaly detection](https://aws.amazon.com/iam/features/), [GCP security analytics](https://cloud.google.com/security-command-center/docs/overview), [OCI risk-based authentication features](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Extend Identity to Third-Party Collaboration**
 
    - If outside contractors or multi-department teams need access, enable B2B or cross-tenant solutions:
-     - [Azure AD B2B, AWS SSO external identity providers, GCP external identity federation, OCI cross-tenant identity sharing](https://TODO).
+     - [Azure AD B2B](https://learn.microsoft.com/en-us/azure/active-directory/external-identities/what-is-b2b), [AWS SSO external identity providers](https://aws.amazon.com/sso/), [GCP external identity federation](https://cloud.google.com/identity/docs/overview), [OCI cross-tenant identity sharing](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Encourage Cross-Public Sector Federation**
 

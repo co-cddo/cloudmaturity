@@ -31,10 +31,10 @@ Below are **rapidly actionable** steps to move beyond entirely manual QA and dep
 1. **Introduce a Simple CI Pipeline**
 
    - Begin by automating at least the build and basic test steps:
-     - [AWS CodeBuild with minimal scripts for unit tests](https://TODO)
-     - [Azure DevOps Pipelines or GitHub Actions for compiling code and running basic test suites](https://TODO)
-     - [GCP Cloud Build for building Docker images and performing quick checks](https://TODO)
-     - [OCI DevOps build pipelines for fundamental build/test tasks](https://TODO)
+     - [AWS CodeBuild with minimal scripts for unit tests](https://docs.aws.amazon.com/codebuild/latest/userguide/what-is-codebuild.html)
+     - [Azure DevOps Pipelines or GitHub Actions for compiling code and running basic test suites](https://docs.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines)
+     - [GCP Cloud Build for building Docker images and performing quick checks](https://cloud.google.com/build/docs/overview)
+     - [OCI DevOps build pipelines for fundamental build/test tasks](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/devopsoverview.htm)
 
 1. **Document a Standard Release Checklist**
 
@@ -81,10 +81,10 @@ Below are **rapidly actionable** methods to evolve from partial automation:
 1. **Expand Automated Tests to Integration or End-to-End (E2E)**
 
    - Move beyond simple unit tests:
-     - [AWS Device Farm or AWS CodePipeline integration steps for E2E tests on a staging environment](https://TODO)
-     - [Azure DevOps test plans for browser-based or API-based integration tests](https://TODO)
-     - [GCP Cloud Build triggers that run Selenium or Cypress E2E tests for your web app](https://TODO)
-     - [OCI DevOps pipeline with advanced test stages for functional and integration checks](https://TODO)
+     - [AWS Device Farm or AWS CodePipeline integration steps for E2E tests on a staging environment](https://docs.aws.amazon.com/devicefarm/latest/developerguide/test-types.html)
+     - [Azure DevOps test plans for browser-based or API-based integration tests](https://docs.microsoft.com/en-us/azure/devops/test/test-plans/create-a-test-plan)
+     - [GCP Cloud Build triggers that run Selenium or Cypress E2E tests for your web app](https://cloud.google.com/build/docs/overview)
+     - [OCI DevOps pipeline with advanced test stages for functional and integration checks](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/devopsoverview.htm)
 
 1. **Adopt a More Frequent Release Cadence**
 
@@ -93,7 +93,7 @@ Below are **rapidly actionable** methods to evolve from partial automation:
 1. **Introduce Automated Rollback or Versioning**
 
    - Store artifacts in a repository for easier rollback:
-     - [AWS S3, ECR, or CodeArtifact; Azure Artifacts or Container Registry; GCP Artifact Registry; OCI Container Registry](https://TODO)
+     - [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html), [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html), or [CodeArtifact](https://docs.aws.amazon.com/codeartifact/latest/userguide/welcome.html); [Azure Artifacts](https://docs.microsoft.com/en-us/azure/devops/artifacts/overview) or [Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/); [GCP Artifact Registry](https://cloud.google.com/artifact-registry/docs/overview); [OCI Container Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm)
    - Make rollback steps part of your pipeline script to minimize disruption if a new release fails QA in production.
 
 1. **Refine Manual Approvals**
@@ -132,10 +132,10 @@ Below are **rapidly actionable** ways to enhance integrated deployment and QA:
 1. **Add Security and Performance Testing**
 
    - Integrate security scanning tools into the pipeline:
-     - [AWS CodeGuru Security, Amazon Inspector, or 3rd-party SAST/DAST checks triggered in CodePipeline](https://TODO)
-     - [Azure DevOps with GitHub Advanced Security or Microsoft Defender for DevOps scanning your code base](https://TODO)
-     - [GCP Cloud Build plus container vulnerability scans or SAST steps using open-source tools](https://TODO)
-     - [OCI DevOps pipeline integrated with vulnerability scanning on container images or code dependencies](https://TODO)
+     - [AWS CodeGuru Security, Amazon Inspector, or 3rd-party SAST/DAST checks triggered in CodePipeline](https://docs.aws.amazon.com/codeguru/latest/security-ug/what-is-codeguru-security.html)
+     - [Azure DevOps with GitHub Advanced Security or Microsoft Defender for DevOps scanning your code base](https://docs.microsoft.com/en-us/azure/devops/security/defender-for-devops/overview)
+     - [GCP Cloud Build plus container vulnerability scans or SAST steps using open-source tools](https://cloud.google.com/build/docs/overview)
+     - [OCI DevOps pipeline integrated with vulnerability scanning on container images or code dependencies](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/devopsoverview.htm)
    - Also consider lightweight performance tests in staging to detect regressions early.
 
 1. **Implement Parallel Testing or Test Suites**
@@ -194,10 +194,10 @@ Below are **rapidly actionable** ways to refine your existing CI/CD with automat
 1. **Adopt Canary/Blue-Green Deployments**
 
    - Pair your stable CI/CD pipeline with progressive exposure of new versions to real traffic:
-     - [AWS CodeDeploy or App Mesh for canary deployments](https://TODO)
-     - [Azure Deployment Slots or Traffic Manager for partial rollouts in Azure Web Apps/AKS](https://TODO)
-     - [GCP’s rolling updates or traffic splitting in GKE/App Engine Cloud Deploy for advanced release strategies](https://TODO)
-     - [OCI load balancing and policy-based traffic splitting, supporting canary-based incremental rollouts](https://TODO)
+     - [AWS CodeDeploy or App Mesh for canary deployments](https://docs.aws.amazon.com/codedeploy/latest/userguide/welcome.html)
+     - [Azure Deployment Slots or Traffic Manager for partial rollouts in Azure Web Apps/AKS](https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots)
+     - [GCP’s rolling updates or traffic splitting in GKE/App Engine Cloud Deploy for advanced release strategies](https://cloud.google.com/deploy/docs/deploying-applications-with-cloud-deploy)
+     - [OCI load balancing and policy-based traffic splitting, supporting canary-based incremental rollouts](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/devopsoverview.htm)
 
 1. **Implement Automated Rollback**
 
@@ -243,10 +243,10 @@ Even at this apex, there are **rapidly actionable** improvements:
 1. **Adopt Policy-as-Code for Environment Provisioning**
 
    - Ensure ephemeral environments adhere to data governance, resource tagging, and security baselines automatically:
-     - [AWS Service Catalog or AWS CloudFormation with pre-approved templates, integrated with OPA or AWS Config](https://TODO)
-     - [Azure Bicep or Terraform with Azure Policy scanning ephemeral infra for compliance](https://TODO)
-     - [GCP Deployment Manager or Terraform with organization policy checks, gating ephemeral environments pre-creation](https://TODO)
-     - [OCI Resource Manager or Terraform integrated with policy engines to ensure ephemeral env compliance](https://TODO)
+     - [AWS Service Catalog or AWS CloudFormation with pre-approved templates, integrated with OPA or AWS Config](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)
+     - [Azure Bicep or Terraform with Azure Policy scanning ephemeral infra for compliance](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
+     - [GCP Deployment Manager or Terraform with organization policy checks, gating ephemeral environments pre-creation](https://cloud.google.com/deployment-manager/docs/overview)
+     - [OCI Resource Manager or Terraform integrated with policy engines to ensure ephemeral env compliance](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
 
 1. **Automated Data Masking or Synthetic Data**
 

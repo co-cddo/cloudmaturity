@@ -83,7 +83,7 @@ Below are **rapidly actionable** ways to refine a uniform tech mandate:
 1. **Maintain a Living "Approved List"**
 
    - Encourage periodic updates to the mandated stack, adding modern solutions (like container orchestration or microservice frameworks) that align with cost and security best practices:
-     - e.g., [AWS ECS/EKS, Azure AKS, GCP GKE, OCI OKE for container orchestration](https://TODO).
+     - e.g., [AWS ECS/EKS](https://aws.amazon.com/ecs/), [Azure AKS](https://learn.microsoft.com/en-us/azure/aks/), [GCP GKE](https://cloud.google.com/kubernetes-engine), or [OCI OKE](https://www.oracle.com/cloud/free/oci-training/) for container orchestration.
 
 1. **Pilot Innovations**
 
@@ -124,7 +124,7 @@ Below are **rapidly actionable** ways to revitalize or replace outdated resource
 1. **Initiate a Quick Radar Refresh**
 
    - A small cross-team group can produce an updated doc or web-based radar in 2-4 weeks, referencing recent frameworks, security improvements, and cost considerations:
-     - e.g., adopting [AWS Graviton or Azure Functions for HPC/Serverless, GCP AI/ML solutions, OCI HPC offerings, etc.](https://TODO).
+     - e.g., adopting [AWS Graviton](https://aws.amazon.com/graviton/), [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/), [GCP AI/ML solutions](https://cloud.google.com/ai), or [OCI HPC offerings](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Introduce a Living "Tech Patterns" Wiki**
 
@@ -176,7 +176,7 @@ Below are **rapidly actionable** ways to enhance current, well-used guidance:
 1. **Add Security & Cost Criteria**
 
    - For each technology in the radar, briefly discuss security posture and typical cost drivers (like egress fees or licensing):
-     - referencing [AWS TCO calculators, Azure Pricing, GCP Pricing, OCI cost analysis tools](https://TODO).
+     - referencing [AWS TCO calculators](https://calculator.awscloud.com/), [Azure Pricing](https://azure.microsoft.com/en-us/pricing/), [GCP Pricing](https://cloud.google.com/products/calculator), or [OCI cost analysis tools](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Practice "Sunsetting"**
 
@@ -219,7 +219,7 @@ Below are **rapidly actionable** ways to strengthen a collaborative, evolving te
 1. **Establish a Formal Inner-Source Model**
 
    - Encourage code sharing or libraries across departments, referencing open-source practices but within the public sector context:
-     - e.g., GitHub Enterprise or GitLab shared repos.
+     - e.g., [GitHub Enterprise](https://github.com/enterprise) or [GitLab](https://about.gitlab.com/).
 
 1. **Encourage Pairing or Multi-Dept Projects**
 

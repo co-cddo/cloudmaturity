@@ -36,10 +36,10 @@ Below are **rapidly actionable** steps to introduce at least a minimal structure
 1. **Encourage Free Vendor Resources**
 
    - Point teams to free training modules or documentation:
-     - [AWS Skill Builder free courses, AWS Documentation, AWS YouTube channel](https://TODO)
-     - [Microsoft Learn for Azure fundamentals, or free online sessions](https://TODO)
-     - [GCP Free tier training with Google Cloud Skills Boost, official docs, codelabs](https://TODO)
-     - [OCI Free Training and Oracle University’s free learning paths for Oracle Cloud basics](https://TODO)
+     - [AWS Skill Builder free courses, AWS Documentation, AWS YouTube channel](https://aws.amazon.com/training/learning-paths/)
+     - [Microsoft Learn for Azure fundamentals, or free online sessions](https://docs.microsoft.com/en-us/learn/azure/)
+     - [GCP Free tier training with Google Cloud Skills Boost, official docs, codelabs](https://cloud.google.com/training/free-tier)
+     - [OCI Free Training and Oracle University’s free learning paths for Oracle Cloud basics](https://www.oracle.com/cloud/free/)
 
 1. **Sponsor One-Off Training Sessions**
 
@@ -82,7 +82,7 @@ Below are **rapidly actionable** steps to unify manager-led training into a more
 
 1. **Set Organization-Wide Cloud Skill Standards**
 
-   - e.g., requiring at least one fundamental certification per dev/ops staff, referencing [AWS Certified Cloud Practitioner, Azure Fundamentals, GCP Cloud Digital Leader, or OCI Foundations](https://TODO).
+   - e.g., requiring at least one fundamental certification per dev/ops staff, referencing [AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/), [Azure Fundamentals](https://learn.microsoft.com/en-us/certifications/azure-fundamentals/), [GCP Cloud Digital Leader](https://cloud.google.com/certification/cloud-digital-leader), or [OCI Foundations](https://www.oracle.com/cloud/free/oci-training/).
    - This ensures a baseline competence across all teams.
 
 1. **Track Training Efforts Centrally**
@@ -132,10 +132,10 @@ Below are **rapidly actionable** improvements:
 1. **Customize Training by Role Path**
 
    - Provide recommended vendor certification journeys for each role (DevOps, Data Engineer, Security Engineer, etc.):
-     - [AWS role-based learning paths, e.g., Solutions Architect or Security Specialist](https://TODO)
-     - [Azure Role-Based Certifications for Developer, Administrator, Security Engineer, etc.](https://TODO)
-     - [GCP Role-Based Certifications like Associate Engineer, Professional Data Engineer, etc.](https://TODO)
-     - [OCI certifications for Architect, Developer, Data Management, etc.](https://TODO)
+     - [AWS role-based learning paths, e.g., Solutions Architect or Security Specialist](https://aws.amazon.com/training/learning-paths/)
+     - [Azure Role-Based Certifications for Developer, Administrator, Security Engineer, etc.](https://learn.microsoft.com/en-us/certifications/azure-fundamentals/)
+     - [GCP Role-Based Certifications like Associate Engineer, Professional Data Engineer, etc.](https://cloud.google.com/certification/cloud-digital-leader)
+     - [OCI certifications for Architect, Developer, Data Management, etc.](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Incorporate Regular Skills Audits**
 

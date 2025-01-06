@@ -31,10 +31,10 @@ Below are **rapidly actionable** steps to transition from downtime-based updates
 1. **Pilot a Rolling or Blue/Green Approach**
 
    - Instead of a complete shutdown, start with a minimal approach:
-     - [AWS: Use AWS Elastic Beanstalk or AWS CodeDeploy for rolling deployments with minimal downtime](https://TODO)
-     - [Azure App Service Deployment Slots for staging, or Azure DevOps Pipelines for controlled rolling updates](https://TODO)
-     - [GCP: Use rolling updates in GKE or versioned deployments in App Engine to reduce outages](https://TODO)
-     - [OCI: Implement rolling restarts or new instance groups in Oracle Container Engine or compute autoscaling groups](https://TODO)
+     - [AWS: Use AWS Elastic Beanstalk or AWS CodeDeploy for rolling deployments with minimal downtime](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/concepts.rolling-deployments.html)
+     - [Azure App Service Deployment Slots for staging, or Azure DevOps Pipelines for controlled rolling updates](https://docs.microsoft.com/en-us/azure/app-service/deploy-staging-slots)
+     - [GCP: Use rolling updates in GKE or versioned deployments in App Engine to reduce outages](https://cloud.google.com/kubernetes-engine/docs/concepts/rollouts)
+     - [OCI: Implement rolling restarts or new instance groups in Oracle Container Engine or compute autoscaling groups](https://docs.oracle.com/en-us/iaas/Content/Container/Concepts/container-engine.htm)
 
 1. **Establish a Basic CI/CD Pipeline**
 
@@ -83,10 +83,10 @@ Below are **rapidly actionable** improvements:
 1. **Implement Automated Health Checks**
 
    - Ensure each instance is verified healthy before taking the next one offline:
-     - [AWS: Use Amazon EC2 Auto Scaling with health checks or AWS Load Balancer checks in ECS/EKS](https://TODO)
-     - [Azure: VM Scale Sets with automatic health checks or AKS readiness probes](https://TODO)
-     - [GCP: GKE readiness/liveness probes, MIG autohealing policies, or HTTP health checks for Compute Engine](https://TODO)
-     - [OCI: Load Balancer health checks integrated with compute instance pools or OKE readiness checks](https://TODO)
+     - [AWS: Use Amazon EC2 Auto Scaling with health checks or AWS Load Balancer checks in ECS/EKS](https://docs.aws.amazon.com/autoscaling/ec2/userguide/healthcheck-types.html)
+     - [Azure: VM Scale Sets with automatic health checks or AKS readiness probes](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-health-extend-existing)
+     - [GCP: GKE readiness/liveness probes, MIG autohealing policies, or HTTP health checks for Compute Engine](https://cloud.google.com/kubernetes-engine/docs/concepts/health-checks)
+     - [OCI: Load Balancer health checks integrated with compute instance pools or OKE readiness checks](https://docs.oracle.com/en-us/iaas/Content/Container/Concepts/container-engine.htm)
 
 1. **Adopt a Canary or Blue/Green Strategy for Critical Services**
 
@@ -101,7 +101,7 @@ Below are **rapidly actionable** improvements:
 1. **Automate Rollback**
 
    - If an update fails, ensure your pipeline or scripts can quickly revert to the previous version:
-     - Storing versioned artifacts in, for example, [AWS S3 or ECR, Azure Container Registry, GCP Artifact Registry, or OCI Container Registry](https://TODO).
+     - Storing versioned artifacts in, for example, [AWS S3 or ECR, Azure Container Registry, GCP Artifact Registry, or OCI Container Registry](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html).
 
 1. **Reference NCSC Guidance on Operational Resilience**
    - Rolling updates align with resilience best practices, but see if NCSC or [NIST SP 800-53 revision on system and communications protection controls](https://csrc.nist.gov/) suggests additional steps to reduce downtime.
@@ -135,10 +135,10 @@ Below are **rapidly actionable** ways to enhance manual cut-over processes:
 
    - Even if you keep a manual approval step, script the rest of the transition:
      - e.g., flipping a DNS entry, load balancer config, or feature toggle automatically:
-       - [AWS Route 53 weighted DNS or AWS ALB target group switches](https://TODO)
-       - [Azure Traffic Manager or Front Door for region/endpoint-based switching](https://TODO)
-       - [GCP traffic splitting in App Engine or load balancer-based canary rollout for GCE/GKE](https://TODO)
-       - [OCI traffic management policies at the load balancer or DNS level for new vs. old versions](https://TODO)
+       - [AWS Route 53 weighted DNS or AWS ALB target group switches](https://docs.aws.amazon.com/Route53/latest/APIReference/API_ChangeResourceRecordSets.html)
+       - [Azure Traffic Manager or Front Door for region/endpoint-based switching](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview)
+       - [GCP traffic splitting in App Engine or load balancer-based canary rollout for GCE/GKE](https://cloud.google.com/appengine/docs/standard/python/how-to-deploy-services-with-traffic-splitting)
+       - [OCI traffic management policies at the load balancer or DNS level for new vs. old versions](https://docs.oracle.com/en-us/iaas/Content/LoadBalancer/Concepts/loadbalancer.htm)
 
 1. **Incorporate Automated Testing Pre-Cut-Over**
 
@@ -189,10 +189,10 @@ Below are **rapidly actionable** methods to enhance manual canary or blue/green 
 1. **Automate Traffic Shaping**
 
    - Instead of manually controlling traffic percentages, leverage:
-     - [AWS AppConfig or AWS CloudFront weighted distributions for canary traffic shifting](https://TODO)
-     - [Azure Front Door or Azure Traffic Manager with gradual percentage-based traffic routing](https://TODO)
-     - [GCP Cloud Load Balancing or App Engine traffic splitting for canary increments](https://TODO)
-     - [OCI traffic management policies or advanced load balancer rules for partial traffic distribution to the new version](https://TODO)
+     - [AWS AppConfig or AWS CloudFront weighted distributions for canary traffic shifting](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-weighted-distributions.html)
+     - [Azure Front Door or Azure Traffic Manager with gradual percentage-based traffic routing](https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-overview)
+     - [GCP Cloud Load Balancing or App Engine traffic splitting for canary increments](https://cloud.google.com/appengine/docs/standard/python/how-to-deploy-services-with-traffic-splitting)
+     - [OCI traffic management policies or advanced load balancer rules for partial traffic distribution to the new version](https://docs.oracle.com/en-us/iaas/Content/LoadBalancer/Concepts/loadbalancer.htm)
 
 1. **Implement Automated Rollback**
 
@@ -247,10 +247,10 @@ Even at this top maturity level, there are **rapidly actionable** improvements:
 1. **Expand Automated Testing & AI/ML Analysis**
 
    - If canary performance is only measured by simple metrics (error rate, latency), consider advanced checks:
-     - [AWS DevOps Guru or Lookout for Metrics for anomaly detection in deployment phases](https://TODO)
-     - [Azure Monitor ML-based anomaly detection or GitHub Advanced Security scanning as part of deployment acceptance](https://TODO)
-     - [GCP Vertex AI or Dataproc to run deeper performance analytics or load tests before ramping up traffic](https://TODO)
-     - [OCI Data Science with integrated pipeline checks for advanced anomaly detection in performance metrics](https://TODO)
+     - [AWS DevOps Guru or Lookout for Metrics for anomaly detection in deployment phases](https://docs.aws.amazon.com/devops-guru/latest/userguide/what-is-devops-guru.html)
+     - [Azure Monitor ML-based anomaly detection or GitHub Advanced Security scanning as part of deployment acceptance](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/monitor-alerts-unified-log)
+     - [GCP Vertex AI or Dataproc to run deeper performance analytics or load tests before ramping up traffic](https://cloud.google.com/vertex-ai/docs/experiments/overview)
+     - [OCI Data Science with integrated pipeline checks for advanced anomaly detection in performance metrics](https://docs.oracle.com/en-us/iaas/data-science/using/data-science-overview.htm)
 
 1. **Implement Feature Flag Management**
 

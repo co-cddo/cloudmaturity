@@ -43,10 +43,10 @@ Below are **rapidly actionable** steps to move beyond ad-hoc incident response:
 1. **Set Up Basic Monitoring and Alerts**
 
    - Ensure you have at least minimal coverage:
-     - [AWS GuardDuty, Security Hub, or CloudWatch alarms](https://TODO)
-     - [Azure Sentinel or Monitor alerts for unusual activities](https://TODO)
-     - [GCP Security Command Center or Cloud Logging-based alerts](https://TODO)
-     - [OCI Security Advisor or Logging with notifications for suspicious events](https://TODO)
+     - [AWS GuardDuty, Security Hub, or CloudWatch alarms](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
+     - [Azure Sentinel or Monitor alerts for unusual activities](https://docs.microsoft.com/en-us/azure/azure-monitor/overview)
+     - [GCP Security Command Center or Cloud Logging-based alerts](https://cloud.google.com/security-command-center/docs/concepts-overview)
+     - [OCI Security Advisor or Logging with notifications for suspicious events](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/security-advisor.htm)
 
 1. **Coordinate with Third Parties**
 
@@ -89,10 +89,10 @@ Below are **rapidly actionable** ways to strengthen an initial documented IR pla
 1. **Automate Some Deployment Checks**
 
    - Before launch, run security scans or vulnerability checks:
-     - [AWS Security Hub or Amazon Inspector during pipeline pre-check](https://TODO)
-     - [Azure DevOps Pipeline tasks with Microsoft Defender for DevOps scanning](https://TODO)
-     - [GCP Cloud Build triggers for container or code vulnerability checks](https://TODO)
-     - [OCI DevOps pipeline scanning or Oracle Security Advisor integration](https://TODO)
+     - [AWS Security Hub or Amazon Inspector during pipeline pre-check](https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-security-hub.html)
+     - [Azure DevOps Pipeline tasks with Microsoft Defender for DevOps scanning](https://docs.microsoft.com/en-us/azure/defender-for-devops/get-started)
+     - [GCP Cloud Build triggers for container or code vulnerability checks](https://cloud.google.com/build/docs/automating-builds/build-triggers)
+     - [OCI DevOps pipeline scanning or Oracle Security Advisor integration](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/devops-overview.htm)
 
 1. **Link IR Plan to Monitoring Dashboards**
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** ways to elevate a regularly updated IR plan:
 
    - Expand on tabletop exercises by running limited real-world simulations:
      - e.g., intentionally degrade a non-critical environment to test the plan’s response steps.
-   - Tools like [AWS Fault Injection Simulator](https://TODO), [Azure Chaos Studio](https://TODO), or [Chaos Mesh on GCP/OCI] can facilitate chaos engineering.
+   - Tools like [AWS Fault Injection Simulator](https://docs.aws.amazon.com/fis/latest/userguide/what-is-fis.html), [Azure Chaos Studio](https://docs.microsoft.com/en-us/azure/chaos-studio/overview), or [Chaos Mesh on GCP/OCI](https://chaos-mesh.org/docs/simulate-gcp-chaos/) can facilitate chaos engineering.
 
 1. **Include Ransomware or DDoS Scenarios**
 
@@ -185,15 +185,15 @@ Below are **rapidly actionable** ways to further optimize integrated, tested IR 
 1. **Adopt Multi-Cloud or Region Failover Testing**
 
    - If your DR strategy includes shifting workloads to another cloud or region, periodically simulate it:
-     - [AWS: cross-region DR tests with AWS CloudFormation or DR exercises using AWS DMS for failover data replication](https://TODO)
-     - [Azure: Site Recovery for cross-region replication, test failovers monthly](https://TODO)
-     - [GCP: [gcp] multi-region replication of data or spanner failover tests to validate readiness](https://TODO)
-     - [OCI: cross-region replication or DR sets in Oracle cloud, tested in scheduled intervals](https://TODO)
+     - [AWS: cross-region DR tests with AWS CloudFormation or DR exercises using AWS DMS for failover data replication](https://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CrossRegion.html)
+     - [Azure: Site Recovery for cross-region replication, test failovers monthly](https://docs.microsoft.com/en-us/azure/site-recovery/site-recovery-test-failover-to-azure)
+     - [GCP: multi-region replication of data or spanner failover tests to validate readiness](https://cloud.google.com/spanner/docs/disaster-recovery)
+     - [OCI: cross-region replication or DR sets in Oracle cloud, tested in scheduled intervals](https://docs.oracle.com/en-us/iaas/Content/DR/Concepts/dr-overview.htm)
 
 1. **Expand Real-Time Monitoring Integration**
 
    - Ensure that if an alert triggers a continuity plan, the IR process is automatically updated with relevant logs or metrics.
-   - Tools like [AWS EventBridge, Azure Event Grid, GCP Pub/Sub, or OCI Events] can route incidents to the correct channels instantly.
+   - Tools like [AWS EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is-amazon-eventbridge.html), [Azure Event Grid](https://docs.microsoft.com/en-us/azure/event-grid/overview), [GCP Pub/Sub](https://cloud.google.com/pubsub/docs/overview), or [OCI Events](https://docs.oracle.com/en-us/iaas/Content/Events/Concepts/eventsoverview.htm) can route incidents to the correct channels instantly.
 
 1. **Formalize Post-Incident Reviews**
 
@@ -237,13 +237,16 @@ Even at this advanced stage, below are **rapidly actionable** refinements:
 1. **Embed Chaos Drills**
 
    - Randomly inject failures or security anomalies in production-like environments to ensure IR readiness:
-     - Tools like [AWS Fault Injection Simulator](https://TODO) or [Azure Chaos Studio](https://TODO) can orchestrate purposeful disruptions.
-     - GCP or OCI can adopt open-source solutions like [Chaos Mesh](https://TODO) for container-level fault injection.
+     - Tools like [AWS Fault Injection Simulator](https://docs.aws.amazon.com/fis/latest/userguide/what-is-fis.html) or [Azure Chaos Studio](https://docs.microsoft.com/en-us/azure/chaos-studio/overview) can orchestrate purposeful disruptions.
+     - GCP or OCI can adopt open-source solutions like [Chaos Mesh](https://chaos-mesh.org/docs/simulate-gcp-chaos/) for container-level fault injection.
 
 1. **Adopt AI/ML-Driven Threat Detection**
 
    - Integrate advanced analytics for anomaly detection:
-     - [AWS DevOps Guru or Amazon GuardDuty, Azure Sentinel ML insights, GCP Cloud Anomaly Detection, OCI Security Advisor with ML-based patterns](https://TODO).
+     - [AWS DevOps Guru](https://docs.aws.amazon.com/devops-guru/latest/userguide/what-is-devops-guru.html) or [Amazon GuardDuty](https://docs.aws.amazon.com/guardduty/latest/ug/what-is-guardduty.html)
+     - [Azure Sentinel](https://docs.microsoft.com/en-us/azure/sentinel/what-is-sentinel) with ML insights
+     - [GCP Cloud Anomaly Detection](https://cloud.google.com/ai/docs/anomaly-detection/overview)
+     - [OCI Security Advisor](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/security-advisor.htm) with ML-based patterns
    - This ensures you detect suspicious behavior even before explicit alerts fire.
 
 1. **Coordinate Regional or Multi-department Exercises**

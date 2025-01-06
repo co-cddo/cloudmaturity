@@ -31,7 +31,7 @@ Below are **rapidly actionable** steps to strengthen or evolve from perimeter-on
 1. **Introduce MFA for Privileged Access**
 
    - Even if you maintain a perimeter, require multi-factor authentication for admin or root accounts:
-     - e.g., [AWS IAM MFA, Azure AD MFA, GCP IAM 2FA, OCI IAM MFA](https://TODO).
+     - e.g., [AWS IAM MFA](https://aws.amazon.com/iam/features/mfa/), [Azure AD MFA](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP IAM 2FA](https://cloud.google.com/iam/docs/using-mfa), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
    - Minimizes risk of compromised credentials bypassing the firewall.
 
 1. **Implement Least-Privilege IAM**
@@ -42,7 +42,7 @@ Below are **rapidly actionable** steps to strengthen or evolve from perimeter-on
 1. **Segment Networks Internally**
 
    - If you must keep a perimeter, create subnet-level or micro-segmentation to contain potential lateral movement:
-     - e.g., [AWS Security Groups + Network ACLs, Azure Network Security Groups, GCP VPC firewall rules, OCI Security Lists/NSGs](https://TODO).
+     - e.g., [AWS Security Groups + Network ACLs](https://aws.amazon.com/security-groups/), [Azure Network Security Groups](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview), [GCP VPC firewall rules](https://cloud.google.com/vpc/docs/firewalls), or [OCI Security Lists/NSGs](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enable TLS Everywhere**
 
@@ -80,22 +80,22 @@ Below are **rapidly actionable** ways to extend identity verification:
 1. **Enforce MFA for All Users**
 
    - Expand from privileged accounts to all staff, referencing [NCSC’s multi-factor authentication guidance](https://www.ncsc.gov.uk/) or vendor-based solutions:
-     - [AWS IAM, Azure AD MFA, GCP Identity, OCI IAM MFA](https://TODO).
+     - [AWS IAM](https://aws.amazon.com/iam/), [Azure AD MFA](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP Identity](https://cloud.google.com/identity), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Increase Granularity of Access Controls**
 
    - Instead of letting a user into the entire internal network after login, define specific role-based or service-based access:
-     - e.g., [AWS IAM condition keys, Azure Conditional Access, GCP Access Context Manager, OCI compartments/policies](https://TODO).
+     - e.g., [AWS IAM condition keys](https://aws.amazon.com/iam/features/condition-keys/), [Azure Conditional Access](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [GCP Access Context Manager](https://cloud.google.com/access-context-manager/docs/overview), or [OCI compartments/policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt SSO**
 
    - If each app behind the perimeter uses separate user stores, unify them with SSO:
-     - e.g., [AWS SSO, Azure AD SSO, GCP Identity Federation, OCI IDCS integration](https://TODO).
+     - e.g., [AWS SSO](https://aws.amazon.com/sso/), [Azure AD SSO](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whats-new-azure-ad-sso), [GCP Identity Federation](https://cloud.google.com/identity/docs/overview), or [OCI IDCS integration](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enable Auditing & Logging**
 
    - Once inside the network, log user actions for each app or system:
-     - e.g., [AWS CloudTrail, Azure Monitor, GCP Cloud Logging, OCI Audit Logs](https://TODO) for post-identity verification behavior.
+     - e.g., [AWS CloudTrail](https://aws.amazon.com/cloudtrail/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/), [GCP Cloud Logging](https://cloud.google.com/logging/docs/overview), or [OCI Audit Logs](https://www.oracle.com/cloud/free/oci-training/) for post-identity verification behavior.
 
 1. **Consider Device Trust or Conditional Access**
    - If feasible, require verified device posture (up-to-date OS, security agent running) before granting app access.
@@ -127,11 +127,11 @@ Below are **rapidly actionable** ways to strengthen user+service identity verifi
 
 1. **Use mTLS or Short-Lived Tokens**
 
-   - e.g., [AWS IAM roles for EC2 with STS, Azure Managed Identities, GCP Workload Identity Federation, OCI dynamic groups/tokens, plus mTLS for containers or microservices](https://TODO).
+   - e.g., [AWS IAM roles for EC2 with STS](https://aws.amazon.com/iam/features/sts), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Workload Identity Federation](https://cloud.google.com/identity/docs/workload-identity-federation), or [OCI dynamic groups/tokens](https://www.oracle.com/cloud/free/oci-training/), plus mTLS for containers or microservices.
 
 1. **Adopt Policy-as-Code**
 
-   - Incorporate [Open Policy Agent or vendor-based solutions (AWS SCP, Azure Policy, GCP Org Policy, OCI Security Zones)](https://TODO) to define rules that check both user claims and service identity for each call.
+   - Incorporate [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions ([AWS SCP](https://aws.amazon.com/service-catalog/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define rules that check both user claims and service identity for each call.
 
 1. **Enforce Request-Level Authorization**
 
@@ -173,7 +173,7 @@ Below are **rapidly actionable** ways to deepen identity-centric security:
 1. **Retire or Restrict VPN**
 
    - If a VPN is still used to reach certain legacy apps, plan a phased approach to move them behind identity-based gateways:
-     - e.g., [AWS AppStream or AWS WorkSpaces, Azure App Proxy, GCP BeyondCorp Enterprise, OCI Identity Aware solutions](https://TODO).
+     - e.g., [AWS AppStream or AWS WorkSpaces](https://aws.amazon.com/appstream/), [Azure App Proxy](https://learn.microsoft.com/en-us/azure/active-directory/app-proxy/), [GCP BeyondCorp Enterprise](https://cloud.google.com/beyondcorp/enterprise), or [OCI Identity Aware solutions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Embed Device Trust**
 
@@ -187,7 +187,7 @@ Below are **rapidly actionable** ways to deepen identity-centric security:
 
 1. **Establish Single Sign-On for All**
 
-   - If some staff still need separate logins for older apps, unify them with [AWS SSO, Azure AD, GCP Identity, or OCI IDCS Federation](https://TODO).
+   - If some staff still need separate logins for older apps, unify them with [AWS SSO](https://aws.amazon.com/sso/), [Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whats-new-azure-ad-sso), [GCP Identity](https://cloud.google.com/identity), or [OCI IDCS Federation](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Continuously Train Staff**
    - Emphasize new patterns (no reliance on VPN, ephemeral credentials, and device checks).
@@ -221,7 +221,7 @@ Below are **rapidly actionable** ways to sustain no-perimeter, identity-based se
 1. **Refine Device & User Risk Scoring**
 
    - If a device shows outdated OS or known vulnerabilities, reduce or block certain privileges automatically:
-     - e.g., [Azure AD Conditional Access with risk-based policies, AWS Cognito device posture checks, GCP BeyondCorp device trust, OCI device posture solutions](https://TODO).
+     - e.g., [Azure AD Conditional Access with risk-based policies](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [AWS Cognito device posture checks](https://aws.amazon.com/cognito/), [GCP BeyondCorp device trust](https://cloud.google.com/beyondcorp/enterprise), or [OCI device posture solutions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enforce Continuous Authentication**
 
@@ -235,7 +235,7 @@ Below are **rapidly actionable** ways to sustain no-perimeter, identity-based se
 
 1. **Use Policy-as-Code**
 
-   - Implement [Open Policy Agent (OPA), AWS SCP, Azure Policy, GCP Org Policy, OCI Security Zones](https://TODO) for dynamic, code-defined guardrails that adapt to real-time signals.
+   - Implement [Open Policy Agent (OPA)](https://www.openpolicyagent.org/), [AWS SCP](https://aws.amazon.com/service-catalog/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) for dynamic, code-defined guardrails that adapt to real-time signals.
 
 1. **Collaborate & Share**
    - As a leading zero-trust example, share your experiences or case studies with other public sector bodies, referencing cross-government events or guidance from [GDS / NCSC communities](https://www.ncsc.gov.uk/).

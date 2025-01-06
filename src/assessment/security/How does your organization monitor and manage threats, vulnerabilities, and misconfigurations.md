@@ -92,7 +92,7 @@ Below are **rapidly actionable** ways to evolve beyond a standard disclosure pol
 
 1. **Combine with Automated Tools**
    - Don’t rely solely on external reports. Implement scanning solutions:
-     - [AWS Inspector, Azure Security Center, GCP Security Command Center, OCI Vulnerability Scanning Service](https://TODO) for internal checks.
+     - [AWS Inspector](https://aws.amazon.com/inspector/), [Azure Security Center](https://learn.microsoft.com/en-us/azure/security-center/security-center-introduction), [GCP Security Command Center](https://cloud.google.com/security-command-center/docs/overview), or [OCI Vulnerability Scanning Service](https://www.oracle.com/cloud/free/oci-training/) for internal checks.
 
 By defining clear internal SLAs, integrating vulnerability disclosures into dev workflows, offering small acknowledgments or bounties, releasing summary fix timelines, and coupling with continuous scanning tools, you can both refine external disclosure processes and ensure robust internal vulnerability management.
 
@@ -122,7 +122,7 @@ Below are **rapidly actionable** ways to enhance scanning and regular assessment
 1. **Expand to Multi-Layer Scans**
 
    - Combine SAST (code scanning), DAST (runtime scanning), container image scanning, and OS patch checks:
-     - e.g., [AWS CodeGuru Security + Amazon Inspector, Azure DevOps Security + Container Registry scanning, GCP Security Command Center + container analysis, OCI Vulnerability Scanning + DevOps scanning integrations](https://TODO).
+     - e.g., [AWS CodeGuru Security + Amazon Inspector](https://aws.amazon.com/codeguru/security/), [Azure DevOps Security + Container Registry scanning](https://learn.microsoft.com/en-us/azure/devops/security/overview), [GCP Security Command Center + container analysis](https://cloud.google.com/security-command-center/docs/overview), or [OCI Vulnerability Scanning + DevOps scanning integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt Real-Time or Daily Scans**
 
@@ -131,7 +131,7 @@ Below are **rapidly actionable** ways to enhance scanning and regular assessment
 
 1. **Integrate with SIEM**
 
-   - Forward scanning results to a SIEM (e.g., [AWS Security Hub, Azure Sentinel, GCP Chronicle, OCI Security Advisor](https://TODO)) for correlation with logs:
+   - Forward scanning results to a SIEM (e.g., [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP Chronicle](https://cloud.google.com/chronicle), or [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/)) for correlation with logs:
      - Helps identify patterns or repeated vulnerabilities.
 
 1. **Prioritize with Risk Scoring**
@@ -174,7 +174,7 @@ Below are **rapidly actionable** methods to refine proactive threat hunting and 
 1. **Enable Automated Quarantine**
 
    - If a container, VM, or instance shows malicious behavior, automatically isolate it:
-     - e.g., [AWS Lambda or Azure Functions triggered by SIEM alerts, GCP Cloud Functions for security event response, OCI cloud events integration](https://TODO).
+     - e.g., [AWS Lambda or Azure Functions triggered by SIEM alerts](https://aws.amazon.com/lambda/), [GCP Cloud Functions for security event response](https://cloud.google.com/functions/docs/security-and-permissions), or [OCI cloud events integration](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Add Forensic Readiness**
 
@@ -217,7 +217,7 @@ Below are **rapidly actionable** ways to optimize comprehensive security operati
 1. **Incorporate HPC/AI Security**
 
    - If you run HPC or AI/ML workloads, ensure specialized testing in these unique environments:
-     - referencing [AWS HPC Competency, Azure HPC, GCP HPC solutions, OCI HPC, plus relevant HPC security guidelines](https://TODO).
+     - referencing [AWS HPC Competency](https://aws.amazon.com/hpc/), [Azure HPC](https://learn.microsoft.com/en-us/azure/hpc-cache/), [GCP HPC solutions](https://cloud.google.com/hpc), or [OCI HPC](https://www.oracle.com/cloud/free/oci-training/), plus relevant HPC security guidelines.
 
 1. **Include Third-Party Supply Chain**
 
@@ -226,7 +226,7 @@ Below are **rapidly actionable** ways to optimize comprehensive security operati
 1. **Automate Cross-Cloud Security**
 
    - If you operate in AWS, Azure, GCP, or OCI simultaneously, unify threat detection:
-     - e.g., employing [SIEM solutions like Azure Sentinel, Splunk, or AWS Security Hub aggregator across multiple accounts](https://TODO).
+     - e.g., employing [SIEM solutions like Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [Splunk](https://www.splunk.com/), or [AWS Security Hub aggregator](https://aws.amazon.com/security-hub/) across multiple accounts.
 
 1. **Public-Sector Collaboration**
 

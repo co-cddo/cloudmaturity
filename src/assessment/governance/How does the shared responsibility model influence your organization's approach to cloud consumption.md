@@ -100,10 +100,10 @@ Here are **rapidly actionable** ways to convert basic awareness into structured 
 1. **Embed Responsibility Checks in CI/CD**
 
    - Include reminders or tasks in your pipeline for whichever responsibilities your organization must handle:
-     - [AWS CodePipeline or CodeBuild custom checks (e.g., verifying AMI patch level)](https://TODO)
-     - [Azure DevOps Pipelines with tasks that confirm you’ve installed required agents or configured OS patches in your images](https://TODO)
-     - [GCP Cloud Build triggers that ensure container images used in GKE are up-to-date with your patches](https://TODO)
-     - [OCI DevOps pipelines that check the latest patch version for your base images or container builds](https://TODO)
+     - [AWS CodePipeline or CodeBuild custom checks (e.g., verifying AMI patch level)](https://aws.amazon.com/codepipeline/)
+     - [Azure DevOps Pipelines with tasks that confirm you’ve installed required agents or configured OS patches in your images](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-vm-extension)
+     - [GCP Cloud Build triggers that ensure container images used in GKE are up-to-date with your patches](https://cloud.google.com/build)
+     - [OCI DevOps pipelines that check the latest patch version for your base images or container builds](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Set Up Basic Compliance Rules**
 

@@ -35,7 +35,7 @@ Below are **rapidly actionable** steps to start formalizing a cloud-oriented app
 
 1. **Host Internal Workshops**
 
-   - Invite vendor public sector teams ([AWS Public Sector](https://TODO), [Azure for Government](https://TODO), [GCP Public Sector](https://TODO), or [Oracle Government Cloud](https://TODO)) for short awareness sessions on cloud fundamentals and cost management.
+   - Invite vendor public sector teams ([AWS Public Sector](https://aws.amazon.com/public-sector/), [Azure for Government](https://azure.microsoft.com/en-us/resources/cloud-computing-for-government/), [GCP Public Sector](https://cloud.google.com/public-sector), or [Oracle Government Cloud](https://www.oracle.com/government/)) for short awareness sessions on cloud fundamentals and cost management.
 
 1. **Create a Cloud Starter Doc**
 
@@ -77,7 +77,7 @@ Below are **rapidly actionable** ideas to strengthen informal cloud expertise:
 1. **Formalize a Community of Practice**
 
    - Schedule monthly or bi-monthly meetups for cloud practitioners across teams:
-     - They can share success stories, approaches to cost management, referencing [AWS Cost Explorer](https://TODO), [Azure Cost Management](https://TODO), or [GCP Cloud Billing dashboards](https://TODO).
+     - They can share success stories, approaches to cost management, referencing [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/cost-explorer-getting-started.html), [Azure Cost Management](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis), or [GCP Cloud Billing dashboards](https://cloud.google.com/billing/docs/how-to/view-billing-data).
 
 1. **Create a Shared Knowledge Base**
 
@@ -126,10 +126,10 @@ Below are **rapidly actionable** strategies to improve a formal Cloud COE:
 1. **Offer Self-Service Catalogs or Templates**
 
    - Provide easily consumable Terraform or CloudFormation templates for standard workloads:
-     - [AWS Service Catalog or AWS CloudFormation StackSets for consistent rollout](https://TODO)
-     - [Azure Blueprints or Bicep modules for repeatable environment creation](https://TODO)
-     - [GCP Deployment Manager or Terraform modules with COE-defined best practices](https://TODO)
-     - [OCI Resource Manager stacks with governance policies baked in](https://TODO)
+     - [AWS Service Catalog or AWS CloudFormation StackSets for consistent rollout](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)
+     - [Azure Blueprints or Bicep modules for repeatable environment creation](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
+     - [GCP Deployment Manager or Terraform modules with COE-defined best practices](https://cloud.google.com/deployment-manager/docs/overview)
+     - [OCI Resource Manager stacks with governance policies baked in](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
 
 1. **Extend COE Services**
 
@@ -179,10 +179,10 @@ Below are **rapidly actionable** steps to further integrate the COE’s standard
 1. **Introduce Automated Compliance Checks**
 
    - Bake COE standards into automated tools:
-     - [AWS Config or AWS Service Control Policies to enforce resource configurations organization-wide](https://TODO)
-     - [Azure Policy for controlling VM sizes, storage encryption, or tagging compliance](https://TODO)
-     - [GCP Organization Policy for restricting certain resources or requiring encryption at rest](https://TODO)
-     - [OCI Security Zones or IAM policies that enforce certain best practices across compartments](https://TODO)
+     - [AWS Config or AWS Service Control Policies to enforce resource configurations organization-wide](https://docs.aws.amazon.com/config/latest/developerguide/config-overview.html)
+     - [Azure Policy for controlling VM sizes, storage encryption, or tagging compliance](https://docs.microsoft.com/en-us/azure/azure-policy/overview)
+     - [GCP Organization Policy for restricting certain resources or requiring encryption at rest](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     - [OCI Security Zones or IAM policies that enforce certain best practices across compartments](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/securityzones.htm)
    - This ensures no team can inadvertently deviate from security or cost baselines.
 
 1. **Enable On-Demand Cloud Labs/Training**
@@ -230,10 +230,10 @@ Below are **rapidly actionable** ways to refine an already advanced operating mo
 1. **Introduce FinOps Practices**
 
    - Link cost optimization more tightly with developer workflows:
-     - [AWS Cost Explorer or AWS Budgets integrated into Slack/Teams alerts for cost anomalies](https://TODO)
-     - [Azure Cost Management with real-time dashboards for DevOps squads to see cost implications of their deployments](https://TODO)
-     - [GCP Billing Export + Looker Studio or BigQuery for self-service cost visibility](https://TODO)
-     - [OCI Cost Analysis or Budgets for real-time notifications on cost spikes shared with product teams](https://TODO)
+     - [AWS Cost Explorer or AWS Budgets integrated into Slack/Teams alerts for cost anomalies](https://docs.aws.amazon.com/cost-management/latest/userguide/cost-explorer-getting-started.html)
+     - [Azure Cost Management with real-time dashboards for DevOps squads to see cost implications of their deployments](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis)
+     - [GCP Billing Export + Looker Studio or BigQuery for self-service cost visibility](https://cloud.google.com/billing/docs/how-to/view-billing-data)
+     - [OCI Cost Analysis or Budgets for real-time notifications on cost spikes shared with product teams](https://docs.oracle.com/en-us/iaas/Content/Cost/Concepts/cost-analysis.htm)
 
 1. **Enable Self-Service Data & AI**
 

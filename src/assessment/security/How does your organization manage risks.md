@@ -97,7 +97,7 @@ Below are **rapidly actionable** improvements:
 
 1. **Leverage Some Automation**
    - For cloud-specific issues, consider vendor solutions:
-     - [AWS Security Hub or AWS Config for scanning misconfigurations, Azure Advisor or Azure Security Center, GCP Security Command Center, OCI Security Advisor](https://TODO) can highlight recognized cloud security or cost risks to feed into your register.
+     - [AWS Security Hub or AWS Config for scanning misconfigurations](https://aws.amazon.com/security-hub/), [Azure Advisor or Azure Security Center](https://learn.microsoft.com/en-us/azure/advisor/advisor-overview), [GCP Security Command Center](https://cloud.google.com/security-command-center/docs/overview), or [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/) can highlight recognized cloud security or cost risks to feed into your register.
 
 By adopting a consistent template, hosting cross-project reviews, summarizing top risks in an organizational-level register, using a shared tool or repository, and partly automating detection of cloud security concerns, you advance from ad-hoc spreadsheets to a more coordinated approach.
 
@@ -127,7 +127,7 @@ Below are **rapidly actionable** ways to expand your formal risk register proces
 1. **Introduce Real-Time Updates or Alerts**
 
    - If new vulnerabilities or breaches occur, staff must promptly add or update a risk in the register:
-     - Possibly integrate with [AWS Security Hub, Azure DevOps, GCP Security scans, or OCI Security Advisor for quick notifications](https://TODO).
+     - Possibly integrate with [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/), [GCP Security scans](https://cloud.google.com/security-command-center/docs/overview), or [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/) for quick notifications.
 
 1. **Measure Risk Reduction Over Time**
 
@@ -176,7 +176,7 @@ Below are **rapidly actionable** ways to optimize integrated, centrally overseen
 
 1. **Incorporate Cloud-Specific Telemetry**
 
-   - Feed alerts from [AWS Security Hub, Azure Sentinel, GCP SCC, or OCI Security Advisor](https://TODO) directly into your central risk management system:
+   - Feed alerts from [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP SCC](https://cloud.google.com/security-command-center/docs/overview), or [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/) directly into your central risk management system:
      - Automates new risk entries or risk re-scoring when a new vulnerability emerges.
 
 1. **Advance Real-Time Dashboards**
@@ -225,12 +225,12 @@ Below are **rapidly actionable** ways to enhance an already advanced, proactive 
 1. **Adopt AI/ML for Predictive Risk**
 
    - Tools or scripts that detect emerging patterns before they become major issues:
-     - e.g., anomalous cost spikes or security logs flagged by [AWS DevOps Guru, Azure Sentinel ML, GCP Security Command Center with ML, OCI advanced analytics](https://TODO).
+     - e.g., anomalous cost spikes or security logs flagged by [AWS DevOps Guru](https://aws.amazon.com/devops-guru/), [Azure Sentinel ML](https://learn.microsoft.com/en-us/azure/sentinel/ml-analytics), [GCP Security Command Center with ML](https://cloud.google.com/security-command-center/docs/overview), or [OCI advanced analytics](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Integrate Risk with DevSecOps**
 
    - Show real-time risk scores in CI/CD pipelines, halting deployments if a new "High" or "Critical" risk is detected:
-     - e.g., referencing [AWS CodePipeline gates, Azure DevOps approvals, GCP Cloud Build triggers, OCI DevOps pipeline policy checks](https://TODO).
+     - e.g., referencing [AWS CodePipeline gates](https://aws.amazon.com/codepipeline/features/), [Azure DevOps approvals](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals), [GCP Cloud Build triggers](https://cloud.google.com/cloud-build/docs/triggers), or [OCI DevOps pipeline policy checks](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Multi-Cloud or Hybrid Risk Consolidation**
 

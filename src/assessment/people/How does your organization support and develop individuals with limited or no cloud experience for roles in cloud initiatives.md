@@ -31,10 +31,10 @@ Below are **rapidly actionable** ways to establish a baseline development path f
 1. **Create a Simple Cloud Familiarization Resource**
 
    - Gather free vendor tutorials:
-     - [AWS free training modules or AWS Skill Builder basics](https://TODO)
-     - [Azure Fundamentals on Microsoft Learn](https://TODO)
-     - [GCP Google Cloud Skill Boost introduction courses](https://TODO)
-     - [OCI free introductory courses from Oracle University](https://TODO)
+     - [AWS free training modules or AWS Skill Builder basics](https://aws.amazon.com/training/skill-builder/)
+     - [Azure Fundamentals on Microsoft Learn](https://learn.microsoft.com/en-us/certifications/azure-fundamentals/)
+     - [GCP Google Cloud Skill Boost introduction courses](https://cloud.google.com/training/free-tier)
+     - [OCI free introductory courses from Oracle University](https://www.oracle.com/cloud/free/oci-training/)
    - Provide a short list of recommended links to staff wanting to explore cloud concepts.
 
 1. **Encourage Self-Study**
@@ -130,24 +130,24 @@ Below are **rapidly actionable** ways to enhance structured training/mentorship:
 1. **Formalize Cloud Learning Journeys**
 
    - e.g., for a DevOps role, define stepping stones from fundamental vendor certs to advanced specializations:
-     - [AWS Solutions Architect -> SysOps -> Security, Azure Administrator -> DevOps Engineer, GCP Associate Engineer -> Professional Architect, etc.](https://TODO)
+     - AWS Solutions Architect -> SysOps -> Security, Azure Administrator -> DevOps Engineer, GCP Associate Engineer -> Professional Architect, etc.
 
-1. **Adopt Official Vendor Training Programs**
+2. **Adopt Official Vendor Training Programs**
 
    - Microsoft’s Enterprise Skills Initiative, AWS Skills Guild, GCP Professional Services training, or Oracle University courses:
      - This can scale up in a structured manner, referencing [NIST NICE framework for workforce skill mapping](https://csrc.nist.gov/).
 
-1. **Establish Time Allocations**
+3. **Establish Time Allocations**
 
    - Guarantee staff a certain number of hours per month for cloud labs, workshops, or self-paced learning:
      - Minimizes conflicts with daily duties.
 
-1. **Integrate Real Projects into Training**
+4. **Integrate Real Projects into Training**
 
    - Let trainees apply new skills to an actual low-risk project, e.g., a new serverless prototype or a cost optimization analysis:
      - Encourages practical retention.
 
-1. **Track & Reward Milestones**
+5. **Track & Reward Milestones**
    - Summarize achievements in quarterly stats: "Team X gained five new AWS Solutions Architect Associates."
    - Offer small recognition or career advancement alignment with [Civil Service success profiles](https://www.gov.uk/government/publications/success-profiles).
 

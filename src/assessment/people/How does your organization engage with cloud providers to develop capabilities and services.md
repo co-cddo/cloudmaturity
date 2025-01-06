@@ -31,10 +31,10 @@ Below are **rapidly actionable** steps to move from minimal interaction to stron
 1. **Set Up Basic Account Management Contacts**
 
    - Register for at least a standard or free tier of support:
-     - [AWS: Basic or Developer Support, at least using AWS Support Center](https://TODO)
-     - [Azure: Basic support with options for pay-as-you-go Dev/Test support or higher tiers](https://TODO)
-     - [GCP: Basic project-level support with an option to upgrade for faster response times](https://TODO)
-     - [OCI: Basic limited support plus the option to engage an Oracle Cloud support representative](https://TODO)
+     - [AWS: Basic or Developer Support, at least using AWS Support Center](https://docs.aws.amazon.com/awssupport/latest/user/Welcome.html)
+     - [Azure: Basic support with options for pay-as-you-go Dev/Test support or higher tiers](https://docs.microsoft.com/en-us/azure/azure-portal/supportability/how-to-manage-azure-support-request)
+     - [GCP: Basic project-level support with an option to upgrade for faster response times](https://cloud.google.com/support)
+     - [OCI: Basic limited support plus the option to engage an Oracle Cloud support representative](https://docs.oracle.com/en-us/iaas/Content/Support/Concepts/support-overview.htm)
    - This ensures you know how to escalate issues if they arise.
 
 1. **Use Vendor Documentation & Quickstart Guides**
@@ -45,10 +45,10 @@ Below are **rapidly actionable** steps to move from minimal interaction to stron
 1. **Attend Vendor Webinars/Events**
 
    - Cloud providers frequently hold free webinars or online sessions geared to public sector or cost optimization:
-     - [AWS Public Sector Webinars or re:Invent recordings](https://TODO)
-     - [Azure Government events or on-demand training for Gov customers](https://TODO)
-     - [GCP for Public Sector resource library or Next conference sessions](https://TODO)
-     - [OCI Government Cloud user sessions or Oracle University free training modules](https://TODO)
+     - [AWS Public Sector Webinars or re:Invent recordings](https://aws.amazon.com/events/webinars/)
+     - [Azure Government events or on-demand training for Gov customers](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-government-training)
+     - [GCP for Public Sector resource library or Next conference sessions](https://cloud.google.com/public-sector/resources)
+     - [OCI Government Cloud user sessions or Oracle University free training modules](https://www.oracle.com/cloud/government/training/)
 
 1. **Implement Minimal Security Best Practices**
 
@@ -86,10 +86,10 @@ Below are **rapidly actionable** ways to evolve beyond basic support:
 1. **Establish Regular Check-Ins with Account Managers**
 
    - Request quarterly calls or monthly updates:
-     - [AWS TAM (Technical Account Manager) if using Business or Enterprise Support](https://TODO)
-     - [Azure Customer Success resources or Partner-led success check-ins](https://TODO)
-     - [GCP Technical Account Manager or Customer Engineer sessions for deeper insights](https://TODO)
-     - [OCI dedicated support managers if you have Enhanced or Premier tiers](https://TODO)
+     - [AWS TAM (Technical Account Manager) if using Business or Enterprise Support](https://aws.amazon.com/premiumsupport/business-support/)
+     - [Azure Customer Success resources or Partner-led success check-ins](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-government-training)
+     - [GCP Technical Account Manager or Customer Engineer sessions for deeper insights](https://cloud.google.com/support)
+     - [OCI dedicated support managers if you have Enhanced or Premier tiers](https://docs.oracle.com/en-us/iaas/Content/Support/Concepts/support-overview.htm)
 
 1. **Request Architecture/Cost Reviews**
 
@@ -104,7 +104,10 @@ Below are **rapidly actionable** ways to evolve beyond basic support:
 1. **Leverage Vendor Communities & Forums**
 
    - For quick answers outside official tickets, use:
-     - [AWS re:Post, Azure Forums, GCP Community, Oracle Cloud Community, etc.](https://TODO)
+     - [AWS re:Post](https://repost.aws/en/groups/cloud-community)
+     - [Azure Forums](https://azure.microsoft.com/en-us/support/forums/)
+     - [GCP Community](https://cloud.google.com/community)
+     - [OCI Community](https://community.oracle.com/community/cloud-infrastructure)
 
 1. **Institute a "Support Triage" Process**
    - Define guidelines on which issues can be solved internally vs. escalated to the provider to expedite resolution times.
@@ -138,10 +141,10 @@ Below are **rapidly actionable** ways to leverage regular provider interaction m
 1. **Pursue Dedicated Technical Engagement**
 
    - If your usage or complexity warrants it, consider an advanced support tier:
-     - [AWS Enterprise or AWS Proactive Engagement with AWS Shield if you need strong DDoS protection](https://TODO)
-     - [Azure Premier Support or Microsoft FastTrack for specialized migrations](https://TODO)
-     - [GCP’s Premium Support or Technical Account Manager services for in-depth architecture collaboration](https://TODO)
-     - [OCI’s Advanced Customer Support for proactive monitoring and best practice alignment](https://TODO)
+     - [AWS Enterprise or AWS Proactive Engagement with AWS Shield if you need strong DDoS protection](https://aws.amazon.com/premiumsupport/business-support/)
+     - [Azure Premier Support or Microsoft FastTrack for specialized migrations](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-government-training)
+     - [GCP’s Premium Support or Technical Account Manager services for in-depth architecture collaboration](https://cloud.google.com/support)
+     - [OCI’s Advanced Customer Support for proactive monitoring and best practice alignment](https://docs.oracle.com/en-us/iaas/Content/Support/Concepts/support-overview.htm)
 
 1. **Targeted Workshops for Specific Projects**
 
@@ -203,7 +206,10 @@ Below are **rapidly actionable** ways to deepen this proactive, tailored relatio
 1. **Engage in Co-Innovation Programs**
 
    - Some providers run "co-innovation labs" or pilot programs specifically for public sector transformations:
-     - [AWS Public Sector Innovation Sandbox, Azure Gov Hackathons, GCP Public Sector pilots, OCI Government Co-development, etc.](https://TODO)
+     - [AWS Public Sector Innovation Sandbox](https://aws.amazon.com/public-sector/innovation-sandbox/)
+     - [Azure Gov Hackathons](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-government-training)
+     - [GCP Public Sector pilots](https://cloud.google.com/public-sector/resources)
+     - [OCI Government Co-development](https://www.oracle.com/cloud/government/co-development/)
 
 1. **Formalize an Enhancement Request Process**
 
@@ -252,7 +258,7 @@ Even at this advanced level, below are **rapidly actionable** ways to refine a s
 1. **Integrate Multi-Cloud or Hybrid Strategies**
 
    - If relevant, partner with multiple providers while ensuring secure, consistent management:
-     - [NCSC multi-cloud security considerations or vendor multi-cloud bridging solutions (Azure Arc, GCP Anthos, AWS Outposts, OCI Interconnect)](https://TODO).
+     - [NCSC multi-cloud security considerations](https://www.ncsc.gov.uk/collection/cloud-security) or vendor multi-cloud bridging solutions ([Azure Arc](https://docs.microsoft.com/en-us/azure/azure-arc/overview), [GCP Anthos](https://cloud.google.com/anthos), [AWS Outposts](https://aws.amazon.com/outposts/), [OCI Interconnect](https://docs.oracle.com/en-us/iaas/Content/Interconnect/Concepts/interconnectoverview.htm))
 
 1. **Spearhead Cross-Government Collaborations**
 

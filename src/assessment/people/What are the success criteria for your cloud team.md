@@ -84,7 +84,7 @@ Below are **rapidly actionable** steps to advance beyond PoC-based success:
 1. **Establish Operational Metrics**
 
    - Expand criteria from "PoC completed" to performance, security, or user satisfaction metrics:
-     - e.g., incorporate [AWS Well-Architected Framework checks](https://TODO), [Azure Advisor recommendations](https://TODO), or equivalent GCP/OCI best practices.
+     - e.g., incorporate [AWS Well-Architected Framework checks](https://aws.amazon.com/well-architected/), [Azure Advisor recommendations](https://learn.microsoft.com/en-us/azure/advisor/advisor-overview), or equivalent GCP/OCI best practices.
 
 1. **Involve Real End Users**
 
@@ -126,11 +126,11 @@ Below are **rapidly actionable** ways to refine production-based success criteri
 1. **Track Key Operational Metrics**
 
    - e.g., Mean Time to Recovery (MTTR), cost per transaction, or user satisfaction scores:
-     - Gather real-time data via [AWS CloudWatch, Azure Monitor, GCP Cloud Logging/Monitoring, or OCI Observability metrics](https://TODO).
+     - Gather real-time data via [AWS CloudWatch](https://aws.amazon.com/cloudwatch/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/), [GCP Cloud Logging/Monitoring](https://cloud.google.com/logging), [OCI Observability](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Integrate Security & Cost Efficiency**
 
-   - Expand success definitions to include passing regular security scans (like [AWS Inspector, Azure Defender for Cloud, GCP Security Scanner, OCI Security Advisor](https://TODO)) or achieving cost baseline targets:
+   - Expand success definitions to include passing regular security scans (like [AWS Inspector](https://aws.amazon.com/inspector/), [Azure Defender for Cloud](https://learn.microsoft.com/en-us/azure/defender-for-cloud/), [GCP Security Scanner](https://cloud.google.com/security-scanner), [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/)) or achieving cost baseline targets:
      - e.g., "90% of resources use auto-scaling and adhere to tagging policies referencing [NCSC supply chain or security guidelines](https://www.ncsc.gov.uk/)."
 
 1. **Define a Full Lifecycle Approach**
@@ -174,13 +174,13 @@ Below are **rapidly actionable** strategies to further scale prototypes into cor
 1. **Adopt Advanced HA/DR Strategies**
 
    - Implement multi-region or multi-availability zone approaches:
-     - [AWS multi-AZ databases and cross-region replication, Azure paired regions, GCP multi-regional storage, OCI cross-region replication](https://TODO).
+     - [AWS multi-AZ databases and cross-region replication](https://aws.amazon.com/about/global-infrastructure/regions_az/), [Azure paired regions](https://learn.microsoft.com/en-us/azure/best-practices-availability-paired-regions), [GCP multi-regional storage](https://cloud.google.com/storage/docs/cross-region-replication), [OCI cross-region replication](https://www.oracle.com/cloud/free/oci-training/).
    - Ensures resilience for business-critical workloads.
 
 1. **Integrate Automated Security Testing**
 
    - If not already, embed scanning in CI/CD pipelines:
-     - e.g., [AWS CodeGuru Security or Amazon Inspector, Azure DevOps with GitHub Advanced Security, GCP Cloud Build with container scanning, OCI DevOps scanning integrations](https://TODO).
+     - e.g., [AWS CodeGuru Security or Amazon Inspector](https://aws.amazon.com/codeguru/), [Azure DevOps with GitHub Advanced Security](https://learn.microsoft.com/en-us/azure/devops/organizations/security/github-advanced-security), [GCP Cloud Build with container scanning](https://cloud.google.com/build/docs/container-scanning), [OCI DevOps scanning integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Quantify Impact**
 
@@ -190,7 +190,7 @@ Below are **rapidly actionable** strategies to further scale prototypes into cor
 1. **Develop or Refine Architectural Standards**
 
    - Document best practices for microservices, HPC, AI/ML, or data analytics workloads.
-   - Reference [AWS Well-Architected / Azure Architecture Center / GCP Architecture Framework / OCI Reference Architectures](https://TODO).
+   - Reference [AWS Well-Architected](https://aws.amazon.com/well-architected/), [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/), [GCP Architecture Framework](https://cloud.google.com/architecture/framework), [OCI Reference Architectures](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Collaborate with Other Public Sector Entities**
    - If you’re delivering critical services, consider knowledge sharing or secondments with local councils, NHS, or central departments:

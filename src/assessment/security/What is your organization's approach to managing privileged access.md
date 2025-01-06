@@ -40,7 +40,7 @@ Below are **rapidly actionable** steps to move beyond ad-hoc privileged credenti
 1. **Introduce MFA for Admins**
 
    - Even if no vaulting solution is in place, require multi-factor authentication on any privileged ID:
-     - [AWS IAM with MFA, Azure AD PIM MFA, GCP IAM accounts with MFA, OCI IAM MFA](https://TODO).
+     - [AWS IAM with MFA](https://aws.amazon.com/iam/features/mfa), [Azure AD PIM MFA](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-how-to-activate-role), [GCP IAM accounts with MFA](https://cloud.google.com/identity/docs/mfa-usage), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Document & Track Privileged Roles**
 
@@ -48,7 +48,7 @@ Below are **rapidly actionable** steps to move beyond ad-hoc privileged credenti
      - Helps see if too many administrators exist.
 
 1. **Schedule Transition to Vaulting**
-   - Plan to adopt a basic password vault or secrets manager, e.g., [AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, OCI Vault](https://TODO) for privileged credentials in the next 3-6 months.
+   - Plan to adopt a basic password vault or secrets manager, e.g., [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview), [GCP Secret Manager](https://cloud.google.com/secret-manager), or [OCI Vault](https://www.oracle.com/cloud/free/oci-training/) for privileged credentials in the next 3-6 months.
 
 By creating a short privileged access policy, enforcing unique admin accounts with MFA, documenting roles, and preparing for a vault-based solution, you significantly reduce the risk of ad-hoc mismanagement and insider threats.
 
@@ -78,7 +78,7 @@ Below are **rapidly actionable** steps to refine centralized vaulting:
 1. **Enable Automatic Credential Rotation**
 
    - Many vault solutions allow scheduled rotation:
-     - e.g., [AWS Secrets Manager rotation, Azure Key Vault versioning, GCP Secret Manager rotation, OCI Vault key rotation](https://TODO).
+     - e.g., [AWS Secrets Manager rotation](https://aws.amazon.com/secrets-manager/), [Azure Key Vault versioning](https://learn.microsoft.com/en-us/azure/key-vault/general/overview), [GCP Secret Manager rotation](https://cloud.google.com/secret-manager), or [OCI Vault key rotation](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Integrate with CI/CD**
 
@@ -92,7 +92,7 @@ Below are **rapidly actionable** steps to refine centralized vaulting:
 1. **Adopt Fine-Grained Access Policies**
 
    - Distinguish read-only vs. rotate vs. admin permissions in the vault.
-   - e.g., [AWS IAM roles for Secrets Manager, Azure RBAC for Key Vault, GCP IAM for Secret Manager, OCI IAM compartment policies](https://TODO).
+   - e.g., [AWS IAM roles for Secrets Manager](https://aws.amazon.com/secrets-manager/), [Azure RBAC for Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide), [GCP IAM for Secret Manager](https://cloud.google.com/secret-manager), or [OCI IAM compartment policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Add Multi-Factor for Vault Access**
    - Ensure staff need an extra factor to retrieve privileged credentials from the vault, referencing [NCSC’s MFA best practice](https://www.ncsc.gov.uk/).
@@ -125,7 +125,7 @@ Below are **rapidly actionable** ways to strengthen identity administration and 
 1. **Integrate OTP into Break-Glass Procedures**
 
    - When a user escalates to super-admin, require a one-time password from the vault, valid only for a few minutes:
-     - e.g., [AWS STS with short-lived tokens, Azure PIM with just-in-time, GCP short-lived role tokens, OCI dynamic tokens](https://TODO).
+     - e.g., [AWS STS with short-lived tokens](https://aws.amazon.com/sts/), [Azure PIM with just-in-time](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-how-to-activate-role), [GCP short-lived role tokens](https://cloud.google.com/iam/docs/short-lived-credentials), or [OCI dynamic tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Use Security Keys for Admin Access**
 
@@ -135,7 +135,7 @@ Below are **rapidly actionable** ways to strengthen identity administration and 
 1. **Automate Logging & Alerts**
 
    - Generate real-time alerts if an OTP is used or if multiple OTP requests appear in quick succession:
-     - e.g., [AWS CloudWatch Events, Azure Monitor Alerts, GCP Logging Alerts, OCI Notifications](https://TODO).
+     - e.g., [AWS CloudWatch Events](https://aws.amazon.com/cloudwatch/), [Azure Monitor Alerts](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview), [GCP Logging Alerts](https://cloud.google.com/logging/docs/monitoring-logs/alerts), or [OCI Notifications](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Schedule Regular Privileged Access Reviews**
 
@@ -173,7 +173,7 @@ Below are **rapidly actionable** ways to elevate automated, risk-based privilege
 1. **Incorporate Threat Intelligence**
 
    - If certain privileged users or roles are targeted in known campaigns, your system should adapt policies:
-     - e.g., [Azure Sentinel threat intel, AWS Security Hub with curated feeds, GCP Chronicle threat analysis, OCI threat intelligence integrations](https://TODO).
+     - e.g., [Azure Sentinel threat intel](https://learn.microsoft.com/en-us/azure/sentinel/), [AWS Security Hub with curated feeds](https://aws.amazon.com/security-hub/), [GCP Chronicle threat analysis](https://cloud.google.com/chronicle), or [OCI threat intelligence integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Tie Access to Device Posture**
 
@@ -183,12 +183,12 @@ Below are **rapidly actionable** ways to elevate automated, risk-based privilege
 1. **Implement Granular Observability**
 
    - For privileged sessions, record or track commands in near real-time, ensuring immediate response to suspicious operations:
-     - e.g., [AWS CloudTrail with CloudWatch Alarms, Azure Monitor logs for advanced admin actions, GCP Admin Activity logs, OCI Audit logs + notifications](https://TODO).
+     - e.g., [AWS CloudTrail with CloudWatch Alarms](https://aws.amazon.com/cloudwatch/), [Azure Monitor logs for advanced admin actions](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/), [GCP Admin Activity logs](https://cloud.google.com/logging/docs/audit), or [OCI Audit logs + notifications](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Automate Just-in-Time (JIT) Access**
 
    - Use short-lived role escalations that revert automatically:
-     - e.g., [Azure Privileged Identity Management, GCP ephemeral role grants, AWS STS custom sessions, OCI dynamic group tokens with time-based constraints](https://TODO).
+     - e.g., [Azure Privileged Identity Management](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-how-to-activate-role), [GCP ephemeral role grants](https://cloud.google.com/iam/docs/short-lived-credentials), [AWS STS custom sessions](https://aws.amazon.com/sts/), or [OCI dynamic group tokens with time-based constraints](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Regular Security Drills**
    - Conduct scenario testing or red team exercises focusing on privileged accounts.
@@ -222,7 +222,7 @@ Below are **rapidly actionable** ways to optimize context-aware just-in-time pri
 1. **Deeper Risk-Based Logic**
 
    - For example, if a user requests privileged access on a weekend, the system demands additional manager approval or a second hardware token.
-   - referencing [Azure PIM advanced policies, AWS Access Analyzer with context conditions, GCP short-lived roles + custom conditions, OCI advanced IAM condition checks](https://TODO).
+   - referencing [Azure PIM advanced policies](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-how-to-activate-role), [AWS Access Analyzer with context conditions](https://aws.amazon.com/access-analyzer/), [GCP short-lived roles + custom conditions](https://cloud.google.com/iam/docs/short-lived-credentials), or [OCI advanced IAM condition checks](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enforce Micro-Segmentation**
 
@@ -237,11 +237,11 @@ Below are **rapidly actionable** ways to optimize context-aware just-in-time pri
 1. **Enable AI/ML Anomaly Detection**
 
    - Tools or scripts that examine normal patterns for each user, alerting on out-of-norm privileged requests:
-     - e.g., [Azure Sentinel ML rules, AWS DevOps Guru or Security Hub custom checks, GCP Chronicle AI, OCI Security Advisor advanced analytics](https://TODO).
+     - e.g., [Azure Sentinel ML rules](https://learn.microsoft.com/en-us/azure/sentinel/), [AWS DevOps Guru or Security Hub custom checks](https://aws.amazon.com/security-hub/), [GCP Chronicle AI](https://cloud.google.com/chronicle), or [OCI Security Advisor advanced analytics](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Regular Multi-Stakeholder Drills**
    - Include managers, security leads, and senior leadership in simulated privileged escalation misuse scenarios:
-     - refining the after-action wash-up process, referencing [NIST SP 800-61 incident handling guide or NCSC red/purple teaming](https://csrc.nist.gov/).
+     - refining the after-action wash-up process, referencing [NIST SP 800-61 incident handling guide or red/purple teaming](https://csrc.nist.gov/).
 
 By enhancing risk-based logic in JIT access, pairing ephemeral privileges with micro-segmentation, adopting real-time forensic checks, integrating AI-based anomaly detection, and practicing multi-stakeholder drills, you perfect a context-aware just-in-time privileged access model that secures the most sensitive operations in the UK public sector context.
 

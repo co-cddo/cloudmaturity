@@ -31,18 +31,18 @@ Below are **rapidly actionable** steps to move from reactive observation to basi
 1. **Implement Simple Infrastructure Monitoring**
 
    - Use vendor-native dashboards or minimal agent-based metrics:
-     - [AWS CloudWatch Metrics for CPU, memory, disk usage on EC2 or containers](https://TODO)
-     - [Azure Monitor for VMs, App Service, or container workloads with built-in default metrics](https://TODO)
-     - [GCP Cloud Monitoring for CPU/memory metrics, standard dashboards for GCE/GKE](https://TODO)
-     - [OCI Monitoring for compute instances, block storage, or load balancers](https://TODO)
+     - [AWS CloudWatch Metrics for CPU, memory, disk usage on EC2 or containers](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Get_Started.html)
+     - [Azure Monitor for VMs, App Service, or container workloads with built-in default metrics](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/monitor-azure-resource)
+     - [GCP Cloud Monitoring for CPU/memory metrics, standard dashboards for GCE/GKE](https://cloud.google.com/monitoring/docs/monitoring-getting-started)
+     - [OCI Monitoring for compute instances, block storage, or load balancers](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Concepts/monitoringoverview.htm)
 
 1. **Enable Basic Application Logging**
 
    - Configure logs to flow into a centralized service:
-     - [AWS CloudWatch Logs or AWS OpenSearch for aggregated log analysis](https://TODO)
-     - [Azure Log Analytics workspace for collecting app logs from multiple sources](https://TODO)
-     - [GCP Cloud Logging for storing structured logs from GCE, GKE, or App Engine](https://TODO)
-     - [OCI Logging for collecting logs from compute and other OCI services](https://TODO)
+     - [AWS CloudWatch Logs or AWS OpenSearch for aggregated log analysis](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
+     - [Azure Log Analytics workspace for collecting app logs from multiple sources](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview)
+     - [GCP Cloud Logging for storing structured logs from GCE, GKE, or App Engine](https://cloud.google.com/logging/docs/overview)
+     - [OCI Logging for collecting logs from compute and other OCI services](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm)
 
 1. **Set Up Minimal Alerts**
 
@@ -86,10 +86,10 @@ Below are **rapidly actionable** ways to integrate your basic monitoring tools:
 1. **Consolidate Metrics in a Central Dashboard**
 
    - If each cloud service has its own dashboard, unify them in a single view:
-     - [AWS CloudWatch or Amazon Managed Grafana for multi-service metrics in one place](https://TODO)
-     - [Azure Monitor plus Azure Dashboards or Azure Workbooks for cross-resource visibility](https://TODO)
-     - [GCP Cloud Monitoring dashboards that unify multiple projects or services in one location](https://TODO)
-     - [OCI Observability and Management with a single console for compute, storage, and networking metrics](https://TODO)
+     - [AWS CloudWatch or Amazon Managed Grafana for multi-service metrics in one place](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Get_Started.html)
+     - [Azure Monitor plus Azure Dashboards or Azure Workbooks for cross-resource visibility](https://docs.microsoft.com/en-us/azure/azure-monitor/essentials/monitor-azure-resource)
+     - [GCP Cloud Monitoring dashboards that unify multiple projects or services in one location](https://cloud.google.com/monitoring/docs/monitoring-getting-started)
+     - [OCI Observability and Management with a single console for compute, storage, and networking metrics](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
 
 1. **Automate Alerts**
 
@@ -141,27 +141,27 @@ Below are **rapidly actionable** ways to deepen integration of infrastructure an
 1. **Adopt APM (Application Performance Monitoring) Tools**
 
    - Pair your infrastructure metrics with application tracing or performance insight:
-     - [AWS X-Ray for distributed tracing, or Amazon CloudWatch Synthetics for synthetic user tests](https://TODO)
-     - [Azure Application Insights for .NET/Java/Node.js performance monitoring, integrated with Azure Monitor logs](https://TODO)
-     - [GCP Cloud Trace, Cloud Profiler, or Cloud Logging to see request-level performance in real-time](https://TODO)
-     - [OCI Application Performance Monitoring for tracing, metrics, and log correlation in Oracle Cloud](https://TODO)
+     - [AWS X-Ray for distributed tracing, or Amazon CloudWatch Synthetics for synthetic user tests](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Getting_Started.html)
+     - [Azure Application Insights for .NET/Java/Node.js performance monitoring, integrated with Azure Monitor logs](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
+     - [GCP Cloud Trace, Cloud Profiler, or Cloud Logging to see request-level performance in real-time](https://cloud.google.com/trace/docs/overview)
+     - [OCI Application Performance Monitoring for tracing, metrics, and log correlation in Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
 
-1. **Implement Unified Logging and Metric Correlation**
+2. **Implement Unified Logging and Metric Correlation**
 
    - Use a logging solution that supports correlation IDs or distributed traces:
      - This helps you pivot from an app error to the underlying VM or container metrics in one step.
 
-1. **Create Multi-Dimensional Alerts**
+3. **Create Multi-Dimensional Alerts**
 
    - Instead of CPU-based alerts alone, combine them with application error rates or queue backlog:
      - e.g., alert only if CPU > 80% AND 5xx errors spike, reducing false positives.
 
-1. **Enable Synthetic Monitoring**
+4. **Enable Synthetic Monitoring**
 
    - Set up automated user-journey or transaction tests:
      - If these fail, you know the user experience is impacted, not just backend metrics.
 
-1. **Refine SLA/SLI/SLO**
+5. **Refine SLA/SLI/SLO**
    - If you measure high-level "availability," break it down into a more precise measure (e.g., 99.9% of user requests under 2 seconds).
    - Align your alerts to these SLOs so your monitoring focuses on real user impact.
 
@@ -199,10 +199,10 @@ Below are **rapidly actionable** methods to push partial integration to near ful
 1. **Enhance Distributed Tracing**
 
    - If you only partially track transactions across microservices, unify them:
-     - [AWS X-Ray or AWS OpenSearch Observability to connect traces from multiple apps to infrastructure metrics](https://TODO)
-     - [Azure Monitor’s distributed tracing via Application Insights, bridging logs from multiple services in a single map](https://TODO)
-     - [GCP Cloud Trace integrated with Cloud Logging, correlating logs, metrics, and traces automatically](https://TODO)
-     - [OCI Application Performance Monitoring with distributed trace correlation to compute or container metrics in Oracle Cloud](https://TODO)
+     - [AWS X-Ray or AWS OpenSearch Observability to connect traces from multiple apps to infrastructure metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Getting_Started.html)
+     - [Azure Monitor’s distributed tracing via Application Insights, bridging logs from multiple services in a single map](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
+     - [GCP Cloud Trace integrated with Cloud Logging, correlating logs, metrics, and traces automatically](https://cloud.google.com/trace/docs/overview)
+     - [OCI Application Performance Monitoring with distributed trace correlation to compute or container metrics in Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
 
 1. **Adopt an Observability-First Culture**
 
@@ -257,10 +257,10 @@ Below are **rapidly actionable** ways to refine an already integrated "single pa
 1. **Leverage AI/ML-Based Anomaly Detection**
 
    - Some vendor-native or third-party solutions can preemptively spot unusual patterns:
-     - [AWS DevOps Guru or Amazon Lookout for Metrics integrated into CloudWatch for anomaly alerts](https://TODO)
-     - [Azure Monitor with ML-based Smart Detection or GitHub Advanced Security Insights for app patterns](https://TODO)
-     - [GCP AIOps solutions with Cloud Operations, or third-party solutions integrated into Cloud Logging and Cloud Monitoring](https://TODO)
-     - [OCI Logging Analytics or other AI-based tools for pattern recognition, outlier detection in logs and metrics](https://TODO)
+     - [AWS DevOps Guru or Amazon Lookout for Metrics integrated into CloudWatch for anomaly alerts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Get_Started.html)
+     - [Azure Monitor with ML-based Smart Detection or GitHub Advanced Security Insights for app patterns](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
+     - [GCP AIOps solutions with Cloud Operations, or third-party solutions integrated into Cloud Logging and Cloud Monitoring](https://cloud.google.com/trace/docs/overview)
+     - [OCI Logging Analytics or other AI-based tools for pattern recognition, outlier detection in logs and metrics](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
 
 1. **Implement Self-Healing**
 

@@ -31,7 +31,7 @@ Below are **rapidly actionable** steps to bolster security beyond mere user vett
 1. **Implement the Principle of Least Privilege**
 
    - Even fully vetted staff should not have more privileges than needed:
-     - E.g., use [AWS IAM roles with distinct privileges, Azure RBAC, GCP IAM with granular roles, OCI compartments/policies](https://TODO).
+     - E.g., use [AWS IAM roles with distinct privileges](https://aws.amazon.com/iam/features/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM with granular roles](https://cloud.google.com/iam/docs/overview), or [OCI compartments/policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Mandate MFA for Privileged Accounts**
 
@@ -45,7 +45,7 @@ Below are **rapidly actionable** steps to bolster security beyond mere user vett
 1. **Track Changes & Access**
 
    - Enable audit logs for all privileged actions, storing them in an immutable store:
-     - e.g., [AWS CloudTrail + Amazon S3 with SSE-KMS encryption, Azure Monitor with immutable storage, GCP Logging with Bucket Lock, OCI Logging with WORM policies](https://TODO).
+     - e.g., [AWS CloudTrail + Amazon S3 with SSE-KMS encryption](https://aws.amazon.com/cloudtrail/), [Azure Monitor with immutable storage](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-retention-archive), [GCP Logging with Bucket Lock](https://cloud.google.com/logging/docs/storage/bucket-lock), or [OCI Logging with WORM policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Periodic Re-Vetting**
    - Re-assess staff in privileged positions every 1-2 years or upon role changes to ensure continuous alignment with [NCSC or departmental clearance policies](https://www.gov.uk/government/publications/hmg-personnel-security-controls).
@@ -78,7 +78,7 @@ Below are **rapidly actionable** steps for robust logging:
 1. **Centralize Logs**
 
    - Collect logs from all key systems into a single location:
-     - [AWS CloudWatch Logs or Amazon S3, Azure Monitor Logs or Log Analytics, GCP Cloud Logging, OCI Logging service](https://TODO).
+     - [AWS CloudWatch Logs or Amazon S3](https://aws.amazon.com/cloudwatch/), [Azure Monitor Logs or Log Analytics](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-retention-archive), [GCP Cloud Logging](https://cloud.google.com/logging/docs/), or [OCI Logging service](https://www.oracle.com/cloud/free/oci-training/).
    - Simplifies correlation and search.
 
 1. **Implement Basic Retention Policies**
@@ -97,7 +97,7 @@ Below are **rapidly actionable** steps for robust logging:
 
 1. **Plan for Future SIEM**
    - Keep in mind an upgrade to a security information and event management tool or advanced logging solution in the next 6-12 months:
-     - e.g., [AWS Security Hub, Azure Sentinel, GCP Security Command Center, OCI Security Advisor integrations](https://TODO).
+     - e.g., [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP Security Command Center](https://cloud.google.com/security-command-center/docs/overview), or [OCI Security Advisor integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 By centralizing logs, defining retention policies, restricting log access, employing basic alerts, and charting a path to a future SIEM or advanced monitoring approach, you progress from minimal log compliance to meaningful protective monitoring for privileged accounts.
 
@@ -132,7 +132,7 @@ Below are **rapidly actionable** steps to enhance local audit log checks:
 1. **Adopt a Central Logging Approach**
 
    - Even if you keep local logs, replicate them to a central store or SIEM:
-     - [AWS S3 or Amazon ES, Azure Monitor Logs, GCP Logging + BigQuery, OCI Logging Analytics](https://TODO).
+     - [AWS S3 or Amazon ES](https://aws.amazon.com/s3/), [Azure Monitor Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-retention-archive), [GCP Logging + BigQuery](https://cloud.google.com/logging/docs/bigquery), or [OCI Logging Analytics](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Establish an Alerting Mechanism**
 
@@ -173,7 +173,7 @@ Below are **rapidly actionable** ways to enhance a centralized, immutable audit 
 
 1. **Incorporate a SIEM or Security Analytics**
 
-   - e.g., [Splunk, AWS Security Hub, Azure Sentinel, GCP Chronicle, OCI Logging Analytics with advanced detection](https://TODO):
+   - e.g., [Splunk](https://www.splunk.com/), [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP Chronicle](https://cloud.google.com/chronicle/docs/), or [OCI Logging Analytics with advanced detection](https://www.oracle.com/cloud/free/oci-training/):
      - Gains rapid threat detection, correlation, and visual dashboards.
 
 1. **Define Tiered Log Retention**
@@ -188,7 +188,7 @@ Below are **rapidly actionable** ways to enhance a centralized, immutable audit 
 1. **Add Instant Alerts for High-Risk Actions**
 
    - e.g., attempts to disable logging, repeated root-level changes, or suspicious escalations.
-   - Tools like [AWS CloudWatch Alarms, Azure Monitor Alerts, GCP Logging Alerts, OCI Notifications integrations](https://TODO) are typically easy to set up.
+   - Tools like [AWS CloudWatch Alarms](https://aws.amazon.com/cloudwatch/), [Azure Monitor Alerts](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview), [GCP Logging Alerts](https://cloud.google.com/logging/docs/alerts), or [OCI Notifications integrations](https://www.oracle.com/cloud/free/oci-training/) are typically easy to set up.
 
 1. **Cross-department Collaboration**
    - If your service interacts with other public sector organizations, consider shared logging approaches for end-to-end traceability.
@@ -233,7 +233,7 @@ Below are **rapidly actionable** suggestions to deepen advanced log audits and l
 1. **Adopt Chain-of-Custody Tools**
 
    - Use tamper-evident hashing or digital signatures on log files:
-     - e.g., storing in [AWS S3 Glacier with Vault Lock, Azure immutable storage with WORM, GCP Bucket Lock, OCI Object Storage with retention policies](https://TODO).
+     - e.g., storing in [AWS S3 Glacier with Vault Lock](https://aws.amazon.com/s3/), [Azure immutable storage with WORM](https://learn.microsoft.com/en-us/azure/storage/blobs/blob-soft-delete-overview), [GCP Bucket Lock](https://cloud.google.com/logging/docs/storage/bucket-lock), or [OCI Object Storage with retention policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Engage with Legal/HR for Pre-Agreed Procedures**
 

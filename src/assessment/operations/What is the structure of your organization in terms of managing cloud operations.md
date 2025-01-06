@@ -37,18 +37,18 @@ Below are **rapidly actionable** steps to move beyond developer-exclusive cloud 
 1. **Introduce Minimal Automated Monitoring & Alerts**
 
    - Ensure developers aren’t manually checking logs. Use built-in tools:
-     - [AWS CloudWatch or AWS Health Dashboard to spot issues proactively](https://TODO)
-     - [Azure Monitor alerts for performance anomalies or security signals](https://TODO)
-     - [GCP Cloud Logging & Monitoring with real-time alerting for errors/spikes](https://TODO)
-     - [OCI Monitoring & Notifications for resource or cost anomalies](https://TODO)
+     - [AWS CloudWatch or AWS Health Dashboard to spot issues proactively](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html)
+     - [Azure Monitor alerts for performance anomalies or security signals](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview)
+     - [GCP Cloud Logging & Monitoring with real-time alerting for errors/spikes](https://cloud.google.com/logging/docs/monitoring)
+     - [OCI Monitoring & Notifications for resource or cost anomalies](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Concepts/monitoringoverview.htm)
 
 1. **Implement Basic Infrastructure as Code**
 
    - If developers manage cloud resources manually via console, introduce:
-     - [AWS CloudFormation, AWS CDK, or Terraform for consistent deployments](https://TODO)
-     - [Azure Resource Manager (Bicep), or Terraform modules for standard infrastructure patterns](https://TODO)
-     - [GCP Deployment Manager or Terraform to keep code-based environment definitions](https://TODO)
-     - [OCI Resource Manager or Terraform for replicable resource creation](https://TODO)
+     - [AWS CloudFormation, AWS CDK, or Terraform for consistent deployments](https://docs.aws.amazon.com/cloudformation/index.html)
+     - [Azure Resource Manager (Bicep), or Terraform modules for standard infrastructure patterns](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
+     - [GCP Deployment Manager or Terraform to keep code-based environment definitions](https://cloud.google.com/deployment-manager/docs/overview)
+     - [OCI Resource Manager or Terraform for replicable resource creation](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
 
 1. **Add a Cloud Security Checklist**
 
@@ -183,7 +183,7 @@ Below are **rapidly actionable** ways to optimize the hybrid approach:
 1. **Standardize Tools and Processes**
 
    - Require both in-house and vendor teams to adopt a single set of CI/CD pipelines or logging solutions:
-     - e.g., [AWS CodePipeline or Azure DevOps for build/test/deploy, with shared logging in CloudWatch/Azure Monitor/GCP Logging/OCI Logging](https://TODO).
+     - e.g., [AWS CodePipeline or Azure DevOps for build/test/deploy, with shared logging in CloudWatch/Azure Monitor/GCP Logging/OCI Logging](https://docs.aws.amazon.com/codepipeline/latest/userguide/what-is-codepipeline.html)
    - This ensures seamless handoffs and consistent security posture.
 
 1. **Define Clear Responsibilities**
@@ -244,8 +244,8 @@ Below are **rapidly actionable** ways to refine an already dedicated in-house cl
 
 1. **Implement Policy-as-Code and FinOps**
 
-   - Automate compliance (e.g., [OPA or vendor-based policy enforcements like AWS SCPs, Azure Policy, GCP Organization Policy, OCI Security Zones](https://TODO)) across accounts or projects.
-   - Integrate cost visibility into daily dev processes, referencing [NCSC supply chain or financial governance], or [NIST SP guidelines on cost management].
+   - Automate compliance (e.g., [OPA](https://www.openpolicyagent.org/) or vendor-based policy enforcements like [AWS SCPs](https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagement.html), [Azure Policy](https://docs.microsoft.com/en-us/azure/azure-policy/overview), [GCP Organization Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/securityzones.htm)) across accounts or projects.
+   - Integrate cost visibility into daily dev processes, referencing [NCSC supply chain or financial governance](https://www.ncsc.gov.uk/collection/supply-chain-security), or [NIST SP guidelines on cost management](https://csrc.nist.gov/publications/detail/sp/800-160/final).
 
 1. **Champion Innovations**
 

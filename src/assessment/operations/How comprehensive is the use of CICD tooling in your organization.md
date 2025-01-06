@@ -31,10 +31,10 @@ Below are **rapidly actionable** steps to adopt a basic CI/CD foundation:
 1. **Begin with Simple Scripting**
 
    - Automate part of your build or test process via scripts:
-     - [AWS CLI or AWS CodeBuild basic usage to build and package your application](https://TODO)
-     - [Azure CLI or Azure DevOps basic Pipeline to compile code and run tests](https://TODO)
-     - [GCP Cloud Build minimal setup for building container images or running test commands](https://TODO)
-     - [OCI DevOps CI features to define a basic build process in your Oracle Cloud environment](https://TODO)
+     - [AWS CLI or AWS CodeBuild basic usage to build and package your application](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
+     - [Azure CLI or Azure DevOps basic Pipeline to compile code and run tests](https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops)
+     - [GCP Cloud Build minimal setup for building container images or running test commands](https://cloud.google.com/cloud-build/docs/quickstart)
+     - [OCI DevOps CI features to define a basic build process in your Oracle Cloud environment](https://docs.oracle.com/en-us/iaas/Content/devops/using/create_buildpipeline.htm)
 
 1. **Implement Basic Automated Testing**
 
@@ -81,16 +81,17 @@ Below are **rapidly actionable** ways to broaden CI/CD usage:
 1. **Establish a Centralized CI/CD Reference**
 
    - Create an internal wiki or repository showcasing how leading teams set up their pipelines:
-     - e.g., an example pipeline for .NET in [Azure DevOps Pipelines or GitHub Actions](https://TODO), or a Java pipeline in [AWS CodePipeline](https://TODO).
+     - For example, an example pipeline for .NET in [Azure DevOps Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops) or [GitHub Actions](https://github.com/microsoft/azure-devops-dotnet-samples/blob/main/azure-pipelines.yml).
+     - A Java pipeline in [AWS CodePipeline](https://github.com/aws-samples/building-java-apps-using-code-pipeline).
    - Encourage other teams to replicate successful patterns.
 
 1. **Provide or Recommend CI/CD Tools**
 
    - Suggest a small set of commonly supported tools:
-     - [AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy for automated build/test/deploy in AWS](https://TODO)
-     - [Azure DevOps Pipelines or GitHub Actions for building apps, running tests, and pushing to Azure resources](https://TODO)
-     - [GCP Cloud Build, with Deploy capabilities or GitHub integration for container-based apps](https://TODO)
-     - [OCI DevOps for build, test, and deploy tasks within Oracle Cloud environments](https://TODO)
+     - [AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy for automated build/test/deploy in AWS](https://docs.aws.amazon.com/codepipeline/latest/userguide/welcome.html)
+     - [Azure DevOps Pipelines or GitHub Actions for building apps, running tests, and pushing to Azure resources](https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops)
+     - [GCP Cloud Build, with Deploy capabilities or GitHub integration for container-based apps](https://cloud.google.com/cloud-build)
+     - [OCI DevOps for build, test, and deploy tasks within Oracle Cloud environments](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
    - This consistency can reduce fragmentation.
 
 1. **Host Skill-Sharing Sessions**
@@ -160,7 +161,7 @@ Below are **rapidly actionable** ways to refine or unify CI/CD tool usage:
 
 1. **Consider a Central CI/CD Service for Key Use Cases**
    - Some organizations set up a central instance of Jenkins or a self-hosted GitLab/GitHub runner for teams to use, at least for shared services or highly regulated workloads.
-   - Others rely on cloud-native solutions like [AWS CodePipeline/CodeBuild](https://TODO), [Azure DevOps Pipelines](https://TODO), [GCP Cloud Build](https://TODO), or [OCI DevOps](https://TODO) for standardized approaches.
+   - Others rely on cloud-native solutions like [AWS CodePipeline/CodeBuild](<[https://](https://aws.amazon.com/codepipeline/)>), [Azure DevOps Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops&viewFallbackFrom=vsts), [GCP Cloud Build](https://cloud.google.com/build), or [OCI DevOps](https://www.oracle.com/pk/devops/devops-service/) for standardized approaches.
 
 By defining core CI/CD principles, documenting shared patterns, and selectively offering a central service or recommended tool, you maintain team autonomy while reaping benefits of consistent practices.
 
@@ -196,10 +197,10 @@ Below are **rapidly actionable** ways to refine widespread team-driven CI/CD:
 1. **Further Integrate Security (DevSecOps)**
 
    - Encourage each pipeline to include vulnerability scanning, license checks, and compliance validations:
-     - [AWS: Amazon Inspector or CodeGuru for security checks integrated into CodePipeline](https://TODO)
-     - [Azure DevOps: GitHub Advanced Security or Microsoft Defender for DevOps scanning in pipelines](https://TODO)
-     - [GCP Cloud Build: Automated security scanning via built-in or third-party tools (e.g., Snyk, Twistlock)](https://TODO)
-     - [OCI DevOps: Integrate vulnerability scanning for container images or code using third-party scanning solutions triggered in the pipeline](https://TODO)
+     - [AWS: Amazon Inspector or CodeGuru for security checks integrated into CodePipeline](https://docs.aws.amazon.com/codeguru/latest/security-ug/get-started-codepipeline.html)
+     - [Azure DevOps: GitHub Advanced Security or Microsoft Defender for DevOps scanning in pipelines](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-devops-introduction)
+     - [GCP Cloud Build: Automated security scanning via built-in or third-party tools (e.g., Snyk, Twistlock)](https://snyk.io/partners/google/)
+     - [OCI DevOps: Integrate vulnerability scanning for container images or code using third-party scanning solutions triggered in the pipeline](https://docs.oracle.com/en-us/iaas/Content/devops/using/scan-code.htm)
 
 1. **Standardize Basic Access & Observability**
 
@@ -247,10 +248,10 @@ Below are **rapidly actionable** ways to refine your standardized CI/CD practice
 1. **Adopt Pipeline-as-Code for All**
 
    - Store pipeline definitions in Git, ensuring changes undergo the same review as application code:
-     - [AWS CodePipeline definitions in YAML or using AWS CDK, version-controlled in GitHub/GitLab](https://TODO)
-     - [Azure YAML Pipelines or GitHub Actions workflows, all stored in code repositories](https://TODO)
-     - [GCP Cloud Build triggers defined in `cloudbuild.yaml`, fully version-controlled for each service](https://TODO)
-     - [OCI DevOps pipeline definitions maintained in Git, ensuring consistent versioned pipeline code](https://TODO)
+     - [AWS CodePipeline definitions in YAML or using AWS CDK, version-controlled in GitHub/GitLab](https://docs.aws.amazon.com/codepipeline/latest/userguide/working-with-pipelines.html)
+     - [Azure YAML Pipelines or GitHub Actions workflows, all stored in code repositories](https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-pipelines&tabs=yaml)
+     - [GCP Cloud Build triggers defined in `cloudbuild.yaml`, fully version-controlled for each service](https://cloud.google.com/build/docs/configuring-builds/create-basic-configuration)
+     - [OCI DevOps pipeline definitions maintained in Git, ensuring consistent versioned pipeline code](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
 1. **Implement Advanced Deployment Strategies**
 

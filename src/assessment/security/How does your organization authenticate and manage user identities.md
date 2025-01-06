@@ -36,15 +36,15 @@ Below are **rapidly actionable** suggestions to introduce at least a minimal lev
 1. **Centralize Authentication for Cloud Services**
 
    - Use vendor-native IAM or single sign-on capabilities:
-     - [AWS IAM with central AWS Organizations or AWS SSO for unified access](https://TODO)
-     - [Azure AD for consistent cloud identity management across Microsoft services](https://TODO)
-     - [GCP Identity with built-in IAM roles for Google Cloud resources](https://TODO)
-     - [OCI IAM compartments and policies for account management](https://TODO)
+     - [AWS IAM with central AWS Organizations or AWS SSO for unified access](https://aws.amazon.com/iam/features/sso/)
+     - [Azure AD for consistent cloud identity management across Microsoft services](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whatis)
+     - [GCP Identity with built-in IAM roles for Google Cloud resources](https://cloud.google.com/iam/docs/overview)
+     - [OCI IAM compartments and policies for account management](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Start Logging Identity Events**
 
    - At a minimum, enable auditing of logins, password resets, or privilege changes:
-     - [AWS CloudTrail, Azure Monitor, GCP Cloud Logging, OCI Audit Logs](https://TODO)
+     - [AWS CloudTrail](https://aws.amazon.com/cloudtrail/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [GCP Cloud Logging](https://cloud.google.com/logging), [OCI Audit Logs](https://www.oracle.com/cloud/free/oci-training/)
    - This ensures you have some data to reference if suspicious activity occurs.
 
 1. **Establish a Simple Governance Policy**
@@ -83,10 +83,10 @@ Below are **rapidly actionable** ways to automate and strengthen your identity p
 1. **Deploy Automated Audits**
 
    - For each cloud environment, enable identity-related checks:
-     - [AWS Config rules (e.g., "IAM password policy compliance") or AWS Security Hub for identity checks](https://TODO)
-     - [Azure Policy enforcing password policy, Azure Security Center, or Microsoft Defender for Identity](https://TODO)
-     - [GCP Cloud Asset Inventory + IAM Policy Analyzer or GCP Security Command Center checks](https://TODO)
-     - [OCI Security Advisor or IAM policy checks integrated with compartments/policies](https://TODO)
+     - [AWS Config rules (e.g., "IAM password policy compliance") or AWS Security Hub for identity checks](https://aws.amazon.com/config/)
+     - [Azure Policy enforcing password policy, Azure Security Center, or Microsoft Defender for Identity](https://learn.microsoft.com/en-us/azure/defender-for-identity/overview)
+     - [GCP Cloud Asset Inventory + IAM Policy Analyzer or GCP Security Command Center checks](https://cloud.google.com/asset-inventory/docs/overview)
+     - [OCI Security Advisor or IAM policy checks integrated with compartments/policies](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Enforce Basic MFA for Privileged Accounts**
 
@@ -101,7 +101,7 @@ Below are **rapidly actionable** ways to automate and strengthen your identity p
 1. **Adopt Single Sign-On (SSO)**
 
    - Use a single IdP (Identity Provider) for all cloud accounts, e.g.:
-     - [AWS SSO or Azure AD SSO solutions, GCP Identity Federation, or OCI integration with enterprise IdPs](https://TODO).
+     - [AWS SSO or Azure AD SSO solutions](https://aws.amazon.com/sso/), [GCP Identity Federation](https://cloud.google.com/identity/docs/overview), or [OCI integration with enterprise IdPs](https://www.oracle.com/cloud/free/oci-training/).
    - This reduces manual overhead and password sprawl.
 
 1. **Store Policies & Logs in a Central Repo**
@@ -136,24 +136,24 @@ Below are **rapidly actionable** ways to progress toward advanced identity autom
 1. **Expand MFA Requirements to All Users**
 
    - If only privileged users have 2FA, consider rolling out to all staff or external collaborators:
-     - e.g., [AWS, Azure, GCP, OCI support TOTP apps, hardware security keys, or SMS as fallback (not recommended if higher security needed)](https://TODO).
+     - e.g., AWS, Azure, GCP, OCI support TOTP apps, hardware security keys, or SMS as fallback (not recommended if higher security needed).
 
-1. **Use Role/Attribute-Based Access**
+2. **Use Role/Attribute-Based Access**
 
    - For each environment (AWS, Azure, GCP, OCI), define roles or groups with appropriate privileges:
      - Minimizes the risk of over-privileged accounts, referencing [NCSC’s least privilege principle](https://www.ncsc.gov.uk/).
 
-1. **Consolidate Identity Tools**
+3. **Consolidate Identity Tools**
 
    - If you’ve multiple sub-accounts or subscriptions, unify identity management via:
-     - [AWS Organizations + AWS SSO or Azure AD tenant-level controls, GCP Organization IAM, OCI compartments/policies with IDCS integration](https://TODO).
+     - [AWS Organizations + AWS SSO or Azure AD tenant-level controls](https://aws.amazon.com/sso/), [GCP Organization IAM](https://cloud.google.com/iam/docs/overview), [OCI compartments/policies with IDCS integration](https://www.oracle.com/cloud/free/oci-training/).
 
-1. **Integrate Automated Deprovisioning**
+4. **Integrate Automated Deprovisioning**
 
    - Tie identity systems to HR or staff rosters, automatically disabling accounts when a staff leaves or changes roles:
-     - e.g., [Azure AD user provisioning to SaaS apps, AWS SCIM integration, GCP Directory sync, OCI integration with enterprise directories](https://TODO).
+     - e.g., [Azure AD user provisioning to SaaS apps](https://learn.microsoft.com/en-us/azure/active-directory/app-provisioning/), [AWS SCIM integration](https://aws.amazon.com/scim/), [GCP Directory sync](https://cloud.google.com/identity/docs/overview), [OCI integration with enterprise directories](https://www.oracle.com/cloud/free/oci-training/).
 
-1. **Enhance Monitoring & Alerting**
+5. **Enhance Monitoring & Alerting**
    - Add real-time alerts for suspicious identity events:
      - e.g., multiple failed logins, sudden role escalations, or new key creation.
 
@@ -184,7 +184,7 @@ Below are **rapidly actionable** steps to elevate advanced identity management:
 
 1. **Adopt Conditional Access or Policy-based Access**
 
-   - e.g., [AWS IAM condition keys, Azure Conditional Access, GCP Access Context Manager, OCI IAM condition-based policies](https://TODO):
+   - e.g., [AWS IAM condition keys](https://aws.amazon.com/iam/features/), [Azure Conditional Access](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [GCP Access Context Manager](https://cloud.google.com/access-context-manager/docs/overview), [OCI IAM condition-based policies](https://www.oracle.com/cloud/free/oci-training/):
      - Restrict or grant access based on device compliance, location, or time-based rules.
 
 1. **Incorporate Just-In-Time (JIT) Privileges**
@@ -244,7 +244,7 @@ Even at the apex, below are **rapidly actionable** ways to further optimize:
 1. **Advanced Risk-Based Authentication**
 
    - Leverage vendor AI to detect unusual login behavior, then require step-up (MFA or manager approval):
-     - [AWS Cognito or Azure AD Conditional Access with risk-based sign-on, GCP Identity-Aware Proxy risk signals, OCI adaptive security policies](https://TODO).
+     - [AWS Cognito or Azure AD Conditional Access with risk-based sign-on](https://aws.amazon.com/cognito/), [GCP Identity-Aware Proxy risk signals](https://cloud.google.com/identity-aware-proxy/docs/overview), [OCI adaptive security policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt Policy-as-Code for Identity**
 

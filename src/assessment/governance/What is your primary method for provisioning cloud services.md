@@ -168,10 +168,10 @@ Below are **rapidly actionable** ways to expand your declarative automation:
 1. **Implement Automated Checks**
 
    - Use CI/CD pipelines to validate IaC templates before deployment:
-     - [AWS CodePipeline or GitHub Actions running `terraform validate`/`cfn-lint`/`bicep build` checks](https://TODO)
-     - [Azure DevOps Pipelines for Bicep or Terraform validation steps](https://TODO)
-     - [GCP Cloud Build triggers that run `terraform plan` or lint checks on your YAML templates](https://TODO)
-     - [OCI DevOps pipeline that validates Terraform scripts with `terraform plan` before applying changes in Oracle Cloud](https://TODO)
+     - [AWS CodePipeline or GitHub Actions running `terraform validate`/`cfn-lint`/`bicep build` checks](https://aws.amazon.com/codepipeline/)
+     - [Azure DevOps Pipelines for Bicep or Terraform validation steps](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-vm-extension)
+     - [GCP Cloud Build triggers that run `terraform plan` or lint checks on your YAML templates](https://cloud.google.com/build)
+     - [OCI DevOps pipeline that validates Terraform scripts with `terraform plan` before applying changes in Oracle Cloud](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Offer Incentives for Adoption**
    - e.g., Team metrics or internal recognition if all new deployments use IaC.

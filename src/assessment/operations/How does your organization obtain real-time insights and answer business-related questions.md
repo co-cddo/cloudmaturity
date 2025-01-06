@@ -41,19 +41,19 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
 1. **Adopt a Simple Visualization or BI Tool**
 
    - Introduce a basic tool that can produce automated reports from spreadsheets or CSV data:
-     - [AWS QuickSight with direct CSV uploads or minimal database connections](https://TODO)
-     - [Azure Power BI for quickly designing simple dashboards on Excel data](https://TODO)
-     - [GCP Data Studio (Looker Studio) connecting to Google Sheets or CSV data sources](https://TODO)
-     - [OCI Analytics Cloud for straightforward data visualizations](https://TODO)
+     - [AWS QuickSight with direct CSV uploads or minimal database connections](https://docs.aws.amazon.com/quicksight/latest/user/what-is.html)
+     - [Azure Power BI for quickly designing simple dashboards on Excel data](https://docs.microsoft.com/en-us/power-bi/fundamentals/service-get-started)
+     - [GCP Data Studio (Looker Studio) connecting to Google Sheets or CSV data sources](https://cloud.google.com/looker-studio/docs/get-started)
+     - [OCI Analytics Cloud for straightforward data visualizations](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
    - Even rudimentary dashboards reduce the SME dependency for repetitive questions.
 
 1. **Pilot a Data Lake or Central Data Repository**
 
    - Instead of storing departmental data in multiple ad hoc spreadsheets or on local drives, centralize it:
-     - [AWS S3-based data lake or AWS Glue for basic data cataloging](https://TODO)
-     - [Azure Data Lake Storage or Azure Synapse for integrated data ingestion](https://TODO)
-     - [GCP Cloud Storage / BigQuery for storing curated data sets](https://TODO)
-     - [OCI Object Storage or Data Integration for simpler data consolidation](https://TODO)
+     - [AWS S3-based data lake or AWS Glue for basic data cataloging](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
+     - [Azure Data Lake Storage or Azure Synapse for integrated data ingestion](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
+     - [GCP Cloud Storage / BigQuery for storing curated data sets](https://cloud.google.com/storage/docs/cloud-storage-transfer-service)
+     - [OCI Object Storage or Data Integration for simpler data consolidation](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
    - This central repository can feed into simple dashboards or queries.
 
 1. **Encourage a Data Buddy System**
@@ -95,10 +95,10 @@ Below are **rapidly actionable** ways to transition from basic delayed reporting
 1. **Explore Incremental Data Refresh**
 
    - Instead of daily or weekly full loads, adopt incremental or micro-batch processing:
-     - [AWS Glue or AWS Data Pipeline for partial updates, or AWS DMS for near real-time replication](https://TODO)
-     - [Azure Data Factory with scheduled incremental copies, or Azure Synapse for micro-batches](https://TODO)
-     - [GCP Dataflow for near real-time streaming from Pub/Sub or database change logs](https://TODO)
-     - [OCI Streaming + OCI Data Integration for event-driven data ingestion in smaller intervals](https://TODO)
+     - [AWS Glue or AWS Data Pipeline for partial updates, or AWS DMS for near real-time replication](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
+     - [Azure Data Factory with scheduled incremental copies, or Azure Synapse for micro-batches](https://docs.microsoft.com/en-us/azure/data-factory/concepts-incremental-copy)
+     - [GCP Dataflow for near real-time streaming from Pub/Sub or database change logs](https://cloud.google.com/dataflow/docs/concepts/dataflow-service-overview)
+     - [OCI Streaming + OCI Data Integration for event-driven data ingestion in smaller intervals](https://docs.oracle.com/en-us/iaas/Content/Streaming/Concepts/streamingoverview.htm)
 
 1. **Add Near Real-Time Dashboards**
 
@@ -108,10 +108,10 @@ Below are **rapidly actionable** ways to transition from basic delayed reporting
 1. **Improve Data Quality Checks**
 
    - If data quality or cleaning is causing delays, implement automated checks:
-     - [AWS Data Wrangler or AWS Glue DataBrew for quick transformations and validations](https://TODO)
-     - [Azure Data Factory Mapping Data Flows or Power BI Dataflows for lightweight transformation checks](https://TODO)
-     - [GCP Dataflow templates or Dataprep for cleaning inbound data in near real-time](https://TODO)
-     - [OCI Data Integration transformations and validation for consistent data ingestion flows](https://TODO)
+     - [AWS Data Wrangler or AWS Glue DataBrew for quick transformations and validations](https://docs.aws.amazon.com/glue/latest/dg/data-wrangler.html)
+     - [Azure Data Factory Mapping Data Flows or Power BI Dataflows for lightweight transformation checks](https://docs.microsoft.com/en-us/azure/data-factory/concepts-data-flow-overview)
+     - [GCP Dataflow templates or Dataprep for cleaning inbound data in near real-time](https://cloud.google.com/dataflow/docs/concepts/dataflow-service-overview)
+     - [OCI Data Integration transformations and validation for consistent data ingestion flows](https://docs.oracle.com/en-us/iaas/Content/DataIntegration/Concepts/dataintegrationoverview.htm)
 
 1. **Set Timeliness KPIs**
 
@@ -151,30 +151,30 @@ Below are **rapidly actionable** ways to enhance your partially real-time analyt
 1. **Adopt Stream Processing for More Datasets**
 
    - If only a few sources stream data, expand to additional streams:
-     - [AWS Kinesis Data Streams + AWS Lambda transformations for broader event ingestion](https://TODO)
-     - [Azure Event Hubs or Azure Stream Analytics to parse real-time logs from multiple sources](https://TODO)
-     - [GCP Pub/Sub + Dataflow for continuous ingestion and transformation of new data flows](https://TODO)
-     - [OCI Streaming for real-time ingestion from on-prem or cloud apps, enabling near real-time dashboards](https://TODO)
+     - [AWS Kinesis Data Streams + AWS Lambda transformations for broader event ingestion](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_Kinesis_Data_Streams.html)
+     - [Azure Event Hubs or Azure Stream Analytics to parse real-time logs from multiple sources](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)
+     - [GCP Pub/Sub + Dataflow for continuous ingestion and transformation of new data flows](https://cloud.google.com/pubsub/docs/overview)
+     - [OCI Streaming for real-time ingestion from on-prem or cloud apps, enabling near real-time dashboards](/TODO)
 
-1. **Consolidate Real-Time Dashboards**
+2. **Consolidate Real-Time Dashboards**
 
    - Instead of multiple tools, unify around one main real-time analytics platform:
-     - e.g., [AWS QuickSight SPICE for interactive, sub-minute refresh or Amazon Managed Grafana for real-time queries](https://TODO)
-     - [Azure Power BI premium workspaces for near real-time dashboards or Azure Monitor workbooks](https://TODO)
-     - [GCP Looker Studio (Data Studio) real-time connectors or Google BigQuery BI Engine for in-memory analytics](https://TODO)
-     - [OCI Analytics Cloud or third-party dashboards integrated with OCI data streams and objects](https://TODO)
+     - e.g., [AWS QuickSight SPICE for interactive, sub-minute refresh or Amazon Managed Grafana for real-time queries](https://docs.aws.amazon.com/quicksight/latest/user/spice.html)
+     - [Azure Power BI premium workspaces for near real-time dashboards or Azure Monitor workbooks](https://docs.microsoft.com/en-us/power-bi/service-premium-what-is)
+     - [GCP Looker Studio (Data Studio) real-time connectors or Google BigQuery BI Engine for in-memory analytics](https://cloud.google.com/looker-studio/docs/get-started)
+     - [OCI Analytics Cloud or third-party dashboards integrated with OCI data streams and objects](https://www.oracle.com/uk/business-analytics/analytics-platform/)
 
-1. **Enhance Data Integration**
+3. **Enhance Data Integration**
 
    - If certain data sets remain batch-only, try hybrid ingestion methods:
      - e.g., partial streaming for time-critical fields, scheduled for large historical loads.
 
-1. **Conduct Cross-Team Drills**
+4. **Conduct Cross-Team Drills**
 
    - Run mock scenarios (e.g., a surge in user transactions or a security event) to test if real-time analytics allow quick response.
    - Identify where missing or delayed data hampers resolution.
 
-1. **Leverage Gov/Industry Guidance**
+5. **Leverage Gov/Industry Guidance**
    - For data handling and streaming best practices:
      - [NIST Big Data Interoperability Framework for scaling analytics solutions](https://www.nist.gov/programs-projects/big-data-interoperability-framework)
      - [NCSC best practices for monitoring and incident response](https://www.ncsc.gov.uk/section/keep-up-to-date/guidance)
@@ -211,11 +211,11 @@ Below are **rapidly actionable** ways to refine your advanced real-time analytic
 1. **Enhance Data Federation and Governance**
 
    - If data sits across multiple cloud or on-prem systems, implement a data mesh or robust governance policy:
-     - [AWS Lake Formation for centralized access management across multiple data sources, integrated with AWS Glue or Athena](https://TODO)
-     - [Azure Purview (Microsoft Purview) or Synapse for data discovery and lineage across the enterprise](https://TODO)
-     - [GCP Dataplex for a data mesh approach unifying data from BigQuery, Storage, etc.](https://TODO)
-     - [OCI Data Catalog and Governance solutions for a consistent metadata and policy layer](https://TODO)
-   - Ensure compliance with relevant [NCSC data security] and [NIST data governance] guidelines.
+     - [AWS Lake Formation for centralized access management across multiple data sources, integrated with AWS Glue or Athena](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
+     - [Azure Purview (Microsoft Purview) or Synapse for data discovery and lineage across the enterprise](https://docs.microsoft.com/en-us/azure/purview/overview)
+     - [GCP Dataplex for a data mesh approach unifying data from BigQuery, Storage, etc.](https://cloud.google.com/dataplex/docs/overview)
+     - [OCI Data Catalog and Governance solutions for a consistent metadata and policy layer](https://docs.oracle.com/en-us/iaas/Content/DataCatalog/Concepts/datacatalogoverview.htm)
+   - Ensure compliance with relevant [NCSC data security](https://www.ncsc.gov.uk/) and [NIST data governance](https://csrc.nist.gov/) guidelines.
 
 1. **Promote Self-Service BI**
 
@@ -225,10 +225,10 @@ Below are **rapidly actionable** ways to refine your advanced real-time analytic
 1. **Incorporate Automated Anomaly Detection**
 
    - Move beyond manual queries to ML-based insight:
-     - [AWS Lookout for Metrics or QuickSight Q for natural language queries and anomaly detection](https://TODO)
-     - [Azure Cognitive Services integrated with Power BI or Synapse analytics for predictive insights](https://TODO)
-     - [GCP Vertex AI or AutoML models that feed alerts into your real-time dashboards for outlier detection](https://TODO)
-     - [OCI Data Science or AI Services for anomaly detection on streaming data sets](https://TODO)
+     - [AWS Lookout for Metrics or QuickSight Q for natural language queries and anomaly detection](https://docs.aws.amazon.com/lookoutmetrics/latest/dev/what-is-lookoutmetrics.html)
+     - [Azure Cognitive Services integrated with Power BI or Synapse analytics for predictive insights](https://docs.microsoft.com/en-us/azure/cognitive-services/welcome)
+     - [GCP Vertex AI or AutoML models that feed alerts into your real-time dashboards for outlier detection](https://cloud.google.com/vertex-ai/docs/ml-ops/automl-tables)
+     - [OCI Data Science or AI Services for anomaly detection on streaming data sets](https://docs.oracle.com/en-us/iaas/Content/DataScience/Concepts/datascienceoverview.htm)
 
 1. **Support Data Literacy Initiatives**
 
@@ -277,18 +277,18 @@ Below are **rapidly actionable** ways to refine self-service real-time insights:
 1. **Introduce Natural Language or Conversational Queries**
 
    - Tools like:
-     - [AWS QuickSight Q or Athena-based solutions letting staff type questions in plain English](https://TODO)
-     - [Azure Power BI Q&A natural language engine for user-friendly querying](https://TODO)
-     - [GCP Looker Studio / BigQuery BI Engine with ML-based question answering features](https://TODO)
-     - [OCI Analytics solutions with AI-based language interfaces for data exploration](https://TODO)
+     - [AWS QuickSight Q or Athena-based solutions letting staff type questions in plain English](https://docs.aws.amazon.com/quicksight/latest/user/q.html)
+     - [Azure Power BI Q&A natural language engine for user-friendly querying](https://docs.microsoft.com/en-us/power-bi/collaborate-share/q-and-a-faq)
+     - [GCP Looker Studio / BigQuery BI Engine with ML-based question answering features](https://cloud.google.com/looker-studio/docs/get-started)
+     - [OCI Analytics solutions with AI-based language interfaces for data exploration](https://www.oracle.com/uk/business-analytics/analytics-platform/)
 
 1. **Automate Governance and Access Controls**
 
    - Ensure compliance with data protection regulations (e.g., UK GDPR). Implement dynamic row-level or column-level security for sensitive data:
-     - [AWS Lake Formation or AWS IAM-based row-level permissions in Athena/Redshift](https://TODO)
-     - [Azure Purview or row-level security in Power BI or Synapse Analytics](https://TODO)
-     - [GCP BigQuery row-level security or IAM-based data access policies](https://TODO)
-     - [OCI Data Catalog with fine-grained access management for different user roles](https://TODO)
+     - [AWS Lake Formation or AWS IAM-based row-level permissions in Athena/Redshift](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
+     - [Azure Purview or row-level security in Power BI or Synapse Analytics](https://docs.microsoft.com/en-us/azure/purview/overview)
+     - [GCP BigQuery row-level security or IAM-based data access policies](https://cloud.google.com/bigquery/docs/security-overview)
+     - [OCI Data Catalog with fine-grained access management for different user roles](https://docs.oracle.com/en-us/iaas/Content/DataCatalog/Concepts/datacatalogoverview.htm)
 
 1. **Integrate Predictive Insights in Dashboards**
 

@@ -36,7 +36,7 @@ Below are **rapidly actionable** steps to move beyond manual classification:
 1. **Introduce Basic Tooling**
 
    - For shared file systems or code repos, use built-in labeling or metadata:
-     - [Azure Information Protection, AWS Macie or S3 object tagging, GCP DLP + labeling, OCI data labeling approaches](https://TODO).
+     - [Azure Information Protection](https://learn.microsoft.com/en-us/azure/information-protection/), [AWS Macie or S3 object tagging](https://aws.amazon.com/macie/), [GCP DLP + labeling](https://cloud.google.com/dlp), or [OCI data labeling approaches](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Require Access Controls**
 
@@ -49,7 +49,7 @@ Below are **rapidly actionable** steps to move beyond manual classification:
      - Minimizes confusion or inconsistent labeling.
 
 1. **Plan for Automated Classification**
-   - In the next 3–6 months, evaluate solutions like [AWS Macie, Azure Purview, GCP DLP, or OCI Cloud Guard data detection](https://TODO) for partial automation.
+   - In the next 3–6 months, evaluate solutions like [AWS Macie](https://aws.amazon.com/macie/), [Azure Purview](https://learn.microsoft.com/en-us/azure/purview/), [GCP DLP](https://cloud.google.com/dlp), or [OCI Cloud Guard data detection](https://www.oracle.com/cloud/free/oci-training/) for partial automation.
 
 By introducing a simple classification scheme, adopting minimal tooling for labeling, ensuring basic least-privilege access, documenting a short classification process, and preparing for automated solutions, you create a more structured approach to data security than purely manual methods.
 
@@ -79,7 +79,7 @@ Below are **rapidly actionable** ways to strengthen centralized data security po
 1. **Implement Automated Policy Enforcement**
 
    - Tools that apply encryption, retention, or classification automatically, e.g.:
-     - [AWS KMS + S3 bucket policies, Azure Information Protection auto-labelling, GCP DLP auto-redaction, OCI encryption + data labeling solutions](https://TODO).
+     - [AWS KMS + S3 bucket policies](https://aws.amazon.com/kms/), [Azure Information Protection auto-labelling](https://learn.microsoft.com/en-us/azure/information-protection/), [GCP DLP auto-redaction](https://cloud.google.com/dlp), or [OCI encryption + data labeling solutions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Add Tiered Access**
 
@@ -89,7 +89,7 @@ Below are **rapidly actionable** ways to strengthen centralized data security po
 1. **Consolidate Data Stores**
 
    - If departmental data is scattered, unify them under controlled solutions:
-     - e.g., [Azure Purview, AWS Glue Data Catalog + Macie, GCP Data Catalog, OCI Data Catalog](https://TODO) for consistent policy application.
+     - e.g., [Azure Purview](https://learn.microsoft.com/en-us/azure/purview/), [AWS Glue Data Catalog + Macie](https://aws.amazon.com/glue/), [GCP Data Catalog](https://cloud.google.com/data-catalog), or [OCI Data Catalog](https://www.oracle.com/cloud/free/oci-training/) for consistent policy application.
 
 1. **Define a Data Lifecycle**
 
@@ -97,7 +97,7 @@ Below are **rapidly actionable** ways to strengthen centralized data security po
      - referencing [NCSC’s data management best practices, GOV.UK records management policies, or NIST retention guidance](https://www.gov.uk/government/organisations/national-archives).
 
 1. **Monitor for Policy Deviations**
-   - Tools like [AWS Config, Azure Policy, GCP Org Policy, OCI Security Zones](https://TODO) can detect if a new resource bypasses encryption or classification requirements.
+   - Tools like [AWS Config](https://aws.amazon.com/config/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) can detect if a new resource bypasses encryption or classification requirements.
 
 By automating policy enforcement, requiring tiered access for sensitive data, consolidating data stores, clarifying data lifecycle, and monitoring for policy anomalies, you refine your centralized data security approach, ensuring consistent coverage and minimal manual drift.
 
@@ -126,12 +126,12 @@ Below are **rapidly actionable** ways to expand limited monitoring:
 
 1. **Adopt or Expand DLP Tools**
 
-   - e.g., [Microsoft Purview DLP (Azure), AWS Macie for S3 data scanning, GCP DLP scanning, OCI Cloud Guard data scanning](https://TODO).
+   - e.g., [Microsoft Purview DLP (Azure)](https://learn.microsoft.com/en-us/azure/information-protection/information-protection-overview), [AWS Macie for S3 data scanning](https://aws.amazon.com/macie/), [GCP DLP scanning](https://cloud.google.com/dlp), or [OCI Cloud Guard data scanning](https://www.oracle.com/cloud/free/oci-training/).
    - Configurable for alerts on large data exports or suspicious file patterns.
 
 1. **Integrate SIEM for Correlation**
 
-   - e.g., [Azure Sentinel, AWS Security Hub / CloudWatch Logs, GCP Chronicle, OCI Security Advisor] for data exfil attempts correlated with user roles or session logs.
+   - e.g., [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [AWS Security Hub / CloudWatch Logs](https://aws.amazon.com/cloudwatch/), [GCP Chronicle](https://cloud.google.com/chronicle), or [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/) for data exfil attempts correlated with user roles or session logs.
 
 1. **Add Real-Time Alerts**
 
@@ -173,7 +173,7 @@ Below are **rapidly actionable** methods to reinforce automated detection:
 1. **Risk-Scored Alerts**
 
    - Combine user identity, device posture, and data classification to prioritize which anomalies matter most:
-     - referencing [Azure Sentinel ML rules, AWS Security Hub with risk-based scoring, GCP Chronicle risk detection, OCI Security Advisor advanced analytics](https://TODO).
+     - referencing [Azure Sentinel ML rules](https://learn.microsoft.com/en-us/azure/sentinel/), [AWS Security Hub with risk-based scoring](https://aws.amazon.com/security-hub/), [GCP Chronicle risk detection](https://cloud.google.com/chronicle), or [OCI Security Advisor advanced analytics](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Automated Quarantine & Blocking**
 
@@ -189,7 +189,7 @@ Below are **rapidly actionable** methods to reinforce automated detection:
 
 1. **Drill Data Restoration**
    - Data corruption or deletion can be as damaging as exfil. Ensure backups and DR processes are tested frequently:
-     - e.g., referencing [AWS Backup + DR, Azure Backup + Site Recovery, GCP Backup & DR, OCI Backup & DR Services](https://TODO).
+     - e.g., referencing [AWS Backup + DR](https://aws.amazon.com/backup/), [Azure Backup + Site Recovery](https://learn.microsoft.com/en-us/azure/site-recovery/), [GCP Backup & DR](https://cloud.google.com/backup-for-vmware-engine), or [OCI Backup & DR Services](https://www.oracle.com/cloud/free/oci-training/).
 
 By adding risk-scored alerts, automatically quarantining suspicious activity, incorporating threat intelligence, periodically updating detection rules, and verifying backups or DR for data restoration, you create a highly adaptive system that promptly detects and mitigates data breach attempts.
 
@@ -219,11 +219,11 @@ Below are **rapidly actionable** ways to refine fully automated, proactive data 
 1. **Leverage AI/ML for Data Anomalies**
 
    - Tools that identify unusual data patterns or exfil attempts automatically:
-     - e.g., [Azure Purview ML classification, AWS Macie or Amazon Detective, GCP DLP with ML, OCI Logging Analytics AI-based detection](https://TODO).
+     - e.g., [Azure Purview ML classification](https://learn.microsoft.com/en-us/azure/purview/), [AWS Macie or Amazon Detective](https://aws.amazon.com/macie/), [GCP DLP with ML](https://cloud.google.com/dlp), or [OCI Logging Analytics AI-based detection](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt Policy-as-Code**
 
-   - Tools like [Open Policy Agent or vendor-specific: AWS SCP, Azure Policy, GCP Organization Policy, OCI Security Zones](https://TODO) define data security in code for version-controlled, auditable changes.
+   - Tools like [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-specific: [AWS SCP](https://aws.amazon.com/service-authorization/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Organization Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) define data security in code for version-controlled, auditable changes.
 
 1. **Expand Zero-Trust Microsegmentation**
 

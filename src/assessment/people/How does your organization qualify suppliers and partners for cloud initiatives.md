@@ -78,7 +78,7 @@ Below are **rapidly actionable** methods to elevate from minimal compliance chec
 1. **Evaluate Supplier Cloud Certifications**
 
    - Check if they hold AWS Partner tiers, Azure Expert MSP, GCP Premier Partner status, or OCI Specialized certifications:
-     - [AWS Partner Network levels](https://TODO), [Azure Expert MSP status](https://TODO), [GCP Partner Advantage tiers](https://TODO), [OCI PartnerNetwork tiers](https://TODO).
+     - [AWS Partner Network levels](https://aws.amazon.com/partners/), [Azure Expert MSP status](https://learn.microsoft.com/en-us/azure/partner/partner-center-portal/expert-msp), [GCP Partner Advantage tiers](https://cloud.google.com/partners/advantage), [OCI PartnerNetwork tiers](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Request Past Performance or Case Studies**
 
@@ -127,7 +127,7 @@ Below are **rapidly actionable** suggestions to refine moderate screening:
 1. **Request a Security & Architecture ‘Show Me’ Session**
 
    - Potential suppliers should demonstrate a typical architecture for a user story or scenario relevant to your environment:
-     - e.g., how they configure a secure multi-tier application on AWS or Azure, referencing standard patterns from [AWS Well-Architected](https://TODO), [Azure Architecture Center](https://TODO), etc.
+     - e.g., how they configure a secure multi-tier application on AWS or Azure, referencing standard patterns from [AWS Well-Architected](https://aws.amazon.com/architecture/well-architected/), [Azure Architecture Center](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-architecture-center), etc.
 
 1. **Evaluate Supplier DevSecOps Maturity**
 
@@ -137,7 +137,7 @@ Below are **rapidly actionable** suggestions to refine moderate screening:
 1. **Include Cost Management Criteria**
 
    - Suppliers should outline how they manage or optimize cloud spend:
-     - Possibly referencing [AWS Cost Explorer, Azure Cost Management, GCP Billing Alerts, or OCI Budgets](https://TODO).
+     - Possibly referencing [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/), [Azure Cost Management](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-cost-management), [GCP Billing Alerts](https://cloud.google.com/billing/docs/how-to/budget-notifications), or [OCI Budgets](https://www.oracle.com/cloud/free/oci-training/).
    - Helps ensure they won’t rack up unplanned expenses.
 
 1. **Check Multi-Region or DR Capabilities**
@@ -191,7 +191,7 @@ Below are **rapidly actionable** ways to expand a comprehensive evaluation:
 1. **Engage in Pilot Co-Creation**
 
    - Where feasible, run a small PoC or co-innovation sprint with top candidates to see if they truly deliver under real conditions:
-     - [AWS PoC programs, Azure fast-track solutions, GCP pilot engagements, or OCI innovation labs](https://TODO).
+     - [AWS PoC programs](https://aws.amazon.com/solutions/case-studies/), [Azure fast-track solutions](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-fast-track-solutions), [GCP pilot engagements](https://cloud.google.com/partners/pilot-engagements), or [OCI innovation labs](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Weight Sustainability in Procurement**
    - Incorporate a scoring element for green cloud operations, referencing vendor data on region-level carbon footprints or [NCSC’s environment-friendly cloud usage tips](https://www.ncsc.gov.uk/).

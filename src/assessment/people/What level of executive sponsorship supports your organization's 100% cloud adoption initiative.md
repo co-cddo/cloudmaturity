@@ -40,7 +40,7 @@ Below are **rapidly actionable** suggestions to secure at least minimal executiv
 1. **Prepare a Simple Business Case**
 
    - Emphasize potential cost savings or improved agility:
-     - referencing [AWS/Azure/GCP/OCI cost management calculators or TCO tools](https://TODO).
+     - referencing [AWS/Azure/GCP/OCI cost management calculators or TCO tools](https://aws.amazon.com/cost-management/tools/), [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/), [GCP Cost Management](https://cloud.google.com/cost-management), [OCI Cost Management](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Request a Brief Meeting with a Senior Sponsor**
 
@@ -131,7 +131,7 @@ Below are **rapidly actionable** ways to leverage C-level sponsorship further:
 1. **Establish Clear KPIs & Milestones**
 
    - For example, monthly or quarterly metrics:
-     - Resource usage cost, user satisfaction, time-to-deploy improvements, referencing [AWS/Azure/GCP/OCI cost management dashboards](https://TODO).
+     - Resource usage cost, user satisfaction, time-to-deploy improvements, referencing [AWS/Azure/GCP/OCI cost management dashboards](https://aws.amazon.com/cost-management/tools/), [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/), [GCP Cost Management](https://cloud.google.com/cost-management), [OCI Cost Management](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Ensure Inter-Departmental Collaboration**
 
@@ -141,7 +141,7 @@ Below are **rapidly actionable** ways to leverage C-level sponsorship further:
 1. **Embed Security as a First-Class Concern**
 
    - Since you have top-level support, request integrated DevSecOps tooling and compliance checks from day one:
-     - e.g., [AWS CodeGuru or Security Hub, Azure DevOps security add-ons, GCP Cloud Build scanning, OCI security advisor services](https://TODO).
+     - e.g., [AWS CodeGuru or Security Hub](https://aws.amazon.com/codeguru/), [Azure DevOps security add-ons](https://learn.microsoft.com/en-us/azure/devops/organizations/security/), [GCP Cloud Build scanning](https://cloud.google.com/build/docs/container-scanning), [OCI security advisor services](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Highlight Public Sector Success**
    - Encourage your sponsor to share wins at internal leadership summits or cross-gov conferences, fostering further executive-level peer collaboration.
@@ -184,7 +184,7 @@ Below are **rapidly actionable** ways to strengthen a comprehensive C-level spon
 1. **Focus on Advanced Migrations or Services**
 
    - Tackle HPC, advanced analytics, or AI/ML adoption:
-     - Possibly referencing HPC or ML best practices from [AWS HPC Competency, Azure HPC, GCP AI Platform, or OCI HPC solutions](https://TODO).
+     - Possibly referencing HPC or ML best practices from [AWS HPC Competency](https://aws.amazon.com/partners/competencies/), [Azure HPC](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-fast-track-solutions), [GCP AI Platform](https://cloud.google.com/ai-platform), [OCI HPC solutions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Integrate Multi-Cloud or Hybrid Considerations**
 
@@ -227,7 +227,7 @@ Below are **rapidly actionable** ways to continuously strengthen a cloud-first c
 1. **Scale Innovation Hubs**
 
    - If you have a center of excellence or an innovation lab, extend its scope to HPC, AI/ML, IoT, or advanced HPC:
-     - e.g., adopt HPC solutions from [AWS, Azure, GCP, or OCI HPC offerings](https://TODO), incorporating domain specialists.
+     - e.g., adopt HPC solutions from [AWS](https://aws.amazon.com/hpc/), [Azure](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-fast-track-solutions), [GCP](https://cloud.google.com/ai-platform), [OCI](https://www.oracle.com/cloud/free/oci-training/), incorporating domain specialists.
 
 1. **Open Source & Share**
 
@@ -236,7 +236,7 @@ Below are **rapidly actionable** ways to continuously strengthen a cloud-first c
 
 1. **Enable Real-Time Security & Compliance**
 
-   - Consolidate compliance with [AWS Control Tower, Azure Policy, GCP Organization Policy, or OCI Security Zones](https://TODO) for frictionless guardrails:
+   - Consolidate compliance with [AWS Control Tower](https://aws.amazon.com/controltower/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Organization Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) for frictionless guardrails:
      - ensures staff can spin up resources rapidly without jeopardizing security or policy compliance.
 
 1. **Track Cloud Maturity Beyond Tech**

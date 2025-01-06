@@ -35,7 +35,7 @@ Below are **rapidly actionable** steps to transition from a monolithic approach:
 
 1. **Adopt Container or VM Packaging**
 
-   - Even if the app remains monolithic, packaging in [Docker/ECS, Azure Container Instances, GCP Cloud Run, OCI Container Engine](https://TODO) can simplify deployment and initial partial scaling.
+   - Even if the app remains monolithic, packaging in Docker /[ECS](https://aws.amazon.com/ecs/), [Azure Container Instances](https://learn.microsoft.com/en-us/azure/container-instances/), [GCP Cloud Run](https://cloud.google.com/run), or [OCI Container Engine](https://www.oracle.com/cloud/free/oci-training/) can simplify deployment and initial partial scaling.
 
 1. **Refactor Shared Libraries**
 
@@ -45,7 +45,7 @@ Below are **rapidly actionable** steps to transition from a monolithic approach:
 1. **Automate Basic CI/CD**
 
    - Even if a monolith, introduce versioned builds, automated tests, and environment-based deployments:
-     - e.g., [AWS CodePipeline, Azure DevOps, GCP Cloud Build, OCI DevOps](https://TODO).
+     - e.g., [AWS CodePipeline](https://aws.amazon.com/codepipeline/), [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/), [GCP Cloud Build](https://cloud.google.com/build), or [OCI DevOps](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Plan a Phased Decomposition**
    - Over 6–12 months, pilot a single microservice or separate module as a stepping stone.
@@ -79,12 +79,12 @@ Below are **rapidly actionable** ways to shift modules from concept to independe
 1. **Introduce Containerization at Module-Level**
 
    - If each module can run separately, containerize them individually:
-     - referencing [AWS ECS/EKS, Azure AKS, GCP GKE, OCI OKE for container orchestration](https://TODO).
+     - referencing [AWS ECS/EKS](https://aws.amazon.com/ecs/), [Azure AKS](https://learn.microsoft.com/en-us/azure/aks/), [GCP GKE](https://cloud.google.com/kubernetes-engine), or [OCI OKE](https://www.oracle.com/cloud/free/oci-training/) for container orchestration.
 
 1. **Provide Separate Build Pipelines**
 
    - For each module, create a distinct CI pipeline that compiles, tests, and packages it:
-     - e.g., [AWS CodeBuild + CodePipeline, Azure DevOps pipelines, GCP Cloud Build triggers, OCI DevOps pipelines](https://TODO).
+     - e.g., [AWS CodeBuild + CodePipeline](https://aws.amazon.com/codepipeline/), [Azure DevOps pipelines](https://learn.microsoft.com/en-us/azure/devops/), [GCP Cloud Build triggers](https://cloud.google.com/build), or [OCI DevOps pipelines](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt an API or Messaging Boundary**
 
@@ -128,7 +128,7 @@ Below are **rapidly actionable** ways to handle interdependencies in individuall
 1. **Introduce Contract Testing**
 
    - For each module’s API or message interface, define stable contracts tested automatically:
-     - referencing [Pact.io, or custom contract test frameworks in AWS CodeBuild, Azure DevOps, GCP Cloud Build, OCI DevOps pipelines](https://TODO).
+     - referencing [Pact.io](https://pact.io/), or custom contract test frameworks in [AWS CodeBuild](https://aws.amazon.com/codepipeline/), [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/), [GCP Cloud Build](https://cloud.google.com/build), or [OCI DevOps pipelines](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Automate Consumer-Driven Testing**
 
@@ -146,7 +146,7 @@ Below are **rapidly actionable** ways to handle interdependencies in individuall
 
 1. **Enforce Feature Flags**
    - If new functionality in one component requires changes in another, hide it behind a feature flag until both are deployed.
-   - referencing [LaunchDarkly, Azure App Configuration flags, AWS AppConfig, GCP Cloud Run with feature toggles, OCI config solutions](https://TODO).
+   - referencing [LaunchDarkly](https://launchdarkly.com/), [Azure App Configuration flags](https://learn.microsoft.com/en-us/azure/azure-app-configuration/), [AWS AppConfig](https://aws.amazon.com/appconfig/), [GCP Cloud Run with feature toggles](https://cloud.google.com/run), or [OCI config solutions](https://www.oracle.com/cloud/free/oci-training/).
 
 By introducing contract or consumer-driven testing, adopting semantic versioning, publishing a compatibility matrix, and employing feature flags to manage cross-component rollouts, you reduce interdependency friction and safely leverage your modular architecture.
 
@@ -176,7 +176,7 @@ Below are **rapidly actionable** ways to address the leftover monolithic element
 1. **Identify High-Impact Subsystem to Extract**
 
    - If a monolith is large, pick the subsystem or domain logic that changes most frequently. Migrate that to a microservice first.
-   - referencing [AWS microservices patterns, Azure microservices guides, GCP microservices best practices, OCI microservices solutions](https://TODO).
+   - referencing [AWS microservices patterns](https://aws.amazon.com/microservices/), [Azure microservices guides](https://learn.microsoft.com/en-us/azure/microservices/), [GCP microservices best practices](https://cloud.google.com/microservices), or [OCI microservices solutions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Establish Clear Migration Plan**
 
@@ -222,7 +222,7 @@ Below are **rapidly actionable** ways to optimize a fully component-based approa
 1. **Enhance Observability & Tracing**
 
    - Adopt distributed tracing and advanced logging across microservices:
-     - e.g., [AWS X-Ray, Azure Monitor Application Insights, GCP Cloud Trace, OCI Logging Analytics with tracing integrations](https://TODO).
+     - e.g., [AWS X-Ray](https://aws.amazon.com/xray/), [Azure Monitor Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview), [GCP Cloud Trace](https://cloud.google.com/trace), or [OCI Logging Analytics with tracing integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Apply Zero-Trust for Service Communication**
 
@@ -230,7 +230,7 @@ Below are **rapidly actionable** ways to optimize a fully component-based approa
 
 1. **Adopt or Refine Service Mesh**
 
-   - Tools like [Istio, Linkerd, Consul, AWS App Mesh, Azure Service Fabric Mesh, GCP Anthos Service Mesh, OCI OKE with mesh add-ons](https://TODO) can handle cross-cutting concerns (observability, security, routing).
+   - Tools like [Istio](https://istio.io/), [Linkerd](https://linkerd.io/), [Consul](https://www.consul.io/), [AWS App Mesh](https://aws.amazon.com/app-mesh/), [Azure Service Fabric Mesh](https://learn.microsoft.com/en-us/azure/service-fabric-mesh/), [GCP Anthos Service Mesh](https://cloud.google.com/anthos/service-mesh), or [OCI OKE with mesh add-ons](https://www.oracle.com/cloud/free/oci-training/) can handle cross-cutting concerns (observability, security, routing).
 
 1. **Continuous Architecture Review**
 

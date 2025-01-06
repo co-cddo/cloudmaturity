@@ -40,7 +40,7 @@ Below are **rapidly actionable** steps to transition from ad-hoc reviews to basi
 
 1. **Leverage Built-In Cloud IAM Tools**
 
-   - [AWS IAM, Azure RBAC, GCP IAM, or OCI IAM compartments/policies](https://TODO) can define or limit privileges.
+   - [AWS IAM](https://aws.amazon.com/iam/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM](https://cloud.google.com/iam/docs/overview), [OCI IAM compartments/policies](https://www.oracle.com/cloud/free/oci-training/) can define or limit privileges.
    - Minimizes guesswork in manual permission assignments.
 
 1. **Maintain a Basic User Inventory**
@@ -83,7 +83,7 @@ Below are **rapidly actionable** ways to evolve beyond limited-action reviews:
 1. **Categorize Users by Risk**
 
    - For high-risk roles (e.g., admin accounts with access to production data), enforce stricter reviews or more frequent re-validation:
-     - Potentially referencing [AWS IAM Access Analyzer, Azure AD Access Reviews, GCP’s IAM Recommender, OCI IAM tools](https://TODO).
+     - Potentially referencing [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [Azure AD Access Reviews](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP’s IAM Recommender](https://cloud.google.com/iam/docs/access-reviews), [OCI IAM tools](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Implement Review Dashboards**
 
@@ -126,7 +126,7 @@ Below are **rapidly actionable** steps to incorporate permission reduction:
 1. **Implement a "Use it or Lose it" Policy**
 
    - If a user’s permission or role is unused for a set period (e.g., 30 days), it’s automatically flagged for removal:
-     - Tools like [AWS IAM Access Analyzer, Azure AD Access Reviews, GCP IAM Recommender, or OCI IAM metrics](https://TODO) can show which roles are not used.
+     - Tools like [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [Azure AD Access Reviews](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP IAM Recommender](https://cloud.google.com/iam/docs/access-reviews), or [OCI IAM metrics](https://www.oracle.com/cloud/free/oci-training/) can show which roles are not used.
 
 1. **Mark Temporary Access with Expiry**
 
@@ -173,7 +173,7 @@ Below are **rapidly actionable** methods to enhance expiry-based reviews:
 
 1. **Use Cloud-Native Access Review Tools**
 
-   - e.g., [AWS IAM Access Analyzer, AWS SSO user provisioning with rotation, Azure Access Reviews in Azure AD, GCP IAM Recommender with time-based checks, OCI IAM compartments with automated policy review triggers](https://TODO).
+   - e.g., [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [AWS SSO user provisioning with rotation](https://aws.amazon.com/sso/), [Azure Access Reviews in Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP IAM Recommender with time-based checks](https://cloud.google.com/iam/docs/access-reviews), [OCI IAM compartments with automated policy review triggers](https://www.oracle.com/cloud/free/oci-training/).
    - Minimizes manual overhead.
 
 1. **Adopt Automated Alerts for Upcoming Expiries**
@@ -191,7 +191,7 @@ Below are **rapidly actionable** methods to enhance expiry-based reviews:
    - Align with [NCSC’s supply chain or internal access control best practices](https://www.ncsc.gov.uk/).
 
 1. **Maintain Audit Trails**
-   - Store logs of who re-approved or revoked each role, referencing [AWS CloudTrail, Azure Monitor, GCP Logging, or OCI Audit logs](https://TODO).
+   - Store logs of who re-approved or revoked each role, referencing [AWS CloudTrail](https://aws.amazon.com/cloudtrail/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [GCP Logging](https://cloud.google.com/logging), or [OCI Audit logs](https://www.oracle.com/cloud/free/oci-training/).
    - Demonstrates compliance if audited, per GOV.UK or departmental policies.
 
 By leveraging cloud-native review tools, alerting for soon-to-expire roles, risk-scoring high-privilege accounts for more frequent checks, implementing delegated re-approval processes, and storing thorough audit trails, you maintain an agile, secure environment aligned with best practices.
@@ -226,7 +226,7 @@ Below are **rapidly actionable** ways to refine a fully automated, risk-based re
 1. **Incorporate Real-Time Risk Signals**
 
    - E.g., require additional verification for suspicious location logins or rapidly changing user behaviors:
-     - [AWS Macie or GuardDuty alerts, Azure AD Identity Protection, GCP Security Command Center anomaly detection, OCI Security Advisor signals](https://TODO).
+     - [AWS Macie or GuardDuty alerts](https://aws.amazon.com/macie/), [Azure AD Identity Protection](https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection), [GCP Security Command Center anomaly detection](https://cloud.google.com/security-command-center/docs/overview), [OCI Security Advisor signals](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Use Policy-as-Code for Access**
 
@@ -240,7 +240,7 @@ Below are **rapidly actionable** ways to refine a fully automated, risk-based re
 1. **Extend to Multi-Cloud or Hybrid**
 
    - If your department spans AWS, Azure, GCP, or on-prem systems, unify identity reviews under a single orchestrator or Identity Governance tool:
-     - e.g., [Azure AD Identity Governance, Okta, Ping, etc. with multi-cloud connectors](https://TODO).
+     - e.g., [Azure AD Identity Governance](https://learn.microsoft.com/en-us/azure/active-directory/identity-governance/overview-identity-governance), [Okta](https://www.okta.com/), [Ping](https://www.pingidentity.com/), etc. with multi-cloud connectors.
 
 1. **Cross-Government Sharing**
    - Publish a success story or best-practice playbook so other agencies can replicate your automated approach, aligning with [GOV.UK digital collaboration initiatives](https://www.gov.uk/service-manual) and [NCSC supply chain security best practices](https://www.ncsc.gov.uk/).
