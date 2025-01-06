@@ -5,7 +5,7 @@ eleventyNavigation:
   parent: people
 ---
 
-### **Minimal Interaction with Cloud Providers:** The relationship with cloud providers is transactional, limited to accessing their services without any significant contact or support from their account or technical teams.
+### **Minimal Interaction with Cloud Providers:** The relationship with cloud providers is transactional, brokered through a third party, and limited to accessing their services without any significant direct contact or support from their account or technical teams.
 
 #### **How to determine if this good enough**
 
