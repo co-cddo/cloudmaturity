@@ -23,7 +23,7 @@
   "homepage": "https://github.com/co-cddo/cloudmaturity#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@x-govuk/govuk-eleventy-plugin": "^6.4.2",
+    "@x-govuk/govuk-eleventy-plugin": "^6.7.2",
     "husky": "^9.1.7",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
