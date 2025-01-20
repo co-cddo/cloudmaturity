@@ -52,7 +52,7 @@ title: Report
   classes: "govuk-button--secondary"
 })}}
 
-{% include 'report.njk' %}
+{%- include 'report.njk' -%}
 
 <script src="/{{"assets/cmm_report.js" | htmlBaseUrl}}"></script>
 <link rel="stylesheet" href="/{{"assets/chaarts.min.css" | htmlBaseUrl}}"/>

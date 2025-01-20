@@ -1,9 +1,43 @@
-{% for section in collections.cmm %}
-<h2 class="govuk-heading-l">{{section.data.title}}</h2>
-  {% for question in collections[section.fileSlug] %}
-    <h3 class="govuk-heading-m">{{question.data.title | safe}}</h3>
-    {% for answer in question.content | getContentsAfterTags("h3") %}
-      <div id="{{section.fileSlug}}_{{question.data.title | hash}}_{{loop.index}}" class="report_answer_section">{{answer}}<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"></div>
-    {% endfor %}
-  {% endfor %}
-{% endfor %}
+{%- from "govuk/components/accordion/macro.njk" import govukAccordion -%}
+{%- from "govuk/components/details/macro.njk" import govukDetails -%}
+
+{%- set accordionItems = [] -%}
+
+{%- for section in collections.cmm -%}
+  {%- set contentHtml -%}
+    {%- for question in collections[section.fileSlug] -%}
+      <h3 class="govuk-heading-l">{{question.data.title | safe}}</h3>
+      {%- for answer in question.content | getContentsAfterTags("h3") -%}
+      <div id="{{section.fileSlug + "_" + (question.data.title | hash) + "_" + loop.index}}" class="report_answer_section">
+        {{- (answer | getContentsAfterTags("h4"))[1]}}
+        {%- set howtodobetter = ((answer | getContentsAfterTags("h4"))[2]) -%}
+        {{- govukDetails({
+          open: true,
+          summaryHtml: "<h4 class='govuk-heading-s'>" + howtodobetter | tagfilter("h4") + "</h2>",
+          html: howtodobetter | replace("How to do better", "")
+        }) -}}
+      </div>
+      {%- endfor -%}
+      {% if loop.last == false %}
+        <hr/>
+      {% endif %}
+    {%- endfor -%}
+  {%- endset -%}
+  {%- set item = {
+    expanded: true,
+    heading: {
+      text: section.data.title,
+      headingLevel: 2
+    },
+    content: {
+      html: contentHtml | safe | trim | replace('\n', "")
+    }
+  } -%}
+  {%- set accordionItems = accordionItems.concat(item) -%}
+{%- endfor -%}
+
+{{- govukAccordion({
+  id: "accordion-default",
+  items: accordionItems,
+  hideAllSectionsText: "Close all sections"
+}) -}}
