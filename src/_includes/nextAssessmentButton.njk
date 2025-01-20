@@ -1,4 +1,4 @@
-{% set navPages = collections.ordered | eleventyNavigation("Assessment") %}
+{% set navPages = collections.all | eleventyNavigation("Assessment") %}
 {% set nextEntry = false %}
 {% set foundEntry = false %}
 {%- for entry in navPages %}
