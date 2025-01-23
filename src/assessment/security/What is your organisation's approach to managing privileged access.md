@@ -22,7 +22,7 @@ Your organisation may let each system admin handle privileged credentials indepe
 1. **No Pressing Compliance Requirements**
    - Strict audits or public sector mandates for privileged account management haven’t been triggered.
 
-However, ad-hoc methods often risk unauthorised usage, inconsistent rotation, and difficulty tracking who accessed what. [NCSC’s privileged account security guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-53 AC-6 (least privilege)](https://csrc.nist.gov/) emphasize stricter control over privileged credentials.
+However, ad-hoc methods often risk unauthorised usage, inconsistent rotation, and difficulty tracking who accessed what. [NCSC’s privileged account security guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-53 AC-6 (least privilege)](https://csrc.nist.gov/) emphasise stricter control over privileged credentials.
 
 #### **How to do better**
 
