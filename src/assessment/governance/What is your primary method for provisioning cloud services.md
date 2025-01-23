@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-If your organization primarily provisions cloud services using manual methods—such as web consoles, command-line interfaces, or custom ad hoc scripts—this might be considered "good enough" if:
+If your organisation primarily provisions cloud services using manual methods—such as web consoles, command-line interfaces, or custom ad hoc scripts—this might be considered "good enough" if:
 
 1. **Very Small or Low-Risk Environments**
 
@@ -56,7 +56,7 @@ Below are **rapidly actionable** steps to move beyond purely manual provisioning
      - [OCI Resource Manager or Terraform for provisioning compute, networking, or object storage](https://github.com/oracle/oci-cloud-native)
 
 1. **Document Provisioning Steps**
-   - Keep a simple runbook or wiki page. Summarize each manual provisioning step so you can easily shift these instructions into scripts or templates later.
+   - Keep a simple runbook or wiki page. Summarise each manual provisioning step so you can easily shift these instructions into scripts or templates later.
 
 By scripting basic tasks, implementing a simple naming/tagging policy, adding minimal approvals, and piloting an IaC solution, you start transitioning from ad hoc provisioning to more consistent automation practices.
 
@@ -64,7 +64,7 @@ By scripting basic tasks, implementing a simple naming/tagging policy, adding mi
 
 #### **How to determine if this good enough**
 
-In this scenario, your organization uses partial automation or scripting, but each team might have its own approach, with no centralized or standardized method. You might consider it "good enough" if:
+In this scenario, your organisation uses partial automation or scripting, but each team might have its own approach, with no centralised or standardised method. You might consider it "good enough" if:
 
 1. **Small to Medium Environment**
 
@@ -83,7 +83,7 @@ However, as soon as cross-team projects arise or you face compliance demands for
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to standardize your provisioning scripts:
+Below are **rapidly actionable** ways to standardise your provisioning scripts:
 
 1. **Adopt a Common Repository for Scripts**
 
@@ -124,7 +124,7 @@ By consolidating scripts in a shared repository, defining lightweight standards,
 
 Declarative automation (often in the form of Infrastructure as Code) is partially adopted, but not every team or environment follows it consistently. This might be "good enough" if:
 
-1. **Sizable Gains in Some Areas**
+1. **Sisable Gains in Some Areas**
 
    - Some major projects are stable, reproducible, and versioned via IaC, reducing manual errors.
    - Other smaller or legacy teams might still rely on older methods.
@@ -144,7 +144,7 @@ If partial declarative automation meets your current needs, you may decide it’
 
 Below are **rapidly actionable** ways to expand your declarative automation:
 
-1. **Set Organization-Wide IaC Defaults**
+1. **Set Organisation-Wide IaC Defaults**
 
    - Decide on a primary IaC tool (Terraform, CloudFormation, Bicep, Deployment Manager, or others) and specify guidelines:
      - e.g., "All new infrastructure that goes to production must use Terraform for provisioning, with code in X repo."
@@ -177,7 +177,7 @@ Below are **rapidly actionable** ways to expand your declarative automation:
    - e.g., Team metrics or internal recognition if all new deployments use IaC.
    - Showcase success stories: "Team A reduced production incidents by 30% after adopting IaC."
 
-By standardizing your IaC approach, providing shared templates, enforcing usage even in lower environments, and automating checks, you accelerate your journey toward uniform, declarative provisioning across teams.
+By standardising your IaC approach, providing shared templates, enforcing usage even in lower environments, and automating checks, you accelerate your journey toward uniform, declarative provisioning across teams.
 
 ### **Widespread Use of Declarative Automation:** Most project teams employ declarative automation for cloud service provisioning, indicating a higher level of maturity in automation practices.
 
@@ -232,13 +232,13 @@ Below are **rapidly actionable** ways to continue refining:
 1. **Continue Upskilling Staff**
    - Offer advanced IaC training, sessions on best practices, or pair programming to help teams adopt more sophisticated patterns (modules, dynamic references, etc.).
 
-By using formal CI/CD for all deployments, fostering a DevOps guild, strengthening compliance checks, and supporting multi-cloud approaches, you refine widespread IaC usage into a highly orchestrated, reliable practice across the organization.
+By using formal CI/CD for all deployments, fostering a DevOps guild, strengthening compliance checks, and supporting multi-cloud approaches, you refine widespread IaC usage into a highly orchestrated, reliable practice across the organisation.
 
 ### **Mandatory Declarative Automation via CI/CD:** Declarative automation is mandated for provisioning all production services, and it is exclusively executed through Continuous Integration/Continuous Deployment (CI/CD) pipelines.
 
 #### **How to determine if this good enough**
 
-This final stage means your organization has fully embraced IaC—any production environment changes occur only through a pipeline and must be defined declaratively. It’s likely "good enough" if:
+This final stage means your organisation has fully embraced IaC—any production environment changes occur only through a pipeline and must be defined declaratively. It’s likely "good enough" if:
 
 1. **Extremely Consistent Environments**
 
@@ -253,10 +253,10 @@ This final stage means your organization has fully embraced IaC—any production
    - Dev, staging, and production can match precisely, barring data differences.
    - Rapid rollback is possible by reverting to a previous commit.
 
-1. **High Organizational Discipline**
+1. **High Organisational Discipline**
    - All stakeholders adhere to the policy that "no code, no deploy"—any infrastructure change must be made in IaC first.
 
-You already operate at a high maturity level. Still, continuous improvement might revolve around advanced testing, policy-as-code integration, and cross-organizational collaboration.
+You already operate at a high maturity level. Still, continuous improvement might revolve around advanced testing, policy-as-code integration, and cross-organisational collaboration.
 
 #### **How to do better**
 
@@ -284,14 +284,14 @@ Below are **rapidly actionable** ways to push the boundaries, even at the highes
 1. **Evolve Toward Self-Service Platforms**
 
    - Provide an internal "portal" or "service catalog" for non-expert teams to request resources that are auto-provisioned via Infrastructure as Code (IaC) and Continuous Integration/Continuous Deployment (CI/CD):
-     - [AWS Service Catalog for standardized products, integrating with your pipeline](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is-service-catalog.html)
+     - [AWS Service Catalog for standardised products, integrating with your pipeline](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/what-is-service-catalog.html)
      - [Azure Managed Applications or custom Azure DevOps-based service catalogs for shared solutions](https://azure.microsoft.com/en-us/products/managed-applications/)
      - [GCP Deployment Manager templates plus a small UI or orchestration for internal requests](https://cloud.google.com/deployment-manager)
      - [OCI Service Catalog for common architectures, all referencing your Terraform modules or Resource Manager stacks](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
 
 1. **Expand to True "GitOps" for Ongoing Management**
-   - Continuously synchronize changes from Git to your runtime environment:
-     - e.g., using FluxCD or ArgoCD for containerized workloads, or hooking a Terraform operator into a Git repo.
+   - Continuously synchronise changes from Git to your runtime environment:
+     - e.g., using FluxCD or ArgoCD for containerised workloads, or hooking a Terraform operator into a Git repo.
 
 By integrating policy-as-code, advanced security checks, optional gating approvals, self-service catalogs, and GitOps strategies, you refine your mandatory declarative automation approach into a truly world-class, highly efficient model of modern cloud provisioning for the UK public sector.
 

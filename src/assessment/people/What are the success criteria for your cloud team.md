@@ -20,7 +20,7 @@ Your cloud team lacks explicit metrics, goals, or success factors to gauge progr
 
    - The team is focusing on small PoCs without a formal success framework.
 
-1. **Uncertain Organizational Direction**
+1. **Uncertain Organisational Direction**
    - Senior management hasn’t outlined a precise cloud strategy, so the team lacks guidance on what "success" means.
 
 However, without defined criteria, it’s difficult to justify budgets, measure progress, or ensure your efforts meet public sector demands. [NCSC’s cloud security best practices](https://www.ncsc.gov.uk/collection/cloud-security) and [GOV.UK’s technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice) emphasize measurable outcomes for transparency and accountability.
@@ -40,7 +40,7 @@ Below are **rapidly actionable** steps to establish at least minimal success cri
 
 1. **Align with Leadership**
 
-   - Present a short list of proposed success metrics to senior management for sign-off, ensuring these metrics reflect organizational or [GOV.UK Cloud First](https://www.gov.uk/guidance/government-cloud-first-policy) policies.
+   - Present a short list of proposed success metrics to senior management for sign-off, ensuring these metrics reflect organisational or [GOV.UK Cloud First](https://www.gov.uk/guidance/government-cloud-first-policy) policies.
 
 1. **Track Progress Visibly**
 
@@ -49,7 +49,7 @@ Below are **rapidly actionable** steps to establish at least minimal success cri
 
 1. **Create a Baseline**
    - If you have no prior data, quickly measure current on-prem costs or the time it takes to provision infrastructure:
-     - This baseline will contextualize progress in adopting cloud solutions.
+     - This baseline will contextualise progress in adopting cloud solutions.
 
 By identifying basic cloud objectives, selecting simple metrics, confirming leadership support, tracking progress, and establishing a baseline, you move from undefined success to a workable system that can be refined as your team matures.
 
@@ -68,7 +68,7 @@ Your cloud team measures success by delivering small PoCs—like a pilot applica
    - Stakeholders are satisfied with these pilot results, seeing the potential for cost savings or faster deployments.
 
 1. **Limited Scale**
-   - Organizationally, large-scale cloud migrations or complex workloads aren’t yet on the horizon.
+   - Organisationally, large-scale cloud migrations or complex workloads aren’t yet on the horison.
 
 Though better than having no success criteria, limiting measurements to "PoCs delivered" can hamper progression to full production readiness. [NCSC operational resilience](https://www.ncsc.gov.uk/collection/operational-resilience) and [NIST risk management frameworks](https://csrc.nist.gov/) often encourage planning for broader usage once pilot success is proven.
 
@@ -95,10 +95,10 @@ Below are **rapidly actionable** steps to advance beyond PoC-based success:
 
    - Produce a short "PoC to Production" playbook referencing [GOV.UK service manual agile approach](https://www.gov.uk/service-manual/agile-delivery) or [NCSC cloud security principles](https://www.ncsc.gov.uk/collection/cloud-security).
 
-1. **Link PoCs to Organizational Goals**
+1. **Link PoCs to Organisational Goals**
    - Ensure each PoC addresses a genuine departmental need (like cost, user experience, or operational agility), so it’s not a siloed experiment.
 
-By defining clear triggers for scaling PoCs, measuring advanced metrics, engaging real users, sharing lessons learned, and tying PoCs to broader goals, you accelerate from pilot outcomes to genuine organizational transformation.
+By defining clear triggers for scaling PoCs, measuring advanced metrics, engaging real users, sharing lessons learned, and tying PoCs to broader goals, you accelerate from pilot outcomes to genuine organisational transformation.
 
 ### **Launching Workloads in Production:** Success includes transitioning one or more workloads into a live production environment on the cloud.
 
@@ -117,7 +117,7 @@ In this scenario, your cloud team’s success criteria revolve around deploying 
 1. **Foundation for Expansion**
    - Success in these production workloads fosters confidence and sets a blueprint for migrating additional services.
 
-Still, measuring success only by "production usage" can neglect other vital areas (like cost optimization, security posture, or user satisfaction). [NCSC’s cloud security guidance](https://www.ncsc.gov.uk/collection/cloud-security) and [NIST SP 800-53 controls](https://csrc.nist.gov/) underscore the importance of compliance, security checks, and continuous monitoring beyond just "it’s running in production."
+Still, measuring success only by "production usage" can neglect other vital areas (like cost optimisation, security posture, or user satisfaction). [NCSC’s cloud security guidance](https://www.ncsc.gov.uk/collection/cloud-security) and [NIST SP 800-53 controls](https://csrc.nist.gov/) underscore the importance of compliance, security checks, and continuous monitoring beyond just "it’s running in production."
 
 #### **How to do better**
 
@@ -136,7 +136,7 @@ Below are **rapidly actionable** ways to refine production-based success criteri
 1. **Define a Full Lifecycle Approach**
 
    - Ensure pipelines for new features, rollbacks, or replacements are tested and documented:
-     - Reduces risk of "stagnation" where workloads remain unoptimized once launched.
+     - Reduces risk of "stagnation" where workloads remain unoptimised once launched.
 
 1. **Share Achievements & Best Practices**
 
@@ -180,7 +180,7 @@ Below are **rapidly actionable** strategies to further scale prototypes into cor
 1. **Integrate Automated Security Testing**
 
    - If not already, embed scanning in CI/CD pipelines:
-     - e.g., [AWS CodeGuru Security or Amazon Inspector](https://aws.amazon.com/codeguru/), [Azure DevOps with GitHub Advanced Security](https://learn.microsoft.com/en-us/azure/devops/organizations/security/github-advanced-security), [GCP Cloud Build with container scanning](https://cloud.google.com/build/docs/container-scanning), [OCI DevOps scanning integrations](https://www.oracle.com/cloud/free/oci-training/).
+     - e.g., [AWS CodeGuru Security or Amazon Inspector](https://aws.amazon.com/codeguru/), [Azure DevOps with GitHub Advanced Security](https://learn.microsoft.com/en-us/azure/devops/organisations/security/github-advanced-security), [GCP Cloud Build with container scanning](https://cloud.google.com/build/docs/container-scanning), [OCI DevOps scanning integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Quantify Impact**
 
@@ -196,9 +196,9 @@ Below are **rapidly actionable** strategies to further scale prototypes into cor
    - If you’re delivering critical services, consider knowledge sharing or secondments with local councils, NHS, or central departments:
      - Aligned with [GDS cross-government collaboration initiatives](https://www.gov.uk/service-manual).
 
-By adopting advanced resiliency and security, measuring impact thoroughly, standardizing architectural approaches, and collaborating with other public sector bodies, you mature from simply scaling prototypes to robust, enterprise-level cloud service delivery.
+By adopting advanced resiliency and security, measuring impact thoroughly, standardising architectural approaches, and collaborating with other public sector bodies, you mature from simply scaling prototypes to robust, enterprise-level cloud service delivery.
 
-### **Innovation and Value Creation Alignment:** The organization has established success criteria that not only focus on cloud-based innovation and experimentation but also on creating tangible value through transformation initiatives, all aligned with the organization’s broader goals and strategy.
+### **Innovation and Value Creation Alignment:** The organisation has established success criteria that not only focus on cloud-based innovation and experimentation but also on creating tangible value through transformation initiatives, all aligned with the organisation’s broader goals and strategy.
 
 #### **How to determine if this good enough**
 
@@ -206,7 +206,7 @@ At this top maturity level, success measures for the cloud team emphasize innova
 
 1. **Clear Strategic Link**
 
-   - Each new cloud feature or pilot directly supports organizational goals (e.g., citizen service improvement, efficiency targets).
+   - Each new cloud feature or pilot directly supports organisational goals (e.g., citizen service improvement, efficiency targets).
 
 1. **Ongoing Experimentation**
 
@@ -214,12 +214,12 @@ At this top maturity level, success measures for the cloud team emphasize innova
 
 1. **Demonstrable Value**
 
-   - Whether it’s improved user experience, shortened delivery cycles, or significant cost reduction, the cloud initiatives produce measurable benefits recognized by leadership.
+   - Whether it’s improved user experience, shortened delivery cycles, or significant cost reduction, the cloud initiatives produce measurable benefits recognised by leadership.
 
 1. **Comprehensive Security & Compliance**
    - As per [NCSC cloud security principles](https://www.ncsc.gov.uk/collection/cloud-security) or [NIST controls](https://csrc.nist.gov/), the environment remains robustly secure—balancing innovation with risk management.
 
-Even at this level, you can refine success criteria by further integrating synergy with multi-cloud or cross-department projects, shaping a broader public sector digital transformation. [GOV.UK’s digital transformation agenda](https://www.gov.uk/service-manual) encourages maximizing user value with minimal friction.
+Even at this level, you can refine success criteria by further integrating synergy with multi-cloud or cross-department projects, shaping a broader public sector digital transformation. [GOV.UK’s digital transformation agenda](https://www.gov.uk/service-manual) encourages maximising user value with minimal friction.
 
 #### **How to do better**
 
@@ -231,7 +231,7 @@ Below are **rapidly actionable** ways to continue improving innovation- and valu
      - e.g., reducing form-processing time from days to minutes, or improving public web performance by X%.
    - This ensures the entire pipeline, from idea to deployment, focuses on delivering measurable benefits.
 
-1. **Incorporate Cross-Organizational Goals**
+1. **Incorporate Cross-Organisational Goals**
 
    - For large departmental or multi-department programs, align success metrics to shared objectives:
      - e.g., joint cost savings, integrated citizen ID solutions, or unified data analytics capabilities.
@@ -250,6 +250,6 @@ Below are **rapidly actionable** ways to continue improving innovation- and valu
 1. **Periodically Recalibrate Metrics**
    - As technology evolves, update or retire older success metrics (e.g., "time to spin up a VM" might be replaced by "time to deploy a new serverless function"), ensuring they stay relevant to strategic ambitions.
 
-By implementing a value stream approach, embedding cross-organizational goals, focusing on sustainability, encouraging transparency in experiments, and periodically recalibrating metrics, your cloud team solidifies its role as a driver of innovation and public value creation. This ensures alignment with evolving public sector needs, best practices, and digital transformation objectives.
+By implementing a value stream approach, embedding cross-organisational goals, focusing on sustainability, encouraging transparency in experiments, and periodically recalibrating metrics, your cloud team solidifies its role as a driver of innovation and public value creation. This ensures alignment with evolving public sector needs, best practices, and digital transformation objectives.
 
-**Keep doing what you’re doing,** and consider writing blog posts about your success criteria or opening pull requests to this guidance so other public sector organizations can adopt or refine similar approaches to measuring and achieving cloud team success.
+**Keep doing what you’re doing,** and consider writing blog posts about your success criteria or opening pull requests to this guidance so other public sector organisations can adopt or refine similar approaches to measuring and achieving cloud team success.
