@@ -4,7 +4,7 @@
 
 ![Screenshot from report page](images/report-screengrab.png)
 
-This repository is the home of the CDDO Cloud Maturity Model and Assessment Tool
+This repository is the home of the GDS Cloud Maturity Model and Assessment Tool
 
 The project is currently in an alpha phase, contributions are very welcome.
 
