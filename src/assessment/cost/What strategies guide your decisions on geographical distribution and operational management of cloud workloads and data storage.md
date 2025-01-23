@@ -25,7 +25,7 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
 1. **Enable Automatic Multi-AZ Deployments**
 
    - e.g., [AWS Auto Scaling groups across multiple AZs](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-az-console.html), [Azure VM Scale Sets in multiple zones](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-availability-zones), [GCP Managed Instance Groups (MIGs) or multi-zonal regional clusters](https://cloud.google.com/compute/docs/instance-groups/regional-migs), [OCI multi-AD distribution for compute/storage](https://www.oracle.com/a/ocom/docs/cloud-training-architecture.pdf).
-   - Minimizes manual overhead for distributing workloads.
+   - Minimises manual overhead for distributing workloads.
 
 1. **Replicate Data Synchronously**
 
@@ -54,9 +54,9 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
 1. **Monitor Cross-AZ Costs**
    - Some vendors charge for data transfer between AZs, so monitor usage with [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/), [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/), [GCP Billing](https://cloud.google.com/billing), [OCI Cost Analysis](https://www.oracle.com/cloud/cost-analysis/).
 
-By automatically spreading workloads, replicating data in multiple AZs, ensuring AZ-aware networking, regularly testing failover, and monitoring cross-AZ costs, you solidify your organization’s resilience within a single region while controlling costs.
+By automatically spreading workloads, replicating data in multiple AZs, ensuring AZ-aware networking, regularly testing failover, and monitoring cross-AZ costs, you solidify your organisation’s resilience within a single region while controlling costs.
 
-### **Selective Multi-Region Utilization:** An additional, legally compliant non-UK region is used for specific purposes, such as non-production workloads, certain data types, or as part of disaster recovery planning.
+### **Selective Multi-Region Utilisation:** An additional, legally compliant non-UK region is used for specific purposes, such as non-production workloads, certain data types, or as part of disaster recovery planning.
 
 #### **How to determine if this good enough**
 
@@ -76,7 +76,7 @@ Below are **rapidly actionable** improvements:
 1. **Automate Cross-Region Backups**
 
    - e.g., [AWS S3 Cross-Region Replication](https://aws.amazon.com/s3/features/cross-region-replication/), [Azure Backup to another region](https://learn.microsoft.com/en-us/azure/backup/backup-azure-arm-restore-vms), [GCP Snapshot replication](https://cloud.google.com/compute/docs/disks/cross-region-snapshots), [OCI cross-region object replication](https://www.oracle.com/cloud/object-storage/cross-region-replication/).
-   - Minimizes manual tasks and ensures consistent DR coverage.
+   - Minimises manual tasks and ensures consistent DR coverage.
 
 1. **Schedule Non-Production in Cheaper Regions**
 
@@ -104,8 +104,8 @@ By automating cross-region backups, offloading dev/test workloads where cost is 
 
 - **Advanced Region Flexibility**  
   You pick the region that offers the best HPC, GPU, or AI services, or one with the lowest carbon footprint or cost.
-- **Sustainability & Cost Prioritized**  
-  If your organization strongly values green energy sourcing or cheaper nighttime rates, you shift workloads accordingly.
+- **Sustainability & Cost Prioritised**  
+  If your organisation strongly values green energy sourcing or cheaper nighttime rates, you shift workloads accordingly.
 - **No Hard Legal Data Residency Constraints**  
   You can store data outside the UK or EEA as permitted, and no critical constraints block you from picking any global region.
 
@@ -117,7 +117,7 @@ Below are **rapidly actionable** enhancements:
 
 1. **Sustainability-Driven Tools**
 
-   - e.g., [AWS Customer Carbon Footprint Tool](https://aws.amazon.com/aws-cost-management/aws-customer-carbon-footprint-tool/), [Azure Carbon Optimization](https://learn.microsoft.com/en-us/azure/carbon-optimization/view-emissions), [GCP Carbon Footprint](https://cloud.google.com/sustainability/carbon-footprint), [OCI Carbon Footprint](https://www.oracle.com/cloud/carbon-footprint.html).
+   - e.g., [AWS Customer Carbon Footprint Tool](https://aws.amazon.com/aws-cost-management/aws-customer-carbon-footprint-tool/), [Azure Carbon Optimisation](https://learn.microsoft.com/en-us/azure/carbon-optimisation/view-emissions), [GCP Carbon Footprint](https://cloud.google.com/sustainability/carbon-footprint), [OCI Carbon Footprint](https://www.oracle.com/cloud/carbon-footprint.html).
    - Evaluate region choices for best environmental impact.
 
 1. **Implement Real-Time Cost & Perf Monitoring**
@@ -139,11 +139,11 @@ Below are **rapidly actionable** enhancements:
 
 By using sustainability calculators to choose greener regions, implementing real-time cost/performance checks, ensuring multi-region data readiness, managing user latency via CDNs or local replicas, and documenting region-swapping, you fully leverage each provider’s global footprint for cost and environmental benefits.
 
-### **Dynamic and Cost-Sustainable Distribution:** Workloads are dynamically allocated across various regions and availability zones, with scheduling optimized for cost-efficiency and sustainability, adapting in real-time to changing conditions.
+### **Dynamic and Cost-Sustainable Distribution:** Workloads are dynamically allocated across various regions and availability zones, with scheduling optimised for cost-efficiency and sustainability, adapting in real-time to changing conditions.
 
 #### **How to determine if this good enough**
 
-Your organization pursues a true multi-region, multi-AZ dynamic approach. Automated processes shift workloads based on real-time cost (spot prices) or carbon intensity, while preserving performance and compliance. This may be "good enough" if:
+Your organisation pursues a true multi-region, multi-AZ dynamic approach. Automated processes shift workloads based on real-time cost (spot prices) or carbon intensity, while preserving performance and compliance. This may be "good enough" if:
 
 1. **Highly Automated Infrastructure**
 
@@ -192,4 +192,4 @@ Below are **rapidly actionable** methods to refine dynamic, cost-sustainable dis
 
 By automating workload placement with spot or preemptible instances, factoring real-time carbon and cost signals, applying continuous data residency checks, stress-testing region shifts with chaos engineering, and embedding advanced DevSecOps validations, you maintain a dynamic, cost-sustainable distribution model that meets the highest operational and environmental standards for UK public sector services.
 
-**Keep doing what you’re doing,** and consider blogging about or opening pull requests to share how you handle multi-region distribution and operational management for cloud workloads. This information can help other UK public sector organizations adopt or improve similar approaches in alignment with NCSC, NIST, and GOV.UK best-practice guidance.
+**Keep doing what you’re doing,** and consider blogging about or opening pull requests to share how you handle multi-region distribution and operational management for cloud workloads. This information can help other UK public sector organisations adopt or improve similar approaches in alignment with NCSC, NIST, and GOV.UK best-practice guidance.

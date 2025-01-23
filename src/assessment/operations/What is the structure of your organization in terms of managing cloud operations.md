@@ -1,5 +1,5 @@
 ---
-title: What is the structure of your organization in terms of managing cloud operations?
+title: What is the structure of your organisation in terms of managing cloud operations?
 tags: operations
 eleventyNavigation:
   parent: operations
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-If developers handle cloud deployments, architecture, security, and day-to-day management without a specialized cloud team, you might consider it "good enough" if:
+If developers handle cloud deployments, architecture, security, and day-to-day management without a specialised cloud team, you might consider it "good enough" if:
 
 1. **Small, Simple Environments**
 
@@ -77,7 +77,7 @@ When all aspects of cloud—deployment, maintenance, security, strategy—are ha
 1. **Stable Workloads**
    - Your environment rarely changes, so a third-party can manage updates or occasional expansions without heavy internal oversight.
 
-However, outsourcing strategic direction can leave the organization dependent on external decisions, potentially misaligned with your departmental goals or public sector guidelines. [NCSC’s recommendations](https://www.ncsc.gov.uk/) often emphasize maintaining a degree of internal oversight for security and compliance reasons.
+However, outsourcing strategic direction can leave the organisation dependent on external decisions, potentially misaligned with your departmental goals or public sector guidelines. [NCSC’s recommendations](https://www.ncsc.gov.uk/) often emphasize maintaining a degree of internal oversight for security and compliance reasons.
 
 #### **How to do better**
 
@@ -90,7 +90,7 @@ Below are **rapidly actionable** ways to balance outsourced support with interna
 
 1. **Set Clear SLA and KPI Requirements**
 
-   - Make sure the vendor’s contract outlines response times, compliance with [GOV.UK Cloud Security Principles](https://www.gov.uk/government/publications/cloud-security-guidance) or NCSC best practices, and regular cost-optimization reviews.
+   - Make sure the vendor’s contract outlines response times, compliance with [GOV.UK Cloud Security Principles](https://www.gov.uk/government/publications/cloud-security-guidance) or NCSC best practices, and regular cost-optimisation reviews.
 
 1. **Insist on Transparent Reporting**
 
@@ -100,7 +100,7 @@ Below are **rapidly actionable** ways to balance outsourced support with interna
 1. **Plan a Knowledge Transfer Path**
 
    - Negotiate with the vendor to provide training sessions or shadowing opportunities, building internal cloud literacy:
-     - e.g., monthly knowledge-sharing on cost optimization or security patterns.
+     - e.g., monthly knowledge-sharing on cost optimisation or security patterns.
 
 1. **Retain Final Decision Power on Strategic Moves**
    - The vendor can propose solutions, but major platform changes or expansions should get internal review for alignment with departmental objectives.
@@ -112,7 +112,7 @@ By keeping strategic authority, setting stringent SLAs, fostering vendor-provide
 
 #### **How to determine if this good enough**
 
-Here, your organization retains the cloud vision and strategy, while day-to-day ops remain outsourced. It might be "good enough" if:
+Here, your organisation retains the cloud vision and strategy, while day-to-day ops remain outsourced. It might be "good enough" if:
 
 1. **High-Level Control**
 
@@ -144,7 +144,7 @@ Below are **rapidly actionable** enhancements:
 
    - Conduct quarterly or monthly reviews to align on:
      - Future cloud services adoption
-     - Cost optimization opportunities
+     - Cost optimisation opportunities
      - Evolving security or compliance needs
 
 1. **Request Real-Time Metrics**
@@ -161,7 +161,7 @@ By jointly defining an operations handbook, integrating vendor ops staff in your
 
 #### **How to determine if this good enough**
 
-When you blend internal expertise with external support—for instance, your staff handle architecture and day-to-day governance, while a vendor offers specialized services—this arrangement can be "good enough" if:
+When you blend internal expertise with external support—for instance, your staff handle architecture and day-to-day governance, while a vendor offers specialised services—this arrangement can be "good enough" if:
 
 1. **Flexible Resource Allocation**
 
@@ -172,15 +172,15 @@ When you blend internal expertise with external support—for instance, your sta
    - Regular communication ensures your internal team remains involved, learning from the vendor’s advanced capabilities.
 
 1. **Cost-Effective**
-   - Outsourcing only targeted areas (e.g., overnight ops or specialized DevOps) while your team handles strategic decisions can keep budgets manageable and transparent.
+   - Outsourcing only targeted areas (e.g., overnight ops or specialised DevOps) while your team handles strategic decisions can keep budgets manageable and transparent.
 
 However, inconsistent processes between internal staff and vendor resources can cause friction or confusion about accountability. [NCSC’s guidance on supplier assurance](https://www.ncsc.gov.uk/section/products-services/supplier-assurance) often emphasizes the importance of well-defined contracts and security alignment.
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to optimize the hybrid approach:
+Below are **rapidly actionable** ways to optimise the hybrid approach:
 
-1. **Standardize Tools and Processes**
+1. **Standardise Tools and Processes**
 
    - Require both in-house and vendor teams to adopt a single set of CI/CD pipelines or logging solutions:
      - e.g., [AWS CodePipeline or Azure DevOps for build/test/deploy, with shared logging in CloudWatch/Azure Monitor/GCP Logging/OCI Logging](https://docs.aws.amazon.com/codepipeline/latest/userguide/what-is-codepipeline.html)
@@ -198,26 +198,26 @@ Below are **rapidly actionable** ways to optimize the hybrid approach:
 
 1. **Align on a Joint Roadmap**
 
-   - Create a 6-12 month cloud roadmap, listing major initiatives like infrastructure refreshes, security enhancements (e.g., compliance with [NIST SP 800-53 controls](https://csrc.nist.gov/)), or cost optimization steps.
+   - Create a 6-12 month cloud roadmap, listing major initiatives like infrastructure refreshes, security enhancements (e.g., compliance with [NIST SP 800-53 controls](https://csrc.nist.gov/)), or cost optimisation steps.
 
 1. **Encourage Cross-Training**
    - Rotate vendor staff into internal workshops or hackathons, and have your staff occasionally shadow vendor experts to deepen in-house capabilities.
 
-By unifying tools, clarifying roles, rotating on-call duties, aligning on a roadmap, and cross-training, you make the hybrid model more cohesive—maximizing agility and ensuring consistent cloud operation standards across internal and outsourced teams.
+By unifying tools, clarifying roles, rotating on-call duties, aligning on a roadmap, and cross-training, you make the hybrid model more cohesive—maximising agility and ensuring consistent cloud operation standards across internal and outsourced teams.
 
-### **Dedicated In-House Cloud Team:** A robust, dedicated cloud team exists within the organization, comprising at least 5 civil/public servant employees per cloud platform. This team has a shared roadmap for cloud capabilities, adoption, and migration.
+### **Dedicated In-House Cloud Team:** A robust, dedicated cloud team exists within the organisation, comprising at least 5 civil/public servant employees per cloud platform. This team has a shared roadmap for cloud capabilities, adoption, and migration.
 
 #### **How to determine if this good enough**
 
-If your organization has an in-house cloud team for each major platform (e.g., AWS, Azure, GCP, Oracle Cloud), or at least one broad team covering multiple platforms, you might consider it "good enough" if:
+If your organisation has an in-house cloud team for each major platform (e.g., AWS, Azure, GCP, Oracle Cloud), or at least one broad team covering multiple platforms, you might consider it "good enough" if:
 
 1. **Comprehensive Expertise**
 
    - Your staff includes architects, DevOps engineers, security specialists, and cost analysts, ensuring all critical angles are covered.
 
-1. **Clear Organizational Roadmap**
+1. **Clear Organisational Roadmap**
 
-   - A well-defined strategy for cloud migration, new service adoption, cost optimization, or security posture, shared by leadership.
+   - A well-defined strategy for cloud migration, new service adoption, cost optimisation, or security posture, shared by leadership.
 
 1. **Strong Alignment with Public Sector Objectives**
 
@@ -249,7 +249,7 @@ Below are **rapidly actionable** ways to refine an already dedicated in-house cl
 
 1. **Champion Innovations**
 
-   - Keep experimenting with advanced features (e.g., AWS Graviton, Azure confidential computing, GCP Anthos multi-cloud, or OCI HPC offerings) to continuously optimize performance and cost.
+   - Keep experimenting with advanced features (e.g., AWS Graviton, Azure confidential computing, GCP Anthos multi-cloud, or OCI HPC offerings) to continuously optimise performance and cost.
 
 1. **Regularly Review and Update the Roadmap**
    - Adapt to new government mandates, NCSC advisories, or emerging technologies.
@@ -257,4 +257,4 @@ Below are **rapidly actionable** ways to refine an already dedicated in-house cl
 
 By embedding security and cost best practices, enabling cross-functional product teams, instituting policy-as-code, and continually updating your roadmap, your dedicated in-house cloud team evolves into a dynamic, cutting-edge force that consistently meets UK public sector operational and compliance demands.
 
-**Keep doing what you’re doing,** and consider writing up your experiences or publishing blog posts on your cloud team’s journey. Also, contribute pull requests to this guidance or similar public sector best-practice repositories, helping others evolve their organizational structures for effective cloud operations.
+**Keep doing what you’re doing,** and consider writing up your experiences or publishing blog posts on your cloud team’s journey. Also, contribute pull requests to this guidance or similar public sector best-practice repositories, helping others evolve their organisational structures for effective cloud operations.

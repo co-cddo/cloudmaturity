@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-In this stage, your organization relies on human-driven steps (e.g., emailing code changes to QA testers, manual approval boards, or ad hoc scripts) for both deployment and testing. You might consider it "good enough" if:
+In this stage, your organisation relies on human-driven steps (e.g., emailing code changes to QA testers, manual approval boards, or ad hoc scripts) for both deployment and testing. You might consider it "good enough" if:
 
 1. **Very Limited Release Frequency**
 
@@ -59,7 +59,7 @@ By establishing minimal CI automation, clarifying release steps, and piloting au
 
 #### **How to determine if this good enough**
 
-If your organization has introduced some automated tests or a partial CI pipeline (e.g., unit tests running on commits), yet still deploys rarely or with manual checks, you might find it "good enough" if:
+If your organisation has introduced some automated tests or a partial CI pipeline (e.g., unit tests running on commits), yet still deploys rarely or with manual checks, you might find it "good enough" if:
 
 1. **Low or Medium Release Velocity**
 
@@ -94,7 +94,7 @@ Below are **rapidly actionable** methods to evolve from partial automation:
 
    - Store artifacts in a repository for easier rollback:
      - [AWS S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html), [ECR](https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html), or [CodeArtifact](https://docs.aws.amazon.com/codeartifact/latest/userguide/welcome.html); [Azure Artifacts](https://docs.microsoft.com/en-us/azure/devops/artifacts/overview) or [Container Registry](https://docs.microsoft.com/en-us/azure/container-registry/); [GCP Artifact Registry](https://cloud.google.com/artifact-registry/docs/overview); [OCI Container Registry](https://docs.oracle.com/en-us/iaas/Content/Registry/Concepts/registryoverview.htm)
-   - Make rollback steps part of your pipeline script to minimize disruption if a new release fails QA in production.
+   - Make rollback steps part of your pipeline script to minimise disruption if a new release fails QA in production.
 
 1. **Refine Manual Approvals**
 
@@ -140,7 +140,7 @@ Below are **rapidly actionable** ways to enhance integrated deployment and QA:
 
 1. **Implement Parallel Testing or Test Suites**
 
-   - If test execution time is long, parallelize them:
+   - If test execution time is long, parallelise them:
      - e.g., AWS CodeBuild parallel builds, Azure Pipelines multi-job phases, GCP Cloud Build multi-step concurrency, or OCI DevOps parallel test runs.
 
 1. **Introduce Slack/Teams Notifications**
@@ -157,13 +157,13 @@ Below are **rapidly actionable** ways to enhance integrated deployment and QA:
    - [GOV.UK agile delivery guidelines](https://www.gov.uk/service-manual/agile-delivery) can help refine iterative approaches.
    - [NCSC advice on DevSecOps pipelines](https://www.ncsc.gov.uk/) encourages secure integration from start to finish.
 
-By strengthening security/performance checks, parallelizing tests, using real-time notifications, and employing feature flags, you further streamline your integrated QA pipeline while maintaining robust checks and balances.
+By strengthening security/performance checks, parallelising tests, using real-time notifications, and employing feature flags, you further streamline your integrated QA pipeline while maintaining robust checks and balances.
 
 ### **CI/CD with Automated Testing:** A Continuous Integration/Continuous Deployment (CI/CD) pipeline is in place, including automated testing and frequent, reliable deployments.
 
 #### **How to determine if this good enough**
 
-Here, your organization relies on a sophisticated, automated pipeline that runs on every code commit or merges. You might consider it "good enough" if:
+Here, your organisation relies on a sophisticated, automated pipeline that runs on every code commit or merges. You might consider it "good enough" if:
 
 1. **High Release Frequency**
 
@@ -213,7 +213,7 @@ Below are **rapidly actionable** ways to refine your existing CI/CD with automat
 
 By deepening security integration, adopting advanced deployment tactics, and refining rollbacks or feature flags, you enhance an already stable CI/CD pipeline. This leads to even faster, safer releases aligned with top-tier DevSecOps practices recommended by NCSC and NIST.
 
-### **On-Demand Ephemeral Environments:** Deployment and QA utilize short-lived, ephemeral environments provisioned on demand, indicating a highly sophisticated, efficient, and agile pipeline.
+### **On-Demand Ephemeral Environments:** Deployment and QA utilise short-lived, ephemeral environments provisioned on demand, indicating a highly sophisticated, efficient, and agile pipeline.
 
 #### **How to determine if this good enough**
 
@@ -251,14 +251,14 @@ Even at this apex, there are **rapidly actionable** improvements:
 1. **Automated Data Masking or Synthetic Data**
 
    - If ephemeral environments need real data, ensure compliance with UK data protection regs:
-     - Use synthetic test data or anonymize production copies to maintain NCSC data security best practices.
+     - Use synthetic test data or anonymise production copies to maintain NCSC data security best practices.
 
 1. **Inject Chaos or Performance Tests**
 
    - Incorporate chaos engineering (e.g., random container/network failures) and load tests in ephemeral environments:
      - This ensures high resilience under real-world stress.
 
-1. **Optimize Environment Lifecycle**
+1. **Optimise Environment Lifecycle**
 
    - Monitor resource usage to avoid ephemeral environments lingering longer than needed:
      - e.g., automatically tear down environments if no activity is detected after 48 hours.

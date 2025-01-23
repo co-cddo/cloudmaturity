@@ -1,15 +1,15 @@
 ---
-title: What is your organization's approach to implementing 2FA/MFA for securing access?
+title: What is your organisation's approach to implementing 2FA/MFA for securing access?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Encouraged but Not Enforced:** 2FA/MFA is broadly recommended in organizational guidelines, but it is not mandatory or consistently enforced across services and users.
+### **Encouraged but Not Enforced:** 2FA/MFA is broadly recommended in organisational guidelines, but it is not mandatory or consistently enforced across services and users.
 
 #### **How to determine if this good enough**
 
-Your organization may advise staff to enable 2FA (two-factor) or MFA (multi-factor) on their accounts, but it’s left to personal choice or departmental preference. This might be "good enough" if:
+Your organisation may advise staff to enable 2FA (two-factor) or MFA (multi-factor) on their accounts, but it’s left to personal choice or departmental preference. This might be "good enough" if:
 
 1. **Minimal Risk Appetite**
 
@@ -17,7 +17,7 @@ Your organization may advise staff to enable 2FA (two-factor) or MFA (multi-fact
 
 1. **Testing or Early Rollout**
 
-   - You’re in a pilot phase before formalizing a universal requirement.
+   - You’re in a pilot phase before formalising a universal requirement.
 
 1. **No High-Stakes Obligations**
    - You don’t face stringent regulatory demands or public sector security mandates.
@@ -37,28 +37,28 @@ Below are **rapidly actionable** steps to move from an "encouraged" MFA model to
    - Provide short e-learning or internal comms about real incidents caused by single-factor breaches:
      - e.g., referencing [NCSC’s blog or case studies on stolen credentials](https://www.ncsc.gov.uk/).
 
-1. **Incentivize Voluntary Adoption**
+1. **Incentivise Voluntary Adoption**
 
-   - Recognize teams or individuals who enable MFA (e.g., shout-outs or small accolades).
+   - Recognise teams or individuals who enable MFA (e.g., shout-outs or small accolades).
    - Encourages cultural acceptance before a final mandate.
 
 1. **Publish a Simple Internal FAQ**
 
    - Outline how to set up [Google Authenticator](https://support.google.com/accounts/answer/1066447), [Microsoft Authenticator](https://support.microsoft.com/en-us/microsoft-365/article/microsoft-authenticator-app-faq-80d941b9-333d-4817-936d-bdf4b7b0fdc9), [hardware tokens](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services/recommended-types-of-mfa), or other [TOTP apps](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services/recommended-types-of-mfa#app).
-   - Minimizes friction for new adopters.
+   - Minimises friction for new adopters.
 
 1. **Plan a Timeline for Mandatory MFA**
    - Over 3–6 months, aim to require MFA for at least all staff accessing sensitive services.
 
-By prioritizing MFA for privileged users, educating staff on credential compromise scenarios, incentivizing early adoption, providing user-friendly setup instructions, and scheduling a near-future MFA mandate, you evolve from optional guidance to real protective measures.
+By prioritising MFA for privileged users, educating staff on credential compromise scenarios, incentivising early adoption, providing user-friendly setup instructions, and scheduling a near-future MFA mandate, you evolve from optional guidance to real protective measures.
 
 ### **Mandated but Inconsistently Enforced:** 2FA/MFA is a requirement for all services and users, but enforcement is inconsistent and may have gaps.
 
 #### **How to determine if this good enough**
 
-Your organization has a policy stating all staff "must" enable MFA. However, actual compliance might vary—some services allow bypass, or certain users remain on single-factor. This can be "good enough" if:
+Your organisation has a policy stating all staff "must" enable MFA. However, actual compliance might vary—some services allow bypass, or certain users remain on single-factor. This can be "good enough" if:
 
-1. **Broad Organizational Recognition**
+1. **Broad Organisational Recognition**
 
    - Everyone knows MFA is required, reducing the risk from total single-factor usage.
 
@@ -101,15 +101,15 @@ By enabling built-in forced MFA, monitoring compliance, communicating a strict c
 
 #### **How to determine if this good enough**
 
-Your organization has successfully mandated MFA for nearly every scenario, though a small number of systems or roles may not align due to technical constraints or a specific risk-based exemption. This is likely "good enough" if:
+Your organisation has successfully mandated MFA for nearly every scenario, though a small number of systems or roles may not align due to technical constraints or a specific risk-based exemption. This is likely "good enough" if:
 
 1. **High MFA Coverage**
 
-   - Over 90% of your users and services require multi-factor login, drastically minimizing account compromise risk.
+   - Over 90% of your users and services require multi-factor login, drastically minimising account compromise risk.
 
 1. **Well-Documented Exceptions**
 
-   - Each exception is risk-assessed and typically short-term. The organization knows precisely which systems lack enforced MFA.
+   - Each exception is risk-assessed and typically short-term. The organisation knows precisely which systems lack enforced MFA.
 
 1. **Strong Culture & Processes**
    - Staff generally accept MFA as standard, and you rarely experience pushback or confusion.
@@ -123,7 +123,7 @@ Below are **rapidly actionable** ways to remove or mitigate the last few excepti
 1. **Document a Sunset Plan for Exceptions**
 
    - If a system can’t integrate MFA now, define a target date or solution path (like an MFA-proxy or upgrade).
-   - Minimizes indefinite exceptions.
+   - Minimises indefinite exceptions.
 
 1. **Risk-Base or Step-Up**
 
@@ -149,7 +149,7 @@ By planning for the eventual elimination of exceptions, deploying step-up authen
 
 #### **How to determine if this good enough**
 
-Your organization refuses to allow SMS-based or similarly weak MFA. Instead, you use TOTP apps, hardware tokens, or other resilient factors. This might be "good enough" if:
+Your organisation refuses to allow SMS-based or similarly weak MFA. Instead, you use TOTP apps, hardware tokens, or other resilient factors. This might be "good enough" if:
 
 1. **High-Security Requirements**
 
@@ -195,7 +195,7 @@ By introducing hardware-based MFA, ensuring robust fallback processes, applying 
 
 #### **How to determine if this good enough**
 
-At this pinnacle, your organization requires hardware-based tokens (e.g., FIDO2, YubiKeys, or similar) for all staff, forbidding weaker factors like SMS or even TOTP. This is typically "good enough" if:
+At this pinnacle, your organisation requires hardware-based tokens (e.g., FIDO2, YubiKeys, or similar) for all staff, forbidding weaker factors like SMS or even TOTP. This is typically "good enough" if:
 
 1. **Full Hardware Token Adoption**
 
@@ -203,7 +203,7 @@ At this pinnacle, your organization requires hardware-based tokens (e.g., FIDO2,
 
 1. **Central Key Lifecycle Management**
 
-   - The organization issues, tracks, and revokes hardware tokens systematically, referencing [NCSC hardware token management best practices](https://www.ncsc.gov.uk/).
+   - The organisation issues, tracks, and revokes hardware tokens systematically, referencing [NCSC hardware token management best practices](https://www.ncsc.gov.uk/).
 
 1. **High Assurance**
    - This approach meets or exceeds [NIST SP 800-63B AAL3 standards](https://csrc.nist.gov/) and offers strong resilience against phishing or SIM-swap exploits.
@@ -212,7 +212,7 @@ You could still refine ephemeral or risk-adaptive auth, integrate zero-trust pos
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to optimize hardware-based MFA:
+Below are **rapidly actionable** ways to optimise hardware-based MFA:
 
 1. **Embrace Risk-Based Authentication**
 
@@ -235,7 +235,7 @@ Below are **rapidly actionable** ways to optimize hardware-based MFA:
      - referencing [NCSC or local ITHC red/purple teaming best practices](https://www.ncsc.gov.uk/).
 
 1. **Plan for Cross-department Interoperability**
-   - If staff need to collaborate with other departments, consider bridging identity solutions or allowing hardware tokens recognized across multiple organizations:
+   - If staff need to collaborate with other departments, consider bridging identity solutions or allowing hardware tokens recognised across multiple organisations:
      - referencing [GOV.UK single sign-on or cross-department identity frameworks](https://www.gov.uk/service-manual).
 
 By coupling hardware tokens with adaptive risk checks, adopting zero-trust microsegmentation for each request, carefully managing the entire token lifecycle, running targeted red team tests, and exploring cross-department usage, you elevate an already stringent hardware-based MFA approach to a seamlessly integrated, high-security ecosystem suitable for sensitive UK public sector operations.

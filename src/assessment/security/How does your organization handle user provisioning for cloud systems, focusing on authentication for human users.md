@@ -1,5 +1,5 @@
 ---
-title: How does your organization handle user provisioning for cloud systems, focusing on authentication for human users?
+title: How does your organisation handle user provisioning for cloud systems, focusing on authentication for human users?
 tags: security
 eleventyNavigation:
   parent: security
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization might rely on shared or manually managed individual accounts for cloud systems, with minimal traceability. This can feel "good enough" if:
+Your organisation might rely on shared or manually managed individual accounts for cloud systems, with minimal traceability. This can feel "good enough" if:
 
 1. **Minimal Operational Complexity**
 
@@ -36,7 +36,7 @@ Below are **rapidly actionable** steps to move beyond shared/manual accounts:
 1. **Set Up Basic IAM**
 
    - Use vendor-native identity tools to define unique accounts, e.g.:
-     - [AWS IAM users/roles or AWS SSO for centralized user management](https://aws.amazon.com/iam/)
+     - [AWS IAM users/roles or AWS SSO for centralised user management](https://aws.amazon.com/iam/)
      - [Azure AD for custom roles plus Azure Portal user creation, or Azure DevOps user management](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory)
      - [GCP Cloud Identity for user provisioning, or short-lived tokens with GCP IAM roles](https://cloud.google.com/identity)
      - [OCI IAM compartments/policies with custom user accounts or integration to identity providers](https://www.oracle.com/cloud/free/oci-training/)
@@ -53,15 +53,15 @@ Below are **rapidly actionable** steps to move beyond shared/manual accounts:
 
 1. **Move to a Single Sign-On Approach**
    - Plan to adopt SSO with a single user directory in the next phase:
-     - Minimizes manual overhead and ensures consistency.
+     - Minimises manual overhead and ensures consistency.
 
 By ensuring each user has an individual account, using vendor IAM for creation, documenting a minimal lifecycle process, enabling audit logging, and preparing for SSO, you remedy the major pitfalls of shared/manual account approaches.
 
-### **Identity Repository with Manual Processes:** An organizational identity repository (like Active Directory or LDAP) is used as the user source of truth, but processes for cloud system integration are manual or inconsistent.
+### **Identity Repository with Manual Processes:** An organisational identity repository (like Active Directory or LDAP) is used as the user source of truth, but processes for cloud system integration are manual or inconsistent.
 
 #### **How to determine if this good enough**
 
-Your organization might store all user info in a standard directory (e.g., Active Directory or LDAP) but each cloud integration is handled manually. This can be "good enough" if:
+Your organisation might store all user info in a standard directory (e.g., Active Directory or LDAP) but each cloud integration is handled manually. This can be "good enough" if:
 
 1. **Consistent On-Prem Directory**
 
@@ -74,7 +74,7 @@ Your organization might store all user info in a standard directory (e.g., Activ
 1. **Medium Risk Tolerance**
    - The environment accepts manual integrations, though certain compliance or security requirements aren’t strict.
 
-However, manual synchronization or ad-hoc provisioning to cloud systems often leads to out-of-date accounts, security oversights, or duplication. [NCSC’s identity and access management guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-53 AC (Access Controls)](https://csrc.nist.gov/) recommend consistent, automated user lifecycle management across on-prem and cloud.
+However, manual synchronisation or ad-hoc provisioning to cloud systems often leads to out-of-date accounts, security oversights, or duplication. [NCSC’s identity and access management guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-53 AC (Access Controls)](https://csrc.nist.gov/) recommend consistent, automated user lifecycle management across on-prem and cloud.
 
 #### **How to do better**
 
@@ -83,14 +83,14 @@ Below are **rapidly actionable** steps to unify and automate your on-prem identi
 1. **Enable Federation or SSO**
 
    - e.g., [AWS Directory Service + AD trust](https://aws.amazon.com/directoryservice/), [Azure AD Connect](https://learn.microsoft.com/en-us/azure/active-directory/hybrid/whatis-azure-ad-connect), [GCP Cloud Identity Sync](https://cloud.google.com/identity/docs/sync), [OCI Identity Federation with AD/LDAP](https://www.oracle.com/cloud/free/oci-training/):
-   - Minimizes manual user creation in each cloud service.
+   - Minimises manual user creation in each cloud service.
 
 1. **Deploy Basic Automation Scripts**
 
    - If a full federation is not possible immediately, create scripts that read from your directory and auto-provision or auto-delete accounts in cloud:
      - e.g., using vendor CLIs or REST APIs.
 
-1. **Standardize User Roles**
+1. **Standardise User Roles**
 
    - For each cloud environment, define roles that map to on-prem groups:
      - e.g., "Developer group in AD -> Dev role in AWS."
@@ -105,13 +105,13 @@ Below are **rapidly actionable** steps to unify and automate your on-prem identi
    - If feasible, shift to a modern IDP (Azure AD, Okta, GCP Identity, etc.) so manual processes fade out:
      - This might also meet [NIST guidelines on cross-domain identity management (SCIM, etc.)](https://csrc.nist.gov/).
 
-By federating or automating the sync between your directory and cloud, standardizing roles, scheduling periodic comparisons, and eventually adopting a modern identity provider, you gradually remove manual friction and potential security gaps.
+By federating or automating the sync between your directory and cloud, standardising roles, scheduling periodic comparisons, and eventually adopting a modern identity provider, you gradually remove manual friction and potential security gaps.
 
-### **Common Standards for Identity Management:** Standardized protocols and practices are in place for managing and mapping user identities between identity providers and cloud systems. Non-compliant services are less preferred.
+### **Common Standards for Identity Management:** Standardised protocols and practices are in place for managing and mapping user identities between identity providers and cloud systems. Non-compliant services are less preferred.
 
 #### **How to determine if this good enough**
 
-Your organization has established guidelines for user provisioning, adopting standard protocols (e.g., SAML, OIDC) or dedicated identity bridging solutions. This is likely "good enough" if:
+Your organisation has established guidelines for user provisioning, adopting standard protocols (e.g., SAML, OIDC) or dedicated identity bridging solutions. This is likely "good enough" if:
 
 1. **Consistent Approach**
 
@@ -139,7 +139,7 @@ Below are **rapidly actionable** ways to refine standard identity management:
 
    - Use built-in or third-party approval workflows:
      - e.g., [Azure AD Privileged Identity Management](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/), [AWS SSO access request workflows](https://aws.amazon.com/sso/), [GCP Identity Groups](https://cloud.google.com/identity/docs/groups), [OCI workflow integrations](https://www.oracle.com/cloud/free/oci-training/).
-   - Ensures no direct admin changes bypass the standardized process.
+   - Ensures no direct admin changes bypass the standardised process.
 
 1. **Continuously Evaluate Cloud Services**
 
@@ -160,7 +160,7 @@ By enforcing SSO/federation for all services, deploying structured access workfl
 
 #### **How to determine if this good enough**
 
-Your organization’s identity is seamlessly managed by a central provider, with minimal manual intervention:
+Your organisation’s identity is seamlessly managed by a central provider, with minimal manual intervention:
 
 1. **Automatic User Lifecycle**
 
@@ -186,7 +186,7 @@ Below are **rapidly actionable** ways to reinforce automated federated identity:
 
 1. **Implement Policy-as-Code for Identity**
 
-   - Use [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions ([AWS SCP](https://aws.amazon.com/service-authorization/scps/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define identity governance in code, ensuring version-controlled and auditable changes.
+   - Use [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions ([AWS SCP](https://aws.amazon.com/service-authorisation/scps/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define identity governance in code, ensuring version-controlled and auditable changes.
 
 1. **Add Real-Time Security Monitoring**
 
@@ -200,15 +200,15 @@ Below are **rapidly actionable** ways to reinforce automated federated identity:
 
 1. **Review & Update Roles Continuously**
    - Encourage monthly or quarterly role usage analyses, removing unneeded entitlements automatically:
-     - Minimizes risk from leftover privileges.
+     - Minimises risk from leftover privileges.
 
 By adopting short-lived credentials, storing identity policy in code, enabling real-time security checks, exploring cross-department SSO, and continuously reviewing role usage, you transform a solid federation setup into a robust and adaptive identity ecosystem.
 
-### **Unified Cloud-Based Identity Provider:** A fully cloud-based user directory or identity provider acts as the single source of truth. Centralized management is aligned with user onboarding, movements, and terminations. Services not supporting federated identity have been phased out.
+### **Unified Cloud-Based Identity Provider:** A fully cloud-based user directory or identity provider acts as the single source of truth. Centralised management is aligned with user onboarding, movements, and terminations. Services not supporting federated identity have been phased out.
 
 #### **How to determine if this good enough**
 
-At the highest maturity, your organization uses a single, cloud-based IdP (e.g., Azure AD, AWS SSO, GCP Identity, or third-party SSO) for all user lifecycle events, and systems not integrating with it are deprecated or replaced. You might see it "good enough" if:
+At the highest maturity, your organisation uses a single, cloud-based IdP (e.g., Azure AD, AWS SSO, GCP Identity, or third-party SSO) for all user lifecycle events, and systems not integrating with it are deprecated or replaced. You might see it "good enough" if:
 
 1. **Complete Lifecycle Automation**
 

@@ -1,5 +1,5 @@
 ---
-title: How does your organization handle the creation and storage of build artifacts?
+title: How does your organisation handle the creation and storage of build artifacts?
 tags: governance
 eleventyNavigation:
   parent: governance
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-In this stage, your organization lacks formal processes to create or store build artifacts. You might find this approach "good enough" if:
+In this stage, your organisation lacks formal processes to create or store build artifacts. You might find this approach "good enough" if:
 
 1. **Limited or Non-Critical Services**
 
@@ -21,7 +21,7 @@ In this stage, your organization lacks formal processes to create or store build
 
 1. **Single-Person or Very Small Team**
    - A single staff member manages everything, so there’s minimal confusion about versions or changes.
-   - The risk of accidental overwrites or lost code is recognized but considered low priority.
+   - The risk of accidental overwrites or lost code is recognised but considered low priority.
 
 However, even small teams can face confusion if code is edited live on servers, making it hard to replicate environments or roll back changes. For most UK public sector needs—especially with compliance or audit pressures—lack of artifact management eventually becomes problematic.
 
@@ -70,7 +70,7 @@ By adopting minimal CI/CD, storing artifacts in a shared location, and referenci
 
 #### **How to determine if this good enough**
 
-In this scenario, your organization has some automation but rebuilds the software in dev, test, and production separately. You might see this as "good enough" if:
+In this scenario, your organisation has some automation but rebuilds the software in dev, test, and production separately. You might see this as "good enough" if:
 
 1. **Low Risk of Version Drift**
 
@@ -89,7 +89,7 @@ However, environment-specific rebuilds can cause subtle differences, making debu
 
 Below are **rapidly actionable** strategies:
 
-1. **Centralize Your Build Once**
+1. **Centralise Your Build Once**
 
    - Shift to a pipeline that builds the artifact once, then deploys the same artifact to dev, test, and production. For instance:
      - [AWS CodeBuild creating a single artifact stored in S3 or ECR, then CodeDeploy or ECS/EKS uses that artifact for each environment](https://aws.amazon.com/blogs/devops/ci-cd-on-amazon-eks-using-aws-codecommit-aws-codepipeline-aws-codebuild-and-fluxcd/)
@@ -115,7 +115,7 @@ Below are **rapidly actionable** strategies:
    - This approach improves reliability and shortens lead times.
 
 1. **Create Basic Documentation**
-   - Summarize the difference between "build once, deploy many" and "build in each environment."
+   - Summarise the difference between "build once, deploy many" and "build in each environment."
    - Show management how consistent builds reduce risk and effort.
 
 By consolidating the build process, storing a single artifact per version, and promoting that same artifact across environments, you achieve consistency and reduce the risk of environment drift.
@@ -124,7 +124,7 @@ By consolidating the build process, storing a single artifact per version, and p
 
 #### **How to determine if this good enough**
 
-Here, your organization has progressed to storing build artifacts in a central place, often with versioning. This can be considered "good enough" if:
+Here, your organisation has progressed to storing build artifacts in a central place, often with versioning. This can be considered "good enough" if:
 
 1. **You Can Reproduce Past Builds**
 
@@ -178,7 +178,7 @@ Here are **rapidly actionable** enhancements:
 1. **Introduce Minimal Integrity Checks**
    - Even if you don’t have full cryptographic signatures, consider generating checksums (e.g., SHA256) for each artifact to detect accidental corruption.
 
-By using immutable storage, controlling access, and standardizing versioning, you strengthen artifact reliability and traceability without overwhelming your current processes.
+By using immutable storage, controlling access, and standardising versioning, you strengthen artifact reliability and traceability without overwhelming your current processes.
 
 ### **Pinned Dependencies with Cryptographic Verification:** All dependencies in build artifacts are tightly pinned to specific versions, with cryptographic signing or hashes to ensure integrity.
 
@@ -246,7 +246,7 @@ By scanning for vulnerabilities, signing artifacts, using SBOMs, and enforcing p
 
 #### **How to determine if this good enough**
 
-At this final stage, your organization has robust, end-to-end artifact management. You consider it "good enough" if:
+At this final stage, your organisation has robust, end-to-end artifact management. You consider it "good enough" if:
 
 1. **Full Immutability and Cryptographic Assurance**
 

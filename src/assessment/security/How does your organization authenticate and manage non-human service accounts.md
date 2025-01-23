@@ -1,5 +1,5 @@
 ---
-title: How does your organization authenticate and manage non-human service accounts?
+title: How does your organisation authenticate and manage non-human service accounts?
 tags: security
 eleventyNavigation:
   parent: security
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-In this scenario, your organization creates standard user accounts (with a username/password) for services or scripts to authenticate within the cloud environment. It might be "good enough" if:
+In this scenario, your organisation creates standard user accounts (with a username/password) for services or scripts to authenticate within the cloud environment. It might be "good enough" if:
 
 1. **Minimal Cloud Usage**
 
@@ -22,7 +22,7 @@ In this scenario, your organization creates standard user accounts (with a usern
 1. **No Internal Skill for Advanced Approaches**
    - The team lacks time or resources to implement more secure methods of service account authentication.
 
-However, user/password-based credentials can be easily leaked or shared, risking unauthorized access. [NCSC’s Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security) and [NIST SP 800-63 on digital identity guidelines](https://csrc.nist.gov/) often advise stronger or more automated credential management to avoid credential sprawl or reuse.
+However, user/password-based credentials can be easily leaked or shared, risking unauthorised access. [NCSC’s Cloud Security Guidance](https://www.ncsc.gov.uk/collection/cloud-security) and [NIST SP 800-63 on digital identity guidelines](https://csrc.nist.gov/) often advise stronger or more automated credential management to avoid credential sprawl or reuse.
 
 #### **How to do better**
 
@@ -48,7 +48,7 @@ Below are **rapidly actionable** steps to enhance service account security beyon
 1. **Automate Rotation**
 
    - If you must keep user/pass-based secrets temporarily, implement at least monthly or quarterly rotations:
-     - Minimizes window of exposure if leaked.
+     - Minimises window of exposure if leaked.
 
 1. **Reference NCSC & NIST**
 
@@ -108,11 +108,11 @@ Below are **rapidly actionable** ways to move beyond static API keys:
 
 By centrally managing keys, rotating them automatically, transitioning to role-based or token-based credentials, enforcing least privilege, and auditing usage, you substantially reduce the security risk associated with static API keys.
 
-### **Centralized Secret Store with Some Credential Rotation:** A central secret store is in place, possibly supporting automated rotation of credentials for some systems, enhancing security and management efficiency.
+### **Centralised Secret Store with Some Credential Rotation:** A central secret store is in place, possibly supporting automated rotation of credentials for some systems, enhancing security and management efficiency.
 
 #### **How to determine if this good enough**
 
-Your organization employs a central solution (like AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, or OCI Vault) to hold service account credentials. Some credentials rotate automatically, while others might still be static. This might be "good enough" if:
+Your organisation employs a central solution (like AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, or OCI Vault) to hold service account credentials. Some credentials rotate automatically, while others might still be static. This might be "good enough" if:
 
 1. **Enhanced Security Posture**
 
@@ -129,7 +129,7 @@ To further strengthen security, you could expand rotation across all credentials
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to refine a centralized secret store with partial rotation:
+Below are **rapidly actionable** ways to refine a centralised secret store with partial rotation:
 
 1. **Extend Rotation to All or Most Credentials**
 
@@ -155,13 +155,13 @@ Below are **rapidly actionable** ways to refine a centralized secret store with 
    - Regularly check your secret store for credentials not accessed in a while or older than a certain rotation threshold:
      - helps avoid accumulating outdated secrets.
 
-By expanding automated rotation, integrating secret retrieval into pipelines, enforcing tight access controls, adopting role-based methods for new services, and cleaning stale secrets, you further strengthen your centralized secret store approach for secure, efficient credential management.
+By expanding automated rotation, integrating secret retrieval into pipelines, enforcing tight access controls, adopting role-based methods for new services, and cleaning stale secrets, you further strengthen your centralised secret store approach for secure, efficient credential management.
 
 ### **Mutual TLS for Authentication:** Mutual Transport Layer Security (mTLS) is used for non-human service accounts, providing a more secure, certificate-based authentication method.
 
 #### **How to determine if this good enough**
 
-Your organization deploys mutual TLS (mTLS)—each service has a certificate, and the server also presents a certificate to the client, ensuring bidirectional trust. This may be "good enough" if:
+Your organisation deploys mutual TLS (mTLS)—each service has a certificate, and the server also presents a certificate to the client, ensuring bidirectional trust. This may be "good enough" if:
 
 1. **Secure End-to-End**
 
@@ -184,7 +184,7 @@ Below are **rapidly actionable** ways to improve your mTLS-based authentication 
 
    - Automate certificate issuance and renewal:
      - e.g., [AWS Private CA with automated renewal](https://aws.amazon.com/privateca/), [Azure Key Vault certificates](https://learn.microsoft.com/en-us/azure/key-vault/certificates/about-certificates), [GCP Certificate Authority Service](https://cloud.google.com/certificate-authority-service), [OCI Certificates service](https://www.oracle.com/cloud/free/oci-training/).
-   - Minimizes risk if a certificate is compromised.
+   - Minimises risk if a certificate is compromised.
 
 1. **Adopt a Service Mesh**
 
@@ -204,9 +204,9 @@ Below are **rapidly actionable** ways to improve your mTLS-based authentication 
    - For advanced zero-trust, complement mTLS with role-based or token-based checks:
      - e.g., verifying principal claims in addition to cryptographic identities.
 
-By employing short-lived certs, possibly using a service mesh, establishing strict certificate policies, continuously monitoring usage, and optionally layering further IAM or token checks, you maximize the security benefits of mTLS for your service accounts.
+By employing short-lived certs, possibly using a service mesh, establishing strict certificate policies, continuously monitoring usage, and optionally layering further IAM or token checks, you maximise the security benefits of mTLS for your service accounts.
 
-### **Short-Lived, Federated Identities with Strong Verification:** Non-human service accounts use short-lived, federated identities that are strongly verifiable and validated with each request, ensuring a high level of security and minimizing the risk of credential misuse.
+### **Short-Lived, Federated Identities with Strong Verification:** Non-human service accounts use short-lived, federated identities that are strongly verifiable and validated with each request, ensuring a high level of security and minimising the risk of credential misuse.
 
 #### **How to determine if this good enough**
 
@@ -223,7 +223,7 @@ Your approach for non-human accounts employs ephemeral tokens or federated ident
 1. **High Assurance of Security**
    - The risk of stolen or misused credentials is drastically reduced, as tokens expire rapidly.
 
-Though highly advanced, you might further optimize performance, adopt specialized identity standards (e.g., OAuth2, JWT-based systems), or integrate with multi-cloud identity solutions. [NCSC’s and NIST’s advanced DevSecOps suggestions](https://www.ncsc.gov.uk/) encourage ongoing improvement in ephemeral, short-lived identity usage.
+Though highly advanced, you might further optimise performance, adopt specialised identity standards (e.g., OAuth2, JWT-based systems), or integrate with multi-cloud identity solutions. [NCSC’s and NIST’s advanced DevSecOps suggestions](https://www.ncsc.gov.uk/) encourage ongoing improvement in ephemeral, short-lived identity usage.
 
 #### **How to do better**
 
@@ -235,7 +235,7 @@ Even at this top level, below are **rapidly actionable** refinements:
 
 1. **Integrate Policy-as-Code**
 
-   - Tools like [Open Policy Agent or vendor policy engines (AWS SCP, Azure Policy, GCP Organization Policy, OCI Security Zones)] can dynamically evaluate each identity request in real time.
+   - Tools like [Open Policy Agent or vendor policy engines (AWS SCP, Azure Policy, GCP Organisation Policy, OCI Security Zones)] can dynamically evaluate each identity request in real time.
 
 1. **Adopt Service Mesh with Dynamic Identity**
 
@@ -251,4 +251,4 @@ Even at this top level, below are **rapidly actionable** refinements:
 
 By fully harnessing vendor identity federation, embedding policy-as-code, integrating ephemeral identity usage in service meshes, analyzing usage logs for anomalies, and considering cross-government identity solutions, you refine an already highly secure and agile environment for non-human service accounts aligned with best-in-class public sector practices.
 
-**Keep doing what you’re doing,** and consider publishing blogs or opening pull requests to this guidance about your success in elevating non-human identity security in cloud environments. Sharing your experiences helps other UK public sector organizations adopt robust credential management aligned with the highest security standards.
+**Keep doing what you’re doing,** and consider publishing blogs or opening pull requests to this guidance about your success in elevating non-human identity security in cloud environments. Sharing your experiences helps other UK public sector organisations adopt robust credential management aligned with the highest security standards.

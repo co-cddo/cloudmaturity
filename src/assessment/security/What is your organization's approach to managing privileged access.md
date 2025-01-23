@@ -1,19 +1,19 @@
 ---
-title: What is your organization's approach to managing privileged access?
+title: What is your organisation's approach to managing privileged access?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Ad-Hoc Management by Administrators:** Privileged credentials are managed on an ad-hoc basis by individual system administrators, without standardized processes.
+### **Ad-Hoc Management by Administrators:** Privileged credentials are managed on an ad-hoc basis by individual system administrators, without standardised processes.
 
 #### **How to determine if this good enough**
 
-Your organization may let each system admin handle privileged credentials independently, storing them in personal files or spreadsheets. This might be acceptable if:
+Your organisation may let each system admin handle privileged credentials independently, storing them in personal files or spreadsheets. This might be acceptable if:
 
 1. **Small-Scale or Legacy Systems**
 
-   - You have few privileged accounts and limited complexity, and potential downsides of ad-hoc management haven’t yet materialized.
+   - You have few privileged accounts and limited complexity, and potential downsides of ad-hoc management haven’t yet materialised.
 
 1. **Short-Term or Pilot**
 
@@ -22,7 +22,7 @@ Your organization may let each system admin handle privileged credentials indepe
 1. **No Pressing Compliance Requirements**
    - Strict audits or public sector mandates for privileged account management haven’t been triggered.
 
-However, ad-hoc methods often risk unauthorized usage, inconsistent rotation, and difficulty tracking who accessed what. [NCSC’s privileged account security guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-53 AC-6 (least privilege)](https://csrc.nist.gov/) emphasize stricter control over privileged credentials.
+However, ad-hoc methods often risk unauthorised usage, inconsistent rotation, and difficulty tracking who accessed what. [NCSC’s privileged account security guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-53 AC-6 (least privilege)](https://csrc.nist.gov/) emphasize stricter control over privileged credentials.
 
 #### **How to do better**
 
@@ -52,11 +52,11 @@ Below are **rapidly actionable** steps to move beyond ad-hoc privileged credenti
 
 By creating a short privileged access policy, enforcing unique admin accounts with MFA, documenting roles, and preparing for a vault-based solution, you significantly reduce the risk of ad-hoc mismanagement and insider threats.
 
-### **Centralized Controls with Basic Vaulting:** Technology controls are in place for centralized management, including initial password and key vaulting, integrated logs, and policy-based activities.
+### **Centralised Controls with Basic Vaulting:** Technology controls are in place for centralised management, including initial password and key vaulting, integrated logs, and policy-based activities.
 
 #### **How to determine if this good enough**
 
-Your organization implements a vaulting solution (e.g., a password manager or secrets manager) that securely stores privileged credentials, with usage logs or basic policy checks. This might be "good enough" if:
+Your organisation implements a vaulting solution (e.g., a password manager or secrets manager) that securely stores privileged credentials, with usage logs or basic policy checks. This might be "good enough" if:
 
 1. **Reduced Credential Sprawl**
 
@@ -73,7 +73,7 @@ To enhance further, you can adopt ephemeral credentials, just-in-time privilege 
 
 #### **How to do better**
 
-Below are **rapidly actionable** steps to refine centralized vaulting:
+Below are **rapidly actionable** steps to refine centralised vaulting:
 
 1. **Enable Automatic Credential Rotation**
 
@@ -103,7 +103,7 @@ By rotating credentials automatically, integrating vault secrets into CI/CD, con
 
 #### **How to determine if this good enough**
 
-In this scenario, your organization has formal processes: new privileged accounts require an approval workflow, privileges are tracked, and one-time passwords or tokens might be used to access certain sensitive credentials or sessions. It may be "good enough" if:
+In this scenario, your organisation has formal processes: new privileged accounts require an approval workflow, privileges are tracked, and one-time passwords or tokens might be used to access certain sensitive credentials or sessions. It may be "good enough" if:
 
 1. **Managed Lifecycle**
 
@@ -151,7 +151,7 @@ By embedding OTP steps in break-glass procedures, adopting hardware tokens for a
 
 #### **How to determine if this good enough**
 
-Your organization has advanced systems that dynamically adjust privileged user access based on real-time signals (e.g., user context, device posture, time of day), with logging across multiple clouds. It’s likely "good enough" if:
+Your organisation has advanced systems that dynamically adjust privileged user access based on real-time signals (e.g., user context, device posture, time of day), with logging across multiple clouds. It’s likely "good enough" if:
 
 1. **Flexible, Policy-Driven Access**
 
@@ -196,11 +196,11 @@ Below are **rapidly actionable** ways to elevate automated, risk-based privilege
 
 By combining threat intelligence, verifying device posture, enabling granular session-level logging, adopting just-in-time privileges, and running regular security exercises, you further refine risk-based controls for privileged access across all cloud platforms.
 
-### **Context-Aware Just-in-Time Privileges:** Access is granted on a just-in-time basis, using contextual factors to determine necessity (e.g., time-based access for critical tasks). Real-time alerting is in place for all activity, with mandatory wash-ups that require Senior leadership present, prioritization given to automating and preventing further need.
+### **Context-Aware Just-in-Time Privileges:** Access is granted on a just-in-time basis, using contextual factors to determine necessity (e.g., time-based access for critical tasks). Real-time alerting is in place for all activity, with mandatory wash-ups that require Senior leadership present, prioritisation given to automating and preventing further need.
 
 #### **How to determine if this good enough**
 
-At this highest maturity level, your organization dynamically grants privileged access based on real-time context (time window, location, device posture, or manager approval) and logs all actions. Senior leadership is involved in after-action reviews for critical escalations. This is typically "good enough" if:
+At this highest maturity level, your organisation dynamically grants privileged access based on real-time context (time window, location, device posture, or manager approval) and logs all actions. Senior leadership is involved in after-action reviews for critical escalations. This is typically "good enough" if:
 
 1. **Comprehensive Zero-Trust**
 
@@ -210,14 +210,14 @@ At this highest maturity level, your organization dynamically grants privileged 
 
    - The mandatory wash-up sessions ensure no suspicious or repeated escalations go unexamined, reinforcing a security-focused culture.
 
-1. **Automation Minimizes Need**
+1. **Automation Minimises Need**
    - Many tasks that previously required manual privileged access are automated or delegated to safer, limited-scope roles, aligning with [NCSC zero trust / least privilege guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-207 approaches](https://csrc.nist.gov/).
 
 Though advanced, you may refine HPC/AI roles under ephemeral policies, integrate multi-department identity bridging, or further embed AI-based anomaly detection. Continual iteration aligns with future public sector security demands.
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to optimize context-aware just-in-time privileges:
+Below are **rapidly actionable** ways to optimise context-aware just-in-time privileges:
 
 1. **Deeper Risk-Based Logic**
 
@@ -227,7 +227,7 @@ Below are **rapidly actionable** ways to optimize context-aware just-in-time pri
 1. **Enforce Micro-Segmentation**
 
    - Combine ephemeral privileges with strict micro-segmentation: each resource requires a separate ephemeral token:
-     - Minimizes lateral movement if any one credential is compromised.
+     - Minimises lateral movement if any one credential is compromised.
 
 1. **Incorporate Real-Time Forensic Tools**
 

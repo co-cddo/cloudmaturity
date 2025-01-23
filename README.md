@@ -12,7 +12,7 @@ The intend of the maturity model tool and report is to provide targeted actionab
 
 The questions are structured with 5 potential answers that are intended to range from the worst it could be, to the best it could be, with a distributed spread between that.
 
-The answers are framed as attestations you should be able to make based on your current state, scoring 'low' is not necessarily a 'bad thing' in fact scoring too 'high' might in fact indicate over optimization and a disproportionate solution.
+The answers are framed as attestations you should be able to make based on your current state, scoring 'low' is not necessarily a 'bad thing' in fact scoring too 'high' might in fact indicate over optimisation and a disproportionate solution.
 
 For example having a highly resilient and secure solution for the passport validating service makes sense, however would be disproportionate for the canteen menu.
 
@@ -22,14 +22,14 @@ The report in response to the attestations is structured firstly as helping the 
 
 ## What it isn't
 
-Its important to clarify what this is not, this is not intended to be a assurance tool, or for results to be collected, it is first and foremost a tool to help provide targeted explicit guidance that will help organizations recognize where they are, what risks they're operating with, and specifically how to improve their position.
+Its important to clarify what this is not, this is not intended to be a assurance tool, or for results to be collected, it is first and foremost a tool to help provide targeted explicit guidance that will help organisations recognise where they are, what risks they're operating with, and specifically how to improve their position.
 
 ## Contributions / _❤️ Pull Requests_
 
 The repository is configured with [dev containers](https://containers.dev/) so should be able to use [Github Codespaces](https://github.com/features/codespaces) or your preferred [compatible editor](https://containers.dev/supporting#editors).
 
 You will find all the questions and guidance in [./src/assessment](./src/assessment/).
-The format of these are in markdown in the following convention, _the details are capitalized for effect, but should be normal sentence case in actual use_.
+The format of these are in markdown in the following convention, _the details are capitalised for effect, but should be normal sentence case in actual use_.
 
 You can add a new question simply by adding a new file, or modify existing ones as necessary.
 

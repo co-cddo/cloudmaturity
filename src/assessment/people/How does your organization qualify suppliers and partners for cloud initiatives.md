@@ -1,5 +1,5 @@
 ---
-title: How does your organization qualify suppliers and partners for cloud initiatives?
+title: How does your organisation qualify suppliers and partners for cloud initiatives?
 tags: people
 eleventyNavigation:
   parent: people
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-If your organization’s cloud supplier or partner selection relies mostly on brochures, websites, or the fact they appear on commercial frameworks (e.g., G-Cloud, DOS), you might see it as "good enough" if:
+If your organisation’s cloud supplier or partner selection relies mostly on brochures, websites, or the fact they appear on commercial frameworks (e.g., G-Cloud, DOS), you might see it as "good enough" if:
 
 1. **Limited Cloud Adoption**
 
@@ -35,7 +35,7 @@ Below are **rapidly actionable** steps to move beyond marketing-based selection:
 
 1. **Use Simple Supplier Questionnaires**
 
-   - Ask about their experience with public sector, references for past cloud projects, and how they manage cost optimization or data protection.
+   - Ask about their experience with public sector, references for past cloud projects, and how they manage cost optimisation or data protection.
    - This ensures more depth than marketing claims alone.
 
 1. **Check Real-Life Feedback**
@@ -56,7 +56,7 @@ By introducing a basic technical/security questionnaire, referencing real-life f
 
 #### **How to determine if this good enough**
 
-Your organization requires potential suppliers to pass some level of scrutiny—like verifying security certifications, relevant public sector framework compliance, or minimal references. You might consider it "good enough" if:
+Your organisation requires potential suppliers to pass some level of scrutiny—like verifying security certifications, relevant public sector framework compliance, or minimal references. You might consider it "good enough" if:
 
 1. **Compliance-Heavy or Standard Services**
 
@@ -64,7 +64,7 @@ Your organization requires potential suppliers to pass some level of scrutiny—
 
 1. **Occasional Cloud Projects**
 
-   - For less frequent procurements, a standardized due diligence set (like a standard RFP template) covers enough detail.
+   - For less frequent procurements, a standardised due diligence set (like a standard RFP template) covers enough detail.
 
 1. **Stable Risk Profile**
    - You have not encountered major incidents from suppliers, so the basic compliance approach seems adequate so far.
@@ -77,7 +77,7 @@ Below are **rapidly actionable** methods to elevate from minimal compliance chec
 
 1. **Evaluate Supplier Cloud Certifications**
 
-   - Check if they hold AWS Partner tiers, Azure Expert MSP, GCP Premier Partner status, or OCI Specialized certifications:
+   - Check if they hold AWS Partner tiers, Azure Expert MSP, GCP Premier Partner status, or OCI Specialised certifications:
      - [AWS Partner Network levels](https://aws.amazon.com/partners/), [Azure Expert MSP status](https://learn.microsoft.com/en-us/azure/partner/partner-center-portal/expert-msp), [GCP Partner Advantage tiers](https://cloud.google.com/partners/advantage), [OCI PartnerNetwork tiers](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Request Past Performance or Case Studies**
@@ -88,7 +88,7 @@ Below are **rapidly actionable** methods to elevate from minimal compliance chec
 1. **Incorporate Cloud-Specific Criteria in RFPs**
 
    - Beyond general compliance, request details on:
-     - Cost optimization approach, multi-region or multi-cloud experience, DevOps maturity, and [NCSC’s 14 cloud security principles](https://www.ncsc.gov.uk/collection/cloud-security).
+     - Cost optimisation approach, multi-region or multi-cloud experience, DevOps maturity, and [NCSC’s 14 cloud security principles](https://www.ncsc.gov.uk/collection/cloud-security).
 
 1. **Conduct Briefing Sessions**
 
@@ -101,7 +101,7 @@ Below are **rapidly actionable** methods to elevate from minimal compliance chec
 
 By integrating cloud-specific partner certifications, verifying past performance, and adding mandatory contract clauses around risk and exit, you ensure your due diligence extends beyond basic compliance to real technical and operational aptitude.
 
-### **Moderate Screening for Experience and Compliance:** Partners are qualified based on their industry experience, compliance with relevant standards, and basic alignment with organizational needs.
+### **Moderate Screening for Experience and Compliance:** Partners are qualified based on their industry experience, compliance with relevant standards, and basic alignment with organisational needs.
 
 #### **How to determine if this good enough**
 
@@ -113,12 +113,12 @@ If your procurement team reviews suppliers by confirming they have verifiable cl
 
 1. **Moderate Cloud Maturity**
 
-   - Your environment or projects have grown enough to demand thorough screening but not so large as to require specialized advanced partner relationships.
+   - Your environment or projects have grown enough to demand thorough screening but not so large as to require specialised advanced partner relationships.
 
 1. **Proven Track Record in Delivery**
    - So far, these moderately screened partners have provided stable, cost-efficient solutions.
 
-However, you might strengthen the process by including deeper due diligence around advanced areas like cost optimization approaches, multi-cloud strategies, or specialized domain knowledge (e.g., HPC, AI) relevant to your departmental needs. [NCSC’s approach to supplier assurance](https://www.ncsc.gov.uk/collection/supply-chain-security) often encourages deeper, scenario-based evaluation.
+However, you might strengthen the process by including deeper due diligence around advanced areas like cost optimisation approaches, multi-cloud strategies, or specialised domain knowledge (e.g., HPC, AI) relevant to your departmental needs. [NCSC’s approach to supplier assurance](https://www.ncsc.gov.uk/collection/supply-chain-security) often encourages deeper, scenario-based evaluation.
 
 #### **How to do better**
 
@@ -136,7 +136,7 @@ Below are **rapidly actionable** suggestions to refine moderate screening:
 
 1. **Include Cost Management Criteria**
 
-   - Suppliers should outline how they manage or optimize cloud spend:
+   - Suppliers should outline how they manage or optimise cloud spend:
      - Possibly referencing [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/), [Azure Cost Management](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-cost-management), [GCP Billing Alerts](https://cloud.google.com/billing/docs/how-to/budget-notifications), or [OCI Budgets](https://www.oracle.com/cloud/free/oci-training/).
    - Helps ensure they won’t rack up unplanned expenses.
 
@@ -144,21 +144,21 @@ Below are **rapidly actionable** suggestions to refine moderate screening:
 
    - If resilience is key, ensure they’ve handled multi-region failovers or DR scenarios aligned with [NIST SP 800-34 or NCSC resilience guidelines](https://csrc.nist.gov/) for continuity planning.
 
-1. **Formalize Weighted Scoring**
+1. **Formalise Weighted Scoring**
    - Allocate points for each requirement (experience, security alignment, cost management, references).
    - This ensures an objective method to compare competing suppliers.
 
 By pushing for real demonstrations of security/architecture, assessing DevSecOps maturity, reviewing cost management solutions, checking DR abilities, and using a weighted scoring system, you gain deeper insight into a supplier’s true capability and alignment with your goals.
 
-### **Comprehensive Evaluation Including Technical and Ethical Alignment:** Suppliers are thoroughly vetted for technical competence, ethical alignment with organizational values, and their ability to support specific cloud objectives.
+### **Comprehensive Evaluation Including Technical and Ethical Alignment:** Suppliers are thoroughly vetted for technical competence, ethical alignment with organisational values, and their ability to support specific cloud objectives.
 
 #### **How to determine if this good enough**
 
-Here, your organization’s procurement approach encompasses in-depth assessments—covering not only technical prowess but also cultural fit and ethical standards. You might consider it "good enough" if:
+Here, your organisation’s procurement approach encompasses in-depth assessments—covering not only technical prowess but also cultural fit and ethical standards. You might consider it "good enough" if:
 
 1. **Robust Vetting Process**
 
-   - You scrutinize suppliers for cloud certifications, proven track record, security compliance, sustainability practices, and ethical supply chain standards.
+   - You scrutinise suppliers for cloud certifications, proven track record, security compliance, sustainability practices, and ethical supply chain standards.
 
 1. **Ethical and Green Priorities**
 
@@ -219,7 +219,7 @@ At this highest maturity level, your selection process for cloud suppliers goes 
 1. **Security and Compliance Embedded**
    - They proactively address [NCSC cloud security guidelines](https://www.ncsc.gov.uk/collection/cloud-security) or relevant [NIST SP 800-53/800-161] controls, not waiting for you to raise concerns.
 
-If you’ve reached a stage where each new supplier or partner truly integrates with your organizational goals and strategic direction, you likely ensure sustainable, high-value cloud engagements. Yet continual refinement remains essential to adapt to evolving requirements and technology.
+If you’ve reached a stage where each new supplier or partner truly integrates with your organisational goals and strategic direction, you likely ensure sustainable, high-value cloud engagements. Yet continual refinement remains essential to adapt to evolving requirements and technology.
 
 #### **How to do better**
 
@@ -249,6 +249,6 @@ Below are **rapidly actionable** ways to enhance strategic supplier selection:
    - Evaluate how suppliers reduce carbon footprints in data center usage:
      - e.g., verifying providers’ renewable energy usage or referencing [NCSC’s sustainability advice for cloud usage](https://www.ncsc.gov.uk/).
 
-By defining multi-year collaborative roadmaps, embedding a shared risk register, incentivizing apprenticeships or broader skill contributions, maintaining periodic leadership reviews, and factoring in sustainability metrics, you cultivate a strategic, mutually beneficial relationship with cloud suppliers. This ensures alignment with public sector values, security standards, and a visionary approach to digital transformation.
+By defining multi-year collaborative roadmaps, embedding a shared risk register, incentivising apprenticeships or broader skill contributions, maintaining periodic leadership reviews, and factoring in sustainability metrics, you cultivate a strategic, mutually beneficial relationship with cloud suppliers. This ensures alignment with public sector values, security standards, and a visionary approach to digital transformation.
 
-**Keep doing what you’re doing,** and consider writing some blog posts about your advanced supplier selection processes or opening pull requests to this guidance for others. By sharing how you integrate technical, ethical, and sustainability factors, you help other UK public sector organizations adopt strategic, future-focused cloud supplier qualification processes.
+**Keep doing what you’re doing,** and consider writing some blog posts about your advanced supplier selection processes or opening pull requests to this guidance for others. By sharing how you integrate technical, ethical, and sustainability factors, you help other UK public sector organisations adopt strategic, future-focused cloud supplier qualification processes.

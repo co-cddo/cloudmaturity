@@ -1,5 +1,5 @@
 ---
-title: How does your organization obtain real-time insights and answer business-related questions?
+title: How does your organisation obtain real-time insights and answer business-related questions?
 tags: operations
 eleventyNavigation:
   parent: operations
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-If your organization primarily relies on a small group of subject matter experts (SMEs) to interpret raw data and produce insights, you might consider it "good enough" if:
+If your organisation primarily relies on a small group of subject matter experts (SMEs) to interpret raw data and produce insights, you might consider it "good enough" if:
 
 1. **Low Frequency of Data-Driven Questions**
 
@@ -33,23 +33,23 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
 
 1. **Provide Basic Data Literacy Training**
 
-   - Organize short workshops, possibly in partnership with [GOV.UK Data in government guidance](https://www.gov.uk/government/organisations/government-digital-service) or local councils, focusing on:
+   - Organise short workshops, possibly in partnership with [GOV.UK Data in government guidance](https://www.gov.uk/government/organisations/government-digital-service) or local councils, focusing on:
      - How to read and interpret basic charts or dashboards.
      - Terminology for metrics (e.g., "mean," "median," "time series," "confidence intervals").
    - This empowers more staff to self-serve on simpler data queries.
 
-1. **Adopt a Simple Visualization or BI Tool**
+1. **Adopt a Simple Visualisation or BI Tool**
 
    - Introduce a basic tool that can produce automated reports from spreadsheets or CSV data:
      - [AWS QuickSight with direct CSV uploads or minimal database connections](https://docs.aws.amazon.com/quicksight/latest/user/what-is.html)
      - [Azure Power BI for quickly designing simple dashboards on Excel data](https://docs.microsoft.com/en-us/power-bi/fundamentals/service-get-started)
      - [GCP Data Studio (Looker Studio) connecting to Google Sheets or CSV data sources](https://cloud.google.com/looker-studio/docs/get-started)
-     - [OCI Analytics Cloud for straightforward data visualizations](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
+     - [OCI Analytics Cloud for straightforward data visualisations](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
    - Even rudimentary dashboards reduce the SME dependency for repetitive questions.
 
 1. **Pilot a Data Lake or Central Data Repository**
 
-   - Instead of storing departmental data in multiple ad hoc spreadsheets or on local drives, centralize it:
+   - Instead of storing departmental data in multiple ad hoc spreadsheets or on local drives, centralise it:
      - [AWS S3-based data lake or AWS Glue for basic data cataloging](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
      - [Azure Data Lake Storage or Azure Synapse for integrated data ingestion](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
      - [GCP Cloud Storage / BigQuery for storing curated data sets](https://cloud.google.com/storage/docs/cloud-storage-transfer-service)
@@ -69,11 +69,11 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
 
 By improving data literacy, introducing a basic BI tool, creating a pilot data repository, and pairing experts with data-savvy staff, you begin reducing your reliance on point-in-time manual analysis. Over time, these steps pave the way for real-time insights.
 
-### **Basic Reporting Tools with Delayed Insights:** The organization uses basic reporting tools that provide insights, but there is typically a delay in data processing and limited real-time capabilities.
+### **Basic Reporting Tools with Delayed Insights:** The organisation uses basic reporting tools that provide insights, but there is typically a delay in data processing and limited real-time capabilities.
 
 #### **How to determine if this good enough**
 
-If your organization employs a standard BI or reporting tool (e.g., weekly or monthly data refreshes), you might regard it as "good enough" if:
+If your organisation employs a standard BI or reporting tool (e.g., weekly or monthly data refreshes), you might regard it as "good enough" if:
 
 1. **Acceptable Lag**
 
@@ -84,7 +84,7 @@ If your organization employs a standard BI or reporting tool (e.g., weekly or mo
    - Data sets are not enormous, so overnight or batch processing remains practical for your current use cases.
 
 1. **Basic Audit/Compliance**
-   - You meet essential compliance with government data handling rules (e.g., anonymizing personal data, restricted access for sensitive data), and the time lag doesn’t violate any SLAs.
+   - You meet essential compliance with government data handling rules (e.g., anonymising personal data, restricted access for sensitive data), and the time lag doesn’t violate any SLAs.
 
 While functional for monthly or weekly insights, delayed reporting can hinder quick decisions or hamper incident response when faster data is needed. In alignment with [GDS Service Manual](https://www.gov.uk/service-manual), near real-time data often improves service iteration.
 
@@ -129,7 +129,7 @@ With incremental data refreshes, partial real-time dashboards, better data pipel
 
 #### **How to determine if this good enough**
 
-In this stage, your organization has partial real-time analytics for select key metrics, while other data sets update less frequently. You might see it as "good enough" if:
+In this stage, your organisation has partial real-time analytics for select key metrics, while other data sets update less frequently. You might see it as "good enough" if:
 
 1. **Focused Real-Time Use Cases**
 
@@ -179,13 +179,13 @@ Below are **rapidly actionable** ways to enhance your partially real-time analyt
      - [NIST Big Data Interoperability Framework for scaling analytics solutions](https://www.nist.gov/programs-projects/big-data-interoperability-framework)
      - [NCSC best practices for monitoring and incident response](https://www.ncsc.gov.uk/section/keep-up-to-date/guidance)
 
-By increasing stream processing, consolidating dashboards, and expanding real-time coverage to more data sets, you minimize the blind spots in your analytics, enabling faster, more informed decisions across the board.
+By increasing stream processing, consolidating dashboards, and expanding real-time coverage to more data sets, you minimise the blind spots in your analytics, enabling faster, more informed decisions across the board.
 
-### **Advanced Analytics Tools with Broad Real-Time Access:** The organization employs advanced analytics tools that provide broader access to real-time data, enabling quicker insights and decision-making.
+### **Advanced Analytics Tools with Broad Real-Time Access:** The organisation employs advanced analytics tools that provide broader access to real-time data, enabling quicker insights and decision-making.
 
 #### **How to determine if this good enough**
 
-At this level, your organization invests in robust analytics solutions (e.g., data warehouses, near real-time dashboards, possibly machine learning predictions). You might consider it "good enough" if:
+At this level, your organisation invests in robust analytics solutions (e.g., data warehouses, near real-time dashboards, possibly machine learning predictions). You might consider it "good enough" if:
 
 1. **Wide Real-Time Visibility**
 
@@ -202,7 +202,7 @@ At this level, your organization invests in robust analytics solutions (e.g., da
 1. **Sufficient Data Literacy**
    - Users outside the data team can navigate dashboards or ask relevant questions, with moderate skill in interpretation.
 
-If you already see minimal delays and strong adoption, you’re likely well-aligned with GOV.UK’s push for data-driven services. Still, full self-service or advanced ML might remain partially underutilized.
+If you already see minimal delays and strong adoption, you’re likely well-aligned with GOV.UK’s push for data-driven services. Still, full self-service or advanced ML might remain partially underutilised.
 
 #### **How to do better**
 
@@ -211,7 +211,7 @@ Below are **rapidly actionable** ways to refine your advanced real-time analytic
 1. **Enhance Data Federation and Governance**
 
    - If data sits across multiple cloud or on-prem systems, implement a data mesh or robust governance policy:
-     - [AWS Lake Formation for centralized access management across multiple data sources, integrated with AWS Glue or Athena](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
+     - [AWS Lake Formation for centralised access management across multiple data sources, integrated with AWS Glue or Athena](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
      - [Azure Purview (Microsoft Purview) or Synapse for data discovery and lineage across the enterprise](https://docs.microsoft.com/en-us/azure/purview/overview)
      - [GCP Dataplex for a data mesh approach unifying data from BigQuery, Storage, etc.](https://cloud.google.com/dataplex/docs/overview)
      - [OCI Data Catalog and Governance solutions for a consistent metadata and policy layer](https://docs.oracle.com/en-us/iaas/Content/DataCatalog/Concepts/datacatalogoverview.htm)
@@ -240,17 +240,17 @@ Below are **rapidly actionable** ways to refine your advanced real-time analytic
    - e.g., "90% of operational metrics should be visible within 60 seconds of ingestion."
    - Routinely track how these goals are met or if data pipelines slow over time, making improvements as needed.
 
-By strengthening data governance, encouraging self-service, adopting automated anomaly detection, and continuing to boost data literacy, you maximize the value of your advanced analytics environment.
+By strengthening data governance, encouraging self-service, adopting automated anomaly detection, and continuing to boost data literacy, you maximise the value of your advanced analytics environment.
 
-### **Comprehensive Self-Service Dashboarding:** A self-service dashboarding capability is in place, offering wide access to various data points and enabling users across the organization to derive real-time insights independently.
+### **Comprehensive Self-Service Dashboarding:** A self-service dashboarding capability is in place, offering wide access to various data points and enabling users across the organisation to derive real-time insights independently.
 
 #### **How to determine if this good enough**
 
-In this final stage, your organization has a fully realized self-service analytics environment, with real-time data at users’ fingertips. You might consider it "good enough" if:
+In this final stage, your organisation has a fully realised self-service analytics environment, with real-time data at users’ fingertips. You might consider it "good enough" if:
 
 1. **High Adoption**
 
-   - Most staff, from frontline teams to senior leadership, know how to navigate dashboards or create custom views, significantly reducing reliance on specialized data teams.
+   - Most staff, from frontline teams to senior leadership, know how to navigate dashboards or create custom views, significantly reducing reliance on specialised data teams.
 
 1. **Minimal Bottlenecks**
 
@@ -300,6 +300,6 @@ Below are **rapidly actionable** ways to refine self-service real-time insights:
      - [NCSC guidelines for secure data exchange and logging practices](https://www.ncsc.gov.uk/)
      - [GOV.UK’s cross-department data sharing protocols](https://www.gov.uk/government/publications/data-sharing-and-open-data-for-government)
 
-By expanding data sources, enabling natural language querying, automating governance, embedding predictive analytics, and partnering with other agencies, you ensure your comprehensive self-service environment stays at the cutting edge—empowering a data-driven culture in UK public sector organizations.
+By expanding data sources, enabling natural language querying, automating governance, embedding predictive analytics, and partnering with other agencies, you ensure your comprehensive self-service environment stays at the cutting edge—empowering a data-driven culture in UK public sector organisations.
 
 **Keep doing what you’re doing,** and consider blogging about your journey toward real-time analytics and self-service dashboarding. Submit pull requests to this guidance or other public sector best-practice repositories to help others learn from your successes in delivering timely, actionable insights.

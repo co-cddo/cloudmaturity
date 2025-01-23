@@ -1,5 +1,5 @@
 ---
-title: How comprehensive is the use of CI/CD tooling in your organization?
+title: How comprehensive is the use of CI/CD tooling in your organisation?
 tags: operations
 eleventyNavigation:
   parent: operations
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization may still rely on manual or semi-manual processes for building, testing, and deploying software. You might consider this "good enough" if:
+Your organisation may still rely on manual or semi-manual processes for building, testing, and deploying software. You might consider this "good enough" if:
 
 1. **Small or Non-Critical Projects**
 
@@ -17,7 +17,7 @@ Your organization may still rely on manual or semi-manual processes for building
 
 1. **Low Risk Tolerance**
 
-   - The team is not yet comfortable adopting new automation tools or processes, and there is no immediate driver to modernize.
+   - The team is not yet comfortable adopting new automation tools or processes, and there is no immediate driver to modernise.
 
 1. **Minimal Compliance Pressures**
    - Formal requirements (e.g., from internal governance, GDS Service Standards, or security audits) haven’t mandated an automated pipeline or detailed audit trail for deployments.
@@ -55,7 +55,7 @@ Below are **rapidly actionable** steps to adopt a basic CI/CD foundation:
 
 By introducing simple build/test scripting, hosting code in version control, and documenting your process, you establish the baseline for a more formal CI/CD pipeline in the future.
 
-### **Limited CI/CD Tooling on Some Projects:** CI/CD tooling is used by some projects, but there are no formal standards or widespread adoption across the organization.
+### **Limited CI/CD Tooling on Some Projects:** CI/CD tooling is used by some projects, but there are no formal standards or widespread adoption across the organisation.
 
 #### **How to determine if this good enough**
 
@@ -70,7 +70,7 @@ When some teams have adopted CI/CD pipelines for build and deploy tasks, but oth
    - Some teams have the skills or leadership support to implement pipelines, while others do not, and there’s no pressing need to unify.
 
 1. **No Major Interdependence**
-   - Projects that use CI/CD operate somewhat independently, not forcing standardization across the entire organization.
+   - Projects that use CI/CD operate somewhat independently, not forcing standardisation across the entire organisation.
 
 While this can work for a period, inconsistent CI/CD adoption often leads to uneven release quality, slower integration across departments, and missed opportunities for best-practice sharing.
 
@@ -78,7 +78,7 @@ While this can work for a period, inconsistent CI/CD adoption often leads to une
 
 Below are **rapidly actionable** ways to broaden CI/CD usage:
 
-1. **Establish a Centralized CI/CD Reference**
+1. **Establish a Centralised CI/CD Reference**
 
    - Create an internal wiki or repository showcasing how leading teams set up their pipelines:
      - For example, an example pipeline for .NET in [Azure DevOps Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/ecosystems/dotnet-core?view=azure-devops) or [GitHub Actions](https://github.com/microsoft/azure-devops-dotnet-samples/blob/main/azure-pipelines.yml).
@@ -105,7 +105,7 @@ Below are **rapidly actionable** ways to broaden CI/CD usage:
    - Ensure these templates include basic build, test, and package steps out of the box.
 
 1. **Reward Cross-Team Collaboration**
-   - If a more advanced project helps a struggling team set up their pipeline, recognize both parties’ efforts.
+   - If a more advanced project helps a struggling team set up their pipeline, recognise both parties’ efforts.
    - This fosters a culture of internal assistance rather than siloed approaches.
 
 By sharing knowledge, offering recommended tools, and providing example templates, you organically expand CI/CD adoption and empower teams to adopt consistent approaches.
@@ -114,7 +114,7 @@ By sharing knowledge, offering recommended tools, and providing example template
 
 #### **How to determine if this good enough**
 
-This stage sees widespread CI/CD usage across the organization, but with each team choosing different pipelines, scripts, or orchestrators. You might consider it "good enough" if:
+This stage sees widespread CI/CD usage across the organisation, but with each team choosing different pipelines, scripts, or orchestrators. You might consider it "good enough" if:
 
 1. **Strong Automation Culture**
 
@@ -126,7 +126,7 @@ This stage sees widespread CI/CD usage across the organization, but with each te
    - Teams appreciate the freedom to select the best tools for their stack.
    - Little friction arises from differences in pipeline tech, as cross-team collaboration is limited or well-managed.
 
-1. **No Major Standardization Requirement**
+1. **No Major Standardisation Requirement**
    - Your department or top-level governance body hasn’t mandated a single CI/CD framework.
    - Audits or compliance checks are typically satisfied by each team’s pipeline logs and versioning practices.
 
@@ -157,11 +157,11 @@ Below are **rapidly actionable** ways to refine or unify CI/CD tool usage:
 1. **Highlight or Mentor**
 
    - If certain pipelines are especially successful, highlight them as "recommended" or offer mentorship so other teams can replicate their approach.
-   - Over time, the organization may naturally converge on a handful of widely accepted tools.
+   - Over time, the organisation may naturally converge on a handful of widely accepted tools.
 
 1. **Consider a Central CI/CD Service for Key Use Cases**
-   - Some organizations set up a central instance of Jenkins or a self-hosted GitLab/GitHub runner for teams to use, at least for shared services or highly regulated workloads.
-   - Others rely on cloud-native solutions like [AWS CodePipeline/CodeBuild](<[https://](https://aws.amazon.com/codepipeline/)>), [Azure DevOps Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops&viewFallbackFrom=vsts), [GCP Cloud Build](https://cloud.google.com/build), or [OCI DevOps](https://www.oracle.com/pk/devops/devops-service/) for standardized approaches.
+   - Some organisations set up a central instance of Jenkins or a self-hosted GitLab/GitHub runner for teams to use, at least for shared services or highly regulated workloads.
+   - Others rely on cloud-native solutions like [AWS CodePipeline/CodeBuild](<[https://](https://aws.amazon.com/codepipeline/)>), [Azure DevOps Pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/get-started/what-is-azure-pipelines?view=azure-devops&viewFallbackFrom=vsts), [GCP Cloud Build](https://cloud.google.com/build), or [OCI DevOps](https://www.oracle.com/pk/devops/devops-service/) for standardised approaches.
 
 By defining core CI/CD principles, documenting shared patterns, and selectively offering a central service or recommended tool, you maintain team autonomy while reaping benefits of consistent practices.
 
@@ -173,17 +173,17 @@ In this stage, nearly all projects have automated pipelines, but there may still
 
 1. **Robust Automation Coverage**
 
-   - A large percentage of code changes are tested and deployed automatically, minimizing manual overhead.
+   - A large percentage of code changes are tested and deployed automatically, minimising manual overhead.
    - Releases are quicker and more reliable.
 
-1. **Limited Governance or Standardization Issues**
+1. **Limited Governance or Standardisation Issues**
 
    - Management is not demanding a single solution, and teams are content with the performance and reliability of their pipelines.
 
 1. **Minor Complexity**
    - While multiple CI/CD solutions exist, knowledge sharing is still manageable, and staff do not struggle excessively when rotating between teams.
 
-If your approach still creates confusion for new or cross-functional staff, you might gain from more standardization. Also, advanced compliance or security scenarios may benefit from a more centralized approach.
+If your approach still creates confusion for new or cross-functional staff, you might gain from more standardisation. Also, advanced compliance or security scenarios may benefit from a more centralised approach.
 
 #### **How to do better**
 
@@ -202,7 +202,7 @@ Below are **rapidly actionable** ways to refine widespread team-driven CI/CD:
      - [GCP Cloud Build: Automated security scanning via built-in or third-party tools (e.g., Snyk, Twistlock)](https://snyk.io/partners/google/)
      - [OCI DevOps: Integrate vulnerability scanning for container images or code using third-party scanning solutions triggered in the pipeline](https://docs.oracle.com/en-us/iaas/Content/devops/using/scan-code.htm)
 
-1. **Standardize Basic Access & Observability**
+1. **Standardise Basic Access & Observability**
 
    - Regardless of the pipeline tool, ensure:
      - A consistent approach to storing build logs and artifacts, tagging builds with version numbers, and applying RBAC for pipeline access.
@@ -217,13 +217,13 @@ Below are **rapidly actionable** ways to refine widespread team-driven CI/CD:
    - Gather metrics like average build time, deployment success rate, or lead time for changes.
    - Use these insights to target pipeline improvements or unify slow or error-prone steps.
 
-By fostering a DevOps guild, infusing security checks, and unifying logging/artifact storage, you balance team autonomy with enough cross-cutting standards to maximize reliability and compliance.
+By fostering a DevOps guild, infusing security checks, and unifying logging/artifact storage, you balance team autonomy with enough cross-cutting standards to maximise reliability and compliance.
 
-### **Standardized and Consistent CI/CD Practices:** A standardized CI/CD pipeline is consistently used across project teams organization-wide, indicating a high level of maturity in deployment practices.
+### **Standardised and Consistent CI/CD Practices:** A standardised CI/CD pipeline is consistently used across project teams organisation-wide, indicating a high level of maturity in deployment practices.
 
 #### **How to determine if this good enough**
 
-At this stage, your organization has converged on a common CI/CD approach. You might consider it "good enough" if:
+At this stage, your organisation has converged on a common CI/CD approach. You might consider it "good enough" if:
 
 1. **Uniform Tools and Processes**
 
@@ -233,17 +233,17 @@ At this stage, your organization has converged on a common CI/CD approach. You m
 1. **High Governance and Compliance Alignment**
 
    - Auditing deployments is straightforward, as logs, artifacts, and approvals follow the same structure.
-   - Security or cost-optimization checks are consistently applied across all services.
+   - Security or cost-optimisation checks are consistently applied across all services.
 
 1. **Continuous Improvement**
-   - Each pipeline improvement (e.g., adding new test coverage or scanning) benefits the entire organization.
+   - Each pipeline improvement (e.g., adding new test coverage or scanning) benefits the entire organisation.
    - Teams collaborate on pipeline updates rather than reinventing the wheel.
 
-While standardization solves many issues, organizations must remain vigilant about tool stagnation. If the environment evolves (e.g., new microservices, containers, or serverless solutions), you should continuously update your pipeline approach.
+While standardisation solves many issues, organisations must remain vigilant about tool stagnation. If the environment evolves (e.g., new microservices, containers, or serverless solutions), you should continuously update your pipeline approach.
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to refine your standardized CI/CD practices:
+Below are **rapidly actionable** ways to refine your standardised CI/CD practices:
 
 1. **Adopt Pipeline-as-Code for All**
 
@@ -260,7 +260,7 @@ Below are **rapidly actionable** ways to refine your standardized CI/CD practice
 
 1. **Integrate Policy-as-Code**
 
-   - Ensure pipeline runs automatically verify compliance with organizational policies:
+   - Ensure pipeline runs automatically verify compliance with organisational policies:
      - e.g., scanning IaC templates or container images for security or cost violations, referencing official standards.
 
 1. **Expand Observability**
@@ -270,8 +270,8 @@ Below are **rapidly actionable** ways to refine your standardized CI/CD practice
 
 1. **Encourage "Chaos Days" or Hackathons**
    - Let teams experiment with pipeline improvements, new integration patterns, or novel reliability tests.
-   - This fosters ongoing innovation and ensures your standardized approach does not become static.
+   - This fosters ongoing innovation and ensures your standardised approach does not become static.
 
-By version-controlling pipeline definitions, embracing advanced deployment patterns, integrating policy checks, and driving continuous improvement initiatives, you keep your standardized CI/CD framework at the cutting edge—well-aligned with UK public sector priorities of robust compliance, reliability, and efficiency.
+By version-controlling pipeline definitions, embracing advanced deployment patterns, integrating policy checks, and driving continuous improvement initiatives, you keep your standardised CI/CD framework at the cutting edge—well-aligned with UK public sector priorities of robust compliance, reliability, and efficiency.
 
 **Keep doing what you’re doing,** and consider writing up your CI/CD journey in internal blog posts or knowledge bases. Submit pull requests to this guidance or related public sector best-practice repositories so others can learn from your experiences as well.

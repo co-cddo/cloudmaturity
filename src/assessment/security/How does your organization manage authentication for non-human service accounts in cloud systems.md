@@ -1,5 +1,5 @@
 ---
-title: How does your organization manage authentication for non-human service accounts in cloud systems?
+title: How does your organisation manage authentication for non-human service accounts in cloud systems?
 tags: security
 eleventyNavigation:
   parent: security
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization may treat service accounts as if they were human users, granting them standard usernames and passwords (or persistent credentials). This might be acceptable if:
+Your organisation may treat service accounts as if they were human users, granting them standard usernames and passwords (or persistent credentials). This might be acceptable if:
 
 1. **Low-Risk, Low-Criticality Services**
 
@@ -70,16 +70,16 @@ In this setup, non-human accounts are assigned API keys (often static), managed 
 1. **Low Security/Compliance Requirements**
    - No strong obligations for rotating or logging key usage, or a short-term approach that hasn’t caught up with best practices yet.
 
-Still, static API keys managed locally can easily be lost, shared, or remain in code, risking leaks. [NCSC supply chain or credential security guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-63 on digital identity credentials](https://csrc.nist.gov/) advise more dynamic, centralized strategies.
+Still, static API keys managed locally can easily be lost, shared, or remain in code, risking leaks. [NCSC supply chain or credential security guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-63 on digital identity credentials](https://csrc.nist.gov/) advise more dynamic, centralised strategies.
 
 #### **How to do better**
 
-Below are **rapidly actionable** steps to centralize and secure long-lived API keys:
+Below are **rapidly actionable** steps to centralise and secure long-lived API keys:
 
 1. **Move Keys to a Central Secret Store**
 
    - e.g., [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview), [GCP Secret Manager](https://cloud.google.com/secret-manager/docs/overview), [OCI Vault](https://www.oracle.com/cloud/free/oci-training/) for storing all API keys.
-   - Minimizes local sprawl and fosters consistent security controls.
+   - Minimises local sprawl and fosters consistent security controls.
 
 1. **Enforce Rotation Policies**
 
@@ -92,7 +92,7 @@ Below are **rapidly actionable** steps to centralize and secure long-lived API k
      - e.g., [Trufflehog](https://github.com/trufflesecurity/trufflehog), [Gitleaks](https://github.com/gitleaks/gitleaks), [AWS CodeGuru Security](https://aws.amazon.com/codeguru/security/), or [Azure DevOps Security scanning](https://learn.microsoft.com/en-us/azure/devops/security/overview/security-scanning).
    - Alert if secrets are committed to version control.
 
-1. **Document a Single Organizational Policy**
+1. **Document a Single Organisational Policy**
 
    - State that "All API keys must be stored in central secret management, with at least every X months rotation."
    - Reference [NIST secret management or NCSC credential rotation best practices](https://www.ncsc.gov.uk/).
@@ -101,13 +101,13 @@ Below are **rapidly actionable** steps to centralize and secure long-lived API k
    - While central secret storage helps, plan a future move to ephemeral tokens or IAM roles:
      - Reduces reliance on static keys altogether.
 
-By centralizing key storage, rotating keys automatically, scanning for accidental exposures, formalizing a policy, and starting to shift away from static keys, you significantly enhance the security of locally managed long-lived credentials.
+By centralising key storage, rotating keys automatically, scanning for accidental exposures, formalising a policy, and starting to shift away from static keys, you significantly enhance the security of locally managed long-lived credentials.
 
-### **Centralized Secret Store for Service Accounts:** A centralized repository or secret store is in place for all non-human service accounts, and its use is mandatory across the organization.
+### **Centralised Secret Store for Service Accounts:** A centralised repository or secret store is in place for all non-human service accounts, and its use is mandatory across the organisation.
 
 #### **How to determine if this good enough**
 
-Your organization mandates storing service account credentials in a secure, central location (e.g., an enterprise secret store). This might be "good enough" if:
+Your organisation mandates storing service account credentials in a secure, central location (e.g., an enterprise secret store). This might be "good enough" if:
 
 1. **Reduced Credential Sprawl**
 
@@ -126,7 +126,7 @@ However, using a secret store alone doesn’t guarantee ephemeral or short-lived
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to strengthen your centralized secret store approach:
+Below are **rapidly actionable** ways to strengthen your centralised secret store approach:
 
 1. **Automate Secret Rotation**
 
@@ -152,13 +152,13 @@ Below are **rapidly actionable** ways to strengthen your centralized secret stor
    - For new services, consider short-lived tokens or dynamic role assumption, stepping away from even stored secrets:
      - e.g., [AWS STS](https://aws.amazon.com/sts/), [Azure Managed Identity tokens](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP workload identity pools](https://cloud.google.com/iam/docs/workload-identity-federation), or [OCI dynamic groups/tokens](https://www.oracle.com/cloud/free/oci-training/).
 
-By automating secret rotation, refining access controls, documenting a secret lifecycle, hooking the store into CI/CD, and planning ephemeral credentials for new services, you build on your strong foundation of centralized secret usage to minimize risk further.
+By automating secret rotation, refining access controls, documenting a secret lifecycle, hooking the store into CI/CD, and planning ephemeral credentials for new services, you build on your strong foundation of centralised secret usage to minimise risk further.
 
 ### **Ephemeral Identities with Attestation:** Service accounts do not use long-lived secrets; instead, identity is established dynamically based on attestation mechanisms.
 
 #### **How to determine if this good enough**
 
-Your organization has moved beyond static credentials, using ephemeral tokens or certificates derived from environment attestation (e.g., the instance or container proves it’s authorized). This can be considered "good enough" if:
+Your organisation has moved beyond static credentials, using ephemeral tokens or certificates derived from environment attestation (e.g., the instance or container proves it’s authorised). This can be considered "good enough" if:
 
 1. **Near Zero Standing Privilege**
 
@@ -189,7 +189,7 @@ Below are **rapidly actionable** improvements to further secure ephemeral identi
 
 1. **Leverage Policy-as-Code**
 
-   - e.g., [Open Policy Agent (OPA)](https://www.openpolicyagent.org/) or vendor-based policy solutions ([AWS Organizations SCP](https://aws.amazon.com/organizations/features/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) for dynamic authorization checks:
+   - e.g., [Open Policy Agent (OPA)](https://www.openpolicyagent.org/) or vendor-based policy solutions ([AWS Organizations SCP](https://aws.amazon.com/organizations/features/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) for dynamic authorisation checks:
      - Grant ephemeral credentials only if a container or instance meets certain attestation criteria.
 
 1. **Regularly Audit Attestation Mechanisms**
@@ -199,22 +199,22 @@ Below are **rapidly actionable** improvements to further secure ephemeral identi
 1. **Integrate with Cross-Org Federation**
    - If multi-department or local councils share workloads, ensure ephemeral identity can federate across boundaries, referencing [GOV.UK guidance on cross-government tech collaboration](https://www.gov.uk/service-manual).
 
-By embedding ephemeral tokens into your CI/CD, adding a service mesh or mTLS, employing policy-as-code, auditing attestation rigorously, and exploring cross-organization federation, you evolve ephemeral identity usage into a highly secure, flexible, and zero-trust-aligned solution.
+By embedding ephemeral tokens into your CI/CD, adding a service mesh or mTLS, employing policy-as-code, auditing attestation rigorously, and exploring cross-organisation federation, you evolve ephemeral identity usage into a highly secure, flexible, and zero-trust-aligned solution.
 
-### **Code-Managed Identities with Federated Trust:** Identities for non-human services are managed as part of the infrastructure-as-code paradigm, allowing seamless federation across the organization without needing point-to-point trust relationships.
+### **Code-Managed Identities with Federated Trust:** Identities for non-human services are managed as part of the infrastructure-as-code paradigm, allowing seamless federation across the organisation without needing point-to-point trust relationships.
 
 #### **How to determine if this good enough**
 
-At this final level, your organization defines service identities in code (e.g., Terraform, AWS CloudFormation, Azure Bicep, GCP Deployment Manager), and enforces trust relationships through a central identity federation. This is typically "good enough" if:
+At this final level, your organisation defines service identities in code (e.g., Terraform, AWS CloudFormation, Azure Bicep, GCP Deployment Manager), and enforces trust relationships through a central identity federation. This is typically "good enough" if:
 
 1. **Full Infrastructure as Code**
 
    - All resource definitions, including service accounts or roles, are under version control, automatically deployed.
-   - Minimizes manual steps or inconsistencies.
+   - Minimises manual steps or inconsistencies.
 
 1. **Seamless Federation**
 
-   - Multi-department or multi-cloud environments rely on a single identity trust model—no specialized per-service or per-team trust links needed.
+   - Multi-department or multi-cloud environments rely on a single identity trust model—no specialised per-service or per-team trust links needed.
 
 1. **Robust Continuous Delivery**
 
@@ -254,4 +254,4 @@ Below are **rapidly actionable** ways to enhance code-managed identities with fe
 
 By employing policy-as-code, adopting DevSecOps scanning in your pipeline, embracing zero-trust microsegmentation, extending code-based identity to multi-cloud/hybrid, and continuously auditing for drift, you perfect a code-centric model that securely and efficiently manages service identities across your entire public sector environment.
 
-**Keep doing what you’re doing,** and consider sharing your approach to code-managed identity and federated trust in blog posts or by making pull requests to this guidance. This knowledge helps other UK public sector organizations adopt similarly robust, zero-trust-aligned solutions for non-human service account authentication.
+**Keep doing what you’re doing,** and consider sharing your approach to code-managed identity and federated trust in blog posts or by making pull requests to this guidance. This knowledge helps other UK public sector organisations adopt similarly robust, zero-trust-aligned solutions for non-human service account authentication.

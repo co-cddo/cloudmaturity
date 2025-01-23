@@ -1,15 +1,15 @@
 ---
-title: How is policy application and enforcement managed in your organization?
+title: How is policy application and enforcement managed in your organisation?
 tags: governance
 eleventyNavigation:
   parent: governance
 ---
 
-### **No Policy Application:** Policies are not actively applied within the organization.
+### **No Policy Application:** Policies are not actively applied within the organisation.
 
 #### **How to determine if this good enough**
 
-If policies are not actively applied, your organization may still be at a very early or exploratory stage. You might perceive this as "good enough" if:
+If policies are not actively applied, your organisation may still be at a very early or exploratory stage. You might perceive this as "good enough" if:
 
 1. **No Critical or Sensitive Operations**
 
@@ -21,8 +21,8 @@ If policies are not actively applied, your organization may still be at a very e
    - Teams are small and can coordinate informally, or the entire environment is short-lived with minimal risk.
 
 1. **No Internal or External Mandates**
-   - No formal rules require compliance with recognized governance frameworks (e.g., ISO 27001, NCSC Cloud Security Principles).
-   - Organizational leadership has not mandated policy implementation.
+   - No formal rules require compliance with recognised governance frameworks (e.g., ISO 27001, NCSC Cloud Security Principles).
+   - Organisational leadership has not mandated policy implementation.
 
 However, as soon as you store personal, official, or sensitive data—or your environment becomes critical to a public service—lack of policy application typically leads to risk of misconfigurations, data leaks, or compliance failures.
 
@@ -59,7 +59,7 @@ By taking these initial steps—defining a baseline policy, piloting it, and com
 
 #### **How to determine if this good enough**
 
-Here, your organization may have documented policies, but there is no real mechanism to ensure staff or systems comply. You might consider this "good enough" if:
+Here, your organisation may have documented policies, but there is no real mechanism to ensure staff or systems comply. You might consider this "good enough" if:
 
 1. **Policies Are Referenced, Not Mandatory**
 
@@ -108,11 +108,11 @@ Below are **rapidly actionable** ways to start enforcing existing policies:
 
 By automating policy checks, alerting on critical breaches, and phasing in enforcement, you build momentum toward consistent compliance without overwhelming teams.
 
-### **Process-Driven Application:** Policies are applied primarily through organizational processes without significant technical support.
+### **Process-Driven Application:** Policies are applied primarily through organisational processes without significant technical support.
 
 #### **How to determine if this good enough**
 
-In this scenario, your organization integrates policies into formal workflows (e.g., ticketing, approval boards, or documented SOPs), but relies on manual oversight rather than automated technical controls. It could be "good enough" if:
+In this scenario, your organisation integrates policies into formal workflows (e.g., ticketing, approval boards, or documented SOPs), but relies on manual oversight rather than automated technical controls. It could be "good enough" if:
 
 1. **Stable, Well-Understood Environments**
 
@@ -158,15 +158,15 @@ Below are **rapidly actionable** ways to enhance process-driven application:
 
 1. **Conduct Periodic Spot Audits**
    - Check a random subset of completed tickets or new resources to ensure every policy step was genuinely followed, not just ticked off.
-   - Publicize the outcomes so staff remain vigilant.
+   - Publicise the outcomes so staff remain vigilant.
 
-By introducing minor automation, centralizing policy references, adding a policy gate in ticketing, and auditing process compliance, you blend the reliability of your current manual approach with the efficiency gains of technical enablers.
+By introducing minor automation, centralising policy references, adding a policy gate in ticketing, and auditing process compliance, you blend the reliability of your current manual approach with the efficiency gains of technical enablers.
 
 ### **Process-Driven with Limited Technical Control:** Policies are comprehensively applied through processes, supported by limited technical control mechanisms.
 
 #### **How to determine if this good enough**
 
-At this stage, your organization uses well-defined processes to ensure policy compliance, supplemented by some technical controls (e.g., partial automation or read-only checks). You might consider it "good enough" if:
+At this stage, your organisation uses well-defined processes to ensure policy compliance, supplemented by some technical controls (e.g., partial automation or read-only checks). You might consider it "good enough" if:
 
 1. **Consistent, Repeatable Processes**
 
@@ -226,7 +226,7 @@ By strengthening technical guardrails, improving alerting, and embedding your po
 
 #### **How to determine if this good enough**
 
-At this final stage, policy application is deeply woven into both organizational processes and automated technical controls:
+At this final stage, policy application is deeply woven into both organisational processes and automated technical controls:
 
 1. **End-to-End Enforcement**
 
@@ -259,7 +259,7 @@ Below are **rapidly actionable** refinements, even at the highest maturity:
 
 1. **Enable Dynamic, Real-Time Adjustments**
 
-   - Some advanced organizations adopt "adaptive policies" that can respond automatically to shifting risk contexts:
+   - Some advanced organisations adopt "adaptive policies" that can respond automatically to shifting risk contexts:
      - e.g., Requiring step-up authentication or extra scanning if abnormal usage patterns appear.
 
 1. **Analytics and Reporting on Policy Efficacy**

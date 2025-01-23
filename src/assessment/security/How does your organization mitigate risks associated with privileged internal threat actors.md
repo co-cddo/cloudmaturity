@@ -1,5 +1,5 @@
 ---
-title: How does your organization mitigate risks associated with privileged internal threat actors?
+title: How does your organisation mitigate risks associated with privileged internal threat actors?
 tags: security
 eleventyNavigation:
   parent: security
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization might ensure privileged users have been vetted by internal or external means (e.g., security clearances or supplier checks). This may be considered "good enough" if:
+Your organisation might ensure privileged users have been vetted by internal or external means (e.g., security clearances or supplier checks). This may be considered "good enough" if:
 
 1. **Rigorous Personnel Vetting**
 
@@ -36,7 +36,7 @@ Below are **rapidly actionable** steps to bolster security beyond mere user vett
 1. **Mandate MFA for Privileged Accounts**
 
    - For root/admin accounts, enforce multi-factor authentication referencing [NCSC guidance on MFA best practices](https://www.ncsc.gov.uk/).
-   - Minimizes the chance of stolen credentials being abused.
+   - Minimises the chance of stolen credentials being abused.
 
 1. **Adopt Break-Glass Procedures**
 
@@ -52,11 +52,11 @@ Below are **rapidly actionable** steps to bolster security beyond mere user vett
 
 By reinforcing least privilege, requiring MFA for admins, introducing break-glass accounts, logging privileged actions immutably, and scheduling re-vetting cycles, you address the limitations of purely one-time user vetting practices.
 
-### **Audit Logs as a Non-Functional Requirement:** Systems are required to maintain audit logs, although these logs lack technical controls for centralization or comprehensive monitoring.
+### **Audit Logs as a Non-Functional Requirement:** Systems are required to maintain audit logs, although these logs lack technical controls for centralisation or comprehensive monitoring.
 
 #### **How to determine if this good enough**
 
-In your organization, each system generates logs to satisfy a broad requirement ("we must have logs"), yet there is no centralized approach or deep analysis. It might be "good enough" if:
+In your organisation, each system generates logs to satisfy a broad requirement ("we must have logs"), yet there is no centralised approach or deep analysis. It might be "good enough" if:
 
 1. **Meeting Basic Compliance**
 
@@ -69,13 +69,13 @@ In your organization, each system generates logs to satisfy a broad requirement 
 1. **Limited Complexity**
    - Logging requirements are not high or the environment is small, so manual or local checks suffice.
 
-To enhance threat detection and privileged user oversight, you could unify logs centrally and add real-time monitoring. [NCSC’s logging guidance](https://www.ncsc.gov.uk/collection/logging-and-protective-monitoring) and [NIST SP 800-92 on log management](https://csrc.nist.gov/) emphasize the importance of consistent, centralized logging for security and accountability.
+To enhance threat detection and privileged user oversight, you could unify logs centrally and add real-time monitoring. [NCSC’s logging guidance](https://www.ncsc.gov.uk/collection/logging-and-protective-monitoring) and [NIST SP 800-92 on log management](https://csrc.nist.gov/) emphasize the importance of consistent, centralised logging for security and accountability.
 
 #### **How to do better**
 
 Below are **rapidly actionable** steps for robust logging:
 
-1. **Centralize Logs**
+1. **Centralise Logs**
 
    - Collect logs from all key systems into a single location:
      - [AWS CloudWatch Logs or Amazon S3](https://aws.amazon.com/cloudwatch/), [Azure Monitor Logs or Log Analytics](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-retention-archive), [GCP Cloud Logging](https://cloud.google.com/logging/docs/), or [OCI Logging service](https://www.oracle.com/cloud/free/oci-training/).
@@ -88,7 +88,7 @@ Below are **rapidly actionable** steps for robust logging:
 
 1. **Add Tiered Access**
 
-   - Ensure only authorized security or audit staff can retrieve log data, particularly sensitive privileged user logs.
+   - Ensure only authorised security or audit staff can retrieve log data, particularly sensitive privileged user logs.
 
 1. **Adopt Alerts or Scripting**
 
@@ -99,13 +99,13 @@ Below are **rapidly actionable** steps for robust logging:
    - Keep in mind an upgrade to a security information and event management tool or advanced logging solution in the next 6-12 months:
      - e.g., [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP Security Command Center](https://cloud.google.com/security-command-center/docs/overview), or [OCI Security Advisor integrations](https://www.oracle.com/cloud/free/oci-training/).
 
-By centralizing logs, defining retention policies, restricting log access, employing basic alerts, and charting a path to a future SIEM or advanced monitoring approach, you progress from minimal log compliance to meaningful protective monitoring for privileged accounts.
+By centralising logs, defining retention policies, restricting log access, employing basic alerts, and charting a path to a future SIEM or advanced monitoring approach, you progress from minimal log compliance to meaningful protective monitoring for privileged accounts.
 
 ### **Local Audit Log Checks During Assessments:** Local audit log presence is verified as part of Integrated Technical Health Checks (ITHC) or other pre-launch processes, but routine monitoring may be absent.
 
 #### **How to determine if this good enough**
 
-Your organization ensures that each new system or release passes an ITHC or security check verifying logs exist, but ongoing monitoring or correlation might not happen. This could be "good enough" if:
+Your organisation ensures that each new system or release passes an ITHC or security check verifying logs exist, but ongoing monitoring or correlation might not happen. This could be "good enough" if:
 
 1. **Meeting Basic Security Gate**
 
@@ -146,13 +146,13 @@ Below are **rapidly actionable** steps to enhance local audit log checks:
 1. **Involve Security/Operations in Reviews**
    - Encourage cross-team peer reviews, so security staff or ops can weigh in on log completeness or retention policies.
 
-By scheduling routine log reviews, centralizing logs or employing a SIEM, establishing real-time alerts, retesting logs beyond initial go-live, and collaborating with security teams on checks, you elevate from one-time assessments to ongoing protective monitoring.
+By scheduling routine log reviews, centralising logs or employing a SIEM, establishing real-time alerts, retesting logs beyond initial go-live, and collaborating with security teams on checks, you elevate from one-time assessments to ongoing protective monitoring.
 
-### **Centralized, Immutable Audit Logs with Automated Monitoring:** Immutable system audit logs are centrally stored. Their integrity is continuously assured, and the auditing process is automated. Log retention is defined and enforced automatically.
+### **Centralised, Immutable Audit Logs with Automated Monitoring:** Immutable system audit logs are centrally stored. Their integrity is continuously assured, and the auditing process is automated. Log retention is defined and enforced automatically.
 
 #### **How to determine if this good enough**
 
-Your organization ensures all logs flow into a tamper-proof or WORM (write-once, read-many) storage with automated processes for retention and monitoring. This may be "good enough" if:
+Your organisation ensures all logs flow into a tamper-proof or WORM (write-once, read-many) storage with automated processes for retention and monitoring. This may be "good enough" if:
 
 1. **Complete Coverage**
 
@@ -160,7 +160,7 @@ Your organization ensures all logs flow into a tamper-proof or WORM (write-once,
 
 1. **Daily or Real-Time Analysis**
 
-   - Automated scanners or scripts detect anomalies (e.g., unauthorized attempts, suspicious off-hours usage).
+   - Automated scanners or scripts detect anomalies (e.g., unauthorised attempts, suspicious off-hours usage).
 
 1. **Confidence in Legal/Evidential Status**
    - The logs are immutable, meeting [NCSC guidance](https://www.ncsc.gov.uk/) or relevant [NIST guidelines](https://csrc.nist.gov/) for evidential integrity if legal investigations arise.
@@ -169,7 +169,7 @@ Still, you might expand cross-department correlation (e.g., combining logs from 
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to enhance a centralized, immutable audit logging approach:
+Below are **rapidly actionable** ways to enhance a centralised, immutable audit logging approach:
 
 1. **Incorporate a SIEM or Security Analytics**
 
@@ -182,7 +182,7 @@ Below are **rapidly actionable** ways to enhance a centralized, immutable audit 
 
 1. **Implement Role-Based Log Access**
 
-   - Ensure only authorized staff see certain logs (privileged user logs may contain sensitive data).
+   - Ensure only authorised staff see certain logs (privileged user logs may contain sensitive data).
    - Align with [NIST SP 800-53 Access Control guidelines](https://csrc.nist.gov/).
 
 1. **Add Instant Alerts for High-Risk Actions**
@@ -191,16 +191,16 @@ Below are **rapidly actionable** ways to enhance a centralized, immutable audit 
    - Tools like [AWS CloudWatch Alarms](https://aws.amazon.com/cloudwatch/), [Azure Monitor Alerts](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview), [GCP Logging Alerts](https://cloud.google.com/logging/docs/alerts), or [OCI Notifications integrations](https://www.oracle.com/cloud/free/oci-training/) are typically easy to set up.
 
 1. **Cross-department Collaboration**
-   - If your service interacts with other public sector organizations, consider shared logging approaches for end-to-end traceability.
+   - If your service interacts with other public sector organisations, consider shared logging approaches for end-to-end traceability.
    - Possibly referencing [GOV.UK cross-department data sharing or NCSC supply chain security best practices](https://www.ncsc.gov.uk/).
 
-By coupling an advanced SIEM with defined retention tiers, enforcing role-based log access, setting real-time alerts for critical events, and collaborating beyond your department, you push your centralized, immutable logging approach to best-in-class standards aligned with public sector needs.
+By coupling an advanced SIEM with defined retention tiers, enforcing role-based log access, setting real-time alerts for critical events, and collaborating beyond your department, you push your centralised, immutable logging approach to best-in-class standards aligned with public sector needs.
 
 ### **Regular Audits and Legal Compliance Checks:** Regular rehearsal exercises are conducted with the assistance of auditors and legal experts. These checks ensure the integrity, completeness, and legal admissibility of logs as key evidence in potential criminal prosecutions.
 
 #### **How to determine if this good enough**
 
-At this highest maturity level, your organization not only has robust logging but also runs frequent legal and forensic validations. This approach is typically "good enough" if:
+At this highest maturity level, your organisation not only has robust logging but also runs frequent legal and forensic validations. This approach is typically "good enough" if:
 
 1. **Thorough Testing & Legal Assurance**
 
@@ -220,7 +220,7 @@ You may further refine by adopting next-generation forensics tools, cross-depart
 
 Below are **rapidly actionable** suggestions to deepen advanced log audits and legal compliance:
 
-1. **Formalize Forensic Readiness**
+1. **Formalise Forensic Readiness**
 
    - Publish an internal document describing how logs are collected, secured, and presented in legal contexts:
      - referencing [NCSC forensic readiness best practices](https://www.ncsc.gov.uk/).
@@ -238,12 +238,12 @@ Below are **rapidly actionable** suggestions to deepen advanced log audits and l
 1. **Engage with Legal/HR for Pre-Agreed Procedures**
 
    - Ensure a consistent approach to handle suspected insider cases, clarifying roles for HR, security, legal, and management:
-     - Minimizes delays or confusion during investigations.
+     - Minimises delays or confusion during investigations.
 
 1. **Leverage Cross-department Insights**
    - If possible, share experiences with other public sector bodies:
      - e.g., local councils or departmental agencies implementing similar forensic checks, referencing [GOV.UK data and knowledge sharing communities](https://www.gov.uk/service-manual).
 
-By refining your forensic readiness policy, running insider threat simulations, implementing chain-of-custody measures, coordinating with legal/HR teams, and exchanging insights cross-department, you maximize the readiness and legal defensibility of your logs, ensuring robust protection against privileged internal threats in the UK public sector environment.
+By refining your forensic readiness policy, running insider threat simulations, implementing chain-of-custody measures, coordinating with legal/HR teams, and exchanging insights cross-department, you maximise the readiness and legal defensibility of your logs, ensuring robust protection against privileged internal threats in the UK public sector environment.
 
-**Keep doing what you’re doing,** and consider blogging or creating pull requests to share these advanced approaches for safeguarding logs, verifying legal readiness, and mitigating privileged insider threats. Such knowledge helps strengthen collective security practices across UK public sector organizations.
+**Keep doing what you’re doing,** and consider blogging or creating pull requests to share these advanced approaches for safeguarding logs, verifying legal readiness, and mitigating privileged insider threats. Such knowledge helps strengthen collective security practices across UK public sector organisations.

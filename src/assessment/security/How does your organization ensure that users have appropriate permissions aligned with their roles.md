@@ -1,5 +1,5 @@
 ---
-title: How does your organization ensure that users have appropriate permissions aligned with their roles?
+title: How does your organisation ensure that users have appropriate permissions aligned with their roles?
 tags: security
 eleventyNavigation:
   parent: security
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization lacks a formal or scheduled approach to verifying user access, relying on admin discretion. This might be acceptable if:
+Your organisation lacks a formal or scheduled approach to verifying user access, relying on admin discretion. This might be acceptable if:
 
 1. **Small or Static Environments**
 
@@ -20,7 +20,7 @@ Your organization lacks a formal or scheduled approach to verifying user access,
    - Low sensitivity or risk if accounts remain overprivileged or are never deactivated.
 
 1. **Minimal Budgets/Resources**
-   - The current state is all you can handle, with no immediate impetus to formalize.
+   - The current state is all you can handle, with no immediate impetus to formalise.
 
 However, ad-hoc reviews often result in outdated or excessive privileges, violating the [NCSC’s principle of least privilege](https://www.ncsc.gov.uk/collection/cloud-security) and ignoring [NIST SP 800-53 AC (Access Control) controls](https://csrc.nist.gov/). This can lead to security breaches or cost inefficiencies.
 
@@ -41,7 +41,7 @@ Below are **rapidly actionable** steps to transition from ad-hoc reviews to basi
 1. **Leverage Built-In Cloud IAM Tools**
 
    - [AWS IAM](https://aws.amazon.com/iam/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM](https://cloud.google.com/iam/docs/overview), [OCI IAM compartments/policies](https://www.oracle.com/cloud/free/oci-training/) can define or limit privileges.
-   - Minimizes guesswork in manual permission assignments.
+   - Minimises guesswork in manual permission assignments.
 
 1. **Maintain a Basic User Inventory**
 
@@ -57,7 +57,7 @@ By laying out a minimal access policy, assigning RACI for administration, adopti
 
 #### **How to determine if this good enough**
 
-Your organization periodically inspects user entitlements—maybe annually or every six months—but rarely adjusts them, fearing interruptions if privileges are revoked. This might be considered "good enough" if:
+Your organisation periodically inspects user entitlements—maybe annually or every six months—but rarely adjusts them, fearing interruptions if privileges are revoked. This might be considered "good enough" if:
 
 1. **Basic Governance in Place**
 
@@ -80,31 +80,31 @@ Below are **rapidly actionable** ways to evolve beyond limited-action reviews:
 
    - If concerns about "breaking something" hinder revocations, adopt a short test environment to confirm the user or system truly needs certain permissions.
 
-1. **Categorize Users by Risk**
+1. **Categorise Users by Risk**
 
    - For high-risk roles (e.g., admin accounts with access to production data), enforce stricter reviews or more frequent re-validation:
      - Potentially referencing [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [Azure AD Access Reviews](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP’s IAM Recommender](https://cloud.google.com/iam/docs/access-reviews), [OCI IAM tools](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Implement Review Dashboards**
 
-   - Summarize each user’s privileges, last login, or role usage:
+   - Summarise each user’s privileges, last login, or role usage:
      - If certain roles are not used in X days, consider removing them.
 
 1. **Show Leadership Examples**
 
    - Have a pilot case where you successfully reduce access for a role with no negative consequences, building confidence.
 
-1. **Incentivize or Recognize Proper Clean-Up**
+1. **Incentivise or Recognise Proper Clean-Up**
    - Acknowledge teams or managers who diligently remove no-longer-needed permissions:
      - Encourages a habit of safe privilege reduction.
 
-By adopting test environments before revoking privileges, classifying user risk levels, building simple dashboards, demonstrating safe revocations, and recognizing best practices, you reduce hesitancy and further align with security best practices.
+By adopting test environments before revoking privileges, classifying user risk levels, building simple dashboards, demonstrating safe revocations, and recognising best practices, you reduce hesitancy and further align with security best practices.
 
 ### **Regular Manual Reviews, Primarily Additive:** Regular, manual reviews of access rights are conducted across most systems. However, changes to access are generally additive rather than reductive.
 
 #### **How to determine if this good enough**
 
-Your organization systematically checks user access on a regular basis, but typically only grants new privileges (additive changes). Rarely do you remove or reduce existing entitlements. This may be "good enough" if:
+Your organisation systematically checks user access on a regular basis, but typically only grants new privileges (additive changes). Rarely do you remove or reduce existing entitlements. This may be "good enough" if:
 
 1. **Frequent or Complex Role Changes**
 
@@ -136,9 +136,9 @@ Below are **rapidly actionable** steps to incorporate permission reduction:
 1. **Combine with Slack/Teams Approvals**
 
    - Automate revocation requests: if an admin sees stale permissions, they click a button to remove them, and a second manager approves:
-     - Minimizes fear of accidental breakage.
+     - Minimises fear of accidental breakage.
 
-1. **Reward "Right-Sizing"**
+1. **Reward "Right-sizing"**
 
    - Celebrate teams that proactively reduce permission sprawl, referencing cost savings or risk reduction:
      - e.g., mention in staff newsletters or internal security updates.
@@ -146,13 +146,13 @@ Below are **rapidly actionable** steps to incorporate permission reduction:
 1. **Refine Review Frequency**
    - If reviews are monthly or quarterly, consider stepping up to weekly or adopting a continuous scanning approach for business-critical accounts.
 
-By adding a usage-based revocation policy, setting expiry for short-lived roles, integrating quick approval workflows, recognizing teams that successfully remove unused privileges, and potentially increasing review frequency, you shift from additive-only changes to an environment that truly enforces minimal privileges.
+By adding a usage-based revocation policy, setting expiry for short-lived roles, integrating quick approval workflows, recognising teams that successfully remove unused privileges, and potentially increasing review frequency, you shift from additive-only changes to an environment that truly enforces minimal privileges.
 
 ### **Regular Reviews with Defined Expiry Dates:** Access is regularly reviewed, certified, and remediated. Role allocations include defined expiry dates, necessitating review and re-certification.
 
 #### **How to determine if this good enough**
 
-Your organization systematically reviews user access with clear renewal or expiry deadlines, ensuring no indefinite privileges. This indicates a strong security posture. It’s likely "good enough" if:
+Your organisation systematically reviews user access with clear renewal or expiry deadlines, ensuring no indefinite privileges. This indicates a strong security posture. It’s likely "good enough" if:
 
 1. **Automated or Well-Managed Reviews**
 
@@ -174,7 +174,7 @@ Below are **rapidly actionable** methods to enhance expiry-based reviews:
 1. **Use Cloud-Native Access Review Tools**
 
    - e.g., [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [AWS SSO user provisioning with rotation](https://aws.amazon.com/sso/), [Azure Access Reviews in Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP IAM Recommender with time-based checks](https://cloud.google.com/iam/docs/access-reviews), [OCI IAM compartments with automated policy review triggers](https://www.oracle.com/cloud/free/oci-training/).
-   - Minimizes manual overhead.
+   - Minimises manual overhead.
 
 1. **Adopt Automated Alerts for Upcoming Expiries**
 
@@ -200,7 +200,7 @@ By leveraging cloud-native review tools, alerting for soon-to-expire roles, risk
 
 #### **How to determine if this good enough**
 
-At the apex of maturity, your organization uses a fully automated, risk-based system for managing user permissions. You might consider it "good enough" if:
+At the apex of maturity, your organisation uses a fully automated, risk-based system for managing user permissions. You might consider it "good enough" if:
 
 1. **Zero Standing Privileges**
 
@@ -210,7 +210,7 @@ At the apex of maturity, your organization uses a fully automated, risk-based sy
 
    - A system or pipeline regularly checks each user’s entitlements, triggers escalations if anomalies arise.
 
-1. **Synchronized with HR Systems**
+1. **Synchronised with HR Systems**
 
    - Staff transitions—new hires, promotions, departures—instantly reflect in user permissions, preventing orphaned or leftover access.
 
@@ -235,7 +235,7 @@ Below are **rapidly actionable** ways to refine a fully automated, risk-based re
 1. **Ensure Continuous Oversight**
 
    - Provide dashboards for leadership or security officers, showing current risk posture, overdue re-certifications, or upcoming role changes:
-     - Minimizes the chance of an overlooked anomaly.
+     - Minimises the chance of an overlooked anomaly.
 
 1. **Extend to Multi-Cloud or Hybrid**
 
@@ -247,4 +247,4 @@ Below are **rapidly actionable** ways to refine a fully automated, risk-based re
 
 By integrating real-time risk analysis, employing policy-as-code for dynamic role assignment, offering continuous oversight dashboards, supporting multi-cloud/hybrid scenarios, and sharing insights across government bodies, you further refine an already advanced, automated identity review system. This ensures minimal security risk and maximum agility in the public sector context.
 
-**Keep doing what you’re doing,** and consider publishing blog posts or making pull requests to this guidance about your advanced access review processes. Sharing experiences helps other UK public sector organizations adopt similarly robust, automated solutions for managing user permissions.
+**Keep doing what you’re doing,** and consider publishing blog posts or making pull requests to this guidance about your advanced access review processes. Sharing experiences helps other UK public sector organisations adopt similarly robust, automated solutions for managing user permissions.

@@ -1,15 +1,15 @@
 ---
-title: How does your organization approach the use of compute services in the cloud?
+title: How does your organisation approach the use of compute services in the cloud?
 tags: cost
 eleventyNavigation:
   parent: cost
 ---
 
-### **Long-Running Homogeneous VMs:** Workloads are consistently deployed on long-running, homogeneously sized Virtual Machines (VMs), without variation or optimization.
+### **Long-Running Homogeneous VMs:** Workloads are consistently deployed on long-running, homogeneously sized Virtual Machines (VMs), without variation or optimisation.
 
 #### **How to determine if this good enough**
 
-An organization that relies on "Long-Running Homogeneous VMs" typically has static infrastructure: they stand up certain VM sizes—often chosen arbitrarily or based on outdated assumptions—and let them run continuously. For a UK public sector body, this may appear straightforward if:
+An organisation that relies on "Long-Running Homogeneous VMs" typically has static infrastructure: they stand up certain VM sizes—often chosen arbitrarily or based on outdated assumptions—and let them run continuously. For a UK public sector body, this may appear straightforward if:
 
 1. **Predictable, Low-Complexity Workloads**
 
@@ -19,18 +19,18 @@ An organization that relies on "Long-Running Homogeneous VMs" typically has stat
 
 1. **Minimal Cost Pressures**
 
-   - If your monthly spend is low enough to be tolerated within your departmental budget or you lack strong impetus from finance to optimize further.
+   - If your monthly spend is low enough to be tolerated within your departmental budget or you lack strong impetus from finance to optimise further.
    - You might feel that it’s "not broken, so no need to fix it."
 
 1. **Legacy Constraints**
 
-   - Some local authority or government departments could be running older applications that are hard to containerize or re-platform. If you require certain OS versions or on-prem-like architectures, homogeneous VMs can seem "safe."
+   - Some local authority or government departments could be running older applications that are hard to containerise or re-platform. If you require certain OS versions or on-prem-like architectures, homogeneous VMs can seem "safe."
 
 1. **Limited Technical Skills or Resources**
    - You may not have in-house expertise to manage containers, function-based services, or advanced orchestrators.
    - If your main objective is stability and you have no immediate impetus to experiment, you might remain with static VM setups.
 
-If you fall into these categories—low complexity, legacy constraints, stable usage, minimal cost concerns—then "Long-Running Homogeneous VMs" might indeed be "good enough." However, many UK public sector cloud strategies now emphasize cost efficiency, scalability, and elasticity, especially under increased scrutiny of budgets and service reliability. Sticking to homogeneous, always-on VMs without optimization can lead to wasteful spending, hamper agility, and prevent future readiness.
+If you fall into these categories—low complexity, legacy constraints, stable usage, minimal cost concerns—then "Long-Running Homogeneous VMs" might indeed be "good enough." However, many UK public sector cloud strategies now emphasize cost efficiency, scalability, and elasticity, especially under increased scrutiny of budgets and service reliability. Sticking to homogeneous, always-on VMs without optimisation can lead to wasteful spending, hamper agility, and prevent future readiness.
 
 #### **How to do better**
 
@@ -43,15 +43,15 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
      - [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/) and [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/).
      - [GCP Monitoring](https://cloud.google.com/monitoring) and [Billing Reports](https://cloud.google.com/billing/docs/reports).
      - [OCI Monitoring](https://www.oracle.com/cloud/monitoring/) and [Cost Analysis](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/costanalysisoverview.htm).
-   - Check CPU, memory, and storage utilization. If these metrics show consistent underuse (like 10% CPU usage around the clock), it’s a sign you can downsize or re-architect.
+   - Check CPU, memory, and storage utilisation. If these metrics show consistent underuse (like 10% CPU usage around the clock), it’s a sign you can downsize or re-architect.
 
-1. **Leverage Built-in Right-Sizing Tools**
+1. **Leverage Built-in Right-sizing Tools**
 
    - Major cloud providers offer "right-sizing" recommendations:
-     - [AWS Compute Optimizer](https://aws.amazon.com/compute-optimizer/) to get suggestions for smaller or larger instance sizes.
-     - [Azure Advisor for VM right-sizing](https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations) to identify underutilized virtual machines.
-     - [GCP Recommender for machine types](https://cloud.google.com/recommender/docs/understanding-vm-machine-type-recommendations) to optimize resource utilization.
-     - [OCI Workload and Resource Optimization](https://www.oracle.com/cloud/compute/) for tailored resource recommendations.
+     - [AWS Compute Optimiser](https://aws.amazon.com/compute-optimizer/) to get suggestions for smaller or larger instance sizes.
+     - [Azure Advisor for VM right-sizing](https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations) to identify underutilised virtual machines.
+     - [GCP Recommender for machine types](https://cloud.google.com/recommender/docs/understanding-vm-machine-type-recommendations) to optimise resource utilisation.
+     - [OCI Workload and Resource Optimisation](https://www.oracle.com/cloud/compute/) for tailored resource recommendations.
    - Make a plan to apply at least one or two right-sizing recommendations each quarter. This is a quick, low-risk path to cost savings and better resource use.
 
 1. **Introduce Simple Scheduling**
@@ -65,7 +65,7 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
 
 1. **Conduct a Feasibility Check for a Small Container Pilot**
 
-   - Even if you retain most workloads on VMs, pick one small application or batch job and try containerizing it:
+   - Even if you retain most workloads on VMs, pick one small application or batch job and try containerising it:
      - [AWS Fargate](https://aws.amazon.com/fargate/) or [Amazon EKS](https://aws.amazon.com/eks/) for containers.
      - [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/) or [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
      - [Google Cloud Run](https://cloud.google.com/run) or [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine).
@@ -82,7 +82,7 @@ By monitoring usage, applying right-sizing, scheduling idle time, and introducin
 
 #### **How to determine if this good enough**
 
-Organizations in this stage have recognized the benefits of more dynamic compute models—like containers or serverless—but apply them only in a small subset of cases. You might be "good enough" if:
+Organisations in this stage have recognised the benefits of more dynamic compute models—like containers or serverless—but apply them only in a small subset of cases. You might be "good enough" if:
 
 1. **Core Workloads Still Suited to Static VMs**
 
@@ -101,13 +101,13 @@ Organizations in this stage have recognized the benefits of more dynamic compute
 
 1. **Growing Awareness of Container or Serverless Advantages**
    - Some staff or teams are championing more frequent usage of advanced compute.
-   - The IT department sees potential, but organizational inertia, compliance considerations, or skill gaps limit widespread adoption.
+   - The IT department sees potential, but organisational inertia, compliance considerations, or skill gaps limit widespread adoption.
 
-If the majority of your mission-critical applications remain on VMs and you see stable performance within budget, this may be "enough" for now. However, if the cloud usage is expanding, or if your department is under pressure to modernize, you might quickly find you miss out on elasticity, cost efficiency, or resilience advantages that come from broader container or serverless adoption.
+If the majority of your mission-critical applications remain on VMs and you see stable performance within budget, this may be "enough" for now. However, if the cloud usage is expanding, or if your department is under pressure to modernise, you might quickly find you miss out on elasticity, cost efficiency, or resilience advantages that come from broader container or serverless adoption.
 
 #### **How to do better**
 
-Here are **actionable** next steps to accelerate your modernization journey without overwhelming resources:
+Here are **actionable** next steps to accelerate your modernisation journey without overwhelming resources:
 
 1. **Expand Container/Serverless Pilots in a Structured Way**
 
@@ -151,13 +151,13 @@ Here are **actionable** next steps to accelerate your modernization journey with
 
    Building confidence and skills helps teams adopt more advanced compute models.
 
-Through these steps—structured expansions of containerized or serverless pilots, improved auto-scaling of VMs, and staff training—your organization can gradually shift from "limited experimentation" to a more balanced compute ecosystem. The result is improved agility, potential cost savings, and readiness for more modern architectures.
+Through these steps—structured expansions of containerised or serverless pilots, improved auto-scaling of VMs, and staff training—your organisation can gradually shift from "limited experimentation" to a more balanced compute ecosystem. The result is improved agility, potential cost savings, and readiness for more modern architectures.
 
 ### **Mixed Use with Some Advanced Compute Options:** Some production workloads are run in containers or function-based compute services. Ad-hoc use of short-lived VMs is practiced, with efforts to right-size based on workload needs.
 
 #### **How to determine if this good enough**
 
-This stage indicates a notable transformation: your organization uses multiple compute paradigms. You have container-based or serverless workloads in production, you sometimes spin up short-lived VMs for ephemeral tasks, and you’re actively right-sizing. It may be "good enough" if:
+This stage indicates a notable transformation: your organisation uses multiple compute paradigms. You have container-based or serverless workloads in production, you sometimes spin up short-lived VMs for ephemeral tasks, and you’re actively right-sizing. It may be "good enough" if:
 
 1. **Functional, Multi-Modal Compute Strategy**
 
@@ -172,13 +172,13 @@ This stage indicates a notable transformation: your organization uses multiple c
 1. **Balanced Cost and Complexity**
 
    - You have a handle on typical monthly spend, and finance sees a correlation between usage spikes and cost.
-   - You might not be fully optimizing everything, but you rarely see large, unexplained bills.
+   - You might not be fully optimising everything, but you rarely see large, unexplained bills.
 
 1. **Clear Upsides from Modern Compute**
-   - You’ve recognized that certain microservices perform better or cost less on serverless or containers.
+   - You’ve recognised that certain microservices perform better or cost less on serverless or containers.
    - Cultural buy-in is growing: multiple teams express interest in flexible compute models.
 
-If these points match your environment, your "Mixed Use" approach might currently satisfy your user needs and budget constraints. However, you might still see opportunities to refine deployment methods, unify your management or monitoring, and push for greater elasticity. If you suspect further cost savings or performance gains are possible—or you want a more standardized approach across the organization—further advancement is likely beneficial.
+If these points match your environment, your "Mixed Use" approach might currently satisfy your user needs and budget constraints. However, you might still see opportunities to refine deployment methods, unify your management or monitoring, and push for greater elasticity. If you suspect further cost savings or performance gains are possible—or you want a more standardised approach across the organisation—further advancement is likely beneficial.
 
 #### **How to do better**
 
@@ -198,26 +198,26 @@ Below are **rapidly actionable** ways to enhance your mixed compute model:
    - Implement a single monitoring stack that captures logs, metrics, and traces across VMs, containers, and functions:
      - [AWS CloudWatch](https://aws.amazon.com/cloudwatch/) combined with [AWS X-Ray](https://aws.amazon.com/xray/) for distributed tracing in containers or Lambda.
      - [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/) along with [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-trace-data) for containers and serverless telemetry.
-     - [Google Cloud's Operations Suite](https://cloud.google.com/products/operations) utilizing [Cloud Logging](https://cloud.google.com/logging) and [Cloud Trace](https://cloud.google.com/trace) for multi-service environments.
+     - [Google Cloud's Operations Suite](https://cloud.google.com/products/operations) utilising [Cloud Logging](https://cloud.google.com/logging) and [Cloud Trace](https://cloud.google.com/trace) for multi-service environments.
      - [Oracle Cloud Infrastructure (OCI) Logging](https://www.oracle.com/observability/) integrated with the [Observability and Management Platform](https://www.oracle.com/manageability/) for cross-service insights.
    - Unified observability ensures you can quickly identify inefficiencies or scaling issues.
 
 1. **Introduce a Tagging/Governance Policy**
 
-   - Standardize tags or labels for cost center, environment, and application name. This practice aids in tracking spending, performance, and potential carbon footprint across various compute services.
-   - Utilize tools such as:
+   - Standardise tags or labels for cost center, environment, and application name. This practice aids in tracking spending, performance, and potential carbon footprint across various compute services.
+   - Utilise tools such as:
      - [AWS Resource Tagging and Cost Allocation Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html).
      - [Azure Policy with Tag Inheritance](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies).
-     - [GCP Labels for Resources & GCP Organization Policy to Enforce Tagging](https://cloud.google.com/resource-manager/docs/organization-policy/tags-organization-policy).
+     - [GCP Labels for Resources & GCP Organisation Policy to Enforce Tagging](https://cloud.google.com/resource-manager/docs/organisation-policy/tags-organisation-policy).
      - [OCI Tag Namespaces and Enforcement Policies](https://docs.oracle.com/en-us/iaas/Content/Tagging/Concepts/taggingoverview.htm).
-   - Implementing a unified tagging strategy fosters accountability and helps identify usage patterns that may require optimization.
+   - Implementing a unified tagging strategy fosters accountability and helps identify usage patterns that may require optimisation.
 
 1. **Implement Automated or Dynamic Scaling**
 
    - For container-based workloads, set CPU and memory usage thresholds to enable auto-scaling of pods or tasks:
      - [AWS Fargate/ECS auto-scaling based on CloudWatch metrics](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html).
-     - [Azure Kubernetes Service Horizontal Pod Autoscaler (HPA)](https://learn.microsoft.com/en-us/azure/aks/concepts-scale#horizontal-pod-autoscaler).
-     - [GCP GKE Horizontal Pod Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler) or [Cloud Run request-based autoscaling](https://cloud.google.com/run/docs/about-auto-scaling).
+     - [Azure Kubernetes Service Horisontal Pod Autoscaler (HPA)](https://learn.microsoft.com/en-us/azure/aks/concepts-scale#horisontal-pod-autoscaler).
+     - [GCP GKE Horisontal Pod Autoscaler](https://cloud.google.com/kubernetes-engine/docs/concepts/horisontalpodautoscaler) or [Cloud Run request-based autoscaling](https://cloud.google.com/run/docs/about-auto-scaling).
      - [OCI OKE cluster autoscaler](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengautoscaling.htm) or container usage triggers.
    - For serverless architectures, establish concurrency or usage limits to prevent unexpected cost spikes.
 
@@ -230,7 +230,7 @@ Below are **rapidly actionable** ways to enhance your mixed compute model:
      - [Azure Reservations for VMs or container node pools](https://azure.microsoft.com/en-us/pricing/reserved-vm-instances/).
      - [GCP Committed Use Discounts](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts).
      - [OCI Reserved Capacity](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/reserve-capacity.htm).
-   - Blend on-demand resources for elastic workloads with reservations for predictable baselines to optimize costs.
+   - Blend on-demand resources for elastic workloads with reservations for predictable baselines to optimise costs.
 
    Implementing these strategies can lead to significant cost savings for workloads with consistent usage patterns.
 
@@ -240,7 +240,7 @@ By unifying your deployment practices, consolidating observability, enforcing ta
 
 #### **How to determine if this good enough**
 
-When your organization regularly uses ephemeral or short-lived compute models, containers, and functions, you’ve likely embraced cloud-native thinking. This suggests:
+When your organisation regularly uses ephemeral or short-lived compute models, containers, and functions, you’ve likely embraced cloud-native thinking. This suggests:
 
 1. **Frequent Scaling and Automated Lifecycle**
 
@@ -260,7 +260,7 @@ When your organization regularly uses ephemeral or short-lived compute models, c
 1. **Multi-Service Observability**
    - Monitoring covers ephemeral workloads, with logs and metrics aggregated effectively.
 
-If you have reached this point, your environment is more agile, cost-optimized, and aligned with modern DevOps. However, you may still have gaps in advanced scheduling, deeper security or compliance integration, or a formal approach to evaluating each new solution (e.g., deciding between containers, serverless, or a managed SaaS).
+If you have reached this point, your environment is more agile, cost-optimised, and aligned with modern DevOps. However, you may still have gaps in advanced scheduling, deeper security or compliance integration, or a formal approach to evaluating each new solution (e.g., deciding between containers, serverless, or a managed SaaS).
 
 #### **How to do better**
 
@@ -268,11 +268,11 @@ Below are **actionable** expansions to push your ephemeral usage approach furthe
 
 1. **Adopt a "Compute Decision Framework"**
 
-   - Formalize how new workloads choose among FaaS (functions), CaaS (containers), or short-lived VMs:
+   - Formalise how new workloads choose among FaaS (functions), CaaS (containers), or short-lived VMs:
      - If event-driven with spiky traffic, prefer serverless.
      - If the service requires consistent runtime dependencies but can scale, prefer containers.
-     - If specialized hardware or older OS is needed briefly, use short-lived VMs.
-   - This standardization helps teams quickly pick the best fit.
+     - If specialised hardware or older OS is needed briefly, use short-lived VMs.
+   - This standardisation helps teams quickly pick the best fit.
 
 1. **Enable Event-Driven Automation**
 
@@ -281,7 +281,7 @@ Below are **actionable** expansions to push your ephemeral usage approach furthe
      - [Azure Event Grid](https://azure.microsoft.com/en-us/services/event-grid/) or [Logic Apps](https://azure.microsoft.com/en-us/services/logic-apps/) triggering [Functions](https://azure.microsoft.com/en-us/services/functions/) or container jobs.
      - [GCP Pub/Sub](https://cloud.google.com/pubsub) or [EventArc](https://cloud.google.com/eventarc) calls [Cloud Run](https://cloud.google.com/run) services or GCE ephemeral jobs.
      - [OCI Events Service](https://www.oracle.com/cloud/cloud-native/events/) integrated with [Functions](https://www.oracle.com/functions/) or [autoscaling rules](https://www.oracle.com/cloud/compute/autoscaling/).
-   - This ensures resources only run when triggered, further minimizing idle time.
+   - This ensures resources only run when triggered, further minimising idle time.
 
 1. **Implement Container Security Best Practices**
 
@@ -294,7 +294,7 @@ Below are **actionable** expansions to push your ephemeral usage approach furthe
 
 1. **Refine Infrastructure as Code (IaC) and Pipeline Patterns**
 
-   - Standardize ephemeral environment creation using:
+   - Standardise ephemeral environment creation using:
      - [AWS CloudFormation](https://aws.amazon.com/cloudformation/) or [AWS CDK](https://aws.amazon.com/cdk/), plus [AWS CodePipeline](https://aws.amazon.com/codepipeline/).
      - [Azure Resource Manager templates](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/overview) or [Bicep](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview), plus [Azure DevOps](https://azure.microsoft.com/en-us/services/devops/) or [GitHub Actions](https://github.com/features/actions).
      - [GCP Deployment Manager](https://cloud.google.com/deployment-manager) or [Terraform](https://cloud.google.com/docs/terraform), with [Cloud Build triggers](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers).
@@ -315,9 +315,9 @@ Below are **actionable** expansions to push your ephemeral usage approach furthe
 
      - [OCI Budgets with usage triggers and cost anomaly detection](https://docs.oracle.com/en-us/iaas/Content/Billing/Tasks/usingbudgets.htm).
 
-By formalizing your decision framework, expanding event-driven architectures, ensuring container security, and strengthening IaC patterns, you solidify your short-lived compute model. This approach reduces overheads, fosters agility, and helps UK public sector teams remain compliant with cost and operational excellence targets.
+By formalising your decision framework, expanding event-driven architectures, ensuring container security, and strengthening IaC patterns, you solidify your short-lived compute model. This approach reduces overheads, fosters agility, and helps UK public sector teams remain compliant with cost and operational excellence targets.
 
-### **'Fit for Purpose' Approach with Rigorous Right-Sizing:** Cloud services selection is driven by a strict 'fit for purpose' approach. This includes a rigorous continual right-sizing process and a solution evaluation hierarchy favoring SaaS > FaaS > Containers as a Service > Platform/Orchestrator as a Service > Infrastructure as a Service.
+### **'Fit for Purpose' Approach with Rigorous Right-sizing:** Cloud services selection is driven by a strict 'fit for purpose' approach. This includes a rigorous continual right-sizing process and a solution evaluation hierarchy favoring SaaS > FaaS > Containers as a Service > Platform/Orchestrator as a Service > Infrastructure as a Service.
 
 #### **How to determine if this good enough**
 
@@ -328,10 +328,10 @@ At this highest maturity level, you explicitly choose the most appropriate compu
    - Your solution architecture process systematically asks: "Could an existing SaaS platform solve this? If not, can serverless do the job? If not, do we need container orchestration?" and so forth.
    - This approach prevents defaulting to IaaS or large container clusters without strong justification.
 
-1. **Rigorous Continual Right-Sizing**
+1. **Rigorous Continual Right-sizing**
 
    - Teams actively measure usage and adjust resource allocations monthly or even weekly.
-   - Underutilized resources are quickly scaled down or replaced by ephemeral compute. Over-stressed services are scaled up or moved to more robust solutions.
+   - Underutilised resources are quickly scaled down or replaced by ephemeral compute. Over-stressed services are scaled up or moved to more robust solutions.
 
 1. **Sophisticated Observability, Security, and Compliance**
 
@@ -342,7 +342,7 @@ At this highest maturity level, you explicitly choose the most appropriate compu
    - Budgets often reflect usage-based spending, and spikes are quickly noticed.
    - Development cycles are faster because you adopt higher-level services first, focusing on business logic rather than infrastructure management.
 
-If your organization can demonstrate that each new or existing application sits in the best-suited compute model—balancing cost, compliance, and performance—this is typically considered the pinnacle of cloud compute maturity. However, continuous improvements in vendor offerings, emerging technologies, and changing departmental requirements mean there is always more to refine.
+If your organisation can demonstrate that each new or existing application sits in the best-suited compute model—balancing cost, compliance, and performance—this is typically considered the pinnacle of cloud compute maturity. However, continuous improvements in vendor offerings, emerging technologies, and changing departmental requirements mean there is always more to refine.
 
 #### **How to do better**
 
@@ -356,10 +356,10 @@ Even at this advanced state, you can still hone practices. Below are suggestions
 
 1. **Deepen SaaS Exploration for Niche Needs**
 
-   - Explore specialized SaaS options for areas like data analytics, content management, or identity services.
+   - Explore specialised SaaS options for areas like data analytics, content management, or identity services.
    - Ensure your staff or solution architects regularly revisit the [G-Cloud listings](https://www.contractawardservice.crowncommercial.gov.uk/projects/create-or-choose) or other Crown Commercial Service frameworks to see if an updated SaaS solution can replace custom-coded or container-based systems.
 
-1. **Further Standardize DevOps Across All Layers**
+1. **Further Standardise DevOps Across All Layers**
 
    - If you run FaaS on multiple clouds or keep some workloads on private cloud, unify your deployment approach.
    - Encourage a single pipeline style:
@@ -368,14 +368,14 @@ Even at this advanced state, you can still hone practices. Below are suggestions
      - [Google Cloud Build](https://cloud.google.com/build) triggers that handle [Cloud Run](https://cloud.google.com/run), [Google Compute Engine](https://cloud.google.com/compute), or third-party SaaS integrations.
      - [Oracle Cloud Infrastructure (OCI) DevOps](https://www.oracle.com/devops/) pipeline for a mixed environment using [Oracle Kubernetes Engine (OKE)](https://www.oracle.com/cloud-native/container-engine-kubernetes/), [Oracle Functions](https://www.oracle.com/cloud-native/functions/), or third-party webhooks.
 
-1. **Maintain a Living Right-Sizing Strategy**
+1. **Maintain a Living Right-sizing Strategy**
 
    - Expand beyond memory/CPU metrics to measure cost per request, concurrency, or throughput.
    - Tools like:
-     - [AWS Compute Optimizer advanced metrics for EBS I/O, Lambda concurrency, etc.](https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html)
+     - [AWS Compute Optimiser advanced metrics for EBS I/O, Lambda concurrency, etc.](https://docs.aws.amazon.com/compute-optimizer/latest/ug/metrics.html)
      - [Azure Monitor Workbooks with custom performance/cost insights](https://learn.microsoft.com/en-us/azure/azure-monitor/visualize/workbooks-overview)
      - [GCP Recommenders for scaling beyond just CPU/memory (like disk usage suggestions)](https://cloud.google.com/recommender/docs)
-     - [OCI Observability with granular resource usage metrics for compute and storage optimization](https://www.oracle.com/observability/)
+     - [OCI Observability with granular resource usage metrics for compute and storage optimisation](https://www.oracle.com/observability/)
 
 1. **Focus on Energy Efficiency and Sustainability**
 
@@ -391,6 +391,6 @@ Even at this advanced state, you can still hone practices. Below are suggestions
 1. **Champion Cross-Public-Sector Collaboration**
    - Share lessons or templates with other departments or agencies. This fosters consistent best practices across local councils, NHS trusts, or central government bodies.
 
-By automating your decision workflows, continuously exploring SaaS, standardizing DevOps pipelines, and incorporating advanced metrics (including sustainability), you maintain an iterative improvement path at the peak of compute maturity. This ensures you remain agile in responding to new user requirements and evolving government initiatives, all while controlling costs and optimizing resource efficiency.
+By automating your decision workflows, continuously exploring SaaS, standardising DevOps pipelines, and incorporating advanced metrics (including sustainability), you maintain an iterative improvement path at the peak of compute maturity. This ensures you remain agile in responding to new user requirements and evolving government initiatives, all while controlling costs and optimising resource efficiency.
 
 **Keep doing what you’re doing,** and consider writing up success stories, internal case studies, or blog posts. Submit pull requests to this guidance or relevant public sector best-practice repositories so others can learn from your achievements. By sharing real-world experiences, you help the entire UK public sector enhance its cloud compute maturity.

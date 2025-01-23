@@ -1,5 +1,5 @@
 ---
-title: What characterizes the majority of your current technology stack?
+title: What characterises the majority of your current technology stack?
 tags: tech
 eleventyNavigation:
   parent: tech
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization may bundle most functionalities (e.g., front-end, back-end, database access) into a single codebase. This can be considered "good enough" if:
+Your organisation may bundle most functionalities (e.g., front-end, back-end, database access) into a single codebase. This can be considered "good enough" if:
 
 1. **Limited Project Scale**
 
@@ -19,8 +19,8 @@ Your organization may bundle most functionalities (e.g., front-end, back-end, da
 
    - The environment is stable, with minimal demands for agile or continuous deployment.
 
-1. **No Pressing Modernization Requirements**
-   - No immediate need from leadership or compliance frameworks for microservices, containerization, or advanced DevSecOps.
+1. **No Pressing Modernisation Requirements**
+   - No immediate need from leadership or compliance frameworks for microservices, containerisation, or advanced DevSecOps.
 
 However, monoliths often slow new feature rollout and hamper scaling. [NCSC’s DevSecOps guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-160 systems engineering best practices](https://csrc.nist.gov/) typically advise considering modular approaches to handle evolving user needs and security updates more flexibly.
 
@@ -76,9 +76,9 @@ Though better than a single massive codebase, you might miss the benefits of shi
 
 Below are **rapidly actionable** ways to shift modules from concept to independent deployment:
 
-1. **Introduce Containerization at Module-Level**
+1. **Introduce Containerisation at Module-Level**
 
-   - If each module can run separately, containerize them individually:
+   - If each module can run separately, containerise them individually:
      - referencing [AWS ECS/EKS](https://aws.amazon.com/ecs/), [Azure AKS](https://learn.microsoft.com/en-us/azure/aks/), [GCP GKE](https://cloud.google.com/kubernetes-engine), or [OCI OKE](https://www.oracle.com/cloud/free/oci-training/) for container orchestration.
 
 1. **Provide Separate Build Pipelines**
@@ -100,9 +100,9 @@ Below are **rapidly actionable** ways to shift modules from concept to independe
    - Show leadership how incremental module updates reduce downtime or accelerate security patching:
      - Encourages buy-in for further decoupling.
 
-By containerizing modules, setting up separate build pipelines, enforcing clear module boundaries, individually deploying or updating modules, and showcasing tangible benefits, you progress toward a fully independent deployment pipeline that capitalizes on modularity.
+By containerising modules, setting up separate build pipelines, enforcing clear module boundaries, individually deploying or updating modules, and showcasing tangible benefits, you progress toward a fully independent deployment pipeline that capitalises on modularity.
 
-### **Modularized and Individually Deployable Components:** Applications are structured into self-contained, individually deployable components. However, significant interdependencies add complexity to testing.
+### **Modularised and Individually Deployable Components:** Applications are structured into self-contained, individually deployable components. However, significant interdependencies add complexity to testing.
 
 #### **How to determine if this good enough**
 
@@ -133,7 +133,7 @@ Below are **rapidly actionable** ways to handle interdependencies in individuall
 1. **Automate Consumer-Driven Testing**
 
    - Consumers of a service define expected inputs/outputs; the service must pass these for each release.
-   - Minimizes "integration hell."
+   - Minimises "integration hell."
 
 1. **Adopt Semantic Versioning**
 
@@ -154,7 +154,7 @@ By introducing contract or consumer-driven testing, adopting semantic versioning
 
 #### **How to determine if this good enough**
 
-Your organization has successfully modularized most services, yet some legacy or core systems remain monolithic due to complexity or historical constraints. It may be "good enough" if:
+Your organisation has successfully modularised most services, yet some legacy or core systems remain monolithic due to complexity or historical constraints. It may be "good enough" if:
 
 1. **Limited Legacy Scope**
 
@@ -167,7 +167,7 @@ Your organization has successfully modularized most services, yet some legacy or
 1. **Mature DevOps for Modern Parts**
    - You enjoy the benefits of microservices for most new features or cloud expansions.
 
-To fully benefit from independent deployments, you might eventually replace or further decompose those monoliths. [NCSC’s approach to legacy modernization](https://www.ncsc.gov.uk/) or [NIST SP 800-160 engineering guidelines](https://csrc.nist.gov/) can help plan that transition.
+To fully benefit from independent deployments, you might eventually replace or further decompose those monoliths. [NCSC’s approach to legacy modernisation](https://www.ncsc.gov.uk/) or [NIST SP 800-160 engineering guidelines](https://csrc.nist.gov/) can help plan that transition.
 
 #### **How to do better**
 
@@ -181,7 +181,7 @@ Below are **rapidly actionable** ways to address the leftover monolithic element
 1. **Establish Clear Migration Plan**
 
    - e.g., define a 12–24 month roadmap with incremental steps or re-platforming on containers:
-     - Minimizes big-bang rewrites.
+     - Minimises big-bang rewrites.
 
 1. **Enhance DevOps for Monolith**
 
@@ -196,11 +196,11 @@ Below are **rapidly actionable** ways to address the leftover monolithic element
 
 By selecting high-impact subsystems for extraction, creating a phased migration plan, applying DevOps best practices to the existing monolith, steering new features away from legacy, and continuously communicating the ROI of decomposition, you inch closer to a fully modular environment.
 
-### **Fully Component-Based Modular Architecture:** The technology stack consistently utilizes a component-based modular approach. All components are independently testable and deployable, free from monolithic stack dependencies.
+### **Fully Component-Based Modular Architecture:** The technology stack consistently utilises a component-based modular approach. All components are independently testable and deployable, free from monolithic stack dependencies.
 
 #### **How to determine if this good enough**
 
-At this pinnacle, your organization’s technology stack is entirely modular or microservices-based, each component testable and deployable on its own. It might be "good enough" if:
+At this pinnacle, your organisation’s technology stack is entirely modular or microservices-based, each component testable and deployable on its own. It might be "good enough" if:
 
 1. **Highly Agile & Scalable**
 
@@ -213,11 +213,11 @@ At this pinnacle, your organization’s technology stack is entirely modular or 
 1. **Minimal Coupling**
    - Interdependencies are managed via robust APIs or messaging, enabling each component to evolve with minimal friction.
 
-Even so, you can refine HPC/AI or domain-specific modules, adopt advanced zero-trust gating, or unify cross-organizational microservices. [NCSC’s guidance on microservices security](https://www.ncsc.gov.uk/) and [NIST SP 800-204 microservices frameworks](https://csrc.nist.gov/) encourage continuous improvements.
+Even so, you can refine HPC/AI or domain-specific modules, adopt advanced zero-trust gating, or unify cross-organisational microservices. [NCSC’s guidance on microservices security](https://www.ncsc.gov.uk/) and [NIST SP 800-204 microservices frameworks](https://csrc.nist.gov/) encourage continuous improvements.
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to optimize a fully component-based approach:
+Below are **rapidly actionable** ways to optimise a fully component-based approach:
 
 1. **Enhance Observability & Tracing**
 
@@ -242,4 +242,4 @@ Below are **rapidly actionable** ways to optimize a fully component-based approa
 
 By enhancing distributed tracing, adopting zero-trust service communications, exploring or refining a service mesh, scheduling architecture reviews, and collaborating with other government entities, you maintain a top-tier, fully component-based environment that remains agile, secure, and efficient in meeting public sector demands.
 
-**Keep doing what you’re doing,** and consider sharing or blogging about your experience with modular architectures. Contributing pull requests to this guidance or other best-practice repositories helps UK public sector organizations adopt similarly progressive strategies for building and maintaining cloud and on-premises systems.
+**Keep doing what you’re doing,** and consider sharing or blogging about your experience with modular architectures. Contributing pull requests to this guidance or other best-practice repositories helps UK public sector organisations adopt similarly progressive strategies for building and maintaining cloud and on-premises systems.

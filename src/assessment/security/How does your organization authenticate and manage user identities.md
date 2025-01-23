@@ -1,15 +1,15 @@
 ---
-title: How does your organization authenticate and manage user identities?
+title: How does your organisation authenticate and manage user identities?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Basic or No Identity Policies:** There are limited or no organization-wide identity policies, such as password policies, with minimal audit or enforcement mechanisms to ensure compliance.
+### **Basic or No Identity Policies:** There are limited or no organisation-wide identity policies, such as password policies, with minimal audit or enforcement mechanisms to ensure compliance.
 
 #### **How to determine if this good enough**
 
-Your organization may lack formal identity and password guidelines, or each team creates ad hoc rules. This might be seen as acceptable if:
+Your organisation may lack formal identity and password guidelines, or each team creates ad hoc rules. This might be seen as acceptable if:
 
 1. **Minimal Access Needs**
 
@@ -20,7 +20,7 @@ Your organization may lack formal identity and password guidelines, or each team
    - You operate in an environment where official audits or regulatory demands for identity controls are currently absent.
 
 1. **Limited Cloud Adoption**
-   - You are still at an exploratory stage, so formalizing identity policies hasn’t been prioritized yet.
+   - You are still at an exploratory stage, so formalising identity policies hasn’t been prioritised yet.
 
 However, lacking standard policies can result in weak or inconsistent credential practices, inviting security breaches. [NCSC’s Password Guidance](https://www.ncsc.gov.uk/blog-post/passwords-passwords-everywhere) and [NIST SP 800-63 on digital identity guidelines](https://csrc.nist.gov/) emphasize robust policy frameworks to mitigate credential-based threats.
 
@@ -33,7 +33,7 @@ Below are **rapidly actionable** suggestions to introduce at least a minimal lev
    - For instance, require passphrases of at least 14 characters, no enforced complexity that leads to repeated password re-use.
    - Consult [NCSC’s password guidance](https://www.ncsc.gov.uk/blog-post/problems-forcing-regular-password-expiry) for recommended best practices.
 
-1. **Centralize Authentication for Cloud Services**
+1. **Centralise Authentication for Cloud Services**
 
    - Use vendor-native IAM or single sign-on capabilities:
      - [AWS IAM with central AWS Organizations or AWS SSO for unified access](https://aws.amazon.com/iam/features/sso/)
@@ -55,13 +55,13 @@ Below are **rapidly actionable** suggestions to introduce at least a minimal lev
 1. **Plan for Incremental Improvement**
    - Mark out a short timeline (e.g., 3-6 months) to adopt multi-factor authentication for privileged or admin roles next.
 
-By introducing a foundational password policy, centralizing authentication, enabling basic identity event logging, creating a minimal governance document, and scheduling incremental improvements, you’ll rapidly move beyond ad hoc practices toward a more secure, consistent approach.
+By introducing a foundational password policy, centralising authentication, enabling basic identity event logging, creating a minimal governance document, and scheduling incremental improvements, you’ll rapidly move beyond ad hoc practices toward a more secure, consistent approach.
 
 ### **Manual Identity Policy Enforcement:** While a common set of identity policies may exist, their enforcement and audit rely on manual efforts, such as retrospective analysis of logs or reports.
 
 #### **How to determine if this good enough**
 
-Your organization has some formal rules for passwords, MFA, or user provisioning, but verifying compliance requires manual checks, sporadic log reviews, or retrospective audits. You might see it "good enough" if:
+Your organisation has some formal rules for passwords, MFA, or user provisioning, but verifying compliance requires manual checks, sporadic log reviews, or retrospective audits. You might see it "good enough" if:
 
 1. **Limited-Scale or Low Risk**
 
@@ -108,9 +108,9 @@ Below are **rapidly actionable** ways to automate and strengthen your identity p
    - Keep your identity policy in version control and track changes:
      - Ensures updates are documented, and staff can reference them easily, aligning with [GOV.UK policy transparency norms](https://www.gov.uk/service-manual).
 
-By automating audits, enforcing MFA, implementing automated access reviews, consolidating sign-on, and centralizing policy documentation, you move from manual enforcement to a more efficient, consistently secure identity posture.
+By automating audits, enforcing MFA, implementing automated access reviews, consolidating sign-on, and centralising policy documentation, you move from manual enforcement to a more efficient, consistently secure identity posture.
 
-### **Partially Automated Identity Management:** Organization-wide identity policies, including 2FA/MFA for privileged accounts, are in place. Audit and enforcement processes are partially automated.
+### **Partially Automated Identity Management:** Organisation-wide identity policies, including 2FA/MFA for privileged accounts, are in place. Audit and enforcement processes are partially automated.
 
 #### **How to determine if this good enough**
 
@@ -122,7 +122,7 @@ You have implemented some automation for identity management—like requiring 2F
 
 1. **Broader Governance**
 
-   - The organization has standard identity controls. Teams typically follow them, but some manual interventions remain.
+   - The organisation has standard identity controls. Teams typically follow them, but some manual interventions remain.
 
 1. **Improved Security Baseline**
    - Regular or partial identity audits reveal fewer misconfigurations or abandoned accounts.
@@ -141,7 +141,7 @@ Below are **rapidly actionable** ways to progress toward advanced identity autom
 2. **Use Role/Attribute-Based Access**
 
    - For each environment (AWS, Azure, GCP, OCI), define roles or groups with appropriate privileges:
-     - Minimizes the risk of over-privileged accounts, referencing [NCSC’s least privilege principle](https://www.ncsc.gov.uk/).
+     - Minimises the risk of over-privileged accounts, referencing [NCSC’s least privilege principle](https://www.ncsc.gov.uk/).
 
 3. **Consolidate Identity Tools**
 
@@ -159,13 +159,13 @@ Below are **rapidly actionable** ways to progress toward advanced identity autom
 
 By extending MFA to all, embracing role-based access, consolidating identity management, automating deprovisioning, and boosting real-time monitoring, you achieve more robust, near-seamless identity automation aligned with best practices for public sector security.
 
-### **Advanced and Mostly Automated Identity Management:** Centralized identity policies and audit procedures, possibly including 2FA/MFA for all users and leveraging Single Sign-On (SSO). Most audit and enforcement activities are automated.
+### **Advanced and Mostly Automated Identity Management:** Centralised identity policies and audit procedures, possibly including 2FA/MFA for all users and leveraging Single Sign-On (SSO). Most audit and enforcement activities are automated.
 
 #### **How to determine if this good enough**
 
-Here, your organization enforces a centralized identity solution with automated checks. Some manual steps may remain for edge cases, but 2FA or SSO is standard for all staff. This approach might be "good enough" if:
+Here, your organisation enforces a centralised identity solution with automated checks. Some manual steps may remain for edge cases, but 2FA or SSO is standard for all staff. This approach might be "good enough" if:
 
-1. **High Standardization**
+1. **High Standardisation**
 
    - All departments follow a uniform identity policy, with minimal exceptions.
 
@@ -208,11 +208,11 @@ Below are **rapidly actionable** steps to elevate advanced identity management:
 
 By implementing conditional or JIT access, leveraging robust SIEM-based identity monitoring, holding zero-trust scenario drills, and sharing identity solutions across the public sector, you further strengthen an already advanced identity environment.
 
-### **Fully Centralized and Automated Identity Management:** Comprehensive, fully centralized identity policies and audit procedures with complete automation in enforcement. Policies encompass enterprise-standard MFA and SSO. Automated certification processes for human users and system accounts are in place, especially for accessing sensitive data, along with on-demand reporting capabilities.
+### **Fully Centralised and Automated Identity Management:** Comprehensive, fully centralised identity policies and audit procedures with complete automation in enforcement. Policies encompass enterprise-standard MFA and SSO. Automated certification processes for human users and system accounts are in place, especially for accessing sensitive data, along with on-demand reporting capabilities.
 
 #### **How to determine if this good enough**
 
-Your organization has reached the top maturity level, with a fully centralized, automated identity management solution. You might see it "good enough" if:
+Your organisation has reached the top maturity level, with a fully centralised, automated identity management solution. You might see it "good enough" if:
 
 1. **Enterprise-Grade IAM**
 
@@ -221,7 +221,7 @@ Your organization has reached the top maturity level, with a fully centralized, 
 1. **Zero Standing Privilege**
 
    - Privileged credentials are ephemeral, enforced by JIT or automated workflows.
-   - Minimizes exposure from compromised accounts.
+   - Minimises exposure from compromised accounts.
 
 1. **Continuous Compliance & Reporting**
 
@@ -230,11 +230,11 @@ Your organization has reached the top maturity level, with a fully centralized, 
 1. **Seamless Onboarding & Offboarding**
    - Automated provisioning grants roles upon hire or team assignment, revoking them upon departure to ensure no orphaned accounts.
 
-Though highly advanced, you can refine multi-cloud identity federation, adopt specialized HPC/AI or cross-government identity sharing, and embed advanced DevSecOps patterns. [NCSC’s security architecture advice](https://www.ncsc.gov.uk/) and [NIST SP 800-53] encourage continuous improvement in a dynamic threat landscape.
+Though highly advanced, you can refine multi-cloud identity federation, adopt specialised HPC/AI or cross-government identity sharing, and embed advanced DevSecOps patterns. [NCSC’s security architecture advice](https://www.ncsc.gov.uk/) and [NIST SP 800-53] encourage continuous improvement in a dynamic threat landscape.
 
 #### **How to do better**
 
-Even at the apex, below are **rapidly actionable** ways to further optimize:
+Even at the apex, below are **rapidly actionable** ways to further optimise:
 
 1. **Multi-Cloud Single Pane IAM**
 
@@ -258,6 +258,6 @@ Even at the apex, below are **rapidly actionable** ways to further optimize:
 1. **Publish Regular Identity Health Reports**
    - Summaries of user activity, stale accounts, or re-certifications. Encourages transparency and fosters trust in your identity processes.
 
-By unifying multi-cloud identity, implementing advanced risk-based authentication, using policy-as-code for identity controls, expanding cross-government 2FA, and regularly reporting identity health metrics, you maintain a cutting-edge identity management ecosystem. This ensures robust security, compliance, and agility for your UK public sector organization in an evolving threat environment.
+By unifying multi-cloud identity, implementing advanced risk-based authentication, using policy-as-code for identity controls, expanding cross-government 2FA, and regularly reporting identity health metrics, you maintain a cutting-edge identity management ecosystem. This ensures robust security, compliance, and agility for your UK public sector organisation in an evolving threat environment.
 
 **Keep doing what you’re doing,** and consider writing up your experiences, success metrics, or blog posts on advanced identity management. Contribute pull requests to this guidance or other best-practice repositories so fellow UK public sector entities can learn from your identity management maturity journey.

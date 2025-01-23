@@ -1,15 +1,15 @@
 ---
-title: How does your organization manage staff identities?
+title: How does your organisation manage staff identities?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Independent Identity Management:** Each service manages identities independently, without integration or synchronization across systems.
+### **Independent Identity Management:** Each service manages identities independently, without integration or synchronisation across systems.
 
 #### **How to determine if this good enough**
 
-Your organization might allow each application or service to store and manage user accounts in its own silo. This can be considered "good enough" if:
+Your organisation might allow each application or service to store and manage user accounts in its own silo. This can be considered "good enough" if:
 
 1. **Very Small Scale**
 
@@ -20,7 +20,7 @@ Your organization might allow each application or service to store and manage us
    - No critical data or compliance need to unify identities; you’re still evaluating core cloud or digital services.
 
 1. **No Immediate Need for Central Governance**
-   - With minimal overlap among applications, the cost or effort of centralizing identities doesn’t seem justified yet.
+   - With minimal overlap among applications, the cost or effort of centralising identities doesn’t seem justified yet.
 
 While this approach can initially appear simple, it typically leads to scattered identity practices, poor visibility, and heightened risk (e.g., orphaned accounts). [NCSC’s Identity and Access Management guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-53 AC controls](https://csrc.nist.gov/) suggest unifying identity for consistent security and reduced overhead.
 
@@ -32,7 +32,7 @@ Below are **rapidly actionable** steps to move beyond isolated identity manageme
 
    - For new services, define a single user store or IDP:
      - e.g., [AWS Directory Service or AWS SSO](https://aws.amazon.com/directoryservice/), [Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whatis), [GCP Identity](https://cloud.google.com/identity/docs/overview), or [OCI IDCS](https://www.oracle.com/cloud/free/oci-training/).
-   - Minimizes further fragmentation for new apps.
+   - Minimises further fragmentation for new apps.
 
 1. **Maintain a Simple User Inventory**
 
@@ -50,17 +50,17 @@ Below are **rapidly actionable** steps to move beyond isolated identity manageme
 1. **Highlight Quick-Wins**
    - If consolidating one or two widely used services to a shared login shows immediate benefits (less support overhead, better logs), use that success to rally internal support.
 
-By implementing a small shared ID approach for new services, maintaining an org-wide user inventory, encouraging unique credentials with basic password hygiene, scheduling partial migrations, and publicizing quick results, you steadily reduce the complexity and risk of scattered service-specific identities.
+By implementing a small shared ID approach for new services, maintaining an org-wide user inventory, encouraging unique credentials with basic password hygiene, scheduling partial migrations, and publicising quick results, you steadily reduce the complexity and risk of scattered service-specific identities.
 
-### **Basic Centralized Identity System:** There is a centralized system for identity management, but it's not fully integrated across all services.
+### **Basic Centralised Identity System:** There is a centralised system for identity management, but it's not fully integrated across all services.
 
 #### **How to determine if this good enough**
 
-Your organization has introduced a centralized identity solution (e.g., Active Directory, Azure AD, or an open-source LDAP), but only some cloud services plug into it. This might be "good enough" if:
+Your organisation has introduced a centralised identity solution (e.g., Active Directory, Azure AD, or an open-source LDAP), but only some cloud services plug into it. This might be "good enough" if:
 
 1. **Partial Coverage**
 
-   - Key or high-risk systems already rely on centralized accounts, while less critical or legacy apps remain separate.
+   - Key or high-risk systems already rely on centralised accounts, while less critical or legacy apps remain separate.
 
 1. **Reduced Complexity**
 
@@ -73,7 +73,7 @@ To improve further, you can unify or retire the leftover one-off user stores and
 
 #### **How to do better**
 
-Below are **rapidly actionable** steps to further unify your basic centralized identity:
+Below are **rapidly actionable** steps to further unify your basic centralised identity:
 
 1. **Mandate SSO for New Services**
 
@@ -87,24 +87,24 @@ Below are **rapidly actionable** steps to further unify your basic centralized i
 
 1. **Introduce Periodic Role or Access Reviews**
 
-   - Ensure the centralized identity system is coupled with a simple process for managers to confirm staff roles:
+   - Ensure the centralised identity system is coupled with a simple process for managers to confirm staff roles:
      - referencing [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [Azure AD Access Reviews](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP IAM Recommender](https://cloud.google.com/iam/docs/access-reviews), or [OCI IAM policy checks](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Extend MFA Requirements**
 
-   - If only some users in the centralized system have MFA, gradually require it for all:
+   - If only some users in the centralised system have MFA, gradually require it for all:
      - referencing [NCSC’s multi-factor authentication guidance](https://www.ncsc.gov.uk/).
 
 1. **Aim for Full Integration by a Set Date**
    - e.g., a 12-18 month plan to unify all services, presenting to leadership how this will lower security risk and reduce support costs.
 
-By demanding SSO for new apps, migrating top-priority legacy systems, enabling periodic role reviews, enforcing MFA across the board, and setting a timeline for full integration, you reinforce your centralized identity approach and shrink vulnerabilities from leftover local user stores.
+By demanding SSO for new apps, migrating top-priority legacy systems, enabling periodic role reviews, enforcing MFA across the board, and setting a timeline for full integration, you reinforce your centralised identity approach and shrink vulnerabilities from leftover local user stores.
 
 ### **Integrated Identity Management with Some Exceptions:** Identities are mostly managed through an integrated system, with a few services still operating independently.
 
 #### **How to determine if this good enough**
 
-Your organization leverages a robust central identity solution for the majority of apps, but certain or older niche services remain separate. It might be "good enough" if:
+Your organisation leverages a robust central identity solution for the majority of apps, but certain or older niche services remain separate. It might be "good enough" if:
 
 1. **Dominant Coverage**
 
@@ -126,7 +126,7 @@ Below are **rapidly actionable** ways to incorporate the last few outliers:
 1. **Establish an "Exception Approval"**
 
    - If a service claims it can’t integrate, mandate a formal sign-off by security or architecture boards:
-     - Minimizes indefinite exceptions.
+     - Minimises indefinite exceptions.
 
 1. **Plan Legacy Replacement or Integration**
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** ways to incorporate the last few outliers:
 
 By requiring official approval for non-integrated systems, scheduling integration projects, monitoring or sunsetting exceptions, and auditing them in the main identity reviews, you unify identity management and ensure consistent security across all cloud services.
 
-### **Advanced Integrated Identity Management:** A comprehensive system manages identities, integrating most services and applications, with efforts to ensure synchronization and uniformity.
+### **Advanced Integrated Identity Management:** A comprehensive system manages identities, integrating most services and applications, with efforts to ensure synchronisation and uniformity.
 
 #### **How to determine if this good enough**
 
@@ -196,11 +196,11 @@ Below are **rapidly actionable** ways to enhance advanced integrated identity ma
 
 By implementing zero-trust or risk-based authentication, adopting identity policy-as-code, refining least privilege roles, automating access certifications, and fostering continuous improvements, you advance from a strong integrated identity environment to a cutting-edge, security-first approach aligned with UK public sector best practices.
 
-### **Mandatory Single Source of Identity:** A single source of identity is mandated for all services, with a strict one-to-one mapping of human to identity, ensuring consistency and security across the organization.
+### **Mandatory Single Source of Identity:** A single source of identity is mandated for all services, with a strict one-to-one mapping of human to identity, ensuring consistency and security across the organisation.
 
 #### **How to determine if this good enough**
 
-At this top maturity level, your organization enforces one authoritative identity system for every service. All staff have exactly one account, disallowing duplicates or shared credentials. You might consider it "good enough" if:
+At this top maturity level, your organisation enforces one authoritative identity system for every service. All staff have exactly one account, disallowing duplicates or shared credentials. You might consider it "good enough" if:
 
 1. **Complete Uniformity**
 
@@ -248,4 +248,4 @@ Below are **rapidly actionable** ways to refine a mandatory single source of ide
 
 By adopting risk-based auth, ensuring multi-cloud identity unification, deploying passwordless approaches, collaborating with cross-government identity programs, and regularly auditing for compliance with the mandatory single source policy, you reinforce a top-tier security stance. This guarantees minimal identity sprawl and maximum accountability in the UK public sector environment.
 
-**Keep doing what you’re doing,** and consider creating blog posts or making pull requests to this guidance about your advanced single-source identity management success. Sharing practical examples helps other UK public sector organizations move toward robust, consistent identity strategies.
+**Keep doing what you’re doing,** and consider creating blog posts or making pull requests to this guidance about your advanced single-source identity management success. Sharing practical examples helps other UK public sector organisations move toward robust, consistent identity strategies.

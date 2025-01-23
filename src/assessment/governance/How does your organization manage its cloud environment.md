@@ -1,5 +1,5 @@
 ---
-title: How does your organization manage its cloud environment?
+title: How does your organisation manage its cloud environment?
 tags: governance
 eleventyNavigation:
   parent: governance
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization relies on the cloud provider’s GUIs or consoles to handle tasks, with individual admins making changes without formal processes or documentation. This might be "good enough" if:
+Your organisation relies on the cloud provider’s GUIs or consoles to handle tasks, with individual admins making changes without formal processes or documentation. This might be "good enough" if:
 
 1. **Small, Low-Risk Projects**
 
@@ -51,7 +51,7 @@ However, purely manual approaches risk misconfigurations, leftover resources, se
 1. **Enable Cloud Provider Audit Logging**
 
    - e.g., [AWS CloudTrail for AWS](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html), [Azure Activity Logs](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log), [GCP Audit Logs](https://cloud.google.com/logging/docs/audit), [OCI Audit Service](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm).
-   - Familiarize yourself with how to query logs and set retention.
+   - Familiarise yourself with how to query logs and set retention.
 
 1. **Capture the "Why"**
 
@@ -67,7 +67,7 @@ By documenting runbooks/playbooks, ensuring logs are enabled and accessible, cap
 
 #### **How to determine if this good enough**
 
-Your organization documents step-by-step procedures for the cloud environment, with a test or staging environment that somewhat mirrors production. However, small differences frequently occur. It might be "good enough" if:
+Your organisation documents step-by-step procedures for the cloud environment, with a test or staging environment that somewhat mirrors production. However, small differences frequently occur. It might be "good enough" if:
 
 1. **Moderate Complexity**
 
@@ -90,7 +90,7 @@ Below are **rapidly actionable** improvements:
 
    - Even if you remain "click-ops" at large, certain steps can be scripted:
      - e.g., [AWS CLI or PowerShell scripts](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html), [Azure CLI](https://docs.microsoft.com/azure/azure-functions/functions-run-local), [GCP CLI](https://cloud.google.com/sdk/docs), [OCI CLI](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/cliconcepts.htm).
-   - Minimizes errors between test and production.
+   - Minimises errors between test and production.
 
 1. **Track Environment Differences**
 
@@ -115,7 +115,7 @@ By partially automating recurring tasks, carefully recording environment discrep
 
 #### **How to determine if this good enough**
 
-Your organization uses scripts (e.g., Bash, Python, PowerShell) or partial IaC for routine tasks, while specialized or complex changes remain manual. This might be "good enough" if:
+Your organisation uses scripts (e.g., Bash, Python, PowerShell) or partial IaC for routine tasks, while specialised or complex changes remain manual. This might be "good enough" if:
 
 1. **Significant Time Savings Already**
 
@@ -155,13 +155,13 @@ Below are **rapidly actionable** ways to evolve from partial scripting:
 1. **Leverage Cloud Vendor Tools**
    - e.g., [AWS Systems Manager Automation runbooks](https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-working-with-runbooks.html), [Azure Automation runbooks](https://docs.microsoft.com/azure/automation/automation-runbook-types), [GCP Workflows](https://cloud.google.com/workflows/docs), [OCI Automation and Orchestration](https://docs.oracle.com/en-us/iaas/Content/Automation/Concepts/automationoverview.htm) to handle advanced tasks with minimal manual input.
 
-By incrementally automating complex changes, standardizing on an IaC framework, establishing a basic CI/CD workflow, ensuring code reviews, and utilizing vendor orchestration tools, you reduce your reliance on manual interventions and strengthen cloud environment consistency.
+By incrementally automating complex changes, standardising on an IaC framework, establishing a basic CI/CD workflow, ensuring code reviews, and utilising vendor orchestration tools, you reduce your reliance on manual interventions and strengthen cloud environment consistency.
 
-### **Highly Automated with Standardized Processes:** Cloud management is largely automated with standardized processes across environments. Regular reviews and updates are made to ensure alignment with best practices.
+### **Highly Automated with Standardised Processes:** Cloud management is largely automated with standardised processes across environments. Regular reviews and updates are made to ensure alignment with best practices.
 
 #### **How to determine if this good enough**
 
-Your organization employs a robust Infrastructure-as-Code or automation-first approach, with minimal manual steps. This may be "good enough" if:
+Your organisation employs a robust Infrastructure-as-Code or automation-first approach, with minimal manual steps. This may be "good enough" if:
 
 1. **Consistent Environments**
 
@@ -173,7 +173,7 @@ Your organization employs a robust Infrastructure-as-Code or automation-first ap
    - referencing [NCSC’s DevSecOps approach or NIST SP 800-160 Vol 2 for secure engineering](https://www.ncsc.gov.uk/).
 
 1. **Adherence to Security & Compliance**
-   - Automated pipelines incorporate security scanning or compliance checks, referencing [AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html), [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityzones.htm).
+   - Automated pipelines incorporate security scanning or compliance checks, referencing [AWS Config](https://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html), [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), [OCI Security Zones](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityzones.htm).
 
 To push further, you could adopt advanced drift detection, code-based policy enforcement, or real-time security scanning for each pipeline. [NIST SP 800-137 for continuous monitoring](https://csrc.nist.gov/) and [NCSC’s protective monitoring approaches](https://www.ncsc.gov.uk/) might guide deeper expansions.
 
@@ -188,7 +188,7 @@ Below are **rapidly actionable** ways to refine a highly automated approach:
 
 1. **Incorporate Policy-as-Code**
 
-   - Tools like [Open Policy Agent](https://www.openpolicyagent.org/), [AWS SCP](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html), [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityzones.htm) define governance rules in code, preventing non-compliant configs from deploying.
+   - Tools like [Open Policy Agent](https://www.openpolicyagent.org/), [AWS SCP](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config-rules.html), [Azure Policy](https://docs.microsoft.com/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), [OCI Security Zones](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityzones.htm) define governance rules in code, preventing non-compliant configs from deploying.
 
 1. **Extend DevSecOps Tooling**
 
@@ -197,13 +197,13 @@ Below are **rapidly actionable** ways to refine a highly automated approach:
 
 1. **Perform Regular Architecture Reviews**
 
-   - With a high level of automation, a small monthly or quarterly session can keep IaC templates up to date with new cloud features or cost optimization.
+   - With a high level of automation, a small monthly or quarterly session can keep IaC templates up to date with new cloud features or cost optimisation.
 
 1. **Foster Cross-Department Knowledge Sharing**
    - If relevant, coordinate with other public sector orgs to share automation scripts or IaC modules:
      - referencing [GOV.UK cross-department knowledge sharing guidance](https://www.gov.uk/service-manual).
 
-By enabling automatic drift remediation, implementing policy-as-code, enhancing DevSecOps pipeline checks, conducting periodic architecture reviews, and collaborating across agencies, you refine a strong foundation of standardized, highly automated processes for cloud management.
+By enabling automatic drift remediation, implementing policy-as-code, enhancing DevSecOps pipeline checks, conducting periodic architecture reviews, and collaborating across agencies, you refine a strong foundation of standardised, highly automated processes for cloud management.
 
 ### **Fully Managed by Declarative Code with Drift Detection:** Cloud management is fully automated and managed by declarative code. Continual automated drift detection is in place, with alerts for any deviations treated as significant incidents.
 
@@ -220,13 +220,13 @@ At this advanced stage, every resource is defined in code (e.g., Terraform, Clou
    - If drift occurs (someone clicked in the console or an unexpected event occurred), an alarm triggers, prompting immediate rollback or investigation.
 
 1. **Rapid & Secure Deployments**
-   - Security, cost, and performance optimizations can be tested and deployed quickly without risk of untracked manual variations.
+   - Security, cost, and performance optimisations can be tested and deployed quickly without risk of untracked manual variations.
 
 You can further refine HPC/AI ephemeral resources, cross-department pipeline sharing, or advanced policy-as-code with AI-based compliance. [NCSC’s advanced DevSecOps or zero trust guidance](https://www.ncsc.gov.uk/) and [NIST SP 800-53 CM controls for automated configuration management](https://csrc.nist.gov/) encourage continuous iteration.
 
 #### **How to do better**
 
-Below are **rapidly actionable** methods to maximize a fully declarative, drift-detecting environment:
+Below are **rapidly actionable** methods to maximise a fully declarative, drift-detecting environment:
 
 1. **Integrate Real-Time Security & Cost Checks**
 
@@ -254,4 +254,4 @@ Below are **rapidly actionable** methods to maximize a fully declarative, drift-
 
 By adding real-time security and cost checks in your pipeline, adopting multi-cloud/hybrid IaC, enhancing observability, promoting peer reviews, and collaborating with other UK public sector bodies, you reinforce an already advanced, fully declarative environment with robust drift detection—ensuring secure, consistent, and efficient cloud management.
 
-**Keep doing what you’re doing,** and consider publishing blog posts or making pull requests to share your approach to fully automated, code-based cloud management with drift detection. This knowledge can help other UK public sector organizations replicate your success under NCSC, NIST, and GOV.UK best-practice guidelines.
+**Keep doing what you’re doing,** and consider publishing blog posts or making pull requests to share your approach to fully automated, code-based cloud management with drift detection. This knowledge can help other UK public sector organisations replicate your success under NCSC, NIST, and GOV.UK best-practice guidelines.

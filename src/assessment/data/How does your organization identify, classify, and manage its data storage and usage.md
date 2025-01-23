@@ -1,19 +1,19 @@
 ---
-title: How does your organization identify, classify, and manage its data storage and usage?
+title: How does your organisation identify, classify, and manage its data storage and usage?
 tags: data
 eleventyNavigation:
   parent: data
 ---
 
-### **Decentralized and Ad Hoc Management:** Data management is largely uncoordinated and informal, with limited organizational oversight of data storage locations and types.
+### **Decentralised and Ad Hoc Management:** Data management is largely uncoordinated and informal, with limited organisational oversight of data storage locations and types.
 
 #### **How to determine if this good enough**
 
-In the "Decentralized and Ad Hoc Management" stage, each department, team, or project might handle data in its own way, with minimal organizational-level policies or guidance. You might consider this setup "good enough" under the following conditions:
+In the "Decentralised and Ad Hoc Management" stage, each department, team, or project might handle data in its own way, with minimal organisational-level policies or guidance. You might consider this setup "good enough" under the following conditions:
 
 1. **Very Small or Low-Risk Datasets**
 
-   - If your organization handles mostly unclassified or minimal-risk data, and the volume is modest enough that the cost of implementing formal oversight isn’t easily justified.
+   - If your organisation handles mostly unclassified or minimal-risk data, and the volume is modest enough that the cost of implementing formal oversight isn’t easily justified.
 
 1. **Early Phases or Pilot Projects**
 
@@ -26,7 +26,7 @@ In the "Decentralized and Ad Hoc Management" stage, each department, team, or pr
 1. **Low Complexity**
    - If your data usage is straightforward (e.g., only a few spreadsheets or simple cloud storage buckets), with minimal sharing across teams or external partners.
 
-However, for most UK public sector bodies, even "unofficial" data systems can become large or sensitive over time. In addition, compliance requirements from the UK GDPR, the Data Protection Act 2018, and departmental data security policies (e.g., Government Security Classifications) often dictate at least a baseline level of oversight. Therefore, truly "Decentralized and Ad Hoc" management is rarely sustainable.
+However, for most UK public sector bodies, even "unofficial" data systems can become large or sensitive over time. In addition, compliance requirements from the UK GDPR, the Data Protection Act 2018, and departmental data security policies (e.g., Government Security Classifications) often dictate at least a baseline level of oversight. Therefore, truly "Decentralised and Ad Hoc" management is rarely sustainable.
 
 #### **How to do better**
 
@@ -57,7 +57,7 @@ Here are **rapidly actionable** steps to establish foundational data management 
 
 1. **Educate Teams on Data Sensitivity**
 
-   - Run short, targeted training or lunch-and-learns on recognizing PII, official data, or other categories.
+   - Run short, targeted training or lunch-and-learns on recognising PII, official data, or other categories.
    - Emphasize that storing data in an "unofficial" manner can violate data protection laws or hamper future compliance efforts.
 
 1. **Draft an Interim Data Policy**
@@ -68,7 +68,7 @@ Here are **rapidly actionable** steps to establish foundational data management 
 
 By identifying your data storage resources, applying minimal security tagging, and sharing initial guidelines, you shift from ad hoc practices to a basic, more controlled environment. This foundation paves the way for adopting robust data governance tools and processes down the line.
 
-### **Team-Based Documentation and Manual Policy Adherence:** Each team documents the data they handle, including its schema and sensitivity. Compliance with organizational data policies is managed manually by individual teams.
+### **Team-Based Documentation and Manual Policy Adherence:** Each team documents the data they handle, including its schema and sensitivity. Compliance with organisational data policies is managed manually by individual teams.
 
 #### **How to determine if this good enough**
 
@@ -80,7 +80,7 @@ Here, you’ve moved from having no formal oversight to each team at least keepi
 
 1. **Manual Policy is Consistently Applied**
 
-   - You have a basic organizational data policy, and each team enforces it themselves, without heavy central governance.
+   - You have a basic organisational data policy, and each team enforces it themselves, without heavy central governance.
    - So far, you haven’t encountered major incidents or confusion over compliance.
 
 1. **Low Rate of Cross-Team Data Sharing**
@@ -96,7 +96,7 @@ However, manual adherence becomes error-prone as soon as data volumes grow or cr
 
 Below are **rapidly actionable** ways to improve upon team-based documentation:
 
-1. **Adopt Centralized Tagging/Labeling Policies**
+1. **Adopt Centralised Tagging/Labeling Policies**
 
    - Instead of each team inventing its own naming or classification, unify your approach:
      - [AWS: Resource Tagging Strategy, e.g., "data_sensitivity=OFFICIAL" or "data_owner=TeamX"](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html)
@@ -114,7 +114,7 @@ Below are **rapidly actionable** ways to improve upon team-based documentation:
      - [OCI Data Catalog for metadata management on Oracle Cloud data sources](https://www.oracle.com/a/ocom/docs/ebook-cloud-infrastructure-data-catalog.pdf)
    - This can evolve into a more formal data inventory.
 
-1. **Standardize on Security and Compliance Checklists**
+1. **Standardise on Security and Compliance Checklists**
 
    - Provide each team with a short checklist:
      - Data classification verified?
@@ -128,15 +128,15 @@ Below are **rapidly actionable** ways to improve upon team-based documentation:
 
 1. **Schedule Quarterly or Semi-Annual Data Reviews**
 
-   - Even if managed by each team, commit to an organizational cycle:
+   - Even if managed by each team, commit to an organisational cycle:
      - They update their data inventories, verify classification, and confirm no stale or untagged storage resources.
-     - Summarize findings to central governance or a data protection officer for quick oversight.
+     - Summarise findings to central governance or a data protection officer for quick oversight.
 
 1. **Motivate with Quick Wins**
    - Share success stories: "Team X saved money by archiving old data after a manual review, or prevented a compliance risk by discovering unencrypted PII."
    - This fosters cultural buy-in and continuous improvement.
 
-By implementing standardized tagging, shared documentation tools, and routine checklists, you enhance consistency and reduce errors. You’re also positioning yourself for the next maturity level, which often involves more automated scanning and classification across the organization.
+By implementing standardised tagging, shared documentation tools, and routine checklists, you enhance consistency and reduce errors. You’re also positioning yourself for the next maturity level, which often involves more automated scanning and classification across the organisation.
 
 ### **Inventoried and Classified Data:** An inventory of data, created manually or via scanning tools, exists. Data is classified by type (e.g., PII, card data), sensitivity, and regulatory requirements (e.g., retention, location).
 
@@ -150,7 +150,7 @@ Now you have a formal data inventory that might combine manual inputs from teams
 
 1. **Consistent Data Classification**
 
-   - You apply recognized categories like "OFFICIAL," "OFFICIAL-SENSITIVE," "RESTRICTED," or other departmental terms.
+   - You apply recognised categories like "OFFICIAL," "OFFICIAL-SENSITIVE," "RESTRICTED," or other departmental terms.
    - Teams are aware of which data must follow special controls (e.g., personal data under UK GDPR, payment card data under PCI-DSS, etc.).
 
 1. **Proactive Compliance**
@@ -162,7 +162,7 @@ Now you have a formal data inventory that might combine manual inputs from teams
    - You have at least basic retention timelines for certain data types (e.g., "Keep these records for 2 years, then archive or securely delete").
    - This helps you reduce storage bloat and security risk.
 
-If your organization can maintain this inventory without excessive overhead, meet compliance requirements, and quickly locate or delete data upon request, you might be satisfied. However, if data usage is growing or you’re facing more complex analytics and cross-team usage, you likely need more advanced governance, lineage tracking, and automation.
+If your organisation can maintain this inventory without excessive overhead, meet compliance requirements, and quickly locate or delete data upon request, you might be satisfied. However, if data usage is growing or you’re facing more complex analytics and cross-team usage, you likely need more advanced governance, lineage tracking, and automation.
 
 #### **How to do better**
 
@@ -212,12 +212,12 @@ With scanning, lineage insights, policy-aligned retention, and better visibility
 
 #### **How to determine if this good enough**
 
-In this phase, your organization has established processes to classify and review data regularly. You likely have:
+In this phase, your organisation has established processes to classify and review data regularly. You likely have:
 
 1. **Well-Established Inventory and Processes**
 
    - You know exactly where crucial data resides (cloud databases, file shares, analytics platforms).
-   - Teams reliably classify new data sets, typically with centralized or automated oversight.
+   - Teams reliably classify new data sets, typically with centralised or automated oversight.
 
 1. **Ongoing Compliance Audits**
 
@@ -226,7 +226,7 @@ In this phase, your organization has established processes to classify and revie
 
 1. **Partial Lineage Documentation**
 
-   - Teams can verbally or via some diagrams explain how data flows through the organization.
+   - Teams can verbally or via some diagrams explain how data flows through the organisation.
    - However, it’s not uniformly captured in a single system or data catalog.
 
 1. **Confidence in Day-to-Day Operations**
@@ -269,7 +269,7 @@ Below are **rapidly actionable** steps to deepen your data lineage and documenta
 
 1. **Integrate with Risk and Compliance Dashboards**
    - If you have a departmental risk register, link data classification/lineage issues into that.
-   - This ensures any changes or gaps in lineage are recognized as potential compliance or operational risks.
+   - This ensures any changes or gaps in lineage are recognised as potential compliance or operational risks.
 
 By systematically building out lineage features and embedding them in everyday workflows, you move closer to a truly integrated data environment. Over time, each dataset’s path through your infrastructure becomes transparent, boosting collaboration, reducing duplication, and easing regulatory compliance.
 
@@ -277,7 +277,7 @@ By systematically building out lineage features and embedding them in everyday w
 
 #### **How to determine if this good enough**
 
-In this final stage, your organization has an extensive data catalog that covers:
+In this final stage, your organisation has an extensive data catalog that covers:
 
 1. **Comprehensive Metadata and Glossary**
 
@@ -328,12 +328,12 @@ Even at the highest maturity, here are **actionable** ways to refine:
 
 1. **Integrate Catalog with Wider Public Sector Ecosystems**
 
-   - If your data catalog can integrate with cross-government data registries or share metadata with partner organizations, you reduce duplication and improve interoperability. For instance:
-     - Some local authorities or NHS trusts might share standardized definitions or [GDS guidelines](https://www.gov.uk/guidance/gds-data-standards).
+   - If your data catalog can integrate with cross-government data registries or share metadata with partner organisations, you reduce duplication and improve interoperability. For instance:
+     - Some local authorities or NHS trusts might share standardised definitions or [GDS guidelines](https://www.gov.uk/guidance/gds-data-standards).
      - Tools or APIs that facilitate federation with external catalogs can open up broad data collaboration.
 
 1. **Continuously Evaluate Security, Access, and Usage**
-   - Review who actually accesses data vs. who is authorized, adjusting policies based on usage patterns.
+   - Review who actually accesses data vs. who is authorised, adjusting policies based on usage patterns.
    - If certain data sets see heavy usage from a new department, ensure lineage, classification, and approvals remain correct.
 
 At this advanced level, your main goal is to keep your data catalog living, dynamic, and well-integrated with the rest of your technology stack and governance frameworks. By embracing new data sources, automating quality checks, leveraging ML classification, and ensuring interoperability across the UK public sector, you solidify your position as a model of data governance and strategic data management.

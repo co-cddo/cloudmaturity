@@ -1,21 +1,21 @@
 ---
-title: What measures are in place in your organization to mitigate the risk of data breaches, including exfiltration, corruption, deletion, and non-availability?
+title: What measures are in place in your organisation to mitigate the risk of data breaches, including exfiltration, corruption, deletion, and non-availability?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Manual Data Access Classification:** Data access is primarily managed through manual classification, with minimal automation or centralized control.
+### **Manual Data Access Classification:** Data access is primarily managed through manual classification, with minimal automation or centralised control.
 
 #### **How to determine if this good enough**
 
-Your organization may rely on ad-hoc or manual processes to classify and secure data (e.g., staff deciding on classification levels individually, using guidelines but no enforcement tooling). This can be acceptable if:
+Your organisation may rely on ad-hoc or manual processes to classify and secure data (e.g., staff deciding on classification levels individually, using guidelines but no enforcement tooling). This can be acceptable if:
 
 1. **Small or Low-Risk Datasets**
 
    - You handle minimal or non-sensitive data, so the impact of a breach is low.
 
-1. **Limited Organizational Complexity**
+1. **Limited Organisational Complexity**
 
    - A few staff or single department handle data security manually, and no major compliance demands exist yet.
 
@@ -46,18 +46,18 @@ Below are **rapidly actionable** steps to move beyond manual classification:
 1. **Document a Minimal Process**
 
    - A short policy clarifying how staff label data, who can reclassify, and how they request access changes:
-     - Minimizes confusion or inconsistent labeling.
+     - Minimises confusion or inconsistent labeling.
 
 1. **Plan for Automated Classification**
    - In the next 3–6 months, evaluate solutions like [AWS Macie](https://aws.amazon.com/macie/), [Azure Purview](https://learn.microsoft.com/en-us/azure/purview/), [GCP DLP](https://cloud.google.com/dlp), or [OCI Cloud Guard data detection](https://www.oracle.com/cloud/free/oci-training/) for partial automation.
 
 By introducing a simple classification scheme, adopting minimal tooling for labeling, ensuring basic least-privilege access, documenting a short classification process, and preparing for automated solutions, you create a more structured approach to data security than purely manual methods.
 
-### **Centralized Policies and Controls:** A centralized set of policies and controls is in place to prevent unauthorized data access, forming the core of the data security strategy.
+### **Centralised Policies and Controls:** A centralised set of policies and controls is in place to prevent unauthorised data access, forming the core of the data security strategy.
 
 #### **How to determine if this good enough**
 
-Your organization has a recognized policy framework (e.g., data classification policy, access controls) and uses central configuration to handle data security, typically at least partially automated. This might be "good enough" if:
+Your organisation has a recognised policy framework (e.g., data classification policy, access controls) and uses central configuration to handle data security, typically at least partially automated. This might be "good enough" if:
 
 1. **Consistent Application**
 
@@ -74,7 +74,7 @@ You could enhance these controls by adding real-time monitoring, automation for 
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to strengthen centralized data security policies:
+Below are **rapidly actionable** ways to strengthen centralised data security policies:
 
 1. **Implement Automated Policy Enforcement**
 
@@ -97,15 +97,15 @@ Below are **rapidly actionable** ways to strengthen centralized data security po
      - referencing [NCSC’s data management best practices, GOV.UK records management policies, or NIST retention guidance](https://www.gov.uk/government/organisations/national-archives).
 
 1. **Monitor for Policy Deviations**
-   - Tools like [AWS Config](https://aws.amazon.com/config/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) can detect if a new resource bypasses encryption or classification requirements.
+   - Tools like [AWS Config](https://aws.amazon.com/config/), [Azure Policy](https://learn.microsoft.com/en-us/azure/governance/policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) can detect if a new resource bypasses encryption or classification requirements.
 
-By automating policy enforcement, requiring tiered access for sensitive data, consolidating data stores, clarifying data lifecycle, and monitoring for policy anomalies, you refine your centralized data security approach, ensuring consistent coverage and minimal manual drift.
+By automating policy enforcement, requiring tiered access for sensitive data, consolidating data stores, clarifying data lifecycle, and monitoring for policy anomalies, you refine your centralised data security approach, ensuring consistent coverage and minimal manual drift.
 
-### **Policies with Limited Monitoring:** In addition to centralized policies and controls, limited monitoring for data exfiltration is conducted to identify potential breaches.
+### **Policies with Limited Monitoring:** In addition to centralised policies and controls, limited monitoring for data exfiltration is conducted to identify potential breaches.
 
 #### **How to determine if this good enough**
 
-Your organization enforces data protection policies but only partially monitors for suspicious activity (e.g., some DLP or logging solutions in place). It might be "good enough" if:
+Your organisation enforces data protection policies but only partially monitors for suspicious activity (e.g., some DLP or logging solutions in place). It might be "good enough" if:
 
 1. **Basic DLP or Anomaly Detection**
 
@@ -151,7 +151,7 @@ By leveraging or expanding DLP solutions, correlating logs in a SIEM, implementi
 
 #### **How to determine if this good enough**
 
-Your organization employs layered controls (encryption, classification, role-based access, DLP) plus automated anomaly detection systems. This approach might be "good enough" if:
+Your organisation employs layered controls (encryption, classification, role-based access, DLP) plus automated anomaly detection systems. This approach might be "good enough" if:
 
 1. **Cross-Platform Coverage**
 
@@ -172,7 +172,7 @@ Below are **rapidly actionable** methods to reinforce automated detection:
 
 1. **Risk-Scored Alerts**
 
-   - Combine user identity, device posture, and data classification to prioritize which anomalies matter most:
+   - Combine user identity, device posture, and data classification to prioritise which anomalies matter most:
      - referencing [Azure Sentinel ML rules](https://learn.microsoft.com/en-us/azure/sentinel/), [AWS Security Hub with risk-based scoring](https://aws.amazon.com/security-hub/), [GCP Chronicle risk detection](https://cloud.google.com/chronicle), or [OCI Security Advisor advanced analytics](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Automated Quarantine & Blocking**
@@ -197,7 +197,7 @@ By adding risk-scored alerts, automatically quarantining suspicious activity, in
 
 #### **How to determine if this good enough**
 
-At this top maturity level, your organization’s data breach prevention strategy is fully integrated, with real-time automated responses and proactive scanning. It’s typically "good enough" if:
+At this top maturity level, your organisation’s data breach prevention strategy is fully integrated, with real-time automated responses and proactive scanning. It’s typically "good enough" if:
 
 1. **Continuous Visibility & Reaction**
 
@@ -232,7 +232,7 @@ Below are **rapidly actionable** ways to refine fully automated, proactive data 
 
 1. **Cross-Government Data Sharing**
 
-   - If relevant, unify or standardize data security controls across multiple agencies or local councils:
+   - If relevant, unify or standardise data security controls across multiple agencies or local councils:
      - referencing [GOV.UK guidance on data sharing and collaboration security](https://www.gov.uk/service-manual).
 
 1. **Regular "Chaos" or Stress Tests**
@@ -241,4 +241,4 @@ Below are **rapidly actionable** ways to refine fully automated, proactive data 
 
 By employing AI-driven anomaly detection, embedding policy-as-code for data security, adopting zero-trust microsegmentation, collaborating on cross-government data controls, and running robust chaos or stress tests, you sustain a cutting-edge, proactive data protection approach suitable for the evolving demands of UK public sector operations.
 
-**Keep doing what you’re doing,** and consider blogging about or opening pull requests to share how you maintain or improve your data breach mitigation strategies. Your experiences support other UK public sector organizations, reinforcing best practices under NCSC, NIST, and GOV.UK guidance.
+**Keep doing what you’re doing,** and consider blogging about or opening pull requests to share how you maintain or improve your data breach mitigation strategies. Your experiences support other UK public sector organisations, reinforcing best practices under NCSC, NIST, and GOV.UK guidance.

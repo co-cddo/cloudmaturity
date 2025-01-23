@@ -1,5 +1,5 @@
 ---
-title: How does your organization prioritize cloud experience in its hiring practices of senior/executive/leadership roles, suppliers and contingent labour?
+title: How does your organisation prioritise cloud experience in its hiring practices of senior/executive/leadership roles, suppliers and contingent labour?
 tags: people
 eleventyNavigation:
   parent: people
@@ -9,20 +9,20 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization’s job postings do not mention or require cloud knowledge from applicants—even for senior/leadership roles. This could be "good enough" if:
+Your organisation’s job postings do not mention or require cloud knowledge from applicants—even for senior/leadership roles. This could be "good enough" if:
 
 1. **Minimal or No Cloud Usage**
 
    - You operate almost entirely on-premises, with no plan or mandate to expand cloud operations in the near term.
 
-1. **Highly Specialized Legacy Roles**
+1. **Highly Specialised Legacy Roles**
 
-   - Your roles focus on traditional IT (e.g., mainframe, specialized on-prem hardware), making cloud background less immediately relevant.
+   - Your roles focus on traditional IT (e.g., mainframe, specialised on-prem hardware), making cloud background less immediately relevant.
 
 1. **Solely Vendor or Outsourced Cloud Expertise**
    - You rely on a third-party supplier for cloud design and operations, so hiring for in-house cloud capability seems unnecessary.
 
-However, ignoring cloud experience can become a blocker if your organization decides to modernize or scale digital services. [NCSC’s strategic cloud adoption guidance](https://www.ncsc.gov.uk/collection/cloud-security) and [GOV.UK’s Cloud First policy](https://www.gov.uk/guidance/government-cloud-first-policy) often suggest building at least some internal cloud capability to ensure secure and efficient usage.
+However, ignoring cloud experience can become a blocker if your organisation decides to modernise or scale digital services. [NCSC’s strategic cloud adoption guidance](https://www.ncsc.gov.uk/collection/cloud-security) and [GOV.UK’s Cloud First policy](https://www.gov.uk/guidance/government-cloud-first-policy) often suggest building at least some internal cloud capability to ensure secure and efficient usage.
 
 #### **How to do better**
 
@@ -40,25 +40,25 @@ Below are **rapidly actionable** steps to begin emphasizing cloud skills in hiri
 
 1. **Prepare for Cloud-Focused Future**
 
-   - If you have a known modernization program, consider building a pipeline of cloud-savvy talent:
+   - If you have a known modernisation program, consider building a pipeline of cloud-savvy talent:
      - Start by adding basic cloud competence to "desired" (not required) criteria in some new roles.
 
 1. **Reference NIST & NCSC Workforce Guidance**
 
    - For instance, [NIST SP 800-181 National Initiative for Cybersecurity Education (NICE) Framework](https://csrc.nist.gov/) provides role-based skill guidelines, which can be extended to cloud roles.
-   - [NCSC guidance on building a cloud-ready workforce](https://www.ncsc.gov.uk/) can help formalize job competencies.
+   - [NCSC guidance on building a cloud-ready workforce](https://www.ncsc.gov.uk/) can help formalise job competencies.
 
 1. **Short Internal Hackathons**
    - Let staff explore a simple cloud project, e.g., deploying a test app or serverless function.
    - This stirs interest in cloud skills, naturally leading to job postings that mention them.
 
-By introducing even minor cloud awareness requirements, providing internal knowledge sharing, referencing official frameworks, and organizing small hackathons, you start shifting your hiring practices to future-proof your organization’s cloud readiness.
+By introducing even minor cloud awareness requirements, providing internal knowledge sharing, referencing official frameworks, and organising small hackathons, you start shifting your hiring practices to future-proof your organisation’s cloud readiness.
 
 ### **Selective Requirement for Cloud Experience:** Some job postings, particularly those in relevant areas, require candidates to have prior cloud experience.
 
 #### **How to determine if this good enough**
 
-Your organization mentions cloud skills for roles that clearly need them (e.g., DevOps, security engineering), while other positions (senior leadership, less technical roles) remain silent on cloud. This may be "good enough" if:
+Your organisation mentions cloud skills for roles that clearly need them (e.g., DevOps, security engineering), while other positions (senior leadership, less technical roles) remain silent on cloud. This may be "good enough" if:
 
 1. **Targeted Cloud Adoption**
 
@@ -71,7 +71,7 @@ Your organization mentions cloud skills for roles that clearly need them (e.g., 
 1. **Manager-Led Approach**
    - Hiring managers decide which roles should involve cloud experience, ensuring teams that do need it get the right people.
 
-While this step ensures crucial roles have the necessary cloud skills, it may cause gaps in leadership or strategic roles if they remain cloud-agnostic. [GDS leadership roles often emphasize digital knowledge](https://www.gov.uk/service-manual), so integrating cloud awareness can future-proof your organization’s direction.
+While this step ensures crucial roles have the necessary cloud skills, it may cause gaps in leadership or strategic roles if they remain cloud-agnostic. [GDS leadership roles often emphasize digital knowledge](https://www.gov.uk/service-manual), so integrating cloud awareness can future-proof your organisation’s direction.
 
 #### **How to do better**
 
@@ -101,13 +101,13 @@ Below are **rapidly actionable** improvements:
    - Provide existing employees an option to upskill into these "cloud-required" roles, reinforcing a culture of growth.
    - Supports staff retention and aligns with [NIST workforce development frameworks](https://csrc.nist.gov/).
 
-By adding leadership-level cloud awareness, clarifying role-based cloud criteria, ensuring recruiters or contingent labor providers understand these requirements, and offering internal upskilling, you create a more consistent approach that meets both immediate and long-term organizational needs.
+By adding leadership-level cloud awareness, clarifying role-based cloud criteria, ensuring recruiters or contingent labor providers understand these requirements, and offering internal upskilling, you create a more consistent approach that meets both immediate and long-term organisational needs.
 
 ### **Mandatory Cloud Experience for Relevant Roles:** All relevant job postings mandate cloud experience, aligning with the Digital, Data, and Technology (DDaT) role definitions.
 
 #### **How to determine if this good enough**
 
-Your organization has moved to standardizing cloud skill requirements in line with official frameworks, such as the [GOV.UK DDaT profession capability framework](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework). This may be "good enough" if:
+Your organisation has moved to standardising cloud skill requirements in line with official frameworks, such as the [GOV.UK DDaT profession capability framework](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework). This may be "good enough" if:
 
 1. **Clear, Public Guidance**
 
@@ -120,7 +120,7 @@ Your organization has moved to standardizing cloud skill requirements in line wi
 1. **Confidence in Ongoing Staff Development**
    - You provide channels for employees to refresh or deepen their cloud skills (e.g., training budgets, exam vouchers).
 
-If this meets your organizational scale—balancing modern service delivery with consistent cloud capabilities—it might be sufficient. Still, you can refine existing roles and adapt as the cloud environment evolves, ensuring continuous alignment with best practices from [NCSC](https://www.ncsc.gov.uk/) and [NIST](https://csrc.nist.gov/).
+If this meets your organisational scale—balancing modern service delivery with consistent cloud capabilities—it might be sufficient. Still, you can refine existing roles and adapt as the cloud environment evolves, ensuring continuous alignment with best practices from [NCSC](https://www.ncsc.gov.uk/) and [NIST](https://csrc.nist.gov/).
 
 #### **How to do better**
 
@@ -139,27 +139,27 @@ Below are **rapidly actionable** ways to advance beyond simple mandatory require
 1. **Ensure Continuity & Succession**
 
    - Plan for staff turnover by establishing robust knowledge transfer processes, referencing [NCSC workforce security advice](https://www.ncsc.gov.uk/).
-   - Minimizes risk if a key cloud-skilled individual leaves.
+   - Minimises risk if a key cloud-skilled individual leaves.
 
 1. **Promote Multi-Cloud Awareness**
 
-   - If your organization uses more than one provider, encourage roles to include cross-provider or "cloud-agnostic" concepts:
+   - If your organisation uses more than one provider, encourage roles to include cross-provider or "cloud-agnostic" concepts:
      - e.g., Terraform, Kubernetes, or zero-trust security patterns relevant across AWS, Azure, GCP, or OCI.
 
 1. **Involve Senior Leadership**
-   - Demonstrate how mandatory cloud experience in roles directly supports mission-critical public services, cost optimization, or security compliance, building top-level buy-in.
+   - Demonstrate how mandatory cloud experience in roles directly supports mission-critical public services, cost optimisation, or security compliance, building top-level buy-in.
 
-By routinely revising DDaT role definitions to keep pace with evolving cloud tech, defining competency levels, planning continuity, encouraging multi-cloud knowledge, and securing leadership sponsorship, you firmly embed cloud skill requirements into your organizational DNA.
+By routinely revising DDaT role definitions to keep pace with evolving cloud tech, defining competency levels, planning continuity, encouraging multi-cloud knowledge, and securing leadership sponsorship, you firmly embed cloud skill requirements into your organisational DNA.
 
-### **Updated Role Requirements and Cloud-Focused Hiring:** In addition to requiring cloud experience for new hires, existing roles have been reviewed and updated as necessary to reflect a cloud-first IT organization.
+### **Updated Role Requirements and Cloud-Focused Hiring:** In addition to requiring cloud experience for new hires, existing roles have been reviewed and updated as necessary to reflect a cloud-first IT organisation.
 
 #### **How to determine if this good enough**
 
-Your organization not only mandates cloud experience for new roles but also revises current positions, ensuring all necessary staff have relevant cloud responsibilities. You might see it as "good enough" if:
+Your organisation not only mandates cloud experience for new roles but also revises current positions, ensuring all necessary staff have relevant cloud responsibilities. You might see it as "good enough" if:
 
 1. **Comprehensive Role Audit**
 
-   - You have completed an organization-wide review of each position’s cloud skill requirements.
+   - You have completed an organisation-wide review of each position’s cloud skill requirements.
 
 1. **Seamless Transition**
 
@@ -168,11 +168,11 @@ Your organization not only mandates cloud experience for new roles but also revi
 1. **Consistent Cloud Readiness**
    - Department-wide, roles reflect a cloud-first approach—nobody is left operating purely on older skill sets if they have critical cloud duties.
 
-Yet, as your environment or services evolve, you may consider advanced role specialization (e.g., HPC, big data, AI/ML) or deeper multi-cloud skills. [NCSC’s security frameworks](https://www.ncsc.gov.uk/) might also push you to refine role-based security responsibilities.
+Yet, as your environment or services evolve, you may consider advanced role specialisation (e.g., HPC, big data, AI/ML) or deeper multi-cloud skills. [NCSC’s security frameworks](https://www.ncsc.gov.uk/) might also push you to refine role-based security responsibilities.
 
 #### **How to do better**
 
-Below are **rapidly actionable** methods to keep role definitions agile in a cloud-first IT organization:
+Below are **rapidly actionable** methods to keep role definitions agile in a cloud-first IT organisation:
 
 1. **Periodically Revalidate Roles**
 
@@ -196,11 +196,11 @@ Below are **rapidly actionable** methods to keep role definitions agile in a clo
 
 By systematically revalidating roles, offering staff training for on-prem to cloud transitions, linking performance metrics to cloud initiatives, and referencing official frameworks, you future-proof your team structures in a dynamic cloud landscape.
 
-### **Comprehensive Cloud Experience Requirement and Role Adaptation:** All job postings require cloud experience, and every existing role within the organization has been evaluated and updated where necessary to align with the needs of a cloud-first IT organization.
+### **Comprehensive Cloud Experience Requirement and Role Adaptation:** All job postings require cloud experience, and every existing role within the organisation has been evaluated and updated where necessary to align with the needs of a cloud-first IT organisation.
 
 #### **How to determine if this good enough**
 
-At this top maturity level, your organization has fully embraced a cloud-first model: all new and existing roles incorporate cloud knowledge. You might consider it "good enough" if:
+At this top maturity level, your organisation has fully embraced a cloud-first model: all new and existing roles incorporate cloud knowledge. You might consider it "good enough" if:
 
 1. **Uniform Cloud Culture**
 
@@ -217,13 +217,13 @@ At this top maturity level, your organization has fully embraced a cloud-first m
 1. **Strong Public Sector Alignment**
    - Your approach aligns with [NCSC guidelines](https://www.ncsc.gov.uk/collection/cloud-security) for secure cloud usage, [NIST frameworks](https://csrc.nist.gov/), and [GOV.UK cloud-first policy](https://www.gov.uk/guidance/government-cloud-first-policy) expectations.
 
-Even so, continuous refinement remains important. Evolving multi-cloud strategies, advanced DevSecOps, or specialized HPC/AI solutions might require targeted skill sets.
+Even so, continuous refinement remains important. Evolving multi-cloud strategies, advanced DevSecOps, or specialised HPC/AI solutions might require targeted skill sets.
 
 #### **How to do better**
 
 Below are **rapidly actionable** methods to keep your fully cloud-oriented workforce thriving:
 
-1. **Nurture Advanced Specializations**
+1. **Nurture Advanced Specialisations**
 
    - Some roles may deepen knowledge in containers (Kubernetes), serverless, HPC, or big data analytics:
      - e.g., adopting advanced AWS, Azure, GCP, or OCI certifications for architecture, security, or data engineering.
@@ -233,7 +233,7 @@ Below are **rapidly actionable** methods to keep your fully cloud-oriented workf
    - Offer staff consistent updates, hack days, or vendor-led labs to adapt to new features quickly:
      - e.g., monthly community-of-practice sessions to discuss the latest cloud service releases or security advisories.
 
-1. **Encourage Cross-Organizational Collaboration**
+1. **Encourage Cross-Organisational Collaboration**
 
    - Collaborate with other UK public sector bodies, sharing roles or secondment opportunities for advanced cloud experiences.
    - This fosters a broader, more resilient talent pool across government.
@@ -241,12 +241,12 @@ Below are **rapidly actionable** methods to keep your fully cloud-oriented workf
 1. **Pursue International or R&D Partnerships**
 
    - If your department engages in cutting-edge projects or HPC research, consider co-innovation programs with cloud providers or academic institutions:
-     - This might spin up entirely new specialized roles (AI/ML ops, HPC performance engineer, etc.).
+     - This might spin up entirely new specialised roles (AI/ML ops, HPC performance engineer, etc.).
 
 1. **Benchmark Against Leading Practices**
-   - Leverage [NCSC or NIST case studies](https://www.ncsc.gov.uk/) to compare your staff skill frameworks with top-tier digital organizations.
+   - Leverage [NCSC or NIST case studies](https://www.ncsc.gov.uk/) to compare your staff skill frameworks with top-tier digital organisations.
    - Conduct periodic audits on the relevance of your role definitions and skill requirements.
 
-By encouraging advanced specializations, sustaining continuous learning, collaborating with other public sector entities, pursuing co-innovation partnerships, and benchmarking against top-tier best practices, you maintain an extremely robust, cloud-first workforce strategy that evolves with emerging technologies and public sector demands.
+By encouraging advanced specialisations, sustaining continuous learning, collaborating with other public sector entities, pursuing co-innovation partnerships, and benchmarking against top-tier best practices, you maintain an extremely robust, cloud-first workforce strategy that evolves with emerging technologies and public sector demands.
 
 **Keep doing what you’re doing,** and consider writing blog posts or internal knowledge base articles about your journey toward fully integrating cloud skills into hiring. Submit pull requests to this guidance or other public sector best-practice repositories, sharing lessons learned to help others adopt a comprehensive, future-ready cloud workforce strategy.

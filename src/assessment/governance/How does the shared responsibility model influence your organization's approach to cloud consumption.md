@@ -1,5 +1,5 @@
 ---
-title: How does the shared responsibility model influence your organization's approach to cloud consumption?
+title: How does the shared responsibility model influence your organisation's approach to cloud consumption?
 tags: governance
 eleventyNavigation:
   parent: governance
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-When an organization minimally accounts for the shared responsibility model, it often treats cloud services like a traditional outsourcing arrangement, assuming the provider handles most (or all) tasks. This might be considered "good enough" if:
+When an organisation minimally accounts for the shared responsibility model, it often treats cloud services like a traditional outsourcing arrangement, assuming the provider handles most (or all) tasks. This might be considered "good enough" if:
 
 1. **Limited Complexity or Strictly Managed Services**
 
@@ -65,11 +65,11 @@ Below are **rapidly actionable** steps to move beyond minimal consideration of s
 
 By clarifying essential tasks, assigning explicit ownership, and performing a quick risk assessment, you proactively plug the biggest gaps that come from ignoring the shared responsibility model.
 
-### **Basic Awareness of Shared Responsibilities:** There is a basic understanding of the model, but it's not systematically applied or deeply understood across the organization.
+### **Basic Awareness of Shared Responsibilities:** There is a basic understanding of the model, but it's not systematically applied or deeply understood across the organisation.
 
 #### **How to determine if this good enough**
 
-At this stage, your teams recognize that some aspects of security, patching, and compliance belong to you and others fall to the cloud provider. You might see this as "good enough" if:
+At this stage, your teams recognise that some aspects of security, patching, and compliance belong to you and others fall to the cloud provider. You might see this as "good enough" if:
 
 1. **General Understanding Among Key Staff**
 
@@ -99,7 +99,7 @@ Here are **rapidly actionable** ways to convert basic awareness into structured 
 
 1. **Embed Responsibility Checks in CI/CD**
 
-   - Include reminders or tasks in your pipeline for whichever responsibilities your organization must handle:
+   - Include reminders or tasks in your pipeline for whichever responsibilities your organisation must handle:
      - [AWS CodePipeline or CodeBuild custom checks (e.g., verifying AMI patch level)](https://aws.amazon.com/codepipeline/)
      - [Azure DevOps Pipelines with tasks that confirm you’ve installed required agents or configured OS patches in your images](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/deploy/azure-vm-extension)
      - [GCP Cloud Build triggers that ensure container images used in GKE are up-to-date with your patches](https://cloud.google.com/build)
@@ -110,25 +110,25 @@ Here are **rapidly actionable** ways to convert basic awareness into structured 
    - Use native policy or configuration tools to ensure teams don’t forget their portion of security:
      - [AWS Config + AWS Security Hub with rules verifying encryption at rest, correct patch levels, etc.](https://docs.aws.amazon.com/securityhub/latest/userguide/backup-controls.html)
      - [Azure Policy for ensuring OS images are from trusted sources, or that all VMs meet your baseline security standard](https://learn.microsoft.com/en-us/azure/virtual-machines/policy-reference)
-     - [GCP Organization Policy to restrict usage of certain machine types or images that aren’t part of your approved sets](https://cloud.google.com/resource-manager/docs/organization-policy/overview)
+     - [GCP Organisation Policy to restrict usage of certain machine types or images that aren’t part of your approved sets](https://cloud.google.com/resource-manager/docs/organisation-policy/overview)
      - [OCI Security Zones or Cloud Guard for checking compliance against known good configurations](https://docs.oracle.com/en-us/iaas/Content/CloudGuard/Concepts/cloudguard_overview.htm)
 
 1. **Create a Minimum Standards Document**
 
-   - Summarize "We do X, vendor does Y" in a concise, 1- or 2-page reference for new hires, project leads, or procurement teams.
+   - Summarise "We do X, vendor does Y" in a concise, 1- or 2-page reference for new hires, project leads, or procurement teams.
    - This helps each team swiftly verify if they’re meeting their obligations.
 
 1. **Schedule Regular (Bi-Annual) Awareness Sessions**
    - As new people join or existing staff shift roles, re-run an internal training on the shared responsibility model.
    - This ensures knowledge doesn’t degrade over time.
 
-By formalizing the understanding into documented responsibilities, embedding checks in your workflows, and reinforcing compliance rules, you strengthen your posture beyond mere awareness and toward consistent application across teams.
+By formalising the understanding into documented responsibilities, embedding checks in your workflows, and reinforcing compliance rules, you strengthen your posture beyond mere awareness and toward consistent application across teams.
 
 ### **Informed Decision-Making Based on Shared Responsibilities:** Decisions regarding cloud consumption are informed by the shared responsibility model, ensuring a clearer understanding of the division of responsibilities.
 
 #### **How to determine if this good enough**
 
-At this level, your organization actively references the shared responsibility model when selecting, deploying, or scaling cloud services. You might consider this approach "good enough" if:
+At this level, your organisation actively references the shared responsibility model when selecting, deploying, or scaling cloud services. You might consider this approach "good enough" if:
 
 1. **Consistent Inclusion in Architecture and Procurement**
 
@@ -186,13 +186,13 @@ Below are **rapidly actionable** improvements to reinforce your informed decisio
      - If you choose IaaS, you do more patching but may see lower direct service charges.
    - Provide a quick cost/responsibility matrix so teams can weigh these trade-offs effectively.
 
-By embedding the model into architecture reviews, governance boards, risk tracking, and cost analysis, you ensure each cloud decision is well-informed and widely understood across the organization.
+By embedding the model into architecture reviews, governance boards, risk tracking, and cost analysis, you ensure each cloud decision is well-informed and widely understood across the organisation.
 
 ### **Strategic Integration of Shared Responsibility in Cloud Planning:** The shared responsibility model is strategically integrated into cloud consumption planning, with regular assessments to ensure responsibilities are well-managed. Decisions to retain responsibilities in house are documented and shared with the cloud vendor.
 
 #### **How to determine if this good enough**
 
-At this stage, your organization not only references shared responsibilities when building or buying new solutions, but actively uses them to shape strategic roadmaps and service-level agreements. You might see this as "good enough" if:
+At this stage, your organisation not only references shared responsibilities when building or buying new solutions, but actively uses them to shape strategic roadmaps and service-level agreements. You might see this as "good enough" if:
 
 1. **Proactive Vendor Collaboration**
 
@@ -205,20 +205,20 @@ At this stage, your organization not only references shared responsibilities whe
 
 1. **Clear Documentation of In-House Retained Tasks**
 
-   - For tasks like specialized security controls, data classification, or unique compliance checks, you deliberately keep them in house. You note these exceptions in your governance or vendor communication logs.
+   - For tasks like specialised security controls, data classification, or unique compliance checks, you deliberately keep them in house. You note these exceptions in your governance or vendor communication logs.
 
 1. **Enhanced Risk Management**
    - The risk register or compliance logs show minimal "unknown responsibility" gaps, and there’s a structured process for addressing new or changing requirements.
 
-If your cloud planning and vendor engagements revolve around the shared responsibility model, ensuring alignment at both strategic and operational levels, you might meet advanced governance requirements in the UK public sector. Still, you can deepen the approach to ensure ongoing optimization of cost, performance, and compliance.
+If your cloud planning and vendor engagements revolve around the shared responsibility model, ensuring alignment at both strategic and operational levels, you might meet advanced governance requirements in the UK public sector. Still, you can deepen the approach to ensure ongoing optimisation of cost, performance, and compliance.
 
 #### **How to do better**
 
 Here are **rapidly actionable** ideas to refine your strategic integration:
 
-1. **Formalize a "Shared Responsibility Roadmap"**
+1. **Formalise a "Shared Responsibility Roadmap"**
 
-   - Outline how your responsibilities may shift as you adopt new services or modernize apps:
+   - Outline how your responsibilities may shift as you adopt new services or modernise apps:
      - E.g., "We plan to transition from self-managed DB to a fully managed service, shifting patching to the vendor by Q4."
    - Maintain an updated doc or wiki, shared with vendor account managers if relevant.
 
@@ -247,13 +247,13 @@ Here are **rapidly actionable** ideas to refine your strategic integration:
 
 By systematically planning your responsibilities roadmap, establishing joint incident protocols, and performing regular SLA reviews, you embed the shared responsibility model at the heart of your strategic cloud partnerships.
 
-### **Critical Factor in Cloud Consumption and Value Assessment:** The shared responsibility model is central to all decision-making regarding cloud consumption. It's regularly revisited to assess value for money and optimize the division of responsibilities with the cloud vendor.
+### **Critical Factor in Cloud Consumption and Value Assessment:** The shared responsibility model is central to all decision-making regarding cloud consumption. It's regularly revisited to assess value for money and optimise the division of responsibilities with the cloud vendor.
 
 #### **How to determine if this good enough**
 
 This final maturity level sees the shared responsibility model as a cornerstone of your cloud strategy:
 
-1. **Continuous Governance and Optimization**
+1. **Continuous Governance and Optimisation**
 
    - Teams treat shared responsibilities as a dynamic factor—constantly reviewing how tasks, risk, or cost can be best allocated between you and the vendor.
    - It’s integrated with your architecture, security, compliance, and financial planning.
@@ -264,13 +264,13 @@ This final maturity level sees the shared responsibility model as a cornerstone 
 
 1. **Frequent Collaboration with Vendor**
 
-   - You hold regular "architecture alignment" or "service optimization" sessions with the cloud provider, ensuring your responsibilities remain well-balanced as your environment evolves.
+   - You hold regular "architecture alignment" or "service optimisation" sessions with the cloud provider, ensuring your responsibilities remain well-balanced as your environment evolves.
 
 1. **High Transparency and Minimal Surprises**
    - Incidents or compliance checks rarely expose unknown gaps.
    - You have robust confidence in your risk management, cost forecasting, and operational readiness.
 
-If you operate at this level, you’re likely reaping the full benefit of cloud agility, cost optimization, and compliance. Even so, continued vigilance is needed to adapt to new regulations, technology changes, or organizational shifts.
+If you operate at this level, you’re likely reaping the full benefit of cloud agility, cost optimisation, and compliance. Even so, continued vigilance is needed to adapt to new regulations, technology changes, or organisational shifts.
 
 #### **How to do better**
 
@@ -279,7 +279,7 @@ Even at the pinnacle, there are **actionable** strategies to maintain and refine
 1. **Incorporate Real-Time Observability of Shared Responsibilities**
 
    - Extend your monitoring dashboards to highlight any newly provisioned resources that don’t align with known responsibilities or best practices:
-     - [AWS: Utilize AWS Config and Amazon EventBridge to monitor resource configurations and trigger alerts for non-compliant changes](https://docs.aws.amazon.com/config/latest/developerguide/monitor-config-with-cloudwatchevents.html)
+     - [AWS: Utilise AWS Config and Amazon EventBridge to monitor resource configurations and trigger alerts for non-compliant changes](https://docs.aws.amazon.com/config/latest/developerguide/monitor-config-with-cloudwatchevents.html)
      - [Azure: Configure Azure Monitor with custom alert rules to detect the deployment of services without the required security or compliance settings](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-create-activity-log-alert-rule)
      - [GCP: Set up EventArc and Cloud Functions to receive notifications of new resource creations and enforce compliance checks based on shared responsibility tags](https://cloud.google.com/eventarc/docs/tutorials/cloud-functions)
      - [OCI: Leverage Cloud Guard to detect resources that do not align with assigned responsibilities, generating immediate alerts](https://docs.oracle.com/en-us/iaas/Content/CloudGuard/Concepts/cloudguard_overview.htm)
@@ -297,13 +297,13 @@ Even at the pinnacle, there are **actionable** strategies to maintain and refine
 
 1. **Combine Shared Responsibility Insights with Ongoing Cloud Transformation**
 
-   - If you’re running modernization or digital transformation programs, embed the shared responsibility model into new microservices, container deployments, or serverless expansions.
+   - If you’re running modernisation or digital transformation programs, embed the shared responsibility model into new microservices, container deployments, or serverless expansions.
    - Constantly question: "Where does the boundary lie, and is it cost-effective or compliance-aligned to shift it?"
 
 1. **Prepare for Regulatory Changes**
    - Monitor updates to UK data protection laws, the National Cyber Security Centre (NCSC) guidelines, or changes in vendor compliance certifications.
    - Adjust responsibilities quickly if new standards require a different approach (e.g., more encryption or different backup retention mandated by a new policy).
 
-By ensuring real-time observability, frequent cost-benefit checks, sector-wide collaboration, and a readiness to pivot for regulatory shifts, you sustain a robust, adaptive shared responsibility model at the core of your cloud usage. This cements your organization’s position as a leader in cost-effective, secure, and compliant public sector cloud adoption.
+By ensuring real-time observability, frequent cost-benefit checks, sector-wide collaboration, and a readiness to pivot for regulatory shifts, you sustain a robust, adaptive shared responsibility model at the core of your cloud usage. This cements your organisation’s position as a leader in cost-effective, secure, and compliant public sector cloud adoption.
 
-**Keep doing what you’re doing,** and consider sharing blog posts, case studies, or internal knowledge base articles on how your organization integrates the shared responsibility model into cloud governance. Submit pull requests to this guidance or similar public sector best-practice repositories to help others learn from your success.
+**Keep doing what you’re doing,** and consider sharing blog posts, case studies, or internal knowledge base articles on how your organisation integrates the shared responsibility model into cloud governance. Submit pull requests to this guidance or similar public sector best-practice repositories to help others learn from your success.

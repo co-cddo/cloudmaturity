@@ -1,5 +1,5 @@
 ---
-title: How does your organization engage with cloud providers to develop capabilities and services?
+title: How does your organisation engage with cloud providers to develop capabilities and services?
 tags: people
 eleventyNavigation:
   parent: people
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization may simply use a cloud provider’s console or basic services without actively engaging them for training, account management, or technical guidance. This might be considered "good enough" if:
+Your organisation may simply use a cloud provider’s console or basic services without actively engaging them for training, account management, or technical guidance. This might be considered "good enough" if:
 
 1. **Low Cloud Adoption**
 
@@ -17,7 +17,7 @@ Your organization may simply use a cloud provider’s console or basic services 
 
 1. **Limited Requirements**
 
-   - You have no pressing need for advanced features, cost optimization, or architectural guidance.
+   - You have no pressing need for advanced features, cost optimisation, or architectural guidance.
 
 1. **No Advanced Security/Compliance Demands**
    - Basic usage without deeper collaboration may suffice if your environment has minimal compliance or security constraints and your internal skills are adequate.
@@ -44,7 +44,7 @@ Below are **rapidly actionable** steps to move from minimal interaction to stron
 
 1. **Attend Vendor Webinars/Events**
 
-   - Cloud providers frequently hold free webinars or online sessions geared to public sector or cost optimization:
+   - Cloud providers frequently hold free webinars or online sessions geared to public sector or cost optimisation:
      - [AWS Public Sector Webinars or re:Invent recordings](https://aws.amazon.com/events/webinars/)
      - [Azure Government events or on-demand training for Gov customers](https://azure.microsoft.com/en-us/resources/cloud-computing/azure-government-training)
      - [GCP for Public Sector resource library or Next conference sessions](https://cloud.google.com/public-sector/resources)
@@ -60,11 +60,11 @@ Below are **rapidly actionable** steps to move from minimal interaction to stron
 
 By establishing basic contacts, using vendor quickstarts, tapping into free events, and implementing minimal security measures, you start reaping more value from your cloud provider relationship and set the stage for deeper engagement.
 
-### **Basic Support Utilization:** Some basic support services from cloud providers are utilized, such as occasional technical assistance or access to standard documentation and resources.
+### **Basic Support Utilisation:** Some basic support services from cloud providers are utilised, such as occasional technical assistance or access to standard documentation and resources.
 
 #### **How to determine if this good enough**
 
-Your organization has begun reaching out to the cloud provider’s support channels for assistance (e.g., tickets, phone calls, or chat) on an as-needed basis. This could be "good enough" if:
+Your organisation has begun reaching out to the cloud provider’s support channels for assistance (e.g., tickets, phone calls, or chat) on an as-needed basis. This could be "good enough" if:
 
 1. **Occasional Issues**
 
@@ -72,12 +72,12 @@ Your organization has begun reaching out to the cloud provider’s support chann
 
 1. **Low Complexity or Growth**
 
-   - Your environment is stable, not requiring advanced architecture reviews or cost optimization sessions with provider specialists.
+   - Your environment is stable, not requiring advanced architecture reviews or cost optimisation sessions with provider specialists.
 
 1. **Reasonable Timely Assistance**
    - The basic support meets your current operational SLA—especially if downtime or critical incidents remain infrequent.
 
-Yet, to maximize public sector service resilience and cost efficiency, you might benefit from more proactive outreach, architecture reviews, or training options. [NCSC’s operational resilience guidance](https://www.ncsc.gov.uk/collection/operational-resilience) often recommends deeper engagement for critical digital services.
+Yet, to maximise public sector service resilience and cost efficiency, you might benefit from more proactive outreach, architecture reviews, or training options. [NCSC’s operational resilience guidance](https://www.ncsc.gov.uk/collection/operational-resilience) often recommends deeper engagement for critical digital services.
 
 #### **How to do better**
 
@@ -96,7 +96,7 @@ Below are **rapidly actionable** ways to evolve beyond basic support:
    - Providers typically offer free or low-cost reviews to identify cost-saving or performance improvements:
      - e.g., AWS Well-Architected Review, Azure Architecture Review, GCP Architecture Check, OCI Architecture Center.
 
-1. **Attend or Organize Vendor-Led Training**
+1. **Attend or Organise Vendor-Led Training**
 
    - Encourage staff to attend vendor-led courses or sign up for [NCSC-endorsed cloud security training materials](https://www.ncsc.gov.uk/) if available.
    - This builds internal skill sets, reducing reliance on ad-hoc support.
@@ -113,13 +113,13 @@ Below are **rapidly actionable** ways to evolve beyond basic support:
    - Define guidelines on which issues can be solved internally vs. escalated to the provider to expedite resolution times.
    - Helps staff know when to open tickets and what info to include.
 
-By scheduling regular check-ins with account managers, requesting architecture and cost reviews, organizing training sessions, and clarifying a support triage process, you step up from reactive usage of basic support to a more proactive and beneficial relationship.
+By scheduling regular check-ins with account managers, requesting architecture and cost reviews, organising training sessions, and clarifying a support triage process, you step up from reactive usage of basic support to a more proactive and beneficial relationship.
 
 ### **Regular Interaction and Support:** There is regular interaction with cloud provider account managers, including access to standard training and support services to assist in leveraging cloud capabilities.
 
 #### **How to determine if this good enough**
 
-At this stage, your organization has established a relationship with the provider’s account or technical teams, periodically engaging them for advice or standard support. You might consider it "good enough" if:
+At this stage, your organisation has established a relationship with the provider’s account or technical teams, periodically engaging them for advice or standard support. You might consider it "good enough" if:
 
 1. **Frequent Exchanges**
 
@@ -130,9 +130,9 @@ At this stage, your organization has established a relationship with the provide
    - You’ve participated in fundamental training or architecture sessions that help refine your environment.
 
 1. **Clear Escalation Paths**
-   - If major incidents occur or you need advanced cost optimization, you know how to escalate within the provider’s organization.
+   - If major incidents occur or you need advanced cost optimisation, you know how to escalate within the provider’s organisation.
 
-While this approach can keep your environment stable and cost-aware, you could further deepen the partnership for tailored solutions, specialized trainings, or advanced architecture reviews aligned with public sector compliance. [NCSC’s supply chain guidance](https://www.ncsc.gov.uk/section/products-services/supplier-assurance) encourages robust vendor relationships that go beyond minimal interactions.
+While this approach can keep your environment stable and cost-aware, you could further deepen the partnership for tailored solutions, specialised trainings, or advanced architecture reviews aligned with public sector compliance. [NCSC’s supply chain guidance](https://www.ncsc.gov.uk/section/products-services/supplier-assurance) encourages robust vendor relationships that go beyond minimal interactions.
 
 #### **How to do better**
 
@@ -153,7 +153,7 @@ Below are **rapidly actionable** ways to leverage regular provider interaction m
 
 1. **Co-Develop a Cloud Roadmap**
 
-   - With the provider’s account manager, outline next-year priorities: e.g., expansions to new regions, adopting serverless, or cost optimization drives.
+   - With the provider’s account manager, outline next-year priorities: e.g., expansions to new regions, adopting serverless, or cost optimisation drives.
    - Ensure these are documented in a shared action plan.
 
 1. **Engage in Beta/Preview Programs**
@@ -164,28 +164,28 @@ Below are **rapidly actionable** ways to leverage regular provider interaction m
 1. **Share Feedback on Public Sector Needs**
    - Raise local government, NHS, or departmental compliance concerns so the provider can adapt or recommend solutions (e.g., private endpoints, advanced encryption key management).
 
-By scheduling advanced support tiers or specialized workshops, co-developing a cloud roadmap, participating in early feature programs, and continuously feeding back public sector requirements, you strengthen the partnership for mutual benefit.
+By scheduling advanced support tiers or specialised workshops, co-developing a cloud roadmap, participating in early feature programs, and continuously feeding back public sector requirements, you strengthen the partnership for mutual benefit.
 
-### **Proactive Engagement and Tailored Support:** The organization engages proactively with cloud providers, receiving tailored support, training, and workshops that align with specific needs and goals.
+### **Proactive Engagement and Tailored Support:** The organisation engages proactively with cloud providers, receiving tailored support, training, and workshops that align with specific needs and goals.
 
 #### **How to determine if this good enough**
 
-In this scenario, your interactions with the provider aren’t just frequent—they’re customized for your department’s unique challenges and objectives. You might see it as "good enough" if:
+In this scenario, your interactions with the provider aren’t just frequent—they’re customised for your department’s unique challenges and objectives. You might see it as "good enough" if:
 
 1. **Joint Planning**
 
    - Provider and internal teams hold planning sessions (quarterly or bi-annual) to match new services with your roadmap.
 
-1. **Customized Training**
+1. **Customised Training**
 
-   - You have in-person or virtual workshops focusing on your tech stack (e.g., AWS for HPC, Azure for AI, GCP for serverless, OCI for specialized Oracle workloads) and departmental constraints.
+   - You have in-person or virtual workshops focusing on your tech stack (e.g., AWS for HPC, Azure for AI, GCP for serverless, OCI for specialised Oracle workloads) and departmental constraints.
 
 1. **Aligned Security & Compliance**
 
    - Providers work closely with you on meeting [NCSC cloud security guidelines](https://www.ncsc.gov.uk/collection/cloud-security) or internal audits, possibly crafting special architectures for compliance.
 
 1. **High Adoption of Best Practices**
-   - You regularly adopt well-architected reviews, cost optimization sessions, or advanced managed services to streamline operations.
+   - You regularly adopt well-architected reviews, cost optimisation sessions, or advanced managed services to streamline operations.
 
 If your environment thrives under this proactive arrangement, you likely gain from reduced operational overhead and timely adoption of new features. Nonetheless, you can often elevate to a fully strategic partnership that involves co-marketing or advanced cloud transformation programs.
 
@@ -200,7 +200,7 @@ Below are **rapidly actionable** ways to deepen this proactive, tailored relatio
 
 1. **Conduct Regular Technical Deep-Dives**
 
-   - If using advanced analytics or HPC, schedule monthly architecture feedback with vendor specialists who can propose further optimization or new service usage.
+   - If using advanced analytics or HPC, schedule monthly architecture feedback with vendor specialists who can propose further optimisation or new service usage.
    - Incorporate relevant [NIST SP 500-299 HPC guidelines](https://csrc.nist.gov/) or domain-specific standards if relevant.
 
 1. **Engage in Co-Innovation Programs**
@@ -211,7 +211,7 @@ Below are **rapidly actionable** ways to deepen this proactive, tailored relatio
      - [GCP Public Sector pilots](https://cloud.google.com/public-sector/resources)
      - [OCI Government Co-development](https://www.oracle.com/cloud/government/co-development/)
 
-1. **Formalize an Enhancement Request Process**
+1. **Formalise an Enhancement Request Process**
 
    - For feature gaps or special compliance needs, let your account team log these requests, referencing [NCSC or GOV.UK requirements].
    - Potentially expedite solutions that meet public sector demand.
@@ -222,15 +222,15 @@ Below are **rapidly actionable** ways to deepen this proactive, tailored relatio
 
 By defining success metrics, scheduling technical deep-dives, pursuing co-innovation, and ensuring an open channel for feature requests, you make the most of your proactive provider engagement—driving continuous improvement in alignment with public sector priorities.
 
-### **Strategic Partnership with Comprehensive Support:** Cloud providers are engaged as strategic partners, offering comprehensive support, including regular training, workshops, and active collaboration. This partnership is instrumental in realizing strategic goals and includes opportunities for the organization to showcase its work through the provider's platforms.
+### **Strategic Partnership with Comprehensive Support:** Cloud providers are engaged as strategic partners, offering comprehensive support, including regular training, workshops, and active collaboration. This partnership is instrumental in realising strategic goals and includes opportunities for the organisation to showcase its work through the provider's platforms.
 
 #### **How to determine if this good enough**
 
-At this highest maturity stage, your organization forms a deep strategic alliance with the provider, leveraging broad support and showcasing initiatives publicly. You might consider it "good enough" if:
+At this highest maturity stage, your organisation forms a deep strategic alliance with the provider, leveraging broad support and showcasing initiatives publicly. You might consider it "good enough" if:
 
 1. **Integrated Strategic Alignment**
 
-   - You and the provider co-plan multi-year roadmaps, ensuring cloud solutions directly serve departmental missions (e.g., digital inclusion, citizen service modernization).
+   - You and the provider co-plan multi-year roadmaps, ensuring cloud solutions directly serve departmental missions (e.g., digital inclusion, citizen service modernisation).
 
 1. **Extensive Training & Development**
 
@@ -252,7 +252,7 @@ Even at this advanced level, below are **rapidly actionable** ways to refine a s
 1. **Co-Develop Advanced Pilots**
 
    - Test cutting-edge solutions, e.g., advanced AI/ML for predictive analytics, HPC for large-scale modeling:
-     - Align with [NIST AI frameworks](https://csrc.nist.gov/) or specialized vendor HPC solutions.
+     - Align with [NIST AI frameworks](https://csrc.nist.gov/) or specialised vendor HPC solutions.
    - This pushes your public sector services into future-forward innovations.
 
 1. **Integrate Multi-Cloud or Hybrid Strategies**

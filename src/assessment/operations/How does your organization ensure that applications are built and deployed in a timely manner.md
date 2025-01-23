@@ -1,5 +1,5 @@
 ---
-title: How does your organization ensure that applications are built and deployed in a timely manner?
+title: How does your organisation ensure that applications are built and deployed in a timely manner?
 tags: operations
 eleventyNavigation:
   parent: operations
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-At this level, your organization may treat builds and deployments as irregular events with minimal oversight. You might consider it "good enough" if:
+At this level, your organisation may treat builds and deployments as irregular events with minimal oversight. You might consider it "good enough" if:
 
 1. **Very Low Release Frequency**
 
@@ -21,7 +21,7 @@ At this level, your organization may treat builds and deployments as irregular e
    - Internal or external stakeholders do not demand quick rollouts or frequent features, so extended lead times go unchallenged.
 
 1. **No Critical Deadlines**
-   - Lacking strict compliance or operational SLA obligations, you might not prioritize faster release cadences.
+   - Lacking strict compliance or operational SLA obligations, you might not prioritise faster release cadences.
 
 However, as soon as your environment grows, user demands increase, or compliance regulations require more frequent updates (e.g., security patches), slow processes can create risk and bottlenecks.
 
@@ -113,7 +113,7 @@ Below are **rapidly actionable** ways to reduce delays and evolve your tracking:
 
 By adding automated testing, simplifying approvals, and promoting incremental deployments, you shorten delays and create a more responsive release pipeline.
 
-### **Moderate Efficiency with Occasional Monitoring:** The organization has moderately efficient build and deployment processes, with occasional monitoring and efforts to adhere to timelines.
+### **Moderate Efficiency with Occasional Monitoring:** The organisation has moderately efficient build and deployment processes, with occasional monitoring and efforts to adhere to timelines.
 
 #### **How to determine if this good enough**
 
@@ -150,10 +150,10 @@ Below are **rapidly actionable** ways to enhance your moderate efficiency:
        - [GCP: Cloud Logging or Pub/Sub-based triggers that notify on certain pipeline events](https://cloud.google.com/logging/docs/agent/installation)
        - [OCI DevOps pipeline notifications, integrated with email or Slack-like channels](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
-1. **Optimize Build and Test Steps**
+1. **Optimise Build and Test Steps**
 
    - Identify any overly long test suites or build tasks:
-     - e.g., parallelize tests or use caching to skip redundant steps.
+     - e.g., parallelise tests or use caching to skip redundant steps.
    - Tools like [AWS CodeBuild caching](https://docs.aws.amazon.com/codebuild/latest/userguide/build-caching.html), [Azure Pipeline caching](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/caching?view=azure-devops), or [GCP Cloud Build caching](https://cloud.google.com/build/docs/configuring-builds/build-caching) can accelerate repeat builds.
 
 1. **Adopt Infrastructure as Code (IaC)**
@@ -171,7 +171,7 @@ Below are **rapidly actionable** ways to enhance your moderate efficiency:
    - e.g., monthly or bi-weekly sessions to review deployment metrics (average build time, deployment durations).
    - Plan small improvements each cycle—like removing a manual test step or simplifying a build script.
 
-By improving monitoring, optimizing test/build steps, adopting IaC, and refining deployment strategies, you make your moderately efficient process even faster and more stable.
+By improving monitoring, optimising test/build steps, adopting IaC, and refining deployment strategies, you make your moderately efficient process even faster and more stable.
 
 ### **Streamlined Processes with Regular Monitoring:** Builds and deployments are streamlined and regularly monitored, ensuring that they are completed within reasonable timeframes.
 
@@ -197,11 +197,11 @@ At this level, your builds and deployments are typically quick (tens of minutes 
 1. **Collaboration on Improvement**
    - Teams occasionally refine the pipeline or test processes, though not always in a continuous improvement cycle.
 
-If your organization can reliably deliver updates swiftly, you’ve likely avoided major inefficiencies. Yet there is usually room to refine further, aiming for near real-time feedback and single-digit-minute pipelines.
+If your organisation can reliably deliver updates swiftly, you’ve likely avoided major inefficiencies. Yet there is usually room to refine further, aiming for near real-time feedback and single-digit-minute pipelines.
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to optimize an already streamlined process:
+Below are **rapidly actionable** ways to optimise an already streamlined process:
 
 1. **Expand Shift-Left Testing and Security**
 
@@ -225,15 +225,15 @@ Below are **rapidly actionable** ways to optimize an already streamlined process
 
    - If you only track overall build/deploy times, gather finer metrics:
      - Time spent in unit tests vs. integration tests, container image builds vs. scanning, environment creation vs. final validations.
-   - These insights highlight your next optimization targets.
+   - These insights highlight your next optimisation targets.
 
-5. **Formalize Continuous Improvement**
+5. **Formalise Continuous Improvement**
    - Host regular pipeline reviews or "build engineering" sprints.
    - Evaluate changes in build times, error rates, or frequency of hotfixes. Use these insights to plan enhancements.
 
 By infusing advanced scanning, canary release strategies, feature flags, and deeper telemetry into your existing streamlined pipeline, you further reduce risk, speed up feedback, and maintain a high level of operational maturity.
 
-### **Continual Improvement with Rapid Execution:** The organization has a strong focus on continual improvement and efficiency. 99% of builds and deployments are completed in single-digit minutes, with consistent monitoring and optimization efforts.
+### **Continual Improvement with Rapid Execution:** The organisation has a strong focus on continual improvement and efficiency. 99% of builds and deployments are completed in single-digit minutes, with consistent monitoring and optimisation efforts.
 
 #### **How to determine if this good enough**
 
@@ -254,7 +254,7 @@ At this final stage, your builds and deployments are lightning-fast, happening i
 
 1. **Robust Disaster Recovery**
    - Rapid pipeline execution means quick redeploys in case of failure or environment replication.
-   - With single-digit-minute pipelines, rollback or rebuild times are also minimized.
+   - With single-digit-minute pipelines, rollback or rebuild times are also minimised.
 
 Though exemplary, there’s always an opportunity to embed more advanced practices (e.g., AI/ML for anomaly detection in release metrics) and to collaborate with other public sector entities to share your high-speed processes.
 
@@ -265,7 +265,7 @@ Below are **rapidly actionable** ways to refine a near-optimal pipeline:
 1. **Incorporate AI/ML Insights**
 
    - Tools or custom scripts that analyze build logs and deployment results for anomalies or patterns over time:
-     - e.g., predicting which code changes may cause test failures, optimizing pipeline concurrency.
+     - e.g., predicting which code changes may cause test failures, optimising pipeline concurrency.
 
 1. **Expand Multi-Stage Testing and Observability**
 

@@ -1,5 +1,5 @@
 ---
-title: How is version control and branch strategy implemented in your organization?
+title: How is version control and branch strategy implemented in your organisation?
 tags: governance
 eleventyNavigation:
   parent: governance
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization may store code in a basic repository (sometimes not even using Git) with minimal branching or tagging. This might be "good enough" if:
+Your organisation may store code in a basic repository (sometimes not even using Git) with minimal branching or tagging. This might be "good enough" if:
 
 1. **Small/Short-Term Projects**
 
@@ -46,12 +46,12 @@ Below are **rapidly actionable** next steps:
 1. **Tag Notable Versions**
 
    - If something is "ready for release," apply a Git tag or version (e.g., `v1.0`).
-   - Minimizes guesswork about which commit correlates to a live environment.
+   - Minimises guesswork about which commit correlates to a live environment.
 
 1. **Plan for Future Branching Strategy**
-   - Over 3–6 months, adopt a recognized model (e.g., GitHub Flow or trunk-based) to handle multiple contributors or features.
+   - Over 3–6 months, adopt a recognised model (e.g., GitHub Flow or trunk-based) to handle multiple contributors or features.
 
-By using a modern Git-based platform, ensuring all changes result in commits, documenting a minimal workflow, tagging key releases, and scheduling a shift to a recognized branching strategy, you quickly move from minimal version control to a more robust approach that supports collaboration and security needs.
+By using a modern Git-based platform, ensuring all changes result in commits, documenting a minimal workflow, tagging key releases, and scheduling a shift to a recognised branching strategy, you quickly move from minimal version control to a more robust approach that supports collaboration and security needs.
 
 ### **Custom, Unconventional Branch Strategy:** An invented branch strategy is in use, not aligning with standard methodologies and potentially leading to confusion or inefficiencies.
 
@@ -70,7 +70,7 @@ Your team might have created a unique branching model. This can be "good enough"
 1. **Works for Now**
    - The custom approach meets current needs and hasn’t caused major merge issues or frequent conflicts yet.
 
-That said, widely recognized branch strategies (GitFlow, GitHub Flow, trunk-based development) typically reduce confusion and are better documented. [NCSC’s developer best practices](https://www.ncsc.gov.uk/collection/developers-collection) and [NIST SP 800-160 secure engineering frameworks](https://csrc.nist.gov/) encourage standard solutions for consistent security and DevOps.
+That said, widely recognised branch strategies (GitFlow, GitHub Flow, trunk-based development) typically reduce confusion and are better documented. [NCSC’s developer best practices](https://www.ncsc.gov.uk/collection/developers-collection) and [NIST SP 800-160 secure engineering frameworks](https://csrc.nist.gov/) encourage standard solutions for consistent security and DevOps.
 
 #### **How do I do better?**
 
@@ -78,7 +78,7 @@ Below are **rapidly actionable** methods to move from a custom approach to a sta
 
 1. **Map Existing Branching to a Known Strategy**
 
-   - Compare your custom steps to recognized flows like [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow), [trunk-based](https://trunkbaseddevelopment.com/), or [Azure DevOps typical branching](https://learn.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance).
+   - Compare your custom steps to recognised flows like [GitFlow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow), [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow), [trunk-based](https://trunkbaseddevelopment.com/), or [Azure DevOps typical branching](https://learn.microsoft.com/en-us/azure/devops/repos/git/git-branching-guidance).
    - Identify similarities or differences.
 
 1. **Document a Cross-Reference**
@@ -95,11 +95,11 @@ Below are **rapidly actionable** methods to move from a custom approach to a sta
      - referencing [GOV.UK or departmental dev guidelines on version control naming conventions](https://www.gov.uk/service-manual).
 
 1. **Pilot a Standard Flow on a New Project**
-   - In parallel, adopt a recognized model (e.g., GitHub Flow) on a small project to gain team familiarity before rolling it out more widely.
+   - In parallel, adopt a recognised model (e.g., GitHub Flow) on a small project to gain team familiarity before rolling it out more widely.
 
-By comparing your custom model to standard flows, documenting a cross-reference, simplifying branch use, providing a quick reference, and trialing a standard approach on a new project, you reduce complexity and align with recognized best practices.
+By comparing your custom model to standard flows, documenting a cross-reference, simplifying branch use, providing a quick reference, and trialing a standard approach on a new project, you reduce complexity and align with recognised best practices.
 
-### **Adapted Recognized Branch Strategy:** The organization adapts a recognized branch strategy (like GitFlow or GitHubFlow), tailoring it to specific needs while maintaining some standard practices.
+### **Adapted Recognised Branch Strategy:** The organisation adapts a recognised branch strategy (like GitFlow or GitHubFlow), tailoring it to specific needs while maintaining some standard practices.
 
 #### **How to determine if this good enough**
 
@@ -125,7 +125,7 @@ Below are **rapidly actionable** improvements:
 1. **Document the Adaptations**
 
    - Clarify how your version of GitFlow or trunk-based differs from the original.
-   - Minimizes onboarding confusion.
+   - Minimises onboarding confusion.
 
 1. **Regularly Revisit Branch Usage**
 
@@ -147,7 +147,7 @@ Below are **rapidly actionable** improvements:
 
 By documenting your adaptations clearly, removing unused branches, adding CI/CD hooks for every branch commit, onboarding new developers, and evaluating simpler flows for future projects, you ensure your branch strategy remains practical and efficient.
 
-### **Textbook Implementation of a recognized branch strategy:** The organization adheres strictly to a model such as GitFlow, a recognized branch strategy suitable for managing complex development processes.
+### **Textbook Implementation of a recognised branch strategy:** The organisation adheres strictly to a model such as GitFlow, a recognised branch strategy suitable for managing complex development processes.
 
 #### **How to determine if this good enough**
 
@@ -168,7 +168,7 @@ If you see minor friction in fast iteration or dev complaining about overhead, y
 
 #### **How do I do better?**
 
-Below are **rapidly actionable** ways to optimize a textbook GitFlow-like approach:
+Below are **rapidly actionable** ways to optimise a textbook GitFlow-like approach:
 
 1. **Apply Automated Merges/Sync**
 
@@ -194,7 +194,7 @@ Below are **rapidly actionable** ways to optimize a textbook GitFlow-like approa
 
 By automating merges, controlling branch sprawl, embedding security checks into every branch, documenting rarely used branches, and regularly re-evaluating your overall branching structure, you keep your textbook GitFlow or similar approach practical and effective.
 
-### **Textbook Implementation of a streamlined branch strategy:** The organization follows a streamlined branch strategy ideal for continuous delivery and simplified collaboration such as GitHubFlow precisely.
+### **Textbook Implementation of a streamlined branch strategy:** The organisation follows a streamlined branch strategy ideal for continuous delivery and simplified collaboration such as GitHubFlow precisely.
 
 #### **How to determine if this good enough**
 
@@ -239,6 +239,6 @@ Below are **rapidly actionable** ways to refine a minimal branch strategy:
 1. **Encourage Short-Lived Branches**
    - Keep branches open for days or less, not weeks, ensuring minimal drift from `main` and fewer merge conflicts.
 
-By strengthening test coverage, leveraging feature flags, requiring peer reviews, observing real-time release metrics, and promoting short-lived branches, you optimize a streamlined approach that fosters continuous delivery and rapid iteration aligned with modern DevSecOps standards.
+By strengthening test coverage, leveraging feature flags, requiring peer reviews, observing real-time release metrics, and promoting short-lived branches, you optimise a streamlined approach that fosters continuous delivery and rapid iteration aligned with modern DevSecOps standards.
 
-**Keep doing what you’re doing,** and consider sharing your version control and branching strategy successes through blog posts or contributing them as best practices. This helps other UK public sector organizations adopt effective workflows aligned with NCSC, NIST, and GOV.UK guidance for secure, efficient software development.
+**Keep doing what you’re doing,** and consider sharing your version control and branching strategy successes through blog posts or contributing them as best practices. This helps other UK public sector organisations adopt effective workflows aligned with NCSC, NIST, and GOV.UK guidance for secure, efficient software development.

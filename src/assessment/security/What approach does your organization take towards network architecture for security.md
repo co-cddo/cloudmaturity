@@ -1,5 +1,5 @@
 ---
-title: What approach does your organization take towards network architecture for security?
+title: What approach does your organisation take towards network architecture for security?
 tags: security
 eleventyNavigation:
   parent: security
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization might rely heavily on firewall rules, IP allow-lists, or a perimeter-based model (e.g., on-premises network controls or perimeter appliances) to secure data and apps. This might be "good enough" if:
+Your organisation might rely heavily on firewall rules, IP allow-lists, or a perimeter-based model (e.g., on-premises network controls or perimeter appliances) to secure data and apps. This might be "good enough" if:
 
 1. **Limited External Exposure**
 
@@ -32,7 +32,7 @@ Below are **rapidly actionable** steps to strengthen or evolve from perimeter-on
 
    - Even if you maintain a perimeter, require multi-factor authentication for admin or root accounts:
      - e.g., [AWS IAM MFA](https://aws.amazon.com/iam/features/mfa/), [Azure AD MFA](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP IAM 2FA](https://cloud.google.com/iam/docs/using-mfa), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
-   - Minimizes risk of compromised credentials bypassing the firewall.
+   - Minimises risk of compromised credentials bypassing the firewall.
 
 1. **Implement Least-Privilege IAM**
 
@@ -58,7 +58,7 @@ By enforcing multi-factor authentication, introducing least-privilege IAM, segme
 
 #### **How to determine if this good enough**
 
-Your organization still maintains a perimeter firewall, but user identity checks (e.g., login with unique credentials) are enforced when accessing apps behind it. It might be "good enough" if:
+Your organisation still maintains a perimeter firewall, but user identity checks (e.g., login with unique credentials) are enforced when accessing apps behind it. It might be "good enough" if:
 
 1. **Mixed Legacy and Modern Systems**
 
@@ -66,7 +66,7 @@ Your organization still maintains a perimeter firewall, but user identity checks
 
 1. **Basic Zero-Trust Awareness**
 
-   - Recognizing that IP-based controls alone are insufficient, you at least require unique logins for each service.
+   - Recognising that IP-based controls alone are insufficient, you at least require unique logins for each service.
 
 1. **Minimal Threat or Complexity**
    - You’ve had no incidents from insider threats or compromised internal network segments.
@@ -131,9 +131,9 @@ Below are **rapidly actionable** ways to strengthen user+service identity verifi
 
 1. **Adopt Policy-as-Code**
 
-   - Incorporate [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions ([AWS SCP](https://aws.amazon.com/service-catalog/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define rules that check both user claims and service identity for each call.
+   - Incorporate [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions ([AWS SCP](https://aws.amazon.com/service-catalog/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define rules that check both user claims and service identity for each call.
 
-1. **Enforce Request-Level Authorization**
+1. **Enforce Request-Level Authorisation**
 
    - For each critical API, evaluate the user identity, service identity, and method scope:
      - referencing [NCSC least privilege guidance](https://www.ncsc.gov.uk/) or [NIST SP 800-53 AC-6 for role-based checks](https://csrc.nist.gov/).
@@ -145,13 +145,13 @@ Below are **rapidly actionable** ways to strengthen user+service identity verifi
 1. **Log & Analyze Service-to-Service Interactions**
    - If microservices talk to each other, capture logs about which identity was used, referencing [NCSC protective monitoring best practices](https://www.ncsc.gov.uk/).
 
-By implementing mTLS or ephemeral tokens for user+service identity, deploying policy-as-code, requiring request-level authorization, enabling JIT privileges for critical tasks, and thoroughly logging microservice communications, you move closer to a robust zero-trust framework within a partially perimeter-based model.
+By implementing mTLS or ephemeral tokens for user+service identity, deploying policy-as-code, requiring request-level authorisation, enabling JIT privileges for critical tasks, and thoroughly logging microservice communications, you move closer to a robust zero-trust framework within a partially perimeter-based model.
 
 ### **Partial Shift to Identity-Centric Security:** In some areas, the network-based security perimeter is replaced by robust identity verification mechanisms for users and services, reducing the reliance on VPNs for secure access.
 
 #### **How to determine if this good enough**
 
-Your organization has started phasing out VPN or perimeter-based approaches, preferring direct connections where each request is authenticated and authorized at the identity level. It’s likely "good enough" if:
+Your organisation has started phasing out VPN or perimeter-based approaches, preferring direct connections where each request is authenticated and authorised at the identity level. It’s likely "good enough" if:
 
 1. **Mixed Environments**
 
@@ -193,17 +193,17 @@ Below are **rapidly actionable** ways to deepen identity-centric security:
    - Emphasize new patterns (no reliance on VPN, ephemeral credentials, and device checks).
    - referencing [GOV.UK or NCSC training resources on zero-trust and identity-based security](https://www.ncsc.gov.uk/).
 
-By methodically retiring or limiting VPN usage, integrating device posture checks, employing microsegmentation, standardizing single sign-on for all apps, and training staff on the identity-centric model, you further reduce perimeter dependence and approach a more robust zero-trust posture.
+By methodically retiring or limiting VPN usage, integrating device posture checks, employing microsegmentation, standardising single sign-on for all apps, and training staff on the identity-centric model, you further reduce perimeter dependence and approach a more robust zero-trust posture.
 
-### **No Reliance on Network Perimeter or VPN:** The organization has moved away from a network-based security perimeter. Access control is centered around individual devices and users, requiring strong attestations for trust establishment.
+### **No Reliance on Network Perimeter or VPN:** The organisation has moved away from a network-based security perimeter. Access control is centered around individual devices and users, requiring strong attestations for trust establishment.
 
 #### **How to determine if this good enough**
 
-At this final maturity level, your organization’s security is fully identity- and device-centric—no blanket perimeter or VPN. You might consider it "good enough" if:
+At this final maturity level, your organisation’s security is fully identity- and device-centric—no blanket perimeter or VPN. You might consider it "good enough" if:
 
-1. **Zero-Trust Realization**
+1. **Zero-Trust Realisation**
 
-   - Every request is authenticated and authorized per device and user identity, referencing [NCSC zero trust](https://www.ncsc.gov.uk/) or [NIST SP 800-207 approaches](https://csrc.nist.gov/).
+   - Every request is authenticated and authorised per device and user identity, referencing [NCSC zero trust](https://www.ncsc.gov.uk/) or [NIST SP 800-207 approaches](https://csrc.nist.gov/).
 
 1. **Full Cloud or Hybrid Environment**
 
@@ -235,11 +235,11 @@ Below are **rapidly actionable** ways to sustain no-perimeter, identity-based se
 
 1. **Use Policy-as-Code**
 
-   - Implement [Open Policy Agent (OPA)](https://www.openpolicyagent.org/), [AWS SCP](https://aws.amazon.com/service-catalog/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) for dynamic, code-defined guardrails that adapt to real-time signals.
+   - Implement [Open Policy Agent (OPA)](https://www.openpolicyagent.org/), [AWS SCP](https://aws.amazon.com/service-catalog/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) for dynamic, code-defined guardrails that adapt to real-time signals.
 
 1. **Collaborate & Share**
    - As a leading zero-trust example, share your experiences or case studies with other public sector bodies, referencing cross-government events or guidance from [GDS / NCSC communities](https://www.ncsc.gov.uk/).
 
 By deploying advanced device risk scoring, introducing continuous re-auth, expanding zero trust to microservices, employing policy-as-code for dynamic guardrails, and collaborating across the public sector, you refine your environment as a modern, identity-centric security pioneer, fully detached from traditional network perimeters and VPN reliance.
 
-**Keep doing what you’re doing,** and consider writing up your experiences or opening pull requests to share your zero-trust or identity-centric security transformations. This knowledge benefits other UK public sector organizations striving to reduce reliance on network perimeters and adopt robust, identity-first security models.
+**Keep doing what you’re doing,** and consider writing up your experiences or opening pull requests to share your zero-trust or identity-centric security transformations. This knowledge benefits other UK public sector organisations striving to reduce reliance on network perimeters and adopt robust, identity-first security models.

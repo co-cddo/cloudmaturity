@@ -1,5 +1,5 @@
 ---
-title: How does your organization monitor and manage threats, vulnerabilities, and misconfigurations?
+title: How does your organisation monitor and manage threats, vulnerabilities, and misconfigurations?
 tags: security
 eleventyNavigation:
   parent: security
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization may not offer any channel or official statement on how external security researchers or even the general public can report potential security flaws. It might be seen as "good enough" if:
+Your organisation may not offer any channel or official statement on how external security researchers or even the general public can report potential security flaws. It might be seen as "good enough" if:
 
 1. **Very Limited External Exposure**
 
@@ -20,7 +20,7 @@ Your organization may not offer any channel or official statement on how externa
    - You have minimal data or no major known threat vectors, so you assume public disclosure might be rarely needed.
 
 1. **Short-Term or Pilot**
-   - You’re in an early stage and have not formalized public-facing vulnerability reporting.
+   - You’re in an early stage and have not formalised public-facing vulnerability reporting.
 
 However, failing to provide a clear disclosure route can lead to undisclosed or zero-day vulnerabilities persisting in your systems. [NCSC’s vulnerability disclosure guidelines](https://www.ncsc.gov.uk/collection/vulnerability-disclosure) and [NIST SP 800-53 SI (System and Information Integrity) controls](https://csrc.nist.gov/) emphasize the importance of structured vulnerability reporting to quickly remediate discovered issues.
 
@@ -35,7 +35,7 @@ Below are **rapidly actionable** steps to implement basic vulnerability reportin
 1. **Set Up a Dedicated Email or Form**
 
    - Provide a clear email (like `security@yourdomain.gov.uk`) or secure submission form:
-     - Minimizes confusion about who to contact.
+     - Minimises confusion about who to contact.
 
 1. **Respond with a Standard Acknowledgement**
 
@@ -54,7 +54,7 @@ By defining a minimal disclosure policy, setting up a dedicated channel, creatin
 
 #### **How to determine if this good enough**
 
-Your organization provides a public vulnerability disclosure policy or is listed on a responsible disclosure platform (e.g., HackerOne, Bugcrowd). It might be "good enough" if:
+Your organisation provides a public vulnerability disclosure policy or is listed on a responsible disclosure platform (e.g., HackerOne, Bugcrowd). It might be "good enough" if:
 
 1. **Good Public Communication**
 
@@ -87,7 +87,7 @@ Below are **rapidly actionable** ways to evolve beyond a standard disclosure pol
 
 1. **Publish Summary of Findings**
 
-   - Periodically share anonymized or high-level results of vulnerability disclosures, illustrating how quickly you resolved them.
+   - Periodically share anonymised or high-level results of vulnerability disclosures, illustrating how quickly you resolved them.
    - Builds trust with citizens or partner agencies.
 
 1. **Combine with Automated Tools**
@@ -100,7 +100,7 @@ By defining clear internal SLAs, integrating vulnerability disclosures into dev 
 
 #### **How to determine if this good enough**
 
-Your organization invests in standard security scanning (e.g., SAST, DAST, container scans) as part of CI/CD or separate regular testing, plus periodic manual assessments. This is likely "good enough" if:
+Your organisation invests in standard security scanning (e.g., SAST, DAST, container scans) as part of CI/CD or separate regular testing, plus periodic manual assessments. This is likely "good enough" if:
 
 1. **Continuous Improvement**
 
@@ -134,9 +134,9 @@ Below are **rapidly actionable** ways to enhance scanning and regular assessment
    - Forward scanning results to a SIEM (e.g., [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP Chronicle](https://cloud.google.com/chronicle), or [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/)) for correlation with logs:
      - Helps identify patterns or repeated vulnerabilities.
 
-1. **Prioritize with Risk Scoring**
+1. **Prioritise with Risk Scoring**
 
-   - Tag vulnerabilities by severity and usage context. Tackle high-severity, widely used dependencies first, referencing [NCSC guidelines on vulnerability prioritization](https://www.ncsc.gov.uk/).
+   - Tag vulnerabilities by severity and usage context. Tackle high-severity, widely used dependencies first, referencing [NCSC guidelines on vulnerability prioritisation](https://www.ncsc.gov.uk/).
 
 1. **Publish Shared "Security Scorecards"**
    - Departments or teams see summary risk/vulnerability data. Encourages knowledge sharing and a culture of continuous improvement.
@@ -147,7 +147,7 @@ By broadening scanning layers, shifting to more frequent scans, integrating resu
 
 #### **How to determine if this good enough**
 
-Your organization has a dedicated security function or SOC actively hunting for suspicious activity, not just waiting for automated scanners. It might be "good enough" if:
+Your organisation has a dedicated security function or SOC actively hunting for suspicious activity, not just waiting for automated scanners. It might be "good enough" if:
 
 1. **Threat Intelligence Feeds**
 
@@ -186,16 +186,16 @@ Below are **rapidly actionable** methods to refine proactive threat hunting and 
      - [GOV.UK and NCSC programs for cross-department threat intel collaboration](https://www.ncsc.gov.uk/).
 
 1. **Expand Zero-Trust Microsegmentation**
-   - Combine threat hunting with per-service or per-workload identity controls, so once an anomaly is found, lateral movement is minimized:
+   - Combine threat hunting with per-service or per-workload identity controls, so once an anomaly is found, lateral movement is minimised:
      - referencing [NCSC zero trust or NIST SP 800-207 frameworks](https://csrc.nist.gov/).
 
 By introducing purple teaming, automating quarantine procedures, ensuring forensic readiness, collaborating on threat intel across agencies, and adopting zero-trust microsegmentation, you deepen your proactive stance and expedite incident responses.
 
-### **Comprehensive Security Operations with Red/Purple Teams:** Utilization of red teams (offensive security) and purple teams (combined offensive and defensive) for a full-spectrum security assessment. An empowered Security Operations Center (SOC) conducts at least annual and major change-based IT Health Checks (ITHC). Analysts prioritize and coordinate remediation of high-severity issues, with many mitigation actions automated and event-triggered.
+### **Comprehensive Security Operations with Red/Purple Teams:** Utilisation of red teams (offensive security) and purple teams (combined offensive and defensive) for a full-spectrum security assessment. An empowered Security Operations Center (SOC) conducts at least annual and major change-based IT Health Checks (ITHC). Analysts prioritise and coordinate remediation of high-severity issues, with many mitigation actions automated and event-triggered.
 
 #### **How to determine if this good enough**
 
-At this top maturity level, your organization invests in continuous offensive testing and advanced SOC operations. It’s likely "good enough" if:
+At this top maturity level, your organisation invests in continuous offensive testing and advanced SOC operations. It’s likely "good enough" if:
 
 1. **Extensive Validation**
 
@@ -205,18 +205,18 @@ At this top maturity level, your organization invests in continuous offensive te
 
    - The SOC actively hunts threats, triages vulnerabilities, and automates mitigations for known patterns.
 
-1. **Organizational Priority**
+1. **Organisational Priority**
    - Leadership supports ongoing security testing budgets, responding promptly to critical findings.
 
 Still, you might refine multi-cloud threat detection, adopt advanced AI-based threat analysis, or integrate cross-public-sector threat sharing. [NCSC’s advanced operational resilience guidelines](https://www.ncsc.gov.uk/) and [NIST SP 800-137 for continuous monitoring](https://csrc.nist.gov/) encourage iterative expansions.
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to optimize comprehensive security operations:
+Below are **rapidly actionable** ways to optimise comprehensive security operations:
 
 1. **Incorporate HPC/AI Security**
 
-   - If you run HPC or AI/ML workloads, ensure specialized testing in these unique environments:
+   - If you run HPC or AI/ML workloads, ensure specialised testing in these unique environments:
      - referencing [AWS HPC Competency](https://aws.amazon.com/hpc/), [Azure HPC](https://learn.microsoft.com/en-us/azure/hpc-cache/), [GCP HPC solutions](https://cloud.google.com/hpc), or [OCI HPC](https://www.oracle.com/cloud/free/oci-training/), plus relevant HPC security guidelines.
 
 1. **Include Third-Party Supply Chain**
@@ -239,4 +239,4 @@ Below are **rapidly actionable** ways to optimize comprehensive security operati
 
 By adopting HPC/AI-targeted checks, incorporating suppliers in red team exercises, unifying multi-cloud threat intelligence, collaborating across public sector units, and reinforcing zero-trust initiatives, you further enhance your holistic security operations. This ensures comprehensive, proactive defense against sophisticated threats and misconfigurations in the UK public sector context.
 
-**Keep doing what you’re doing,** and consider blogging or opening pull requests to share your advanced security operations approaches. This knowledge supports other UK public sector organizations in achieving robust threat/vulnerability management and protective monitoring aligned with NCSC, NIST, and GOV.UK best practices.
+**Keep doing what you’re doing,** and consider blogging or opening pull requests to share your advanced security operations approaches. This knowledge supports other UK public sector organisations in achieving robust threat/vulnerability management and protective monitoring aligned with NCSC, NIST, and GOV.UK best practices.

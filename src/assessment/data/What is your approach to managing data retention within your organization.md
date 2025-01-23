@@ -1,19 +1,19 @@
 ---
-title: What is your approach to managing data retention within your organization?
+title: What is your approach to managing data retention within your organisation?
 tags: data
 eleventyNavigation:
   parent: data
 ---
 
-### **Organization-Level Policy Awareness:** Data retention policies are defined at the organization level, and all projects/programs are aware of their specific responsibilities.
+### **Organisation-Level Policy Awareness:** Data retention policies are defined at the organisation level, and all projects/programs are aware of their specific responsibilities.
 
 #### **How to determine if this good enough**
 
-If your entire organization has a defined data retention policy—aligning with UK legislative requirements (such as the Data Protection Act 2018, UK GDPR) or departmental mandates—and all relevant teams know they must comply, you might consider this stage "good enough" under these conditions:
+If your entire organisation has a defined data retention policy—aligning with UK legislative requirements (such as the Data Protection Act 2018, UK GDPR) or departmental mandates—and all relevant teams know they must comply, you might consider this stage "good enough" under these conditions:
 
 1. **Clear, Written Policy**
 
-   - Your organization publishes retention durations for various data types, including official government data, personal data, or any data with a defined statutory retention period.
+   - Your organisation publishes retention durations for various data types, including official government data, personal data, or any data with a defined statutory retention period.
 
 1. **Widespread Awareness**
 
@@ -29,15 +29,15 @@ If your entire organization has a defined data retention policy—aligning with 
    - You have a "one-size-fits-all" approach to retention because your data usage is not highly diverse.
    - The overhead of implementing multiple retention categories might not be warranted yet.
 
-In short, if you maintain a straightforward environment and your leadership sees no pressing issues with data retention, organization-level policy awareness might suffice. However, for many UK public sector bodies, data sprawl and diverse workloads can quickly complicate retention, making manual approaches risky.
+In short, if you maintain a straightforward environment and your leadership sees no pressing issues with data retention, organisation-level policy awareness might suffice. However, for many UK public sector bodies, data sprawl and diverse workloads can quickly complicate retention, making manual approaches risky.
 
 #### **How to do better**
 
-Below are **rapidly actionable** steps to strengthen your organizational policy awareness and transition toward more robust management:
+Below are **rapidly actionable** steps to strengthen your organisational policy awareness and transition toward more robust management:
 
 1. **Map Policy to Actual Cloud Storage**
 
-   - Encourage each team to identify where their data resides and apply your organization’s retention timeline:
+   - Encourage each team to identify where their data resides and apply your organisation’s retention timeline:
      - [AWS: Tag resources (e.g., "Retention=3Years"), or use AWS Config rules to check if S3 Lifecycle policies exist](https://docs.aws.amazon.com/AmazonS3/latest/userguide/tagging-and-policies.html)
      - [Azure: Use Resource Tags or Azure Policy to track "RetentionDuration," especially for blob storage](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure)
      - [GCP: Set labels for buckets or BigQuery datasets with "RetentionPeriod" and regularly check them with Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/creating-managing-labels)
@@ -72,7 +72,7 @@ Below are **rapidly actionable** steps to strengthen your organizational policy 
    - Brief senior leadership, legal teams, and information governance officers on any proposed changes or automation.
    - Gains their support by showing how these improvements reduce compliance risk and free up unnecessary storage costs.
 
-By proactively mapping retention policies to actual data, implementing simple lifecycle rules, and guiding teams with clear, scenario-based instructions, you reinforce "Organization-Level Policy Awareness" with tangible, enforceable practices.
+By proactively mapping retention policies to actual data, implementing simple lifecycle rules, and guiding teams with clear, scenario-based instructions, you reinforce "Organisation-Level Policy Awareness" with tangible, enforceable practices.
 
 ### **Compliance Attestation by Projects:** Projects and programs are not only aware but also required to formally attest their compliance with the data retention policies.
 
@@ -118,7 +118,7 @@ Below are **rapidly actionable** ways to ensure attestations translate to real a
        - [GCP DLP or Cloud Functions scripts that query Cloud Storage retention settings vs. claimed policies](https://cloud.google.com/sensitive-data-protection/docs/dlp-gcs)
        - [OCI Cloud Shell + CLI scripts or Data Catalog scans verifying lifecycle alignment](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/usinglifecyclepolicies.htm)
 
-1. **Centralize Retention Documentation**
+1. **Centralise Retention Documentation**
 
    - Instead of scattered project documents, maintain a central registry or dashboard capturing:
      - Project name, data types, retention period, date of last attestation.
@@ -133,13 +133,13 @@ Below are **rapidly actionable** ways to ensure attestations translate to real a
    - Provide teams a bite-sized eLearning or workshop on how to configure retention in their chosen cloud environment.
    - This ensures they know the practical steps needed, so attestation isn’t just paperwork.
 
-By coupling attestation with actual configuration checks, spot audits, centralized documentation, and relevant training, you boost confidence that claims of compliance match reality.
+By coupling attestation with actual configuration checks, spot audits, centralised documentation, and relevant training, you boost confidence that claims of compliance match reality.
 
 ### **Regular Audits and Reviews:** Data retention practices are periodically audited and reviewed for compliance, with findings addressed through action plans.
 
 #### **How to determine if this good enough**
 
-Once regular audits and reviews are in place, your organization systematically verifies whether teams are adhering to the mandated retention policies. This can be "good enough" if:
+Once regular audits and reviews are in place, your organisation systematically verifies whether teams are adhering to the mandated retention policies. This can be "good enough" if:
 
 1. **Scheduled, Transparent Audits**
 
@@ -173,7 +173,7 @@ Below are **rapidly actionable** ways to strengthen your audit and review proces
 
 1. **Include Retention in Security Scans**
 
-   - Many organizations focus on security misconfigurations but forget data retention. Integrate retention checks into:
+   - Many organisations focus on security misconfigurations but forget data retention. Integrate retention checks into:
      - [AWS Security Hub with custom standards referencing lifecycle settings](https://docs.aws.amazon.com/securityhub/latest/userguide/standards-reference.html)
      - [Azure Microsoft Defender for Cloud (formerly Security Center) with custom policy definitions around retention](https://learn.microsoft.com/en-us/azure/defender-for-cloud/create-custom-recommendations)
      - [GCP Security Command Center hooking into resource metadata for retention anomalies](https://cloud.google.com/security-command-center/docs/how-to/asset-inventory)
@@ -182,7 +182,7 @@ Below are **rapidly actionable** ways to strengthen your audit and review proces
 
 1. **Track Action Plans to Closure**
 
-   - Use a centralized ticketing or workflow tool (e.g., Jira, ServiceNow) to capture audit findings, track remediation, and confirm sign-off.
+   - Use a centralised ticketing or workflow tool (e.g., Jira, ServiceNow) to capture audit findings, track remediation, and confirm sign-off.
    - Tag each ticket with "Data Retention Issue" for easy reporting and trend analysis.
 
 1. **Publish Trends and Success Metrics**
@@ -196,11 +196,11 @@ Below are **rapidly actionable** ways to strengthen your audit and review proces
 
 By automating aspects of the review process, embedding retention checks into security tools, and systematically remediating findings, you evolve from static cyclical audits to a dynamic, ongoing compliance posture.
 
-### **Inclusion in Risk Management:** Edge cases and exceptions in data retention are specifically identified and managed within the organization’s risk register.
+### **Inclusion in Risk Management:** Edge cases and exceptions in data retention are specifically identified and managed within the organisation’s risk register.
 
 #### **How to determine if this good enough**
 
-At this stage, your organization recognizes that not all data fits neatly into standard retention policies. Some sensitive projects or legal hold scenarios might require exceptions. You might be "good enough" if:
+At this stage, your organisation recognises that not all data fits neatly into standard retention policies. Some sensitive projects or legal hold scenarios might require exceptions. You might be "good enough" if:
 
 1. **Risk Awareness**
 
@@ -217,7 +217,7 @@ At this stage, your organization recognizes that not all data fits neatly into s
 1. **Traceable Accountability**
    - Each exception has an owner who ensures compliance with any additional safeguards (e.g., encryption, restricted access).
 
-Such a model keeps compliance tight, as unusual retention cases are formally recognized and managed. Still, some organizations lack robust automation or real-time checks that link risk registers to actual data settings, leaving room for human error.
+Such a model keeps compliance tight, as unusual retention cases are formally recognised and managed. Still, some organisations lack robust automation or real-time checks that link risk registers to actual data settings, leaving room for human error.
 
 #### **How to do better**
 
@@ -245,7 +245,7 @@ Below are **rapidly actionable** ways to embed retention exceptions deeper into 
 1. **Reevaluate Exception Cases in Each Audit**
 
    - Incorporate exception checks into your regular data retention audits:
-     - Confirm the exception is still valid and authorized.
+     - Confirm the exception is still valid and authorised.
      - If it’s no longer needed, remove it and revert to standard retention policies.
 
 1. **Leverage Encryption or Extra Security for Exceptions**
@@ -262,7 +262,7 @@ By systematically capturing exceptions as risks, labeling them in cloud resource
 
 #### **How to determine if this good enough**
 
-In this final, mature stage, your organization uses automation to continuously track, enforce, and remediate data retention policies across all environments. It’s generally considered "good enough" if:
+In this final, mature stage, your organisation uses automation to continuously track, enforce, and remediate data retention policies across all environments. It’s generally considered "good enough" if:
 
 1. **Policy-as-Code**
 
@@ -312,7 +312,7 @@ Even at the top maturity level, here are **rapidly actionable** ways to refine y
      - [OCI Autonomous Database or DB System backups, Logging service retention, Block volume backups lifecycle](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 1. **Adopt Predictive Monitoring for Storage Growth**
-1. **Utilize Predictive Analytics for Data Growth and Anomaly Detection**
+1. **Utilise Predictive Analytics for Data Growth and Anomaly Detection**
 
    - Employ predictive analytics to forecast data growth and identify anomalies when retention rules aren't effective:
      - [AWS QuickSight for analyzing S3 or RDS usage trends over time](https://docs.aws.amazon.com/quicksight/latest/user/forecast-function.html)
@@ -324,6 +324,6 @@ Even at the top maturity level, here are **rapidly actionable** ways to refine y
    - As your department adopts new AI workloads, IoT sensor data, or unstructured media, confirm your automated retention tools can handle these new data flows.
    - Keep stakeholder alignment: if legislation changes (e.g., new FOI or data privacy rules), swiftly update your policy-as-code approach.
 
-By aligning your advanced automation with data classification, extending coverage to all storage services, and employing event-driven remediation, you maintain an agile, reliable data retention program that rapidly adapts to technology or policy shifts. This ensures your UK public sector organization upholds compliance, minimizes data sprawl, and demonstrates best-in-class stewardship of public data.
+By aligning your advanced automation with data classification, extending coverage to all storage services, and employing event-driven remediation, you maintain an agile, reliable data retention program that rapidly adapts to technology or policy shifts. This ensures your UK public sector organisation upholds compliance, minimises data sprawl, and demonstrates best-in-class stewardship of public data.
 
 **Keep doing what you’re doing,** and consider documenting or blogging about your journey to automated data retention enforcement. Submit pull requests to this guidance or share your success stories with the broader UK public sector community to help others achieve similarly robust data retention practices.

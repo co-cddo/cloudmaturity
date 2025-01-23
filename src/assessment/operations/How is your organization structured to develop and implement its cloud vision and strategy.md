@@ -1,5 +1,5 @@
 ---
-title: How is your organization structured to develop and implement its cloud vision and strategy?
+title: How is your organisation structured to develop and implement its cloud vision and strategy?
 tags: operations
 eleventyNavigation:
   parent: operations
@@ -9,24 +9,24 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization may run cloud operations without a formal cloud-oriented structure, relying on legacy or on-prem roles. This might be considered "good enough" if:
+Your organisation may run cloud operations without a formal cloud-oriented structure, relying on legacy or on-prem roles. This might be considered "good enough" if:
 
 1. **Low Cloud Adoption**
 
-   - You only use minimal cloud services for pilot or non-critical workloads, making specialized cloud roles seem unnecessary.
+   - You only use minimal cloud services for pilot or non-critical workloads, making specialised cloud roles seem unnecessary.
 
 1. **Stable or Limited Growth**
 
-   - Infrastructure demands rarely change, so a dedicated cloud team is not yet recognized as a priority.
+   - Infrastructure demands rarely change, so a dedicated cloud team is not yet recognised as a priority.
 
 1. **No Formal Strategy**
-   - Senior leadership or departmental heads are content with the status quo. No urgent requirement (e.g., cost optimization, advanced digital services) drives a need for specialized cloud skills.
+   - Senior leadership or departmental heads are content with the status quo. No urgent requirement (e.g., cost optimisation, advanced digital services) drives a need for specialised cloud skills.
 
-However, lacking a dedicated cloud focus often results in uncoordinated efforts, missed security best practices, and slow adoption of modern technologies. [NCSC cloud security guidelines](https://www.ncsc.gov.uk/collection/cloud-security) encourage establishing clear accountability and specialized skills for public sector cloud operations.
+However, lacking a dedicated cloud focus often results in uncoordinated efforts, missed security best practices, and slow adoption of modern technologies. [NCSC cloud security guidelines](https://www.ncsc.gov.uk/collection/cloud-security) encourage establishing clear accountability and specialised skills for public sector cloud operations.
 
 #### **How to do better**
 
-Below are **rapidly actionable** steps to start formalizing a cloud-oriented approach:
+Below are **rapidly actionable** steps to start formalising a cloud-oriented approach:
 
 1. **Identify a Cloud Advocate**
 
@@ -39,7 +39,7 @@ Below are **rapidly actionable** steps to start formalizing a cloud-oriented app
 
 1. **Create a Cloud Starter Doc**
 
-   - Summarize the organization’s existing cloud usage, known gaps, and next steps for improvement.
+   - Summarise the organisation’s existing cloud usage, known gaps, and next steps for improvement.
    - Include references to [GOV.UK’s technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice) or [NIST’s cloud computing guidelines](https://csrc.nist.gov/projects/cloud-computing) for alignment.
 
 1. **Pilot a Small Cross-Functional Team**
@@ -47,15 +47,15 @@ Below are **rapidly actionable** steps to start formalizing a cloud-oriented app
    - If you have an upcoming project with cloud components, assemble a temporary team from different departments (development, security, finance) to coordinate on cloud decisions.
 
 1. **Define Basic Cloud Roles**
-   - Even without a dedicated cloud team, define who handles security reviews, cost optimization checks, or architectural guidance.
+   - Even without a dedicated cloud team, define who handles security reviews, cost optimisation checks, or architectural guidance.
 
 By designating a cloud advocate, introducing basic cloud knowledge sessions, and forming a small cross-functional group for a pilot project, you lay the groundwork for a more coordinated approach to cloud strategy and operations.
 
-### **Informal Cloud Expertise:** Informal groups or individuals with cloud expertise exist, facilitating some degree of cross-organizational collaboration.
+### **Informal Cloud Expertise:** Informal groups or individuals with cloud expertise exist, facilitating some degree of cross-organisational collaboration.
 
 #### **How to determine if this good enough**
 
-When some staff have cloud knowledge and organically help colleagues, your organization achieves partial cloud collaboration. This may be "good enough" if:
+When some staff have cloud knowledge and organically help colleagues, your organisation achieves partial cloud collaboration. This may be "good enough" if:
 
 1. **Moderate Cloud Adoption**
 
@@ -65,16 +65,16 @@ When some staff have cloud knowledge and organically help colleagues, your organ
 
    - Teams are open to sharing cloud tips and best practices, but there’s no formal structure or authority behind it.
 
-1. **No Pressing Need for Standardization**
+1. **No Pressing Need for Standardisation**
    - Departments might be content with slight variations in cloud usage as long as top-level goals are met.
 
-While better than complete silos, purely informal networks can cause challenges in scaling solutions, ensuring consistent security measures, or presenting a cohesive cloud vision at the organizational level.
+While better than complete silos, purely informal networks can cause challenges in scaling solutions, ensuring consistent security measures, or presenting a cohesive cloud vision at the organisational level.
 
 #### **How to do better**
 
 Below are **rapidly actionable** ideas to strengthen informal cloud expertise:
 
-1. **Formalize a Community of Practice**
+1. **Formalise a Community of Practice**
 
    - Schedule monthly or bi-monthly meetups for cloud practitioners across teams:
      - They can share success stories, approaches to cost management, referencing [AWS Cost Explorer](https://docs.aws.amazon.com/cost-management/latest/userguide/cost-explorer-getting-started.html), [Azure Cost Management](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis), or [GCP Cloud Billing dashboards](https://cloud.google.com/billing/docs/how-to/view-billing-data).
@@ -94,7 +94,7 @@ Below are **rapidly actionable** ideas to strengthen informal cloud expertise:
    - Consider referencing [NIST SP 800-53 controls](https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final) for cloud resource security responsibilities.
 
 1. **Pilot a Small Formal Working Group**
-   - If informal collaboration works well, create a small "Cloud Working Group" recognized by leadership.
+   - If informal collaboration works well, create a small "Cloud Working Group" recognised by leadership.
    - They can propose consistent patterns or cost-saving tips for cross-team usage.
 
 By forming a community of practice, establishing a knowledge base, and beginning minimal governance alignment, you transition from ad hoc experts toward a more structured, widely beneficial cloud strategy.
@@ -107,11 +107,11 @@ At this stage, you’ve established a Cloud Center of Excellence (COE) or simila
 
 1. **Visibility and Authority**
 
-   - The COE is recognized by senior management or departmental leads, shaping cloud-related decisions across the organization.
+   - The COE is recognised by senior management or departmental leads, shaping cloud-related decisions across the organisation.
 
-1. **Standardized Practices**
+1. **Standardised Practices**
 
-   - The COE maintains patterns for infrastructure as code, security baselines, IAM policies, and cost optimization.
+   - The COE maintains patterns for infrastructure as code, security baselines, IAM policies, and cost optimisation.
    - Teams typically consult these guidelines for new cloud projects.
 
 1. **Growing Cloud Adoption**
@@ -133,7 +133,7 @@ Below are **rapidly actionable** strategies to improve a formal Cloud COE:
 
 1. **Extend COE Services**
 
-   - e.g., specialized security reviews, compliance checks referencing [NCSC 14 Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security), or cost optimization workshops that unify departmental approaches.
+   - e.g., specialised security reviews, compliance checks referencing [NCSC 14 Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security), or cost optimisation workshops that unify departmental approaches.
 
 1. **Set up a Community of Practice**
 
@@ -146,9 +146,9 @@ Below are **rapidly actionable** strategies to improve a formal Cloud COE:
 1. **Consult NIST and GOV.UK for Strategy Guidance**
    - e.g., [NIST Cloud Computing Reference Architecture](https://csrc.nist.gov/publications/detail/sp/500-292/final) or [GOV.UK recommendations on technology strategies](https://www.gov.uk/government/publications/technology-code-of-practice) can strengthen your COE's strategic approach.
 
-By delivering self-service solutions, deeper security reviews, and an active cloud community, the COE matures into a vital driver for consistent, secure, and cost-effective cloud adoption across the organization.
+By delivering self-service solutions, deeper security reviews, and an active cloud community, the COE matures into a vital driver for consistent, secure, and cost-effective cloud adoption across the organisation.
 
-### **Integrated Cloud Teams Following COE Standards:** Cloud teams across the organization follow standards and patterns established by the Cloud COE. Cross-functional roles are increasingly common within development teams.
+### **Integrated Cloud Teams Following COE Standards:** Cloud teams across the organisation follow standards and patterns established by the Cloud COE. Cross-functional roles are increasingly common within development teams.
 
 #### **How to determine if this good enough**
 
@@ -160,12 +160,12 @@ Here, the COE’s guidance and patterns have been widely adopted. Project-specif
 
 1. **Broad Collaboration**
 
-   - Teams across the organization share knowledge, follow standard templates, and integrate cloud best practices early in development.
+   - Teams across the organisation share knowledge, follow standard templates, and integrate cloud best practices early in development.
 
 1. **Accelerated Delivery**
    - Because each project leverages proven patterns, time to deliver new cloud-based services is significantly reduced.
 
-Still, certain advanced areas—like fully autonomous product teams or dynamic ephemeral environments—might remain underutilized, and you might expand the COE’s influence further.
+Still, certain advanced areas—like fully autonomous product teams or dynamic ephemeral environments—might remain underutilised, and you might expand the COE’s influence further.
 
 #### **How to do better**
 
@@ -192,13 +192,13 @@ Below are **rapidly actionable** steps to further integrate the COE’s standard
 
 1. **Measure Outcomes and Iterate**
 
-   - Track success metrics: e.g., time to provision environments, frequency of security incidents, cost savings realized by standard patterns.
+   - Track success metrics: e.g., time to provision environments, frequency of security incidents, cost savings realised by standard patterns.
    - Present these metrics in monthly or quarterly leadership updates, aligning with [NCSC operational resilience guidance](https://www.ncsc.gov.uk/).
 
 1. **Improve Cross-Functional Team Composition**
    - Incorporate security engineers and cloud architects directly into product squads for new digital services, reducing handoffs.
 
-By mandating automated compliance checks, fostering a "cloud-first" approach, expanding skill-building labs, and embedding security/architecture roles into each delivery team, you further entrench consistent, effective cloud usage across the public sector organization.
+By mandating automated compliance checks, fostering a "cloud-first" approach, expanding skill-building labs, and embedding security/architecture roles into each delivery team, you further entrench consistent, effective cloud usage across the public sector organisation.
 
 ### **Advanced Cloud COE Operating Model:** The Cloud COE has matured into a comprehensive operating model with fully autonomous, cross-functional teams that include experts in all necessary technology and process domains.
 
@@ -219,7 +219,7 @@ At this final stage, you have a highly sophisticated COE model where product tea
    - Because cross-functional teams handle security, DevOps, architecture, and user needs holistically, new services roll out quickly and reliably.
 
 1. **Data-Driven & Secure**
-   - Cost usage, security posture, and performance metrics are all visible organization-wide, enabling proactive decisions and swift incident response.
+   - Cost usage, security posture, and performance metrics are all visible organisation-wide, enabling proactive decisions and swift incident response.
 
 Though you’re at an advanced state, ongoing adaptation to new cloud technologies, security challenges, or legislative updates remains crucial for sustained leadership in digital transformation.
 
@@ -229,7 +229,7 @@ Below are **rapidly actionable** ways to refine an already advanced operating mo
 
 1. **Introduce FinOps Practices**
 
-   - Link cost optimization more tightly with developer workflows:
+   - Link cost optimisation more tightly with developer workflows:
      - [AWS Cost Explorer or AWS Budgets integrated into Slack/Teams alerts for cost anomalies](https://docs.aws.amazon.com/cost-management/latest/userguide/cost-explorer-getting-started.html)
      - [Azure Cost Management with real-time dashboards for DevOps squads to see cost implications of their deployments](https://docs.microsoft.com/en-us/azure/cost-management-billing/costs/quick-acm-cost-analysis)
      - [GCP Billing Export + Looker Studio or BigQuery for self-service cost visibility](https://cloud.google.com/billing/docs/how-to/view-billing-data)
@@ -243,7 +243,7 @@ Below are **rapidly actionable** ways to refine an already advanced operating mo
 1. **Adopt Policy-as-Code**
 
    - Extend your automated governance:
-     - e.g., using [Open Policy Agent (OPA) or AWS Service Control Policies, Azure Policy, GCP Organization Policy, or OCI Security Zones] to ensure consistent rules across the entire estate.
+     - e.g., using [Open Policy Agent (OPA) or AWS Service Control Policies, Azure Policy, GCP Organisation Policy, or OCI Security Zones] to ensure consistent rules across the entire estate.
 
 1. **Engage in Cross-Government Collaboration**
 

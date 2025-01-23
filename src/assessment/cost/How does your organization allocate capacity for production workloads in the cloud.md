@@ -1,15 +1,15 @@
 ---
-title: How does your organization allocate capacity for production workloads in the cloud?
+title: How does your organisation allocate capacity for production workloads in the cloud?
 tags: cost
 eleventyNavigation:
   parent: cost
 ---
 
-### **Peak Provisioning:** Capacity is typically provisioned based on peak usage estimates, potentially leading to underutilization during off-peak times.
+### **Peak Provisioning:** Capacity is typically provisioned based on peak usage estimates, potentially leading to underutilisation during off-peak times.
 
 #### **How to determine if this good enough**
 
-When an organization provisions capacity solely based on the highest possible load (peak usage), it generally results in:
+When an organisation provisions capacity solely based on the highest possible load (peak usage), it generally results in:
 
 1. **High Reliance on Worst-Case Scenarios**
 
@@ -19,7 +19,7 @@ When an organization provisions capacity solely based on the highest possible lo
 1. **Predictable But Potentially Wasteful Costs**
 
    - By maintaining peak capacity around the clock, your spend is predictable, but you may overpay substantially during off-peak hours.
-   - This might be acceptable if your budget is not severely constrained or if your leadership prioritizes simplicity over optimization.
+   - This might be acceptable if your budget is not severely constrained or if your leadership prioritises simplicity over optimisation.
 
 1. **Minimal Operational Complexity**
 
@@ -47,7 +47,7 @@ Below are **rapidly actionable** steps to reduce waste and move beyond provision
 1. **Pilot Scheduled Shutdowns for Non-Critical Systems**
 
    - Identify development and testing environments or batch-processing servers that don’t require 24/7 availability:
-     - Utilize [AWS Instance Scheduler](https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/) to automate start and stop times for Amazon EC2 and RDS instances.
+     - Utilise [AWS Instance Scheduler](https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/) to automate start and stop times for Amazon EC2 and RDS instances.
      - Implement [Azure Automation's Start/Stop VMs v2](https://learn.microsoft.com/en-us/azure/automation/automation-solution-vm-management) to manage virtual machines on user-defined schedules.
      - Apply [Google Cloud's Instance Schedules](https://cloud.google.com/compute/docs/instances/schedule-instance-start-stop) to automatically start and stop Compute Engine instances based on a schedule.
      - Use [Oracle Cloud Infrastructure's Resource Scheduler](https://docs.oracle.com/en-us/iaas/Content/resource-scheduler/concepts/resourcescheduler-overview.htm) to manage compute instances' power states according to defined schedules.
@@ -57,13 +57,13 @@ Below are **rapidly actionable** steps to reduce waste and move beyond provision
 
    - Even if you continue peak provisioning for mission-critical workloads, consider selecting a smaller or non-critical service to test autoscaling:
 
-     - [AWS Auto Scaling Groups – basic CPU-based triggers](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html): Amazon EC2 Auto Scaling allows you to automatically add or remove EC2 instances based on CPU utilization or other metrics, ensuring your application scales to meet demand.
+     - [AWS Auto Scaling Groups – basic CPU-based triggers](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html): Amazon EC2 Auto Scaling allows you to automatically add or remove EC2 instances based on CPU utilisation or other metrics, ensuring your application scales to meet demand.
 
      - [Azure Virtual Machine Scale Sets – scale by CPU or memory usage](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview): Azure Virtual Machine Scale Sets enable you to create and manage a group of load-balanced VMs, automatically scaling the number of instances based on CPU or memory usage to match your workload demands.
 
-     - [GCP Managed Instance Groups – autoscale based on utilization thresholds](https://cloud.google.com/compute/docs/autoscaler): Google Cloud's Managed Instance Groups provide autoscaling capabilities that adjust the number of VM instances based on utilization metrics, such as CPU usage, to accommodate changing workloads.
+     - [GCP Managed Instance Groups – autoscale based on utilisation thresholds](https://cloud.google.com/compute/docs/autoscaler): Google Cloud's Managed Instance Groups provide autoscaling capabilities that adjust the number of VM instances based on utilsation metrics, such as CPU usage, to accommodate changing workloads.
 
-     - [OCI Instance Pool Autoscaling – CPU or custom metrics triggers](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm): Oracle Cloud Infrastructure's Instance Pool Autoscaling allows you to automatically adjust the number of instances in a pool based on CPU utilization or custom metrics, helping to optimize performance and cost.
+     - [OCI Instance Pool Autoscaling – CPU or custom metrics triggers](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm): Oracle Cloud Infrastructure's Instance Pool Autoscaling allows you to automatically adjust the number of instances in a pool based on CPU utilisation or custom metrics, helping to optimise performance and cost.
 
 Implementing autoscaling in a controlled environment allows you to evaluate its benefits and challenges, providing valuable insights before considering broader adoption for more critical workloads.
 
@@ -77,7 +77,7 @@ Implementing autoscaling in a controlled environment allows you to evaluate its 
 
      - [GCP Committed Use Discounts](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts): Google Cloud offers Committed Use Discounts, enabling you to commit to a certain amount of usage for a 1- or 3-year term, which can lead to substantial savings for steady-state or predictable workloads.
 
-     - [OCI Universal Credits](https://www.oracle.com/cloud/pricing/): Oracle Cloud Infrastructure provides Universal Credits, allowing you to utilize any OCI platform service in any region with a flexible consumption model. By purchasing a sufficient number of credits, you can benefit from volume discounts and predictable billing, which is advantageous for maintaining high-capacity workloads.
+     - [OCI Universal Credits](https://www.oracle.com/cloud/pricing/): Oracle Cloud Infrastructure provides Universal Credits, allowing you to utilise any OCI platform service in any region with a flexible consumption model. By purchasing a sufficient number of credits, you can benefit from volume discounts and predictable billing, which is advantageous for maintaining high-capacity workloads.
 
    - Implementing these discount programs won’t eliminate over-provisioning but can soften the budget impact.
 
@@ -101,9 +101,9 @@ This stage represents an improvement over peak provisioning: you size your envir
 1. **Comfortable Manual Operations**
 
    - You have a change-management process that can quickly add or remove capacity on a known schedule (e.g., scaling up ahead of local council tax billing cycles).
-   - If your staff can handle these tasks promptly, the organization might see no urgency in adopting automated approaches.
+   - If your staff can handle these tasks promptly, the organisation might see no urgency in adopting automated approaches.
 
-1. **Budgets and Costs Partially Optimized**
+1. **Budgets and Costs Partially Optimised**
 
    - By aligning capacity to average usage (rather than peak), you reduce some waste. You might see moderate cost savings compared to peak provisioning.
    - The cost overhead from less frequent or smaller over-provisioning might be tolerable.
@@ -122,7 +122,7 @@ Here are **rapidly actionable** steps to evolve from manual seasonal scaling to 
 
    - If you anticipate seasonal peaks (e.g., quarterly public reporting load), replace manual processes with scheduled scripts to ensure timely scaling and prevent missed scale-downs:
 
-     - **AWS**: Utilize [AWS Step Functions](https://aws.amazon.com/step-functions/) in conjunction with [Amazon EventBridge Scheduler](https://docs.aws.amazon.com/step-functions/latest/dg/using-eventbridge-scheduler.html) to automate the start and stop of EC2 instances based on a defined schedule.
+     - **AWS**: Utilise [AWS Step Functions](https://aws.amazon.com/step-functions/) in conjunction with [Amazon EventBridge Scheduler](https://docs.aws.amazon.com/step-functions/latest/dg/using-eventbridge-scheduler.html) to automate the start and stop of EC2 instances based on a defined schedule.
 
      - **Azure**: Implement [Azure Automation Runbooks](https://learn.microsoft.com/en-us/azure/automation/automation-runbook-types) within Automation Accounts to create scripts that manage the scaling of resources during peak periods.
 
@@ -130,7 +130,7 @@ Here are **rapidly actionable** steps to evolve from manual seasonal scaling to 
 
      - **Oracle Cloud Infrastructure (OCI)**: Use [Resource Manager](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/resourcemanager.htm) stacks combined with [Cron](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/schedulinginstanceactions.htm) tasks to schedule scaling events, ensuring resources are appropriately managed during peak times.
 
-   - Automating these processes ensures that scaling actions occur as planned, reducing the risk of human error and optimizing resource utilization during peak and off-peak periods.
+   - Automating these processes ensures that scaling actions occur as planned, reducing the risk of human error and optimising resource utilisation during peak and off-peak periods.
 
 1. **Identify and Enforce "Scale-Back" Windows**
 
@@ -144,23 +144,23 @@ Here are **rapidly actionable** steps to evolve from manual seasonal scaling to 
 
      - **AWS**: Implement [Auto Scaling Groups](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html) with CPU-based or request-based triggers to automatically adjust the number of EC2 instances handling your service's load.
 
-     - **Azure**: Utilize [Virtual Machine Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/) or the [AKS Cluster Autoscaler](https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler-overview) to manage the scaling of virtual machines or Kubernetes clusters for your busiest microservices.
+     - **Azure**: Utilise [Virtual Machine Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/) or the [AKS Cluster Autoscaler](https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler-overview) to manage the scaling of virtual machines or Kubernetes clusters for your busiest microservices.
 
      - **Google Cloud Platform (GCP)**: Use [Managed Instance Groups](https://cloud.google.com/compute/docs/autoscaler) with load-based autoscaling to dynamically adjust the number of instances serving your front-end application based on real-time demand.
 
-     - **Oracle Cloud Infrastructure (OCI)**: Apply [Instance Pool Autoscaling](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm) or the [OKE Cluster Autoscaler](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengautoscaling.htm) to automatically scale a specific containerized service in response to workload changes.
+     - **Oracle Cloud Infrastructure (OCI)**: Apply [Instance Pool Autoscaling](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm) or the [OKE Cluster Autoscaler](https://docs.oracle.com/en-us/iaas/Content/ContEng/Tasks/contengautoscaling.htm) to automatically scale a specific containerised service in response to workload changes.
 
-   - Implementing autoscaling on a targeted component allows you to observe immediate benefits, such as improved resource utilization and cost efficiency, which can encourage broader adoption across your infrastructure.
+   - Implementing autoscaling on a targeted component allows you to observe immediate benefits, such as improved resource utilisation and cost efficiency, which can encourage broader adoption across your infrastructure.
 
 1. **Consider Serverless for Spiky Components**
 
    - If certain tasks run sporadically (e.g., monthly data transformation or PDF generation), investigate moving them to event-driven or serverless solutions:
 
-     - **AWS**: Utilize [AWS Lambda](https://aws.amazon.com/lambda/) for event-driven functions or [AWS Fargate](https://aws.amazon.com/fargate/) for running containers without managing servers. AWS Lambda is ideal for short-duration, event-driven tasks, while AWS Fargate is better suited for longer-running applications and tasks requiring intricate orchestration.
+     - **AWS**: Utilise [AWS Lambda](https://aws.amazon.com/lambda/) for event-driven functions or [AWS Fargate](https://aws.amazon.com/fargate/) for running containers without managing servers. AWS Lambda is ideal for short-duration, event-driven tasks, while AWS Fargate is better suited for longer-running applications and tasks requiring intricate orchestration.
 
-     - **Azure**: Implement [Azure Functions](https://azure.microsoft.com/en-us/products/functions/) for serverless compute, [Logic Apps](https://azure.microsoft.com/en-us/products/logic-apps/) for workflow automation, or [Container Apps](https://azure.microsoft.com/en-us/products/container-apps/) for running microservices and containerized applications. Azure Logic Apps can automate workflows and business processes, making them suitable for scheduled tasks.
+     - **Azure**: Implement [Azure Functions](https://azure.microsoft.com/en-us/products/functions/) for serverless compute, [Logic Apps](https://azure.microsoft.com/en-us/products/logic-apps/) for workflow automation, or [Container Apps](https://azure.microsoft.com/en-us/products/container-apps/) for running microservices and containerised applications. Azure Logic Apps can automate workflows and business processes, making them suitable for scheduled tasks.
 
-     - **Google Cloud Platform (GCP)**: Deploy [Cloud Functions](https://cloud.google.com/functions) for lightweight event-driven functions or [Cloud Run](https://cloud.google.com/run) for running containerized applications in a fully managed environment. Cloud Run is suitable for web-based workloads, REST or gRPC APIs, and internal custom back-office apps.
+     - **Google Cloud Platform (GCP)**: Deploy [Cloud Functions](https://cloud.google.com/functions) for lightweight event-driven functions or [Cloud Run](https://cloud.google.com/run) for running containerised applications in a fully managed environment. Cloud Run is suitable for web-based workloads, REST or gRPC APIs, and internal custom back-office apps.
 
      - **Oracle Cloud Infrastructure (OCI)**: Use [OCI Functions](https://docs.oracle.com/en-us/iaas/Content/Functions/Concepts/functionsoverview.htm) for on-demand, serverless workloads. OCI Functions is a fully managed, multi-tenant, highly scalable, on-demand, Functions-as-a-Service platform built on enterprise-grade infrastructure.
 
@@ -168,9 +168,9 @@ Here are **rapidly actionable** steps to evolve from manual seasonal scaling to 
 
 1. **Monitor and Alert on Usage Deviations**
 
-   - Utilize cost and performance alerts to detect unexpected surges or prolonged idle resources:
+   - Utilise cost and performance alerts to detect unexpected surges or prolonged idle resources:
 
-     - **AWS**: Implement [AWS Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/) to set custom cost and usage thresholds, receiving alerts when limits are approached or exceeded. Additionally, use [Amazon CloudWatch's anomaly detection](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Anomaly_Detection.html) to monitor metrics and identify unusual patterns in resource utilization.
+     - **AWS**: Implement [AWS Budgets](https://aws.amazon.com/aws-cost-management/aws-budgets/) to set custom cost and usage thresholds, receiving alerts when limits are approached or exceeded. Additionally, use [Amazon CloudWatch's anomaly detection](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Anomaly_Detection.html) to monitor metrics and identify unusual patterns in resource utilisation.
 
      - **Azure**: Set up [Azure Monitor](https://azure.microsoft.com/en-us/products/monitor/) alerts to track resource performance and configure cost anomaly alerts within [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/understand/analyze-unexpected-charges) to detect and notify you of unexpected spending patterns.
 
@@ -178,11 +178,11 @@ Here are **rapidly actionable** steps to evolve from manual seasonal scaling to 
 
      - **Oracle Cloud Infrastructure (OCI)**: Establish budgets and set up alert rules in [OCI Cost Management](https://docs.oracle.com/en-us/iaas/Content/Billing/Tasks/managingalertrules.htm) to monitor spending. Additionally, configure [OCI Alarms](https://docs.oracle.com/en/solutions/implement-oci-observability-monitoring/configure-alarms-and-notifications1.html) with notifications to detect and respond to unusual resource usage patterns.
 
-   - Implementing these alerts enables quicker responses to anomalies, reducing the reliance on manual monitoring and helping to maintain optimal resource utilization and cost efficiency.
+   - Implementing these alerts enables quicker responses to anomalies, reducing the reliance on manual monitoring and helping to maintain optimal resource utilisation and cost efficiency.
 
 By automating your manual scaling processes, exploring partial autoscaling, and shifting spiky tasks to serverless, you unlock more agility and cost efficiency. This approach helps ensure you’re not left scrambling if usage deviates from seasonal patterns.
 
-### **Basic Autoscaling for Certain Components:** Autoscaling is enabled for some cloud components, primarily based on simple capacity or utilization metrics.
+### **Basic Autoscaling for Certain Components:** Autoscaling is enabled for some cloud components, primarily based on simple capacity or utilisation metrics.
 
 #### **How to determine if this good enough**
 
@@ -205,9 +205,9 @@ At this stage, you’ve moved beyond purely manual methods: some of your workloa
 
 1. **Partially Controlled Costs**
    - Because your most dynamic workloads scale automatically, you see fewer cost overruns from over-provisioning.
-   - You still might maintain some underutilized capacity for other components, but it’s acceptable given your risk appetite.
+   - You still might maintain some underutilised capacity for other components, but it’s acceptable given your risk appetite.
 
-If your environment only sees moderate changes in demand and leadership doesn’t demand full elasticity, "Basic Autoscaling for Certain Components" can suffice. However, if your user base or usage patterns expand, or if you aim for deeper cost optimization, you could unify autoscaling across more workloads and utilize advanced triggers.
+If your environment only sees moderate changes in demand and leadership doesn’t demand full elasticity, "Basic Autoscaling for Certain Components" can suffice. However, if your user base or usage patterns expand, or if you aim for deeper cost optimisation, you could unify autoscaling across more workloads and utilise advanced triggers.
 
 #### **How to do better**
 
@@ -220,14 +220,14 @@ Below are **actionable** ways to upgrade from basic autoscaling:
      - **AWS**:
 
        - **EC2 Auto Scaling**: Implement [EC2 Auto Scaling](https://aws.amazon.com/ec2/autoscaling/) across multiple groups to automatically adjust the number of EC2 instances based on demand, ensuring consistent application performance.
-       - **ECS Service Auto Scaling**: Configure [Amazon ECS Service Auto Scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html) to automatically scale your containerized services in response to changing demand.
-       - **RDS Auto Scaling**: Utilize [Amazon Aurora Auto Scaling](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Integrating.AutoScaling.html) to automatically adjust the number of Aurora Replicas to handle changes in workload demand.
+       - **ECS Service Auto Scaling**: Configure [Amazon ECS Service Auto Scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html) to automatically scale your containerised services in response to changing demand.
+       - **RDS Auto Scaling**: Utilise [Amazon Aurora Auto Scaling](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Integrating.AutoScaling.html) to automatically adjust the number of Aurora Replicas to handle changes in workload demand.
 
      - **Azure**:
 
        - **Virtual Machine Scale Sets (VMSS)**: Deploy [Azure Virtual Machine Scale Sets](https://azure.microsoft.com/en-us/products/virtual-machine-scale-sets/) to manage and scale multiple VMs for various services, automatically adjusting capacity based on demand.
        - **Azure Kubernetes Service (AKS)**: Implement the [AKS Cluster Autoscaler](https://learn.microsoft.com/en-us/azure/aks/concepts-scale) to automatically adjust the number of nodes in your cluster based on resource requirements.
-       - **Azure SQL Elastic Pools**: Use [Azure SQL Elastic Pools](https://azure.microsoft.com/en-us/products/azure-sql/elastic-pools/) to manage and scale multiple databases with varying usage patterns, optimizing resource utilization and cost.
+       - **Azure SQL Elastic Pools**: Use [Azure SQL Elastic Pools](https://azure.microsoft.com/en-us/products/azure-sql/elastic-pools/) to manage and scale multiple databases with varying usage patterns, optimising resource utilisation and cost.
 
      - **Google Cloud Platform (GCP)**:
 
@@ -236,7 +236,7 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
      - **Oracle Cloud Infrastructure (OCI)**:
        - **Instance Pool Autoscaling**: Apply [OCI Instance Pool Autoscaling](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm) to additional workloads, enabling automatic adjustment of compute resources based on performance metrics.
-       - **Database Auto Scaling**: Utilize [OCI Autonomous Database Auto Scaling](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/adbscaling.htm) to automatically scale compute and storage resources in response to workload demands.
+       - **Database Auto Scaling**: Utilise [OCI Autonomous Database Auto Scaling](https://docs.oracle.com/en-us/iaas/Content/Database/Tasks/adbscaling.htm) to automatically scale compute and storage resources in response to workload demands.
 
    - Gradually incorporating more of your application's microservices into the autoscaling framework can lead to improved performance, cost efficiency, and resilience across your infrastructure.
 
@@ -244,13 +244,13 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
    - Move beyond simple CPU-based thresholds to handle memory usage, disk I/O, or application-level concurrency:
 
-     - **AWS**: Implement [Amazon CloudWatch custom metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html) to monitor specific parameters such as memory usage, disk I/O, or application-level metrics. Additionally, utilize [Application Load Balancer (ALB) request count](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html) to trigger autoscaling based on incoming traffic.
+     - **AWS**: Implement [Amazon CloudWatch custom metrics](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/publishingMetrics.html) to monitor specific parameters such as memory usage, disk I/O, or application-level metrics. Additionally, utilise [Application Load Balancer (ALB) request count](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/load-balancer-cloudwatch-metrics.html) to trigger autoscaling based on incoming traffic.
 
-     - **Azure**: Use [Azure Monitor custom metrics](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-custom-overview) to track specific performance indicators like queue length or HTTP request rate. These metrics can feed into [Virtual Machine Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview) or the [Azure Kubernetes Service (AKS) Horizontal Pod Autoscaler (HPA)](https://learn.microsoft.com/en-us/azure/aks/concepts-scale) for more responsive scaling.
+     - **Azure**: Use [Azure Monitor custom metrics](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/metrics-custom-overview) to track specific performance indicators like queue length or HTTP request rate. These metrics can feed into [Virtual Machine Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-autoscale-overview) or the [Azure Kubernetes Service (AKS) Horisontal Pod Autoscaler (HPA)](https://learn.microsoft.com/en-us/azure/aks/concepts-scale) for more responsive scaling.
 
-     - **Google Cloud Platform (GCP)**: Leverage [Google Cloud's Monitoring custom metrics](https://cloud.google.com/monitoring/custom-metrics) to capture detailed performance data. Implement request-based autoscaling in [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/docs/concepts/horizontalpodautoscaler) or [Cloud Run](https://cloud.google.com/run/docs/configuring/autoscaling) to adjust resources based on real-time demand.
+     - **Google Cloud Platform (GCP)**: Leverage [Google Cloud's Monitoring custom metrics](https://cloud.google.com/monitoring/custom-metrics) to capture detailed performance data. Implement request-based autoscaling in [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine/docs/concepts/horisontalpodautoscaler) or [Cloud Run](https://cloud.google.com/run/docs/configuring/autoscaling) to adjust resources based on real-time demand.
 
-     - **Oracle Cloud Infrastructure (OCI)**: Utilize [OCI Monitoring service's custom metrics](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Tasks/buildingcustommetrics.htm) to track parameters such as queue depth, memory usage, or user concurrency. These metrics can inform autoscaling decisions to ensure optimal performance.
+     - **Oracle Cloud Infrastructure (OCI)**: Utilise [OCI Monitoring service's custom metrics](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Tasks/buildingcustommetrics.htm) to track parameters such as queue depth, memory usage, or user concurrency. These metrics can inform autoscaling decisions to ensure optimal performance.
 
    - Incorporating more granular metrics allows for precise autoscaling, ensuring that resources are allocated based on comprehensive performance indicators rather than relying solely on CPU usage.
 
@@ -260,7 +260,7 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
      - **AWS**: Configure [Amazon EC2 Auto Scaling scheduled actions](https://docs.aws.amazon.com/autoscaling/ec2/userguide/schedule_time.html) to adjust capacity at predetermined times. For instance, you can set the system to scale up at 08:00 and scale down at 20:00 to align with daily usage patterns.
 
-     - **Azure**: Utilize [Azure Virtual Machine Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-scheduled-events) to implement scheduled scaling. Additionally, integrate scaling adjustments into your [Azure DevOps pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops) to automate capacity changes in response to anticipated workload variations.
+     - **Azure**: Utilise [Azure Virtual Machine Scale Sets](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-scheduled-events) to implement scheduled scaling. Additionally, integrate scaling adjustments into your [Azure DevOps pipelines](https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops) to automate capacity changes in response to anticipated workload variations.
 
      - **Google Cloud Platform (GCP)**: Employ [Managed Instance Group (MIG) scheduled scaling](https://cloud.google.com/compute/docs/autoscaler/scheduled-scaling) to define scaling behaviors based on time-based schedules. Alternatively, use [Cloud Scheduler](https://cloud.google.com/scheduler) to trigger scripts that adjust resources in line with expected demand fluctuations.
 
@@ -268,7 +268,7 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
    - Implementing scheduled scaling allows your system to proactively adjust resources in anticipation of predictable workload changes, enhancing performance and cost efficiency.
 
-   - For environments with variable and unpredictable workloads, consider utilizing predictive scaling features. Predictive scaling analyzes historical data to forecast future demand, enabling the system to scale resources in advance of anticipated spikes. This approach combines the benefits of both proactive and reactive scaling, ensuring optimal resource availability and responsiveness.
+   - For environments with variable and unpredictable workloads, consider utilising predictive scaling features. Predictive scaling analyzes historical data to forecast future demand, enabling the system to scale resources in advance of anticipated spikes. This approach combines the benefits of both proactive and reactive scaling, ensuring optimal resource availability and responsiveness.
 
      - **AWS**: Explore [Predictive Scaling for Amazon EC2 Auto Scaling](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-predictive-scaling.html), which uses machine learning models to forecast traffic patterns and adjust capacity accordingly.
 
@@ -282,9 +282,9 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
 1. **Enhance Observability to Validate Autoscaling Efficacy**
 
-   - Instrument your autoscaling events and track them to ensure optimal performance and resource utilization:
+   - Instrument your autoscaling events and track them to ensure optimal performance and resource utilisation:
 
-     - **Dashboard Real-Time Metrics**: Monitor CPU, memory, and queue metrics alongside scaling events to visualize system performance in real-time.
+     - **Dashboard Real-Time Metrics**: Monitor CPU, memory, and queue metrics alongside scaling events to visualise system performance in real-time.
 
      - **Analyze Scaling Timeliness**: Assess whether scaling actions occur promptly by checking for prolonged high CPU usage or frequent scale-in events that may indicate over-scaling.
 
@@ -292,19 +292,19 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
      - **AWS**:
 
-       - **AWS X-Ray**: Utilize [AWS X-Ray](https://aws.amazon.com/xray/) to trace requests through your application, gaining insights into performance bottlenecks and the impact of scaling events.
+       - **AWS X-Ray**: Utilise [AWS X-Ray](https://aws.amazon.com/xray/) to trace requests through your application, gaining insights into performance bottlenecks and the impact of scaling events.
 
        - **Amazon CloudWatch**: Create dashboards in [Amazon CloudWatch](https://aws.amazon.com/cloudwatch/) to display real-time metrics and logs, correlating them with scaling activities for comprehensive monitoring.
 
      - **Azure**:
 
-       - **Azure Monitor**: Leverage [Azure Monitor](https://azure.microsoft.com/en-us/products/monitor/) to collect and analyze telemetry data, setting up alerts and visualizations to track performance metrics in relation to scaling events.
+       - **Azure Monitor**: Leverage [Azure Monitor](https://azure.microsoft.com/en-us/products/monitor/) to collect and analyze telemetry data, setting up alerts and visualisations to track performance metrics in relation to scaling events.
 
        - **Application Insights**: Use [Azure Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to detect anomalies and diagnose issues, correlating scaling actions with application performance for deeper analysis.
 
      - **Google Cloud Platform (GCP)**:
 
-       - **Cloud Monitoring**: Employ [Google Cloud's Operations Suite](https://cloud.google.com/products/operations) to monitor and visualize metrics, setting up dashboards that reflect the relationship between resource utilization and scaling events.
+       - **Cloud Monitoring**: Employ [Google Cloud's Operations Suite](https://cloud.google.com/products/operations) to monitor and visualise metrics, setting up dashboards that reflect the relationship between resource utilisation and scaling events.
 
        - **Cloud Logging and Tracing**: Implement [Cloud Logging](https://cloud.google.com/logging) and [Cloud Trace](https://cloud.google.com/trace) to collect logs and trace data, enabling the analysis of autoscaling impacts on application performance.
 
@@ -312,17 +312,17 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
        - **OCI Logging**: Use [OCI Logging](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm) to manage and search logs, providing visibility into scaling events and their effects on system performance.
 
-       - **OCI Monitoring**: Utilize [OCI Monitoring](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Concepts/monitoringoverview.htm) to track metrics and set alarms, ensuring that scaling actions align with performance expectations.
+       - **OCI Monitoring**: Utilise [OCI Monitoring](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Concepts/monitoringoverview.htm) to track metrics and set alarms, ensuring that scaling actions align with performance expectations.
 
-   - By enhancing observability, you can validate the effectiveness of your autoscaling strategies, promptly identify and address issues, and optimize resource allocation to maintain application performance and cost efficiency.
+   - By enhancing observability, you can validate the effectiveness of your autoscaling strategies, promptly identify and address issues, and optimise resource allocation to maintain application performance and cost efficiency.
 
 1. **Adopt Spot/Preemptible Instances for Autoscaled Non-Critical Workloads**
 
-   - To further optimize costs, consider utilizing spot or preemptible virtual machines (VMs) for non-critical, autoscaled workloads. These instances are offered at significant discounts compared to standard on-demand instances but can be terminated by the cloud provider when resources are needed elsewhere. Therefore, they are best suited for fault-tolerant and flexible applications.
+   - To further optimise costs, consider utilising spot or preemptible virtual machines (VMs) for non-critical, autoscaled workloads. These instances are offered at significant discounts compared to standard on-demand instances but can be terminated by the cloud provider when resources are needed elsewhere. Therefore, they are best suited for fault-tolerant and flexible applications.
 
      - **AWS**: Implement [EC2 Spot Instances](https://aws.amazon.com/ec2/spot/) within an Auto Scaling Group to run fault-tolerant workloads at up to 90% off the On-Demand price. By configuring Auto Scaling groups with mixed instances, you can combine Spot Instances with On-Demand Instances to balance cost and availability.
 
-     - **Azure**: Utilize [Azure Spot Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/spot-vms) within Virtual Machine Scale Sets for non-critical workloads. Azure Spot VMs allow you to take advantage of unused capacity at significant cost savings, making them ideal for interruptible workloads such as batch processing jobs and development/testing environments.
+     - **Azure**: Utilise [Azure Spot Virtual Machines](https://docs.microsoft.com/en-us/azure/virtual-machines/spot-vms) within Virtual Machine Scale Sets for non-critical workloads. Azure Spot VMs allow you to take advantage of unused capacity at significant cost savings, making them ideal for interruptible workloads such as batch processing jobs and development/testing environments.
 
      - **Google Cloud Platform (GCP)**: Deploy [Preemptible VMs](https://cloud.google.com/preemptible-vms) in Managed Instance Groups to run short-duration, fault-tolerant workloads at a reduced cost. Preemptible VMs provide substantial savings for workloads that can tolerate interruptions, such as data analysis and batch processing tasks.
 
@@ -332,7 +332,7 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
 By broadening autoscaling across more components, incorporating richer metrics, scheduling, and advanced cost strategies like spot instances, you transform your "basic" scaling approach into a more agile, cost-effective solution. Over time, these steps foster robust, automated resource management across your entire environment.
 
-### **Widespread Autoscaling with Basic Metrics:** Autoscaling is a common practice, although it mainly utilizes basic metrics, with limited use of log or application-specific metrics.
+### **Widespread Autoscaling with Basic Metrics:** Autoscaling is a common practice, although it mainly utilises basic metrics, with limited use of log or application-specific metrics.
 
 #### **How to determine if this good enough**
 
@@ -344,7 +344,7 @@ You’ve expanded autoscaling across many workloads: from front-end services to 
 
 1. **Efficient Day-to-Day Operations**
 
-   - Cost and capacity usage are largely optimized since few resources remain significantly underutilized or idle.
+   - Cost and capacity usage are largely optimised since few resources remain significantly underutilised or idle.
    - Staff seldom worry about reconfiguring capacity for typical fluctuations.
 
 1. **Satisfactory Performance**
@@ -373,7 +373,7 @@ Here are **actionable** ways to refine your widespread autoscaling strategy to h
 
      - **Azure**:
 
-       - **Application Insights**: Utilize [Azure Monitor's Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to collect detailed usage data, including request rates and response times, which can inform scaling decisions for services hosted in Azure Kubernetes Service (AKS) or Virtual Machine Scale Sets.
+       - **Application Insights**: Utilise [Azure Monitor's Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to collect detailed usage data, including request rates and response times, which can inform scaling decisions for services hosted in Azure Kubernetes Service (AKS) or Virtual Machine Scale Sets.
        - **Custom Logs for Scaling Signals**: Implement custom logging to capture specific application metrics and configure Azure Monitor to use these logs as signals for autoscaling, enhancing responsiveness to real-time application demands.
 
      - **Google Cloud Platform (GCP)**:
@@ -391,11 +391,11 @@ Here are **actionable** ways to refine your widespread autoscaling strategy to h
 
    - Instead of a single threshold, combine metrics. For instance:
      - Scale up if CPU > 70% AND average request latency > 300ms.
-     - This ensures you only scale when both resource utilization and user experience degrade, reducing false positives or unneeded expansions.
+     - This ensures you only scale when both resource utilisation and user experience degrade, reducing false positives or unneeded expansions.
 
 1. **Implement Predictive or Machine Learning–Driven Autoscaling**
 
-   - To anticipate demand spikes before traditional metrics like CPU utilization react, consider implementing predictive or machine learning–driven autoscaling solutions offered by cloud providers:
+   - To anticipate demand spikes before traditional metrics like CPU utilisation react, consider implementing predictive or machine learning–driven autoscaling solutions offered by cloud providers:
 
      - **AWS**:
 
@@ -403,7 +403,7 @@ Here are **actionable** ways to refine your widespread autoscaling strategy to h
 
      - **Azure**:
 
-       - **Predictive Autoscale**: Utilize [Predictive Autoscale in Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-predictive), which employs machine learning to forecast CPU load for Virtual Machine Scale Sets based on historical usage patterns, enabling proactive scaling.
+       - **Predictive Autoscale**: Utilise [Predictive Autoscale in Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-predictive), which employs machine learning to forecast CPU load for Virtual Machine Scale Sets based on historical usage patterns, enabling proactive scaling.
 
      - **Google Cloud Platform (GCP)**:
 
@@ -426,7 +426,7 @@ Here are **actionable** ways to refine your widespread autoscaling strategy to h
      - **Azure**:
 
        - **Azure Front Door Logs**: Analyze [Azure Front Door logs](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-diagnostics) to monitor end-to-end latency and other performance metrics. Insights from these logs can inform scaling decisions to enhance user experience.
-       - **Application Insights**: Utilize [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to collect detailed telemetry data, including response times and user interaction metrics, aiding in correlating autoscaling with user satisfaction.
+       - **Application Insights**: Utilise [Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to collect detailed telemetry data, including response times and user interaction metrics, aiding in correlating autoscaling with user satisfaction.
 
      - **Google Cloud Platform (GCP)**:
 
@@ -451,7 +451,7 @@ By incorporating more sophisticated application or log-based metrics, predictive
 
 #### **How to determine if this good enough**
 
-In this final, most mature stage, your organization applies advanced autoscaling across practically every production workload. Detailed logs, queue depths, user concurrency, or response times drive scaling decisions. This likely means:
+In this final, most mature stage, your organisation applies advanced autoscaling across practically every production workload. Detailed logs, queue depths, user concurrency, or response times drive scaling decisions. This likely means:
 
 1. **Holistic Observability and Telemetry**
 
@@ -468,7 +468,7 @@ In this final, most mature stage, your organization applies advanced autoscaling
    - Manual resizing is rare, reserved for extraordinary circumstances (e.g., emergent security patches, new application deployments).
    - Staff focus on refining autoscaling policies, not reacting to capacity emergencies.
 
-1. **Cost-Optimized and Performance-Savvy**
+1. **Cost-Optimised and Performance-Savvy**
    - Because you rarely over-provision for extended periods, your budget usage remains tightly aligned with actual needs.
    - End-users or citizens experience consistently fast response times due to prompt scale-outs.
 
@@ -482,7 +482,7 @@ Even at the top level, you can refine and push boundaries further:
 
    - **Evaluate Each Microservice's Service-Level Objectives (SLOs)**: Define precise SLOs for each microservice, such as ensuring the 99th-percentile latency remains under 400 milliseconds. This granular approach allows for targeted performance monitoring and scaling decisions.
 
-   - **Utilize Cloud Provider Tools to Monitor and Enforce SLOs**:
+   - **Utilise Cloud Provider Tools to Monitor and Enforce SLOs**:
 
      - **AWS**:
 
@@ -492,7 +492,7 @@ Even at the top level, you can refine and push boundaries further:
      - **Azure**:
 
        - **Application Insights**: Leverage [Azure Monitor's Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview) to track detailed telemetry data, enabling the definition and monitoring of SLOs for individual microservices.
-       - **Service Map**: Use [Azure Monitor's Service Map](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-map) to visualize dependencies and performance metrics across services, aiding in the assessment of SLO adherence.
+       - **Service Map**: Use [Azure Monitor's Service Map](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-map) to visualise dependencies and performance metrics across services, aiding in the assessment of SLO adherence.
 
      - **Google Cloud Platform (GCP)**:
 
@@ -515,15 +515,15 @@ Even at the top level, you can refine and push boundaries further:
 
      - **Continuous Monitoring and Adjustment**: Regularly review and adjust SLOs and associated monitoring tools to adapt to evolving application requirements and user expectations.
 
-   - **Conclusion**: Adopting more granular "distributed SLO" metrics empowers you to fine-tune your application's performance management, ensuring that each microservice operates within its defined parameters. This approach facilitates precise scaling decisions, optimizing both performance and cost efficiency.
+   - **Conclusion**: Adopting more granular "distributed SLO" metrics empowers you to fine-tune your application's performance management, ensuring that each microservice operates within its defined parameters. This approach facilitates precise scaling decisions, optimising both performance and cost efficiency.
 
 1. **Experiment with Multi-Provider or Hybrid Autoscaling**
 
-   - If policy allows, or your architecture is containerized, test the feasibility of bursting into another region or cloud for capacity:
+   - If policy allows, or your architecture is containerised, test the feasibility of bursting into another region or cloud for capacity:
      - [AWS EKS + Azure AKS cross-cloud bursting or cluster federation](https://learn.microsoft.com/en-us/azure/architecture/aws-professional/eks-to-aks/).
      - [GCP Anthos bridging on-prem or other clouds for large spikes](https://cloud.google.com/anthos).
      - [OCI multi-region or hybrid partner solutions for HPC or large ephemeral usage](https://www.oracle.com/cloud/hybrid-cloud/).
-   - This approach is advanced but can further optimize resilience and cost across providers.
+   - This approach is advanced but can further optimise resilience and cost across providers.
 
 1. **Integrate with Detailed Cost Allocation & Forecasting**
 
@@ -552,6 +552,6 @@ Even at the top level, you can refine and push boundaries further:
      - [Oracle Cloud Infrastructure's sustainability initiatives](https://www.oracle.com/sustainability/) combined with custom autoscaling triggers for environment-friendly computing.
    - This step can integrate cost savings with environmental commitments, aligning with the [Greening Government Commitments](https://www.gov.uk/government/publications/greening-government-commitments-2021-to-2025).
 
-By blending advanced SLO-based scaling, multi-provider strategies, cost forecasting, ML-driven anomaly detection, and sustainability considerations, you ensure your autoscaling remains cutting-edge. This not only provides exemplary performance and cost control but also positions your UK public sector organization as a leader in efficient, responsible cloud computing.
+By blending advanced SLO-based scaling, multi-provider strategies, cost forecasting, ML-driven anomaly detection, and sustainability considerations, you ensure your autoscaling remains cutting-edge. This not only provides exemplary performance and cost control but also positions your UK public sector organisation as a leader in efficient, responsible cloud computing.
 
-**Keep doing what you’re doing,** and consider sharing your successes via blog posts or internal knowledge bases. Submit pull requests to this guidance if you have innovative approaches or examples that can benefit other public sector organizations. By exchanging real-world insights, we collectively raise the bar for cloud maturity and cost effectiveness across the entire UK public sector.
+**Keep doing what you’re doing,** and consider sharing your successes via blog posts or internal knowledge bases. Submit pull requests to this guidance if you have innovative approaches or examples that can benefit other public sector organisations. By exchanging real-world insights, we collectively raise the bar for cloud maturity and cost effectiveness across the entire UK public sector.

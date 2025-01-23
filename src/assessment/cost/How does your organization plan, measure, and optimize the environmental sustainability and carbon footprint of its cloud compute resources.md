@@ -1,5 +1,5 @@
 ---
-title: How does your organization plan, measure, and optimize the environmental sustainability and carbon footprint of its cloud compute resources?
+title: How does your organisation plan, measure, and optimise the environmental sustainability and carbon footprint of its cloud compute resources?
 tags: cost
 eleventyNavigation:
   parent: cost
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-In this stage, your organization trusts its cloud provider to meet green commitments through mechanisms like carbon offsetting or renewable energy purchases. You likely have little to no visibility of actual carbon metrics. For UK public sector bodies, you might find this acceptable if:
+In this stage, your organisation trusts its cloud provider to meet green commitments through mechanisms like carbon offsetting or renewable energy purchases. You likely have little to no visibility of actual carbon metrics. For UK public sector bodies, you might find this acceptable if:
 
 1. **Limited Scope and Minimal Usage**
    - Your cloud footprint is extremely small (e.g., a handful of testing environments).
@@ -52,7 +52,7 @@ Below are **rapidly actionable** steps that provide greater visibility and ensur
 
    Incorporating sustainability clauses into your contracts is essential for ensuring that your cloud service providers align with your environmental goals. The [Crown Commercial Service](https://www.crowncommercial.gov.uk/g-cloud-13-contract-terms-and-conditions) offers guidance on integrating such clauses into the G-Cloud framework. Additionally, the [Chancery Lane Project](https://chancerylaneproject.org/clauses/carbon-contract-clauses-for-environmental-performance-and-associated-incentives-and-remedies) provides model clauses for environmental performance, which can be adapted to your contracts.
 
-   By proactively including these clauses, you can hold vendors accountable for their sustainability commitments and ensure that your organization's operations contribute positively to environmental objectives.
+   By proactively including these clauses, you can hold vendors accountable for their sustainability commitments and ensure that your organisation's operations contribute positively to environmental objectives.
 
 1. **Track Internal Workload Growth**
 
@@ -70,7 +70,7 @@ Below are **rapidly actionable** steps that provide greater visibility and ensur
 
 #### **How to determine if this good enough**
 
-At this stage, you have moved beyond "vendor says they’re green." You may have a written policy stating that you will prioritize environmentally responsible suppliers or aim to reduce your cloud emissions. For UK public sector organizations, "Initial Awareness" may be adequate if:
+At this stage, you have moved beyond "vendor says they’re green." You may have a written policy stating that you will prioritise environmentally responsible suppliers or aim to reduce your cloud emissions. For UK public sector organisations, "Initial Awareness" may be adequate if:
 
 1. **Formal Policy Exists, but Execution Is Minimal**
 
@@ -117,17 +117,17 @@ Here are quick wins to strengthen your approach and make it more actionable:
    - Host short lunch-and-learn events or internal micro-training on "Cloud Sustainability 101" for staff. Show them how they can use:
      - [AWS Trusted Advisor’s Basic Cost and Usage Recommendations](https://aws.amazon.com/premiumsupport/technology/trusted-advisor/)
      - [Azure Advisor Energy Efficiency Recommendations](https://learn.microsoft.com/en-us/azure/advisor/advisor-reference-performance-recommendations)
-     - [Google Cloud Recommender for VM Sizing and Usage Patterns](https://cloud.google.com/recommender)
-     - [OCI Advisor for Environment Optimization](https://docs.oracle.com/en/cloud/paas/oci-advisor/)
+     - [Google Cloud Recommender for VM sizing and Usage Patterns](https://cloud.google.com/recommender)
+     - [OCI Advisor for Environment Optimisation](https://docs.oracle.com/en/cloud/paas/oci-advisor/)
 
-   The point is to connect cost optimization with sustainability—over-provisioned resources burn more carbon.
+   The point is to connect cost optimisation with sustainability—over-provisioned resources burn more carbon.
 
 1. **Publish Simple Reporting**
    - Create a once-a-quarter dashboard or presentation highlighting approximate cloud emissions. Even if the data is partial or not perfect, transparency drives accountability.
 
 By rapidly applying these steps—using native vendor tools to measure usage, establishing minimal but meaningful guidelines, and scheduling brief training or check-ins—you elevate your policy from mere awareness to actual practice.
 
-### **Active Measurement and Target Setting:** The organization actively measures its cloud compute carbon footprint and sets specific targets for reduction. This includes choosing cloud services based on their sustainability metrics.
+### **Active Measurement and Target Setting:** The organisation actively measures its cloud compute carbon footprint and sets specific targets for reduction. This includes choosing cloud services based on their sustainability metrics.
 
 #### **How to determine if this good enough**
 
@@ -150,19 +150,19 @@ Here, you have begun quantifying your cloud-based carbon output. You might set y
    - Senior managers or oversight bodies see your target-setting approach as credible.
    - Your reports are used in annual reviews or compliance documentation.
 
-While "Active Measurement and Target Setting" is a robust step forward, you may still discover that your usage continues to increase due to scaling demands or new digital services. Additionally, you might lack advanced optimization practices like continuous resource right-sizing or dynamic load shifting.
+While "Active Measurement and Target Setting" is a robust step forward, you may still discover that your usage continues to increase due to scaling demands or new digital services. Additionally, you might lack advanced optimisation practices like continuous resource right-sizing or dynamic load shifting.
 
 #### **How to do better**
 
 Focus on **rapid, vendor-native steps** to convert targets into tangible reductions:
 
-1. **Automate Right-Sizing**
+1. **Automate Right-sizing**
 
    - Many providers have native tools to recommend more efficient instance sizes:
-     - [AWS Compute Optimizer](https://aws.amazon.com/compute-optimizer/) to identify underutilized EC2, EBS, or Lambda resources
-     - [Azure Advisor Right-Sizing](https://docs.microsoft.com/en-us/azure/advisor/advisor-right-sizing-recommendations) for VMs and databases
+     - [AWS Compute Optimiser](https://aws.amazon.com/compute-optimiser/) to identify underutilised EC2, EBS, or Lambda resources
+     - [Azure Advisor Right-sizing](https://docs.microsoft.com/en-us/azure/advisor/advisor-right-sizing-recommendations) for VMs and databases
      - [GCP Recommender for VM rightsizing](https://cloud.google.com/recommender/docs/compute/instance-rightsizing)
-     - [OCI Adaptive Intelligence for resource optimization](https://docs.oracle.com/en/cloud/paas/oci-advisor/)
+     - [OCI Adaptive Intelligence for resource optimisation](https://docs.oracle.com/en/cloud/paas/oci-advisor/)
 
    By automatically resizing or shifting to lower-tier SKUs, you reduce both cost and emissions.
 
@@ -189,7 +189,7 @@ Focus on **rapid, vendor-native steps** to convert targets into tangible reducti
 1. **Adopt "Carbon Budgets" in Project Plans**
 
    - For every new app or service, define a carbon allowance. If estimates exceed the budget, require design changes. Incorporate vendor solutions that show region-level carbon data:
-     - [Azure Region Carbon Intensity Mapping](https://learn.microsoft.com/en-us/azure/carbon-optimization/view-emissions)
+     - [Azure Region Carbon Intensity Mapping](https://learn.microsoft.com/en-us/azure/carbon-optimisation/view-emissions)
      - [AWS Region Carbon Differences in Well-Architected Tool](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/region-selection.html)
      - [GCP Region Picker with Carbon Insight](https://cloud.google.com/sustainability/carbon-footprint)
 
@@ -225,7 +225,7 @@ At this stage, sustainability isn’t a separate afterthought—it’s part of y
    - The departmental net zero or climate strategy references your integrated approach as a key success factor.
    - You can demonstrate tangible synergy: e.g., your cost savings from scaling down dev environments are also cutting carbon.
 
-Despite these achievements, additional gains can still be made, especially in advanced workload scheduling or region selection. If you want to stay ahead of new G-Cloud requirements, carbon scoring frameworks, or stricter net zero mandates, you may continue optimizing your environment.
+Despite these achievements, additional gains can still be made, especially in advanced workload scheduling or region selection. If you want to stay ahead of new G-Cloud requirements, carbon scoring frameworks, or stricter net zero mandates, you may continue optimising your environment.
 
 #### **How to do better**
 
@@ -234,9 +234,9 @@ Actionable steps to deepen your integrated approach:
 1. **Set Up Automated Governance Rules**
 
    - Enforce region-based or instance-based policies automatically:
-     - [AWS Service Control Policies to block high-carbon region usage in non-essential cases](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
+     - [AWS Service Control Policies to block high-carbon region usage in non-essential cases](https://docs.aws.amazon.com/organisations/latest/userguide/orgs_manage_policies_scps.html)
      - [Azure Policy for "Allowed Locations" or "Tagging Enforcement" with sustainability tags](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/govern-tags)
-     - [GCP Organization Policy to limit usage to certain carbon-friendly regions](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-policies)
+     - [GCP Organisation Policy to limit usage to certain carbon-friendly regions](https://cloud.google.com/resource-manager/docs/organisation-policy/understanding-policies)
      - [OCI Security Zones or policies restricting resource deployment](https://docs.oracle.com/en/cloud/paas/compute-cloud/oci-security-zones.html)
 
 Implementing these policies ensures that resources are deployed in regions with lower carbon footprints, aligning with your sustainability objectives.
@@ -253,9 +253,9 @@ Implementing these policies ensures that resources are deployed in regions with 
 
 1. **Use Vendor-Specific Sustainability Advisors**
 
-   - Some providers offer "sustainability pillars" or specialized frameworks:
+   - Some providers offer "sustainability pillars" or specialised frameworks:
      - [AWS Well-Architected Sustainability Pillar Recommendations](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html)
-     - [Azure Advisor – Sustainability category (Preview/Trial)](https://learn.microsoft.com/en-us/azure/carbon-optimization/reduce-emissions)
+     - [Azure Advisor – Sustainability category (Preview/Trial)](https://learn.microsoft.com/en-us/azure/carbon-optimisation/reduce-emissions)
      - [GCP’s Carbon Sense tools in the console](https://cloud.google.com/sustainability/carbon-sense)
      - [OCI Advisor checks for unused resources or energy-saving configurations](https://docs.oracle.com/en/cloud/paas/compute-cloud/oci-advisor.html)
 
@@ -268,16 +268,16 @@ Implementing these policies ensures that resources are deployed in regions with 
      - Tools like [GitHub Actions](https://docs.github.com/en/actions) or [Azure DevOps Pipelines](https://docs.microsoft.com/en-us/azure/devops/pipelines/?view=azure-pipelines&tabs=yaml) can call vendor APIs to fetch sustainability metrics and fail a build if it’s non-compliant.
 
 1. **Promote Cross-Functional "Green Teams"**
-   - Form a small working group or "green champions" network across procurement, DevOps, governance, and finance, meeting monthly to share best practices and track new optimization opportunities.
+   - Form a small working group or "green champions" network across procurement, DevOps, governance, and finance, meeting monthly to share best practices and track new optimisation opportunities.
    - This approach keeps your integrated practices dynamic, ensuring you respond quickly to new vendor features or updated government climate guidance.
 
 By adding these automated controls, pipeline checks, and cross-functional alignment, you ensure that your integrated sustainability approach not only continues but evolves in real time. You become more agile in responding to shifting requirements and new tools, maintaining a leadership stance in UK public sector cloud sustainability.
 
-### **Advanced Optimization and Dynamic Management:** Advanced strategies are in place, like automatic time and location shifting of workloads to minimize impact. Data retention and cloud product selection are deeply aligned with sustainability goals and carbon footprint metrics.
+### **Advanced Optimisation and Dynamic Management:** Advanced strategies are in place, like automatic time and location shifting of workloads to minimise impact. Data retention and cloud product selection are deeply aligned with sustainability goals and carbon footprint metrics.
 
 #### **How to determine if this good enough**
 
-At the pinnacle of cloud sustainability maturity, your organization leverages sophisticated methods such as:
+At the pinnacle of cloud sustainability maturity, your organisation leverages sophisticated methods such as:
 
 1. **Real-Time or Near-Real-Time Workload Scheduling**
 
@@ -291,13 +291,13 @@ At the pinnacle of cloud sustainability maturity, your organization leverages so
 
 1. **Continuous Improvement Culture**
 
-   - Teams treat carbon optimization as essential as cost or performance. Even minor improvements (e.g., 2% weekly CPU usage reduction) are celebrated.
+   - Teams treat carbon optimisation as essential as cost or performance. Even minor improvements (e.g., 2% weekly CPU usage reduction) are celebrated.
 
 1. **Cross-Government Collaboration**
    - As a leader, you might share advanced scheduling or dynamic region selection techniques with other public sector bodies.
    - You might co-publish guidance for G-Cloud or Crown Commercial Service frameworks on advanced sustainability requirements.
 
-If you have truly dynamic optimization but remain within the constraints of UK data protection or performance needs, you have likely achieved a highly advanced state. However, there’s almost always room to push boundaries, such as exploring new hardware (e.g., ARM-based servers) or adopting emergent best practices in green software engineering.
+If you have truly dynamic optimisation but remain within the constraints of UK data protection or performance needs, you have likely achieved a highly advanced state. However, there’s almost always room to push boundaries, such as exploring new hardware (e.g., ARM-based servers) or adopting emergent best practices in green software engineering.
 
 #### **How to do better**
 
@@ -328,7 +328,7 @@ Even at this advanced level, below are further actions to refine your dynamic ma
 
 1. **Innovate with Low-Power Hardware**
 
-   - Evaluate next-gen or specialized hardware solutions with lower energy profiles:
+   - Evaluate next-gen or specialised hardware solutions with lower energy profiles:
      - [AWS Graviton (ARM-based) Instances for better performance-per-watt](https://aws.amazon.com/ec2/graviton/)
      - [Azure Arm-based VMs (Preview/limited release)](https://azure.microsoft.com/en-us/blog/azure-virtual-machines-with-ampere-altra-arm-based-processors-generally-available/)
      - [GCP Tau T2A (ARM-based) Instances](https://cloud.google.com/blog/products/compute/tau-t2a-is-first-compute-engine-vm-on-an-arm-chip)
@@ -350,6 +350,6 @@ Even at this advanced level, below are further actions to refine your dynamic ma
    - If compliance allows, publish near real-time dashboards illustrating your advanced scheduling successes or hardware usage.
    - Share code or Infrastructure-as-Code templates with other public sector teams to accelerate mutual learning.
 
-By implementing these advanced tactics, you sharpen your dynamic optimization approach, continuously pushing the envelope of what’s possible in sustainable cloud operations—while respecting legal constraints around data sovereignty and any performance requirements unique to public services.
+By implementing these advanced tactics, you sharpen your dynamic optimisation approach, continuously pushing the envelope of what’s possible in sustainable cloud operations—while respecting legal constraints around data sovereignty and any performance requirements unique to public services.
 
-**Keep doing what you’re doing,** and consider documenting or blogging about your experiences. Submit pull requests to this guidance so other UK public sector organizations can accelerate their own sustainability journeys. By sharing real-world results and vendor-specific approaches, you help shape a greener future for public services across the entire nation.
+**Keep doing what you’re doing,** and consider documenting or blogging about your experiences. Submit pull requests to this guidance so other UK public sector organisations can accelerate their own sustainability journeys. By sharing real-world results and vendor-specific approaches, you help shape a greener future for public services across the entire nation.

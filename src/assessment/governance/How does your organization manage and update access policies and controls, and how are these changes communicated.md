@@ -1,5 +1,5 @@
 ---
-title: How does your organization manage and update access policies and controls, and how are these changes communicated?
+title: How does your organisation manage and update access policies and controls, and how are these changes communicated?
 tags: governance
 eleventyNavigation:
   parent: governance
@@ -17,7 +17,7 @@ When access policies are managed in an ad-hoc manner:
 
 1. **Minimal Regulatory Pressures**
 
-   - If you’re in a part of the public sector not subject to specific frameworks (e.g., ISO 27001, Government Security Classifications), you might feel less pressure to formalize policies.
+   - If you’re in a part of the public sector not subject to specific frameworks (e.g., ISO 27001, Government Security Classifications), you might feel less pressure to formalise policies.
 
 1. **Very Basic or Temporary Environment**
    - You could be running short-lived experiments or pilot projects with no extended lifespans, so detailed policy management feels excessive.
@@ -33,12 +33,12 @@ Below are **rapidly actionable** steps to move away from ad-hoc management:
    - Draft a one-page document outlining baseline access rules (e.g., "Least privilege," "Need to know").
    - Reference relevant UK government guidance on access controls or consult your departmental policy docs.
 
-1. **Centralize Identity and Access**
+1. **Centralise Identity and Access**
 
    - Instead of manual account creation or server-based user lists, consider cloud-native identity solutions:
      - [AWS IAM: Roles, policies, or AWS SSO for single sign-on management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
      - [Azure AD: Central user/group management, role-based access control for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
-     - [GCP IAM: Granting roles at project/folder/organization level, or using Google Workspace for single sign-on](https://cloud.google.com/iam/docs/overview)
+     - [GCP IAM: Granting roles at project/folder/organisation level, or using Google Workspace for single sign-on](https://cloud.google.com/iam/docs/overview)
      - [OCI IAM: Managing users and groups in Oracle Cloud with policies defining resource access](https://docs.oracle.com/iaas/Content/Identity/Concepts/overview.htm)
 
 1. **Record Exemptions in a Simple Tracker**
@@ -57,7 +57,7 @@ Below are **rapidly actionable** steps to move away from ad-hoc management:
    - Email a short notice to your team, or host a 15-minute briefing.
    - Emphasize that all new access requests must align with the minimal policy.
 
-By introducing a baseline policy, centralizing identity management, tracking exceptions, and implementing a simple approval step, you achieve immediate improvements and lay the groundwork for more robust policy governance.
+By introducing a baseline policy, centralising identity management, tracking exceptions, and implementing a simple approval step, you achieve immediate improvements and lay the groundwork for more robust policy governance.
 
 ### **Basic Policy Documentation with Some Communication:** Access policies are documented, but updates and their communication are irregular. There is a lack of a systematic approach to applying and communicating policy changes.
 
@@ -100,8 +100,8 @@ Here are **rapidly actionable** enhancements:
 
 1. **Use Consistent Communication Channels**
 
-   - If you have an organizational Slack, Teams, or intranet, create a #policy-updates channel (or equivalent) to announce changes.
-   - Summarize the key differences in plain language.
+   - If you have an organisational Slack, Teams, or intranet, create a #policy-updates channel (or equivalent) to announce changes.
+   - Summarise the key differences in plain language.
 
 1. **Apply or Update an RBAC Model**
 
@@ -112,7 +112,7 @@ Here are **rapidly actionable** enhancements:
      - [OCI IAM with groups and policy statements reflecting your policy doc (e.g., "Allow group Developers to manage compute….")](/TODO)
 
 1. **Create a Briefing Deck**
-   - Summarize the policy in fewer than 10 slides or 1–2 pages, so teams quickly grasp their obligations.
+   - Summarise the policy in fewer than 10 slides or 1–2 pages, so teams quickly grasp their obligations.
    - Present it in your next all-hands or departmental meeting.
 
 By versioning your policy documents, scheduling updates, and communicating changes through consistent channels, you ensure staff remain aligned with the policy’s intent and scope, even as it evolves.
@@ -139,7 +139,7 @@ You conduct reviews on a known schedule (e.g., quarterly or bi-annually), and po
    - Regular staff might be passively informed or updated in team briefings.
 
 1. **Less Chaos in Access Controls**
-   - The process reduces ad-hoc or unauthorized changes.
+   - The process reduces ad-hoc or unauthorised changes.
    - Audits show improvements in the consistency of applied policies.
 
 If your approach largely prevents confusion or major policy gaps, you’ve reached a good operational level. However, for advanced alignment—especially for larger or cross-government programs—you may want more transparency and active collaboration.
@@ -176,7 +176,7 @@ Below are **rapidly actionable** ways to refine:
 
 By establishing a policy advisory group, using automated enforcement, sharing impact assessments, and keeping transparent documentation, you enhance collaboration and understanding around policy changes.
 
-### **Integrated Policy Management with Stakeholder Engagement:** Policy updates are managed through an integrated process involving key stakeholders. Changes are communicated effectively, ensuring clear understanding across the organization.
+### **Integrated Policy Management with Stakeholder Engagement:** Policy updates are managed through an integrated process involving key stakeholders. Changes are communicated effectively, ensuring clear understanding across the organisation.
 
 #### **How to determine if this good enough**
 
@@ -226,7 +226,7 @@ Below are **rapidly actionable** strategies:
      - [GCP Deployment Manager with built-in validations for policy constraints, or custom form that references Organization Policy before changes](/TODO)
      - [OCI custom interface that references policy definitions and highlights potential conflicts or the need for exceptions](/TODO)
 
-1. **Link Policy Changes to Organizational Goals**
+1. **Link Policy Changes to Organisational Goals**
 
    - For each update, clearly state how it supports:
      - Security improvements (reducing potential data breaches).
@@ -237,7 +237,7 @@ Below are **rapidly actionable** strategies:
    - E.g., measure "time to complete a policy change," "number of exemptions requested," or "incident rate attributed to policy confusion."
    - Track these to demonstrate improvements over time.
 
-By versioning policy code, conducting interactive workshops, providing self-service dashboards, and linking changes to tangible organizational goals, you reinforce a collaborative, integrated policy management culture.
+By versioning policy code, conducting interactive workshops, providing self-service dashboards, and linking changes to tangible organisational goals, you reinforce a collaborative, integrated policy management culture.
 
 ### **Policy as Code with Transparent, Collaborative Updates:** Policy intent and implementation are maintained in version control, accessible to all. The process for proposing updates is clear and well-understood, allowing for regular, transparent updates akin to software releases. Policies have testable side effects, ensuring clarity and comprehension.
 
@@ -247,7 +247,7 @@ At this top maturity level, policy management is treated like software developme
 
 1. **Full Transparency and Collaboration**
 
-   - Anyone in the organization (or designated roles) can propose, review, or comment on policy changes.
+   - Anyone in the organisation (or designated roles) can propose, review, or comment on policy changes.
    - Policy changes pass through a formal PR (pull request) or code review process.
 
 1. **Automated Testing or Validations**
@@ -294,7 +294,7 @@ Below are **rapidly actionable** improvements, even at the highest level:
 
 1. **Extend Collaboration to Partner Agencies**
 
-   - If you work closely with other local authorities or health boards, consider sharing a portion of your policy code or best practices across organizations.
+   - If you work closely with other local authorities or health boards, consider sharing a portion of your policy code or best practices across organisations.
    - This fosters consistency and accelerates policy alignment.
 
 1. **Perform Periodic "Policy Drills"**

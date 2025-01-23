@@ -1,15 +1,15 @@
 ---
-title: What is your organization's approach to planning and preparing for incident response?
+title: What is your organisation's approach to planning and preparing for incident response?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **Ad-Hoc and Basic Efforts:** Incident response is primarily ad-hoc, with some basic efforts in place but no formalized plan or structured approach.
+### **Ad-Hoc and Basic Efforts:** Incident response is primarily ad-hoc, with some basic efforts in place but no formalised plan or structured approach.
 
 #### **How to determine if this good enough**
 
-If your organization responds to incidents (e.g., system outages, security breaches) in an improvised manner—relying on a few knowledgeable staff with no documented plan—you might consider it "good enough" if:
+If your organisation responds to incidents (e.g., system outages, security breaches) in an improvised manner—relying on a few knowledgeable staff with no documented plan—you might consider it "good enough" if:
 
 1. **Few or Infrequent Incidents**
 
@@ -21,7 +21,7 @@ If your organization responds to incidents (e.g., system outages, security breac
    - Failure or compromise does not pose significant security or privacy risks.
 
 1. **Very Limited Resources**
-   - Your team lacks the time or budget to formalize a plan, and you can handle occasional incidents with minimal fuss.
+   - Your team lacks the time or budget to formalise a plan, and you can handle occasional incidents with minimal fuss.
 
 However, purely ad-hoc responses often lead to confusion, slower recovery times, and higher risk of mistakes. [NCSC’s incident management guidance](https://www.ncsc.gov.uk/collection/incident-management) and [NIST SP 800-61 on Computer Security Incident Handling](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) recommend having at least a documented process to ensure consistent, timely handling.
 
@@ -61,7 +61,7 @@ By drafting a minimal IR checklist, assigning key roles, enabling basic alerts, 
 
 #### **How to determine if this good enough**
 
-Your organization mandates that each new service or application must have a written incident response plan before going live. You might see it as "good enough" if:
+Your organisation mandates that each new service or application must have a written incident response plan before going live. You might see it as "good enough" if:
 
 1. **Consistent Baseline**
 
@@ -113,7 +113,7 @@ By embedding IR considerations into your pipeline, linking them to monitoring re
 
 #### **How to determine if this good enough**
 
-Here, your organization’s IR plan is living documentation. You might consider it "good enough" if:
+Here, your organisation’s IR plan is living documentation. You might consider it "good enough" if:
 
 1. **Periodic Reviews**
 
@@ -180,7 +180,7 @@ If you frequently test and unify IR with continuity, you likely handle incidents
 
 #### **How to do better**
 
-Below are **rapidly actionable** ways to further optimize integrated, tested IR plans:
+Below are **rapidly actionable** ways to further optimise integrated, tested IR plans:
 
 1. **Adopt Multi-Cloud or Region Failover Testing**
 
@@ -195,7 +195,7 @@ Below are **rapidly actionable** ways to further optimize integrated, tested IR 
    - Ensure that if an alert triggers a continuity plan, the IR process is automatically updated with relevant logs or metrics.
    - Tools like [AWS EventBridge](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is-amazon-eventbridge.html), [Azure Event Grid](https://docs.microsoft.com/en-us/azure/event-grid/overview), [GCP Pub/Sub](https://cloud.google.com/pubsub/docs/overview), or [OCI Events](https://docs.oracle.com/en-us/iaas/Content/Events/Concepts/eventsoverview.htm) can route incidents to the correct channels instantly.
 
-1. **Formalize Post-Incident Reviews**
+1. **Formalise Post-Incident Reviews**
 
    - Document everything in a post-mortem or "lessons learned" session, referencing [NCSC’s post-incident evaluation guidelines](https://www.ncsc.gov.uk/collection/incident-management).
    - Update the plan accordingly.
@@ -206,11 +206,11 @@ Below are **rapidly actionable** ways to further optimize integrated, tested IR 
      - e.g., prepared statements or web page banners, referencing [GOV.UK best practices on emergency communications](https://www.gov.uk/).
 
 1. **Use NIST 800-61 or NCSC Models**
-   - Evaluate if your IR plan’s phases (preparation, detection, analysis, containment, eradication, recovery, post-incident) align with recognized frameworks.
+   - Evaluate if your IR plan’s phases (preparation, detection, analysis, containment, eradication, recovery, post-incident) align with recognised frameworks.
 
 By simulating cross-region failovers, integrating real-time alert triggers with continuity plans, conducting thorough post-incident reviews, and weaving communications into the IR plan, you maintain a robust, seamlessly tested approach that can respond to diverse incident scenarios.
 
-### **Rehearsed and Proven Response Capability:** Incident response plans are not only documented and regularly updated but also rigorously rehearsed. The organization is capable of successfully recovering critical systems within a working day.
+### **Rehearsed and Proven Response Capability:** Incident response plans are not only documented and regularly updated but also rigorously rehearsed. The organisation is capable of successfully recovering critical systems within a working day.
 
 #### **How to determine if this good enough**
 
@@ -252,7 +252,7 @@ Even at this advanced stage, below are **rapidly actionable** refinements:
 1. **Coordinate Regional or Multi-department Exercises**
 
    - Team up with allied public bodies or departments to run a joint incident scenario, testing real collaborative processes.
-   - Sharing data or responsibilities across agencies aligns with [NCSC’s multi-organization incident response guidance](https://www.ncsc.gov.uk/).
+   - Sharing data or responsibilities across agencies aligns with [NCSC’s multi-organisation incident response guidance](https://www.ncsc.gov.uk/).
 
 1. **Link IR Performance to Gov Accountability**
 
@@ -263,6 +263,6 @@ Even at this advanced stage, below are **rapidly actionable** refinements:
    - Assess if your IR process meets or exceeds frameworks like [NIST SP 800-61], [ISO 27035], or related global best practices.
    - Update or fine-tune accordingly.
 
-By regularly practicing chaos drills, leveraging AI-driven threat detection, collaborating with other agencies, and aligning with recognized international standards, your IR capabilities become even more robust. This ensures you stay prepared for evolving threats while maintaining compliance and demonstrating exceptional public sector resilience.
+By regularly practicing chaos drills, leveraging AI-driven threat detection, collaborating with other agencies, and aligning with recognised international standards, your IR capabilities become even more robust. This ensures you stay prepared for evolving threats while maintaining compliance and demonstrating exceptional public sector resilience.
 
 **Keep doing what you’re doing,** and consider writing up your incident response practice experiences (e.g., tabletop drills, real-world successes) in a blog post or internal case studies. Submit pull requests to this guidance or public sector best-practice repositories so others can learn from your advanced approaches to incident preparedness and response.

@@ -1,5 +1,5 @@
 ---
-title: How does your organization release updates to its applications and services?
+title: How does your organisation release updates to its applications and services?
 tags: operations
 eleventyNavigation:
   parent: operations
@@ -9,7 +9,7 @@ eleventyNavigation:
 
 #### **How to determine if this good enough**
 
-Your organization might tolerate taking production offline during updates if:
+Your organisation might tolerate taking production offline during updates if:
 
 1. **Low User Expectations**
 
@@ -61,18 +61,18 @@ By adopting minimal rolling or staging-based updates, automating deployment pipe
 
 #### **How to determine if this good enough**
 
-At this stage, your organization has moved past full downtime, using a rolling mechanism that replaces or updates a subset of instances at a time. You might consider it "good enough" if:
+At this stage, your organisation has moved past full downtime, using a rolling mechanism that replaces or updates a subset of instances at a time. You might consider it "good enough" if:
 
 1. **Limited User Impact**
 
-   - Some capacity is taken offline during updates, but carefully scheduled windows or off-peak hours minimize issues.
+   - Some capacity is taken offline during updates, but carefully scheduled windows or off-peak hours minimise issues.
 
 1. **Predictable Workloads**
 
    - If your usage patterns allow for stable maintenance windows (e.g., nights or weekends), then capacity hits don’t severely affect performance.
 
 1. **Moderate Release Frequency**
-   - The organization has relatively few feature updates, so scheduled windows remain acceptable for user expectations.
+   - The organisation has relatively few feature updates, so scheduled windows remain acceptable for user expectations.
 
 While better than full downtime, rolling updates that rely on maintenance windows can still cause disruptions for 24/7 services or hamper urgent patch releases.
 
@@ -106,7 +106,7 @@ Below are **rapidly actionable** improvements:
 1. **Reference NCSC Guidance on Operational Resilience**
    - Rolling updates align with resilience best practices, but see if NCSC or [NIST SP 800-53 revision on system and communications protection controls](https://csrc.nist.gov/) suggests additional steps to reduce downtime.
 
-By adding health checks, introducing partial canary or blue/green methods, and continuously automating rollbacks, you further minimize the user impact even within a rolling update strategy—potentially removing the need for fixed maintenance windows.
+By adding health checks, introducing partial canary or blue/green methods, and continuously automating rollbacks, you further minimise the user impact even within a rolling update strategy—potentially removing the need for fixed maintenance windows.
 
 ### **Manual Cut-Over with New Versions:** New versions of applications are deployed without impacting existing production, with a manual transition to the new version during a maintenance window. Manual rollback to the previous version is possible if needed.
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** ways to enhance manual cut-over processes:
 1. **Establish Clear Checklists**
 
    - List each step, from final pre-check to DNS swap, ensuring all relevant logs, metrics, or alerts are turned on:
-     - Minimizes risk of skipping a crucial step during a manual process.
+     - Minimises risk of skipping a crucial step during a manual process.
 
 1. **Use Observability Tools for Rapid Validation**
 
@@ -165,7 +165,7 @@ By automating as many cut-over steps as possible, implementing integrated testin
 
 #### **How to determine if this good enough**
 
-Here, your organization uses modern deployment patterns (canary or blue/green) but triggers the actual traffic shift manually. You might consider it "good enough" if:
+Here, your organisation uses modern deployment patterns (canary or blue/green) but triggers the actual traffic shift manually. You might consider it "good enough" if:
 
 1. **High Control Over Releases**
 
@@ -175,7 +175,7 @@ Here, your organization uses modern deployment patterns (canary or blue/green) b
 1. **Flexible Schedules**
 
    - You’re no longer constrained by a formal maintenance window, as the environment runs both old and new versions.
-   - You only finalize the transition once confidence is high.
+   - You only finalise the transition once confidence is high.
 
 1. **Minimal User Impact**
    - Users experience near-zero downtime, with only a potential brief session shift if done carefully.
@@ -202,14 +202,14 @@ Below are **rapidly actionable** methods to enhance manual canary or blue/green 
 1. **Adopt Observability-Driven Deployment**
 
    - Use real-time logging, metrics, and user experience monitoring to confirm if the new version is healthy:
-     - [NCSC and [NIST SP 800-137 (Continuous Monitoring)](https://csrc.nist.gov/) guidance can help formalize the approach].
+     - [NCSC and [NIST SP 800-137 (Continuous Monitoring)](https://csrc.nist.gov/) guidance can help formalise the approach].
 
 1. **Enhance Developer Autonomy**
 
    - If your policy allows, let smaller updates or patch releases auto-deploy after canary checks pass, reserving manual oversight only for major changes or high-risk deployments.
 
 1. **Consider ChatOps or Tools for One-Click Approvals**
-   - Slack/Teams integrated pipeline steps let authorized personnel type a simple command or press a button to shift traffic from old to new version.
+   - Slack/Teams integrated pipeline steps let authorised personnel type a simple command or press a button to shift traffic from old to new version.
    - This lowers friction while preserving manual control.
 
 By introducing traffic shaping with partial auto-deploy or rollback, deeper observability, and flexible chat-based control, you refine your canary or blue/green approach, reducing the manual overhead of each release while keeping high confidence.
@@ -218,7 +218,7 @@ By introducing traffic shaping with partial auto-deploy or rollback, deeper obse
 
 #### **How to determine if this good enough**
 
-At this pinnacle, your organization deploys new versions seamlessly, shifting traffic automatically or semi-automatically. You might consider it "good enough" if:
+At this pinnacle, your organisation deploys new versions seamlessly, shifting traffic automatically or semi-automatically. You might consider it "good enough" if:
 
 1. **Continuous Deployment**
 
@@ -238,7 +238,7 @@ At this pinnacle, your organization deploys new versions seamlessly, shifting tr
    - Each release is logged, including canary results, ensuring alignment with [NCSC operational resilience guidance](https://www.ncsc.gov.uk/) or internal audit requirements.
    - This meets or exceeds NIST guidelines for continuous monitoring and secure DevOps.
 
-If you’ve reached near-instant deployments, zero-downtime strategies, and robust monitoring, your process is highly mature. You still might push further into A/B testing or advanced ML-driven optimization.
+If you’ve reached near-instant deployments, zero-downtime strategies, and robust monitoring, your process is highly mature. You still might push further into A/B testing or advanced ML-driven optimisation.
 
 #### **How to do better**
 

@@ -1,5 +1,5 @@
 ---
-title: How does your organization monitor and observe its cloud infrastructure and application data?
+title: How does your organisation monitor and observe its cloud infrastructure and application data?
 tags: operations
 eleventyNavigation:
   parent: operations
@@ -38,7 +38,7 @@ Below are **rapidly actionable** steps to move from reactive observation to basi
 
 1. **Enable Basic Application Logging**
 
-   - Configure logs to flow into a centralized service:
+   - Configure logs to flow into a centralised service:
      - [AWS CloudWatch Logs or AWS OpenSearch for aggregated log analysis](https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/WhatIsCloudWatchLogs.html)
      - [Azure Log Analytics workspace for collecting app logs from multiple sources](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview)
      - [GCP Cloud Logging for storing structured logs from GCE, GKE, or App Engine](https://cloud.google.com/logging/docs/overview)
@@ -58,13 +58,13 @@ Below are **rapidly actionable** steps to move from reactive observation to basi
    - Book a monthly or quarterly checkpoint to discuss any monitoring issues or data from the past period.
    - Decide on incremental enhancements each time.
 
-By adopting basic infrastructure metrics, centralizing logs, configuring minimal alerts, and documenting your approach, you shift from purely reactive observation to foundational continuous monitoring.
+By adopting basic infrastructure metrics, centralising logs, configuring minimal alerts, and documenting your approach, you shift from purely reactive observation to foundational continuous monitoring.
 
 ### **Basic Monitoring Tools and Manual Checks:** Basic monitoring tools are used. Checks are often manual and are not fully integrated across different cloud services.
 
 #### **How to determine if this good enough**
 
-Here, your organization uses straightforward dashboards or partial metrics from various cloud services, but lacks integration or automation. You might consider it "good enough" if:
+Here, your organisation uses straightforward dashboards or partial metrics from various cloud services, but lacks integration or automation. You might consider it "good enough" if:
 
 1. **Steady Workloads, Infrequent Changes**
 
@@ -171,7 +171,7 @@ By combining APM, correlated logs, synthetic tests, and multi-dimensional alerts
 
 #### **How to determine if this good enough**
 
-Here, your organization invests in advanced monitoring or APM solutions, has robust metrics/alerts, and partial correlation across layers (e.g., logs, infrastructure usage, application performance). You might consider it "good enough" if:
+Here, your organisation invests in advanced monitoring or APM solutions, has robust metrics/alerts, and partial correlation across layers (e.g., logs, infrastructure usage, application performance). You might consider it "good enough" if:
 
 1. **Wide Observability Coverage**
 
@@ -184,7 +184,7 @@ Here, your organization invests in advanced monitoring or APM solutions, has rob
 
 1. **Flexible Dashboards**
 
-   - Stakeholders can view customized dashboards that show real-time or near real-time health.
+   - Stakeholders can view customised dashboards that show real-time or near real-time health.
 
 1. **Occasional Gaps**
    - Some older systems or sub-services might still lack advanced instrumentation.
@@ -229,7 +229,7 @@ By fortifying distributed tracing, adopting an "observability-first" mindset, au
 
 #### **How to determine if this good enough**
 
-At this top level, your organization has an advanced platform or combination of tools that unify logs, metrics, traces, and alerts into a cohesive experience. You might consider it "good enough" if:
+At this top level, your organisation has an advanced platform or combination of tools that unify logs, metrics, traces, and alerts into a cohesive experience. You might consider it "good enough" if:
 
 1. **Full Observability**
 
@@ -242,7 +242,7 @@ At this top level, your organization has an advanced platform or combination of 
 
 1. **Data-Driven Decision-Making**
 
-   - Observability data informs capacity planning, cost optimization, and reliability improvements.
+   - Observability data informs capacity planning, cost optimisation, and reliability improvements.
    - Leadership sees clear reports on how changes affect performance or user experience.
 
 1. **High Automation**
