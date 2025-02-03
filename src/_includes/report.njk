@@ -9,7 +9,8 @@
       <h3 class="govuk-heading-l">{{question.data.title | safe}}</h3>
       {%- for answer in question.content | getContentsAfterTags("h3") -%}
       <div id="{{section.fileSlug + "_" + (question.data.title | hash) + "_" + loop.index}}" class="report_answer_section">
-        {{- (answer | getContentsAfterTags("h4"))[1]}}
+        {{- (answer | getContentsAfterTags("h4"))[0] -}}
+        {{- (answer | getContentsAfterTags("h4"))[1] -}}
         {%- set howtodobetter = ((answer | getContentsAfterTags("h4"))[2]) -%}
         {{- govukDetails({
           open: true,
@@ -38,6 +39,6 @@
 
 {{- govukAccordion({
   id: "accordion-default",
-  items: accordionItems,
+  items: accordionItems| sort(false, false, 'heading.text'),
   hideAllSectionsText: "Close all sections"
 }) -}}
