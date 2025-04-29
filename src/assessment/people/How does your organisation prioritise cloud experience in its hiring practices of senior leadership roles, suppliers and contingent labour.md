@@ -32,6 +32,7 @@ Below are **rapidly actionable** steps to begin emphasizing cloud skills in hiri
 
    - Even if not mandatory, mention "cloud awareness" or "willingness to learn cloud technologies" for relevant roles.
    - Encourage upskilling referencing free training from [AWS Skill Builder](https://aws.amazon.com/training/skill-builder/), [Azure Microsoft Learn](https://learn.microsoft.com/en-us/training/), [GCP Skill Boost](https://cloud.google.com/training/free-tier), or [OCI Free Training](https://www.oracle.com/cloud/free/oci-training/).
+   - [IBM Cloud free training](https://www.ibm.com/think/insights/get-ready-for-change-with-ibm-cloud-training?mhsrc=ibmsearch_a&mhq=cloud%20training)
 
 1. **Encourage Current Staff to Share Cloud Knowledge**
 

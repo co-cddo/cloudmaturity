@@ -42,6 +42,7 @@ Below are **rapidly actionable** steps to strengthen your organisational policy 
      - [Azure: Use Resource Tags or Azure Policy to track "RetentionDuration," especially for blob storage](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure)
      - [GCP: Set labels for buckets or BigQuery datasets with "RetentionPeriod" and regularly check them with Cloud Asset Inventory](https://cloud.google.com/resource-manager/docs/creating-managing-labels)
      - [OCI: Use tagging to mark "RetentionPeriod=2Years," and regularly query resources with Resource Search](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
+     - IBM Cloud: Use [Resource Tagging](https://cloud.ibm.com/docs/account?topic=account-tag&interface=ui)
    - This ensures that the policy is not just known but also visible in cloud environments.
 
 1. **Implement Basic Lifecycle Rules for Key Data Types**
@@ -51,6 +52,7 @@ Below are **rapidly actionable** steps to strengthen your organisational policy 
      - [Azure: Blob Storage Lifecycle Management rules (hot → cool → archive → delete)](https://learn.microsoft.com/en-us/azure/storage/blobs/lifecycle-management-policy-configure)
      - [GCP: Object Lifecycle Management for buckets or table partition expiration in BigQuery](https://cloud.google.com/storage/docs/lifecycle)
      - [OCI: Object Storage lifecycle to auto-archive or delete objects after a set period](https://docs.oracle.com/iaas/Content/Object/Tasks/usinglifecyclepolicies.htm)
+     - IBM Cloud: [Cloud Object Storage Lifecycle Management](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)
 
 1. **Offer Practical Guidelines**
 

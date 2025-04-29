@@ -41,6 +41,7 @@ Below are **rapidly actionable** suggestions to secure at least minimal executiv
 
    - Emphasize potential cost savings or improved agility:
      - referencing [AWS/Azure/GCP/OCI cost management calculators or TCO tools](https://aws.amazon.com/cost-management/tools/), [Azure Cost Management](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/), [GCP Cost Management](https://cloud.google.com/cost-management), [OCI Cost Management](https://www.oracle.com/cloud/free/oci-training/).
+     - [IBM Cloud Cost Estimator](https://www.ibm.com/cloud/cloud-calculator)
 
 1. **Request a Brief Meeting with a Senior Sponsor**
 

@@ -35,6 +35,7 @@ Below are **rapidly actionable** steps to move beyond purely manual provisioning
      - [Azure CLI or PowerShell scripts for creating resource groups, VMs, or storage accounts](https://github.com/azureautomation/create-azure-resource-group-using-powershell)
      - [GCP CLI (gcloud) scripts for provisioning VMs, Cloud Storage, or networking](https://github.com/teradici/cloud_deployment_scripts/blob/master/docs/gcp/README.md)
      - [OCI CLI scripts for creating compute instances, networking, or storage resources](https://github.com/Oracle/oci-cli)
+     [IBM Cloud Schematics for scripting your cloud environment](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started)
 
 1. **Implement Basic Naming and Tagging Conventions**
 
@@ -54,6 +55,7 @@ Below are **rapidly actionable** steps to move beyond purely manual provisioning
      - [Azure Bicep or Terraform for a minimal web app environment in Azure App Service](https://github.com/Azure-Samples/highly-available-zone-redundant-webapp)
      - [GCP Deployment Manager or Terraform for GCE, GKE, or Cloud Storage resources](https://github.com/GoogleCloudPlatform/terraform-google-cloud-foundation)
      - [OCI Resource Manager or Terraform for provisioning compute, networking, or object storage](https://github.com/oracle/oci-cloud-native)
+     - [IBM Cloud Schematics for scripted automation of your cloud environment](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started)
 
 1. **Document Provisioning Steps**
    - Keep a simple runbook or wiki page. Summarise each manual provisioning step so you can easily shift these instructions into scripts or templates later.

@@ -40,6 +40,7 @@ Below are **rapidly actionable** steps to introduce at least a minimal structure
      - [Microsoft Learn for Azure fundamentals, or free online sessions](https://docs.microsoft.com/en-us/learn/azure/)
      - [GCP Free tier training with Google Cloud Skills Boost, official docs, codelabs](https://cloud.google.com/training/free-tier)
      - [OCI Free Training and Oracle University’s free learning paths for Oracle Cloud basics](https://www.oracle.com/cloud/free/)
+     - [IBM Cloud free training](https://www.ibm.com/think/insights/get-ready-for-change-with-ibm-cloud-training?mhsrc=ibmsearch_a&mhq=cloud%20training)
 
 1. **Sponsor One-Off Training Sessions**
 

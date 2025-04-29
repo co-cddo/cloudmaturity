@@ -45,7 +45,9 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
      - [Azure Power BI for quickly designing simple dashboards on Excel data](https://docs.microsoft.com/en-us/power-bi/fundamentals/service-get-started)
      - [GCP Data Studio (Looker Studio) connecting to Google Sheets or CSV data sources](https://cloud.google.com/looker-studio/docs/get-started)
      - [OCI Analytics Cloud for straightforward data visualisations](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
+     - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started)
    - Even rudimentary dashboards reduce the SME dependency for repetitive questions.
+   
 
 1. **Pilot a Data Lake or Central Data Repository**
 
@@ -54,6 +56,7 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
      - [Azure Data Lake Storage or Azure Synapse for integrated data ingestion](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
      - [GCP Cloud Storage / BigQuery for storing curated data sets](https://cloud.google.com/storage/docs/cloud-storage-transfer-service)
      - [OCI Object Storage or Data Integration for simpler data consolidation](https://docs.oracle.com/en-us/iaas/Content/Object/Concepts/objectstorageoverview.htm)
+     - [IBM Cloud - Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)
    - This central repository can feed into simple dashboards or queries.
 
 1. **Encourage a Data Buddy System**

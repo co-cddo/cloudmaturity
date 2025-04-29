@@ -35,6 +35,7 @@ Below are **rapidly actionable** ways to establish a baseline development path f
      - [Azure Fundamentals on Microsoft Learn](https://learn.microsoft.com/en-us/certifications/azure-fundamentals/)
      - [GCP Google Cloud Skill Boost introduction courses](https://cloud.google.com/training/free-tier)
      - [OCI free introductory courses from Oracle University](https://www.oracle.com/cloud/free/oci-training/)
+     - [IBM Cloud free training](https://www.ibm.com/think/insights/get-ready-for-change-with-ibm-cloud-training?mhsrc=ibmsearch_a&mhq=cloud%20training)
    - Provide a short list of recommended links to staff wanting to explore cloud concepts.
 
 1. **Encourage Self-Study**

@@ -32,6 +32,7 @@ Below are **rapidly actionable** steps to move beyond isolated identity manageme
 
    - For new services, define a single user store or IDP:
      - e.g., [AWS Directory Service or AWS SSO](https://aws.amazon.com/directoryservice/), [Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whatis), [GCP Identity](https://cloud.google.com/identity/docs/overview), or [OCI IDCS](https://www.oracle.com/cloud/free/oci-training/).
+     - [IBM Cloud AppID](https://cloud.ibm.com/docs/appid?topic=appid-cd-sso)
    - Minimises further fragmentation for new apps.
 
 1. **Maintain a Simple User Inventory**

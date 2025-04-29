@@ -39,6 +39,7 @@ Here are **rapidly actionable** steps to establish foundational data management 
      - [Azure: Azure Resource Graph or tagging to locate Storage Accounts, SQL Databases, etc.](https://docs.microsoft.com/en-us/azure/governance/resource-graph/first-query)
      - [GCP: Cloud Asset Inventory to search for Cloud Storage buckets, BigQuery datasets, etc.](https://cloud.google.com/asset-inventory/docs/asset-inventory-overview)
      - [OCI: Resource Search and tagging to find Object Storage buckets, block volumes, databases, etc.](https://docs.oracle.com/iaas/Content/Search/Tasks/queryingresources.htm)
+     - IBM Cloud: Use [Resource Tagging](https://cloud.ibm.com/docs/account?topic=account-tag&interface=ui)
    - Even if you only have partial naming standards, tag each discovered resource with "owner," "purpose," and "data type." This immediately lowers the risk of data sprawl.
 
 1. **Establish Basic Data Handling Guidelines**
@@ -53,6 +54,7 @@ Here are **rapidly actionable** steps to establish foundational data management 
      - [Azure: Role-Based Access Control (RBAC) for storage accounts, Azure Policy for restricting public endpoints](https://learn.microsoft.com/en-us/azure/storage/common/policy-reference)
      - [GCP: IAM policies for Cloud Storage, VPC Service Controls for perimeter security](https://cloud.google.com/vpc-service-controls/docs/overview)
      - [OCI: IAM compartments and security zone policies for restricting data exposure](https://docs.oracle.com/en-us/iaas/security-zone/using/security-zones.htm)
+     - IBM Cloud: [Implement IAM Access Controls](https://cloud.ibm.com/docs/account?topic=account-access-management-overview)
    - This helps prevent accidental public exposure or misconfigurations.
 
 1. **Educate Teams on Data Sensitivity**
