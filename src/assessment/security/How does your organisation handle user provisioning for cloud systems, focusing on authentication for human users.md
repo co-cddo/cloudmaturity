@@ -48,8 +48,7 @@ Below are **rapidly actionable** steps to move beyond shared/manual accounts:
 1. **Enable Basic Audit Logging**
 
    - Turn on logs for sign-in or role usage in each cloud environment:
-     - [AWS CloudTrail, Azure Activity Log, GCP Cloud Logging, OCI Audit Log](https://aws.amazon.com/cloudtrail/)
-     - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started) & [IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-about-cl)
+     - [AWS CloudTrail, Azure Activity Log, GCP Cloud Logging, OCI Audit Log](https://aws.amazon.com/cloudtrail/), [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started) & [IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-about-cl)
    - Identifies who does what in the system.
 
 1. **Move to a Single Sign-On Approach**

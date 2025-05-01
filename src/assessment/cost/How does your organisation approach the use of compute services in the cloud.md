@@ -53,8 +53,7 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
      - [Azure Advisor for VM right-sizing](https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations) to identify underutilised virtual machines.
      - [GCP Recommender for machine types](https://cloud.google.com/recommender/docs/understanding-vm-machine-type-recommendations) to optimise resource utilisation.
      - [OCI Workload and Resource Optimisation](https://www.oracle.com/cloud/compute/) for tailored resource recommendations.
-     - [IBM Cloud Resource Controller](https://cloud.ibm.com/apidocs/resource-controller/resource-controller) is the next-generation IBM Cloud
- platform provisioning layer that manages the lifecycle of IBM Cloud resources in a customer account.
+     - [IBM Cloud Resource Controller](https://cloud.ibm.com/apidocs/resource-controller/resource-controller) is the next-generation IBM Cloud platform provisioning layer that manages the lifecycle of IBM Cloud resources in a customer account.
    - Make a plan to apply at least one or two right-sizing recommendations each quarter. This is a quick, low-risk path to cost savings and better resource use.
 
 1. **Introduce Simple Scheduling**

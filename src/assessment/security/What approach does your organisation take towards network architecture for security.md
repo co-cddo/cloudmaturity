@@ -31,8 +31,7 @@ Below are **rapidly actionable** steps to strengthen or evolve from perimeter-on
 1. **Introduce MFA for Privileged Access**
 
    - Even if you maintain a perimeter, require multi-factor authentication for admin or root accounts:
-     - e.g., [AWS IAM MFA](https://aws.amazon.com/iam/features/mfa/), [Azure AD MFA](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP IAM 2FA](https://cloud.google.com/iam/docs/using-mfa), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
-     - [IBM Cloud MFA](https://cloud.ibm.com/docs/account?topic=account-enablemfa)
+     - e.g., [AWS IAM MFA](https://aws.amazon.com/iam/features/mfa/), [Azure AD MFA](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP IAM 2FA](https://cloud.google.com/iam/docs/using-mfa), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/), [IBM Cloud MFA](https://cloud.ibm.com/docs/account?topic=account-enablemfa)
    - Minimises risk of compromised credentials bypassing the firewall.
 
 1. **Implement Least-Privilege IAM**

@@ -67,7 +67,7 @@ Below are **rapidly actionable** steps to reduce waste and move beyond provision
 
      - [OCI Instance Pool Autoscaling – CPU or custom metrics triggers](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm): Oracle Cloud Infrastructure's Instance Pool Autoscaling allows you to automatically adjust the number of instances in a pool based on CPU utilisation or custom metrics, helping to optimise performance and cost.
 
-     - [IBM Cloud Auto Scale for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-auto-scale-instance-group&interface=ui)allows you can create an instance group to scale according to your requirements. Based on the target utilisation metrics that you define, the instance group can dynamically add or remove instances to achieve your specified instance availability.
+     - [IBM Cloud Auto Scale for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-auto-scale-instance-group&interface=ui) allows you can create an instance group to scale according to your requirements. Based on the target utilisation metrics that you define, the instance group can dynamically add or remove instances to achieve your specified instance availability.
 
 Implementing autoscaling in a controlled environment allows you to evaluate its benefits and challenges, providing valuable insights before considering broader adoption for more critical workloads.
 

@@ -35,8 +35,7 @@ Below are **rapidly actionable** steps to transition from a monolithic approach:
 
 1. **Adopt Container or VM Packaging**
 
-   - Even if the app remains monolithic, packaging in Docker /[ECS](https://aws.amazon.com/ecs/), [Azure Container Instances](https://learn.microsoft.com/en-us/azure/container-instances/), [GCP Cloud Run](https://cloud.google.com/run), or [OCI Container Engine](https://www.oracle.com/cloud/free/oci-training/) can simplify deployment and initial partial scaling.
-   - [IBM Cloud Code Engine](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started)
+   - Even if the app remains monolithic, packaging in Docker /[ECS](https://aws.amazon.com/ecs/), [Azure Container Instances](https://learn.microsoft.com/en-us/azure/container-instances/), [GCP Cloud Run](https://cloud.google.com/run), or [OCI Container Engine](https://www.oracle.com/cloud/free/oci-training/), or [IBM Cloud Code Engine](https://cloud.ibm.com/docs/codeengine?topic=codeengine-getting-started) can simplify deployment and initial partial scaling.
 
 1. **Refactor Shared Libraries**
 

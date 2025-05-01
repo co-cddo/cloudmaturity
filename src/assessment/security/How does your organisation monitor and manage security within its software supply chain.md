@@ -40,8 +40,7 @@ Below are **rapidly actionable** steps to handle unmanaged dependencies more saf
 
 1. **Enable Automatic or Regular Patch Checks**
 
-   - For OS packages, configure [AWS Systems Manager Patch Manager](https://aws.amazon.com/systems-manager/features/), [Azure Automation Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview), [GCP OS Patch Management](https://cloud.google.com/os-patch-management/docs/overview), or [OCI OS Management Service](https://www.oracle.com/cloud/free/oci-training/) if you’re running cloud-based VMs.
-   - [IBM Cloud](https://cloud.ibm.com/docs/bare-metal?topic=bare-metal-bm-system-updates-patches)
+   - For OS packages, configure [AWS Systems Manager Patch Manager](https://aws.amazon.com/systems-manager/features/), [Azure Automation Update Management](https://learn.microsoft.com/en-us/azure/automation/update-management/overview), [GCP OS Patch Management](https://cloud.google.com/os-patch-management/docs/overview), or [OCI OS Management Service](https://www.oracle.com/cloud/free/oci-training/) if you’re running cloud-based VMs, [IBM Cloud](https://cloud.ibm.com/docs/bare-metal?topic=bare-metal-bm-system-updates-patches)
 
 1. **Document a Basic Update Policy**
 
