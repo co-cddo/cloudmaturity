@@ -40,8 +40,7 @@ Below are **rapidly actionable** steps to move beyond ad-hoc privileged credenti
 1. **Introduce MFA for Admins**
 
    - Even if no vaulting solution is in place, require multi-factor authentication on any privileged ID:
-     - [AWS IAM with MFA](https://aws.amazon.com/iam/features/mfa), [Azure AD PIM MFA](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-how-to-activate-role), [GCP IAM accounts with MFA](https://cloud.google.com/identity/docs/mfa-usage), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
-     - [IBM Cloud MFA](https://cloud.ibm.com/docs/account?topic=account-enablemfa)
+     - [AWS IAM with MFA](https://aws.amazon.com/iam/features/mfa), [Azure AD PIM MFA](https://learn.microsoft.com/en-us/azure/active-directory/privileged-identity-management/pim-how-to-activate-role), [GCP IAM accounts with MFA](https://cloud.google.com/identity/docs/mfa-usage), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/), [IBM Cloud MFA](https://cloud.ibm.com/docs/account?topic=account-enablemfa)
 
 1. **Document & Track Privileged Roles**
 
