@@ -48,8 +48,7 @@ Below are **rapidly actionable** steps to move beyond ad-hoc privileged credenti
      - Helps see if too many administrators exist.
 
 1. **Schedule Transition to Vaulting**
-   - Plan to adopt a basic password vault or secrets manager, e.g., [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview), [GCP Secret Manager](https://cloud.google.com/secret-manager), or [OCI Vault](https://www.oracle.com/cloud/free/oci-training/) for privileged credentials in the next 3-6 months.
-   - [IBM Cloud Secrets Manager](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-what-is-secret)
+   - Plan to adopt a basic password vault or secrets manager, e.g., [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview), [GCP Secret Manager](https://cloud.google.com/secret-manager), or [OCI Vault](https://www.oracle.com/cloud/free/oci-training/), or [IBM Cloud Secrets Manager](https://cloud.ibm.com/docs/secrets-manager?topic=secrets-manager-what-is-secret) for privileged credentials in the next 3-6 months.
 
 By creating a short privileged access policy, enforcing unique admin accounts with MFA, documenting roles, and preparing for a vault-based solution, you significantly reduce the risk of ad-hoc mismanagement and insider threats.
 
