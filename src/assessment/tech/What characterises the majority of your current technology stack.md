@@ -46,8 +46,7 @@ Below are **rapidly actionable** steps to transition from a monolithic approach:
 1. **Automate Basic CI/CD**
 
    - Even if a monolith, introduce versioned builds, automated tests, and environment-based deployments:
-     - e.g., [AWS CodePipeline](https://aws.amazon.com/codepipeline/), [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/), [GCP Cloud Build](https://cloud.google.com/build), or [OCI DevOps](https://www.oracle.com/cloud/free/oci-training/).
-     - [IBM Cloud Continuous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery)
+     - e.g., [AWS CodePipeline](https://aws.amazon.com/codepipeline/), [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/), [GCP Cloud Build](https://cloud.google.com/build), or [OCI DevOps](https://www.oracle.com/cloud/free/oci-training/), or [IBM Cloud Continuous Delivery](https://cloud.ibm.com/docs/ContinuousDelivery)
 
 1. **Plan a Phased Decomposition**
    - Over 6–12 months, pilot a single microservice or separate module as a stepping stone.
