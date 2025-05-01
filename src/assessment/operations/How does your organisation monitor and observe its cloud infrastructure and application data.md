@@ -44,7 +44,7 @@ Below are **rapidly actionable** steps to move from reactive observation to basi
      - [Azure Log Analytics workspace for collecting app logs from multiple sources](https://docs.microsoft.com/en-us/azure/azure-monitor/logs/log-analytics-overview)
      - [GCP Cloud Logging for storing structured logs from GCE, GKE, or App Engine](https://cloud.google.com/logging/docs/overview)
      - [OCI Logging for collecting logs from compute and other OCI services](https://docs.oracle.com/en-us/iaas/Content/Logging/Concepts/loggingoverview.htm)
-     [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started)
+     - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started)
 
 1. **Set Up Minimal Alerts**
 

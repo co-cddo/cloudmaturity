@@ -45,7 +45,7 @@ Below are **rapidly actionable** steps to move away from ad-hoc methods:
      - [Azure Repos for central control of code and config files](https://learn.microsoft.com/en-us/azure/devops/repos/?view=azure-devops)
      - [GCP Cloud Source Repositories for a secure, integrated Git environment](https://cloud.google.com/source-repositories)
      - [OCI DevOps Code Repository for versioning your code within Oracle Cloud](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/coderepository.htm)
-     [IBM Cloud Source Code Repository](https://cloud.ibm.com/docs/codeengine?topic=codeengine-fun-create-repo)
+     - [IBM Cloud Source Code Repository](https://cloud.ibm.com/docs/codeengine?topic=codeengine-fun-create-repo)
 
 1. **Create a Shared Storage for Build Outputs**
 

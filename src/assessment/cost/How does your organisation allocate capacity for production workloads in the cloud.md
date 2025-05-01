@@ -52,7 +52,7 @@ Below are **rapidly actionable** steps to reduce waste and move beyond provision
      - Implement [Azure Automation's Start/Stop VMs v2](https://learn.microsoft.com/en-us/azure/automation/automation-solution-vm-management) to manage virtual machines on user-defined schedules.
      - Apply [Google Cloud's Instance Schedules](https://cloud.google.com/compute/docs/instances/schedule-instance-start-stop) to automatically start and stop Compute Engine instances based on a schedule.
      - Use [Oracle Cloud Infrastructure's Resource Scheduler](https://docs.oracle.com/en-us/iaas/Content/resource-scheduler/concepts/resourcescheduler-overview.htm) to manage compute instances' power states according to defined schedules.
-     - Use [IBM CLoud Schedule Scaling](https://cloud.ibm.com/docs/vpc?topic=vpc-scheduled-scaling-vpc&interface=ui) to add or remove instance group capacity, based on daily, intermittent, or seasonal demand. You can create multiple scheduled actions that scale capacity monthly, weekly, daily, hourly, or even every set number of minutes.
+     - Use [IBM Cloud Schedule Scaling](https://cloud.ibm.com/docs/vpc?topic=vpc-scheduled-scaling-vpc&interface=ui) to add or remove instance group capacity, based on daily, intermittent, or seasonal demand. You can create multiple scheduled actions that scale capacity monthly, weekly, daily, hourly, or even every set number of minutes.
    - Sharing this data with stakeholders can highlight the discrepancy between peak and average usage, demonstrating immediate cost savings without impacting production systems.
 
 1. **Explore Simple Autoscaling Solutions**

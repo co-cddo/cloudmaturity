@@ -35,7 +35,7 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
      - [Azure SQL Zone Redundancy](https://learn.microsoft.com/en-us/azure/azure-sql/database/high-availability-sla-local-zone-redundancy?view=azuresql)
      - [GCP Cloud SQL HA](https://cloud.google.com/sql/docs/mysql/high-availability)
      - [OCI Data Guard in Multi-AD Mode](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/data-guard-configuration.html)
-     IBM Cloud: for [PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-logical-replication), for [Cloudant](https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-replication-api), for MySQL & for [Cloud Databases](https://cloud.ibm.com/docs/cloud-databases?topic=cloud-databases-ha-dr)
+     - IBM Cloud: for [PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-logical-replication), for [Cloudant](https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-replication-api), for MySQL & for [Cloud Databases](https://cloud.ibm.com/docs/cloud-databases?topic=cloud-databases-ha-dr)
    - Ensures quick failover if one Availability Zone (AZ) fails.
 
 1. **Set AZ-Aware Networking**
