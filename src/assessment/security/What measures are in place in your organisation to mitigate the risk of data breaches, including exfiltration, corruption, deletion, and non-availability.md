@@ -36,8 +36,7 @@ Below are **rapidly actionable** steps to move beyond manual classification:
 1. **Introduce Basic Tooling**
 
    - For shared file systems or code repos, use built-in labeling or metadata:
-     - [Azure Information Protection](https://learn.microsoft.com/en-us/azure/information-protection/), [AWS Macie or S3 object tagging](https://aws.amazon.com/macie/), [GCP DLP + labeling](https://cloud.google.com/dlp), or [OCI data labeling approaches](https://www.oracle.com/cloud/free/oci-training/).
-     - [IBM Cloud - Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)
+     - [Azure Information Protection](https://learn.microsoft.com/en-us/azure/information-protection/), [AWS Macie or S3 object tagging](https://aws.amazon.com/macie/), [GCP DLP + labeling](https://cloud.google.com/dlp), or [OCI data labeling approaches](https://www.oracle.com/cloud/free/oci-training/), [IBM Cloud - Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage)
 
 1. **Require Access Controls**
 
