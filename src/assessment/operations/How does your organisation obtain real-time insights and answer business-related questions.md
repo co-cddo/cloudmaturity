@@ -47,7 +47,6 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
      - [OCI Analytics Cloud for straightforward data visualisations](https://docs.oracle.com/en-us/iaas/Content/Observability/Concepts/observabilityoverview.htm)
      - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started)
    - Even rudimentary dashboards reduce the SME dependency for repetitive questions.
-   
 
 1. **Pilot a Data Lake or Central Data Repository**
 
