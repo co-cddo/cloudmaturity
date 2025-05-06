@@ -24,8 +24,7 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
 
 1. **Enable Automatic Multi-AZ Deployments**
 
-   - e.g., [AWS Auto Scaling groups across multiple AZs](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-az-console.html), [Azure VM Scale Sets in multiple zones](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-availability-zones), [GCP Managed Instance Groups (MIGs) or multi-zonal regional clusters](https://cloud.google.com/compute/docs/instance-groups/regional-migs), [OCI multi-AD distribution for compute/storage](https://www.oracle.com/a/ocom/docs/cloud-training-architecture.pdf).
-   - IBM Cloud Instance Group for Autoscaling
+   - e.g., [AWS Auto Scaling groups across multiple AZs](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-az-console.html), [Azure VM Scale Sets in multiple zones](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-availability-zones), [GCP Managed Instance Groups (MIGs) or multi-zonal regional clusters](https://cloud.google.com/compute/docs/instance-groups/regional-migs), [OCI multi-AD distribution for compute/storage](https://www.oracle.com/a/ocom/docs/cloud-training-architecture.pdf),[IBM Cloud Instance Group for Autoscaling](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-auto-scale-instance-group&interface=ui).
    - Minimises manual overhead for distributing workloads.
 
 1. **Replicate Data Synchronously**

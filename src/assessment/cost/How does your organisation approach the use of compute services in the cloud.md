@@ -72,7 +72,7 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
      - [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/) or [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
      - [Google Cloud Run](https://cloud.google.com/run) or [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine).
      - [Oracle Cloud Infrastructure (OCI) Container Instances](https://www.oracle.com/cloud-native/container-engine-kubernetes/) or [Oracle Kubernetes Engine (OKE)](https://www.oracle.com/cloud-native/container-engine-kubernetes/).
-     - There are two options on IBM Cloud for a container platform, [Redhat Openshift on IBM Cloud](https://cloud.ibm.com/docs/openshift?topic=openshift-getting-started) or [IBM Cloud Kubenetes Service](https://cloud.ibm.com/docs/containers?topic=containers-getting-started)
+     - There are two options on IBM Cloud for a container platform, [Redhat Openshift on IBM Cloud](https://cloud.ibm.com/docs/openshift?topic=openshift-getting-started) or [IBM Cloud Kubernetes Service](https://cloud.ibm.com/docs/containers?topic=containers-getting-started)
    - By piloting a single container-based workload, you can assess potential elasticity and determine whether container orchestration solutions meet your needs. This approach allows for quick experimentation with minimal risk.
 
 1. **Raise Awareness with Internal Stakeholders**
