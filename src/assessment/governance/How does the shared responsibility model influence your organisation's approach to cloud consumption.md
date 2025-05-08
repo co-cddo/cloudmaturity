@@ -38,6 +38,7 @@ Below are **rapidly actionable** steps to move beyond minimal consideration of s
      - [Azure Shared Responsibility in Cloud Adoption Framework](/TODO)
      - [GCP Shared Responsibility Guidelines](/TODO)
      - [OCI Shared Responsibility Model Documentation](/TODO)
+     - [Shared responsibilities for using IBM Cloud products](https://cloud.ibm.com/docs/overview?topic=overview-shared-responsibilities)
    - Make a short list or matrix of tasks you must own (patching certain layers, data backups, encryption management, etc.) vs. what the vendor handles (infrastructure security, certain managed services).
 
 1. **Apply Basic Tagging for Ownership**
@@ -47,6 +48,7 @@ Below are **rapidly actionable** steps to move beyond minimal consideration of s
      - [Azure: Tagging strategy with Azure Policy to enforce consistent labeling of responsibilities](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies)
      - [GCP: Labels for identifying resource owners, e.g., "Owner=TeamX," "Responsibility=KeyRotation"](https://cloud.google.com/resource-manager/docs/creating-managing-labels)
      - [OCI: Tagging namespaces to define "PatchingOwner=PlatformTeam" or "BackupOwner=DataOps"](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
+     - IBM Cloud: Use [Resource Tagging](https://cloud.ibm.com/docs/account?topic=account-tag&interface=ui)
 
 1. **Conduct a Simple Risk Assessment**
 

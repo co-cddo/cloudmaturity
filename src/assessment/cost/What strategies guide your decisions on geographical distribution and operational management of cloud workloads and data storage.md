@@ -24,7 +24,7 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
 
 1. **Enable Automatic Multi-AZ Deployments**
 
-   - e.g., [AWS Auto Scaling groups across multiple AZs](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-az-console.html), [Azure VM Scale Sets in multiple zones](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-availability-zones), [GCP Managed Instance Groups (MIGs) or multi-zonal regional clusters](https://cloud.google.com/compute/docs/instance-groups/regional-migs), [OCI multi-AD distribution for compute/storage](https://www.oracle.com/a/ocom/docs/cloud-training-architecture.pdf).
+   - e.g., [AWS Auto Scaling groups across multiple AZs](https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-add-az-console.html), [Azure VM Scale Sets in multiple zones](https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-use-availability-zones), [GCP Managed Instance Groups (MIGs) or multi-zonal regional clusters](https://cloud.google.com/compute/docs/instance-groups/regional-migs), [OCI multi-AD distribution for compute/storage](https://www.oracle.com/a/ocom/docs/cloud-training-architecture.pdf),[IBM Cloud Instance Group for Autoscaling](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-auto-scale-instance-group&interface=ui).
    - Minimises manual overhead for distributing workloads.
 
 1. **Replicate Data Synchronously**
@@ -34,6 +34,7 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
      - [Azure SQL Zone Redundancy](https://learn.microsoft.com/en-us/azure/azure-sql/database/high-availability-sla-local-zone-redundancy?view=azuresql)
      - [GCP Cloud SQL HA](https://cloud.google.com/sql/docs/mysql/high-availability)
      - [OCI Data Guard in Multi-AD Mode](https://docs.oracle.com/en/cloud/paas/database-dbaas-cloud/csdbi/data-guard-configuration.html)
+     - IBM Cloud: for [PostgreSQL](https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-logical-replication), for [Cloudant](https://cloud.ibm.com/docs/Cloudant?topic=Cloudant-replication-api), for MySQL & for [Cloud Databases](https://cloud.ibm.com/docs/cloud-databases?topic=cloud-databases-ha-dr)
    - Ensures quick failover if one Availability Zone (AZ) fails.
 
 1. **Set AZ-Aware Networking**
@@ -43,6 +44,7 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
      - [Azure Standard Load Balancer across zones](https://learn.microsoft.com/en-us/azure/load-balancer/load-balancer-standard-availability-zones)
      - [GCP Load Balancing with multi-zone backends](https://cloud.google.com/load-balancing/docs/using-multi-regional-backends)
      - [OCI Load Balancer with multiple Availability Domain (AD) subnets](https://docs.oracle.com/en/cloud/paas/load-balancer/using-multi-ad.html)
+     - IBM Cloud [Network Load Balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-nlb-integration-with-instance-groups) & [Application Load Balancer](https://cloud.ibm.com/docs/vpc?topic=vpc-lbaas-integration-with-instance-groups)
    - Ensures high availability and fault tolerance by distributing traffic across multiple AZs.
 
 1. **Regularly Test AZ Failover**
@@ -52,7 +54,7 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
    - Ensures systems can handle unexpected disruptions effectively.
 
 1. **Monitor Cross-AZ Costs**
-   - Some vendors charge for data transfer between AZs, so monitor usage with [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/), [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/), [GCP Billing](https://cloud.google.com/billing), [OCI Cost Analysis](https://www.oracle.com/cloud/cost-analysis/).
+   - Some vendors charge for data transfer between AZs, so monitor usage with [AWS Cost Explorer](https://aws.amazon.com/aws-cost-management/aws-cost-explorer/), [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/), [GCP Billing](https://cloud.google.com/billing), [OCI Cost Analysis](https://www.oracle.com/cloud/cost-analysis/), [IBM Cloud Billing](https://cloud.ibm.com/docs/account?topic=account-charges) & [IBM Cost Estimator](https://www.ibm.com/cloud/cloud-calculator).
 
 By automatically spreading workloads, replicating data in multiple AZs, ensuring AZ-aware networking, regularly testing failover, and monitoring cross-AZ costs, you solidify your organisation’s resilience within a single region while controlling costs.
 

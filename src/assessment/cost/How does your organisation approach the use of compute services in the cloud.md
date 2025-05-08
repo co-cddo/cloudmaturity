@@ -43,6 +43,7 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
      - [Azure Monitor](https://azure.microsoft.com/en-us/services/monitor/) and [Azure Cost Management](https://azure.microsoft.com/en-us/services/cost-management/).
      - [GCP Monitoring](https://cloud.google.com/monitoring) and [Billing Reports](https://cloud.google.com/billing/docs/reports).
      - [OCI Monitoring](https://www.oracle.com/cloud/monitoring/) and [Cost Analysis](https://docs.oracle.com/en-us/iaas/Content/Billing/Concepts/costanalysisoverview.htm).
+     - [IBM Cloud Billing](https://cloud.ibm.com/docs/account?topic=account-charges) and [IBM Cost Estimator](https://www.ibm.com/cloud/cloud-calculator).
    - Check CPU, memory, and storage utilisation. If these metrics show consistent underuse (like 10% CPU usage around the clock), it’s a sign you can downsize or re-architect.
 
 1. **Leverage Built-in Right-sizing Tools**
@@ -52,6 +53,7 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
      - [Azure Advisor for VM right-sizing](https://learn.microsoft.com/en-us/azure/advisor/advisor-cost-recommendations) to identify underutilised virtual machines.
      - [GCP Recommender for machine types](https://cloud.google.com/recommender/docs/understanding-vm-machine-type-recommendations) to optimise resource utilisation.
      - [OCI Workload and Resource Optimisation](https://www.oracle.com/cloud/compute/) for tailored resource recommendations.
+     - [IBM Cloud Resource Controller](https://cloud.ibm.com/apidocs/resource-controller/resource-controller) is the next-generation IBM Cloud platform provisioning layer that manages the lifecycle of IBM Cloud resources in a customer account.
    - Make a plan to apply at least one or two right-sizing recommendations each quarter. This is a quick, low-risk path to cost savings and better resource use.
 
 1. **Introduce Simple Scheduling**
@@ -70,6 +72,7 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
      - [Azure Container Instances](https://azure.microsoft.com/en-us/services/container-instances/) or [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/en-us/services/kubernetes-service/).
      - [Google Cloud Run](https://cloud.google.com/run) or [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine).
      - [Oracle Cloud Infrastructure (OCI) Container Instances](https://www.oracle.com/cloud-native/container-engine-kubernetes/) or [Oracle Kubernetes Engine (OKE)](https://www.oracle.com/cloud-native/container-engine-kubernetes/).
+     - There are two options on IBM Cloud for a container platform, [Redhat Openshift on IBM Cloud](https://cloud.ibm.com/docs/openshift?topic=openshift-getting-started) or [IBM Cloud Kubernetes Service](https://cloud.ibm.com/docs/containers?topic=containers-getting-started)
    - By piloting a single container-based workload, you can assess potential elasticity and determine whether container orchestration solutions meet your needs. This approach allows for quick experimentation with minimal risk.
 
 1. **Raise Awareness with Internal Stakeholders**

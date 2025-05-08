@@ -49,6 +49,7 @@ Below are **rapidly actionable** steps to move beyond developer-exclusive cloud 
      - [Azure Resource Manager (Bicep), or Terraform modules for standard infrastructure patterns](https://docs.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
      - [GCP Deployment Manager or Terraform to keep code-based environment definitions](https://cloud.google.com/deployment-manager/docs/overview)
      - [OCI Resource Manager or Terraform for replicable resource creation](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
+     - [IBM Cloud Schematics](https://cloud.ibm.com/docs/schematics?topic=schematics-getting-started) for scripted automation of your cloud environment
 
 1. **Add a Cloud Security Checklist**
 

@@ -50,7 +50,7 @@ However, purely manual approaches risk misconfigurations, leftover resources, se
 
 1. **Enable Cloud Provider Audit Logging**
 
-   - e.g., [AWS CloudTrail for AWS](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html), [Azure Activity Logs](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log), [GCP Audit Logs](https://cloud.google.com/logging/docs/audit), [OCI Audit Service](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm).
+   - e.g., [AWS CloudTrail for AWS](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-concepts.html), [Azure Activity Logs](https://docs.microsoft.com/azure/azure-monitor/essentials/activity-log), [GCP Audit Logs](https://cloud.google.com/logging/docs/audit), [OCI Audit Service](https://docs.oracle.com/en-us/iaas/Content/Audit/Concepts/auditoverview.htm), [IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-about-cl).
    - Familiarise yourself with how to query logs and set retention.
 
 1. **Capture the "Why"**

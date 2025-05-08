@@ -40,6 +40,7 @@ Below are **rapidly actionable** steps to move away from ad-hoc management:
      - [Azure AD: Central user/group management, role-based access control for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
      - [GCP IAM: Granting roles at project/folder/organisation level, or using Google Workspace for single sign-on](https://cloud.google.com/iam/docs/overview)
      - [OCI IAM: Managing users and groups in Oracle Cloud with policies defining resource access](https://docs.oracle.com/iaas/Content/Identity/Concepts/overview.htm)
+     - IBM Cloud: Implement [IAM Access Controls](https://cloud.ibm.com/docs/account?topic=account-access-management-overview)
 
 1. **Record Exemptions in a Simple Tracker**
 

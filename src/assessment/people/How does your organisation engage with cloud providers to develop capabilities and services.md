@@ -35,6 +35,7 @@ Below are **rapidly actionable** steps to move from minimal interaction to stron
      - [Azure: Basic support with options for pay-as-you-go Dev/Test support or higher tiers](https://docs.microsoft.com/en-us/azure/azure-portal/supportability/how-to-manage-azure-support-request)
      - [GCP: Basic project-level support with an option to upgrade for faster response times](https://cloud.google.com/support)
      - [OCI: Basic limited support plus the option to engage an Oracle Cloud support representative](https://docs.oracle.com/en-us/iaas/Content/Support/Concepts/support-overview.htm)
+     - [IBM Cloud: Basic, Advanced & Premium Support Plans](https://cloud.ibm.com/docs/account?topic=account-support-plans)
    - This ensures you know how to escalate issues if they arise.
 
 1. **Use Vendor Documentation & Quickstart Guides**

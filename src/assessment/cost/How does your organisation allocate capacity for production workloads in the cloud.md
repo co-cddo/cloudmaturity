@@ -42,6 +42,7 @@ Below are **rapidly actionable** steps to reduce waste and move beyond provision
      - [Azure Monitor](https://azure.microsoft.com/en-us/products/monitor/) + [Azure Cost Management](https://azure.microsoft.com/en-us/products/cost-management/) for hourly/daily usage trends
      - [GCP Monitoring](https://cloud.google.com/monitoring) + [GCP Billing reports (BigQuery export for deeper analysis)](https://cloud.google.com/billing/docs/how-to/export-data-bigquery)
      - [OCI Monitoring](https://docs.oracle.com/en-us/iaas/Content/Monitoring/Concepts/monitoringoverview.htm) + [OCI Cost Analysis](https://cloudmarketplace.oracle.com/marketplace/content?contentId=110943915) for instance-level metrics
+     - [IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started) + [IBM Cloud Cost Estimator](https://www.ibm.com/cloud/cloud-calculator) for hourly usage and trends
    - Share this data with stakeholders to highlight the discrepancy between peak vs. average usage.
 
 1. **Pilot Scheduled Shutdowns for Non-Critical Systems**
@@ -51,6 +52,7 @@ Below are **rapidly actionable** steps to reduce waste and move beyond provision
      - Implement [Azure Automation's Start/Stop VMs v2](https://learn.microsoft.com/en-us/azure/automation/automation-solution-vm-management) to manage virtual machines on user-defined schedules.
      - Apply [Google Cloud's Instance Schedules](https://cloud.google.com/compute/docs/instances/schedule-instance-start-stop) to automatically start and stop Compute Engine instances based on a schedule.
      - Use [Oracle Cloud Infrastructure's Resource Scheduler](https://docs.oracle.com/en-us/iaas/Content/resource-scheduler/concepts/resourcescheduler-overview.htm) to manage compute instances' power states according to defined schedules.
+     - Use [IBM Cloud Schedule Scaling](https://cloud.ibm.com/docs/vpc?topic=vpc-scheduled-scaling-vpc&interface=ui) to add or remove instance group capacity, based on daily, intermittent, or seasonal demand. You can create multiple scheduled actions that scale capacity monthly, weekly, daily, hourly, or even every set number of minutes.
    - Sharing this data with stakeholders can highlight the discrepancy between peak and average usage, demonstrating immediate cost savings without impacting production systems.
 
 1. **Explore Simple Autoscaling Solutions**
@@ -65,6 +67,8 @@ Below are **rapidly actionable** steps to reduce waste and move beyond provision
 
      - [OCI Instance Pool Autoscaling – CPU or custom metrics triggers](https://docs.oracle.com/en-us/iaas/Content/Compute/Tasks/autoscalinginstancepools.htm): Oracle Cloud Infrastructure's Instance Pool Autoscaling allows you to automatically adjust the number of instances in a pool based on CPU utilisation or custom metrics, helping to optimise performance and cost.
 
+     - [IBM Cloud Auto Scale for VPC](https://cloud.ibm.com/docs/vpc?topic=vpc-creating-auto-scale-instance-group&interface=ui) allows you to create an instance group to scale according to your requirements. Based on the target utilisation metrics that you define, the instance group can dynamically add or remove instances to achieve your specified instance availability.
+
 Implementing autoscaling in a controlled environment allows you to evaluate its benefits and challenges, providing valuable insights before considering broader adoption for more critical workloads.
 
 1. **Review Reserved or Discounted Pricing**
@@ -78,6 +82,8 @@ Implementing autoscaling in a controlled environment allows you to evaluate its 
      - [GCP Committed Use Discounts](https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts): Google Cloud offers Committed Use Discounts, enabling you to commit to a certain amount of usage for a 1- or 3-year term, which can lead to substantial savings for steady-state or predictable workloads.
 
      - [OCI Universal Credits](https://www.oracle.com/cloud/pricing/): Oracle Cloud Infrastructure provides Universal Credits, allowing you to utilise any OCI platform service in any region with a flexible consumption model. By purchasing a sufficient number of credits, you can benefit from volume discounts and predictable billing, which is advantageous for maintaining high-capacity workloads.
+
+     - [IBM Cloud Reservations](https://cloud.ibm.com/docs/vpc?topic=vpc-about-reserved-virtual-servers-vpc) are a great option when you want significant cost savings and dedicated resources for future deployments. You can choose a 1 or 3-year term, server quantity, specific profile, and provision those servers when needed. [IBM Cloud Enterprise Savings Plan](https://cloud.ibm.com/docs/enterprise-management?topic=enterprise-management-committed-use), with this billing model, you commit to spend a certain amount on IBM Cloud and receive discounts across the platform. You are billed monthly based on your usage and you continue to receive a discount even after you reach your committed amount.
 
    - Implementing these discount programs won’t eliminate over-provisioning but can soften the budget impact.
 

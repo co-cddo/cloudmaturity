@@ -31,7 +31,7 @@ Below are **rapidly actionable** steps to bolster security beyond mere user vett
 1. **Implement the Principle of Least Privilege**
 
    - Even fully vetted staff should not have more privileges than needed:
-     - E.g., use [AWS IAM roles with distinct privileges](https://aws.amazon.com/iam/features/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM with granular roles](https://cloud.google.com/iam/docs/overview), or [OCI compartments/policies](https://www.oracle.com/cloud/free/oci-training/).
+     - E.g., use [AWS IAM roles with distinct privileges](https://aws.amazon.com/iam/features/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM with granular roles](https://cloud.google.com/iam/docs/overview), or [OCI compartments/policies](https://www.oracle.com/cloud/free/oci-training/), [IAM Access Controls](https://cloud.ibm.com/docs/account?topic=account-access-management-overview)
 
 1. **Mandate MFA for Privileged Accounts**
 
