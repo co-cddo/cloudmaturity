@@ -7,8 +7,12 @@
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
   "forwardPorts": [8080],
 
+  "containerEnv": {
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0"
+  },
+
   // Use 'postCreateCommand' to run commands after the container is created.
-  "postCreateCommand": "ssh-keygen -f '/home/node/.ssh/known_hosts' -R 'github.com' && npm install",
+  "postCreateCommand": "sudo corepack enable ; mkdir -p /home/node/.ssh/ ; touch /home/node/.ssh/known_hosts ; ssh-keygen -f '/home/node/.ssh/known_hosts' -R 'github.com' ; yarn",
   "customizations": {
     "vscode": {
       "extensions": [
