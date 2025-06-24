@@ -12,9 +12,11 @@ eleventyNavigation:
 Your organisation might rely heavily on firewall rules, IP allow-lists, or a perimeter-based model (e.g., on-premises network controls or perimeter appliances) to secure data and apps. This might be "good enough" if:
 
 1. **Limited External Exposure**
+
    - Only a few services are exposed to the internet, while most remain behind a well-managed firewall.
 
 1. **Legacy Infrastructure**
+
    - The environment or relevant compliance demands a dedicated network perimeter approach, with limited capacity to adopt more modern identity-based methods.
 
 1. **Strict On-Prem or Single-Cloud Approach**
@@ -27,19 +29,23 @@ Yet perimeter security alone can fail if an attacker bypasses your firewall or u
 Below are **rapidly actionable** steps to strengthen or evolve from perimeter-only security:
 
 1. **Introduce MFA for Privileged Access**
+
    - Even if you maintain a perimeter, require multi-factor authentication for admin or root accounts:
      - e.g., [AWS IAM MFA](https://aws.amazon.com/iam/features/mfa/), [Azure AD MFA](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP IAM 2FA](https://cloud.google.com/iam/docs/using-mfa), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/), [IBM Cloud MFA](https://cloud.ibm.com/docs/account?topic=account-enablemfa)
    - Minimises risk of compromised credentials bypassing the firewall.
 
 1. **Implement Least-Privilege IAM**
+
    - Don’t rely solely on IP allow-lists. Use role-based or attribute-based access for each service:
      - referencing [NCSC’s guidance on access control](https://www.ncsc.gov.uk/).
 
 1. **Segment Networks Internally**
+
    - If you must keep a perimeter, create subnet-level or micro-segmentation to contain potential lateral movement:
      - e.g., [AWS Security Groups + Network ACLs](https://aws.amazon.com/security-groups/), [Azure Network Security Groups](https://learn.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview), [GCP VPC firewall rules](https://cloud.google.com/vpc/docs/firewalls), or [OCI Security Lists/NSGs](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enable TLS Everywhere**
+
    - Even inside the perimeter, adopt TLS for internal service traffic.
    - [NCSC’s guidance on TLS best practices](https://www.ncsc.gov.uk/) ensures data in transit is protected if perimeter is breached.
 
@@ -55,9 +61,11 @@ By enforcing multi-factor authentication, introducing least-privilege IAM, segme
 Your organisation still maintains a perimeter firewall, but user identity checks (e.g., login with unique credentials) are enforced when accessing apps behind it. It might be "good enough" if:
 
 1. **Mixed Legacy and Modern Systems**
+
    - Some older apps demand perimeter-level protection, but you do require user logins or limited authentication steps for critical apps.
 
 1. **Basic Zero-Trust Awareness**
+
    - Recognising that IP-based controls alone are insufficient, you at least require unique logins for each service.
 
 1. **Minimal Threat or Complexity**
@@ -70,18 +78,22 @@ Though an improvement over pure perimeter reliance, deeper identity-based checks
 Below are **rapidly actionable** ways to extend identity verification:
 
 1. **Enforce MFA for All Users**
+
    - Expand from privileged accounts to all staff, referencing [NCSC’s multi-factor authentication guidance](https://www.ncsc.gov.uk/) or vendor-based solutions:
      - [AWS IAM](https://aws.amazon.com/iam/), [Azure AD MFA](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP Identity](https://cloud.google.com/identity), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Increase Granularity of Access Controls**
+
    - Instead of letting a user into the entire internal network after login, define specific role-based or service-based access:
      - e.g., [AWS IAM condition keys](https://aws.amazon.com/iam/features/condition-keys/), [Azure Conditional Access](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [GCP Access Context Manager](https://cloud.google.com/access-context-manager/docs/overview), or [OCI compartments/policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt SSO**
+
    - If each app behind the perimeter uses separate user stores, unify them with SSO:
      - e.g., [AWS SSO](https://aws.amazon.com/sso/), [Azure AD SSO](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whats-new-azure-ad-sso), [GCP Identity Federation](https://cloud.google.com/identity/docs/overview), or [OCI IDCS integration](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enable Auditing & Logging**
+
    - Once inside the network, log user actions for each app or system:
      - e.g., [AWS CloudTrail](https://aws.amazon.com/cloudtrail/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/), [GCP Cloud Logging](https://cloud.google.com/logging/docs/overview), or [OCI Audit Logs](https://www.oracle.com/cloud/free/oci-training/) for post-identity verification behavior.
 
@@ -97,9 +109,11 @@ By mandating MFA for all, refining role-based or service-level access, introduci
 You verify not just the user’s identity but also ensure the service or system making the request is authenticated. This indicates a move towards more modern, partial zero-trust concepts. It might be "good enough" if:
 
 1. **Service Identities**
+
    - Non-human accounts also need secure tokens or certificates, so you know which microservice or job is calling your APIs.
 
 1. **User + Service Auth**
+
    - Each request includes user identity (or claims) plus the service’s verified identity.
 
 1. **Reduced Attack Surface**
@@ -112,16 +126,20 @@ To progress further, you might adopt advanced mutual TLS, ephemeral identity tok
 Below are **rapidly actionable** ways to strengthen user+service identity verification:
 
 1. **Use mTLS or Short-Lived Tokens**
+
    - e.g., [AWS IAM roles for EC2 with STS](https://aws.amazon.com/iam/features/sts), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Workload Identity Federation](https://cloud.google.com/identity/docs/workload-identity-federation), or [OCI dynamic groups/tokens](https://www.oracle.com/cloud/free/oci-training/), plus mTLS for containers or microservices.
 
 1. **Adopt Policy-as-Code**
+
    - Incorporate [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions ([AWS SCP](https://aws.amazon.com/service-catalog/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define rules that check both user claims and service identity for each call.
 
 1. **Enforce Request-Level Authorisation**
+
    - For each critical API, evaluate the user identity, service identity, and method scope:
      - referencing [NCSC least privilege guidance](https://www.ncsc.gov.uk/) or [NIST SP 800-53 AC-6 for role-based checks](https://csrc.nist.gov/).
 
 1. **Implement JIT Privileges**
+
    - For especially sensitive or admin tasks, require ephemeral or just-in-time escalation tokens (with a short lifetime).
 
 1. **Log & Analyze Service-to-Service Interactions**
@@ -136,9 +154,11 @@ By implementing mTLS or ephemeral tokens for user+service identity, deploying po
 Your organisation has started phasing out VPN or perimeter-based approaches, preferring direct connections where each request is authenticated and authorised at the identity level. It’s likely "good enough" if:
 
 1. **Mixed Environments**
+
    - Some apps still use older network-based rules, but new services rely on modern identity or SSO for access.
 
 1. **Reduction in Attack Surface**
+
    - No blanket VPN that grants wide network access—users or microservices authenticate to each resource directly.
 
 1. **Increasing Zero Trust**
@@ -151,18 +171,22 @@ To advance, you might unify all apps under identity-based controls, incorporate 
 Below are **rapidly actionable** ways to deepen identity-centric security:
 
 1. **Retire or Restrict VPN**
+
    - If a VPN is still used to reach certain legacy apps, plan a phased approach to move them behind identity-based gateways:
      - e.g., [AWS AppStream or AWS WorkSpaces](https://aws.amazon.com/appstream/), [Azure App Proxy](https://learn.microsoft.com/en-us/azure/active-directory/app-proxy/), [GCP BeyondCorp Enterprise](https://cloud.google.com/beyondcorp/enterprise), or [OCI Identity Aware solutions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Embed Device Trust**
+
    - Combine user identity with device compliance checks:
      - e.g., [Azure AD Conditional Access with device compliance, Google BeyondCorp device posture, AWS or OCI solutions integrated with MDM] for advanced zero-trust.
 
 1. **Embrace Microsegmentation**
+
    - Each app or microservice is accessible only with the correct identity claim, not broad network-level trust.
    - referencing [NCSC’s microsegmentation advice or DevSecOps patterns](https://www.ncsc.gov.uk/).
 
 1. **Establish Single Sign-On for All**
+
    - If some staff still need separate logins for older apps, unify them with [AWS SSO](https://aws.amazon.com/sso/), [Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whats-new-azure-ad-sso), [GCP Identity](https://cloud.google.com/identity), or [OCI IDCS Federation](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Continuously Train Staff**
@@ -178,9 +202,11 @@ By methodically retiring or limiting VPN usage, integrating device posture check
 At this final maturity level, your organisation’s security is fully identity- and device-centric—no blanket perimeter or VPN. You might consider it "good enough" if:
 
 1. **Zero-Trust Realisation**
+
    - Every request is authenticated and authorised per device and user identity, referencing [NCSC zero trust](https://www.ncsc.gov.uk/) or [NIST SP 800-207 approaches](https://csrc.nist.gov/).
 
 1. **Full Cloud or Hybrid Environment**
+
    - You’ve adapted all systems to identity-based access, no backdoor VPN routes or firewall exceptions.
 
 1. **Streamlined Access**
@@ -193,18 +219,22 @@ Even so, consider advanced HPC/AI zero-trust expansions, cross-department identi
 Below are **rapidly actionable** ways to sustain no-perimeter, identity-based security:
 
 1. **Refine Device & User Risk Scoring**
+
    - If a device shows outdated OS or known vulnerabilities, reduce or block certain privileges automatically:
      - e.g., [Azure AD Conditional Access with risk-based policies](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [AWS Cognito device posture checks](https://aws.amazon.com/cognito/), [GCP BeyondCorp device trust](https://cloud.google.com/beyondcorp/enterprise), or [OCI device posture solutions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enforce Continuous Authentication**
+
    - Check user identity validity at frequent intervals, not just at session start:
      - Tools for short-lived tokens or renewed claims, referencing [NCSC’s recommended short-session best practices](https://www.ncsc.gov.uk/).
 
 1. **Extend Zero-Trust to Microservices**
+
    - Each microservice or container also obtains ephemeral credentials or mTLS, ensuring service-to-service trust.
    - referencing [NCSC supply chain guidance](https://www.ncsc.gov.uk/) or [NIST SP 800-53 AC controls for machine identity](https://csrc.nist.gov/).
 
 1. **Use Policy-as-Code**
+
    - Implement [Open Policy Agent (OPA)](https://www.openpolicyagent.org/), [AWS SCP](https://aws.amazon.com/service-catalog/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), or [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/) for dynamic, code-defined guardrails that adapt to real-time signals.
 
 1. **Collaborate & Share**

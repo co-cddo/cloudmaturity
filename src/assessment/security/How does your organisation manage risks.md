@@ -12,9 +12,11 @@ eleventyNavigation:
 Your organisation’s risk management approach is largely ad hoc—no formal tools or consistent methodology. It might be "good enough" if:
 
 1. **Limited Scale or Maturity**
+
    - You run small, low-criticality projects where major incidents are rare, so an informal approach hasn’t caused big issues yet.
 
 1. **Tight Budget or Short Timescale**
+
    - Adopting more structured processes may currently seem out of reach.
 
 1. **No External Compliance Pressures**
@@ -27,18 +29,22 @@ Nevertheless, purely informal risk management can lead to overlooked threats—p
 Below are **rapidly actionable** steps to improve from an informal approach:
 
 1. **Create a Simple Risk Checklist**
+
    - Document cloud-specific concerns: data breaches, credential leaks, cost overruns, vendor lock-in.
    - Align with [NCSC’s Cloud Security Principles](https://www.ncsc.gov.uk/collection/cloud-security) or a [NIST SP 800-37 based checklist](https://csrc.nist.gov/).
 
 1. **Record & Communicate Regularly**
+
    - Even a single spreadsheet or Word doc with identified risks, likelihood, and impact fosters consistency.
    - Share it monthly or quarterly with the relevant stakeholders.
 
 1. **Assign Risk Owners**
+
    - For each risk, name someone responsible for tracking and mitigating.
    - Prevents duplication or "everyone and no one" owning an issue.
 
 1. **Introduce Basic Likelihood & Impact Scoring**
+
    - e.g., 1-5 scale for likelihood, 1-5 for impact, multiply for a total risk rating.
    - This helps prioritise and start discussion around risk tolerance.
 
@@ -54,9 +60,11 @@ By establishing a simple risk checklist, scheduling short reviews, assigning own
 Your organisation does track risks in spreadsheets, but each project manages them independently, with no overarching or centralised view. This might be "good enough" if:
 
 1. **Limited Inter-Project Dependencies**
+
    - Each project’s risks are fairly separate, so missing cross-program synergy or consolidated reporting doesn’t cause issues.
 
 1. **Basic Consistency**
+
    - Each spreadsheet might follow a similar format (like risk ID, likelihood, impact, mitigations), but there’s no single consolidated tool.
 
 1. **Low Complexity**
@@ -69,17 +77,21 @@ Spreadsheets can lead to inconsistent categories, scattered ownership, and diffi
 Below are **rapidly actionable** improvements:
 
 1. **Adopt a Standardised Template**
+
    - Provide a uniform risk register template across all projects.
    - Outline columns (e.g., risk description, category, likelihood, impact, owner, mitigations, target resolution date).
 
 1. **Encourage Regular Cross-Project Reviews**
+
    - Monthly or quarterly, each project lead presents top risks.
    - Creates awareness of shared or similar risks (like cloud credential leaks, compliance deadlines).
 
 1. **Consolidate Key Risks**
+
    - Extract major issues from each spreadsheet into a single "organisational risk summary" for senior leadership or departmental boards.
 
 1. **Implement Basic Tool or Shared Repository**
+
    - e.g., host a central SharePoint list, JIRA board, or Google Sheet consolidating all project-level risk inputs:
      - Minimises confusion while maintaining a single source of truth.
 
@@ -96,9 +108,11 @@ By adopting a consistent template, hosting cross-project reviews, summarising to
 Your organisation uses structured risk registers—most likely Excel-based or a simple internal tool—and schedules regular reviews (e.g., monthly or quarterly). This is likely "good enough" if:
 
 1. **Consistent Methodology**
+
    - Teams follow a standardised approach: e.g., risk descriptions, scoring, mitigations, owners, due dates.
 
 1. **Regular Governance**
+
    - Directors, program managers, or a governance board reviews and signs off on updated risks.
 
 1. **Integration with Cloud Projects**
@@ -111,19 +125,23 @@ While fairly robust, you may further unify these registers across multiple progr
 Below are **rapidly actionable** ways to expand your formal risk register process:
 
 1. **Introduce Real-Time Updates or Alerts**
+
    - If new vulnerabilities or breaches occur, staff must promptly add or update a risk in the register:
      - Possibly integrate with [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure DevOps](https://learn.microsoft.com/en-us/azure/devops/), [GCP Security scans](https://cloud.google.com/security-command-center/docs/overview), or [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/) for quick notifications.
 
 1. **Measure Risk Reduction Over Time**
+
    - Track how mitigations lower risk levels. Summaries can feed departmental or board-level dashboards:
      - e.g., "Risk #12: Cloud credential leaks reduced from High to Medium after implementing MFA and secret rotation."
 
 1. **Encourage GRC Tools**
+
    - Government Risk and Compliance tools can unify multiple registers:
      - e.g., ServiceNow GRC, RSA Archer, or open-source solutions.
    - Minimises duplication across large organisations or multiple projects.
 
 1. **Link Mitigations to Budgets and Timelines**
+
    - Where possible, highlight the cost or resource needed for each major mitigation:
      - Helps leadership see rationale for investing in e.g., staff training, new security tools.
 
@@ -140,9 +158,11 @@ By setting up real-time triggers for new risks, visualising risk reduction, cons
 Your organisation has a singular system (e.g., a GRC platform) for capturing, prioritising, and reviewing risks from multiple streams, including cloud transformation efforts. It’s likely "good enough" if:
 
 1. **Enterprise-Wide Visibility**
+
    - Senior leadership and departmental leads see aggregated risk dashboards, no longer limited to siloed project registers.
 
 1. **Consistent Method & Language**
+
    - Risk scoring, categories, and statuses are uniform, reducing confusion or mismatches.
 
 1. **Active Governance**
@@ -155,18 +175,22 @@ To further strengthen, you may embed advanced threat intelligence or real-time m
 Below are **rapidly actionable** ways to optimise integrated, centrally overseen risk management:
 
 1. **Incorporate Cloud-Specific Telemetry**
+
    - Feed alerts from [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP SCC](https://cloud.google.com/security-command-center/docs/overview), or [OCI Security Advisor](https://www.oracle.com/cloud/free/oci-training/) directly into your central risk management system:
      - Automates new risk entries or risk re-scoring when a new vulnerability emerges.
 
 1. **Advance Real-Time Dashboards**
+
    - Provide live risk dashboards for each department or service, updating as soon as a risk or its mitigations change:
      - e.g., hooking up GRC tools to Slack/Teams for immediate notifications.
 
 1. **Use Weighted Scoring for Cloud Projects**
+
    - Factor in vendor lock-in, cost unpredictability, and data security in your risk scoring.
    - Align with [NCSC’s cloud security frameworks](https://www.ncsc.gov.uk/) or [NIST SP 800-53 AC/B as relevant](https://csrc.nist.gov/).
 
 1. **Formalise Risk Response Plans**
+
    - For high or urgent risks, define an immediate action plan or "playbook," referencing [NCSC’s incident response methods](https://www.ncsc.gov.uk/collection/incident-management).
 
 1. **Encourage Cross-department Collaboration**
@@ -182,9 +206,11 @@ By integrating real-time cloud telemetry into your central risk system, offering
 At this final level, your organisation uses a sophisticated enterprise risk platform that automatically escalates or notifies stakeholders when certain thresholds are met. This approach is typically "good enough" if:
 
 1. **Near Real-Time Insights**
+
    - The tool collects data from multiple sources (e.g., CI/CD pipelines, security scans, cost anomalies) and auto-updates risk profiles.
 
 1. **Proactive Alerts**
+
    - If a new vulnerability emerges or usage surpasses a cost threshold, the system escalates to management or security leads.
 
 1. **High Maturity Culture**
@@ -197,18 +223,22 @@ Although quite mature, you might refine further by adopting advanced AI-based an
 Below are **rapidly actionable** ways to enhance an already advanced, proactive risk management system:
 
 1. **Adopt AI/ML for Predictive Risk**
+
    - Tools or scripts that detect emerging patterns before they become major issues:
      - e.g., anomalous cost spikes or security logs flagged by [AWS DevOps Guru](https://aws.amazon.com/devops-guru/), [Azure Sentinel ML](https://learn.microsoft.com/en-us/azure/sentinel/ml-analytics), [GCP Security Command Center with ML](https://cloud.google.com/security-command-center/docs/overview), or [OCI advanced analytics](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Integrate Risk with DevSecOps**
+
    - Show real-time risk scores in CI/CD pipelines, halting deployments if a new "High" or "Critical" risk is detected:
      - e.g., referencing [AWS CodePipeline gates](https://aws.amazon.com/codepipeline/features/), [Azure DevOps approvals](https://learn.microsoft.com/en-us/azure/devops/pipelines/process/approvals), [GCP Cloud Build triggers](https://cloud.google.com/cloud-build/docs/triggers), or [OCI DevOps pipeline policy checks](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Multi-Cloud or Hybrid Risk Consolidation**
+
    - If operating across AWS, Azure, GCP, OCI, or on-prem, unify them in one advanced GRC or SIEM tool:
      - Minimises siloed risk reporting.
 
 1. **Extend Collaborative Risk Governance**
+
    - If you share HPC or cross-department AI/ML projects, hold multi-department risk board sessions:
      - Aligning with [GOV.UK collaborative approach or relevant NCSC multi-stakeholder security frameworks](https://www.ncsc.gov.uk/).
 

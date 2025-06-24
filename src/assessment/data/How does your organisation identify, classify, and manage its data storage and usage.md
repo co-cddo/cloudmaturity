@@ -12,12 +12,15 @@ eleventyNavigation:
 In the "Decentralised and Ad Hoc Management" stage, each department, team, or project might handle data in its own way, with minimal organisational-level policies or guidance. You might consider this setup "good enough" under the following conditions:
 
 1. **Very Small or Low-Risk Datasets**
+
    - If your organisation handles mostly unclassified or minimal-risk data, and the volume is modest enough that the cost of implementing formal oversight isn’t easily justified.
 
 1. **Early Phases or Pilot Projects**
+
    - You might be in a startup-like environment testing new digital services, with no immediate demand for robust data governance.
 
 1. **Minimal Regulatory/Compliance Pressure**
+
    - If you’re not subject to strict data protection, privacy regulations, or public accountability—for example, a small-scale internal project with no personally identifiable information (PII).
 
 1. **Low Complexity**
@@ -30,6 +33,7 @@ However, for most UK public sector bodies, even "unofficial" data systems can be
 Here are **rapidly actionable** steps to establish foundational data management and reduce risks:
 
 1. **Identify and Tag All Existing Data Stores**
+
    - Start by running a quick inventory or "data discovery" across your cloud environment:
      - [AWS: Use AWS Resource Tagging and AWS Config to identify S3 buckets, EBS volumes, RDS instances, etc.](https://docs.aws.amazon.com/config/latest/developerguide/tagging.html)
      - [Azure: Azure Resource Graph or tagging to locate Storage Accounts, SQL Databases, etc.](https://docs.microsoft.com/en-us/azure/governance/resource-graph/first-query)
@@ -39,10 +43,12 @@ Here are **rapidly actionable** steps to establish foundational data management 
    - Even if you only have partial naming standards, tag each discovered resource with "owner," "purpose," and "data type." This immediately lowers the risk of data sprawl.
 
 1. **Establish Basic Data Handling Guidelines**
+
    - Document a short set of rules about where teams should store data, who can access it, and minimal security classification steps (e.g., "Use only these approved folders/buckets for OFFICIAL-SENSITIVE data").
    - Reference the [Government Security Classification Policy (GSCP)](https://www.gov.uk/government/publications/government-security-classifications) or departmental guidelines to outline baseline compliance steps.
 
 1. **Enable Basic Monitoring and Access Controls**
+
    - Ensure you have simple controls in place:
      - [AWS: S3 Bucket Policies, AWS IAM Access Analyzer to detect overly open buckets](https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-analyzer.html)
      - [Azure: Role-Based Access Control (RBAC) for storage accounts, Azure Policy for restricting public endpoints](https://learn.microsoft.com/en-us/azure/storage/common/policy-reference)
@@ -52,6 +58,7 @@ Here are **rapidly actionable** steps to establish foundational data management 
    - This helps prevent accidental public exposure or misconfigurations.
 
 1. **Educate Teams on Data Sensitivity**
+
    - Run short, targeted training or lunch-and-learns on recognising PII, official data, or other categories.
    - Emphasize that storing data in an "unofficial" manner can violate data protection laws or hamper future compliance efforts.
 
@@ -70,13 +77,16 @@ By identifying your data storage resources, applying minimal security tagging, a
 Here, you’ve moved from having no formal oversight to each team at least keeping track of their data usage—potentially in spreadsheets or internal wikis. You might view this as sufficient if:
 
 1. **Moderate Complexity but Clear Ownership**
+
    - Each department or project has well-defined data owners who can articulate what data they store, how sensitive it is, and where it resides.
 
 1. **Manual Policy is Consistently Applied**
+
    - You have a basic organisational data policy, and each team enforces it themselves, without heavy central governance.
    - So far, you haven’t encountered major incidents or confusion over compliance.
 
 1. **Low Rate of Cross-Team Data Sharing**
+
    - If data seldom flows between departments, manual documentation might not be overly burdensome.
 
 1. **Acceptable Accuracy**
@@ -89,6 +99,7 @@ However, manual adherence becomes error-prone as soon as data volumes grow or cr
 Below are **rapidly actionable** ways to improve upon team-based documentation:
 
 1. **Adopt Centralised Tagging/Labeling Policies**
+
    - Instead of each team inventing its own naming or classification, unify your approach:
      - [AWS: Resource Tagging Strategy, e.g., "data_sensitivity=OFFICIAL" or "data_owner=TeamX"](https://docs.aws.amazon.com/whitepapers/latest/tagging-best-practices/tagging-best-practices.html)
      - [Azure Policy for enforcing tags, e.g., "Env=Production; DataClassification=PersonalData"](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies)
@@ -97,6 +108,7 @@ Below are **rapidly actionable** ways to improve upon team-based documentation:
    - This fosters consistent data metadata across teams.
 
 1. **Introduce Lightweight Tools for Schema and Documentation**
+
    - Even if you can’t deploy a full data catalog, encourage teams to use a shared wiki or knowledge base that references cloud resources directly:
      - [AWS Glue Data Catalog for structured data sets](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
      - [Azure Purview (Microsoft Purview) for scanning and labeling data](https://learn.microsoft.com/en-us/purview/purview)
@@ -105,6 +117,7 @@ Below are **rapidly actionable** ways to improve upon team-based documentation:
    - This can evolve into a more formal data inventory.
 
 1. **Standardise on Security and Compliance Checklists**
+
    - Provide each team with a short checklist:
      - Data classification verified?
      - Encryption enabled?
@@ -116,6 +129,7 @@ Below are **rapidly actionable** ways to improve upon team-based documentation:
      - [OCI Security Advisor for storage encryption and IAM best practices](https://docs.oracle.com/en-us/iaas/Content/Security/Concepts/securityadvisor.htm)
 
 1. **Schedule Quarterly or Semi-Annual Data Reviews**
+
    - Even if managed by each team, commit to an organisational cycle:
      - They update their data inventories, verify classification, and confirm no stale or untagged storage resources.
      - Summarise findings to central governance or a data protection officer for quick oversight.
@@ -133,13 +147,16 @@ By implementing standardised tagging, shared documentation tools, and routine ch
 Now you have a formal data inventory that might combine manual inputs from teams and automated scans to detect data types (e.g., presence of national insurance numbers or other PII). This can be "good enough" if:
 
 1. **You Know Where Your Data Lives**
+
    - You’ve mapped key data stores—cloud buckets, databases, file systems—and keep these records relatively up to date.
 
 1. **Consistent Data Classification**
+
    - You apply recognised categories like "OFFICIAL," "OFFICIAL-SENSITIVE," "RESTRICTED," or other departmental terms.
    - Teams are aware of which data must follow special controls (e.g., personal data under UK GDPR, payment card data under PCI-DSS, etc.).
 
 1. **Proactive Compliance**
+
    - You can respond to data subject requests or FOI (Freedom of Information) inquiries quickly, because you know which systems contain personal or sensitive data.
    - Auditors or data protection officers can trace the location of specific data sets.
 
@@ -154,6 +171,7 @@ If your organisation can maintain this inventory without excessive overhead, mee
 To refine your "Inventoried and Classified Data" approach, apply these **rapidly actionable** enhancements:
 
 1. **Automate Scanning and Classification**
+
    - Supplement manual entries with scanning tools that detect PII, sensitive patterns, or regulated data:
      - [AWS Macie for S3 data classification, or Amazon Comprehend for advanced text insights](https://docs.aws.amazon.com/macie/)
      - [Azure Purview (Microsoft Purview) scanning storage accounts, Azure SQL DB, or Azure Synapse for sensitive info](https://learn.microsoft.com/en-us/purview/)
@@ -162,6 +180,7 @@ To refine your "Inventoried and Classified Data" approach, apply these **rapidly
    - Regularly schedule these scans so new data is automatically classified.
 
 1. **Introduce Basic Lineage Tracing**
+
    - Even if partial, track how data flows from source to destination:
      - For instance, a CRM system exporting daily CSV to an S3 bucket for analytics, then into a data warehouse.
    - Tools like:
@@ -172,6 +191,7 @@ To refine your "Inventoried and Classified Data" approach, apply these **rapidly
    - This practice enhances data traceability and supports compliance efforts.
 
 1. **Align with Legal & Policy Requirements**
+
    - Mark data sets with relevant regulations—UK GDPR, FOI, PCI-DSS, etc.
    - Build retention policies that automatically archive or delete data when it meets disposal criteria:
      - [AWS S3 Lifecycle rules, or versioning + replication for specific compliance domains](https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lifecycle-mgmt.html)
@@ -180,6 +200,7 @@ To refine your "Inventoried and Classified Data" approach, apply these **rapidly
      - [OCI Object Storage lifecycle management to archive or delete data automatically](https://docs.oracle.com/en-us/iaas/Content/Object/Tasks/managinglifecyclepolicies.htm)
 
 1. **Create a Single "Data Inventory" Dashboard**
+
    - Consolidate classification statuses in a simple dashboard or spreadsheet so data governance leads can track changes at a glance.
    - If possible, generate monthly or quarterly "data classification health" reports.
 
@@ -196,14 +217,17 @@ With scanning, lineage insights, policy-aligned retention, and better visibility
 In this phase, your organisation has established processes to classify and review data regularly. You likely have:
 
 1. **Well-Established Inventory and Processes**
+
    - You know exactly where crucial data resides (cloud databases, file shares, analytics platforms).
    - Teams reliably classify new data sets, typically with centralised or automated oversight.
 
 1. **Ongoing Compliance Audits**
+
    - Internal audits or external assessors confirm that data is generally well-managed, meeting security classifications and retention rules.
    - Incidents or policy violations are rare and quickly addressed.
 
 1. **Partial Lineage Documentation**
+
    - Teams can verbally or via some diagrams explain how data flows through the organisation.
    - However, it’s not uniformly captured in a single system or data catalog.
 
@@ -218,6 +242,7 @@ If your broad compliance posture is solid, and your leadership or data protectio
 Below are **rapidly actionable** steps to deepen your data lineage and documentation:
 
 1. **Adopt or Expand a Data Catalog with Lineage Features**
+
    - Introduce or enhance tooling that can map data flows automatically or semi-automatically:
      - [AWS Glue Data Catalog lineage (part of AWS Glue Studio) or AWS Lake Formation cross-lake lineage features](https://aws.amazon.com/blogs/big-data/build-data-lineage-for-data-lakes-using-aws-glue-amazon-neptune-and-spline/)
      - [Azure Purview (Microsoft Purview) with lineage detection for Data Factory/Databricks pipelines](https://learn.microsoft.com/en-us/azure/data-factory/tutorial-push-lineage-to-purview)
@@ -225,16 +250,19 @@ Below are **rapidly actionable** steps to deepen your data lineage and documenta
      - [OCI Data Catalog lineage modules, or integrative metadata tools for Oracle DB, Object Storage, etc.](https://blogs.oracle.com/cloud-infrastructure/post/new-data-lineage-features-oci-data-catalog)
 
 1. **Create a Standard Operating Procedure for Lineage Updates**
+
    - Whenever a new data pipeline is created or an ETL job changes, staff must add or adjust lineage documentation.
    - Ensure this ties into your DevOps or CI/CD process:
      - E.g., new code merges automatically trigger updates in Purview or Data Catalog.
 
 1. **Encourage Data Reuse and Collaboration**
+
    - With partial lineage, teams might still re-collect or duplicate data. Create incentives for them to discover existing data sets:
      - Host a monthly "Data Discovery Forum" or internal knowledge-sharing session.
      - Highlight "success stories" where reusing a known dataset saved time or reduced duplication.
 
 1. **Set Up Tiered Access Policies**
+
    - Understanding lineage helps define more granular access control. If you see that certain data flows from a core system to multiple departmental stores, you can apply consistent RBAC or attribute-based access control:
      - [AWS Lake Formation for fine-grained table/column access in a data lake environment](https://docs.aws.amazon.com/lake-formation/latest/dg/access-control-fine-grained.html)
      - [Azure Synapse RBAC / Purview classification-based access policies](https://learn.microsoft.com/en-us/azure/synapse-analytics/security/synapse-workspace-synapse-rbac-roles)
@@ -254,14 +282,17 @@ By systematically building out lineage features and embedding them in everyday w
 In this final stage, your organisation has an extensive data catalog that covers:
 
 1. **Comprehensive Metadata and Glossary**
+
    - You store definitions, owners, classification details, transformations, and usage patterns in a single platform.
    - Non-technical staff can also search and understand data context easily (e.g., "Which dataset includes housing records for local authorities?").
 
 1. **Automated Lineage from Source to Consumption**
+
    - ETL pipelines, analytics jobs, and data transformations are captured, so you see exactly how data moves from one place to another.
    - If a compliance or FOI request arises, you can trace the entire path of relevant data instantly.
 
 1. **Embedded Data Quality and Governance**
+
    - The catalog might track data quality metrics (e.g., completeness, validity, duplicates) and flags anomalies.
    - Governance teams can set or update policy rules in the catalog, automatically enforcing them across various tools.
 
@@ -276,6 +307,7 @@ If you meet these criteria with minimal friction or overhead, your advanced cata
 Even at the highest maturity, here are **actionable** ways to refine:
 
 1. **Incorporate Real-Time or Streaming Data**
+
    - Expand your catalog’s scope to include real-time pipelines, e.g., streaming from IoT devices or sensor networks:
      - [AWS Kinesis Data Streams or AWS MSK lineage integration with Glue or Lake Formation](https://docs.aws.amazon.com/glue/latest/dg/aws-glue-programming-etl-connect-kinesis-home.html)
      - [Azure Event Hubs + Databricks or Stream Analytics lineage in Purview](https://learn.microsoft.com/en-us/samples/microsoft/purview-adb-lineage-solution-accelerator/azure-databricks-to-purview-lineage-connector/)
@@ -283,11 +315,13 @@ Even at the highest maturity, here are **actionable** ways to refine:
      - [OCI Streaming service integrated with Data Integration or Data Catalog lineage updates](https://blogs.oracle.com/cloud-infrastructure/post/where-did-the-data-come-from-data-lineage)
 
 1. **Add Automated Data Quality Rules and Alerts**
+
    - Configure threshold-based triggers that check data quality daily:
      - e.g., "If more than 5% of new rows fail validation, alert the data steward."
    - Some vendor-native tools or third-party solutions can embed these checks in your data pipeline or catalog.
 
 1. **Leverage AI/ML to Classify and Suggest Metadata**
+
    - Let machine learning simplify classification:
      - [AWS Macie for advanced PII detection, combined with AI-driven suggestions for new data sets in AWS Glue Data Catalog](https://aws.amazon.com/blogs/big-data/enrich-your-aws-glue-data-catalog-with-generative-ai-metadata-using-amazon-bedrock/)
      - [Azure Purview with AI-based classifiers, integrated with Azure Cognitive Services for text analysis](https://techcommunity.microsoft.com/blog/microsoftmechanicsblog/ai-powered-data-classification--microsoft-purview/3919206)
@@ -295,6 +329,7 @@ Even at the highest maturity, here are **actionable** ways to refine:
      - [OCI Data Catalog with Oracle Machine Learning add-ons for pattern recognition in large data sets](https://blogs.oracle.com/ai-and-datascience/post/using-ai-and-ml-to-enrich-metadata-in-data-catalog)
 
 1. **Integrate Catalog with Wider Public Sector Ecosystems**
+
    - If your data catalog can integrate with cross-government data registries or share metadata with partner organisations, you reduce duplication and improve interoperability. For instance:
      - Some local authorities or NHS trusts might share standardised definitions or [GDS guidelines](https://www.gov.uk/guidance/gds-data-standards).
      - Tools or APIs that facilitate federation with external catalogs can open up broad data collaboration.

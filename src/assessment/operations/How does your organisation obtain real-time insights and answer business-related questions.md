@@ -12,10 +12,12 @@ eleventyNavigation:
 If your organisation primarily relies on a small group of subject matter experts (SMEs) to interpret raw data and produce insights, you might consider it "good enough" if:
 
 1. **Low Frequency of Data-Driven Questions**
+
    - Your operational or policy decisions rarely hinge on up-to-the-minute insights.
    - Data queries happen sporadically, and a slower manual approach remains acceptable.
 
 1. **Very Specific Domain Knowledge**
+
    - Your SMEs possess deep domain expertise that general reporting tools cannot easily replicate.
    - The data sets are not extensive, so manually correlating them still works.
 
@@ -30,12 +32,14 @@ While this may work in smaller, stable environments, relying heavily on a few ex
 Below are **rapidly actionable** steps to improve data literacy and real-time insight capabilities:
 
 1. **Provide Basic Data Literacy Training**
+
    - Organise short workshops, possibly in partnership with [GOV.UK Data in government guidance](https://www.gov.uk/government/organisations/government-digital-service) or local councils, focusing on:
      - How to read and interpret basic charts or dashboards.
      - Terminology for metrics (e.g., "mean," "median," "time series," "confidence intervals").
    - This empowers more staff to self-serve on simpler data queries.
 
 1. **Adopt a Simple Visualisation or BI Tool**
+
    - Introduce a basic tool that can produce automated reports from spreadsheets or CSV data:
      - [AWS QuickSight with direct CSV uploads or minimal database connections](https://docs.aws.amazon.com/quicksight/latest/user/what-is.html)
      - [Azure Power BI for quickly designing simple dashboards on Excel data](https://docs.microsoft.com/en-us/power-bi/fundamentals/service-get-started)
@@ -45,6 +49,7 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
    - Even rudimentary dashboards reduce the SME dependency for repetitive questions.
 
 1. **Pilot a Data Lake or Central Data Repository**
+
    - Instead of storing departmental data in multiple ad hoc spreadsheets or on local drives, centralise it:
      - [AWS S3-based data lake or AWS Glue for basic data cataloging](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
      - [Azure Data Lake Storage or Azure Synapse for integrated data ingestion](https://docs.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)
@@ -54,6 +59,7 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
    - This central repository can feed into simple dashboards or queries.
 
 1. **Encourage a Data Buddy System**
+
    - Pair domain experts with data-literate staff (or external analysts) who can guide them on structured data approaches.
    - This fosters knowledge transfer and upskills both sides.
 
@@ -72,9 +78,11 @@ By improving data literacy, introducing a basic BI tool, creating a pilot data r
 If your organisation employs a standard BI or reporting tool (e.g., weekly or monthly data refreshes), you might regard it as "good enough" if:
 
 1. **Acceptable Lag**
+
    - Stakeholders generally tolerate the existing delay, as they do not require sub-daily or immediate data.
 
 1. **Modest Data Volume**
+
    - Data sets are not enormous, so overnight or batch processing remains practical for your current use cases.
 
 1. **Basic Audit/Compliance**
@@ -87,6 +95,7 @@ While functional for monthly or weekly insights, delayed reporting can hinder qu
 Below are **rapidly actionable** ways to transition from basic delayed reporting to more timely insights:
 
 1. **Explore Incremental Data Refresh**
+
    - Instead of daily or weekly full loads, adopt incremental or micro-batch processing:
      - [AWS Glue or AWS Data Pipeline for partial updates, or AWS DMS for near real-time replication](https://docs.aws.amazon.com/glue/latest/dg/what-is-glue.html)
      - [Azure Data Factory with scheduled incremental copies, or Azure Synapse for micro-batches](https://docs.microsoft.com/en-us/azure/data-factory/concepts-incremental-copy)
@@ -94,10 +103,12 @@ Below are **rapidly actionable** ways to transition from basic delayed reporting
      - [OCI Streaming + OCI Data Integration for event-driven data ingestion in smaller intervals](https://docs.oracle.com/en-us/iaas/Content/Streaming/Concepts/streamingoverview.htm)
 
 1. **Add Near Real-Time Dashboards**
+
    - Maintain existing weekly summary reports while layering a near real-time view for critical metrics:
      - e.g., the number of service requests in the last hour or real-time error rates in a public-facing service.
 
 1. **Improve Data Quality Checks**
+
    - If data quality or cleaning is causing delays, implement automated checks:
      - [AWS Data Wrangler or AWS Glue DataBrew for quick transformations and validations](https://docs.aws.amazon.com/glue/latest/dg/data-wrangler.html)
      - [Azure Data Factory Mapping Data Flows or Power BI Dataflows for lightweight transformation checks](https://docs.microsoft.com/en-us/azure/data-factory/concepts-data-flow-overview)
@@ -105,6 +116,7 @@ Below are **rapidly actionable** ways to transition from basic delayed reporting
      - [OCI Data Integration transformations and validation for consistent data ingestion flows](https://docs.oracle.com/en-us/iaas/Content/DataIntegration/Concepts/dataintegrationoverview.htm)
 
 1. **Set Timeliness KPIs**
+
    - e.g., "All critical data sets must be updated at least every 2 hours," or "System error logs refresh in analytics within 15 minutes."
    - Over time, strive to meet or improve these targets.
 
@@ -122,9 +134,11 @@ With incremental data refreshes, partial real-time dashboards, better data pipel
 In this stage, your organisation has partial real-time analytics for select key metrics, while other data sets update less frequently. You might see it as "good enough" if:
 
 1. **Focused Real-Time Use Cases**
+
    - Critical dashboards (e.g., for incident management or user traffic) provide near real-time data, satisfying immediate operational needs.
 
 1. **Hybrid Approach**
+
    - Some systems remain batch-oriented for complexity or cost reasons, while high-priority services stream data into dashboards.
 
 1. **Occasional Gaps**
@@ -137,6 +151,7 @@ If your partial real-time insights effectively meet operational demands and user
 Below are **rapidly actionable** ways to enhance your partially real-time analytics:
 
 1. **Adopt Stream Processing for More Datasets**
+
    - If only a few sources stream data, expand to additional streams:
      - [AWS Kinesis Data Streams + AWS Lambda transformations for broader event ingestion](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_Kinesis_Data_Streams.html)
      - [Azure Event Hubs or Azure Stream Analytics to parse real-time logs from multiple sources](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about)
@@ -144,6 +159,7 @@ Below are **rapidly actionable** ways to enhance your partially real-time analyt
      - [OCI Streaming for real-time ingestion from on-prem or cloud apps, enabling near real-time dashboards](/TODO)
 
 2. **Consolidate Real-Time Dashboards**
+
    - Instead of multiple tools, unify around one main real-time analytics platform:
      - e.g., [AWS QuickSight SPICE for interactive, sub-minute refresh or Amazon Managed Grafana for real-time queries](https://docs.aws.amazon.com/quicksight/latest/user/spice.html)
      - [Azure Power BI premium workspaces for near real-time dashboards or Azure Monitor workbooks](https://docs.microsoft.com/en-us/power-bi/service-premium-what-is)
@@ -151,10 +167,12 @@ Below are **rapidly actionable** ways to enhance your partially real-time analyt
      - [OCI Analytics Cloud or third-party dashboards integrated with OCI data streams and objects](https://www.oracle.com/uk/business-analytics/analytics-platform/)
 
 3. **Enhance Data Integration**
+
    - If certain data sets remain batch-only, try hybrid ingestion methods:
      - e.g., partial streaming for time-critical fields, scheduled for large historical loads.
 
 4. **Conduct Cross-Team Drills**
+
    - Run mock scenarios (e.g., a surge in user transactions or a security event) to test if real-time analytics allow quick response.
    - Identify where missing or delayed data hampers resolution.
 
@@ -172,12 +190,15 @@ By increasing stream processing, consolidating dashboards, and expanding real-ti
 At this level, your organisation invests in robust analytics solutions (e.g., data warehouses, near real-time dashboards, possibly machine learning predictions). You might consider it "good enough" if:
 
 1. **Wide Real-Time Visibility**
+
    - Most or all key data streams update in minutes or seconds, letting staff see live operational trends.
 
 1. **Data-Driven Decision Culture**
+
    - Leadership and teams rely on metrics for day-to-day decisions, verifying progress or pivoting quickly.
 
 1. **Machine Learning or Predictive Efforts**
+
    - You may already run ML models for forecasting or anomaly detection, leveraging near real-time feeds for training or inference.
 
 1. **Sufficient Data Literacy**
@@ -190,6 +211,7 @@ If you already see minimal delays and strong adoption, you’re likely well-alig
 Below are **rapidly actionable** ways to refine your advanced real-time analytics:
 
 1. **Enhance Data Federation and Governance**
+
    - If data sits across multiple cloud or on-prem systems, implement a data mesh or robust governance policy:
      - [AWS Lake Formation for centralised access management across multiple data sources, integrated with AWS Glue or Athena](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
      - [Azure Purview (Microsoft Purview) or Synapse for data discovery and lineage across the enterprise](https://docs.microsoft.com/en-us/azure/purview/overview)
@@ -198,10 +220,12 @@ Below are **rapidly actionable** ways to refine your advanced real-time analytic
    - Ensure compliance with relevant [NCSC data security](https://www.ncsc.gov.uk/) and [NIST data governance](https://csrc.nist.gov/) guidelines.
 
 1. **Promote Self-Service BI**
+
    - Offer user-friendly dashboards with drag-and-drop analytics:
      - e.g., enabling policy officers, operation managers, or finance leads to build custom views without waiting on IT.
 
 1. **Incorporate Automated Anomaly Detection**
+
    - Move beyond manual queries to ML-based insight:
      - [AWS Lookout for Metrics or QuickSight Q for natural language queries and anomaly detection](https://docs.aws.amazon.com/lookoutmetrics/latest/dev/what-is-lookoutmetrics.html)
      - [Azure Cognitive Services integrated with Power BI or Synapse analytics for predictive insights](https://docs.microsoft.com/en-us/azure/cognitive-services/welcome)
@@ -209,6 +233,7 @@ Below are **rapidly actionable** ways to refine your advanced real-time analytic
      - [OCI Data Science or AI Services for anomaly detection on streaming data sets](https://docs.oracle.com/en-us/iaas/Content/DataScience/Concepts/datascienceoverview.htm)
 
 1. **Support Data Literacy Initiatives**
+
    - Provide ongoing training, e.g., workshops or eLearning, referencing:
      - [GDS Academy data training courses](https://www.gov.uk/government/organisations/government-digital-service)
      - [NIST Big Data Public Working Group insights or relevant NCSC guidelines for data monitoring](https://csrc.nist.gov/)
@@ -226,12 +251,15 @@ By strengthening data governance, encouraging self-service, adopting automated a
 In this final stage, your organisation has a fully realised self-service analytics environment, with real-time data at users’ fingertips. You might consider it "good enough" if:
 
 1. **High Adoption**
+
    - Most staff, from frontline teams to senior leadership, know how to navigate dashboards or create custom views, significantly reducing reliance on specialised data teams.
 
 1. **Minimal Bottlenecks**
+
    - Data is curated, well-governed, and updated in real-time or near real-time. Users rarely encounter outdated or inconsistent metrics.
 
 1. **Data Literacy Maturity**
+
    - Employees across departments can interpret charts, filter data, and ask relevant questions. The environment supports immediate insights for operational or policy decisions.
 
 1. **Continuous Improvement Culture**
@@ -244,10 +272,12 @@ Even at this apex, there might be scope to embed advanced predictive analytics, 
 Below are **rapidly actionable** ways to refine self-service real-time insights:
 
 1. **Expand Data Sources and Data Quality**
+
    - Enrich dashboards by integrating external open data or cross-department feeds:
      - e.g., integrating [UK open data from data.gov.uk](https://data.gov.uk/) or other public sector agencies for broader context.
 
 1. **Introduce Natural Language or Conversational Queries**
+
    - Tools like:
      - [AWS QuickSight Q or Athena-based solutions letting staff type questions in plain English](https://docs.aws.amazon.com/quicksight/latest/user/q.html)
      - [Azure Power BI Q&A natural language engine for user-friendly querying](https://docs.microsoft.com/en-us/power-bi/collaborate-share/q-and-a-faq)
@@ -255,6 +285,7 @@ Below are **rapidly actionable** ways to refine self-service real-time insights:
      - [OCI Analytics solutions with AI-based language interfaces for data exploration](https://www.oracle.com/uk/business-analytics/analytics-platform/)
 
 1. **Automate Governance and Access Controls**
+
    - Ensure compliance with data protection regulations (e.g., UK GDPR). Implement dynamic row-level or column-level security for sensitive data:
      - [AWS Lake Formation or AWS IAM-based row-level permissions in Athena/Redshift](https://docs.aws.amazon.com/lake-formation/latest/dg/what-is-aws-lake-formation.html)
      - [Azure Purview or row-level security in Power BI or Synapse Analytics](https://docs.microsoft.com/en-us/azure/purview/overview)
@@ -262,6 +293,7 @@ Below are **rapidly actionable** ways to refine self-service real-time insights:
      - [OCI Data Catalog with fine-grained access management for different user roles](https://docs.oracle.com/en-us/iaas/Content/DataCatalog/Concepts/datacatalogoverview.htm)
 
 1. **Integrate Predictive Insights in Dashboards**
+
    - If you have ML models, embed their output directly into the dashboard:
      - e.g., forecasting future usage or risk, highlighting anomalies on live charts.
 

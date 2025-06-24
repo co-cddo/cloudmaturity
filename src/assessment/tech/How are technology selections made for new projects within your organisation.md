@@ -12,9 +12,11 @@ eleventyNavigation:
 Your organisation may let project teams pick any tech stack or tool they prefer, resulting in minimal standardisation. This can be considered "good enough" if:
 
 1. **Small or Isolated Projects**
+
    - Few cross-dependencies exist; each project runs mostly independently without needing to integrate or share solutions.
 
 1. **Low Risk & Early Stage**
+
    - You’re in an experimental or startup-like phase, testing different tools before formalising a standard.
 
 1. **No Centralised Governance Requirements**
@@ -27,18 +29,22 @@ However, purely ad-hoc selections often lead to higher maintenance costs, learni
 Below are **rapidly actionable** ways to move away from fully independent, unaligned technology decisions:
 
 1. **Start a Basic Tech Catalog**
+
    - Document each major technology used across projects, referencing at least version, licensing, security posture:
      - Helps discover overlaps or common solutions already in use.
 
 1. **Create a Minimal Governance Policy**
+
    - For instance, a short doc that outlines which technologies require sign-off (e.g., for security or cost reasons):
      - referencing [GOV.UK’s technology code of practice](https://www.gov.uk/government/publications/technology-code-of-practice/technology-code-of-practice) or [NCSC supply chain considerations](https://www.ncsc.gov.uk/collection/supply-chain-security).
 
 1. **Encourage Knowledge Sharing**
+
    - Run short "tech share" sessions, where teams present why they picked certain tools:
      - fosters cross-project alignment.
 
 1. **Identify Quick-Win Common Tools**
+
    - E.g., centralised logging or container orchestration solutions (AWS ECS/EKS, Azure AKS, GCP GKE, OCI OKE) standardising at least some operational aspects.
 
 1. **Plan for a Tech Radar or Steering Group**
@@ -53,9 +59,11 @@ By documenting existing tools, drafting minimal governance, facilitating knowled
 Your organisation has a strict policy (e.g., "All apps must use Java + Oracle DB" or a locked stack). It can be considered "good enough" if:
 
 1. **Stable & Predictable**
+
    - The environment is stable, and forced uniformity hasn’t hindered project innovation or changed business needs drastically.
 
 1. **Meets Regulatory Compliance**
+
    - Uniform tooling might simplify audits, referencing [NCSC frameworks](https://www.ncsc.gov.uk/) or [NIST guidelines](https://csrc.nist.gov/) for consistent security controls.
 
 1. **Sufficient for Current Workloads**
@@ -68,17 +76,21 @@ Nevertheless, overly rigid mandates can stifle innovation, leading to shadow IT 
 Below are **rapidly actionable** ways to refine a uniform tech mandate:
 
 1. **Allow Exceptions via a Lightweight Process**
+
    - Define how teams can request use of a new framework if they demonstrate clear benefits (e.g., for HPC, AI, or serverless solutions).
    - referencing [NCSC’s guidance on evaluating new cloud services securely](https://www.ncsc.gov.uk/).
 
 1. **Maintain a Living "Approved List"**
+
    - Encourage periodic updates to the mandated stack, adding modern solutions (like container orchestration or microservice frameworks) that align with cost and security best practices:
      - e.g., [AWS ECS/EKS](https://aws.amazon.com/ecs/), [Azure AKS](https://learn.microsoft.com/en-us/azure/aks/), [GCP GKE](https://cloud.google.com/kubernetes-engine), or [OCI OKE](https://www.oracle.com/cloud/free/oci-training/) for container orchestration.
 
 1. **Pilot Innovations**
+
    - If staff identify potential new technology, sponsor a small pilot or proof-of-concept under controlled conditions, referencing [NIST SP 800-160 SecDevOps guidelines](https://csrc.nist.gov/).
 
 1. **Implement Regular Tech Reviews**
+
    - e.g., every 6–12 months, a board or steering group reviews the mandated stack in light of feedback or new GDS or NCSC recommendations.
 
 1. **Combine with Security & Cost Insights**
@@ -93,9 +105,11 @@ By allowing exceptions via a straightforward process, regularly updating the app
 Your organisation made an effort to produce a technology radar or pattern library, but it’s now stale or incomplete. Teams may ignore it, preferring to research on their own. It might be "good enough" if:
 
 1. **Past Good Intentions**
+
    - The existing radar or patterns once offered value, but no one has updated them in 1-2 years.
 
 1. **Low Current Impact**
+
    - Projects have found alternative references, so the outdated resources do minimal harm.
 
 1. **No High-Level Mandates**
@@ -108,17 +122,21 @@ Still, stale patterns or radars can lead to confusion about which tools are reco
 Below are **rapidly actionable** ways to revitalise or replace outdated resources:
 
 1. **Initiate a Quick Radar Refresh**
+
    - A small cross-team group can produce an updated doc or web-based radar in 2-4 weeks, referencing recent frameworks, security improvements, and cost considerations:
      - e.g., adopting [AWS Graviton](https://aws.amazon.com/graviton/), [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/), [GCP AI/ML solutions](https://cloud.google.com/ai), or [OCI HPC offerings](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Introduce a Living "Tech Patterns" Wiki**
+
    - Encourage teams to add their experiences or recommended patterns, so the resource remains collaborative and dynamic:
      - e.g., referencing [Confluence, GitHub Wiki, or internal SharePoint with version control].
 
 1. **Schedule Semi-Annual Reviews**
+
    - Put it on the organisational calendar to revisit or update the radar every 6 months, factoring in [NCSC’s new advisories, GDS technology code of practice updates, or NIST’s emerging guidelines](https://www.ncsc.gov.uk/).
 
 1. **Gather Feedback**
+
    - Ask project teams what patterns they rely on or find missing. Include new technologies that have proven valuable:
      - fosters a sense of collective ownership.
 
@@ -134,9 +152,11 @@ By quickly refreshing the tech radar, establishing a living wiki, scheduling per
 Your organisation invests in a living, frequently updated set of technology choices or recommended patterns, which teams genuinely consult before starting projects. This can be "good enough" if:
 
 1. **Broad Adoption**
+
    - Most dev/ops teams refer to the radar or patterns and find them beneficial.
 
 1. **Timely Updates**
+
    - Items are regularly revised in response to new cloud services, [NCSC security alerts](https://www.ncsc.gov.uk/), or new GDS guidelines.
 
 1. **Consistent Security & Cost**
@@ -149,18 +169,22 @@ To push further, you might incorporate a community-driven pipeline for continuou
 Below are **rapidly actionable** ways to enhance current, well-used guidance:
 
 1. **Introduce a "Feedback Loop"**
+
    - Provide an easy mechanism (e.g., Slack channel, GitHub Issues) for teams to propose new additions or share experiences.
    - referencing [NCSC’s agile and iterative approach to technology improvement](https://www.ncsc.gov.uk/).
 
 1. **Add Security & Cost Criteria**
+
    - For each technology in the radar, briefly discuss security posture and typical cost drivers (like egress fees or licensing):
      - referencing [AWS TCO calculators](https://calculator.awscloud.com/), [Azure Pricing](https://azure.microsoft.com/en-us/pricing/), [GCP Pricing](https://cloud.google.com/products/calculator), or [OCI cost analysis tools](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Practice "Sunsetting"**
+
    - If a technology on the radar is outdated or replaced, mark it for deprecation with a recommended timeline:
      - Minimises legacy tech usage.
 
 1. **Conduct Regular Showcases**
+
    - Let teams demo how they used a recommended pattern or overcame a challenge.
    - Encourages synergy and real adoption.
 
@@ -176,9 +200,11 @@ By enhancing feedback channels, adding security/cost insights to each item, mark
 At this top maturity level, your organisation not only maintains up-to-date patterns or a tech radar, but also fosters a culture of continuous improvement and knowledge sharing. This is typically "good enough" if:
 
 1. **Inherent Collaboration**
+
    - Teams frequently discuss or exchange solutions, referencing real success or lessons to guide new projects.
 
 1. **Focus on Reuse**
+
    - If an app or microservice solves a common problem, others can adopt or adapt it, reducing duplication.
 
 1. **Encouragement of New Ideas**
@@ -191,18 +217,22 @@ Nevertheless, you can refine advanced cross-government collaboration, embed HPC 
 Below are **rapidly actionable** ways to strengthen a collaborative, evolving tech ecosystem:
 
 1. **Establish a Formal Inner-Source Model**
+
    - Encourage code sharing or libraries across departments, referencing open-source practices but within the public sector context:
      - e.g., [GitHub Enterprise](https://github.com/enterprise) or [GitLab](https://about.gitlab.com/).
 
 1. **Encourage Pairing or Multi-Dept Projects**
+
    - Sponsor short stints where devs from different teams cross-pollinate or solve shared challenges:
      - referencing [NCSC’s recommended cross-department collaboration practices](https://www.ncsc.gov.uk/).
 
 1. **Recognise Innovators**
+
    - Publicly highlight staff who introduce successful new frameworks or cost-saving architecture patterns:
      - fosters a healthy "improvement" culture.
 
 1. **Adopt Cross-department Show-and-Tell**
+
    - If relevant, share or co-present successful solutions with local councils or NHS, referencing [GOV.UK cross-government knowledge sharing events](https://www.gov.uk/service-manual).
 
 1. **Integrate Feedback into Tech Radar**

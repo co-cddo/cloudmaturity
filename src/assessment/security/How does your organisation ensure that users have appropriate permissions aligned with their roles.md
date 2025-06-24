@@ -12,9 +12,11 @@ eleventyNavigation:
 Your organisation lacks a formal or scheduled approach to verifying user access, relying on admin discretion. This might be acceptable if:
 
 1. **Small or Static Environments**
+
    - Fewer staff changes, so new or removed accounts are manageable without a structured process.
 
 1. **No Critical Data or Systems**
+
    - Low sensitivity or risk if accounts remain overprivileged or are never deactivated.
 
 1. **Minimal Budgets/Resources**
@@ -27,18 +29,22 @@ However, ad-hoc reviews often result in outdated or excessive privileges, violat
 Below are **rapidly actionable** steps to transition from ad-hoc reviews to basic structured processes:
 
 1. **Define a Minimal Access Policy**
+
    - Even one page stating all roles must have least privilege, with approvals required for additional rights.
    - Reference [NCSC’s Access Management best practices](https://www.ncsc.gov.uk/).
 
 1. **Create a Simple RACI for Access Management**
+
    - Identify who is Responsible, Accountable, Consulted, and Informed for each step (e.g., granting, revoking, auditing).
    - Helps clarify accountability if something goes wrong.
 
 1. **Leverage Built-In Cloud IAM Tools**
+
    - [AWS IAM](https://aws.amazon.com/iam/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM](https://cloud.google.com/iam/docs/overview), [OCI IAM compartments/policies](https://www.oracle.com/cloud/free/oci-training/) can define or limit privileges.
    - Minimises guesswork in manual permission assignments.
 
 1. **Maintain a Basic User Inventory**
+
    - Keep a spreadsheet or list of all privileged users, what roles they have, and last update date:
      - So you can spot dormant accounts or over-privileged roles.
 
@@ -54,9 +60,11 @@ By laying out a minimal access policy, assigning RACI for administration, adopti
 Your organisation periodically inspects user entitlements—maybe annually or every six months—but rarely adjusts them, fearing interruptions if privileges are revoked. This might be considered "good enough" if:
 
 1. **Basic Governance in Place**
+
    - At least you have a schedule or routine for checking access.
 
 1. **Minimal Overhead**
+
    - The burden of frequent changes or potential disruptions might exceed perceived risk from leftover permissions.
 
 1. **No Evidence of Abuse**
@@ -69,17 +77,21 @@ Yet continuously retaining excessive privileges invites risk. [NCSC’s guidelin
 Below are **rapidly actionable** ways to evolve beyond limited-action reviews:
 
 1. **Mandate a "Test Before Revoke" Procedure**
+
    - If concerns about "breaking something" hinder revocations, adopt a short test environment to confirm the user or system truly needs certain permissions.
 
 1. **Categorise Users by Risk**
+
    - For high-risk roles (e.g., admin accounts with access to production data), enforce stricter reviews or more frequent re-validation:
      - Potentially referencing [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [Azure AD Access Reviews](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP’s IAM Recommender](https://cloud.google.com/iam/docs/access-reviews), [OCI IAM tools](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Implement Review Dashboards**
+
    - Summarise each user’s privileges, last login, or role usage:
      - If certain roles are not used in X days, consider removing them.
 
 1. **Show Leadership Examples**
+
    - Have a pilot case where you successfully reduce access for a role with no negative consequences, building confidence.
 
 1. **Incentivise or Recognise Proper Clean-Up**
@@ -95,9 +107,11 @@ By adopting test environments before revoking privileges, classifying user risk 
 Your organisation systematically checks user access on a regular basis, but typically only grants new privileges (additive changes). Rarely do you remove or reduce existing entitlements. This may be "good enough" if:
 
 1. **Frequent or Complex Role Changes**
+
    - Staff rotate roles or new tasks come up often, so you keep adding privileges to accommodate new responsibilities.
 
 1. **Better Than Irregular Audits**
+
    - At least you’re reviewing systematically, capturing some improvements over purely ad-hoc or partial reviews.
 
 1. **No Major Security Incidents**
@@ -110,18 +124,22 @@ However, purely additive processes lead to privilege creep. Over time, users acc
 Below are **rapidly actionable** steps to incorporate permission reduction:
 
 1. **Implement a "Use it or Lose it" Policy**
+
    - If a user’s permission or role is unused for a set period (e.g., 30 days), it’s automatically flagged for removal:
      - Tools like [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [Azure AD Access Reviews](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP IAM Recommender](https://cloud.google.com/iam/docs/access-reviews), or [OCI IAM metrics](https://www.oracle.com/cloud/free/oci-training/) can show which roles are not used.
 
 1. **Mark Temporary Access with Expiry**
+
    - For short-term projects, set an end date for extra privileges:
      - e.g., using AWS or Azure policy conditions, GCP short-lived tokens, or OCI compartments-based ephemeral roles.
 
 1. **Combine with Slack/Teams Approvals**
+
    - Automate revocation requests: if an admin sees stale permissions, they click a button to remove them, and a second manager approves:
      - Minimises fear of accidental breakage.
 
 1. **Reward "Right-sizing"**
+
    - Celebrate teams that proactively reduce permission sprawl, referencing cost savings or risk reduction:
      - e.g., mention in staff newsletters or internal security updates.
 
@@ -137,9 +155,11 @@ By adding a usage-based revocation policy, setting expiry for short-lived roles,
 Your organisation systematically reviews user access with clear renewal or expiry deadlines, ensuring no indefinite privileges. This indicates a strong security posture. It’s likely "good enough" if:
 
 1. **Automated or Well-Managed Reviews**
+
    - The process is consistent, with each role or permission requiring re-validation after a certain period.
 
 1. **Minimal Privilege Creep**
+
    - Because roles expire, staff or contractors do not accumulate unneeded rights over time.
 
 1. **High Confidence in Access Data**
@@ -152,17 +172,21 @@ Though robust, you can further refine by integrating real-time risk signals or a
 Below are **rapidly actionable** methods to enhance expiry-based reviews:
 
 1. **Use Cloud-Native Access Review Tools**
+
    - e.g., [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [AWS SSO user provisioning with rotation](https://aws.amazon.com/sso/), [Azure Access Reviews in Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP IAM Recommender with time-based checks](https://cloud.google.com/iam/docs/access-reviews), [OCI IAM compartments with automated policy review triggers](https://www.oracle.com/cloud/free/oci-training/).
    - Minimises manual overhead.
 
 1. **Adopt Automated Alerts for Upcoming Expiries**
+
    - If a role is nearing its expiry date, the user and manager receive an email or Slack notice to re-certify or let it lapse.
 
 1. **Incorporate Risk Scoring**
+
    - If an account has high privileges or sensitive system access, require more frequent or thorough re-validation:
      - e.g., monthly for privileged accounts, quarterly for standard user roles.
 
 1. **Implement Delegated Approvals**
+
    - For major role changes, define a short chain (e.g., a user’s manager + security lead) to re-approve before extension of privileges.
    - Align with [NCSC’s supply chain or internal access control best practices](https://www.ncsc.gov.uk/).
 
@@ -179,12 +203,15 @@ By leveraging cloud-native review tools, alerting for soon-to-expire roles, risk
 At the apex of maturity, your organisation uses a fully automated, risk-based system for managing user permissions. You might consider it "good enough" if:
 
 1. **Zero Standing Privileges**
+
    - Privileges are automatically granted, adjusted, or revoked based on real-time role changes, with minimal human intervention.
 
 1. **Frequent or Continuous Verification**
+
    - A system or pipeline regularly checks each user’s entitlements, triggers escalations if anomalies arise.
 
 1. **Synchronised with HR Systems**
+
    - Staff transitions—new hires, promotions, departures—instantly reflect in user permissions, preventing orphaned or leftover access.
 
 1. **Strong Governance**
@@ -197,17 +224,21 @@ Although highly mature, you can still enhance cross-government collaboration or 
 Below are **rapidly actionable** ways to refine a fully automated, risk-based review system:
 
 1. **Incorporate Real-Time Risk Signals**
+
    - E.g., require additional verification for suspicious location logins or rapidly changing user behaviors:
      - [AWS Macie or GuardDuty alerts](https://aws.amazon.com/macie/), [Azure AD Identity Protection](https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection), [GCP Security Command Center anomaly detection](https://cloud.google.com/security-command-center/docs/overview), [OCI Security Advisor signals](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Use Policy-as-Code for Access**
+
    - Tools like [Open Policy Agent or vendor-based solutions (AWS Organizations SCP, Azure Policy, GCP Organization Policy, OCI Security Zones)] can define rules for dynamic role allocation.
 
 1. **Ensure Continuous Oversight**
+
    - Provide dashboards for leadership or security officers, showing current risk posture, overdue re-certifications, or upcoming role changes:
      - Minimises the chance of an overlooked anomaly.
 
 1. **Extend to Multi-Cloud or Hybrid**
+
    - If your department spans AWS, Azure, GCP, or on-prem systems, unify identity reviews under a single orchestrator or Identity Governance tool:
      - e.g., [Azure AD Identity Governance](https://learn.microsoft.com/en-us/azure/active-directory/identity-governance/overview-identity-governance), [Okta](https://www.okta.com/), [Ping](https://www.pingidentity.com/), etc. with multi-cloud connectors.
 

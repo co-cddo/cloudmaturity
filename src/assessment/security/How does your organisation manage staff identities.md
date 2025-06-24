@@ -12,9 +12,11 @@ eleventyNavigation:
 Your organisation might allow each application or service to store and manage user accounts in its own silo. This can be considered "good enough" if:
 
 1. **Very Small Scale**
+
    - Each service supports only a handful of internal users; overhead of separate sign-ons or user directories is minimal.
 
 1. **Low Risk or Early Pilot**
+
    - No critical data or compliance need to unify identities; you’re still evaluating core cloud or digital services.
 
 1. **No Immediate Need for Central Governance**
@@ -27,18 +29,22 @@ While this approach can initially appear simple, it typically leads to scattered
 Below are **rapidly actionable** steps to move beyond isolated identity management:
 
 1. **Create a Basic Directory or SSO Pilot**
+
    - For new services, define a single user store or IDP:
      - e.g., [AWS Directory Service or AWS SSO](https://aws.amazon.com/directoryservice/), [Azure AD](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/whatis), [GCP Identity](https://cloud.google.com/identity/docs/overview), or [OCI IDCS](https://www.oracle.com/cloud/free/oci-training/), [IBM Cloud AppID](https://cloud.ibm.com/docs/appid?topic=appid-cd-sso)
    - Minimises further fragmentation for new apps.
 
 1. **Maintain a Simple User Inventory**
+
    - List out each app’s user base and identify duplicates or potential orphan accounts:
      - Helps to see the scale of the fragmentation problem.
 
 1. **Encourage Unique Credentials**
+
    - Discourage password re-use and adopt basic password policies referencing [NCSC password guidance](https://www.ncsc.gov.uk/blog-post/problems-forcing-regular-password-expiry).
 
 1. **Plan a Gradual Migration**
+
    - Set a short timeline (e.g., 6-12 months) to unify at least a few key services under a single ID provider.
 
 1. **Highlight Quick-Wins**
@@ -53,9 +59,11 @@ By implementing a small shared ID approach for new services, maintaining an org-
 Your organisation has introduced a centralised identity solution (e.g., Active Directory, Azure AD, or an open-source LDAP), but only some cloud services plug into it. This might be "good enough" if:
 
 1. **Partial Coverage**
+
    - Key or high-risk systems already rely on centralised accounts, while less critical or legacy apps remain separate.
 
 1. **Reduced Complexity**
+
    - The approach cuts down on scattered logins for a majority of staff, although not everyone is unified.
 
 1. **Tolerable Overlap**
@@ -68,18 +76,22 @@ To improve further, you can unify or retire the leftover one-off user stores and
 Below are **rapidly actionable** steps to further unify your basic centralised identity:
 
 1. **Mandate SSO for New Services**
+
    - All future cloud apps must integrate with your central ID system (SAML, OIDC, etc.).
    - [AWS SSO](https://aws.amazon.com/sso/), [Azure AD App Registrations](https://learn.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app), [GCP Identity Federation](https://cloud.google.com/identity/docs/overview), or [OCI IDCS integrations](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Target Legacy Systems**
+
    - Identify 1-3 high-value legacy applications and plan a short roadmap for migrating them to the central ID store:
      - e.g., rewriting authentication to use SAML or OIDC.
 
 1. **Introduce Periodic Role or Access Reviews**
+
    - Ensure the centralised identity system is coupled with a simple process for managers to confirm staff roles:
      - referencing [AWS IAM Access Analyzer](https://aws.amazon.com/iam/features/), [Azure AD Access Reviews](https://learn.microsoft.com/en-us/azure/active-directory/governance/access-reviews-overview), [GCP IAM Recommender](https://cloud.google.com/iam/docs/access-reviews), or [OCI IAM policy checks](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Extend MFA Requirements**
+
    - If only some users in the centralised system have MFA, gradually require it for all:
      - referencing [NCSC’s multi-factor authentication guidance](https://www.ncsc.gov.uk/).
 
@@ -95,9 +107,11 @@ By demanding SSO for new apps, migrating top-priority legacy systems, enabling p
 Your organisation leverages a robust central identity solution for the majority of apps, but certain or older niche services remain separate. It might be "good enough" if:
 
 1. **Dominant Coverage**
+
    - The central ID system handles 80-90% of user accounts, giving broad consistency and security.
 
 1. **Exceptions Are Low-Risk or Temporary**
+
    - The leftover independent systems are less critical or slated for retirement/replacement.
 
 1. **Clear Process for Exceptions**
@@ -110,17 +124,21 @@ To move forward, you can retire or integrate these final exceptions and push for
 Below are **rapidly actionable** ways to incorporate the last few outliers:
 
 1. **Establish an "Exception Approval"**
+
    - If a service claims it can’t integrate, mandate a formal sign-off by security or architecture boards:
      - Minimises indefinite exceptions.
 
 1. **Plan Legacy Replacement or Integration**
+
    - For each separate system, define a short project to incorporate them with SAML, OIDC, or SCIM:
      - e.g., [Azure AD integration for older apps](https://learn.microsoft.com/en-us/azure/active-directory/saas-apps/tutorial-list), [AWS SSO bridging](https://aws.amazon.com/sso/), [GCP Identity front-end with IAP or custom IAM integration](https://cloud.google.com/identity/docs/overview), or [OCI IDCS bridging](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enhance Monitoring on Exceptions**
+
    - If integration isn’t possible yet, strictly log and track those system’s user access, referencing [NCSC logging recommendations](https://www.ncsc.gov.uk/) or [NIST logging controls (AU family)](https://csrc.nist.gov/).
 
 1. **Regularly Reassess or Sunset Non-Compliant Services**
+
    - If an exception remains beyond a certain period (e.g., 6-12 months), escalate to leadership.
    - This keeps pressure on removing exceptions eventually.
 
@@ -137,9 +155,11 @@ By requiring official approval for non-integrated systems, scheduling integratio
 You have a highly integrated identity solution covering nearly all apps, with consistent provisioning, SSO, and robust security controls like MFA or conditional access. This is likely "good enough" if:
 
 1. **Minimal Manual Overhead**
+
    - Onboarding, offboarding, or role changes propagate automatically to most systems without admin intervention.
 
 1. **High Security & Governance**
+
    - You can quickly see who has access to what, referencing [NCSC’s recommended best practices for identity governance](https://www.ncsc.gov.uk/).
    - MFA or advanced authentication is standard.
 
@@ -153,16 +173,20 @@ While robust, you could refine ephemeral or short-lived credentials for non-huma
 Below are **rapidly actionable** ways to enhance advanced integrated identity management:
 
 1. **Explore Zero-Trust or Risk-Adaptive Auth**
+
    - If a user tries to access a high-risk service from an unknown location or device, require step-up authentication:
      - e.g., [Azure AD Conditional Access with risk-based sign-ins](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [AWS SSO with conditional logic](https://aws.amazon.com/sso/), [GCP Access Context Manager](https://cloud.google.com/access-context-manager/docs/overview), or [OCI adaptive authentication features](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt Policy-as-Code for Identity**
+
    - Use [Open Policy Agent](https://www.openpolicyagent.org/) or vendor-based solutions (e.g., [AWS Organizations SCP](https://aws.amazon.com/organizations/features/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organization-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) to define identity and resource controls in code for versioning and traceability.
 
 1. **Enable Fine-Grained Roles and Minimal Privileges**
+
    - Continuously refine roles so each user only has what they need, referencing [NCSC’s least privilege guidance](https://www.ncsc.gov.uk/) or [NIST SP 800-53 AC-6 on least privilege](https://csrc.nist.gov/).
 
 1. **Implement Automated Access Certification**
+
    - Every few months, prompt managers to re-check their team’s privileges:
      - Tools like Azure AD Access Reviews, AWS IAM Access Analyzer, GCP IAM Recommender, or OCI IAM policy checks can highlight unneeded privileges.
 
@@ -179,10 +203,12 @@ By implementing zero-trust or risk-based authentication, adopting identity polic
 At this top maturity level, your organisation enforces one authoritative identity system for every service. All staff have exactly one account, disallowing duplicates or shared credentials. You might consider it "good enough" if:
 
 1. **Complete Uniformity**
+
    - All cloud and on-prem solutions integrate with the same directory/IDP.
    - No leftover local accounts exist.
 
 1. **Strong Accountability**
+
    - A single "human <-> identity" mapping yields perfect traceability for actions across environments.
    - Aligns with [NCSC best practices on user accountability](https://www.ncsc.gov.uk/).
 
@@ -197,18 +223,22 @@ Even so, you can expand advanced or zero-trust patterns (e.g., ephemeral tokens,
 Below are **rapidly actionable** ways to refine a mandatory single source of identity:
 
 1. **Implement Risk-Adaptive Authentication**
+
    - Combine the single identity with dynamic checks (like device compliance, location, or time) to apply additional verifications if risk is high:
      - e.g., [Azure AD Identity Protection](https://learn.microsoft.com/en-us/azure/active-directory/identity-protection/overview-identity-protection), [AWS Cognito adaptive auth](https://aws.amazon.com/cognito/features/), [GCP Identity-Aware Proxy](https://cloud.google.com/identity-aware-proxy/docs/overview), or [OCI adaptive authentication](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Extend Identity to Multi-Cloud**
+
    - If you operate across multiple providers, unify identity definitions so staff seamlessly access AWS, Azure, GCP, or OCI:
      - Possibly referencing external IDPs or cross-cloud SSO integrations.
 
 1. **Incorporate Passwordless Tech**
+
    - FIDO2 or hardware token-based sign-ins for staff:
      - [NCSC encourages strong, phishing-resistant MFA where possible](https://www.ncsc.gov.uk/).
 
 1. **Align with Cross-Government Identity Initiatives**
+
    - If relevant, collaborate with other departments on shared SSO or bridging solutions:
      - e.g., [GOV.UK One Login program or NHS/Local Government identity bridging](https://www.gov.uk/government/publications/one-login-for-government).
 

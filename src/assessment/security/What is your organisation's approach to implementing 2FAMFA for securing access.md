@@ -12,9 +12,11 @@ eleventyNavigation:
 Your organisation may advise staff to enable 2FA (two-factor) or MFA (multi-factor) on their accounts, but it’s left to personal choice or departmental preference. This might be "good enough" if:
 
 1. **Minimal Risk Appetite**
+
    - You have low-value, non-sensitive services, so the impact of compromised accounts is relatively small.
 
 1. **Testing or Early Rollout**
+
    - You’re in a pilot phase before formalising a universal requirement.
 
 1. **No High-Stakes Obligations**
@@ -27,17 +29,21 @@ However, purely optional MFA typically leads to inconsistent adoption. [NCSC’s
 Below are **rapidly actionable** steps to move from an "encouraged" MFA model to a consistent approach:
 
 1. **Identify Privileged Accounts First**
+
    - Immediately enforce MFA for admin or root-level users, referencing [AWS IAM MFA on privileged roles](https://aws.amazon.com/iam/features/mfa), [Azure AD MFA on global admins](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP IAM MFA](https://cloud.google.com/iam/docs/using-mfa), or [OCI IAM MFA](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Educate Staff on Risks**
+
    - Provide short e-learning or internal comms about real incidents caused by single-factor breaches:
      - e.g., referencing [NCSC’s blog or case studies on stolen credentials](https://www.ncsc.gov.uk/).
 
 1. **Incentivise Voluntary Adoption**
+
    - Recognise teams or individuals who enable MFA (e.g., shout-outs or small accolades).
    - Encourages cultural acceptance before a final mandate.
 
 1. **Publish a Simple Internal FAQ**
+
    - Outline how to set up [Google Authenticator](https://support.google.com/accounts/answer/1066447), [Microsoft Authenticator](https://support.microsoft.com/en-us/microsoft-365/article/microsoft-authenticator-app-faq-80d941b9-333d-4817-936d-bdf4b7b0fdc9), [hardware tokens](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services/recommended-types-of-mfa), or other [TOTP apps](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services/recommended-types-of-mfa#app).
    - Minimises friction for new adopters.
 
@@ -53,9 +59,11 @@ By prioritising MFA for privileged users, educating staff on credential compromi
 Your organisation has a policy stating all staff "must" enable MFA. However, actual compliance might vary—some services allow bypass, or certain users remain on single-factor. This can be "good enough" if:
 
 1. **Broad Organisational Recognition**
+
    - Everyone knows MFA is required, reducing the risk from total single-factor usage.
 
 1. **Partial Gains**
+
    - Many staff and services do indeed use MFA, reducing the chance of mass credential compromise.
 
 1. **Resource Constraints**
@@ -68,16 +76,20 @@ Though better than optional MFA, exceptions or non-enforcement create holes. [NC
 Below are **rapidly actionable** methods to close the enforcement gap:
 
 1. **Enable Enforcement in Cloud IAM**
+
    - E.g., [AWS IAM or AWS SSO policy to force MFA](https://aws.amazon.com/iam/features/mfa), [Azure AD conditional access "MFA always required"](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [GCP Organization Policy for MFA](https://cloud.google.com/resource-manager/docs/organization-policy/overview), or [OCI IAM policy for mandatory MFA](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Monitor for Noncompliance**
+
    - Generate monthly or weekly reports on which users still lack MFA:
      - e.g., [AWS Security Hub or custom queries](https://aws.amazon.com/security-hub/), [Azure AD "Users without MFA" query](https://learn.microsoft.com/en-us/azure/active-directory/reports-monitoring/howto-find-mfa-enabled-users-azure-portal), [GCP Cloud Identity "MFA usage" checks](https://cloud.google.com/identity/docs/mfa-usage), or [OCI IAM logging for no-MFA users](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Apply a Hard Deadline**
+
    - Communicate a date beyond which single-factor logins will be revoked, referencing official departmental or local policy.
 
 1. **Offer Support & Tools**
+
    - Provide hardware tokens for staff without suitable smartphones, referencing [FIDO2 or YubiKey-based methods recommended by NCSC or NIST](https://www.ncsc.gov.uk/).
 
 1. **Handle Legacy Systems**
@@ -92,9 +104,11 @@ By enabling built-in forced MFA, monitoring compliance, communicating a strict c
 Your organisation has successfully mandated MFA for nearly every scenario, though a small number of systems or roles may not align due to technical constraints or a specific risk-based exemption. This is likely "good enough" if:
 
 1. **High MFA Coverage**
+
    - Over 90% of your users and services require multi-factor login, drastically minimising account compromise risk.
 
 1. **Well-Documented Exceptions**
+
    - Each exception is risk-assessed and typically short-term. The organisation knows precisely which systems lack enforced MFA.
 
 1. **Strong Culture & Processes**
@@ -107,18 +121,22 @@ At this stage, you can refine advanced or stronger factors (e.g., hardware token
 Below are **rapidly actionable** ways to remove or mitigate the last few exceptions:
 
 1. **Document a Sunset Plan for Exceptions**
+
    - If a system can’t integrate MFA now, define a target date or solution path (like an MFA-proxy or upgrade).
    - Minimises indefinite exceptions.
 
 1. **Risk-Base or Step-Up**
+
    - If certain actions are higher risk (e.g., large data exports), require a second factor again or hardware key.
    - referencing [Azure Conditional Access](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [AWS contextual MFA](https://aws.amazon.com/iam/features/mfa), [GCP BeyondCorp enterprise settings](https://cloud.google.com/beyondcorp), or [OCI advanced IAM polices](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Consider Device-Focused Security**
+
    - For known lower-risk cases, confirm devices meet compliance (updated OS, MDM) as a mitigating factor.
    - referencing [NCSC device posture or zero-trust approaches](https://www.ncsc.gov.uk/).
 
 1. **Combine with Identity-Centric Security**
+
    - Move from perimeter to identity-based approach if not already, ensuring MFA is central in each request’s trust decision.
    - referencing [NIST SP 800-207 zero-trust architecture](https://csrc.nist.gov/), [NCSC guidelines](https://www.ncsc.gov.uk/).
 
@@ -134,9 +152,11 @@ By planning for the eventual elimination of exceptions, deploying step-up authen
 Your organisation refuses to allow SMS-based or similarly weak MFA. Instead, you use TOTP apps, hardware tokens, or other resilient factors. This might be "good enough" if:
 
 1. **High-Security Requirements**
+
    - Handling sensitive citizen data or critical infrastructure, so you need robust protection from phishing and SIM-swap attacks.
 
 1. **Firm Policy**
+
    - You publish a stance that phone-based authentication is disallowed, ensuring staff adopt recommended alternatives.
 
 1. **Consistent Implementation**
@@ -149,17 +169,21 @@ However, you might still refine device posture checks, adopt hardware-based toke
 Below are **rapidly actionable** enhancements:
 
 1. **Adopt FIDO2 or Hardware Security Keys**
+
    - For highly privileged accounts, consider [YubiKey](https://www.yubico.com/products/yubikey-5-series/), [Feitian](https://www.feitian.com/), or other [FIDO2-based solutions offering strong phishing resistance](https://www.ncsc.gov.uk/collection/mfa-for-your-corporate-online-services/recommended-types-of-mfa#app).
 
 1. **Set Up Backup Mechanisms**
+
    - Provide staff a fallback if TOTP or hardware tokens are lost/stolen:
      - e.g., secure self-service recovery using [AWS SSO with backup codes](https://aws.amazon.com/sso/), [Azure AD with alternative verification](https://learn.microsoft.com/en-us/azure/active-directory/authentication/concept-mfa-howitworks), [GCP Identity fallback factors](https://cloud.google.com/identity/docs/mfa-usage), or [OCI IAM backup tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Integrate Risk-Based Policies**
+
    - If an account attempts to log in from an unusual location, require a higher assurance factor:
      - referencing [Azure Conditional Access location-based rules](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/location-condition), [AWS context keys](https://aws.amazon.com/iam/features/mfa), [GCP Access Context Manager](https://cloud.google.com/access-context-manager), or [OCI policy conditions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Consider Device Certificates**
+
    - For some use cases, device-based certificates or mTLS can supplement user factors, further preventing compromised endpoints from impersonation.
 
 1. **Regularly Revisit Factor Security**
@@ -174,9 +198,11 @@ By introducing hardware-based MFA, ensuring robust fallback processes, applying 
 At this pinnacle, your organisation requires hardware-based tokens (e.g., FIDO2, YubiKeys, or similar) for all staff, forbidding weaker factors like SMS or even TOTP. This is typically "good enough" if:
 
 1. **Full Hardware Token Adoption**
+
    - Everyone uses hardware keys for login, including privileged or admin accounts.
 
 1. **Central Key Lifecycle Management**
+
    - The organisation issues, tracks, and revokes hardware tokens systematically, referencing [NCSC hardware token management best practices](https://www.ncsc.gov.uk/).
 
 1. **High Assurance**
@@ -189,18 +215,22 @@ You could still refine ephemeral or risk-adaptive auth, integrate zero-trust pos
 Below are **rapidly actionable** ways to optimise hardware-based MFA:
 
 1. **Embrace Risk-Based Authentication**
+
    - If unusual attempts occur, force an additional step or token re-validation:
      - referencing [Azure AD Conditional Access with hardware tokens](https://learn.microsoft.com/en-us/azure/active-directory/conditional-access/overview), [AWS context-based policies](https://aws.amazon.com/iam/features/mfa), [GCP identity risk signals](https://cloud.google.com/identity/docs/mfa-usage), or [OCI advanced IAM policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Implement Zero-Trust & Microsegmentation**
+
    - Pair hardware tokens with per-request or per-service authentication. Each microservice may require ephemeral token requests.
    - referencing [NIST SP 800-207 zero-trust architecture guidelines](https://csrc.nist.gov/).
 
 1. **Maintain Inventory & Lifecycle**
+
    - Automate key distribution, revocation, or replacement. If a staff member loses a token, the system quickly blocks it.
    - e.g., a central asset management or HR-driven approach ensuring no leftover active tokens for departed staff.
 
 1. **Test Against Realistic Threats**
+
    - Conduct red team exercises specifically targeting hardware token scenarios:
      - referencing [NCSC or local ITHC red/purple teaming best practices](https://www.ncsc.gov.uk/).
 

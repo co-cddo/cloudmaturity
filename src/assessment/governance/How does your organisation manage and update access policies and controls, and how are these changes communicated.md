@@ -12,9 +12,11 @@ eleventyNavigation:
 When access policies are managed in an ad-hoc manner:
 
 1. **Small Scale, Low Risk**
+
    - You may be a small team with limited scope. If you only handle low-sensitivity or non-critical information, an ad-hoc approach might not have caused major issues yet.
 
 1. **Minimal Regulatory Pressures**
+
    - If you’re in a part of the public sector not subject to specific frameworks (e.g., ISO 27001, Government Security Classifications), you might feel less pressure to formalise policies.
 
 1. **Very Basic or Temporary Environment**
@@ -27,10 +29,12 @@ However, this level of informality quickly becomes a liability, especially in th
 Below are **rapidly actionable** steps to move away from ad-hoc management:
 
 1. **Begin a Simple Policy Definition**
+
    - Draft a one-page document outlining baseline access rules (e.g., "Least privilege," "Need to know").
    - Reference relevant UK government guidance on access controls or consult your departmental policy docs.
 
 1. **Centralise Identity and Access**
+
    - Instead of manual account creation or server-based user lists, consider cloud-native identity solutions:
      - [AWS IAM: Roles, policies, or AWS SSO for single sign-on management](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html)
      - [Azure AD: Central user/group management, role-based access control for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-whatis)
@@ -39,12 +43,14 @@ Below are **rapidly actionable** steps to move away from ad-hoc management:
      - IBM Cloud: Implement [IAM Access Controls](https://cloud.ibm.com/docs/account?topic=account-access-management-overview)
 
 1. **Record Exemptions in a Simple Tracker**
+
    - If you must grant an ad-hoc exception, log it in a basic spreadsheet or ticket system:
      - Who was granted the exception?
      - Why?
      - When will it be revisited or revoked?
 
 1. **Define at Least One "Review Step"**
+
    - If someone wants new permissions, ensure a second person or a small group must approve the request.
    - This adds minimal overhead but prevents hasty over-permissioning.
 
@@ -61,10 +67,12 @@ By introducing a baseline policy, centralising identity management, tracking exc
 At this stage, you have a documented policy—likely created once and updated occasionally. You might consider it "good enough" if:
 
 1. **Visibility of the Policy**
+
    - Stakeholders can find it in a shared repository, intranet, or file system.
    - There’s a moderate awareness among staff.
 
 1. **Some Level of Consistency**
+
    - Access controls typically align with the documented policy, though exceptions may go unnoticed.
    - Projects mostly follow the policy, but not always systematically.
 
@@ -79,10 +87,12 @@ However, a lack of regular updates or structured communication means staff may b
 Here are **rapidly actionable** enhancements:
 
 1. **Schedule Regular Policy Updates**
+
    - Commit to revisiting policies at least annually or semi-annually, and each time there’s a major change (e.g., new compliance requirement).
    - Add a reminder to your calendar or project board for a policy review session.
 
 1. **Establish a Basic Change Log**
+
    - Store the policy in version control (e.g., GitHub or an internal repo). Each update is a commit, so you have a clear history:
      - [AWS CodeCommit or GitHub for storing policy documents, track changes like code](https://docs.aws.amazon.com/codecommit/latest/userguide/welcome.html)
      - [Azure DevOps Repos for policy MD files or Word docs under version control](https://learn.microsoft.com/en-us/azure/devops/repos/?view=azure-devops)
@@ -90,10 +100,12 @@ Here are **rapidly actionable** enhancements:
      - [OCI DevOps Code Repository for maintaining policy documents in version control](https://docs.oracle.com/en-us/iaas/Content/DevOps/Concepts/overview.htm)
 
 1. **Use Consistent Communication Channels**
+
    - If you have an organisational Slack, Teams, or intranet, create a #policy-updates channel (or equivalent) to announce changes.
    - Summarise the key differences in plain language.
 
 1. **Apply or Update an RBAC Model**
+
    - For each system, define roles that map to policy privileges:
      - [AWS IAM Roles or AWS SSO groups reflecting your policy structures](/TODO)
      - [Azure RBAC with custom roles if built-in ones don’t match your policy’s granularity](/TODO)
@@ -113,14 +125,17 @@ By versioning your policy documents, scheduling updates, and communicating chang
 You conduct reviews on a known schedule (e.g., quarterly or bi-annually), and policy updates follow a documented communication plan. This might be "good enough" if:
 
 1. **Predictable Review Cycles**
+
    - Teams know when to expect policy changes and how to provide feedback.
    - Surprises or sudden changes are less common.
 
 1. **Structured Communication Path**
+
    - You send out formal emails, intranet announcements, or notifications to staff and relevant teams whenever changes occur.
    - The updates typically highlight "what changed" and "why."
 
 1. **Most Stakeholders Are Informed**
+
    - While not fully collaborative, key roles (like security, DevOps, compliance leads) always see updates promptly.
    - Regular staff might be passively informed or updated in team briefings.
 
@@ -135,10 +150,12 @@ If your approach largely prevents confusion or major policy gaps, you’ve reach
 Below are **rapidly actionable** ways to refine:
 
 1. **Introduce a "Policy Advisory Group"**
+
    - Involve representatives from different teams (security, compliance, operations, major app owners).
    - They review proposed changes before final approval, fostering collaboration and broader buy-in.
 
 1. **Leverage Automated Policy Tools**
+
    - Integrate policy definitions or changes with your cloud environment:
      - [AWS Service Control Policies (SCPs) if you have multiple accounts in an AWS Organization, automatically enforce top-level rules](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
      - [Azure Policies to enforce or audit certain configurations globally, with updates tracked in Azure Policy resource versions](https://learn.microsoft.com/en-us/azure/governance/policy/)
@@ -146,9 +163,11 @@ Below are **rapidly actionable** ways to refine:
      - [OCI Security Zones or Organization-level IAM policy updates to align with your stated policies](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/overview.htm)
 
 1. **Conduct Impact Assessments**
+
    - Each time a policy update is proposed, share an "impact summary" so teams know if they must adjust access roles, add new logging, or change their workflows.
 
 1. **Record Meeting Minutes or Summaries**
+
    - Publish a short summary of each policy review session.
    - This allows staff who couldn’t attend to remain informed and fosters more transparency.
 
@@ -165,13 +184,16 @@ By establishing a policy advisory group, using automated enforcement, sharing im
 In this scenario, the policy process is well-structured and inclusive:
 
 1. **Collaborative Policy Updates**
+
    - Stakeholders from various departments (security, finance, operations, legal, etc.) collaborate to shape and approve changes.
 
 1. **Clear, Consistent Communication**
+
    - Staff know exactly where to look for upcoming policy changes, final decisions, and rationale.
    - The policy is more likely to be understood and adopted, reducing friction.
 
 1. **Fewer Exemptions or Gaps**
+
    - Because the right people are involved from the start, there are fewer last-minute exceptions.
    - Auditors typically find the system robust and responsive to new requirements.
 
@@ -185,6 +207,7 @@ If your integrated approach ensures strong buy-in and minimal policy confusion, 
 Below are **rapidly actionable** strategies:
 
 1. **Use Version Control for Policy and Automated Testing**
+
    - Host policy definitions (or partial automation code) in a Git repository:
      - [AWS Config custom rules or AWS Policy-as-Code approaches for enforcing certain resource configurations](https://github.com/awslabs/aws-config-rules)
      - [Azure Policy definitions in GitHub/Azure Repos, with CI/CD to roll out new policy versions automatically](https://github.com/Azure/azure-policy)
@@ -193,9 +216,11 @@ Below are **rapidly actionable** strategies:
    - This fosters transparency, and each stakeholder can see exactly how changes are being deployed.
 
 1. **Schedule Interactive Workshops**
+
    - Quarterly or monthly policy workshops enable direct Q&A and early feedback on proposed changes, preventing surprises.
 
 1. **Implement a Self-Service Portal or Dashboard**
+
    - Provide a simple interface where teams can request new access or see current policy constraints. For instance:
      - [AWS Service Catalog or custom portal integrated with IAM to enforce policy limitations automatically](/TODO)
      - [Azure Blueprint or Azure DevOps pipeline tasks that check requests against policy definitions before provisioning](/TODO)
@@ -203,6 +228,7 @@ Below are **rapidly actionable** strategies:
      - [OCI custom interface that references policy definitions and highlights potential conflicts or the need for exceptions](/TODO)
 
 1. **Link Policy Changes to Organisational Goals**
+
    - For each update, clearly state how it supports:
      - Security improvements (reducing potential data breaches).
      - Compliance with UK data protection or government classification requirements.
@@ -221,14 +247,17 @@ By versioning policy code, conducting interactive workshops, providing self-serv
 At this top maturity level, policy management is treated like software development:
 
 1. **Full Transparency and Collaboration**
+
    - Anyone in the organisation (or designated roles) can propose, review, or comment on policy changes.
    - Policy changes pass through a formal PR (pull request) or code review process.
 
 1. **Automated Testing or Validations**
+
    - Updates to policy are tested—either by applying them in a staging environment or using policy-as-code testing frameworks.
    - This ensures changes do what they’re intended to do.
 
 1. **Instant Visibility of Policy State**
+
    - A central dashboard or repository shows the current "approved" policy version and any in-progress updates.
    - Historical records of every previous policy version are readily available.
 
@@ -243,6 +272,7 @@ If you meet these criteria, you’re likely an exemplar of policy governance wit
 Below are **rapidly actionable** improvements, even at the highest level:
 
 1. **Adopt Advanced Policy Testing Frameworks**
+
    - For instance:
      - [AWS: Use Open Policy Agent (OPA) integrated with AWS for evaluating custom IAM or resource-based policies in test pipelines](https://docs.aws.amazon.com/prescriptive-guidance/latest/saas-multitenant-api-access-authorization/opa.html)
      - [Azure: Integrate Azure Policy with OPA or Terraform Compliance checks in your CI/CD for advanced scenario testing](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/policy-devops-pipelines)
@@ -250,10 +280,12 @@ Below are **rapidly actionable** improvements, even at the highest level:
      - [OCI: Utilize policy checks in a dev/test environment using custom OPA or third-party policy engines to simulate policy changes](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/overview.htm)
 
 1. **Create a Sandbox for Policy Experiments**
+
    - Let staff propose changes in a "policy staging environment" or a set of test subscriptions/accounts/folders.
    - Automatic validation ensures no harmful or contradictory rules get merged into production.
 
 1. **Automate Documentation Generation**
+
    - Convert policy-as-code comments into readable documentation so staff see both the code logic and a plain-language explanation:
      - [AWS: Use tools like cfn-docs or custom scripts that parse AWS IAM JSON files for summarizing them in a doc](https://github.com/awslabs/aws-cloudformation-templates/tree/master/tools/cfn-docs)
      - [Azure: Script that extracts Azure Policy definitions and describes them in Markdown with references to policy IDs](https://github.com/Azure/PSDocs.Azure)
@@ -262,6 +294,7 @@ Below are **rapidly actionable** improvements, even at the highest level:
    - This fosters transparency, and each stakeholder can see exactly how changes are being deployed.
 
 1. **Extend Collaboration to Partner Agencies**
+
    - If you work closely with other local authorities or health boards, consider sharing a portion of your policy code or best practices across organisations.
    - This fosters consistency and accelerates policy alignment.
 

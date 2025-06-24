@@ -12,9 +12,11 @@ eleventyNavigation:
 Your organisation may treat service accounts as if they were human users, granting them standard usernames and passwords (or persistent credentials). This might be acceptable if:
 
 1. **Low-Risk, Low-Criticality Services**
+
    - The services run minimal workloads without high security, compliance, or cost risks.
 
 1. **No Complex Scaling**
+
    - You rarely spin up or down new services, so manual credential management seems manageable.
 
 1. **Very Small Teams**
@@ -27,19 +29,23 @@ However, long-lived credentials that mimic human user accounts typically violate
 Below are **rapidly actionable** steps to move beyond human-like accounts for services:
 
 1. **Introduce Role-Based Service Accounts**
+
    - Use the cloud provider’s native service account or role concept:
      - [AWS IAM roles for EC2 or ECS tasks](https://aws.amazon.com/iam/features/), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Service Accounts](https://cloud.google.com/iam/docs/service-accounts), [OCI Dynamic Groups](https://www.oracle.com/cloud/free/oci-training/)
    - Avoid user/password-based approaches.
 
 1. **Limit Shared Credentials**
+
    - Immediately stop creating or reusing credentials across multiple services. Assign each service a unique identity:
      - Ensures logs and auditing can differentiate actions.
 
 1. **Enforce MFA or Short-Lived Tokens**
+
    - If a service truly needs interactive login (rare), require MFA or ephemeral credentials where possible.
    - [NCSC guidance on multi-factor authentication for accounts](https://www.ncsc.gov.uk/).
 
 1. **Document a Minimal Policy**
+
    - A short doc stating "No non-human accounts with user-like credentials," referencing both [NCSC principle of least privilege](https://www.ncsc.gov.uk/) and [NIST guidelines](https://csrc.nist.gov/).
 
 1. **Begin Transition to Cloud-Native Identity**
@@ -54,9 +60,11 @@ By introducing cloud-native roles for services, eliminating shared credentials, 
 In this setup, non-human accounts are assigned API keys (often static), managed by the project team. You might see it as "good enough" if:
 
 1. **Limited Cross-Project Needs**
+
    - Each project operates in isolation, with minimal external dependencies or shared services.
 
 1. **Few Cloud Services**
+
    - The environment is small, so local management doesn’t cause major confusion or risk.
 
 1. **Low Security/Compliance Requirements**
@@ -69,19 +77,23 @@ Still, static API keys managed locally can easily be lost, shared, or remain in 
 Below are **rapidly actionable** steps to centralise and secure long-lived API keys:
 
 1. **Move Keys to a Central Secret Store**
+
    - e.g., [AWS Secrets Manager](https://aws.amazon.com/secrets-manager/), [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview), [GCP Secret Manager](https://cloud.google.com/secret-manager/docs/overview), [OCI Vault](https://www.oracle.com/cloud/free/oci-training/) for storing all API keys.
    - Minimises local sprawl and fosters consistent security controls.
 
 1. **Enforce Rotation Policies**
+
    - Implement at least quarterly or monthly rotation for API keys to reduce exposure window if compromised:
      - Possibly automate via [AWS Lambda](https://aws.amazon.com/lambda/), [Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview), [GCP Cloud Functions](https://cloud.google.com/functions/docs/concepts/overview), or [OCI functions](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Use Tooling for Local Key Discovery**
+
    - If keys might be in code repos, scan with open-source or vendor tools:
      - e.g., [Trufflehog](https://github.com/trufflesecurity/trufflehog), [Gitleaks](https://github.com/gitleaks/gitleaks), [AWS CodeGuru Security](https://aws.amazon.com/codeguru/security/), or [Azure DevOps Security scanning](https://learn.microsoft.com/en-us/azure/devops/security/overview/security-scanning).
    - Alert if secrets are committed to version control.
 
 1. **Document a Single Organisational Policy**
+
    - State that "All API keys must be stored in central secret management, with at least every X months rotation."
    - Reference [NIST secret management or NCSC credential rotation best practices](https://www.ncsc.gov.uk/).
 
@@ -98,10 +110,12 @@ By centralising key storage, rotating keys automatically, scanning for accidenta
 Your organisation mandates storing service account credentials in a secure, central location (e.g., an enterprise secret store). This might be "good enough" if:
 
 1. **Reduced Credential Sprawl**
+
    - No more local storing of secrets in code or random text files.
    - Standard enforcement ensures consistent usage.
 
 1. **Better Rotation & Auditing**
+
    - The secret store possibly automates or at least supports rotating credentials.
    - You can track who accessed which secret, referencing [NCSC’s credential management recommendations](https://www.ncsc.gov.uk/).
 
@@ -115,19 +129,23 @@ However, using a secret store alone doesn’t guarantee ephemeral or short-lived
 Below are **rapidly actionable** ways to strengthen your centralised secret store approach:
 
 1. **Automate Secret Rotation**
+
    - For each stored secret (e.g., a database password, a service’s API key), implement rotation:
      - [AWS Secrets Manager rotation](https://aws.amazon.com/secrets-manager/), [Azure Key Vault rotation](https://learn.microsoft.com/en-us/azure/key-vault/general/rotate-keys), [GCP Secret Manager rotation](https://cloud.google.com/secret-manager/docs/rotation), or [OCI Vault rotation features](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Incorporate Access Control & Monitoring**
+
    - Strictly limit who can retrieve or update each secret, using fine-grained IAM or RBAC:
      - e.g., [AWS IAM policies](https://aws.amazon.com/iam/features/), [Azure Key Vault RBAC](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide), [GCP Secret Manager IAM](https://cloud.google.com/secret-manager/docs/iam), or [OCI compartments/policies](https://www.oracle.com/cloud/free/oci-training/).
    - Monitor logs for unusual access patterns.
 
 1. **Reference a "Secret Lifecycle" Document**
+
    - Outline creation, usage, rotation, and revocation steps for each type of secret.
    - Align with [NIST recommended credential lifecycles or NCSC guidance on secret hygiene](https://www.ncsc.gov.uk/).
 
 1. **Integrate into CI/CD**
+
    - Ensure automation pipelines fetch credentials from the secret store at build or deploy time, never storing them in code.
 
 1. **Begin Adopting Ephemeral Credentials**
@@ -143,9 +161,11 @@ By automating secret rotation, refining access controls, documenting a secret li
 Your organisation has moved beyond static credentials, using ephemeral tokens or certificates derived from environment attestation (e.g., the instance or container proves it’s authorised). This can be considered "good enough" if:
 
 1. **Near Zero Standing Privilege**
+
    - Non-human services only acquire valid credentials at runtime, with minimal risk of stolen or leaked credentials.
 
 1. **Cloud-Native Security**
+
    - You heavily rely on [AWS instance profiles](https://aws.amazon.com/iam/features/), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Service Account tokens](https://cloud.google.com/iam/docs/service-accounts), or [OCI dynamic groups + instance principals](https://www.oracle.com/cloud/free/oci-training/) to authenticate workloads.
 
 1. **Robust Automation**
@@ -158,18 +178,22 @@ You might refine or strengthen with additional zero-trust checks, rotating ephem
 Below are **rapidly actionable** improvements to further secure ephemeral identity usage:
 
 1. **Embed Short-Lived Tokens in CI/CD**
+
    - For instance, dev and build systems can assume roles or fetch tokens just-in-time:
      - e.g., [AWS STS for container builds](https://aws.amazon.com/sts/), [Azure DevOps with Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Cloud Build using short-lived service account tokens](https://cloud.google.com/iam/docs/service-accounts), or [OCI DevOps ephemeral tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Adopt Service Mesh or mTLS**
+
    - If you have container/microservice architectures, combine ephemeral identity with [Istio](https://istio.io/), [AWS App Mesh](https://aws.amazon.com/app-mesh/), [Azure Service Fabric](https://learn.microsoft.com/en-us/azure/service-fabric/service-fabric-overview), [GCP Anthos Service Mesh](https://cloud.google.com/anthos/service-mesh), or [OCI OKE with a mesh add-on](https://www.oracle.com/cloud/free/oci-training/) for strong mutual TLS:
      - Further ensures identities are validated end-to-end.
 
 1. **Leverage Policy-as-Code**
+
    - e.g., [Open Policy Agent (OPA)](https://www.openpolicyagent.org/) or vendor-based policy solutions ([AWS Organizations SCP](https://aws.amazon.com/organizations/features/), [Azure Policy](https://learn.microsoft.com/en-us/azure/azure-policy/overview), [GCP Org Policy](https://cloud.google.com/resource-manager/docs/organisation-policy/overview), [OCI Security Zones](https://www.oracle.com/cloud/free/oci-training/)) for dynamic authorisation checks:
      - Grant ephemeral credentials only if a container or instance meets certain attestation criteria.
 
 1. **Regularly Audit Attestation Mechanisms**
+
    - Confirm your environment attestation approach is updated and trustworthy, referencing [NCSC hardware root of trust or secure boot guidance](https://www.ncsc.gov.uk/) or [NIST hardware security modules](https://csrc.nist.gov/).
 
 1. **Integrate with Cross-Org Federation**
@@ -184,13 +208,16 @@ By embedding ephemeral tokens into your CI/CD, adding a service mesh or mTLS, em
 At this final level, your organisation defines service identities in code (e.g., Terraform, AWS CloudFormation, Azure Bicep, GCP Deployment Manager), and enforces trust relationships through a central identity federation. This is typically "good enough" if:
 
 1. **Full Infrastructure as Code**
+
    - All resource definitions, including service accounts or roles, are under version control, automatically deployed.
    - Minimises manual steps or inconsistencies.
 
 1. **Seamless Federation**
+
    - Multi-department or multi-cloud environments rely on a single identity trust model—no specialised per-service or per-team trust links needed.
 
 1. **Robust Continuous Delivery**
+
    - Automated pipelines update identities, rotating credentials or ephemeral tokens as part of routine releases.
 
 1. **Holistic Governance & Observability**
@@ -203,17 +230,21 @@ Though advanced, you may refine ephemeral solutions further, adopt advanced zero
 Below are **rapidly actionable** ways to enhance code-managed identities with federated trust:
 
 1. **Incorporate Real-Time Security Policies**
+
    - Use policy-as-code (OPA, AWS SCP, Azure Policy, GCP Org Policy, OCI Security Zones) to automatically detect and block misconfigurations in your IaC definitions.
 
 1. **Leverage DevSecOps Workflows**
+
    - Integrate identity code linting, security scanning, and ephemeral token provisioning into CI/CD:
      - e.g., scanning Terraform or CloudFormation for suspicious identity references before merge.
 
 1. **Implement Zero-Trust Microsegmentation**
+
    - Each microservice identity obtains ephemeral credentials from a central authority:
      - e.g., [HashiCorp Vault with dynamic secrets](https://www.hashicorp.com/products/vault), [AWS STS with short-lived tokens](https://aws.amazon.com/sts/), [Azure Managed Identities with per-service tokens](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Workload Identity Federation](https://cloud.google.com/iam/docs/workload-identity-federation), or [OCI dynamic group tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Expand to Multi-Cloud/Hybrid**
+
    - If multiple providers or on-prem systems are used, unify identity definitions across them:
      - e.g., bridging AWS, Azure, GCP, OCI roles in the same Terraform codebase, referencing [NCSC’s multi-cloud security patterns](https://www.ncsc.gov.uk/).
 

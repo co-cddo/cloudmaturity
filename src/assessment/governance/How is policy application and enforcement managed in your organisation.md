@@ -12,10 +12,12 @@ eleventyNavigation:
 If policies are not actively applied, your organisation may still be at a very early or exploratory stage. You might perceive this as "good enough" if:
 
 1. **No Critical or Sensitive Operations**
+
    - You operate minimal or non-critical services, handling little to no sensitive data or regulated workloads.
    - There’s no immediate requirement (audit, compliance, security) pressing for formal policy usage.
 
 1. **Limited Scale or Temporary Projects**
+
    - Teams are small and can coordinate informally, or the entire environment is short-lived with minimal risk.
 
 1. **No Internal or External Mandates**
@@ -29,10 +31,12 @@ However, as soon as you store personal, official, or sensitive data—or your en
 Below are **rapidly actionable** steps to start applying policies:
 
 1. **Define a Minimal Baseline Policy**
+
    - Begin by stating basic governance guidelines (e.g., "All user accounts must have multi-factor authentication," "All data must be encrypted at rest").
    - Publish this in a short doc or wiki, referencing relevant UK public sector best practices.
 
 1. **Identify a Small Pilot Use Case**
+
    - Pick a single area (e.g., identity and access management) to apply a simple policy.
    - For instance:
      - [AWS: Use AWS IAM best practices or AWS Organizations for top-level policy control (Service Control Policies)](/TODO)
@@ -42,6 +46,7 @@ Below are **rapidly actionable** steps to start applying policies:
      - [IBM: Cloud IAM Best Practices](/TODO)
 
 1. **Communicate the Policy**
+
    - Alert your team that from now on, they must follow this minimal policy.
    - Provide quick references or instructions in your Slack/Teams channel or an intranet page.
 
@@ -58,10 +63,12 @@ By taking these initial steps—defining a baseline policy, piloting it, and com
 Here, your organisation may have documented policies, but there is no real mechanism to ensure staff or systems comply. You might consider this "good enough" if:
 
 1. **Policies Are Referenced, Not Mandatory**
+
    - Teams consult them occasionally but can ignore them with minimal consequences.
    - Leadership or audits haven’t flagged major non-compliance issues—yet.
 
 1. **Low Regulatory Pressure**
+
    - You might not be heavily audited or regulated, so the absence of enforcement tools has not been problematic.
 
 1. **Early in Maturity Journey**
@@ -74,6 +81,7 @@ Over time, lack of enforcement typically leads to inconsistent implementation an
 Below are **rapidly actionable** ways to start enforcing existing policies:
 
 1. **Adopt Basic Monitoring or Reporting**
+
    - Use native cloud governance tools to see if resources match policy guidelines:
      - [AWS Config to track resource configurations vs. rules, e.g., "All S3 buckets must be private."](https://docs.aws.amazon.com/config/latest/developerguide/evaluate-config_develop-rules_cfn-guard.html)
      - [Azure Policy to assess if VMs are using managed disks, or if TLS versions meet policy standards](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
@@ -81,6 +89,7 @@ Below are **rapidly actionable** ways to start enforcing existing policies:
      - [OCI Cloud Guard or Security Advisor for detecting non-compliant resources, e.g., public-facing services or unencrypted storage](https://docs.oracle.com/en-us/iaas/Content/CloudGuard/Concepts/cloudguard_overview.htm)
 
 2. **Automate Alerts for Major Breaches**
+
    - If a policy states "No public buckets," set an alert that triggers if a bucket becomes public:
      - [AWS SNS or Amazon EventBridge to notify Slack or email on AWS Config rule violation](https://docs.aws.amazon.com/config/latest/developerguide/notifications-for-AWS-Config.html)
      - [Azure Monitor alerts for Azure Policy non-compliant resources](https://learn.microsoft.com/en-us/azure/governance/policy/how-to/get-compliance-data)
@@ -88,6 +97,7 @@ Below are **rapidly actionable** ways to start enforcing existing policies:
      - [OCI Event service + Notifications to detect and alert on security misconfigurations in compartments](https://www.oracle.com/webfolder/technetwork/tutorials/FAQs/oci/Events-FAQ.pdf)
 
 3. **Introduce Basic Consequence Management**
+
    - If a policy is violated, require the team to fill out an exception form or gain approval from a manager.
    - This ensures staff think twice before ignoring policy.
 
@@ -106,10 +116,12 @@ By automating policy checks, alerting on critical breaches, and phasing in enfor
 In this scenario, your organisation integrates policies into formal workflows (e.g., ticketing, approval boards, or documented SOPs), but relies on manual oversight rather than automated technical controls. It could be "good enough" if:
 
 1. **Stable, Well-Understood Environments**
+
    - Your systems don’t change frequently, so manual approvals or reviews remain feasible.
    - The pace of service updates is relatively slow.
 
 1. **Well-Trained Staff**
+
    - Teams consistently follow these processes, knowing policy steps are mandatory.
    - Leadership or compliance officers occasionally check random samples for compliance.
 
@@ -123,6 +135,7 @@ However, process-driven approaches can become slow and error-prone with scale or
 Below are **rapidly actionable** ways to enhance process-driven application:
 
 1. **Introduce Lightweight Technical Automation**
+
    - Even if processes remain the backbone, add a few checks:
      - [AWS IAM Access Analyzer or AWS Config rules to highlight policy compliance before manual sign-off is given](https://aws.amazon.com/blogs/security/validate-iam-policies-with-access-analyzer-using-aws-config-rules/)
      - [Azure DevOps Pipeline tasks that verify resource settings align with your documented policy before deployment completes](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/azure-policy-check-gate-v0?view=azure-pipelines)
@@ -130,14 +143,17 @@ Below are **rapidly actionable** ways to enhance process-driven application:
      - [OCI Resource Manager with custom pre-flight checks to ensure a requested resource meets policy criteria before final approval](https://blogs.oracle.com/ateam/post/automate-cis-compliance-checking)
 
 1. **Use a Single Source of Truth**
+
    - Store policy documentation and forms in a single location (e.g., SharePoint, Confluence, or an internal Git repo).
    - This avoids confusion about which version of the process to follow.
 
 1. **Add a "Policy Gate" to Ticketing Systems**
+
    - For example, in ServiceNow or Jira:
      - A ticket for provisioning a new VM or network must pass a "policy gate" status, requiring sign-off from a compliance or security person referencing your standard steps.
 
 1. **Measure Process Efficiency**
+
    - Track how long it takes to apply each policy step. Identify bottlenecks or missed checks.
    - This helps you see where minimal automation or additional staff training could cut manual overhead.
 
@@ -154,10 +170,12 @@ By introducing minor automation, centralising policy references, adding a policy
 At this stage, your organisation uses well-defined processes to ensure policy compliance, supplemented by some technical controls (e.g., partial automation or read-only checks). You might consider it "good enough" if:
 
 1. **Consistent, Repeatable Processes**
+
    - Your staff frequently comply with policy steps.
    - Automated checks (like scanning for open ports or misconfigurations) reduce human errors.
 
 1. **Reduced Overheads**
+
    - Some tasks are automated, but you still rely on manual gating in certain high-risk or high-sensitivity areas.
    - This balance feels manageable for your scale and risk profile.
 
@@ -171,6 +189,7 @@ However, if you want to handle larger workloads or adopt faster continuous deliv
 Below are **rapidly actionable** ways to reinforce or extend your existing setup:
 
 1. **Expand Technical Enforcement**
+
    - Implement more "deny by default" mechanisms:
      - [AWS Service Control Policies or AWS Organizations guardrails to block unauthorized resource actions globally](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html)
      - [Azure Policy in "Deny" mode for known non-compliant resource configurations](https://learn.microsoft.com/en-us/azure/governance/policy/concepts/effect-deny)
@@ -178,6 +197,7 @@ Below are **rapidly actionable** ways to reinforce or extend your existing setup
      - [OCI Security Zones or integrated IAM policies that automatically reject certain resource settings](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 1. **Integrate Observability and Alerting**
+
    - Use real-time or near-real-time monitoring to detect policy breaches quickly:
      - [AWS CloudWatch or Amazon EventBridge triggers for changes that violate policy rules](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Acting_Alarm_Changes.html)
      - [Azure Monitor alerts on policy compliance drifts or suspicious activities](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview)
@@ -185,6 +205,7 @@ Below are **rapidly actionable** ways to reinforce or extend your existing setup
      - [OCI Cloud Guard alerting on anomalies or known policy contraventions](https://docs.oracle.com/en-us/iaas/Content/CloudGuard/Concepts/cloudguard_overview.htm)
 
 1. **Adopt "Immutability" or "Infrastructure as Code"**
+
    - If possible, define infrastructure states in code. Your policy steps can be embedded:
      - [AWS CloudFormation with StackSets and AWS Config to align with known "gold" standards](https://docs.aws.amazon.com/organizations/latest/userguide/services-that-can-integrate-cloudformation.html)
      - [Azure Resource Manager (Bicep) or Terraform that references Azure Policies in code, ensuring compliance from the start](https://learn.microsoft.com/en-us/azure/developer/terraform/comparing-terraform-and-bicep)
@@ -192,6 +213,7 @@ Below are **rapidly actionable** ways to reinforce or extend your existing setup
      - [OCI Resource Manager stacks that validate resource definitions against your policies before applying changes](https://docs.oracle.com/en-us/iaas/Content/ResourceManager/Concepts/stacksoverview.htm)
 
 1. **Push for More Cross-Team Training**
+
    - Ensure DevOps, security, and compliance teams understand how to interpret automated policy checks.
    - This fosters a shared sense of ownership and makes the half-automated approach more effective.
 
@@ -208,12 +230,15 @@ By strengthening technical guardrails, improving alerting, and embedding your po
 At this final stage, policy application is deeply woven into both organisational processes and automated technical controls:
 
 1. **End-to-End Enforcement**
+
    - Every step of resource creation, modification, or retirement is governed by your policy—there’s no easy workaround or manual override without documented approval.
 
 1. **High Automation, High Reliability**
+
    - The majority of policy compliance checks and remediation are automated. Staff rarely need to intervene except for unusual exceptions.
 
 1. **Predictable Governance**
+
    - Audits or compliance reviews are smooth. Minimal policy violations occur, and if they do, they’re swiftly detected and addressed.
 
 1. **Alignment with Public Sector Standards**
@@ -226,6 +251,7 @@ Even at this apex, continuous improvement remains relevant. Evolving technology 
 Below are **rapidly actionable** refinements, even at the highest maturity:
 
 1. **Adopt Policy-as-Code with Automated Testing**
+
    - Store policy definitions in version control, run them through pipeline tests:
      - [AWS: Service Control Policies or AWS Config rules in Git, tested with custom scripts or frameworks like OPA (Open Policy Agent)](https://github.com/aws-samples/service-control-policy-examples)
      - [Azure: Policies, RBAC templates in a Git repo, validated with Azure DevOps or GitHub Actions before rollout](https://github.com/marketplace/actions/manage-azure-policy)
@@ -233,14 +259,17 @@ Below are **rapidly actionable** refinements, even at the highest maturity:
      - [OCI: Policy definitions or Security Zones config in code, automatically tested with custom scripts or OPA-based solutions before applying to production](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/policygetstarted.htm)
 
 1. **Enable Dynamic, Real-Time Adjustments**
+
    - Some advanced organisations adopt "adaptive policies" that can respond automatically to shifting risk contexts:
      - e.g., Requiring step-up authentication or extra scanning if abnormal usage patterns appear.
 
 1. **Analytics and Reporting on Policy Efficacy**
+
    - Track metrics like "time to resolve policy violations," "number of exceptions requested per quarter," or "percentage of resources in compliance."
    - Present these metrics to leadership for data-driven improvements.
 
 1. **Cross-department Collaboration**
+
    - If you share data or resources with other public sector agencies, coordinate policy definitions or enforcement bridging solutions.
    - This ensures consistent governance and security across multi-department projects.
 

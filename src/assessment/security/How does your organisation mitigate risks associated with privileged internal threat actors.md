@@ -12,9 +12,11 @@ eleventyNavigation:
 Your organisation might ensure privileged users have been vetted by internal or external means (e.g., security clearances or supplier checks). This may be considered "good enough" if:
 
 1. **Rigorous Personnel Vetting**
+
    - Individuals with admin or root-level privileges have the relevant UK security clearance (e.g., BPSS, SC, DV) or supplier equivalent.
 
 1. **No Major Incidents**
+
    - Having not experienced breaches or insider threats, you feel comfortable with existing checks.
 
 1. **Minimal Cloud Scale**
@@ -27,17 +29,21 @@ Still, user vetting alone does not fully address the risk of privileged misuse (
 Below are **rapidly actionable** steps to bolster security beyond mere user vetting:
 
 1. **Implement the Principle of Least Privilege**
+
    - Even fully vetted staff should not have more privileges than needed:
      - E.g., use [AWS IAM roles with distinct privileges](https://aws.amazon.com/iam/features/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM with granular roles](https://cloud.google.com/iam/docs/overview), or [OCI compartments/policies](https://www.oracle.com/cloud/free/oci-training/), [IAM Access Controls](https://cloud.ibm.com/docs/account?topic=account-access-management-overview)
 
 1. **Mandate MFA for Privileged Accounts**
+
    - For root/admin accounts, enforce multi-factor authentication referencing [NCSC guidance on MFA best practices](https://www.ncsc.gov.uk/).
    - Minimises the chance of stolen credentials being abused.
 
 1. **Adopt Break-Glass Procedures**
+
    - Provide normal user roles with day-to-day privileges. Escalation to super-user (root/admin) requires justification or time-limited credentials.
 
 1. **Track Changes & Access**
+
    - Enable audit logs for all privileged actions, storing them in an immutable store:
      - e.g., [AWS CloudTrail + Amazon S3 with SSE-KMS encryption](https://aws.amazon.com/cloudtrail/), [Azure Monitor with immutable storage](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-retention-archive), [GCP Logging with Bucket Lock](https://cloud.google.com/logging/docs/storage/bucket-lock), or [OCI Logging with WORM policies](https://www.oracle.com/cloud/free/oci-training/).
 
@@ -53,9 +59,11 @@ By reinforcing least privilege, requiring MFA for admins, introducing break-glas
 In your organisation, each system generates logs to satisfy a broad requirement ("we must have logs"), yet there is no centralised approach or deep analysis. It might be "good enough" if:
 
 1. **Meeting Basic Compliance**
+
    - You have documentation stating logs must exist, fulfilling a minimal compliance or policy demand.
 
 1. **No Frequent Incidents**
+
    - So far, you’ve not needed advanced correlation or instant threat detection from logs.
 
 1. **Limited Complexity**
@@ -68,18 +76,22 @@ To enhance threat detection and privileged user oversight, you could unify logs 
 Below are **rapidly actionable** steps for robust logging:
 
 1. **Centralise Logs**
+
    - Collect logs from all key systems into a single location:
      - [AWS CloudWatch Logs or Amazon S3](https://aws.amazon.com/cloudwatch/), [Azure Monitor Logs or Log Analytics](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-retention-archive), [GCP Cloud Logging](https://cloud.google.com/logging/docs/), or [OCI Logging service](https://www.oracle.com/cloud/free/oci-training/).
    - Simplifies correlation and search.
 
 1. **Implement Basic Retention Policies**
+
    - Define how long logs remain:
      - e.g., minimum 90 days or 1 year for privileged user activity, referencing [NCSC or departmental retention guidelines](https://www.ncsc.gov.uk/).
 
 1. **Add Tiered Access**
+
    - Ensure only authorised security or audit staff can retrieve log data, particularly sensitive privileged user logs.
 
 1. **Adopt Alerts or Scripting**
+
    - If no advanced SIEM in place, set simple CloudWatch or Monitor alerts for suspicious events:
      - e.g., repeated authentication failures, unusual times for privileged actions.
 
@@ -96,9 +108,11 @@ By centralising logs, defining retention policies, restricting log access, emplo
 Your organisation ensures that each new system or release passes an ITHC or security check verifying logs exist, but ongoing monitoring or correlation might not happen. This could be "good enough" if:
 
 1. **Meeting Basic Security Gate**
+
    - You confirm audit logs exist before go-live, mitigating total absence of logging.
 
 1. **High Manual Effort**
+
    - Teams may do point-in-time checks or random sampling of logs without continuous oversight.
 
 1. **Some Minimal Risk Tolerance**
@@ -111,18 +125,22 @@ Yet, post-launch, missing continuous log analysis can hamper early threat detect
 Below are **rapidly actionable** steps to enhance local audit log checks:
 
 1. **Introduce Scheduled Log Reviews**
+
    - e.g., once a month or quarter, verify logs remain present, complete, and show no anomalies:
      - Provide a short checklist or script for consistent checks.
 
 1. **Adopt a Central Logging Approach**
+
    - Even if you keep local logs, replicate them to a central store or SIEM:
      - [AWS S3 or Amazon ES](https://aws.amazon.com/s3/), [Azure Monitor Logs](https://learn.microsoft.com/en-us/azure/azure-monitor/logs/data-retention-archive), [GCP Logging + BigQuery](https://cloud.google.com/logging/docs/bigquery), or [OCI Logging Analytics](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Establish an Alerting Mechanism**
+
    - Set triggers for suspicious events:
      - repeated privileged commands, attempts to disable logging, or high-volume data exfil events.
 
 1. **Retest Periodically**
+
    - Expand from a pre-launch compliance check to ongoing compliance checks, referencing [NCSC operational resilience or protective monitoring advice](https://www.ncsc.gov.uk/).
 
 1. **Involve Security/Operations in Reviews**
@@ -137,9 +155,11 @@ By scheduling routine log reviews, centralising logs or employing a SIEM, establ
 Your organisation ensures all logs flow into a tamper-proof or WORM (write-once, read-many) storage with automated processes for retention and monitoring. This may be "good enough" if:
 
 1. **Complete Coverage**
+
    - Every system relevant to security or privileged actions ships logs to a central store with read-only or append-only policies.
 
 1. **Daily or Real-Time Analysis**
+
    - Automated scanners or scripts detect anomalies (e.g., unauthorised attempts, suspicious off-hours usage).
 
 1. **Confidence in Legal/Evidential Status**
@@ -152,17 +172,21 @@ Still, you might expand cross-department correlation (e.g., combining logs from 
 Below are **rapidly actionable** ways to enhance a centralised, immutable audit logging approach:
 
 1. **Incorporate a SIEM or Security Analytics**
+
    - e.g., [Splunk](https://www.splunk.com/), [AWS Security Hub](https://aws.amazon.com/security-hub/), [Azure Sentinel](https://learn.microsoft.com/en-us/azure/sentinel/), [GCP Chronicle](https://cloud.google.com/chronicle/docs/), or [OCI Logging Analytics with advanced detection](https://www.oracle.com/cloud/free/oci-training/):
      - Gains rapid threat detection, correlation, and visual dashboards.
 
 1. **Define Tiered Log Retention**
+
    - Some logs might only need short retention, while privileged user logs or financial transaction logs might need multi-year retention, referencing departmental policies or [NCSC recommended durations](https://www.ncsc.gov.uk/).
 
 1. **Implement Role-Based Log Access**
+
    - Ensure only authorised staff see certain logs (privileged user logs may contain sensitive data).
    - Align with [NIST SP 800-53 Access Control guidelines](https://csrc.nist.gov/).
 
 1. **Add Instant Alerts for High-Risk Actions**
+
    - e.g., attempts to disable logging, repeated root-level changes, or suspicious escalations.
    - Tools like [AWS CloudWatch Alarms](https://aws.amazon.com/cloudwatch/), [Azure Monitor Alerts](https://learn.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-overview), [GCP Logging Alerts](https://cloud.google.com/logging/docs/alerts), or [OCI Notifications integrations](https://www.oracle.com/cloud/free/oci-training/) are typically easy to set up.
 
@@ -179,10 +203,12 @@ By coupling an advanced SIEM with defined retention tiers, enforcing role-based 
 At this highest maturity level, your organisation not only has robust logging but also runs frequent legal and forensic validations. This approach is typically "good enough" if:
 
 1. **Thorough Testing & Legal Assurance**
+
    - Auditors simulate real investigations, confirming the logs meet evidential standards for UK legal frameworks.
    - Aligns with [NCSC’s guidance on evidential logging or digital forensics](https://www.ncsc.gov.uk/).
 
 1. **Confidence in Potential Criminal Cases**
+
    - If insider misuse occurs, logs can stand up in court, verifying chain-of-custody and authenticity.
 
 1. **Mature Culture & Processes**
@@ -195,18 +221,22 @@ You may further refine by adopting next-generation forensics tools, cross-depart
 Below are **rapidly actionable** suggestions to deepen advanced log audits and legal compliance:
 
 1. **Formalise Forensic Readiness**
+
    - Publish an internal document describing how logs are collected, secured, and presented in legal contexts:
      - referencing [NCSC forensic readiness best practices](https://www.ncsc.gov.uk/).
 
 1. **Simulate Real-World Insider Incidents**
+
    - Conduct tabletop exercises or "red team" scenarios focusing on a privileged user gone rogue:
      - confirm the logs indeed catch suspicious actions and remain legally defensible.
 
 1. **Adopt Chain-of-Custody Tools**
+
    - Use tamper-evident hashing or digital signatures on log files:
      - e.g., storing in [AWS S3 Glacier with Vault Lock](https://aws.amazon.com/s3/), [Azure immutable storage with WORM](https://learn.microsoft.com/en-us/azure/storage/blobs/blob-soft-delete-overview), [GCP Bucket Lock](https://cloud.google.com/logging/docs/storage/bucket-lock), or [OCI Object Storage with retention policies](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Engage with Legal/HR for Pre-Agreed Procedures**
+
    - Ensure a consistent approach to handle suspected insider cases, clarifying roles for HR, security, legal, and management:
      - Minimises delays or confusion during investigations.
 
