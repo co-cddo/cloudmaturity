@@ -1,22 +1,20 @@
 ---
-title: How does your organisation support and develop individuals with limited or no cloud experience for roles in cloud initiatives?
+title: How do you help staff with little or no cloud experience move into cloud roles?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **No Specific Development Path:** There is no special accommodation or development path for individuals with limited or no cloud experience.
+### We don't plan for this.
 
 #### **How to determine if this good enough**
 
 Your organisation may not offer any structured way for employees to learn cloud technologies. You might consider it "good enough" if:
 
 1. **Minimal Cloud Footprint**
-
    - Your cloud usage is extremely limited, so extensive skill-building programs seem unnecessary.
 
 1. **No Immediate Skill Gaps**
-
    - Current projects do not require additional cloud expertise, and operational requirements are met without training investments.
 
 1. **Short-Term Budget or Resource Constraints**
@@ -29,7 +27,6 @@ However, a complete lack of development opportunities can lead to skill shortage
 Below are **rapidly actionable** ways to establish a baseline development path for new cloud learners:
 
 1. **Create a Simple Cloud Familiarisation Resource**
-
    - Gather free vendor tutorials:
      - [AWS free training modules or AWS Skill Builder basics](https://aws.amazon.com/training/skill-builder/)
      - [Azure Fundamentals on Microsoft Learn](https://learn.microsoft.com/en-us/certifications/azure-fundamentals/)
@@ -39,17 +36,14 @@ Below are **rapidly actionable** ways to establish a baseline development path f
    - Provide a short list of recommended links to staff wanting to explore cloud concepts.
 
 1. **Encourage Self-Study**
-
    - Offer small incentives (e.g., internal recognition or minor expense coverage) if employees complete a fundamental cloud course.
    - Even a simple certificate of completion fosters motivation.
 
 1. **Promote Internal Shadowing**
-
    - If you have at least one cloud-savvy colleague, arrange informal shadowing or pair sessions.
    - This ensures staff with zero cloud background get exposure to real tasks.
 
 1. **Reference GOV.UK and NCSC**
-
    - Link staff to relevant [GOV.UK digital and technology frameworks](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework) or basic [NCSC cloud security advice](https://www.ncsc.gov.uk/collection/cloud-security).
 
 1. **Pilot a Tiny Cloud Project**
@@ -57,18 +51,16 @@ Below are **rapidly actionable** ways to establish a baseline development path f
 
 By assembling free training resources, sponsoring small incentives, and facilitating internal shadowing or mini pilots, you kickstart a foundational path for employees to begin acquiring cloud knowledge in a low-cost, organic way.
 
-### **Basic On-the-Job Training:** Individuals with limited cloud experience are provided basic on-the-job training to help them adapt to cloud-related tasks.
+### We give basic on-the-job training.
 
 #### **How to determine if this good enough**
 
 You may have a modest training approach, usually overseen by a line manager or a more experienced colleague. This can be "good enough" if:
 
 1. **Gradual Cloud Adoption**
-
    - The environment is evolving slowly, so incremental on-the-job training meets the immediate need.
 
 1. **In-House Mentors**
-
    - If there are enough knowledgeable staff who can guide newcomers on day-to-day tasks without overloading or risking burnout.
 
 1. **Basic Organisational Support**
@@ -81,21 +73,17 @@ While more robust than having no path, purely on-the-job learning can be inconsi
 Below are **rapidly actionable** ways to strengthen basic on-the-job cloud training:
 
 1. **Define Simple Mentorship Guidelines**
-
    - Even if informally, specify a mentor’s role—e.g., conducting weekly check-ins, demonstrating best practices for provisioning, cost management, or security scanning.
 
 1. **Adopt a Buddy System for Cloud Tasks**
-
    - Pair a novice with a more experienced engineer on actual cloud tickets or incidents:
    - Encourages learning through real-world problem-solving.
 
 1. **Introduce a Lightweight Skills Matrix**
-
    - Track essential cloud tasks (e.g., spinning up a VM, setting up logging, basic security config) and check them off as novices learn:
      - e.g., [AWS/Azure/GCP/OCI basics], referencing relevant vendor quickstarts.
 
 1. **Encourage Self-Paced Online Labs**
-
    - Provide access to some structured labs:
      - [AWS Hands-on labs, Azure Lab Services, GCP codelabs, or OCI labs], guiding novices step-by-step.
 
@@ -105,18 +93,16 @@ Below are **rapidly actionable** ways to strengthen basic on-the-job cloud train
 
 By structuring mentorship roles, ensuring novices participate in real tasks, tracking essential skills, adding lab-based self-study, and giving recognition, you can rapidly accelerate staff readiness and consistency in cloud ops.
 
-### **Structured Training and Mentorship Programs:** The organisation offers structured training programs, including mentorship and peer learning, to develop cloud skills among employees with limited cloud experience.
+### We have training and mentoring programmes.
 
 #### **How to determine if this good enough**
 
 Here, your organisation invests in formal training paths or bootcamps, plus assigned mentors or peer learning groups. You might consider it "good enough" if:
 
 1. **Standardised Curriculum**
-
    - All new cloud-related hires or existing staff can follow a consistent set of modules or labs for fundamental cloud tasks.
 
 1. **Clear Mentorship Framework**
-
    - Each junior or novice staff is paired with a specific mentor who checks in regularly, possibly with set learning milestones.
 
 1. **Frequent Feedback and Peer Exchange**
@@ -129,22 +115,18 @@ If such structured programs yield consistent, secure, and cost-effective cloud p
 Below are **rapidly actionable** ways to enhance structured training/mentorship:
 
 1. **Formalise Cloud Learning Journeys**
-
    - e.g., for a DevOps role, define stepping stones from fundamental vendor certs to advanced specialisations:
      - AWS Solutions Architect -> SysOps -> Security, Azure Administrator -> DevOps Engineer, GCP Associate Engineer -> Professional Architect, etc.
 
 2. **Adopt Official Vendor Training Programs**
-
    - Microsoft’s Enterprise Skills Initiative, AWS Skills Guild, GCP Professional Services training, or Oracle University courses:
      - This can scale up in a structured manner, referencing [NIST NICE framework for workforce skill mapping](https://csrc.nist.gov/).
 
 3. **Establish Time Allocations**
-
    - Guarantee staff a certain number of hours per month for cloud labs, workshops, or self-paced learning:
      - Minimises conflicts with daily duties.
 
 4. **Integrate Real Projects into Training**
-
    - Let trainees apply new skills to an actual low-risk project, e.g., a new serverless prototype or a cost optimisation analysis:
      - Encourages practical retention.
 
@@ -154,18 +136,16 @@ Below are **rapidly actionable** ways to enhance structured training/mentorship:
 
 By defining clear cloud learning journeys, leveraging vendor training, scheduling dedicated study time, embedding real projects in the curriculum, and publicly recognising accomplishments, you foster a thriving environment for upskilling staff in cloud technologies.
 
-### **Integrated Learning and Development Initiatives:** Comprehensive learning initiatives, such as in-house training courses or collaborations with external training providers, are in place to up-skill employees in cloud technologies.
+### We offer in-house or external training to build cloud skills.
 
 #### **How to determine if this good enough**
 
 Your organisation provides robust training—like in-house cloud courses, external bootcamps, or vendor collaborations (AWS, Azure, GCP, OCI). You might consider it "good enough" if:
 
 1. **Managed End-to-End**
-
    - Employees sign up for consistent programs, from beginner to advanced, with recognised certification paths.
 
 1. **Frequent Engagement**
-
    - Regular classes or workshops ensure continuous skill growth, not just a one-time orientation.
 
 1. **Positive Impact**
@@ -178,22 +158,18 @@ This approach likely meets most skill-building needs. Nonetheless, you can push 
 Below are **rapidly actionable** tips to refine integrated learning and development:
 
 1. **Formal Apprenticeship or Bootcamp**
-
    - Partner with recognised training providers:
      - e.g., AWS re/Start, Azure Academy, GCP JumpStart, or Oracle Next Education for more in-depth coverage.
    - Ensure alignment with [NCSC or NIST cybersecurity modules](https://www.ncsc.gov.uk/).
 
 1. **Set Clear Learning Roadmaps by Function**
-
    - For Dev, Ops, Security, Data roles—each has curated course combos, from fundamentals to specialised advanced topics:
      - This fosters structured progression.
 
 1. **Involve Senior Leadership Support**
-
    - Encourage exec sponsors to highlight success stories, attend final presentations of training cohorts, or discuss how these new skills align with departmental digital transformation goals.
 
 1. **Combine Internal & External Teaching**
-
    - Use a mix of vendor trainers, in-house subject matter experts, and third-party specialists for well-rounded instruction.
    - This ensures staff see multiple perspectives.
 
@@ -203,18 +179,16 @@ Below are **rapidly actionable** tips to refine integrated learning and developm
 
 By implementing apprenticeship or structured bootcamp approaches, organising role-specific learning paths, ensuring leadership buy-in, blending internal and external expertise, and measuring ROI, you develop a truly comprehensive and outcome-driven cloud skill development program.
 
-### **Mature Apprenticeship/Bootcamp Program with Aftercare:** A robust apprenticeship, bootcamp, or career change program exists for rapid skill development in cloud technologies. This program includes significant aftercare support to ensure long-term development and retention of the investment in these individuals.
+### We have apprenticeship, career change and bootcamp programmes, with ongoing support.
 
 #### **How to determine if this good enough**
 
 At the highest level, your organisation runs a fully-fledged apprenticeship or bootcamp approach to converting staff with little-to-no cloud background into proficient cloud practitioners—backed by ongoing mentorship. You might see it "good enough" if:
 
 1. **High Conversion Rates**
-
    - Most participants complete the program and effectively fill cloud roles.
 
 1. **Post-Program Support**
-
    - After finishing, participants continue to receive coaching, refreshers, or advanced modules so their skills remain current.
 
 1. **Strategic Workforce Planning**
@@ -227,22 +201,18 @@ Even so, continuous improvement can come through specialised advanced tracks, co
 Below are **rapidly actionable** ways to further refine your mature apprenticeship or bootcamp program:
 
 1. **Expand Specialist Tracks**
-
    - Develop advanced sub-tracks (e.g., HPC, AI/ML, Zero-Trust Security) for participants who excel at foundational cloud skills:
      - Align with vendor specialised training or NCSC/NIST security standards for deeper expertise.
 
 1. **Coordinate Multi-department Bootcamps**
-
    - Collaborate with local councils, NHS, or other government bodies to form a larger talent pool:
      - Shared labs, cross-government hackathons, or combined funding can scale impact.
 
 1. **Ensure Continuous Performance Assessments**
-
    - Conduct formal evaluations 6, 12, or 18 months post-bootcamp:
      - Checking advanced skill adoption, real project outcomes, and personal career growth.
 
 1. **Public Acknowledgment & Advancement**
-
    - Link successful completion to career progression or pay grade enhancements, referencing civil service HR frameworks or [GOV.UK’s capability frameworks](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework).
 
 1. **Incorporate Cost-Savings and ROI Proof**

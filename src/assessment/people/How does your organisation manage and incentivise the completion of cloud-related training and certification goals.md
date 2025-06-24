@@ -1,22 +1,20 @@
 ---
-title: How does your organisation manage and incentivise the completion of cloud-related training and certification goals?
+title: How does your organisation support cloud training and certification?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **No Formal Training Support:** There is no formal support for certification or training, nor are any specific goals or targets defined for employee development in cloud skills.
+### There is no formal support or plan for cloud training.
 
 #### **How to determine if this good enough**
 
 If your organisation has no structured approach to cloud training—leaving staff to self-educate without guidance or incentives—it might be "good enough" if:
 
 1. **Minimal Cloud Adoption**
-
    - Cloud usage is negligible, so advanced training isn’t yet critical to daily operations.
 
 1. **Tight Budget or Staffing Constraints**
-
    - Leadership is unable or unwilling to allocate resources for training, preferring ad-hoc learning.
 
 1. **No Immediate Compliance Demands**
@@ -29,12 +27,10 @@ However, ignoring staff development can lead to skill gaps, security vulnerabili
 Below are **rapidly actionable** steps to introduce at least a minimal structure for cloud-related training:
 
 1. **Create a Basic Cloud Skills Inventory**
-
    - Ask staff to self-report familiarity with AWS, Azure, GCP, OCI, or relevant frameworks (like DevOps, security, cost management).
    - This inventory helps identify who might need basic or advanced training.
 
 1. **Encourage Free Vendor Resources**
-
    - Point teams to free training modules or documentation:
      - [AWS Skill Builder free courses, AWS Documentation, AWS YouTube channel](https://aws.amazon.com/training/learning-paths/)
      - [Microsoft Learn for Azure fundamentals, or free online sessions](https://docs.microsoft.com/en-us/learn/azure/)
@@ -43,12 +39,10 @@ Below are **rapidly actionable** steps to introduce at least a minimal structure
      - [IBM Cloud free training](https://www.ibm.com/think/insights/get-ready-for-change-with-ibm-cloud-training?mhsrc=ibmsearch_a&mhq=cloud%20training)
 
 1. **Sponsor One-Off Training Sessions**
-
    - If resources are extremely limited, schedule a short internal knowledge-sharing day:
      - For instance, have a staff member who learned AWS best practices do a 1-hour teach-in for colleagues.
 
 1. **Reference GOV.UK and NCSC Guidelines**
-
    - For developing staff skills in public sector contexts, see:
      - [GOV.UK’s capability frameworks for digital, data, and technology roles](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework)
      - [NCSC’s general advice on building secure teams and skill sets](https://www.ncsc.gov.uk/)
@@ -58,18 +52,16 @@ Below are **rapidly actionable** steps to introduce at least a minimal structure
 
 By initiating a simple skills inventory, directing staff to free resources, hosting internal sessions, and referencing official guidance, you plant the seeds for more structured, formalised cloud training down the line.
 
-### **Managerial Discretion on Training:** Training and certifications are supported at the discretion of individual managers. Team-level training goals are set but not consistently monitored or reported.
+### Training is up to each manager and not tracked.
 
 #### **How to determine if this good enough**
 
 When some managers actively encourage or fund cloud training while others do not, you might consider it "good enough" if:
 
 1. **Decentralised Teams**
-
    - Each team’s manager sets development priorities, leading to variability but still some access to training budgets.
 
 1. **Moderate Demand**
-
    - Some staff are obtaining certifications or improved knowledge, though there’s no overarching organisational push for uniform cloud competencies.
 
 1. **Acceptable Skills Coverage**
@@ -82,22 +74,18 @@ Yet, inconsistency can result in some teams lagging behind, risking security or 
 Below are **rapidly actionable** steps to unify manager-led training into a more consistent approach:
 
 1. **Set Organisation-Wide Cloud Skill Standards**
-
    - e.g., requiring at least one fundamental certification per dev/ops staff, referencing [AWS Certified Cloud Practitioner](https://aws.amazon.com/certification/certified-cloud-practitioner/), [Azure Fundamentals](https://learn.microsoft.com/en-us/certifications/azure-fundamentals/), [GCP Cloud Digital Leader](https://cloud.google.com/certification/cloud-digital-leader), or [OCI Foundations](https://www.oracle.com/cloud/free/oci-training/).
    - This ensures a baseline competence across all teams.
 
 1. **Track Training Efforts Centrally**
-
    - Even if managers sponsor training, request monthly or quarterly updates from each manager:
      - Summaries of who took which courses, certifications earned, or next steps.
 
 1. **Provide a Shared Training Budget or Resource Pool**
-
    - Instead of leaving it entirely to managers, allocate a central fund for cloud courses or exam vouchers.
    - Teams can draw from it with minimal bureaucracy, ensuring equity.
 
 1. **Host Cross-Team Training Days**
-
    - Let managers co-sponsor internal "training day sprints," where staff from different teams pair up for labs or workshops:
      - Possibly invite vendor solution architects for a half-day session on cost optimisation or serverless.
 
@@ -107,18 +95,16 @@ Below are **rapidly actionable** steps to unify manager-led training into a more
 
 By defining organisation-wide skill baselines, tracking training across teams, offering a shared budget, and running cross-team training events, you build a more equitable and cohesive approach—improving consistency in cloud competence.
 
-### **Corporate-Level Training Support and Tracking:** Training and certifications are strongly supported with allocated budgets and managerial encouragement. Team-level training goals are consistently defined, tracked, and reported at the corporate level.
+### Training is supported, tracked, and reported for all teams.
 
 #### **How to determine if this good enough**
 
 Your organisation invests in cloud training at a corporate level, providing funds and tracking progress. You might consider it "good enough" if:
 
 1. **Clear Funding & Targets**
-
    - A portion of the budget is allocated for staff to attend vendor courses, exam fees, or relevant conferences.
 
 1. **Consistency Across Departments**
-
    - Each department sets training goals, reports progress, and aligns with overall skill objectives. This ensures no single team lags behind.
 
 1. **Organisational Visibility**
@@ -131,7 +117,6 @@ This robust structure fosters a learning culture, but you can refine it by tailo
 Below are **rapidly actionable** improvements:
 
 1. **Customise Training by Role Path**
-
    - Provide recommended vendor certification journeys for each role (DevOps, Data Engineer, Security Engineer, etc.):
      - [AWS role-based learning paths, e.g., Solutions Architect or Security Specialist](https://aws.amazon.com/training/learning-paths/)
      - [Azure Role-Based Certifications for Developer, Administrator, Security Engineer, etc.](https://learn.microsoft.com/en-us/certifications/azure-fundamentals/)
@@ -139,17 +124,14 @@ Below are **rapidly actionable** improvements:
      - [OCI certifications for Architect, Developer, Data Management, etc.](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Incorporate Regular Skills Audits**
-
    - Each quarter or half-year, staff update training statuses and new certifications.
    - Identify areas for further focus, e.g., advanced security or HPC skills.
 
 1. **Implement Gamified Recognition**
-
    - e.g., awarding digital badges or points for completing specific labs or passing certifications:
      - Ties in with internal comms celebrating achievements, boosting morale.
 
 1. **Align Training with Security & Cost Goals**
-
    - For instance, if cost optimisation is a priority, encourage staff to take relevant vendor cost management courses.
    - If advanced security is crucial, highlight vendor security specialty paths.
 
@@ -159,18 +141,16 @@ Below are **rapidly actionable** improvements:
 
 By mapping certifications to roles, regularly auditing skills, gamifying recognition, and aligning training with strategic objectives, you embed continuous cloud skill growth into your corporate culture—ensuring sustained readiness and compliance.
 
-### **Role-Based Training Recommendations and Self-Assessment:** Relevant certifications are recommended based on specific roles and incorporated into personal development plans. Employees are encouraged to self-assess their progress against role-specific and team-level goals.
+### Training is linked to each person’s role and development plan. People check their own progress.
 
 #### **How to determine if this good enough**
 
 In this scenario, training is not only supported at a corporate level, but also each role has a defined skill progression, and staff regularly measure themselves. You might consider it "good enough" if:
 
 1. **Strong Ownership of Growth**
-
    - Employees see a clear path: e.g., from Cloud Practitioner to Solutions Architect Professional or from DevOps Associate to Security Specialist.
 
 1. **Regular Reflection**
-
    - Staff hold self-assessment sessions (quarterly or semi-annually) to gauge progress and plan next certifications.
 
 1. **Alignment with Team & Organisational Goals**
@@ -183,23 +163,19 @@ If your approach fosters a culture of self-driven learning supported by structur
 Below are **rapidly actionable** ways to refine role-based training and self-assessment:
 
 1. **Integrate Self-Assessments into Performance Reviews**
-
    - Encourage staff to reference role-based metrics during appraisals:
      - e.g., "Achieved AWS Solutions Architect – Associate, aiming for Azure Security Engineer next."
    - Ties personal development to formal performance frameworks.
 
 1. **Provide "Skill Depth" Options**
-
    - Some staff may prefer broad multi-cloud knowledge, while others want deep specialisation in a single vendor:
      - e.g., a "multi-cloud track" vs. "AWS advanced track" approach.
 
 1. **Enable Peer Mentoring**
-
    - Pair junior staff who want a certain certification with an experienced internal mentor or sponsor.
    - Encourages knowledge sharing, reinforcing your training culture.
 
 1. **Automate Role-Based Onboarding**
-
    - New hires get automatically assigned recommended learning modules or labs:
      - e.g., AWS Qwiklabs, Azure Hands-on Labs, GCP Quick Labs, or OCI hands-on labs that match their role.
 
@@ -208,22 +184,19 @@ Below are **rapidly actionable** ways to refine role-based training and self-ass
 
 By linking self-assessments to performance, diversifying skill tracks, enabling peer mentoring, and automating onboarding processes, you create a fully integrated environment where each role’s learning path is clear, self-directed, and aligned to organisational needs.
 
-### **Incentivised and Assessed Training Programs:** Employees completing certifications are rewarded with merit incentives and receive structured guidance and development plans. Periodic formal role-specific assessments are conducted, with achievements recognised through systems like GovUKCloudBadges.
+### People get rewards for completing training. Progress is checked and achievements recognised.
 
 #### **How to determine if this good enough**
 
 At this top level, your organisation not only maps roles to training paths but also actively rewards certifications, publicises achievements, and ensures ongoing development. You might consider it "good enough" if:
 
 1. **Formal Recognition & Incentives**
-
    - Staff see a direct benefit (financial or career progression) upon earning relevant certs or completing advanced training.
 
 1. **Regular Assessments**
-
    - Beyond self-assessment, formal checks (e.g., exam simulations or performance evaluations) confirm skill proficiency.
 
 1. **Public Acknowledgment**
-
    - Achievements are recognised across teams or even externally (e.g., internal newsletters, [GovUKCloudBadges-like digital badges], vendor’s success stories).
 
 1. **Continuous Evolution**
@@ -236,21 +209,17 @@ Even so, you can push further by connecting training outcomes directly to advanc
 Below are **rapidly actionable** suggestions to perfect an incentivised and assessed training program:
 
 1. **Tie Certifications to Mastery Projects**
-
    - In addition to passing exams, employees might complete real, in-house projects demonstrating they can apply those skills:
      - e.g., building a pilot serverless application or implementing end-to-end security logging using NCSC best practices.
 
 1. **Organise Internal "Training Sprints" or Hackathons**
-
    - e.g., a week-long challenge where staff pursue advanced certification labs together, culminating in recognition or prises.
 
 1. **Reward Mentors**
-
    - If staff help others achieve certifications, consider awarding them additional recognition or digital badges:
      - Encourages a culture of mentorship and upskilling.
 
 1. **Set Up Cross-Government Partnerships**
-
    - Share your approach with other public sector bodies, possibly hosting inter-department training events:
      - Align with [GOV.UK community approaches to digital and data capability building](https://www.gov.uk/government/collections/digital-data-and-technology-profession-capability-framework).
 
