@@ -1,22 +1,20 @@
 ---
-title: How does your organisation authenticate and manage non-human service accounts?
+title: How do you manage accounts used by software, not people?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Basic User/Pass Credentials:** Non-human service accounts are managed using basic ID/secret pair credentials, with a user/password approach.
+### We use basic usernames and passwords.
 
 #### **How to determine if this good enough**
 
 In this scenario, your organisation creates standard user accounts (with a username/password) for services or scripts to authenticate within the cloud environment. It might be "good enough" if:
 
 1. **Minimal Cloud Usage**
-
    - Only a few workloads exist, and they don’t require advanced identity/access management or rigorous security controls.
 
 1. **Low-Risk Services**
-
    - The data or resources accessed by these service accounts do not involve sensitive citizen data or mission-critical infrastructure.
 
 1. **No Internal Skill for Advanced Approaches**
@@ -29,7 +27,6 @@ However, user/password-based credentials can be easily leaked or shared, risking
 Below are **rapidly actionable** steps to enhance service account security beyond basic user/pass credentials:
 
 1. **Use Cloud-Native IAM for Service Accounts**
-
    - Instead of creating user credentials, define service accounts with least privilege:
      - [AWS IAM roles or AWS STS tokens for services](https://aws.amazon.com/iam/features/sts/)
      - [Azure Managed Identities for Azure resources](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)
@@ -37,7 +34,6 @@ Below are **rapidly actionable** steps to enhance service account security beyon
      - [OCI Dynamic Groups and instance principals for service-level authentication](https://www.oracle.com/cloud/free/oci-training/)
 
 1. **Adopt a Central Secret Manager**
-
    - Store credentials securely in:
      - [AWS Secrets Manager or AWS SSM Parameter Store](https://aws.amazon.com/secrets-manager/)
      - [Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/overview)
@@ -46,12 +42,10 @@ Below are **rapidly actionable** steps to enhance service account security beyon
    - Reduces plaintext password usage, enabling future rotation.
 
 1. **Automate Rotation**
-
    - If you must keep user/pass-based secrets temporarily, implement at least monthly or quarterly rotations:
      - Minimises window of exposure if leaked.
 
 1. **Reference NCSC & NIST**
-
    - Follow [NCSC’s Identity and Access Management principles](https://www.ncsc.gov.uk/) or [NIST SP 800-53 Access Controls (AC-3, AC-6, etc.)](https://csrc.nist.gov/).
    - Ensures alignment with recommended identity hygiene.
 
@@ -60,18 +54,16 @@ Below are **rapidly actionable** steps to enhance service account security beyon
 
 By employing a secure secret manager, rotating basic credentials, and gradually moving to role-based or short-lived tokens, you significantly reduce the risk associated with static user/password pairs for service accounts.
 
-### **API Key Usage:** Non-human service accounts are authenticated using API keys, which are less dynamic and might have longer lifespans.
+### We use API keys that don’t change often.
 
 #### **How to determine if this good enough**
 
 If your service accounts rely on API keys for authentication—commonly found in scripts or CI/CD jobs—this might be acceptable if:
 
 1. **Limited Attack Surface**
-
    - The system is small-scale, and your keys do not provide broad or highly privileged access.
 
 1. **Reasonable Operational Constraints**
-
    - You only occasionally manage these keys, storing them in private repos or basic secret storage.
 
 1. **No Strict Security/Compliance Mandates**
@@ -84,22 +76,18 @@ However, API keys can be compromised if not rotated or stored carefully. [NCSC�
 Below are **rapidly actionable** ways to move beyond static API keys:
 
 1. **Store Keys in a Central Secret Manager**
-
    - e.g., [AWS Secrets Manager or AWS SSM Parameter Store with encryption](https://aws.amazon.com/secrets-manager/), [Azure Key Vault with RBAC controls](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide), [GCP Secret Manager with IAM-based access](https://cloud.google.com/secret-manager), [OCI Vault with KMS encryption](https://www.oracle.com/cloud/free/oci-training/).
    - Avoid embedding keys in code or config files.
 
 1. **Automate API Key Rotation**
-
    - Implement a rotation schedule (e.g., monthly or quarterly) or on every deployment:
      - Reduces the window if a key is leaked.
 
 1. **Consider IAM Role or Token-Based Alternatives**
-
    - Where possible, use short-lived tokens or ephemeral credentials to reduce static API key usage:
      - e.g., [AWS IAM roles with STS](https://aws.amazon.com/iam/features/sts/), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP Service Accounts short-lived tokens](https://cloud.google.com/iam/docs/service-accounts), [OCI dynamic groups/tokens](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Limit Scopes**
-
    - If you must rely on an API key, ensure it has the narrowest possible permissions, referencing [NCSC’s least-privilege principle](https://www.ncsc.gov.uk/).
 
 1. **Log & Alert on Key Usage**
@@ -108,18 +96,16 @@ Below are **rapidly actionable** ways to move beyond static API keys:
 
 By centrally managing keys, rotating them automatically, transitioning to role-based or token-based credentials, enforcing least privilege, and auditing usage, you substantially reduce the security risk associated with static API keys.
 
-### **Centralised Secret Store with Some Credential Rotation:** A central secret store is in place, possibly supporting automated rotation of credentials for some systems, enhancing security and management efficiency.
+### We use a central place to store secrets and sometimes rotate them.
 
 #### **How to determine if this good enough**
 
 Your organisation employs a central solution (like AWS Secrets Manager, Azure Key Vault, GCP Secret Manager, or OCI Vault) to hold service account credentials. Some credentials rotate automatically, while others might still be static. This might be "good enough" if:
 
 1. **Enhanced Security Posture**
-
    - You have significantly reduced the chance of plain-text credentials being lost or shared in code repos.
 
 1. **Operational Efficiency**
-
    - Teams no longer manage credentials ad hoc. The secret store offers a single source for retrieving keys, tokens, or passwords.
 
 1. **Some Automated Rotation**
@@ -132,22 +118,18 @@ To further strengthen security, you could expand rotation across all credentials
 Below are **rapidly actionable** ways to refine a centralised secret store with partial rotation:
 
 1. **Extend Rotation to All or Most Credentials**
-
    - If some are still static, define a plan for each credential’s rotation frequency:
      - e.g., monthly or upon every production deployment.
 
 1. **Build Automated Pipelines**
-
    - Integrate secret retrieval or rotation scripts into your CI/CD:
      - e.g., [AWS CodePipeline retrieving from Secrets Manager](https://aws.amazon.com/codepipeline/), [Azure DevOps tasks pulling from Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/general/key-vault-overview), [GCP Cloud Build with Secret Manager](https://cloud.google.com/build/docs/container-scanning), [OCI DevOps pipeline with Vault integration](https://www.oracle.com/cloud/free/oci-training/).
 
 1. **Enforce Access Policies**
-
    - Use [AWS IAM policies](https://aws.amazon.com/iam/features/), [Azure RBAC](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview), [GCP IAM](https://cloud.google.com/iam/docs/overview), [OCI compartments](https://www.oracle.com/cloud/free/oci-training/) to strictly control who can read, update, or rotate secrets.
    - Reference [NCSC’s least-privilege principle for secret operations](https://www.ncsc.gov.uk/).
 
 1. **Combine with Role-Based Authentication**
-
    - Shift away from credential-based if possible, using ephemeral roles or instance-based authentication for certain services:
      - e.g., [AWS STS assume-role approach](https://aws.amazon.com/iam/features/sts/), [Azure Managed Identities](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview), [GCP service account short-lived tokens](https://cloud.google.com/iam/docs/service-accounts), [OCI dynamic groups/tokens](https://www.oracle.com/cloud/free/oci-training/).
 
@@ -157,18 +139,16 @@ Below are **rapidly actionable** ways to refine a centralised secret store with 
 
 By expanding automated rotation, integrating secret retrieval into pipelines, enforcing tight access controls, adopting role-based methods for new services, and cleaning stale secrets, you further strengthen your centralised secret store approach for secure, efficient credential management.
 
-### **Mutual TLS for Authentication:** Mutual Transport Layer Security (mTLS) is used for non-human service accounts, providing a more secure, certificate-based authentication method.
+### We use certificates (mutual TLS) for secure connections.
 
 #### **How to determine if this good enough**
 
 Your organisation deploys mutual TLS (mTLS)—each service has a certificate, and the server also presents a certificate to the client, ensuring bidirectional trust. This may be "good enough" if:
 
 1. **Secure End-to-End**
-
    - Services handle particularly sensitive data (e.g., health records, citizen data) requiring robust authentication.
 
 1. **Compliance with Zero-Trust or Strict Policies**
-
    - mTLS aligns with [NCSC zero-trust architecture principles](https://www.ncsc.gov.uk/) and [NIST SP 800-207 zero trust frameworks](https://csrc.nist.gov/).
 
 1. **Operational Maturity**
@@ -181,22 +161,18 @@ However, implementing mTLS can be complex, requiring thorough certificate lifecy
 Below are **rapidly actionable** ways to improve your mTLS-based authentication approach:
 
 1. **Short-Lived Certificates**
-
    - Automate certificate issuance and renewal:
      - e.g., [AWS Private CA with automated renewal](https://aws.amazon.com/privateca/), [Azure Key Vault certificates](https://learn.microsoft.com/en-us/azure/key-vault/certificates/about-certificates), [GCP Certificate Authority Service](https://cloud.google.com/certificate-authority-service), [OCI Certificates service](https://www.oracle.com/cloud/free/oci-training/).
    - Minimises risk if a certificate is compromised.
 
 1. **Adopt a Service Mesh**
-
    - If using microservices in Kubernetes, incorporate [Istio, Linkerd, or AWS App Mesh, Azure Service Mesh, GCP Anthos Service Mesh, OCI OKE integrated mesh] to handle mTLS automatically:
      - Enforces consistent policies across services.
 
 1. **Implement Strict Certificate Policies**
-
    - E.g., no wildcard certs for internal services, clear naming or SAN usage, referencing [NCSC certificate issuance best practices](https://www.ncsc.gov.uk/).
 
 1. **Monitor for Expiry and Potential Compromises**
-
    - Track certificate expiry dates, set alerts well in advance.
    - Log all handshake errors in [AWS CloudWatch](https://aws.amazon.com/cloudwatch/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [GCP Logging](https://cloud.google.com/logging), [OCI Logging](https://www.oracle.com/cloud/free/oci-training/) to detect potential mismatches or malicious attempts.
 
@@ -206,18 +182,16 @@ Below are **rapidly actionable** ways to improve your mTLS-based authentication 
 
 By employing short-lived certs, possibly using a service mesh, establishing strict certificate policies, continuously monitoring usage, and optionally layering further IAM or token checks, you maximise the security benefits of mTLS for your service accounts.
 
-### **Short-Lived, Federated Identities with Strong Verification:** Non-human service accounts use short-lived, federated identities that are strongly verifiable and validated with each request, ensuring a high level of security and minimising the risk of credential misuse.
+### We use short-lived, strongly checked identities that change for each use.
 
 #### **How to determine if this good enough**
 
 Your approach for non-human accounts employs ephemeral tokens or federated identity solutions—limiting each credential’s lifespan and ensuring each request is securely verified. You might see it "good enough" if:
 
 1. **Zero Standing Privileges**
-
    - No permanent credentials exist. Each service obtains a short-lived token or identity just before usage.
 
 1. **Granular, Real-Time Validation**
-
    - Policies and claims are checked with each or frequent requests, reflecting advanced zero-trust models recommended by [NCSC or NIST zero-trust frameworks](https://csrc.nist.gov/).
 
 1. **High Assurance of Security**
@@ -230,19 +204,15 @@ Though highly advanced, you might further optimise performance, adopt specialise
 Even at this top level, below are **rapidly actionable** refinements:
 
 1. **Leverage Vendor Identity Federation Tools**
-
    - e.g., [AWS IAM roles with Web Identity Federation or AWS Secure Token Service, Azure AD token issuance, GCP IAM federation, OCI Identity Federation with IDCS], ensuring minimal friction for ephemeral tokens.
 
 1. **Integrate Policy-as-Code**
-
    - Tools like [Open Policy Agent or vendor policy engines (AWS SCP, Azure Policy, GCP Organisation Policy, OCI Security Zones)] can dynamically evaluate each identity request in real time.
 
 1. **Adopt Service Mesh with Dynamic Identity**
-
    - In container or microservice architectures, pair ephemeral identity with a service mesh that injects secure tokens automatically.
 
 1. **Continuously Audit and Analyze Logs**
-
    - Check usage patterns: any suspicious repeated token fetch or abnormal expansions of privileges.
    - Tools like [AWS CloudWatch Logs](https://aws.amazon.com/cloudwatch/), [Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/overview), [GCP Logging](https://cloud.google.com/logging), [OCI Monitoring + ML-based anomaly detection](https://www.oracle.com/cloud/free/oci-training/) can highlight anomalies.
 
