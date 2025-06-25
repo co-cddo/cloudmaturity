@@ -1,11 +1,11 @@
 ---
-title: How does your organisation manage risks?
+title: How do you manage risks?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Basic and Informal Risk Management:** Risk management is carried out in a basic and informal manner, often relying on individual judgement without structured processes.
+### Informally, by individuals.
 
 #### **How to determine if this good enough**
 
@@ -53,7 +53,7 @@ Below are **rapidly actionable** steps to improve from an informal approach:
 
 By establishing a simple risk checklist, scheduling short reviews, assigning ownership, adopting basic scoring, and outlining a plan for incremental improvements, you quickly move from purely informal approaches to a more recognisable and consistent risk management foundation.
 
-### **Ad-Hoc Spreadsheets for Risk Tracking:** Risks are tracked using ad-hoc spreadsheets at the project or program level, without a standardised or centralised system.
+### Tracked in spreadsheets by each team.
 
 #### **How to determine if this good enough**
 
@@ -101,7 +101,7 @@ Below are **rapidly actionable** improvements:
 
 By adopting a consistent template, hosting cross-project reviews, summarising top risks in an organisational-level register, using a shared tool or repository, and partly automating detection of cloud security concerns, you advance from ad-hoc spreadsheets to a more coordinated approach.
 
-### **Formalised Risk Registers with Periodic Reviews:** Formal risk registers are maintained for projects or programs, with risks reviewed and updated on a periodic basis.
+### Teams keep risk registers, which they review and update.
 
 #### **How to determine if this good enough**
 
@@ -151,7 +151,7 @@ Below are **rapidly actionable** ways to expand your formal risk register proces
 
 By setting up real-time triggers for new risks, visualising risk reduction, considering GRC tooling, linking mitigation to budgets, and classifying cloud-specific risk areas, you reinforce a structured risk registry that handles dynamic and evolving threats efficiently.
 
-### **Integrated Risk Management with Central Oversight:** A centralised risk management system is used, integrating risks from various projects or programs, with regular updates and reviews.
+### We have a central risk system, which we review and update.
 
 #### **How to determine if this good enough**
 
@@ -199,7 +199,7 @@ Below are **rapidly actionable** ways to optimise integrated, centrally overseen
 
 By integrating real-time cloud telemetry into your central risk system, offering advanced dashboards, applying specialised scoring for cloud contexts, setting formal risk responses, and cross-collaborating among agencies, you achieve deeper, more proactive risk management.
 
-### **Advanced Risk Management Tool with Proactive Escalation:** A shared, advanced risk management tool is in place, allowing for tracking and managing risks across multiple projects or programs. This system supports informed prioritisation and proactively escalates unacceptable risks.
+### We use an advanced risk tool for all teams, which helps us spot and escalate risks.
 
 #### **How to determine if this good enough**
 

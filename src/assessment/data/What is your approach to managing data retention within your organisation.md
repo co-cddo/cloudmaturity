@@ -1,11 +1,11 @@
 ---
-title: What is your approach to managing data retention within your organisation?
+title: What is your approach to data retention?
 tags: data
 eleventyNavigation:
   parent: data
 ---
 
-### **Organisation-Level Policy Awareness:** Data retention policies are defined at the organisation level, and all projects/programs are aware of their specific responsibilities.
+### We have policies and everyone knows them.
 
 #### **How to determine if this good enough**
 
@@ -76,7 +76,7 @@ Below are **rapidly actionable** steps to strengthen your organisational policy 
 
 By proactively mapping retention policies to actual data, implementing simple lifecycle rules, and guiding teams with clear, scenario-based instructions, you reinforce "Organisation-Level Policy Awareness" with tangible, enforceable practices.
 
-### **Compliance Attestation by Projects:** Projects and programs are not only aware but also required to formally attest their compliance with the data retention policies.
+### Teams must show they follow our policies.
 
 #### **How to determine if this good enough**
 
@@ -137,7 +137,7 @@ Below are **rapidly actionable** ways to ensure attestations translate to real a
 
 By coupling attestation with actual configuration checks, spot audits, centralised documentation, and relevant training, you boost confidence that claims of compliance match reality.
 
-### **Regular Audits and Reviews:** Data retention practices are periodically audited and reviewed for compliance, with findings addressed through action plans.
+### We check that we're following policy and fix any problems we find.
 
 #### **How to determine if this good enough**
 
@@ -198,7 +198,7 @@ Below are **rapidly actionable** ways to strengthen your audit and review proces
 
 By automating aspects of the review process, embedding retention checks into security tools, and systematically remediating findings, you evolve from static cyclical audits to a dynamic, ongoing compliance posture.
 
-### **Inclusion in Risk Management:** Edge cases and exceptions in data retention are specifically identified and managed within the organisation’s risk register.
+### We follow policy, make checks and record exceptions in a central risk register.
 
 #### **How to determine if this good enough**
 
@@ -251,7 +251,6 @@ Below are **rapidly actionable** ways to embed retention exceptions deeper into 
      - If it’s no longer needed, remove it and revert to standard retention policies.
 
 1. **Leverage Encryption or Extra Security for Exceptions**
-
    - If data must be stored longer than usual, apply enhanced controls:
      - [AWS KMS key with restricted access, or Amazon Macie scanning for extra sensitive data](https://docs.aws.amazon.com/kms/latest/developerguide/overview.html)
      - [Azure Key Vault for encryption at rest, or Microsoft Defender for Cloud continuous monitoring](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-key-vault-introduction)
@@ -260,7 +259,7 @@ Below are **rapidly actionable** ways to embed retention exceptions deeper into 
 
 By systematically capturing exceptions as risks, labeling them in cloud resources, setting expiry dates, and ensuring periodic review, your exceptions process remains controlled rather than a loophole. This approach mitigates the dangers of indefinite data hoarding and supports robust risk governance.
 
-### **Automated Enforcement with Cloud Tools:** Data retention is actively monitored and enforced using native cloud services and tools, ensuring adherence to policies through automation.
+### We follow policy and use automated cloud tools to check that we do.
 
 #### **How to determine if this good enough**
 

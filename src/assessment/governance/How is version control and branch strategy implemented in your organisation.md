@@ -1,11 +1,11 @@
 ---
-title: How is version control and branch strategy implemented in your organisation?
+title: How do you use version control and branch strategies?
 tags: governance
 eleventyNavigation:
   parent: governance
 ---
 
-### **Limited Version Control Usage:** Version control is used minimally, indicating a lack of robust processes for managing code changes and history.
+### There is very little use of version control.
 
 #### **How to determine if this good enough**
 
@@ -53,7 +53,7 @@ Below are **rapidly actionable** next steps:
 
 By using a modern Git-based platform, ensuring all changes result in commits, documenting a minimal workflow, tagging key releases, and scheduling a shift to a recognised branching strategy, you quickly move from minimal version control to a more robust approach that supports collaboration and security needs.
 
-### **Custom, Unconventional Branch Strategy:** An invented branch strategy is in use, not aligning with standard methodologies and potentially leading to confusion or inefficiencies.
+### We have our own way of managing branches, not standard methods.
 
 #### **How to determine if this good enough**
 
@@ -99,7 +99,7 @@ Below are **rapidly actionable** methods to move from a custom approach to a sta
 
 By comparing your custom model to standard flows, documenting a cross-reference, simplifying branch use, providing a quick reference, and trialing a standard approach on a new project, you reduce complexity and align with recognised best practices.
 
-### **Adapted Recognised Branch Strategy:** The organisation adapts a recognised branch strategy (like GitFlow or GitHubFlow), tailoring it to specific needs while maintaining some standard practices.
+### We use a recognised strategy (like GitFlow or GitHubFlow), with changes to better suit us.
 
 #### **How to determine if this good enough**
 
@@ -147,7 +147,7 @@ Below are **rapidly actionable** improvements:
 
 By documenting your adaptations clearly, removing unused branches, adding CI/CD hooks for every branch commit, onboarding new developers, and evaluating simpler flows for future projects, you ensure your branch strategy remains practical and efficient.
 
-### **Textbook Implementation of a recognised branch strategy:** The organisation adheres strictly to a model such as GitFlow, a recognised branch strategy suitable for managing complex development processes.
+### We follow a recognised strategy suited to complex projects (such as GitFlow).
 
 #### **How to determine if this good enough**
 
@@ -194,7 +194,7 @@ Below are **rapidly actionable** ways to optimise a textbook GitFlow-like approa
 
 By automating merges, controlling branch sprawl, embedding security checks into every branch, documenting rarely used branches, and regularly re-evaluating your overall branching structure, you keep your textbook GitFlow or similar approach practical and effective.
 
-### **Textbook Implementation of a streamlined branch strategy:** The organisation follows a streamlined branch strategy ideal for continuous delivery and simplified collaboration such as GitHubFlow precisely.
+### We follow a recognised strategy suited to continuous delivery and simplified collaboration (such as GitHubFlow).
 
 #### **How to determine if this good enough**
 

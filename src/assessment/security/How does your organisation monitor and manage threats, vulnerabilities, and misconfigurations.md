@@ -1,11 +1,11 @@
 ---
-title: How does your organisation monitor and manage threats, vulnerabilities, and misconfigurations?
+title: How do you find and fix security problems, vulnerabilities, and misconfigurations?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **No Vulnerability Management:** It is not clear to a member of the public how they can report vulnerabilities in your systems.
+### There is no clear way for people to report problems.
 
 #### **How to determine if this good enough**
 
@@ -50,7 +50,7 @@ Below are **rapidly actionable** steps to implement basic vulnerability reportin
 
 By defining a minimal disclosure policy, setting up a dedicated channel, creating an acknowledgment workflow, involving leadership awareness, and planning for future expansions, you shift from no vulnerability management to a more transparent and open approach that encourages safe vulnerability reporting.
 
-### **Open Policy or Participation in Responsible Disclosure Platforms:** Clear instructions for responsible vulnerability disclosure are published, with a commitment to prompt response upon receiving reports, you may also have active participation in well-known responsible disclosure platforms to facilitate external reporting of vulnerabilities.
+### We publish how to report problems and respond quickly. We may use public reporting platforms.
 
 #### **How to determine if this good enough**
 
@@ -96,7 +96,7 @@ Below are **rapidly actionable** ways to evolve beyond a standard disclosure pol
 
 By defining clear internal SLAs, integrating vulnerability disclosures into dev workflows, offering small acknowledgments or bounties, releasing summary fix timelines, and coupling with continuous scanning tools, you can both refine external disclosure processes and ensure robust internal vulnerability management.
 
-### **Automated Scanning and Regular Assessments:** Implementation of automated tools for scanning vulnerabilities and misconfigurations, combined with regular security assessments.
+### We use automated tools to scan for problems and do regular checks.
 
 #### **How to determine if this good enough**
 
@@ -143,7 +143,7 @@ Below are **rapidly actionable** ways to enhance scanning and regular assessment
 
 By broadening scanning layers, shifting to more frequent scans, integrating results in a SIEM, risk-scoring discovered issues, and creating departmental security scorecards, you refine a robust automated scanning regimen that swiftly addresses vulnerabilities.
 
-### **Proactive Threat Hunting and Incident Response:** Proactive threat hunting practices are in place. Incident response teams rapidly address identified threats and vulnerabilities, with some degree of automation in responses.
+### We hunt for threats and respond quickly, with some automation.
 
 #### **How to determine if this good enough**
 
@@ -191,7 +191,7 @@ Below are **rapidly actionable** methods to refine proactive threat hunting and 
 
 By introducing purple teaming, automating quarantine procedures, ensuring forensic readiness, collaborating on threat intel across agencies, and adopting zero-trust microsegmentation, you deepen your proactive stance and expedite incident responses.
 
-### **Comprehensive Security Operations with Red/Purple Teams:** Utilisation of red teams (offensive security) and purple teams (combined offensive and defensive) for a full-spectrum security assessment. An empowered Security Operations Center (SOC) conducts at least annual and major change-based IT Health Checks (ITHC). Analysts prioritise and coordinate remediation of high-severity issues, with many mitigation actions automated and event-triggered.
+### We use red and purple teams to test security. A central team checks and fixes issues, with many actions automated.
 
 #### **How to determine if this good enough**
 

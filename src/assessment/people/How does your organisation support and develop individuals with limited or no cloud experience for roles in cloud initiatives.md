@@ -1,11 +1,11 @@
 ---
-title: How does your organisation support and develop individuals with limited or no cloud experience for roles in cloud initiatives?
+title: How do you help staff with little or no cloud experience move into cloud roles?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **No Specific Development Path:** There is no special accommodation or development path for individuals with limited or no cloud experience.
+### We don't plan for this.
 
 #### **How to determine if this good enough**
 
@@ -57,7 +57,7 @@ Below are **rapidly actionable** ways to establish a baseline development path f
 
 By assembling free training resources, sponsoring small incentives, and facilitating internal shadowing or mini pilots, you kickstart a foundational path for employees to begin acquiring cloud knowledge in a low-cost, organic way.
 
-### **Basic On-the-Job Training:** Individuals with limited cloud experience are provided basic on-the-job training to help them adapt to cloud-related tasks.
+### We give basic on-the-job training.
 
 #### **How to determine if this good enough**
 
@@ -105,7 +105,7 @@ Below are **rapidly actionable** ways to strengthen basic on-the-job cloud train
 
 By structuring mentorship roles, ensuring novices participate in real tasks, tracking essential skills, adding lab-based self-study, and giving recognition, you can rapidly accelerate staff readiness and consistency in cloud ops.
 
-### **Structured Training and Mentorship Programs:** The organisation offers structured training programs, including mentorship and peer learning, to develop cloud skills among employees with limited cloud experience.
+### We have training and mentoring programmes.
 
 #### **How to determine if this good enough**
 
@@ -154,7 +154,7 @@ Below are **rapidly actionable** ways to enhance structured training/mentorship:
 
 By defining clear cloud learning journeys, leveraging vendor training, scheduling dedicated study time, embedding real projects in the curriculum, and publicly recognising accomplishments, you foster a thriving environment for upskilling staff in cloud technologies.
 
-### **Integrated Learning and Development Initiatives:** Comprehensive learning initiatives, such as in-house training courses or collaborations with external training providers, are in place to up-skill employees in cloud technologies.
+### We offer in-house or external training to build cloud skills.
 
 #### **How to determine if this good enough**
 
@@ -203,7 +203,7 @@ Below are **rapidly actionable** tips to refine integrated learning and developm
 
 By implementing apprenticeship or structured bootcamp approaches, organising role-specific learning paths, ensuring leadership buy-in, blending internal and external expertise, and measuring ROI, you develop a truly comprehensive and outcome-driven cloud skill development program.
 
-### **Mature Apprenticeship/Bootcamp Program with Aftercare:** A robust apprenticeship, bootcamp, or career change program exists for rapid skill development in cloud technologies. This program includes significant aftercare support to ensure long-term development and retention of the investment in these individuals.
+### We have apprenticeship, career change and bootcamp programmes, with ongoing support.
 
 #### **How to determine if this good enough**
 

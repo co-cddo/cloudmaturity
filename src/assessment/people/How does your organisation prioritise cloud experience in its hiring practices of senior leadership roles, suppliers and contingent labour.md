@@ -1,11 +1,11 @@
 ---
-title: How does your organisation prioritise cloud experience in its hiring practices of senior/executive/leadership roles, suppliers and contingent labour?
+title: How important is cloud experience when hiring leaders, suppliers, and contractors?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **No Specific Cloud Experience Requirement:** Cloud experience is not a requirement in job postings; candidates are not specifically sought out for their cloud skills.
+### Cloud experience is not required.
 
 #### **How to determine if this good enough**
 
@@ -54,7 +54,7 @@ Below are **rapidly actionable** steps to begin emphasizing cloud skills in hiri
 
 By introducing even minor cloud awareness requirements, providing internal knowledge sharing, referencing official frameworks, and organising small hackathons, you start shifting your hiring practices to future-proof your organisation’s cloud readiness.
 
-### **Selective Requirement for Cloud Experience:** Some job postings, particularly those in relevant areas, require candidates to have prior cloud experience.
+### Some roles ask for cloud experience.
 
 #### **How to determine if this good enough**
 
@@ -103,7 +103,7 @@ Below are **rapidly actionable** improvements:
 
 By adding leadership-level cloud awareness, clarifying role-based cloud criteria, ensuring recruiters or contingent labor providers understand these requirements, and offering internal upskilling, you create a more consistent approach that meets both immediate and long-term organisational needs.
 
-### **Mandatory Cloud Experience for Relevant Roles:** All relevant job postings mandate cloud experience, aligning with the Digital, Data, and Technology (DDaT) role definitions.
+### All relevant roles must have cloud experience.
 
 #### **How to determine if this good enough**
 
@@ -151,7 +151,7 @@ Below are **rapidly actionable** ways to advance beyond simple mandatory require
 
 By routinely revising DDaT role definitions to keep pace with evolving cloud tech, defining competency levels, planning continuity, encouraging multi-cloud knowledge, and securing leadership sponsorship, you firmly embed cloud skill requirements into your organisational DNA.
 
-### **Updated Role Requirements and Cloud-Focused Hiring:** In addition to requiring cloud experience for new hires, existing roles have been reviewed and updated as necessary to reflect a cloud-first IT organisation.
+### We have updated all roles to need cloud skills, not just new hires.
 
 #### **How to determine if this good enough**
 
@@ -196,7 +196,7 @@ Below are **rapidly actionable** methods to keep role definitions agile in a clo
 
 By systematically revalidating roles, offering staff training for on-prem to cloud transitions, linking performance metrics to cloud initiatives, and referencing official frameworks, you future-proof your team structures in a dynamic cloud landscape.
 
-### **Comprehensive Cloud Experience Requirement and Role Adaptation:** All job postings require cloud experience, and every existing role within the organisation has been evaluated and updated where necessary to align with the needs of a cloud-first IT organisation.
+### Every role now needs cloud experience. We have reviewed and updated all roles.
 
 #### **How to determine if this good enough**
 

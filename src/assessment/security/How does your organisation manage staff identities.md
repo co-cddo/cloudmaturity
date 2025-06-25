@@ -1,11 +1,11 @@
 ---
-title: How does your organisation manage staff identities?
+title: How do you manage staff identities?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Independent Identity Management:** Each service manages identities independently, without integration or synchronisation across systems.
+### Each service manages its own identities.
 
 #### **How to determine if this good enough**
 
@@ -52,7 +52,7 @@ Below are **rapidly actionable** steps to move beyond isolated identity manageme
 
 By implementing a small shared ID approach for new services, maintaining an org-wide user inventory, encouraging unique credentials with basic password hygiene, scheduling partial migrations, and publicising quick results, you steadily reduce the complexity and risk of scattered service-specific identities.
 
-### **Basic Centralised Identity System:** There is a centralised system for identity management, but it's not fully integrated across all services.
+### We have a central identity system, but not all services use it.
 
 #### **How to determine if this good enough**
 
@@ -100,7 +100,7 @@ Below are **rapidly actionable** steps to further unify your basic centralised i
 
 By demanding SSO for new apps, migrating top-priority legacy systems, enabling periodic role reviews, enforcing MFA across the board, and setting a timeline for full integration, you reinforce your centralised identity approach and shrink vulnerabilities from leftover local user stores.
 
-### **Integrated Identity Management with Some Exceptions:** Identities are mostly managed through an integrated system, with a few services still operating independently.
+### Most services use our central identity system, but a few don’t.
 
 #### **How to determine if this good enough**
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** ways to incorporate the last few outliers:
 
 By requiring official approval for non-integrated systems, scheduling integration projects, monitoring or sunsetting exceptions, and auditing them in the main identity reviews, you unify identity management and ensure consistent security across all cloud services.
 
-### **Advanced Integrated Identity Management:** A comprehensive system manages identities, integrating most services and applications, with efforts to ensure synchronisation and uniformity.
+### Nearly all services use our central system, and we keep them in sync.
 
 #### **How to determine if this good enough**
 
@@ -196,7 +196,7 @@ Below are **rapidly actionable** ways to enhance advanced integrated identity ma
 
 By implementing zero-trust or risk-based authentication, adopting identity policy-as-code, refining least privilege roles, automating access certifications, and fostering continuous improvements, you advance from a strong integrated identity environment to a cutting-edge, security-first approach aligned with UK public sector best practices.
 
-### **Mandatory Single Source of Identity:** A single source of identity is mandated for all services, with a strict one-to-one mapping of human to identity, ensuring consistency and security across the organisation.
+### Every service uses one identity system, with one identity per person.
 
 #### **How to determine if this good enough**
 

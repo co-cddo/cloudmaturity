@@ -1,11 +1,11 @@
 ---
-title: How does your organisation mitigate risks associated with privileged internal threat actors?
+title: How do you reduce the risk from staff with high-level access?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Vetting of Privileged Users:** All users with privileged access undergo thorough internal vetting (Internal/UKSV) or are vetted according to supplier/contractual requirements.
+### We vet all staff with high-level access.
 
 #### **How to determine if this good enough**
 
@@ -52,7 +52,7 @@ Below are **rapidly actionable** steps to bolster security beyond mere user vett
 
 By reinforcing least privilege, requiring MFA for admins, introducing break-glass accounts, logging privileged actions immutably, and scheduling re-vetting cycles, you address the limitations of purely one-time user vetting practices.
 
-### **Audit Logs as a Non-Functional Requirement:** Systems are required to maintain audit logs, although these logs lack technical controls for centralisation or comprehensive monitoring.
+### Systems keep logs, but logs are not checked or centralised.
 
 #### **How to determine if this good enough**
 
@@ -101,7 +101,7 @@ Below are **rapidly actionable** steps for robust logging:
 
 By centralising logs, defining retention policies, restricting log access, employing basic alerts, and charting a path to a future SIEM or advanced monitoring approach, you progress from minimal log compliance to meaningful protective monitoring for privileged accounts.
 
-### **Local Audit Log Checks During Assessments:** Local audit log presence is verified as part of Integrated Technical Health Checks (ITHC) or other pre-launch processes, but routine monitoring may be absent.
+### We check logs before going live, but not regularly.
 
 #### **How to determine if this good enough**
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** steps to enhance local audit log checks:
 
 By scheduling routine log reviews, centralising logs or employing a SIEM, establishing real-time alerts, retesting logs beyond initial go-live, and collaborating with security teams on checks, you elevate from one-time assessments to ongoing protective monitoring.
 
-### **Centralised, Immutable Audit Logs with Automated Monitoring:** Immutable system audit logs are centrally stored. Their integrity is continuously assured, and the auditing process is automated. Log retention is defined and enforced automatically.
+### Logs are stored in one place, can’t be changed, and are checked automatically.
 
 #### **How to determine if this good enough**
 
@@ -196,7 +196,7 @@ Below are **rapidly actionable** ways to enhance a centralised, immutable audit 
 
 By coupling an advanced SIEM with defined retention tiers, enforcing role-based log access, setting real-time alerts for critical events, and collaborating beyond your department, you push your centralised, immutable logging approach to best-in-class standards aligned with public sector needs.
 
-### **Regular Audits and Legal Compliance Checks:** Regular rehearsal exercises are conducted with the assistance of auditors and legal experts. These checks ensure the integrity, completeness, and legal admissibility of logs as key evidence in potential criminal prosecutions.
+### We have regular audits with legal checks to make sure logs are complete and can be used as evidence.
 
 #### **How to determine if this good enough**
 

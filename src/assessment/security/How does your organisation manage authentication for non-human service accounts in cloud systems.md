@@ -1,11 +1,11 @@
 ---
-title: How does your organisation manage authentication for non-human service accounts in cloud systems?
+title: How do you manage non-human service accounts in the cloud?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Human-like Accounts for Services:** Non-human service accounts are set up similarly to human accounts, with long-lived credentials that are often shared.
+### Service accounts are like user accounts, with long-lived passwords.
 
 #### **How to determine if this good enough**
 
@@ -53,7 +53,7 @@ Below are **rapidly actionable** steps to move beyond human-like accounts for se
 
 By introducing cloud-native roles for services, eliminating shared credentials, enabling MFA or short-lived tokens if needed, documenting a minimal policy, and planning a transition, you reduce security risks posed by long-lived, human-like service accounts.
 
-### **Locally Managed Long-Lived API Keys:** Long-lived API keys are used for service accounts, with management handled locally at the project or program level.
+### Service accounts use long-lived API keys, managed by each team.
 
 #### **How to determine if this good enough**
 
@@ -103,7 +103,7 @@ Below are **rapidly actionable** steps to centralise and secure long-lived API k
 
 By centralising key storage, rotating keys automatically, scanning for accidental exposures, formalising a policy, and starting to shift away from static keys, you significantly enhance the security of locally managed long-lived credentials.
 
-### **Centralised Secret Store for Service Accounts:** A centralised repository or secret store is in place for all non-human service accounts, and its use is mandatory across the organisation.
+### All service accounts use a central secret store, which everyone must use.
 
 #### **How to determine if this good enough**
 
@@ -154,7 +154,7 @@ Below are **rapidly actionable** ways to strengthen your centralised secret stor
 
 By automating secret rotation, refining access controls, documenting a secret lifecycle, hooking the store into CI/CD, and planning ephemeral credentials for new services, you build on your strong foundation of centralised secret usage to minimise risk further.
 
-### **Ephemeral Identities with Attestation:** Service accounts do not use long-lived secrets; instead, identity is established dynamically based on attestation mechanisms.
+### Service accounts use short-lived identities, checked each time.
 
 #### **How to determine if this good enough**
 
@@ -201,7 +201,7 @@ Below are **rapidly actionable** improvements to further secure ephemeral identi
 
 By embedding ephemeral tokens into your CI/CD, adding a service mesh or mTLS, employing policy-as-code, auditing attestation rigorously, and exploring cross-organisation federation, you evolve ephemeral identity usage into a highly secure, flexible, and zero-trust-aligned solution.
 
-### **Code-Managed Identities with Federated Trust:** Identities for non-human services are managed as part of the infrastructure-as-code paradigm, allowing seamless federation across the organisation without needing point-to-point trust relationships.
+### Service accounts are managed as code, with trust set up across the whole organisation.
 
 #### **How to determine if this good enough**
 

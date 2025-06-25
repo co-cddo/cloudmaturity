@@ -1,11 +1,11 @@
 ---
-title: What is the structure of your organisation in terms of managing cloud operations?
+title: Who manages your cloud operations?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **Developer-Managed Cloud Operations:** There is no dedicated cloud team; application developers are responsible for managing all aspects of cloud operations.
+### Developers handle all cloud operations.
 
 #### **How to determine if this good enough**
 
@@ -60,7 +60,7 @@ Below are **rapidly actionable** steps to move beyond developer-exclusive cloud 
 
 By fostering a DevOps guild, adding automated monitoring, adopting IaC, and pushing for minimal security guidelines, you gradually evolve from purely developer-led ops to a more stable, repeatable cloud operation that can scale.
 
-### **Fully Outsourced Cloud Operations and Strategy:** All cloud operations, including the definition of strategic direction, are outsourced to a third-party supplier.
+### A supplier manages all cloud operations and strategy.
 
 #### **How to determine if this good enough**
 
@@ -109,7 +109,7 @@ Below are **rapidly actionable** ways to balance outsourced support with interna
 
 By keeping strategic authority, setting stringent SLAs, fostering vendor-provided knowledge transfer, and maintaining transparent reporting, you reduce vendor lock-in and ensure your cloud approach aligns with public sector priorities and compliance expectations.
 
-### **Outsourced Operations with Internal Strategic Ownership:** Cloud operations are outsourced, but the strategic direction for cloud usage is developed and owned internally by the department.
+### A supplier runs operations, but we set the strategy.
 
 #### **How to determine if this good enough**
 
@@ -158,7 +158,7 @@ Below are **rapidly actionable** enhancements:
 
 By jointly defining an operations handbook, integrating vendor ops staff in your planning, reviewing strategy regularly, and retaining real-time metrics, you strengthen internal leadership while enjoying the convenience of outsourced operational tasks.
 
-### **Hybrid Approach with Outsourced Augmentation:** A mix of in-house and outsourced resources is used. Third-party suppliers provide additional capabilities (e.g., on-call support), while strategic cloud direction is led by departmental leaders.
+### We use in-house and supplier teams, with our leaders in charge.
 
 #### **How to determine if this good enough**
 
@@ -206,7 +206,7 @@ Below are **rapidly actionable** ways to optimise the hybrid approach:
 
 By unifying tools, clarifying roles, rotating on-call duties, aligning on a roadmap, and cross-training, you make the hybrid model more cohesive—maximising agility and ensuring consistent cloud operation standards across internal and outsourced teams.
 
-### **Dedicated In-House Cloud Team:** A robust, dedicated cloud team exists within the organisation, comprising at least 5 civil/public servant employees per cloud platform. This team has a shared roadmap for cloud capabilities, adoption, and migration.
+### We have a strong in-house team for each cloud platform, with a shared roadmap.
 
 #### **How to determine if this good enough**
 

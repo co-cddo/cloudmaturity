@@ -1,11 +1,11 @@
 ---
-title: How does your organisation manage and update access policies and controls, and how are these changes communicated?
+title: How do you manage and update access policies, and how do you tell people about changes?
 tags: governance
 eleventyNavigation:
   parent: governance
 ---
 
-### **Ad-Hoc Policy Management and Inconsistent Application:** Policies are not formally defined; decisions are based on individual opinion or past experience. Policies are not published, access controls are inconsistently applied, and exemptions are often granted without follow-up.
+### We don’t have formal policies. People decide based on what they think is best.
 
 #### **How to determine if this good enough**
 
@@ -60,7 +60,7 @@ Below are **rapidly actionable** steps to move away from ad-hoc management:
 
 By introducing a baseline policy, centralising identity management, tracking exceptions, and implementing a simple approval step, you achieve immediate improvements and lay the groundwork for more robust policy governance.
 
-### **Basic Policy Documentation with Some Communication:** Access policies are documented, but updates and their communication are irregular. There is a lack of a systematic approach to applying and communicating policy changes.
+### We document our access policies, but updates and communication are irregular.
 
 #### **How to determine if this good enough**
 
@@ -118,7 +118,7 @@ Here are **rapidly actionable** enhancements:
 
 By versioning your policy documents, scheduling updates, and communicating changes through consistent channels, you ensure staff remain aligned with the policy’s intent and scope, even as it evolves.
 
-### **Regular Policy Reviews with Formal Communication Processes:** Policies are regularly reviewed and updated, with formal processes for communicating changes to relevant stakeholders, though the process may not be fully transparent or collaborative.
+### We review and update policies and tell the right people, but not always in a transparent way.
 
 #### **How to determine if this good enough**
 
@@ -177,7 +177,7 @@ Below are **rapidly actionable** ways to refine:
 
 By establishing a policy advisory group, using automated enforcement, sharing impact assessments, and keeping transparent documentation, you enhance collaboration and understanding around policy changes.
 
-### **Integrated Policy Management with Stakeholder Engagement:** Policy updates are managed through an integrated process involving key stakeholders. Changes are communicated effectively, ensuring clear understanding across the organisation.
+### We review and update policies and tell the right people. Everyone understands the process.
 
 #### **How to determine if this good enough**
 
@@ -240,7 +240,7 @@ Below are **rapidly actionable** strategies:
 
 By versioning policy code, conducting interactive workshops, providing self-service dashboards, and linking changes to tangible organisational goals, you reinforce a collaborative, integrated policy management culture.
 
-### **Policy as Code with Transparent, Collaborative Updates:** Policy intent and implementation are maintained in version control, accessible to all. The process for proposing updates is clear and well-understood, allowing for regular, transparent updates akin to software releases. Policies have testable side effects, ensuring clarity and comprehension.
+### We store policies in version control. Anyone can see or suggest changes. Updates are open and tested like software.
 
 #### **How to determine if this good enough**
 

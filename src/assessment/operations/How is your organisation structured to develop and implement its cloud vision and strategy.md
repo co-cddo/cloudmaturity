@@ -1,11 +1,11 @@
 ---
-title: How is your organisation structured to develop and implement its cloud vision and strategy?
+title: How do you develop and implement your cloud strategy?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **No Dedicated Cloud Team:** There is no specific team focusing on cloud strategy; teams operate in silos based on traditional, on-premises role definitions.
+### We don't have a cloud strategy team.
 
 #### **How to determine if this good enough**
 
@@ -51,7 +51,7 @@ Below are **rapidly actionable** steps to start formalising a cloud-oriented app
 
 By designating a cloud advocate, introducing basic cloud knowledge sessions, and forming a small cross-functional group for a pilot project, you lay the groundwork for a more coordinated approach to cloud strategy and operations.
 
-### **Informal Cloud Expertise:** Informal groups or individuals with cloud expertise exist, facilitating some degree of cross-organisational collaboration.
+### Some people have cloud skills and help others when needed.
 
 #### **How to determine if this good enough**
 
@@ -99,7 +99,7 @@ Below are **rapidly actionable** ideas to strengthen informal cloud expertise:
 
 By forming a community of practice, establishing a knowledge base, and beginning minimal governance alignment, you transition from ad hoc experts toward a more structured, widely beneficial cloud strategy.
 
-### **Formal Cross-Functional Cloud Team/COE:** A formal Cloud Center of Excellence or equivalent cross-functional team exists, providing foundational support and guidance for cloud operations.
+### We have a cross-team group that guides all cloud work.
 
 #### **How to determine if this good enough**
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** strategies to improve a formal Cloud COE:
 
 By delivering self-service solutions, deeper security reviews, and an active cloud community, the COE matures into a vital driver for consistent, secure, and cost-effective cloud adoption across the organisation.
 
-### **Integrated Cloud Teams Following COE Standards:** Cloud teams across the organisation follow standards and patterns established by the Cloud COE. Cross-functional roles are increasingly common within development teams.
+### Cloud teams use shared standards and patterns.
 
 #### **How to determine if this good enough**
 
@@ -200,7 +200,7 @@ Below are **rapidly actionable** steps to further integrate the COE’s standard
 
 By mandating automated compliance checks, fostering a "cloud-first" approach, expanding skill-building labs, and embedding security/architecture roles into each delivery team, you further entrench consistent, effective cloud usage across the public sector organisation.
 
-### **Advanced Cloud COE Operating Model:** The Cloud COE has matured into a comprehensive operating model with fully autonomous, cross-functional teams that include experts in all necessary technology and process domains.
+### Teams work together across roles, with experts in all the areas we need them.
 
 #### **How to determine if this good enough**
 

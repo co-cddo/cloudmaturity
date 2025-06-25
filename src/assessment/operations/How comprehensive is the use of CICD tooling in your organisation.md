@@ -1,11 +1,11 @@
 ---
-title: How comprehensive is the use of CI/CD tooling in your organisation?
+title: Do you use continuous integration and continuous deployment (CI/CD) tools?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **No CI/CD Tooling:** Traditional build, test, and deploy practices are in use, with no implementation of CI/CD tooling.
+### We don't, we build test, and deploy by hand.
 
 #### **How to determine if this good enough**
 
@@ -55,7 +55,7 @@ Below are **rapidly actionable** steps to adopt a basic CI/CD foundation:
 
 By introducing simple build/test scripting, hosting code in version control, and documenting your process, you establish the baseline for a more formal CI/CD pipeline in the future.
 
-### **Limited CI/CD Tooling on Some Projects:** CI/CD tooling is used by some projects, but there are no formal standards or widespread adoption across the organisation.
+### We use some CI/CD, but there’s no standard.
 
 #### **How to determine if this good enough**
 
@@ -110,7 +110,7 @@ Below are **rapidly actionable** ways to broaden CI/CD usage:
 
 By sharing knowledge, offering recommended tools, and providing example templates, you organically expand CI/CD adoption and empower teams to adopt consistent approaches.
 
-### **Varied CI/CD Tooling Across Teams:** Many project teams use CI/CD tooling, though the choice of tools and practices is based on individual team preferences.
+### Most teams use CI/CD, but each chooses its own tools.
 
 #### **How to determine if this good enough**
 
@@ -165,7 +165,7 @@ Below are **rapidly actionable** ways to refine or unify CI/CD tool usage:
 
 By defining core CI/CD principles, documenting shared patterns, and selectively offering a central service or recommended tool, you maintain team autonomy while reaping benefits of consistent practices.
 
-### **Widespread, Team-Preferred CI/CD Tooling:** Most project teams employ CI/CD tooling, largely based on team preferences, with traditional practices being very limited.
+### Nearly all teams use CI/CD, but tools and processes vary.
 
 #### **How to determine if this good enough**
 
@@ -219,7 +219,7 @@ Below are **rapidly actionable** ways to refine widespread team-driven CI/CD:
 
 By fostering a DevOps guild, infusing security checks, and unifying logging/artifact storage, you balance team autonomy with enough cross-cutting standards to maximise reliability and compliance.
 
-### **Standardised and Consistent CI/CD Practices:** A standardised CI/CD pipeline is consistently used across project teams organisation-wide, indicating a high level of maturity in deployment practices.
+### Everyone uses the same CI/CD process.
 
 #### **How to determine if this good enough**
 

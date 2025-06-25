@@ -1,11 +1,11 @@
 ---
-title: How does your organisation manage and incentivise the completion of cloud-related training and certification goals?
+title: How does your organisation support cloud training and certification?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **No Formal Training Support:** There is no formal support for certification or training, nor are any specific goals or targets defined for employee development in cloud skills.
+### There is no formal support or plan for cloud training.
 
 #### **How to determine if this good enough**
 
@@ -58,7 +58,7 @@ Below are **rapidly actionable** steps to introduce at least a minimal structure
 
 By initiating a simple skills inventory, directing staff to free resources, hosting internal sessions, and referencing official guidance, you plant the seeds for more structured, formalised cloud training down the line.
 
-### **Managerial Discretion on Training:** Training and certifications are supported at the discretion of individual managers. Team-level training goals are set but not consistently monitored or reported.
+### Training is up to each manager and not tracked.
 
 #### **How to determine if this good enough**
 
@@ -107,7 +107,7 @@ Below are **rapidly actionable** steps to unify manager-led training into a more
 
 By defining organisation-wide skill baselines, tracking training across teams, offering a shared budget, and running cross-team training events, you build a more equitable and cohesive approach—improving consistency in cloud competence.
 
-### **Corporate-Level Training Support and Tracking:** Training and certifications are strongly supported with allocated budgets and managerial encouragement. Team-level training goals are consistently defined, tracked, and reported at the corporate level.
+### Training is supported, tracked, and reported for all teams.
 
 #### **How to determine if this good enough**
 
@@ -159,7 +159,7 @@ Below are **rapidly actionable** improvements:
 
 By mapping certifications to roles, regularly auditing skills, gamifying recognition, and aligning training with strategic objectives, you embed continuous cloud skill growth into your corporate culture—ensuring sustained readiness and compliance.
 
-### **Role-Based Training Recommendations and Self-Assessment:** Relevant certifications are recommended based on specific roles and incorporated into personal development plans. Employees are encouraged to self-assess their progress against role-specific and team-level goals.
+### Training is linked to each person’s role and development plan. People check their own progress.
 
 #### **How to determine if this good enough**
 
@@ -208,7 +208,7 @@ Below are **rapidly actionable** ways to refine role-based training and self-ass
 
 By linking self-assessments to performance, diversifying skill tracks, enabling peer mentoring, and automating onboarding processes, you create a fully integrated environment where each role’s learning path is clear, self-directed, and aligned to organisational needs.
 
-### **Incentivised and Assessed Training Programs:** Employees completing certifications are rewarded with merit incentives and receive structured guidance and development plans. Periodic formal role-specific assessments are conducted, with achievements recognised through systems like GovUKCloudBadges.
+### People get rewards for completing training. Progress is checked and achievements recognised.
 
 #### **How to determine if this good enough**
 

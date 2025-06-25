@@ -1,11 +1,11 @@
 ---
-title: How does your organisation handle the creation and storage of build artifacts?
+title: How do you manage and store build artefacts (files created when building software)?
 tags: governance
 eleventyNavigation:
   parent: governance
 ---
 
-### **Ad-Hoc or Non-Existent Artifact Management:** Build artifacts are not systematically managed; code and configurations are often edited live on servers.
+### We don't, and people often change code on live servers.
 
 #### **How to determine if this good enough**
 
@@ -69,7 +69,7 @@ Below are **rapidly actionable** steps to move away from ad-hoc methods:
 
 By adopting minimal CI/CD, storing artifacts in a shared location, and referencing everything in version control, you reduce chaos and set a foundation for more robust artifact management.
 
-### **Environment-Specific Rebuilds:** Artifacts are rebuilt in each environment, leading to potential inconsistencies and inefficiencies.
+### We rebuild artefacts in each environment, which can cause problems.
 
 #### **How to determine if this good enough**
 
@@ -123,7 +123,7 @@ Below are **rapidly actionable** strategies:
 
 By consolidating the build process, storing a single artifact per version, and promoting that same artifact across environments, you achieve consistency and reduce the risk of environment drift.
 
-### **Basic Artifact Storage with Version Control:** Build artifacts are stored, possibly with version control, but without strong emphasis on immutability or security measures.
+### We save artefacts, sometimes with version control, but there's no focus on making them secure or unchangeable.
 
 #### **How to determine if this good enough**
 
@@ -183,7 +183,7 @@ Here are **rapidly actionable** enhancements:
 
 By using immutable storage, controlling access, and standardising versioning, you strengthen artifact reliability and traceability without overwhelming your current processes.
 
-### **Pinned Dependencies with Cryptographic Verification:** All dependencies in build artifacts are tightly pinned to specific versions, with cryptographic signing or hashes to ensure integrity.
+### We lock down artefact dependencies and check them with digital signatures or hashes.
 
 #### **How to determine if this good enough**
 
@@ -245,7 +245,7 @@ Below are **rapidly actionable** improvements:
 
 By scanning for vulnerabilities, signing artifacts, using SBOMs, and enforcing patch-level policies, you secure your supply chain and provide strong assurance of artifact integrity.
 
-### **Immutable, Signed Artifacts with Audit-Ready Storage:** Immutable build artifacts are created and cryptographically signed, especially for production. All artifacts are stored in immutable storage for a defined period for audit purposes, with a clear process to recreate environments for thorough audits or criminal investigations.
+### All build artefacts are unchangeable, signed, and stored for audits. We can recreate any environment if needed.
 
 #### **How to determine if this good enough**
 

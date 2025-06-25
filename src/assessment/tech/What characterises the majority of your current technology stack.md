@@ -1,11 +1,11 @@
 ---
-title: What characterises the majority of your current technology stack?
+title: What best describes your current technology stack?
 tags: tech
 eleventyNavigation:
   parent: tech
 ---
 
-### **Monolithic Applications with Wide Technology Stack:** The predominant architecture is monolithic, with applications deployed as single, indivisible units encompassing a wide range of technologies.
+### Most systems are large, single applications using lots of different technologies.
 
 #### **How to determine if this good enough**
 
@@ -53,7 +53,7 @@ Below are **rapidly actionable** steps to transition from a monolithic approach:
 
 By identifying component boundaries, packaging the monolith for simpler deployments, refactoring shared libraries, automating CI/CD, and scheduling partial decomposition, you reduce friction and set a path toward more modular solutions.
 
-### **Modular but Not Independently Deployable:** Applications are broken down into modules, offering greater development flexibility, yet these modules are not deployable as independent components.
+### Systems are split into parts, but these parts can’t run on their own.
 
 #### **How to determine if this good enough**
 
@@ -102,7 +102,7 @@ Below are **rapidly actionable** ways to shift modules from concept to independe
 
 By containerising modules, setting up separate build pipelines, enforcing clear module boundaries, individually deploying or updating modules, and showcasing tangible benefits, you progress toward a fully independent deployment pipeline that capitalises on modularity.
 
-### **Modularised and Individually Deployable Components:** Applications are structured into self-contained, individually deployable components. However, significant interdependencies add complexity to testing.
+### Systems are made of parts that can run on their own, but they depend on each other a lot.
 
 #### **How to determine if this good enough**
 
@@ -150,7 +150,7 @@ Below are **rapidly actionable** ways to handle interdependencies in individuall
 
 By introducing contract or consumer-driven testing, adopting semantic versioning, publishing a compatibility matrix, and employing feature flags to manage cross-component rollouts, you reduce interdependency friction and safely leverage your modular architecture.
 
-### **Mostly Independent Deployment with Some Monoliths:** While most application components are independently deployable and testable, a few core system components still rely on a monolithic architecture.
+### Most parts can run and be tested on their own, but a few main systems are still monolithic.
 
 #### **How to determine if this good enough**
 
@@ -196,7 +196,7 @@ Below are **rapidly actionable** ways to address the leftover monolithic element
 
 By selecting high-impact subsystems for extraction, creating a phased migration plan, applying DevOps best practices to the existing monolith, steering new features away from legacy, and continuously communicating the ROI of decomposition, you inch closer to a fully modular environment.
 
-### **Fully Component-Based Modular Architecture:** The technology stack consistently utilises a component-based modular approach. All components are independently testable and deployable, free from monolithic stack dependencies.
+### All systems are made of small parts that can run and be tested on their own, with no monolithic systems.
 
 #### **How to determine if this good enough**
 

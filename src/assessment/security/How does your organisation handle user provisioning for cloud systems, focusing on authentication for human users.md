@@ -1,11 +1,11 @@
 ---
-title: How does your organisation handle user provisioning for cloud systems, focusing on authentication for human users?
+title: How do you create and manage user accounts for cloud systems?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Shared Accounts and Manual Account Management:** Accounts are shared or reused between multiple people with limited ability to discern who carried out an action from any logs collected. Where individual accounts exist for each user they are manually created, deleted, updated, and assigned, involving significant manual effort and potential for inconsistency.
+### People share accounts, or accounts are managed by hand.
 
 #### **How to determine if this good enough**
 
@@ -57,7 +57,7 @@ Below are **rapidly actionable** steps to move beyond shared/manual accounts:
 
 By ensuring each user has an individual account, using vendor IAM for creation, documenting a minimal lifecycle process, enabling audit logging, and preparing for SSO, you remedy the major pitfalls of shared/manual account approaches.
 
-### **Identity Repository with Manual Processes:** An organisational identity repository (like Active Directory or LDAP) is used as the user source of truth, but processes for cloud system integration are manual or inconsistent.
+### We use a central directory (like Active Directory), but links to cloud systems are inconsistent.
 
 #### **How to determine if this good enough**
 
@@ -107,7 +107,7 @@ Below are **rapidly actionable** steps to unify and automate your on-prem identi
 
 By federating or automating the sync between your directory and cloud, standardising roles, scheduling periodic comparisons, and eventually adopting a modern identity provider, you gradually remove manual friction and potential security gaps.
 
-### **Common Standards for Identity Management:** Standardised protocols and practices are in place for managing and mapping user identities between identity providers and cloud systems. Non-compliant services are less preferred.
+### We have standard ways of working with cloud systems and try to avoid services that won't work with this.
 
 #### **How to determine if this good enough**
 
@@ -156,7 +156,7 @@ Below are **rapidly actionable** ways to refine standard identity management:
 
 By enforcing SSO/federation for all services, deploying structured access workflows, continuously evaluating new cloud offerings, documenting role-to-privilege mappings, and bolstering security alerting, you ensure consistent, secure user identity alignment across your cloud ecosystem.
 
-### **Automated Federated Identity Management:** Federated identity management is fully automated, ensuring consistent user provisioning across all systems. Non-compliant services are isolated with appropriate mitigations.
+### Identity management is automated. Non-standard systems are kept separate.
 
 #### **How to determine if this good enough**
 
@@ -204,7 +204,7 @@ Below are **rapidly actionable** ways to reinforce automated federated identity:
 
 By adopting short-lived credentials, storing identity policy in code, enabling real-time security checks, exploring cross-department SSO, and continuously reviewing role usage, you transform a solid federation setup into a robust and adaptive identity ecosystem.
 
-### **Unified Cloud-Based Identity Provider:** A fully cloud-based user directory or identity provider acts as the single source of truth. Centralised management is aligned with user onboarding, movements, and terminations. Services not supporting federated identity have been phased out.
+### We have a single cloud-based directory for all users. All accounts are managed in one place, and non-standard systems are gone.
 
 #### **How to determine if this good enough**
 

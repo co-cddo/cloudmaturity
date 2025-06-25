@@ -1,11 +1,11 @@
 ---
-title: How does your organisation monitor and manage security within its software supply chain?
+title: How do you keep your software supply chain secure?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Unmanaged Dependencies:** Dependencies are not formally managed, installed ad-hoc as needed, and updated periodically without tracking versions or full dependency trees, such as using `apt` or `yum` to install packages without a manifest file that can operate as an [SBOM](https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-supply-chain-security-guidance).
+### We don’t track software dependencies. Updates are done as needed.
 
 #### **How to determine if this good enough**
 
@@ -52,7 +52,7 @@ Below are **rapidly actionable** steps to handle unmanaged dependencies more saf
 
 By adopting minimal package manifests, generating basic SBOM data, automating patch checks, documenting an update policy, and planning a transition toward managed dependencies, you lay the groundwork for a more secure, transparent software supply chain.
 
-### **Basic Dependency Management with Ad-Hoc Monitoring:** All dependencies are set at project initiation and updated during major releases or in response to significant advisories. Some teams use tools to monitor supply chain security in an ad-hoc manner, scanning dependency manifests with updates aligning with project releases.
+### We set dependencies at the start and update for big changes. Some teams use tools to check security.
 
 #### **How to determine if this good enough**
 
@@ -99,7 +99,7 @@ Below are **rapidly actionable** ways to strengthen basic dependency management:
 
 By automating scans, scheduling regular update windows, maintaining SBOM or lock files, setting up vulnerability alerts, and establishing a well-defined emergency patch process, you move from ad-hoc monitoring to a more structured, frequent approach that better secures the software supply chain.
 
-### **Proactive Remediation Across Repositories:** All repositories are actively monitored, with automated remediation steps. Updates are systematically applied, aligning with project release schedules.
+### All code is checked and updated regularly, with fixes applied as needed.
 
 #### **How to determine if this good enough**
 
@@ -147,7 +147,7 @@ Below are **rapidly actionable** ways to strengthen proactive repository remedia
 
 By introducing vulnerability risk scoring, scanning container/OS packages, enhancing test automation for new patches, setting fix SLAs, and controlling deferrals, you significantly improve the proactive repository-level remediation approach across your entire software estate.
 
-### **Centralised Monitoring with Context-Aware Triage:** A centralised Security Operations Center (SOC) maintains an overview of all repositories, coordinating high-severity issue remediation. The system also triages issues based on dependency usage context, focusing remediation efforts on critical issues.
+### A central team watches all code, fixes big problems first, and checks how each dependency is used.
 
 #### **How to determine if this good enough**
 
@@ -194,7 +194,7 @@ Below are **rapidly actionable** ways to refine centralised, context-aware triag
 
 By integrating real-time threat intel, employing contextual code usage analysis, collaborating with dev for safe patch rollouts, tracking remediation metrics, and linking to broader risk management, you elevate centralised monitoring to a dynamic, strategic posture in addressing supply chain security.
 
-### **Advanced, Integrated Security Management:** This approach combines centralised monitoring, risk management, and context-aware triage, with a focus on minimising false positives and ensuring focused, effective remediation across the organisation's software supply chain.
+### We use advanced tools to watch and fix supply chain risks, focusing on real threats.
 
 #### **How to determine if this good enough**
 

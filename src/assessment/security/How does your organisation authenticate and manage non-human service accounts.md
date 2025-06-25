@@ -1,11 +1,11 @@
 ---
-title: How does your organisation authenticate and manage non-human service accounts?
+title: How do you manage accounts used by software, not people?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Basic User/Pass Credentials:** Non-human service accounts are managed using basic ID/secret pair credentials, with a user/password approach.
+### We use basic usernames and passwords.
 
 #### **How to determine if this good enough**
 
@@ -60,7 +60,7 @@ Below are **rapidly actionable** steps to enhance service account security beyon
 
 By employing a secure secret manager, rotating basic credentials, and gradually moving to role-based or short-lived tokens, you significantly reduce the risk associated with static user/password pairs for service accounts.
 
-### **API Key Usage:** Non-human service accounts are authenticated using API keys, which are less dynamic and might have longer lifespans.
+### We use API keys that don’t change often.
 
 #### **How to determine if this good enough**
 
@@ -108,7 +108,7 @@ Below are **rapidly actionable** ways to move beyond static API keys:
 
 By centrally managing keys, rotating them automatically, transitioning to role-based or token-based credentials, enforcing least privilege, and auditing usage, you substantially reduce the security risk associated with static API keys.
 
-### **Centralised Secret Store with Some Credential Rotation:** A central secret store is in place, possibly supporting automated rotation of credentials for some systems, enhancing security and management efficiency.
+### We use a central place to store secrets and sometimes rotate them.
 
 #### **How to determine if this good enough**
 
@@ -157,7 +157,7 @@ Below are **rapidly actionable** ways to refine a centralised secret store with 
 
 By expanding automated rotation, integrating secret retrieval into pipelines, enforcing tight access controls, adopting role-based methods for new services, and cleaning stale secrets, you further strengthen your centralised secret store approach for secure, efficient credential management.
 
-### **Mutual TLS for Authentication:** Mutual Transport Layer Security (mTLS) is used for non-human service accounts, providing a more secure, certificate-based authentication method.
+### We use certificates (mutual TLS) for secure connections.
 
 #### **How to determine if this good enough**
 
@@ -206,7 +206,7 @@ Below are **rapidly actionable** ways to improve your mTLS-based authentication 
 
 By employing short-lived certs, possibly using a service mesh, establishing strict certificate policies, continuously monitoring usage, and optionally layering further IAM or token checks, you maximise the security benefits of mTLS for your service accounts.
 
-### **Short-Lived, Federated Identities with Strong Verification:** Non-human service accounts use short-lived, federated identities that are strongly verifiable and validated with each request, ensuring a high level of security and minimising the risk of credential misuse.
+### We use short-lived, strongly checked identities that change for each use.
 
 #### **How to determine if this good enough**
 

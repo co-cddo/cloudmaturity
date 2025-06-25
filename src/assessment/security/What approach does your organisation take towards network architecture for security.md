@@ -1,11 +1,11 @@
 ---
-title: What approach does your organisation take towards network architecture for security?
+title: How do you secure your network and control access?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Traditional Network Perimeter Security:** Security relies primarily on network-level controls like IP-based allow-lists and firewall rules to create a secure perimeter around hosted data and applications.
+### We rely on network controls like firewalls and IP allow-lists.
 
 #### **How to determine if this good enough**
 
@@ -54,7 +54,7 @@ Below are **rapidly actionable** steps to strengthen or evolve from perimeter-on
 
 By enforcing multi-factor authentication, introducing least-privilege IAM, segmenting networks internally, ensuring end-to-end TLS, and planning a shift toward identity-based models, you move beyond the risks of purely perimeter-centric security.
 
-### **Network Security with Basic Identity Verification:** The traditional network-based security perimeter is supplemented with mechanisms to verify user identity within the context of access requests.
+### We use network controls and also check user identity.
 
 #### **How to determine if this good enough**
 
@@ -102,7 +102,7 @@ Below are **rapidly actionable** ways to extend identity verification:
 
 By mandating MFA for all, refining role-based or service-level access, introducing SSO, logging all user actions, and optionally checking device security posture, you significantly reduce reliance on a single perimeter gate.
 
-### **Enhanced Identity Verification:** Security includes verification of both user and service identities in the context of requests, augmenting the network-based security perimeter.
+### We check both user and service identity, as well as network controls.
 
 #### **How to determine if this good enough**
 
@@ -147,7 +147,7 @@ Below are **rapidly actionable** ways to strengthen user+service identity verifi
 
 By implementing mTLS or ephemeral tokens for user+service identity, deploying policy-as-code, requiring request-level authorisation, enabling JIT privileges for critical tasks, and thoroughly logging microservice communications, you move closer to a robust zero-trust framework within a partially perimeter-based model.
 
-### **Partial Shift to Identity-Centric Security:** In some areas, the network-based security perimeter is replaced by robust identity verification mechanisms for users and services, reducing the reliance on VPNs for secure access.
+### In some areas, we use strong identity checks instead of network controls, reducing VPN use.
 
 #### **How to determine if this good enough**
 
@@ -195,7 +195,7 @@ Below are **rapidly actionable** ways to deepen identity-centric security:
 
 By methodically retiring or limiting VPN usage, integrating device posture checks, employing microsegmentation, standardising single sign-on for all apps, and training staff on the identity-centric model, you further reduce perimeter dependence and approach a more robust zero-trust posture.
 
-### **No Reliance on Network Perimeter or VPN:** The organisation has moved away from a network-based security perimeter. Access control is centered around individual devices and users, requiring strong attestations for trust establishment.
+### We don’t use network perimeters. Access is based on device and user identity, with strong checks.
 
 #### **How to determine if this good enough**
 

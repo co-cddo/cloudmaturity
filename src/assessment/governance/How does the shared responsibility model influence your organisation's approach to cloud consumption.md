@@ -1,11 +1,11 @@
 ---
-title: How does the shared responsibility model influence your organisation's approach to cloud consumption?
+title: How do you decide who handles the different aspects of cloud security?
 tags: governance
 eleventyNavigation:
   parent: governance
 ---
 
-### **Minimal Consideration of Shared Responsibility:** The shared responsibility model is not a primary factor in cloud consumption decisions, often leading to misunderstandings or gaps in responsibility.
+### We don't have a standard approach, which leads to gaps and misunderstandings.
 
 #### **How to determine if this good enough**
 
@@ -67,7 +67,7 @@ Below are **rapidly actionable** steps to move beyond minimal consideration of s
 
 By clarifying essential tasks, assigning explicit ownership, and performing a quick risk assessment, you proactively plug the biggest gaps that come from ignoring the shared responsibility model.
 
-### **Basic Awareness of Shared Responsibilities:** There is a basic understanding of the model, but it's not systematically applied or deeply understood across the organisation.
+### Some people know about the shared responsibility model, but it's not always used.
 
 #### **How to determine if this good enough**
 
@@ -126,7 +126,7 @@ Here are **rapidly actionable** ways to convert basic awareness into structured 
 
 By formalising the understanding into documented responsibilities, embedding checks in your workflows, and reinforcing compliance rules, you strengthen your posture beyond mere awareness and toward consistent application across teams.
 
-### **Informed Decision-Making Based on Shared Responsibilities:** Decisions regarding cloud consumption are informed by the shared responsibility model, ensuring a clearer understanding of the division of responsibilities.
+### We use the shared responsibility model.
 
 #### **How to determine if this good enough**
 
@@ -190,7 +190,7 @@ Below are **rapidly actionable** improvements to reinforce your informed decisio
 
 By embedding the model into architecture reviews, governance boards, risk tracking, and cost analysis, you ensure each cloud decision is well-informed and widely understood across the organisation.
 
-### **Strategic Integration of Shared Responsibility in Cloud Planning:** The shared responsibility model is strategically integrated into cloud consumption planning, with regular assessments to ensure responsibilities are well-managed. Decisions to retain responsibilities in house are documented and shared with the cloud vendor.
+### We plan with the shared responsibility model, review often, and record responsibilities.
 
 #### **How to determine if this good enough**
 
@@ -249,7 +249,7 @@ Here are **rapidly actionable** ideas to refine your strategic integration:
 
 By systematically planning your responsibilities roadmap, establishing joint incident protocols, and performing regular SLA reviews, you embed the shared responsibility model at the heart of your strategic cloud partnerships.
 
-### **Critical Factor in Cloud Consumption and Value Assessment:** The shared responsibility model is central to all decision-making regarding cloud consumption. It's regularly revisited to assess value for money and optimise the division of responsibilities with the cloud vendor.
+### Shared responsibility is at the centre of all our cloud decisions. We review often to make sure we have clear roles and get the best value.
 
 #### **How to determine if this good enough**
 

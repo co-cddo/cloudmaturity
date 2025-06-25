@@ -1,11 +1,11 @@
 ---
-title: How does your organisation engage with cloud providers to develop capabilities and services?
+title: How does your organisation work with cloud providers?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **Minimal Interaction with Cloud Providers:** The relationship with cloud providers is transactional, brokered through a third party, and limited to accessing their services without any significant direct contact or support from their account or technical teams.
+### We just use services, with little or no contact with providers.
 
 #### **How to determine if this good enough**
 
@@ -61,7 +61,7 @@ Below are **rapidly actionable** steps to move from minimal interaction to stron
 
 By establishing basic contacts, using vendor quickstarts, tapping into free events, and implementing minimal security measures, you start reaping more value from your cloud provider relationship and set the stage for deeper engagement.
 
-### **Basic Support Utilisation:** Some basic support services from cloud providers are utilised, such as occasional technical assistance or access to standard documentation and resources.
+### We sometimes get basic help or support from providers.
 
 #### **How to determine if this good enough**
 
@@ -116,7 +116,7 @@ Below are **rapidly actionable** ways to evolve beyond basic support:
 
 By scheduling regular check-ins with account managers, requesting architecture and cost reviews, organising training sessions, and clarifying a support triage process, you step up from reactive usage of basic support to a more proactive and beneficial relationship.
 
-### **Regular Interaction and Support:** There is regular interaction with cloud provider account managers, including access to standard training and support services to assist in leveraging cloud capabilities.
+### We regularly talk to providers and use their training and support.
 
 #### **How to determine if this good enough**
 
@@ -167,7 +167,7 @@ Below are **rapidly actionable** ways to leverage regular provider interaction m
 
 By scheduling advanced support tiers or specialised workshops, co-developing a cloud roadmap, participating in early feature programs, and continuously feeding back public sector requirements, you strengthen the partnership for mutual benefit.
 
-### **Proactive Engagement and Tailored Support:** The organisation engages proactively with cloud providers, receiving tailored support, training, and workshops that align with specific needs and goals.
+### We work closely with providers and get training and support tailored to our needs.
 
 #### **How to determine if this good enough**
 
@@ -223,7 +223,7 @@ Below are **rapidly actionable** ways to deepen this proactive, tailored relatio
 
 By defining success metrics, scheduling technical deep-dives, pursuing co-innovation, and ensuring an open channel for feature requests, you make the most of your proactive provider engagement—driving continuous improvement in alignment with public sector priorities.
 
-### **Strategic Partnership with Comprehensive Support:** Cloud providers are engaged as strategic partners, offering comprehensive support, including regular training, workshops, and active collaboration. This partnership is instrumental in realising strategic goals and includes opportunities for the organisation to showcase its work through the provider's platforms.
+### Providers are our partners. We work together often, get lots of support and can show our work on their platforms.
 
 #### **How to determine if this good enough**
 

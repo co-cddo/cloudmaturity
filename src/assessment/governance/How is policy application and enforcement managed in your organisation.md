@@ -1,11 +1,11 @@
 ---
-title: How is policy application and enforcement managed in your organisation?
+title: How do you apply and enforce policies?
 tags: governance
 eleventyNavigation:
   parent: governance
 ---
 
-### **No Policy Application:** Policies are not actively applied within the organisation.
+### We don’t.
 
 #### **How to determine if this good enough**
 
@@ -56,7 +56,7 @@ Below are **rapidly actionable** steps to start applying policies:
 
 By taking these initial steps—defining a baseline policy, piloting it, and communicating expectations—you move from "no policy application" toward a more controlled environment.
 
-### **Policy Existence Without Enforcement:** Policies exist but are not actively enforced or monitored.
+### We have policies, but don’t check whether people follow them.
 
 #### **How to determine if this good enough**
 
@@ -109,7 +109,7 @@ Below are **rapidly actionable** ways to start enforcing existing policies:
 
 By automating policy checks, alerting on critical breaches, and phasing in enforcement, you build momentum toward consistent compliance without overwhelming teams.
 
-### **Process-Driven Application:** Policies are applied primarily through organisational processes without significant technical support.
+### We use processes to apply policies, but not much technology.
 
 #### **How to determine if this good enough**
 
@@ -163,7 +163,7 @@ Below are **rapidly actionable** ways to enhance process-driven application:
 
 By introducing minor automation, centralising policy references, adding a policy gate in ticketing, and auditing process compliance, you blend the reliability of your current manual approach with the efficiency gains of technical enablers.
 
-### **Process-Driven with Limited Technical Control:** Policies are comprehensively applied through processes, supported by limited technical control mechanisms.
+### We use processes and some technology to apply policies.
 
 #### **How to determine if this good enough**
 
@@ -223,7 +223,7 @@ Below are **rapidly actionable** ways to reinforce or extend your existing setup
 
 By strengthening technical guardrails, improving alerting, and embedding your policies deeper into IaC, you evolve your limited technical controls into a more comprehensive and proactive enforcement model.
 
-### **Fully Integrated Application and Enforcement:** Policies are applied and enforced comprehensively through well-established processes, with robust technical controls executed at all stages.
+### We have robust processes and technology to ensure that policies are always followed.
 
 #### **How to determine if this good enough**
 

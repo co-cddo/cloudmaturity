@@ -1,11 +1,11 @@
 ---
-title: How are technology selections made for new projects within your organisation?
+title: How do you choose technologies for new projects?
 tags: tech
 eleventyNavigation:
   parent: tech
 ---
 
-### **Ad-Hoc and Independent Selections:** Each project independently selects technologies, leading to a diverse and often incompatible technology estate.
+### Each project picks its own technologies. This leads to lots of different tools that may not work well together.
 
 #### **How to determine if this good enough**
 
@@ -52,7 +52,7 @@ Below are **rapidly actionable** ways to move away from fully independent, unali
 
 By documenting existing tools, drafting minimal governance, facilitating knowledge exchange, pinpointing shared solutions, and preparing a technology steering approach, you mitigate fragmentation while still preserving some project autonomy.
 
-### **Uniform Technology Mandate:** Technology choices are highly regulated, with a uniform, organisation-wide technology stack that all projects must adhere to.
+### Everyone must use the same technology stack.
 
 #### **How to determine if this good enough**
 
@@ -98,7 +98,7 @@ Below are **rapidly actionable** ways to refine a uniform tech mandate:
 
 By allowing exceptions via a straightforward process, regularly updating the approved tech list, sponsoring pilot projects, scheduling periodic reviews, and highlighting cost/security gains, you preserve the benefits of uniform technology while avoiding stagnation or shadow IT.
 
-### **Guided by Outdated Resources:** A technology radar and some documented patterns exist, but they are outdated and not widely regarded as useful or relevant.
+### We have some guidance, but it’s out of date and not very useful.
 
 #### **How to determine if this good enough**
 
@@ -145,7 +145,7 @@ Below are **rapidly actionable** ways to revitalise or replace outdated resource
 
 By quickly refreshing the tech radar, establishing a living wiki, scheduling periodic updates, gathering project feedback, and focusing on real success stories, you transform outdated references into a relevant, frequently consulted guide that shapes better technology decisions.
 
-### **Current and Maintained Guidance:** A regularly updated technology radar, along with current documentation and patterns, covers a wide range of use cases and is actively used for guidance.
+### We have up-to-date guidance and documents that help teams choose the right technology.
 
 #### **How to determine if this good enough**
 
@@ -193,7 +193,7 @@ Below are **rapidly actionable** ways to enhance current, well-used guidance:
 
 By enhancing feedback channels, adding security/cost insights to each item, marking deprecated technologies, hosting showcases, and collaborating across agencies, you keep the guidance fresh, relevant, and beneficial for new project tech decisions.
 
-### **Collaborative and Evolving Ecosystem:** Regular show-and-tell sessions and collaboration with existing teams are encouraged. There's a strong emphasis on reusing and extending existing solutions, alongside rewarding innovation and experimentation.
+### Teams share what works, reuse solutions, and are encouraged to try new things.
 
 #### **How to determine if this good enough**
 

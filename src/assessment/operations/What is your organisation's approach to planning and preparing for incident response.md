@@ -1,11 +1,11 @@
 ---
-title: What is your organisation's approach to planning and preparing for incident response?
+title: How do you plan for incidents?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **Ad-Hoc and Basic Efforts:** Incident response is primarily ad-hoc, with some basic efforts in place but no formalised plan or structured approach.
+### We don't have a formal incident plan.
 
 #### **How to determine if this good enough**
 
@@ -58,7 +58,7 @@ Below are **rapidly actionable** steps to move beyond ad-hoc incident response:
 
 By drafting a minimal IR checklist, assigning key roles, enabling basic alerts, and learning from each incident, you can quickly improve your readiness without a massive resource investment.
 
-### **Initial Documentation at Service Launch:** A documented incident response plan is required and established at the point of introducing a new service to the live environment.
+### We create a plan when launching a new service.
 
 #### **How to determine if this good enough**
 
@@ -110,7 +110,7 @@ Below are **rapidly actionable** ways to strengthen an initial documented IR pla
 
 By embedding IR considerations into your pipeline, linking them to monitoring resources, referencing official guidance, and doing a post-launch review, you maintain an up-to-date plan that effectively handles incidents as the service evolves.
 
-### **Regularly Updated Incident Plan:** The incident response plan is not only documented but also periodically reviewed and updated to ensure its relevance and effectiveness.
+### We have plans that we keep up to date.
 
 #### **How to determine if this good enough**
 
@@ -160,7 +160,7 @@ Below are **rapidly actionable** ways to elevate a regularly updated IR plan:
 
 By linking plan updates to actual org changes, distributing it via version control, frequently testing via drills, and preparing for advanced threats, you maintain an agile, effective IR plan that evolves with your environment.
 
-### **Integrated and Tested Plans:** Incident response planning is integrated into the broader IT and business continuity planning. Regular testing of the plan is conducted to validate procedures and roles.
+### Incident plans are part of wider IT and business continuity, and tested often.
 
 #### **How to determine if this good enough**
 
@@ -211,7 +211,7 @@ Below are **rapidly actionable** ways to further optimise integrated, tested IR 
 
 By simulating cross-region failovers, integrating real-time alert triggers with continuity plans, conducting thorough post-incident reviews, and weaving communications into the IR plan, you maintain a robust, seamlessly tested approach that can respond to diverse incident scenarios.
 
-### **Rehearsed and Proven Response Capability:** Incident response plans are not only documented and regularly updated but also rigorously rehearsed. The organisation is capable of successfully recovering critical systems within a working day.
+### We test our plans, keep them up to date and can recover critical systems within a day.
 
 #### **How to determine if this good enough**
 

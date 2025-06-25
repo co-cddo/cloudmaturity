@@ -1,11 +1,11 @@
 ---
-title: What approaches does your organisation use to plan, measure, and optimise cloud spending?
+title: How do you manage costs?
 tags: cost
 eleventyNavigation:
   parent: cost
 ---
 
-### **Restricted Billing Visibility:** Billing details are only accessible to management and finance teams, with limited transparency across the organisation.
+### Our finance or management team can see spending reports.
 
 #### **How to determine if this good enough**
 
@@ -91,7 +91,7 @@ Below are tangible ways to create a more open and proactive cost culture:
 
 By following these strategies, you shift from a guarded approach—where only finance or management see the details—to a more inclusive cost culture. The biggest benefit is that your engineering teams gain the insight they need to optimise continuously. Rather than discovering at the end of the month that a test environment was running at full throttle, teams can detect and fix potential overspending early. Over time, this fosters a sense of shared cost responsibility, encourages more efficient design decisions, and drives proactive cost management practices across the organisation.
 
-### **Proactive Spend Commitment by Finance:** The finance team uses billing information to make informed decisions about pre-committed cloud spending where it's deemed beneficial.
+### Finance uses billing data to plan spending.
 
 #### **How to determine if this good enough**
 
@@ -168,7 +168,7 @@ To enhance a “Proactive Spend Commitment by Finance” model, organisations of
 
 By progressively weaving in these improvements, you move from a purely finance-led contract negotiation model to one where decisions about reserved spending or commitments are strongly informed by real-time engineering data and future product roadmaps. This more holistic approach leads to higher reservation utilisation, fewer wasted commitments, and better alignment of your cloud spending with actual business goals. The result is typically a more predictable cost structure, improved cost efficiency, and reduced risk of paying for capacity you do not need.
 
-### **Cost-Effective Resource Management:** Cloud environments and applications are configured for cost-efficiency, such as automatically shutting down or scaling down non-production environments during off-hours.
+### We use some automation to help reduce costs.
 
 #### **How to determine if this good enough**
 
@@ -258,7 +258,7 @@ If you wish to refine your cost-efficiency, consider adding more sophisticated p
 
 By layering these enhancements, you move beyond basic scheduling or minimal auto-scaling. Instead, you cultivate a deeply ingrained practice of continuous optimisation. You harness automation to enforce best practices, integrate cost awareness into everyday decisions, and systematically re-architect services for maximum efficiency. Over time, the result is a lean cloud environment that can expand when needed but otherwise runs with minimal waste.
 
-### **Cost-Aware Development Practices:** Developers and engineers have daily visibility into cloud costs and are encouraged to consider the financial impact of their choices in the development phase.
+### Developers can see and consider costs.
 
 #### **How to determine if this good enough**
 
@@ -340,7 +340,7 @@ If you want to upgrade your cost-aware development environment, you can deepen t
 
 By adopting these approaches, you elevate cost awareness from a passive, occasional concern to a dynamic, integrated element of day-to-day development. This deeper integration helps your teams design, code, and deploy with financial considerations in mind—often leading to innovative solutions that deliver both performance and cost savings.
 
-### **Comprehensive Cost Management and Optimisation:** Multi-tier spend alerts are configured to notify various levels of the business for immediate action. Developers and engineers regularly review and prioritise changes to improve cost-effectiveness significantly.
+### We manage cost as a team, get alerts and look for savings.
 
 Comprehensive Cost Management and Optimisation represents a mature stage in your organisation’s journey toward efficient cloud spending. At this point, cost transparency and accountability span multiple layers—from frontline developers to senior leadership. You have automated alerting structures in place to catch anomalies quickly, you track cost optimisation initiatives with the same rigor as feature delivery, and you’ve embedded cost considerations into operational runbooks. Below are key characteristics and actionable guidance to maintain or further refine this approach:
 

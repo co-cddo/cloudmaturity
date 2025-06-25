@@ -1,11 +1,11 @@
 ---
-title: How does your organisation manage its cloud environment?
+title: How do you manage your cloud environment?
 tags: governance
 eleventyNavigation:
   parent: governance
 ---
 
-### **Manual Click-Ops as Required:** Cloud management is performed manually as and when needed, without any systematic approach or automation.
+### Manually, when needed, with no set process.
 
 #### **How to determine if this good enough**
 
@@ -63,7 +63,7 @@ However, purely manual approaches risk misconfigurations, leftover resources, se
 
 By documenting runbooks/playbooks, ensuring logs are enabled and accessible, capturing rationale behind changes, and frequently updating your documentation, you reduce the risks tied to manual "click-ops" while preparing the groundwork for partial or full automation.
 
-### **Documented Manual Click-Ops:** Manual click-ops are used, but steps are documented. Operations may be tested in a similarly maintained non-production environment, though discrepancies likely exist between environments.
+### Documented manual processes. Test environments may not match live ones.
 
 #### **How to determine if this good enough**
 
@@ -111,7 +111,7 @@ Below are **rapidly actionable** improvements:
 
 By partially automating recurring tasks, carefully recording environment discrepancies, verifying deployments, piloting Infrastructure-as-Code, and implementing drift checks, you mitigate errors and pave the way for more complete automation.
 
-### **Semi-Automated with Some Scripting:** Some aspects of cloud management are automated, possibly through scripting, but manual interventions are still common for complex tasks or configurations.
+### Some things are scripted, but we still do a lot by hand.
 
 #### **How to determine if this good enough**
 
@@ -157,7 +157,7 @@ Below are **rapidly actionable** ways to evolve from partial scripting:
 
 By incrementally automating complex changes, standardising on an IaC framework, establishing a basic CI/CD workflow, ensuring code reviews, and utilising vendor orchestration tools, you reduce your reliance on manual interventions and strengthen cloud environment consistency.
 
-### **Highly Automated with Standardised Processes:** Cloud management is largely automated with standardised processes across environments. Regular reviews and updates are made to ensure alignment with best practices.
+### Most things are standardised and automated. We often review and make improvements.
 
 #### **How to determine if this good enough**
 
@@ -205,7 +205,7 @@ Below are **rapidly actionable** ways to refine a highly automated approach:
 
 By enabling automatic drift remediation, implementing policy-as-code, enhancing DevSecOps pipeline checks, conducting periodic architecture reviews, and collaborating across agencies, you refine a strong foundation of standardised, highly automated processes for cloud management.
 
-### **Fully Managed by Declarative Code with Drift Detection:** Cloud management is fully automated and managed by declarative code. Continual automated drift detection is in place, with alerts for any deviations treated as significant incidents.
+### Everything is automated using code and we get alerts if anything changes unexpectedly.
 
 #### **How to determine if this good enough**
 

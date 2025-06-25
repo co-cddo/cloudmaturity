@@ -1,11 +1,11 @@
 ---
-title: How does your organisation qualify suppliers and partners for cloud initiatives?
+title: How do you choose suppliers and partners for cloud work?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **Basic Qualification Based on Marketing and Framework Presence:** Selection is based primarily on the supplier's sales literature and their presence on commercial buying frameworks.
+### We choose suppliers based on their marketing or being on frameworks.
 
 #### **How to determine if this good enough**
 
@@ -52,7 +52,7 @@ Below are **rapidly actionable** steps to move beyond marketing-based selection:
 
 By introducing a basic technical/security questionnaire, referencing real-life feedback, and piloting short engagements, you reduce reliance on marketing materials and ensure suppliers at least meet foundational public sector cloud requirements.
 
-### **Initial Due Diligence and Basic Compliance Checks:** Suppliers are chosen through basic due diligence, focusing on compliance with minimum standards and requirements.
+### We do basic checks to make sure suppliers meet standards.
 
 #### **How to determine if this good enough**
 
@@ -101,7 +101,7 @@ Below are **rapidly actionable** methods to elevate from minimal compliance chec
 
 By integrating cloud-specific partner certifications, verifying past performance, and adding mandatory contract clauses around risk and exit, you ensure your due diligence extends beyond basic compliance to real technical and operational aptitude.
 
-### **Moderate Screening for Experience and Compliance:** Partners are qualified based on their industry experience, compliance with relevant standards, and basic alignment with organisational needs.
+### We check suppliers’ experience and make sure they fit our needs.
 
 #### **How to determine if this good enough**
 
@@ -150,7 +150,7 @@ Below are **rapidly actionable** suggestions to refine moderate screening:
 
 By pushing for real demonstrations of security/architecture, assessing DevSecOps maturity, reviewing cost management solutions, checking DR abilities, and using a weighted scoring system, you gain deeper insight into a supplier’s true capability and alignment with your goals.
 
-### **Comprehensive Evaluation Including Technical and Ethical Alignment:** Suppliers are thoroughly vetted for technical competence, ethical alignment with organisational values, and their ability to support specific cloud objectives.
+### We check for technical skills, values and ability to support our objectives.
 
 #### **How to determine if this good enough**
 
@@ -198,7 +198,7 @@ Below are **rapidly actionable** ways to expand a comprehensive evaluation:
 
 By employing a custom questionnaire that includes ethical, environmental, and advanced cloud criteria, verifying code-of-conduct alignment, ensuring compatibility with your technical roadmap, piloting co-creation sprints, and weighting sustainability, you further refine the comprehensive evaluation for a well-rounded supplier selection process.
 
-### **Strategic Selection with Emphasis on Long-Term Value and Leadership Vision:** Suppliers are selected based on a track record of excellence, recommendations from other departments, relevant certifications, demonstrable technical leadership, alignment with the civil service code, support for programs like apprenticeships, strong engagement with the leadership vision, clear articulation of risks, measurable KPIs, and long-term value for money.
+### We look for suppliers with a strong track record, clear leadership, and long-term value.
 
 #### **How to determine if this good enough**
 

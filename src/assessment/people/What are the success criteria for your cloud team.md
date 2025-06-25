@@ -1,11 +1,11 @@
 ---
-title: What are the success criteria for your cloud team?
+title: What does success look like for your cloud team?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **No Defined Success Criteria:** The cloud team operates without specific, defined criteria for measuring success.
+### The team doesn’t have specific ways to measure success.
 
 #### **How to determine if this good enough**
 
@@ -53,7 +53,7 @@ Below are **rapidly actionable** steps to establish at least minimal success cri
 
 By identifying basic cloud objectives, selecting simple metrics, confirming leadership support, tracking progress, and establishing a baseline, you move from undefined success to a workable system that can be refined as your team matures.
 
-### **Initial Achievements with Proofs of Concept:** Success is measured by completing initial proofs of concept or developing a 'minimum viable cloud/platform'.
+### Success means completing initial projects or building a basic cloud platform.
 
 #### **How to determine if this good enough**
 
@@ -100,7 +100,7 @@ Below are **rapidly actionable** steps to advance beyond PoC-based success:
 
 By defining clear triggers for scaling PoCs, measuring advanced metrics, engaging real users, sharing lessons learned, and tying PoCs to broader goals, you accelerate from pilot outcomes to genuine organisational transformation.
 
-### **Launching Workloads in Production:** Success includes transitioning one or more workloads into a live production environment on the cloud.
+### Success is launching one or more services in the cloud for real users.
 
 #### **How to determine if this good enough**
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** ways to refine production-based success criteri
 
 By incorporating operational metrics, weaving in security and cost success factors, ensuring a continuous pipeline approach, celebrating achievements, and planning further expansions, you create a robust definition of success that fosters ongoing improvements.
 
-### **Scaling Prototypes to Core Services:** Success involves scaling initial prototypes to operate core technical services in the cloud, supporting business-critical applications.
+### Success is moving core business services to the cloud.
 
 #### **How to determine if this good enough**
 
@@ -198,7 +198,7 @@ Below are **rapidly actionable** strategies to further scale prototypes into cor
 
 By adopting advanced resiliency and security, measuring impact thoroughly, standardising architectural approaches, and collaborating with other public sector bodies, you mature from simply scaling prototypes to robust, enterprise-level cloud service delivery.
 
-### **Innovation and Value Creation Alignment:** The organisation has established success criteria that not only focus on cloud-based innovation and experimentation but also on creating tangible value through transformation initiatives, all aligned with the organisation’s broader goals and strategy.
+### Success means using the cloud to innovate, deliver real value by tranforming core services, and support the organisation’s overall goals.
 
 #### **How to determine if this good enough**
 

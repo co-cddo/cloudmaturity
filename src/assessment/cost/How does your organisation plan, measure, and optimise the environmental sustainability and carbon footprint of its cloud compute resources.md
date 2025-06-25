@@ -1,11 +1,11 @@
 ---
-title: How does your organisation plan, measure, and optimise the environmental sustainability and carbon footprint of its cloud compute resources?
+title: How do you track sustainability?
 tags: cost
 eleventyNavigation:
   parent: cost
 ---
 
-### **Basic Vendor Reliance:** Sustainability isn't actively measured internally; reliance is placed on cloud vendors who are contractually obligated to work towards carbon neutrality, likely through offsetting.
+### We don't track sustainability ourselves.
 
 #### **How to determine if this good enough**
 
@@ -68,7 +68,7 @@ Below are **rapidly actionable** steps that provide greater visibility and ensur
 
    This ensures any interest in deeper environmental reporting can gather support before usage grows further.
 
-### **Initial Awareness and Basic Policies:** Some basic policies and goals for sustainability are set. Efforts are primarily focused on awareness and selecting vendors with better environmental records.
+### We have some sustainability goals and prefer greener providers.
 
 #### **How to determine if this good enough**
 
@@ -129,7 +129,7 @@ Here are quick wins to strengthen your approach and make it more actionable:
 
 By rapidly applying these steps—using native vendor tools to measure usage, establishing minimal but meaningful guidelines, and scheduling brief training or check-ins—you elevate your policy from mere awareness to actual practice.
 
-### **Active Measurement and Target Setting:** The organisation actively measures its cloud compute carbon footprint and sets specific targets for reduction. This includes choosing cloud services based on their sustainability metrics.
+### We measure the environmental impact of our cloud use and set targets.
 
 #### **How to determine if this good enough**
 
@@ -189,7 +189,6 @@ Focus on **rapid, vendor-native steps** to convert targets into tangible reducti
    Serverless can significantly cut wasted resources, which aligns with your reduction targets.
 
 1. **Adopt "Carbon Budgets" in Project Plans**
-
    - For every new app or service, define a carbon allowance. If estimates exceed the budget, require design changes. Incorporate vendor solutions that show region-level carbon data:
      - [Azure Region Carbon Intensity Mapping](https://learn.microsoft.com/en-us/azure/carbon-optimisation/view-emissions)
      - [AWS Region Carbon Differences in Well-Architected Tool](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/region-selection.html)
@@ -202,7 +201,7 @@ These tools provide insights into the carbon emissions associated with different
 
 Implementing these steps swiftly helps ensure you don’t just measure but actually reduce your carbon footprint. Regular iteration—checking usage data, right-sizing, adjusting autoscaling—ensures continuous progress toward your stated targets.
 
-### **Integrated Sustainability Practices:** Sustainability is integrated into cloud resource planning and usage. This includes regular monitoring and reporting on sustainability metrics and making adjustments to improve environmental impact.
+### We monitor sustainability and make changes to improve.
 
 #### **How to determine if this good enough**
 
@@ -234,7 +233,6 @@ Despite these achievements, additional gains can still be made, especially in ad
 Actionable steps to deepen your integrated approach:
 
 1. **Set Up Automated Governance Rules**
-
    - Enforce region-based or instance-based policies automatically:
      - [AWS Service Control Policies to block high-carbon region usage in non-essential cases](https://docs.aws.amazon.com/organisations/latest/userguide/orgs_manage_policies_scps.html)
      - [Azure Policy for "Allowed Locations" or "Tagging Enforcement" with sustainability tags](https://learn.microsoft.com/en-us/azure/governance/policy/tutorials/govern-tags)
@@ -275,7 +273,7 @@ Implementing these policies ensures that resources are deployed in regions with 
 
 By adding these automated controls, pipeline checks, and cross-functional alignment, you ensure that your integrated sustainability approach not only continues but evolves in real time. You become more agile in responding to shifting requirements and new tools, maintaining a leadership stance in UK public sector cloud sustainability.
 
-### **Advanced Optimisation and Dynamic Management:** Advanced strategies are in place, like automatic time and location shifting of workloads to minimise impact. Data retention and cloud product selection are deeply aligned with sustainability goals and carbon footprint metrics.
+### We use automated approaches to optimise sustainability.
 
 #### **How to determine if this good enough**
 

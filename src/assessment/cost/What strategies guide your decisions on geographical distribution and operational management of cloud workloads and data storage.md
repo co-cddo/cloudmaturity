@@ -1,11 +1,11 @@
 ---
-title: What strategies guide your decisions on geographical distribution and operational management of cloud workloads and data storage?
+title: How do you choose where to run workloads and store data?
 tags: cost
 eleventyNavigation:
   parent: cost
 ---
 
-### **Intra-Region Distribution:** Workloads and data are spread across multiple availability zones within a single region to enhance availability and resilience.
+### Everything in one region.
 
 #### **How to determine if this good enough**
 
@@ -58,7 +58,7 @@ Below are **rapidly actionable** ways to refine an intra-region approach:
 
 By automatically spreading workloads, replicating data in multiple AZs, ensuring AZ-aware networking, regularly testing failover, and monitoring cross-AZ costs, you solidify your organisation’s resilience within a single region while controlling costs.
 
-### **Selective Multi-Region Utilisation:** An additional, legally compliant non-UK region is used for specific purposes, such as non-production workloads, certain data types, or as part of disaster recovery planning.
+### We use another region for non-production workloads or backup and recovery.
 
 #### **How to determine if this good enough**
 
@@ -100,7 +100,7 @@ Below are **rapidly actionable** improvements:
 
 By automating cross-region backups, offloading dev/test workloads where cost is lower, defining a minimal DR plan, regularly testing failover, and ensuring data residency compliance, you expand from a single-region approach to a modest but effective multi-region strategy.
 
-### **Capability and Sustainability-Driven Selection:** Regions are chosen based solely on their technical capabilities, cost-effectiveness, and environmental sustainability credentials, without any specific technical constraints.
+### We pick regions based on cost, performance, or sustainability.
 
 #### **How to determine if this good enough**
 
@@ -141,7 +141,7 @@ Below are **rapidly actionable** enhancements:
 
 By using sustainability calculators to choose greener regions, implementing real-time cost/performance checks, ensuring multi-region data readiness, managing user latency via CDNs or local replicas, and documenting region-swapping, you fully leverage each provider’s global footprint for cost and environmental benefits.
 
-### **Dynamic and Cost-Sustainable Distribution:** Workloads are dynamically allocated across various regions and availability zones, with scheduling optimised for cost-efficiency and sustainability, adapting in real-time to changing conditions.
+### We automatically move workloads to different regions to save money or energy.
 
 #### **How to determine if this good enough**
 

@@ -1,11 +1,11 @@
 ---
-title: What is your primary method for provisioning cloud services?
+title: How do you provision cloud services?
 tags: governance
 eleventyNavigation:
   parent: governance
 ---
 
-### **Manual or Imperative Provisioning:** Cloud services are primarily provisioned manually through consoles, portals, CLI, or other tools, without significant automation.
+### Manually, with no automation.
 
 #### **How to determine if this good enough**
 
@@ -62,7 +62,7 @@ Below are **rapidly actionable** steps to move beyond purely manual provisioning
 
 By scripting basic tasks, implementing a simple naming/tagging policy, adding minimal approvals, and piloting an IaC solution, you start transitioning from ad hoc provisioning to more consistent automation practices.
 
-### **Limited Scripting with No Standards:** Provisioning involves some scripting, but there are no formal standards or consistency across project teams.
+### We use some scripts, but there are no standards or consistency.
 
 #### **How to determine if this good enough**
 
@@ -120,7 +120,7 @@ Below are **rapidly actionable** ways to standardise your provisioning scripts:
 
 By consolidating scripts in a shared repository, defining lightweight standards, introducing IaC tools, and fostering peer reviews, you gradually unify your provisioning process and reduce fragmentation.
 
-### **Partial Declarative Automation:** Declarative automation is used for provisioning some cloud services across their lifecycle, but this practice is not uniform across all teams.
+### We use automation for some services, but not everything.
 
 #### **How to determine if this good enough**
 
@@ -181,7 +181,7 @@ Below are **rapidly actionable** ways to expand your declarative automation:
 
 By standardising your IaC approach, providing shared templates, enforcing usage even in lower environments, and automating checks, you accelerate your journey toward uniform, declarative provisioning across teams.
 
-### **Widespread Use of Declarative Automation:** Most project teams employ declarative automation for cloud service provisioning, indicating a higher level of maturity in automation practices.
+### Most teams use automation to set up cloud services.
 
 #### **How to determine if this good enough**
 
@@ -236,7 +236,7 @@ Below are **rapidly actionable** ways to continue refining:
 
 By using formal CI/CD for all deployments, fostering a DevOps guild, strengthening compliance checks, and supporting multi-cloud approaches, you refine widespread IaC usage into a highly orchestrated, reliable practice across the organisation.
 
-### **Mandatory Declarative Automation via CI/CD:** Declarative automation is mandated for provisioning all production services, and it is exclusively executed through Continuous Integration/Continuous Deployment (CI/CD) pipelines.
+### All cloud services are set up by CI/CD pipelines.
 
 #### **How to determine if this good enough**
 

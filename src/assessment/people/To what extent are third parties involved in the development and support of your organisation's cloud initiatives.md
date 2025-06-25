@@ -1,11 +1,11 @@
 ---
-title: To what extent are third parties involved in the development and support of your organisation's cloud initiatives?
+title: How much do you rely on third parties for cloud work?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **Complete Reliance on Third Parties:** Third parties are fully responsible for all cloud work, with unrestricted access to the entire cloud infrastructure.
+### Third parties do all our cloud work and have full access.
 
 #### **How to determine if this good enough**
 
@@ -58,7 +58,7 @@ Below are **rapidly actionable** ways to reduce over-dependence on a single thir
 
 By retaining critical admin access, demanding thorough documentation, setting rigorous SLAs, auditing access, and growing your internal skill base, you hedge against supplier lock-in or failure and maintain some sovereignty over crucial cloud operations.
 
-### **Significant Third-Party Involvement:** Third parties play a major role in delivering certain aspects of cloud work and have full access to cloud accounts.
+### Third parties do a lot of our cloud work and have full access.
 
 #### **How to determine if this good enough**
 
@@ -109,7 +109,7 @@ Below are **rapidly actionable** improvements:
 
 By applying least privilege IAM, isolating supplier access, logging all privileged actions, collaborating on architecture/cost reviews, and planning for possible transitions, you maintain high security while leveraging external expertise effectively.
 
-### **Specialised Third-Party Support with Limited Access:** Third-party providers contribute specialised knowledge and maintain 'break glass' (emergency) admin access only.
+### Third parties help with specialist tasks and have emergency access only.
 
 #### **How to determine if this good enough**
 
@@ -157,7 +157,7 @@ Below are **rapidly actionable** ways to refine specialised third-party support:
 
 By automating break-glass credentials, establishing clear incident protocols, conducting annual drills, logging all privileged actions, and regularly upskilling staff with supplier-led sessions, you can maintain strong security while accessing specialised expertise only when needed.
 
-### **Specialised Knowledge without Privileged Access:** Third parties provide specialised expertise but do not have any form of privileged access to cloud infrastructure.
+### Third parties give advice but have no special access.
 
 #### **How to determine if this good enough**
 
@@ -205,7 +205,7 @@ Below are **rapidly actionable** ways to leverage specialised knowledge further:
 
 By granting read-only roles for better collaboration, scheduling architecture or security reviews, requesting continuous cost/security analysis, and structuring knowledge transfers, you maximise the benefits of external specialists while maintaining tight control over your environment.
 
-### **Minimal or Augmentative Third-Party Role:** Third parties are either not used at all or serve purely as staff augmentation, without any privileged access or holding exclusive knowledge.
+### We do not use third parties, or they only help as extra staff with no special access.
 
 #### **How to determine if this good enough**
 

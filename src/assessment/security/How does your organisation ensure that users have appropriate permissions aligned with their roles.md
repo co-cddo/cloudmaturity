@@ -1,11 +1,11 @@
 ---
-title: How does your organisation ensure that users have appropriate permissions aligned with their roles?
+title: How do you make sure people have the right access for their role?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Ad-Hoc and Informal Review Process:** User entitlements and profiles are reviewed in an ad-hoc, informal manner with administrators manually managing these as they see fit.
+### We review users' access when we need to.
 
 #### **How to determine if this good enough**
 
@@ -53,7 +53,7 @@ Below are **rapidly actionable** steps to transition from ad-hoc reviews to basi
 
 By laying out a minimal access policy, assigning RACI for administration, adopting cloud-native IAM, maintaining a simple user inventory, and scheduling monthly or quarterly check-ins, you’ll quickly improve from ad-hoc reviews to a more reliable approach.
 
-### **Periodic Manual Reviews with Limited Action:** Periodic manual reviews of access rights are conducted for some systems, but access is rarely revoked or reduced due to concerns about unintended consequences.
+### We sometimes review access, but rarely remove it.
 
 #### **How to determine if this good enough**
 
@@ -100,7 +100,7 @@ Below are **rapidly actionable** ways to evolve beyond limited-action reviews:
 
 By adopting test environments before revoking privileges, classifying user risk levels, building simple dashboards, demonstrating safe revocations, and recognising best practices, you reduce hesitancy and further align with security best practices.
 
-### **Regular Manual Reviews, Primarily Additive:** Regular, manual reviews of access rights are conducted across most systems. However, changes to access are generally additive rather than reductive.
+### We review access often, but mostly add new access rather than remove it.
 
 #### **How to determine if this good enough**
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** steps to incorporate permission reduction:
 
 By adding a usage-based revocation policy, setting expiry for short-lived roles, integrating quick approval workflows, recognising teams that successfully remove unused privileges, and potentially increasing review frequency, you shift from additive-only changes to an environment that truly enforces minimal privileges.
 
-### **Regular Reviews with Defined Expiry Dates:** Access is regularly reviewed, certified, and remediated. Role allocations include defined expiry dates, necessitating review and re-certification.
+### Access is reviewed regularly, with expiry dates set for each role.
 
 #### **How to determine if this good enough**
 
@@ -196,7 +196,7 @@ Below are **rapidly actionable** methods to enhance expiry-based reviews:
 
 By leveraging cloud-native review tools, alerting for soon-to-expire roles, risk-scoring high-privilege accounts for more frequent checks, implementing delegated re-approval processes, and storing thorough audit trails, you maintain an agile, secure environment aligned with best practices.
 
-### **Automated, Risk-Based Access Reviews:** Fully integrated, automated reviews ensure users have permissions appropriate to their roles. Access rights are dynamically adjusted based on role changes or review outcomes. Both access roles and their allocations have expiry dates for mandatory review and re-certification.
+### Reviews are automated. Access changes when roles change, and all access has expiry dates.
 
 #### **How to determine if this good enough**
 

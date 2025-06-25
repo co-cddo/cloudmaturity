@@ -1,11 +1,11 @@
 ---
-title: How does your organisation allocate capacity for production workloads in the cloud?
+title: How do you set capacity for live services?
 tags: cost
 eleventyNavigation:
   parent: cost
 ---
 
-### **Peak Provisioning:** Capacity is typically provisioned based on peak usage estimates, potentially leading to underutilisation during off-peak times.
+### We set capacity for the busiest times, even if it’s not always needed.
 
 #### **How to determine if this good enough**
 
@@ -93,7 +93,7 @@ Implementing autoscaling in a controlled environment allows you to evaluate its 
 
 Through monitoring, scheduling, basic autoscaling pilots, and potential reserved capacity, you can move away from static peak provisioning. This approach preserves reliability while unlocking efficiency gains—an important step in balancing cost, compliance, and performance goals in the UK public sector.
 
-### **Manual Scaling Based on Average Consumption:** Capacity is provisioned for average usage, with manual scaling adjustments made seasonally or as needed.
+### We adjust capacity when needed.
 
 #### **How to determine if this good enough**
 
@@ -188,7 +188,7 @@ Here are **rapidly actionable** steps to evolve from manual seasonal scaling to 
 
 By automating your manual scaling processes, exploring partial autoscaling, and shifting spiky tasks to serverless, you unlock more agility and cost efficiency. This approach helps ensure you’re not left scrambling if usage deviates from seasonal patterns.
 
-### **Basic Autoscaling for Certain Components:** Autoscaling is enabled for some cloud components, primarily based on simple capacity or utilisation metrics.
+### Some systems scale automatically.
 
 #### **How to determine if this good enough**
 
@@ -338,7 +338,7 @@ Below are **actionable** ways to upgrade from basic autoscaling:
 
 By broadening autoscaling across more components, incorporating richer metrics, scheduling, and advanced cost strategies like spot instances, you transform your "basic" scaling approach into a more agile, cost-effective solution. Over time, these steps foster robust, automated resource management across your entire environment.
 
-### **Widespread Autoscaling with Basic Metrics:** Autoscaling is a common practice, although it mainly utilises basic metrics, with limited use of log or application-specific metrics.
+### Most systems scale automatically.
 
 #### **How to determine if this good enough**
 
@@ -453,7 +453,7 @@ Here are **actionable** ways to refine your widespread autoscaling strategy to h
 
 By incorporating more sophisticated application or log-based metrics, predictive scaling, and user-centric triggers, you ensure capacity aligns closely with real workloads. This approach elevates your autoscaling from a broad CPU/memory-based strategy to a finely tuned system that balances user experience, performance, and cost efficiency.
 
-### **Advanced Autoscaling Using Detailed Metrics:** Autoscaling is ubiquitously used, based on sophisticated log or application metrics, allowing for highly responsive and efficient capacity allocation.
+### Everything scales automatically.
 
 #### **How to determine if this good enough**
 
@@ -550,7 +550,6 @@ Even at the top level, you can refine and push boundaries further:
      - [OCI Data Science/AI services that produce dynamic scale signals consumed by instance pools or OKE clusters](https://www.oracle.com/cloud/ai/).
 
 1. **Adopt Sustainable/Green Autoscaling Policies**
-
    - If your usage is flexible, consider shifting workloads to times or regions with lower carbon intensity:
      - [AWS Sustainability Pillar in Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/sustainability-pillar.html) and [region selection guidance for scheduling large tasks](https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/region-selection.html).
      - [Azure Emissions Impact Dashboard](https://www.microsoft.com/en-us/sustainability/emissions-impact-dashboard) integrated with scheduled scale tasks in greener data center regions.

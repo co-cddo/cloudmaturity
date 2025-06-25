@@ -1,11 +1,11 @@
 ---
-title: How does your organisation approach the use of compute services in the cloud?
+title: How do you run services in the cloud?
 tags: cost
 eleventyNavigation:
   parent: cost
 ---
 
-### **Long-Running Homogeneous VMs:** Workloads are consistently deployed on long-running, homogeneously sized Virtual Machines (VMs), without variation or optimisation.
+### Long-running virtual machines (VMs).
 
 #### **How to determine if this good enough**
 
@@ -81,7 +81,7 @@ Here are **rapidly actionable** improvements to help you move beyond purely stat
 
 By monitoring usage, applying right-sizing, scheduling idle time, and introducing a small container pilot, you can meaningfully reduce waste. Over time, you’ll build momentum toward more flexible compute strategies while still respecting the constraints of your existing environment.
 
-### **Primarily Long-Running VMs with Limited Experimentation:** Most workloads are on long-running VMs, with some limited experimentation in containers or function-based services for non-critical tasks.
+### VMs with containers or serverless for a few minor things.
 
 #### **How to determine if this good enough**
 
@@ -156,7 +156,7 @@ Here are **actionable** next steps to accelerate your modernisation journey with
 
 Through these steps—structured expansions of containerised or serverless pilots, improved auto-scaling of VMs, and staff training—your organisation can gradually shift from "limited experimentation" to a more balanced compute ecosystem. The result is improved agility, potential cost savings, and readiness for more modern architectures.
 
-### **Mixed Use with Some Advanced Compute Options:** Some production workloads are run in containers or function-based compute services. Ad-hoc use of short-lived VMs is practiced, with efforts to right-size based on workload needs.
+### A mix of VMs and containers or serverless for some key systems.
 
 #### **How to determine if this good enough**
 
@@ -239,7 +239,7 @@ Below are **rapidly actionable** ways to enhance your mixed compute model:
 
 By unifying your deployment practices, consolidating observability, enforcing tagging, and refining autoscaling or discount usage, you move from an ad-hoc mix of compute styles to a more cohesive, cost-effective cloud ecosystem. This sets the stage for robust, consistent governance and significant agility gains.
 
-### **Regular Use of Short-Lived VMs and Containers:** There is regular use of short-lived VMs and containers, along with some function-based compute services. This indicates a move towards more flexible and scalable compute options.
+### Containers or serverless.
 
 #### **How to determine if this good enough**
 
@@ -320,7 +320,7 @@ Below are **actionable** expansions to push your ephemeral usage approach furthe
 
 By formalising your decision framework, expanding event-driven architectures, ensuring container security, and strengthening IaC patterns, you solidify your short-lived compute model. This approach reduces overheads, fosters agility, and helps UK public sector teams remain compliant with cost and operational excellence targets.
 
-### **'Fit for Purpose' Approach with Rigorous Right-sizing:** Cloud services selection is driven by a strict 'fit for purpose' approach. This includes a rigorous continual right-sizing process and a solution evaluation hierarchy favoring SaaS > FaaS > Containers as a Service > Platform/Orchestrator as a Service > Infrastructure as a Service.
+### We pick the best tool for each job.
 
 #### **How to determine if this good enough**
 

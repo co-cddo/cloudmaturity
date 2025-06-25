@@ -1,11 +1,11 @@
 ---
-title: How does your organisation authenticate and manage user identities?
+title: How does your organisation manage user identities and authentication?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Basic or No Identity Policies:** There are limited or no organisation-wide identity policies, such as password policies, with minimal audit or enforcement mechanisms to ensure compliance.
+### There are a few rules for managing user identities, and little checking.
 
 #### **How to determine if this good enough**
 
@@ -57,7 +57,7 @@ Below are **rapidly actionable** suggestions to introduce at least a minimal lev
 
 By introducing a foundational password policy, centralising authentication, enabling basic identity event logging, creating a minimal governance document, and scheduling incremental improvements, you’ll rapidly move beyond ad hoc practices toward a more secure, consistent approach.
 
-### **Manual Identity Policy Enforcement:** While a common set of identity policies may exist, their enforcement and audit rely on manual efforts, such as retrospective analysis of logs or reports.
+### There are some rules, and these are sometimes checked by hand.
 
 #### **How to determine if this good enough**
 
@@ -110,7 +110,7 @@ Below are **rapidly actionable** ways to automate and strengthen your identity p
 
 By automating audits, enforcing MFA, implementing automated access reviews, consolidating sign-on, and centralising policy documentation, you move from manual enforcement to a more efficient, consistently secure identity posture.
 
-### **Partially Automated Identity Management:** Organisation-wide identity policies, including 2FA/MFA for privileged accounts, are in place. Audit and enforcement processes are partially automated.
+### There are rules, such as two-factor authentication for key accounts, and some automated checks.
 
 #### **How to determine if this good enough**
 
@@ -159,7 +159,7 @@ Below are **rapidly actionable** ways to progress toward advanced identity autom
 
 By extending MFA to all, embracing role-based access, consolidating identity management, automating deprovisioning, and boosting real-time monitoring, you achieve more robust, near-seamless identity automation aligned with best practices for public sector security.
 
-### **Advanced and Mostly Automated Identity Management:** Centralised identity policies and audit procedures, possibly including 2FA/MFA for all users and leveraging Single Sign-On (SSO). Most audit and enforcement activities are automated.
+### There are central rules for all users, with most checks and enforcement automated. Single Sign-On and two-factor authentication are widely used.
 
 #### **How to determine if this good enough**
 
@@ -208,7 +208,7 @@ Below are **rapidly actionable** steps to elevate advanced identity management:
 
 By implementing conditional or JIT access, leveraging robust SIEM-based identity monitoring, holding zero-trust scenario drills, and sharing identity solutions across the public sector, you further strengthen an already advanced identity environment.
 
-### **Fully Centralised and Automated Identity Management:** Comprehensive, fully centralised identity policies and audit procedures with complete automation in enforcement. Policies encompass enterprise-standard MFA and SSO. Automated certification processes for human users and system accounts are in place, especially for accessing sensitive data, along with on-demand reporting capabilities.
+### All identity rules and checks are fully centralised and automated. This includes strong authentication, automated approval processes, and good reporting, especially for sensitive data access.
 
 #### **How to determine if this good enough**
 

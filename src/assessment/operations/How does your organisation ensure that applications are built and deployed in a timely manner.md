@@ -1,11 +1,11 @@
 ---
-title: How does your organisation ensure that applications are built and deployed in a timely manner?
+title: How fast are your builds and deployments?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **No Routine Measurements, Slow Processes:** There are no routine measurements for build and deployment times. Builds and deployments often take days to plan and hours to execute, with little monitoring for SLA compliance.
+### They take hours or days, but we don’t track it.
 
 #### **How to determine if this good enough**
 
@@ -60,7 +60,7 @@ Below are **rapidly actionable** steps to introduce basic measurements and reduc
 
 By tracking deployments in a simple manner, automating the most time-consuming tasks, and setting minimal SLAs, you begin reducing deployment time and gain insight into where further improvements can be made.
 
-### **Basic Tracking with Some Delays:** Some basic tracking of build and deployment times is in place, but processes are still relatively slow, often resulting in delays.
+### We track times, but things are often delayed.
 
 #### **How to determine if this good enough**
 
@@ -114,7 +114,7 @@ Below are **rapidly actionable** ways to reduce delays and evolve your tracking:
 
 By adding automated testing, simplifying approvals, and promoting incremental deployments, you shorten delays and create a more responsive release pipeline.
 
-### **Moderate Efficiency with Occasional Monitoring:** The organisation has moderately efficient build and deployment processes, with occasional monitoring and efforts to adhere to timelines.
+### Reasonably fast and we do some monitoring.
 
 #### **How to determine if this good enough**
 
@@ -174,7 +174,7 @@ Below are **rapidly actionable** ways to enhance your moderate efficiency:
 
 By improving monitoring, optimising test/build steps, adopting IaC, and refining deployment strategies, you make your moderately efficient process even faster and more stable.
 
-### **Streamlined Processes with Regular Monitoring:** Builds and deployments are streamlined and regularly monitored, ensuring that they are completed within reasonable timeframes.
+### Builds and deployments are quick and times are checked often.
 
 #### **How to determine if this good enough**
 
@@ -234,7 +234,7 @@ Below are **rapidly actionable** ways to optimise an already streamlined process
 
 By infusing advanced scanning, canary release strategies, feature flags, and deeper telemetry into your existing streamlined pipeline, you further reduce risk, speed up feedback, and maintain a high level of operational maturity.
 
-### **Continual Improvement with Rapid Execution:** The organisation has a strong focus on continual improvement and efficiency. 99% of builds and deployments are completed in single-digit minutes, with consistent monitoring and optimisation efforts.
+### Builds and deployments finish in minutes, we monitor this and make improvements.
 
 #### **How to determine if this good enough**
 

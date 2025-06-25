@@ -1,11 +1,11 @@
 ---
-title: How does your organisation release updates to its applications and services?
+title: How do you release updates?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **Downtime for Updates:** Updates are applied by shutting down production, updating applications in place, and restarting. Rollbacks rely on backups if needed.
+### We stop services to update them, then restart.
 
 #### **How to determine if this good enough**
 
@@ -57,7 +57,7 @@ Below are **rapidly actionable** steps to transition from downtime-based updates
 
 By adopting minimal rolling or staging-based updates, automating deployment pipelines, and ensuring robust backup/restore processes, you reduce the disruptive nature of downtime-based updates—paving the way for more advanced, near-zero-downtime methods.
 
-### **Rolling Updates During Maintenance Windows:** Updates are performed using rolling updates, impacting production capacity to some extent, usually scheduled during maintenance windows.
+### We update parts of our services at a time, usually during scheduled windows.
 
 #### **How to determine if this good enough**
 
@@ -108,7 +108,7 @@ Below are **rapidly actionable** improvements:
 
 By adding health checks, introducing partial canary or blue/green methods, and continuously automating rollbacks, you further minimise the user impact even within a rolling update strategy—potentially removing the need for fixed maintenance windows.
 
-### **Manual Cut-Over with New Versions:** New versions of applications are deployed without impacting existing production, with a manual transition to the new version during a maintenance window. Manual rollback to the previous version is possible if needed.
+### We deploy new versions and switch over by hand, with manual rollback if needed.
 
 #### **How to determine if this good enough**
 
@@ -161,7 +161,7 @@ Below are **rapidly actionable** ways to enhance manual cut-over processes:
 
 By automating as many cut-over steps as possible, implementing integrated testing, and leveraging robust observability, you reduce manual overhead while retaining the safety of parallel versions.
 
-### **Canary or Blue/Green Strategy with Manual Transition:** Updates are released using a canary or blue/green strategy, allowing manual transition between current and new versions. Formal maintenance windows are not routinely necessary.
+### We use canary or blue/green releases, usually without maintenance windows.
 
 #### **How to determine if this good enough**
 
@@ -214,7 +214,7 @@ Below are **rapidly actionable** methods to enhance manual canary or blue/green 
 
 By introducing traffic shaping with partial auto-deploy or rollback, deeper observability, and flexible chat-based control, you refine your canary or blue/green approach, reducing the manual overhead of each release while keeping high confidence.
 
-### **Dynamic Canary/Blue/Green Strategy without Maintenance Windows:** Updates are managed via a canary or blue/green strategy with dynamic transitioning of users between versions. This approach eliminates the need for formal maintenance windows.
+### We use canary or blue/green releases and switch users with no need for maintenance windows.
 
 #### **How to determine if this good enough**
 

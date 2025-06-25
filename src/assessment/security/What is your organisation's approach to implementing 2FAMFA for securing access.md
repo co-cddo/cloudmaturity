@@ -1,11 +1,11 @@
 ---
-title: What is your organisation's approach to implementing 2FA/MFA for securing access?
+title: How do you use two-factor or multi-factor authentication (2FA/MFA)?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Encouraged but Not Enforced:** 2FA/MFA is broadly recommended in organisational guidelines, but it is not mandatory or consistently enforced across services and users.
+### It's suggested, but not required.
 
 #### **How to determine if this good enough**
 
@@ -52,7 +52,7 @@ Below are **rapidly actionable** steps to move from an "encouraged" MFA model to
 
 By prioritising MFA for privileged users, educating staff on credential compromise scenarios, incentivising early adoption, providing user-friendly setup instructions, and scheduling a near-future MFA mandate, you evolve from optional guidance to real protective measures.
 
-### **Mandated but Inconsistently Enforced:** 2FA/MFA is a requirement for all services and users, but enforcement is inconsistent and may have gaps.
+### It's required, but not always enforced.
 
 #### **How to determine if this good enough**
 
@@ -97,7 +97,7 @@ Below are **rapidly actionable** methods to close the enforcement gap:
 
 By enabling built-in forced MFA, monitoring compliance, communicating a strict cutoff date, supplying alternative authenticators, and bridging older systems with SSO or proxy solutions, you systematically remove any gaps that allow single-factor access.
 
-### **Uniform Enforcement with Some Exceptions:** 2FA/MFA is uniformly enforced across all services and users, with only a few exceptions based on specific use cases or risk assessments.
+### It's enforced for nearly all users, with few exceptions.
 
 #### **How to determine if this good enough**
 
@@ -145,7 +145,7 @@ Below are **rapidly actionable** ways to remove or mitigate the last few excepti
 
 By planning for the eventual elimination of exceptions, deploying step-up authentication for sensitive tasks, ensuring device posture checks for minimal-risk scenarios, integrating identity-based zero-trust, and reviewing exceptions regularly, you further strengthen your universal MFA adoption.
 
-### **Prohibition of Vulnerable 2FA/MFA Methods:** Stronger 2FA/MFA methods are enforced, explicitly excluding forms vulnerable to attacks like SIM swapping (e.g., SMS/phone-based methods).
+### Only strong 2FA/MFA methods are allowed (no SMS or phone-based codes).
 
 #### **How to determine if this good enough**
 
@@ -191,7 +191,7 @@ Below are **rapidly actionable** enhancements:
 
 By introducing hardware-based MFA, ensuring robust fallback processes, applying risk-based authentication for suspicious attempts, deploying device certs, and staying alert to newly discovered factor vulnerabilities, you push your "no weak MFA" stance to a sophisticated, security-first environment.
 
-### **Stringent 2FA/MFA with Hardware Key Management:** Only services supporting robust 2FA/MFA are used. Hardware-based MFA keys are centrally managed and distributed, ensuring high-security standards for authentication.
+### Only hardware-based MFA is used, managed and given out by the organisation.
 
 #### **How to determine if this good enough**
 

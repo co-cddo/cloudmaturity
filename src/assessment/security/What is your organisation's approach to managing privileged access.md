@@ -1,11 +1,11 @@
 ---
-title: What is your organisation's approach to managing privileged access?
+title: How do you manage privileged access?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Ad-Hoc Management by Administrators:** Privileged credentials are managed on an ad-hoc basis by individual system administrators, without standardised processes.
+### Each admin manages their own privileged accounts, with no set process.
 
 #### **How to determine if this good enough**
 
@@ -52,7 +52,7 @@ Below are **rapidly actionable** steps to move beyond ad-hoc privileged credenti
 
 By creating a short privileged access policy, enforcing unique admin accounts with MFA, documenting roles, and preparing for a vault-based solution, you significantly reduce the risk of ad-hoc mismanagement and insider threats.
 
-### **Centralised Controls with Basic Vaulting:** Technology controls are in place for centralised management, including initial password and key vaulting, integrated logs, and policy-based activities.
+### We use central controls for passwords and keys, with basic logging.
 
 #### **How to determine if this good enough**
 
@@ -99,7 +99,7 @@ Below are **rapidly actionable** steps to refine centralised vaulting:
 
 By rotating credentials automatically, integrating vault secrets into CI/CD, conducting periodic access reviews, refining vault access policies, and enforcing MFA for vault retrieval, you build a stronger, more secure foundation for privileged credentials management.
 
-### **Structured Identity Administration with OTPs:** Identity administration controls and processes are established for managing privileged access, including the use of one-time passwords (OTPs).
+### We have structured admin processes, with one-time passwords for access.
 
 #### **How to determine if this good enough**
 
@@ -147,7 +147,7 @@ Below are **rapidly actionable** ways to strengthen identity administration and 
 
 By embedding OTP steps in break-glass procedures, adopting hardware tokens for admins, enabling automated logs/alerts, reviewing privileged roles frequently, and using ephemeral tokens for services as well, you build a more rigorous privileged access model with robust checks.
 
-### **Automated Risk-Based Access Control:** Privileged access is managed through automated, risk-based workflows and controls. This includes consistent monitoring across cloud platforms.
+### We use automated systems for privileged access, with strong controls and checks.
 
 #### **How to determine if this good enough**
 
@@ -196,7 +196,7 @@ Below are **rapidly actionable** ways to elevate automated, risk-based privilege
 
 By combining threat intelligence, verifying device posture, enabling granular session-level logging, adopting just-in-time privileges, and running regular security exercises, you further refine risk-based controls for privileged access across all cloud platforms.
 
-### **Context-Aware Just-in-Time Privileges:** Access is granted on a just-in-time basis, using contextual factors to determine necessity (e.g., time-based access for critical tasks). Real-time alerting is in place for all activity, with mandatory wash-ups that require Senior leadership present, prioritisation given to automating and preventing further need.
+### We use advanced tools for privileged access, with full logging, approval steps, and regular reviews.
 
 #### **How to determine if this good enough**
 

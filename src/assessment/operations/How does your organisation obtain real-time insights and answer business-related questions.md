@@ -1,11 +1,11 @@
 ---
-title: How does your organisation obtain real-time insights and answer business-related questions?
+title: How do you get real-time data and insights?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **SME Analysis with Limited Data Literacy Understanding**: Insights largely depend on subject matter experts who analyze available data and provide answers. These experts, while knowledgeable in their field, may not always have a high level of data literacy, making the process more costly and only point in time, not real-time.
+### Specialists check data and give answers, not always in real time.
 
 #### **How to determine if this good enough**
 
@@ -71,7 +71,7 @@ Below are **rapidly actionable** steps to improve data literacy and real-time in
 
 By improving data literacy, introducing a basic BI tool, creating a pilot data repository, and pairing experts with data-savvy staff, you begin reducing your reliance on point-in-time manual analysis. Over time, these steps pave the way for real-time insights.
 
-### **Basic Reporting Tools with Delayed Insights:** The organisation uses basic reporting tools that provide insights, but there is typically a delay in data processing and limited real-time capabilities.
+### We get reports, but data arrives late
 
 #### **How to determine if this good enough**
 
@@ -127,7 +127,7 @@ Below are **rapidly actionable** ways to transition from basic delayed reporting
 
 With incremental data refreshes, partial real-time dashboards, better data pipelines, and timeliness KPIs, you reduce the gap between data generation and insight delivery, improving responsiveness.
 
-### **Intermediate Analytics with Some Real-Time Data:** A combination of analytics tools is used, offering some real-time data insights, though comprehensive, immediate access is limited.
+### We get some real-time insights, but not for everything.
 
 #### **How to determine if this good enough**
 
@@ -183,7 +183,7 @@ Below are **rapidly actionable** ways to enhance your partially real-time analyt
 
 By increasing stream processing, consolidating dashboards, and expanding real-time coverage to more data sets, you minimise the blind spots in your analytics, enabling faster, more informed decisions across the board.
 
-### **Advanced Analytics Tools with Broad Real-Time Access:** The organisation employs advanced analytics tools that provide broader access to real-time data, enabling quicker insights and decision-making.
+### We have advanced tools giving real-time data to many people.
 
 #### **How to determine if this good enough**
 
@@ -244,7 +244,7 @@ Below are **rapidly actionable** ways to refine your advanced real-time analytic
 
 By strengthening data governance, encouraging self-service, adopting automated anomaly detection, and continuing to boost data literacy, you maximise the value of your advanced analytics environment.
 
-### **Comprehensive Self-Service Dashboarding:** A self-service dashboarding capability is in place, offering wide access to various data points and enabling users across the organisation to derive real-time insights independently.
+### Anyone can use dashboards to get real-time insights.
 
 #### **How to determine if this good enough**
 

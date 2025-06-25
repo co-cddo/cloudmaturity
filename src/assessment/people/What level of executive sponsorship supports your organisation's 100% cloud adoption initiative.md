@@ -1,11 +1,11 @@
 ---
-title: What level of executive sponsorship supports your organisation's 100% cloud adoption initiative?
+title: Do leadership support your move to the cloud?
 tags: people
 eleventyNavigation:
   parent: people
 ---
 
-### **No Executive Sponsorship:** There is no executive support for cloud adoption, indicating a lack of strategic prioritisation at the leadership level.
+### There is no support from leadership.
 
 #### **How to determine if this good enough**
 
@@ -52,7 +52,7 @@ Below are **rapidly actionable** suggestions to secure at least minimal executiv
 
 By compiling quick-win stories, framing cloud adoption in organisational mandates, presenting a succinct business case, requesting a short meeting, and offering an executive primer, you begin building the case for at least baseline senior buy-in.
 
-### **Senior Management Sponsorship:** The initiative is sponsored by senior management, indicating some level of support but potentially lacking full executive influence.
+### Senior managers support the move.
 
 #### **How to determine if this good enough**
 
@@ -100,7 +100,7 @@ Below are **rapidly actionable** steps to expand from senior management to full 
 
 By showcasing departmental successes, hosting briefings with executives, integrating the initiative into overarching strategies, seeking an executive sponsor for large projects, and formalising a short vision statement, you steadily shift from partial senior sponsorship to broader top-level leadership buy-in.
 
-### **C-Level Executive Sponsorship:** One or more C-level executives sponsor the cloud adoption, demonstrating significant commitment at the highest levels of leadership.
+### Top executives (C-level) support the move.
 
 #### **How to determine if this good enough**
 
@@ -148,7 +148,7 @@ Below are **rapidly actionable** ways to leverage C-level sponsorship further:
 
 By crafting a multi-year roadmap, specifying meaningful KPIs, promoting cross-department synergy, embedding robust security from the start, and publicising achievements, you realise the full benefits of C-level sponsorship—driving cohesive, secure, and strategic cloud adoption.
 
-### **Comprehensive C-Level Sponsorship with Roadmap:** Full sponsorship from C-level executives, accompanied by a shared, strategic roadmap for cloud adoption and migration.
+### Top executives support the move and there is a clear plan.
 
 #### **How to determine if this good enough**
 
@@ -197,7 +197,7 @@ Below are **rapidly actionable** ways to strengthen a comprehensive C-level spon
 
 By updating the roadmap collaboratively, establishing a cloud steering committee, venturing into advanced HPC/AI/ML, acknowledging multi-cloud/hybrid scenarios, and publicising success metrics, you deepen the synergy and accountability behind your cloud adoption plan—leading to dynamic, well-supported progress.
 
-### **C-Level Sponsorship Driving Cloud-First Culture:** Comprehensive C-level sponsorship not only provides strategic direction but also actively fosters a culture of cloud-first adoption, experimentation, and innovation throughout the organisation.
+### Top executives lead a cloud-first culture and push for innovation.
 
 #### **How to determine if this good enough**
 

@@ -1,11 +1,11 @@
 ---
-title: What measures are in place in your organisation to mitigate the risk of data breaches, including exfiltration, corruption, deletion, and non-availability?
+title: How does your organisation respond to security breaches and incidents?
 tags: security
 eleventyNavigation:
   parent: security
 ---
 
-### **Manual Data Access Classification:** Data access is primarily managed through manual classification, with minimal automation or centralised control.
+### We do not have a set process for handling security breaches.
 
 #### **How to determine if this good enough**
 
@@ -53,7 +53,7 @@ Below are **rapidly actionable** steps to move beyond manual classification:
 
 By introducing a simple classification scheme, adopting minimal tooling for labeling, ensuring basic least-privilege access, documenting a short classification process, and preparing for automated solutions, you create a more structured approach to data security than purely manual methods.
 
-### **Centralised Policies and Controls:** A centralised set of policies and controls is in place to prevent unauthorised data access, forming the core of the data security strategy.
+### We have a basic process for reporting and managing breaches, but it is not always followed.
 
 #### **How to determine if this good enough**
 
@@ -101,7 +101,7 @@ Below are **rapidly actionable** ways to strengthen centralised data security po
 
 By automating policy enforcement, requiring tiered access for sensitive data, consolidating data stores, clarifying data lifecycle, and monitoring for policy anomalies, you refine your centralised data security approach, ensuring consistent coverage and minimal manual drift.
 
-### **Policies with Limited Monitoring:** In addition to centralised policies and controls, limited monitoring for data exfiltration is conducted to identify potential breaches.
+### We have a clear process for handling breaches. Staff are trained, and we record what happens.
 
 #### **How to determine if this good enough**
 
@@ -147,7 +147,7 @@ Below are **rapidly actionable** ways to expand limited monitoring:
 
 By leveraging or expanding DLP solutions, correlating logs in a SIEM, implementing real-time anomaly alerts, detecting lateral movement, and running exfiltration drills, you enhance your approach from partial monitoring to more comprehensive oversight of data movements.
 
-### **Comprehensive Controls with Automated Detection:** Preventative, detective, and corrective controls are implemented. Anomaly detection and correction are automated using a range of platforms and tools, providing a more robust defense.
+### We test our breach process regularly and update it when needed.
 
 #### **How to determine if this good enough**
 
@@ -193,7 +193,7 @@ Below are **rapidly actionable** methods to reinforce automated detection:
 
 By adding risk-scored alerts, automatically quarantining suspicious activity, incorporating threat intelligence, periodically updating detection rules, and verifying backups or DR for data restoration, you create a highly adaptive system that promptly detects and mitigates data breach attempts.
 
-### **Fully Automated Security and Proactive Monitoring:** Advanced, fully automated controls and anomaly detection systems are in place. This includes proactive monitoring, regular access reviews, and continuous auditing to ensure data security and compliance.
+### We have a well-tested breach process. We review incidents, learn from them, and make improvements each time.
 
 #### **How to determine if this good enough**
 

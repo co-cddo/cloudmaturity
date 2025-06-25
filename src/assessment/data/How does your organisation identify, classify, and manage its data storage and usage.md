@@ -1,11 +1,11 @@
 ---
-title: How does your organisation identify, classify, and manage its data storage and usage?
+title: How do you manage data storage and usage?
 tags: data
 eleventyNavigation:
   parent: data
 ---
 
-### **Decentralised and Ad Hoc Management:** Data management is largely uncoordinated and informal, with limited organisational oversight of data storage locations and types.
+### Teams decide for themselves how to store and use data.
 
 #### **How to determine if this good enough**
 
@@ -70,7 +70,7 @@ Here are **rapidly actionable** steps to establish foundational data management 
 
 By identifying your data storage resources, applying minimal security tagging, and sharing initial guidelines, you shift from ad hoc practices to a basic, more controlled environment. This foundation paves the way for adopting robust data governance tools and processes down the line.
 
-### **Team-Based Documentation and Manual Policy Adherence:** Each team documents the data they handle, including its schema and sensitivity. Compliance with organisational data policies is managed manually by individual teams.
+### Teams follow our organisation's policies on data storage and usage.
 
 #### **How to determine if this good enough**
 
@@ -140,7 +140,7 @@ Below are **rapidly actionable** ways to improve upon team-based documentation:
 
 By implementing standardised tagging, shared documentation tools, and routine checklists, you enhance consistency and reduce errors. You’re also positioning yourself for the next maturity level, which often involves more automated scanning and classification across the organisation.
 
-### **Inventoried and Classified Data:** An inventory of data, created manually or via scanning tools, exists. Data is classified by type (e.g., PII, card data), sensitivity, and regulatory requirements (e.g., retention, location).
+### We inventory and classify all our data
 
 #### **How to determine if this good enough**
 
@@ -210,7 +210,7 @@ To refine your "Inventoried and Classified Data" approach, apply these **rapidly
 
 With scanning, lineage insights, policy-aligned retention, and better visibility, you not only maintain your inventory but move it toward a dynamic, living data map. This sets the stage for deeper data understanding and advanced catalog solutions.
 
-### **Reviewed and Partially Documented Data Understanding:** There’s a comprehensive understanding of data location, classification, and sensitivity, with regular compliance reviews. Data lineage is generally understood but not consistently documented.
+### We inventory and classify all our data and review this often. We understand how data moves through our systems but this isn't always documented.
 
 #### **How to determine if this good enough**
 
@@ -275,7 +275,7 @@ Below are **rapidly actionable** steps to deepen your data lineage and documenta
 
 By systematically building out lineage features and embedding them in everyday workflows, you move closer to a truly integrated data environment. Over time, each dataset’s path through your infrastructure becomes transparent, boosting collaboration, reducing duplication, and easing regulatory compliance.
 
-### **Advanced Data Catalog and Lineage Tracking:** A detailed data catalog exists, encompassing data types and metadata. It includes a user-friendly glossary, quality metrics, use cases, and thorough tracking of data lineage.
+### We have a catalogue describing all out data, its quality, use and origins.
 
 #### **How to determine if this good enough**
 

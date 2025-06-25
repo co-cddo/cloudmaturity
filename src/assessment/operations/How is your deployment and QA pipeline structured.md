@@ -1,11 +1,11 @@
 ---
-title: How is your deployment and QA pipeline structured?
+title: How do you manage deployment and QA?
 tags: operations
 eleventyNavigation:
   parent: operations
 ---
 
-### **Manual Scheduled QA Process:** Deployment and QA are handled through a manually scheduled process, lacking automation and continuous integration.
+### By hand, on a schedule.
 
 #### **How to determine if this good enough**
 
@@ -55,7 +55,7 @@ Below are **rapidly actionable** steps to move beyond entirely manual QA and dep
 
 By establishing minimal CI automation, clarifying release steps, and piloting automated QA, you build confidence in incremental improvements, setting the foundation for more robust pipelines.
 
-### **Basic Automation with Infrequent Deployments:** Some level of automation exists in the QA process, but deployments are infrequent and partially manual.
+### Some automation, but most deployments are manual and rare.
 
 #### **How to determine if this good enough**
 
@@ -106,7 +106,7 @@ Below are **rapidly actionable** methods to evolve from partial automation:
 
 By broadening test coverage, increasing release frequency, and automating rollbacks, you lay the groundwork for more frequent, confident deployments that align with modern DevOps practices.
 
-### **Integrated Deployment and Regular QA Checks:** Deployment is integrated with regular QA checks, featuring a moderate level of automation and consistency in the pipeline.
+### Integrated approach, with some automation and regular checks.
 
 #### **How to determine if this good enough**
 
@@ -159,7 +159,7 @@ Below are **rapidly actionable** ways to enhance integrated deployment and QA:
 
 By strengthening security/performance checks, parallelising tests, using real-time notifications, and employing feature flags, you further streamline your integrated QA pipeline while maintaining robust checks and balances.
 
-### **CI/CD with Automated Testing:** A Continuous Integration/Continuous Deployment (CI/CD) pipeline is in place, including automated testing and frequent, reliable deployments.
+### We use CI/CD pipelines with automated testing and frequent deployments.
 
 #### **How to determine if this good enough**
 
@@ -213,7 +213,7 @@ Below are **rapidly actionable** ways to refine your existing CI/CD with automat
 
 By deepening security integration, adopting advanced deployment tactics, and refining rollbacks or feature flags, you enhance an already stable CI/CD pipeline. This leads to even faster, safer releases aligned with top-tier DevSecOps practices recommended by NCSC and NIST.
 
-### **On-Demand Ephemeral Environments:** Deployment and QA utilise short-lived, ephemeral environments provisioned on demand, indicating a highly sophisticated, efficient, and agile pipeline.
+### We create short-lived test environments as needed, with a high degree of automation.
 
 #### **How to determine if this good enough**
 
