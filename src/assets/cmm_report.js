@@ -108,7 +108,8 @@ function renderFullReport() {
   for (const elem of document.querySelectorAll(".report_answer_section")) {
     const [category, question, answer] = elem.id.split("_");
     const provided_answer = cmm()?.categories[category]?.questions[question];
-    if (provided_answer && parseInt(provided_answer) === parseInt(answer)) {
+
+    if (parseInt(provided_answer) === parseInt(answer)) {
       elem.style.display = "initial";
       if (getPreviousSibling(elem, "h2"))
         getPreviousSibling(elem, "h2").style.display = "block";
