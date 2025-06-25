@@ -15,6 +15,12 @@
             </label>
           </div>
         {%- endfor -%}
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" type="radio" name="cmm_{{post.data.eleventyNavigation.parent | safe}}_{{post.data.title | hash|safe}}" value="0" id="cmm_{{post.data.eleventyNavigation.parent | safe}}_{{post.data.title | hash|safe}}_unknown"/>
+          <label class="govuk-label govuk-radios__label" for="cmm_{{post.data.eleventyNavigation.parent | safe}}_{{post.data.title | hash|safe}}_0">
+            I don't know
+          </label>
+        </div>
       </div>
     </fieldset>
   </div>

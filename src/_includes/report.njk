@@ -6,7 +6,10 @@
 {%- for section in collections.cmm -%}
   {%- set contentHtml -%}
     {%- for question in collections[section.fileSlug] -%}
-      <h3 class="govuk-heading-l">{{question.data.title | safe}}</h3>
+      <h3 class="govuk-heading-l">{{question.data.title | safe}} <br/><a href="/assessment/{{section.fileSlug}}#{{(question.data.title | hash)}}" aria-label="change your answer to {{question.data.title | safe}}" class="govuk-link govuk-body">[change your answer to this question]</a></h3>
+      <div id="{{section.fileSlug + "_" + (question.data.title | hash) + "_0"}}" class="report_answer_section">
+      <p class="govuk-body">You did not answer this question.</p>
+      </div>
       {%- for answer in question.content | getContentsAfterTags("h3") -%}
       <div id="{{section.fileSlug + "_" + (question.data.title | hash) + "_" + loop.index}}" class="report_answer_section">
         {{- (answer | getContentsAfterTags("h4"))[0] -}}
