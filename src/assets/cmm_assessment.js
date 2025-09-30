@@ -3,40 +3,9 @@ if (typeof Storage === "undefined")
     "Browser has disabled local storage, you will be unable to save your results from one page to another or generate a report.",
   );
 
-// T014: Data migration from v1 to v2
-function migrateSessionData() {
-  const data = JSON.parse(localStorage.getItem("cmm"));
-  if (!data) return null;
-
-  // Check if already v2
-  if (data.metadata?.version === "2.0.0") {
-    return data;
-  }
-
-  // Migrate from v1 (scalar values) to v2 (objects with needsImprovement)
-  const v2Data = {
-    metadata: {
-      version: "2.0.0",
-      createdAt: new Date().toISOString(),
-    },
-  };
-
-  Object.entries(data).forEach(([category, questions]) => {
-    if (category === "metadata") return;
-
-    v2Data[category] = {};
-    Object.entries(questions).forEach(([questionId, answer]) => {
-      v2Data[category][questionId] = {
-        answer: typeof answer === "number" ? answer : parseInt(answer) || 0,
-        needsImprovement: false,
-      };
-    });
-  });
-
-  // Save migrated data
-  localStorage.setItem("cmm", JSON.stringify(v2Data));
-  return v2Data;
-}
+// Import centralized migration service (when available in browser)
+// For browser compatibility, DataMigrationService is loaded via script tag
+/* global DataMigrationService */
 
 function getFormValues() {
   const save = {};
@@ -60,7 +29,9 @@ function getFormValues() {
 
 function restoreFormValues() {
   // T013: Migrate data on page load before restoring
-  migrateSessionData();
+  if (typeof DataMigrationService !== "undefined") {
+    DataMigrationService.loadFromStorage();
+  }
 
   Array.from(document.querySelectorAll("input")).forEach((el) => {
     const [model, section, question] = el.name.split("_");
@@ -133,6 +104,14 @@ function clearCategoryValues(storageItem, category) {
   var data = JSON.parse(localStorage.getItem(storageItem));
   delete data[category];
   localStorage.setItem(storageItem, JSON.stringify(data));
+}
+
+// Legacy migration function wrapper for backward compatibility
+function migrateSessionData() {
+  if (typeof DataMigrationService !== "undefined") {
+    return DataMigrationService.loadFromStorage();
+  }
+  return null;
 }
 
 if (typeof module === "object")

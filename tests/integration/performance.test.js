@@ -178,7 +178,7 @@ describe("Performance Benchmarks", () => {
           if (marked > 0) hasImprovements = true;
         });
 
-        const result = {
+        const _result = {
           filterActive: hasImprovements,
           totalAnswered,
           totalMarked,

@@ -2,6 +2,7 @@
 // T020: Progress indicators component
 // T021: Improvement counter
 // Works with server-rendered question HTML from compilation.md
+/* global DataMigrationService */
 
 if (typeof Storage === "undefined") {
   alert(
@@ -52,7 +53,14 @@ function renderProgressIndicators(answeredCount, totalPossible, markedCount) {
 // T021: Update improvement counter
 function updateImprovementCount() {
   const checkboxes = document.querySelectorAll(".improvement-checkbox:checked");
-  const sessionData = JSON.parse(localStorage.getItem("cmm")) || {};
+
+  let sessionData;
+  try {
+    sessionData = JSON.parse(localStorage.getItem("cmm")) || {};
+  } catch (error) {
+    console.error("Failed to load session data for count:", error);
+    sessionData = {};
+  }
 
   let totalAnswered = 0;
   Object.entries(sessionData).forEach(([key, value]) => {
@@ -75,37 +83,45 @@ function updateImprovementCount() {
 
 // T019: Load and show answered questions from server-rendered HTML
 function renderCompilationPage() {
-  const sessionData = JSON.parse(localStorage.getItem("cmm"));
+  let sessionData;
+  try {
+    sessionData = JSON.parse(localStorage.getItem("cmm"));
+  } catch (e) {
+    console.error("Invalid session data:", e);
+    showErrorMessage(
+      "Your session data appears corrupted. Please start over.",
+      "/assessment/",
+    );
+    return;
+  }
 
   if (!sessionData || !sessionData.metadata) {
-    document.getElementById("compilation-questions").innerHTML = `
-      <div class="govuk-notification-banner" role="region" aria-labelledby="no-data-title">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="no-data-title">
-            No assessment data found
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            Please complete your assessment first.
-          </p>
-          <p class="govuk-body">
-            <a class="govuk-notification-banner__link" href="/assessment/">Go to Assessment</a>
-          </p>
-        </div>
-      </div>
-    `;
+    showErrorMessage(
+      "Please complete your assessment first.",
+      "/assessment/",
+      "No assessment data found",
+    );
+    return;
+  }
+
+  // Validate schema structure
+  if (!validateSessionSchema(sessionData)) {
+    console.error("Invalid session format");
+    showErrorMessage(
+      "Invalid session format. Please refresh and try again.",
+      "/assessment/",
+    );
     return;
   }
 
   let totalAnswered = 0;
   let totalMarked = 0;
 
-  // Process each category
+  // Process each category with safe DOM operations
   Object.entries(sessionData).forEach(([categoryKey, categoryData]) => {
     if (categoryKey === "metadata" || categoryKey === "intro") return;
 
-    const categoryDiv = document.querySelector(
+    const categoryDiv = safeDOMQuery(
       `.compilation-category[data-category="${categoryKey}"]`,
     );
     if (!categoryDiv) return;
@@ -114,7 +130,7 @@ function renderCompilationPage() {
 
     // Process each question in this category
     Object.entries(categoryData).forEach(([questionHash, questionData]) => {
-      const questionDiv = document.querySelector(
+      const questionDiv = safeDOMQuery(
         `.compilation-question[data-category="${categoryKey}"][data-question="${questionHash}"]`,
       );
       if (!questionDiv) return;
@@ -125,8 +141,10 @@ function renderCompilationPage() {
       categoryHasAnswers = true;
       totalAnswered++;
 
-      // Show the question
-      questionDiv.style.display = "block";
+      // Show the question with safe operation
+      safeDOMOperation(questionDiv, (el) => {
+        el.style.display = "block";
+      });
 
       // Show the correct answer guidance div (includes full answer text + guidance)
       const answerLevel = parseInt(questionData.answer);
@@ -134,14 +152,18 @@ function renderCompilationPage() {
       guidanceDivs.forEach((div) => {
         const level = parseInt(div.getAttribute("data-level"));
         if (level === answerLevel) {
-          div.style.display = "block";
+          safeDOMOperation(div, (el) => {
+            el.style.display = "block";
+          });
         }
       });
 
       // Set checkbox state
       const checkbox = questionDiv.querySelector(".improvement-checkbox");
       if (checkbox) {
-        checkbox.checked = questionData.needsImprovement || false;
+        safeDOMOperation(checkbox, (el) => {
+          el.checked = questionData.needsImprovement || false;
+        });
         if (questionData.needsImprovement) {
           totalMarked++;
         }
@@ -161,9 +183,21 @@ function renderCompilationPage() {
   renderProgressIndicators(totalAnswered, totalPossibleQuestions, totalMarked);
 
   // T019: Add event listeners to checkboxes for auto-save
+  cleanupEventListeners();
   document.querySelectorAll(".improvement-checkbox").forEach((checkbox) => {
     checkbox.addEventListener("change", handleCheckboxChange);
+    eventListeners.set(checkbox, handleCheckboxChange);
   });
+}
+
+// Store references for cleanup
+const eventListeners = new Map();
+
+function cleanupEventListeners() {
+  eventListeners.forEach((handler, element) => {
+    element.removeEventListener("change", handler);
+  });
+  eventListeners.clear();
 }
 
 // T019: Handle checkbox changes with auto-save
@@ -172,7 +206,15 @@ function handleCheckboxChange(event) {
   const category = checkbox.getAttribute("data-category");
   const question = checkbox.getAttribute("data-question");
 
-  const sessionData = JSON.parse(localStorage.getItem("cmm"));
+  let sessionData;
+  try {
+    sessionData = JSON.parse(localStorage.getItem("cmm"));
+  } catch (error) {
+    console.error("Failed to load session data:", error);
+    alert("Failed to load your data. Please refresh the page.");
+    return;
+  }
+
   if (
     !sessionData ||
     !sessionData[category] ||
@@ -188,7 +230,15 @@ function handleCheckboxChange(event) {
   sessionData.metadata.lastModified = new Date().toISOString();
 
   // Save to localStorage
-  localStorage.setItem("cmm", JSON.stringify(sessionData));
+  try {
+    localStorage.setItem("cmm", JSON.stringify(sessionData));
+  } catch (error) {
+    console.error("Failed to save changes:", error);
+    alert("Failed to save your selection. Please try again.");
+    // Revert checkbox state
+    checkbox.checked = !checkbox.checked;
+    return;
+  }
 
   // T021: Update counter
   updateImprovementCount();
@@ -212,6 +262,138 @@ window.addEventListener("load", () => {
     renderCompilationPage();
   }
 });
+
+// Clean up on page unload
+window.addEventListener("unload", cleanupEventListeners);
+
+// Helper function to show error messages
+function showErrorMessage(message, linkHref, title = "Error") {
+  const container = document.getElementById("compilation-questions");
+  if (!container) return;
+
+  // Clear existing content
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+  const banner = document.createElement("div");
+  banner.className = "govuk-notification-banner";
+  banner.setAttribute("role", "region");
+  banner.setAttribute("aria-labelledby", "error-title");
+
+  const header = document.createElement("div");
+  header.className = "govuk-notification-banner__header";
+
+  const headerTitle = document.createElement("h2");
+  headerTitle.className = "govuk-notification-banner__title";
+  headerTitle.id = "error-title";
+  headerTitle.textContent = title;
+
+  header.appendChild(headerTitle);
+  banner.appendChild(header);
+
+  const content = document.createElement("div");
+  content.className = "govuk-notification-banner__content";
+
+  const heading = document.createElement("p");
+  heading.className = "govuk-notification-banner__heading";
+  heading.textContent = message;
+
+  const body = document.createElement("p");
+  body.className = "govuk-body";
+
+  const link = document.createElement("a");
+  link.className = "govuk-notification-banner__link";
+  link.href = linkHref;
+  link.textContent =
+    linkHref === "/assessment/" ? "Go to Assessment" : "Go back";
+
+  body.appendChild(link);
+  content.appendChild(heading);
+  content.appendChild(body);
+  banner.appendChild(content);
+  container.appendChild(banner);
+}
+
+// Validate session data schema
+function validateSessionSchema(data) {
+  if (typeof DataMigrationService !== "undefined") {
+    return DataMigrationService.validateSchema(data);
+  }
+
+  // Fallback validation if migration service not available
+  if (!data || typeof data !== "object") return false;
+  if (!data.metadata || typeof data.metadata !== "object") return false;
+  if (
+    !data.metadata.version ||
+    typeof data.metadata.version !== "string" ||
+    !data.metadata.version.match(/^\d+\.\d+\.\d+$/)
+  )
+    return false;
+  if (
+    !data.metadata.createdAt ||
+    typeof data.metadata.createdAt !== "string"
+  )
+    return false;
+
+  // Validate category structure
+  const validCategories = [
+    "cost",
+    "data",
+    "governance",
+    "operations",
+    "people",
+    "security",
+    "tech",
+  ];
+  for (const category of validCategories) {
+    if (data[category]) {
+      if (typeof data[category] !== "object") return false;
+      // Validate each question in category
+      for (const questionHash in data[category]) {
+        const question = data[category][questionHash];
+        if (typeof question !== "object") return false;
+        if (
+          typeof question.answer !== "number" ||
+          question.answer < 0 ||
+          question.answer > 5
+        )
+          return false;
+        if (typeof question.needsImprovement !== "boolean") return false;
+      }
+    }
+  }
+
+  return true;
+}
+
+// Safe DOM query wrapper
+function safeDOMQuery(selector) {
+  try {
+    const element = document.querySelector(selector);
+    if (!element) {
+      console.warn(`Element not found: ${selector}`);
+    }
+    return element;
+  } catch (error) {
+    console.error(`DOM query failed for ${selector}:`, error);
+    return null;
+  }
+}
+
+// Safe DOM operation wrapper
+function safeDOMOperation(element, operation) {
+  if (!element) {
+    console.warn("Cannot perform operation on null element");
+    return null;
+  }
+  try {
+    return operation(element);
+  } catch (error) {
+    console.error("DOM operation failed:", error);
+    return null;
+  }
+}
 
 if (typeof module === "object") {
   module.exports = {

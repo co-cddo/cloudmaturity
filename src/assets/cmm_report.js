@@ -253,40 +253,106 @@ function renderSummaryTable(filterStats) {
   const summaryDiv = document.getElementById("summary-table");
   if (!summaryDiv || !filterStats) return;
 
+  // Clear existing content safely
+  while (summaryDiv.firstChild) {
+    summaryDiv.removeChild(summaryDiv.firstChild);
+  }
+
   if (filterStats.filterActive) {
-    summaryDiv.innerHTML = `
-      <div class="govuk-!-margin-bottom-6">
-        <h2 class="govuk-heading-m">Your improvement focus</h2>
-        <p class="govuk-body">
-          Showing <strong>${filterStats.totalMarked}</strong> of <strong>${filterStats.totalAnswered}</strong> questions you marked for improvement.
-        </p>
-        <table class="govuk-table">
-          <thead class="govuk-table__head">
-            <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Category</th>
-              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Answered</th>
-              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Focus areas</th>
-            </tr>
-          </thead>
-          <tbody class="govuk-table__body">
-            ${Object.entries(filterStats.categoryCounts)
-              .filter(([_, counts]) => counts.answered > 0)
-              .map(
-                ([category, counts]) => `
-              <tr class="govuk-table__row">
-                <td class="govuk-table__cell">${titles[category]}</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric">${counts.answered}</td>
-                <td class="govuk-table__cell govuk-table__cell--numeric ${counts.marked > 0 ? "govuk-!-font-weight-bold" : ""}">${counts.marked}</td>
-              </tr>
-            `,
-              )
-              .join("")}
-          </tbody>
-        </table>
-      </div>
-    `;
-  } else {
-    summaryDiv.innerHTML = "";
+    // Create container div
+    const container = document.createElement("div");
+    container.className = "govuk-!-margin-bottom-6";
+
+    // Create heading
+    const heading = document.createElement("h2");
+    heading.className = "govuk-heading-m";
+    heading.textContent = "Your improvement focus";
+    container.appendChild(heading);
+
+    // Create summary paragraph
+    const para = document.createElement("p");
+    para.className = "govuk-body";
+    const showingText = document.createTextNode("Showing ");
+    const strong1 = document.createElement("strong");
+    strong1.textContent = filterStats.totalMarked;
+    const ofText = document.createTextNode(" of ");
+    const strong2 = document.createElement("strong");
+    strong2.textContent = filterStats.totalAnswered;
+    const questionsText = document.createTextNode(
+      " questions you marked for improvement.",
+    );
+    para.appendChild(showingText);
+    para.appendChild(strong1);
+    para.appendChild(ofText);
+    para.appendChild(strong2);
+    para.appendChild(questionsText);
+    container.appendChild(para);
+
+    // Create table
+    const table = document.createElement("table");
+    table.className = "govuk-table";
+
+    // Create thead
+    const thead = document.createElement("thead");
+    thead.className = "govuk-table__head";
+    const headerRow = document.createElement("tr");
+    headerRow.className = "govuk-table__row";
+
+    const th1 = document.createElement("th");
+    th1.scope = "col";
+    th1.className = "govuk-table__header";
+    th1.textContent = "Category";
+    headerRow.appendChild(th1);
+
+    const th2 = document.createElement("th");
+    th2.scope = "col";
+    th2.className = "govuk-table__header govuk-table__header--numeric";
+    th2.textContent = "Answered";
+    headerRow.appendChild(th2);
+
+    const th3 = document.createElement("th");
+    th3.scope = "col";
+    th3.className = "govuk-table__header govuk-table__header--numeric";
+    th3.textContent = "Focus areas";
+    headerRow.appendChild(th3);
+
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+
+    // Create tbody
+    const tbody = document.createElement("tbody");
+    tbody.className = "govuk-table__body";
+
+    Object.entries(filterStats.categoryCounts)
+      .filter(([_, counts]) => counts.answered > 0)
+      .forEach(([category, counts]) => {
+        const row = document.createElement("tr");
+        row.className = "govuk-table__row";
+
+        const td1 = document.createElement("td");
+        td1.className = "govuk-table__cell";
+        td1.textContent = titles[category];
+        row.appendChild(td1);
+
+        const td2 = document.createElement("td");
+        td2.className = "govuk-table__cell govuk-table__cell--numeric";
+        td2.textContent = counts.answered;
+        row.appendChild(td2);
+
+        const td3 = document.createElement("td");
+        td3.className = "govuk-table__cell govuk-table__cell--numeric";
+        if (counts.marked > 0) {
+          td3.classList.add("govuk-!-font-weight-bold");
+        }
+        td3.textContent = counts.marked;
+        row.appendChild(td3);
+
+        tbody.appendChild(row);
+      });
+
+    table.appendChild(tbody);
+    container.appendChild(table);
+    summaryDiv.appendChild(container);
   }
 }
 
@@ -351,7 +417,7 @@ function applyReportFilter() {
     const sessionData = JSON.parse(localStorage.getItem("cmm"));
 
     document.querySelectorAll(".report_answer_section").forEach((elem) => {
-      const [category, question, answer] = elem.id.split("_");
+      const [category, question] = elem.id.split("_");
       const questionData = sessionData?.[category]?.[question];
 
       // If question not answered or not marked for improvement, hide it
@@ -386,9 +452,45 @@ function applyReportFilter() {
   }
 }
 
-window.addEventListener("load", renderReport);
-window.addEventListener("load", renderFullReport);
-window.addEventListener("load", applyReportFilter);
+// Combine load handlers to prevent race conditions
+window.addEventListener("load", async () => {
+  try {
+    // Execute in proper sequence
+    await renderReport();
+    await renderFullReport();
+    await applyReportFilter();
+  } catch (error) {
+    console.error("Error loading report:", error);
+    showReportError("Failed to load report. Please refresh the page.");
+  }
+});
+
+// Helper function to show report errors
+function showReportError(message) {
+  const mainContent = document.querySelector("main");
+  if (!mainContent) return;
+
+  const banner = document.createElement("div");
+  banner.className = "govuk-error-summary";
+  banner.setAttribute("role", "alert");
+  banner.setAttribute("aria-labelledby", "error-summary-title");
+
+  const title = document.createElement("h2");
+  title.className = "govuk-error-summary__title";
+  title.id = "error-summary-title";
+  title.textContent = "There is a problem";
+
+  const body = document.createElement("div");
+  body.className = "govuk-error-summary__body";
+
+  const para = document.createElement("p");
+  para.textContent = message;
+
+  body.appendChild(para);
+  banner.appendChild(title);
+  banner.appendChild(body);
+  mainContent.insertBefore(banner, mainContent.firstChild);
+}
 
 if (typeof module === "object")
   module.exports = {

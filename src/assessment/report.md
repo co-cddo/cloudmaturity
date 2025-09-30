@@ -64,5 +64,6 @@ title: Report
 
 {%- include 'report.njk' -%}
 
+<script src="/{{"assets/dataMigration.js" | htmlBaseUrl}}"></script>
 <script src="/{{"assets/cmm_report.js" | htmlBaseUrl}}"></script>
 <link rel="stylesheet" href="/{{"assets/chaarts.min.css" | htmlBaseUrl}}"/>
