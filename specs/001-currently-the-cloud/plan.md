@@ -194,20 +194,39 @@ From user stories → test scenarios (see [quickstart.md](./quickstart.md)):
 - ✅ quickstart.md
 - ✅ CLAUDE.md updated
 
-## Phase 2: Task Planning Approach
+## Plan Enhancements (Post-Planning Session)
 
-_This section describes what the /tasks command will do - DO NOT execute during /plan_
+The following design enhancements were clarified to strengthen implementation success:
 
-**Task Generation Strategy**:
+### UI/UX Decisions
 
-- Load `.specify/templates/tasks-template.md` as base
-- Generate tasks from Phase 1 design docs (data model, contracts, quickstart)
-- Each contract → contract test task [P]
-- Each data model entity → implementation task [P]
-- Each user story → integration test task
-- Implementation tasks ordered by TDD: tests before code
+**Progress Visualization**:
 
-**Task Categories**:
+- ✅ Add percentage display (e.g., "40% marked for improvement")
+- ✅ Add visual progress bar that fills as checkboxes are checked
+- ❌ No report preview on compilation page (use Continue → Modify workflow)
+- ❌ No category filtering/collapsing (single scrollable list sufficient)
+
+**User Autonomy**:
+
+- ❌ No auto-suggestions or smart defaults (user-driven decisions)
+- ❌ No confirmation dialogs (frictionless navigation)
+- ❌ No data expiration (user controls their data)
+
+**Enhanced Context**:
+
+- ✅ Report summary table/chart showing category breakdown at top
+- ✅ Visual indicators on assessment pages for improvement-marked questions
+- ✅ Navigation indicators showing which categories have improvements marked
+- ✅ Track last modification timestamp in metadata (not displayed to users)
+
+**Privacy & Simplicity**:
+
+- ❌ No analytics or telemetry (fully client-side and private)
+
+### Updated Task Categories
+
+These enhancements add the following implementation requirements:
 
 1. **Contract Tests** (Phase 0 - Parallel)
 
@@ -217,24 +236,44 @@ _This section describes what the /tasks command will do - DO NOT execute during 
 2. **Data Model** (Phase 1 - Parallel)
 
    - Extend session data structure in cmm_assessment.js
+   - Add lastModified timestamp to metadata
    - Implement metadata generation in cmm_report.js
 
 3. **UI Components** (Phase 2 - Sequential)
 
    - Create compilation.md page template
    - Create compilation.njk partial template
-   - Implement compilation.js page logic
+   - Implement compilation.js page logic with progress bar/percentage
+   - Add summary table component for report page
+   - Add visual indicators for assessment question pages
 
 4. **Integration** (Phase 3 - Sequential)
 
-   - Update report.md with filtering logic
+   - Update report.md with filtering logic and summary table
    - Update cmm_report.js with filter implementation
-   - Update navigation configuration
+   - Update navigation configuration with improvement indicators
+   - Add visual states to assessment pages
 
 5. **Testing** (Phase 4 - Parallel)
    - Write integration tests for compilation workflow
    - Write integration tests for report filtering
+   - Write tests for progress visualization
+   - Write tests for navigation indicators
    - Write accessibility tests
+
+## Phase 2: Task Planning Approach
+
+_This section describes what the /tasks command will do - DO NOT execute during /plan_
+
+**Task Generation Strategy**:
+
+- Load `.specify/templates/tasks-template.md` as base
+- Generate tasks from Phase 1 design docs (data model, contracts, quickstart)
+- Include enhancement requirements (progress bar, summary table, indicators)
+- Each contract → contract test task [P]
+- Each data model entity → implementation task [P]
+- Each user story → integration test task
+- Implementation tasks ordered by TDD: tests before code
 
 **Ordering Strategy**:
 
@@ -243,7 +282,14 @@ _This section describes what the /tasks command will do - DO NOT execute during 
 - Mark [P] for parallel execution (independent modules)
 - Accessibility validation as final gate
 
-**Estimated Output**: 25-30 numbered, ordered tasks in tasks.md
+**Estimated Output**: 30-35 numbered, ordered tasks in tasks.md (increased from 25-30 due to enhancements)
+
+**Enhancement Impact on Task Count**:
+
+- +2 tasks for progress visualization (percentage, progress bar)
+- +3 tasks for summary table component (design, implement, test)
+- +4 tasks for navigation/visual indicators (assessment pages, navigation, styling, tests)
+- +1 task for lastModified timestamp in metadata
 
 **IMPORTANT**: This phase is executed by the /tasks command, NOT by /plan
 

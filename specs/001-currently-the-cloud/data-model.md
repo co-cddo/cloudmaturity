@@ -21,7 +21,8 @@ This document defines the data structures for the Report Compilation feature, fo
   // NEW: Metadata section
   "metadata": {
     "version": "2.0.0",              // Schema version for migration
-    "createdAt": "ISO-8601 timestamp" // When assessment started
+    "createdAt": "ISO-8601 timestamp", // When assessment started
+    "lastModified": "ISO-8601 timestamp" // When improvement selections last changed
   },
 
   // EXISTING: Intro section (unchanged)
@@ -50,27 +51,29 @@ This document defines the data structures for the Report Compilation feature, fo
 
 **Field Definitions**:
 
-| Field                                      | Type              | Required | Default           | Description                          |
-| ------------------------------------------ | ----------------- | -------- | ----------------- | ------------------------------------ |
-| `metadata.version`                         | string            | Yes      | "2.0.0"           | Schema version for migration logic   |
-| `metadata.createdAt`                       | string (ISO-8601) | Yes      | current timestamp | When assessment session started      |
-| `intro.*`                                  | object            | No       | {}                | Optional user metadata               |
-| `{category}.{questionId}.answer`           | number (0-5)      | Yes      | -                 | Selected answer level (0=unanswered) |
-| `{category}.{questionId}.needsImprovement` | boolean           | Yes      | false             | Whether user marked for improvement  |
+| Field                                      | Type              | Required | Default           | Description                                                  |
+| ------------------------------------------ | ----------------- | -------- | ----------------- | ------------------------------------------------------------ |
+| `metadata.version`                         | string            | Yes      | "2.0.0"           | Schema version for migration logic                           |
+| `metadata.createdAt`                       | string (ISO-8601) | Yes      | current timestamp | When assessment session started                              |
+| `metadata.lastModified`                    | string (ISO-8601) | Yes      | current timestamp | When improvement selections last changed (not shown to user) |
+| `intro.*`                                  | object            | No       | {}                | Optional user metadata                                       |
+| `{category}.{questionId}.answer`           | number (0-5)      | Yes      | -                 | Selected answer level (0=unanswered)                         |
+| `{category}.{questionId}.needsImprovement` | boolean           | Yes      | false             | Whether user marked for improvement                          |
 
 **Validation Rules**:
 
 - `version` must match supported versions (currently "2.0.0" or legacy format)
 - `createdAt` must be valid ISO-8601 timestamp
+- `lastModified` must be valid ISO-8601 timestamp
 - `answer` must be integer 0-5 (0 = unanswered, 1-5 = answer levels)
 - `needsImprovement` must be boolean
 
 **State Transitions**:
 
-1. **Initial**: User starts assessment → metadata created with timestamp
+1. **Initial**: User starts assessment → metadata created with createdAt and lastModified timestamps
 2. **Answering**: User selects answers → answer values updated, needsImprovement remains false
-3. **Compilation**: User checks improvement → needsImprovement updated to true
-4. **Modification**: User can toggle needsImprovement anytime on compilation page
+3. **Compilation**: User checks improvement → needsImprovement updated to true, lastModified timestamp updated
+4. **Modification**: User can toggle needsImprovement anytime on compilation page → lastModified timestamp updated on each change
 5. **Persistence**: All changes auto-saved to localStorage immediately
 
 ### 2. Export File Format
