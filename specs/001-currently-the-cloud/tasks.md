@@ -93,13 +93,18 @@
 
 ## Phase 3.4: Compilation Page Components
 
+**Terminology Note**: Assessment question guidance sections use exact heading text per spec.md:
+
+- Compilation page shows: **"How to determine if this good enough"** (question context)
+- Report page shows: **"How do I do better?"** (improvement recommendations)
+
 - [ ] T017 **Compilation page template**: Create `src/assessment/compilation.md` with frontmatter (layout, title "Report Compilation", eleventyNavigation: parent Assessment, order 1.5) and basic content structure with placeholders for progress indicators and question list.
 
-- [ ] T018 **Compilation page partial template**: Create `src/_includes/compilation.njk` Nunjucks template using GOV.UK macros (`govukCheckboxes`, `govukButton`, `govukNotificationBanner`) to render answered questions with "How to determine if good enough" guidance and "I need to do better" checkboxes.
+- [ ] T018 **Compilation page partial template**: Create `src/_includes/compilation.njk` Nunjucks template using GOV.UK macros (`govukCheckboxes`, `govukButton`, `govukNotificationBanner`) to render answered questions showing question text, user's selected answer, and "How to determine if this good enough" guidance (NOT "How do I do better?" guidance) with "I need to do better" checkboxes.
 
 - [ ] T019 **Compilation page logic**: Create `src/assets/compilation.js` to load session data, fetch assessment question metadata, render questions grouped by category, handle checkbox changes with auto-save to localStorage, update needsImprovement flags and lastModified timestamp.
 
-- [ ] T020 **Progress indicators component**: In `src/assets/compilation.js`, add functions to calculate and display overall count ("24 of 35 questions answered"), per-category counts ("Cost: 5/7"), percentage ("40% marked for improvement"), and progress bar visualization.
+- [ ] T020 **Progress indicators component**: In `src/assets/compilation.js`, add functions to calculate and display overall count ("24 of 35 questions answered"), per-category counts ("Cost: 5/7"), percentage ("40% marked for improvement"), and progress bar visualization. Progress bar MUST use HTML5 `<progress>` element or styled div with `role="progressbar"` ARIA attribute per spec.md FR-013.
 
 - [ ] T021 **Improvement counter**: In `src/assets/compilation.js`, add real-time counter that updates "You've marked N questions for improvement" as checkboxes are toggled. Add visual distinction styling for checked checkboxes (highlight/color/icon).
 
@@ -107,9 +112,9 @@
 
 - [ ] T022 **Report filtering logic**: In `src/assets/cmm_report.js`, add `buildFilteredReport(sessionData)` function to check if any needsImprovement=true, filter questions accordingly, and generate filter statistics (showing X of Y total, per-category counts).
 
-- [ ] T023 **Summary table component**: In `src/assets/cmm_report.js`, add `renderSummaryTable(filterStats)` function to generate category breakdown table/chart showing answered vs marked for improvement per category. Render at top of report page.
+- [ ] T023 **Summary table component**: In `src/assets/cmm_report.js`, add `renderSummaryTable(filterStats)` function to generate category breakdown table/chart showing answered vs marked for improvement per category. Use data structure from data-model.md Report Filter Model (totalQuestions, filteredCount per category). Display format per spec.md FR-007 filter indicators. Render at top of report page.
 
-- [ ] T024 **Report page update**: Modify `src/assessment/report.md` to call filtering logic, display summary table, show filter indicators, and render "Modify improvement selections" button at top of page.
+- [ ] T024 **Report page update**: Modify `src/assessment/report.md` to call filtering logic, display summary table, show filter indicators, and render "Modify improvement selections" button at top of page. Report page shows ONLY "How do I do better?" guidance sections (NOT "How to determine if this good enough" sections, which were shown on Report Compilation step). Implements Report Page Entry entity from spec.md Key Entities.
 
 - [ ] T025 **Banner notifications**: In `src/assets/cmm_report.js`, add logic to display `govukNotificationBanner` when: (1) no improvements marked → "No items selected - showing all results", (2) direct access without compilation visit → "Visit Report Compilation to filter".
 
@@ -278,6 +283,17 @@ _GATE: Checked by main() before returning_
 **Parallel Tasks**: 15 marked [P] (45% parallelizable)
 **Critical Path**: Setup → Tests → Data Model → Compilation Page → Report Updates → Navigation → Polish
 **Estimated Completion**: 33 tasks × TDD cycle = ~3-5 days for experienced developer
+
+---
+
+## Spec Clarifications Applied
+
+**2025-09-30 Update**: Updated T018 and T024 to explicitly clarify content separation between Report Compilation and Report pages:
+
+- **Report Compilation step** (T018): Shows question + answer + "How to determine if this good enough" section only
+- **Report page** (T024): Shows "How do I do better?" guidance only (NOT "How to determine if this good enough")
+
+This clarification reflects the actual implementation behavior and ensures tasks align with spec.md FR-003 and FR-008.
 
 ---
 

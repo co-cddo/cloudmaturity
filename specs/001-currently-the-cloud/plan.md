@@ -103,8 +103,13 @@ tests/
 │   ├── cmm_report.test.js          # MODIFIED: Test filtering logic
 │   └── compilation.test.js         # NEW: Test compilation page logic
 └── integration/
-    ├── compilation-flow.test.js    # NEW: End-to-end compilation workflow
-    └── report-filtering.test.js    # NEW: Report filtering scenarios
+    ├── compilation-flow.test.js    # NEW: End-to-end compilation workflow (Scenario 1)
+    ├── no-improvements.test.js     # NEW: Report with no selections (Scenario 2)
+    ├── partial-completion.test.js  # NEW: Partial assessment flow (Scenario 3)
+    ├── direct-report-access.test.js # NEW: Direct URL access handling (Scenario 4)
+    ├── save-load-report.test.js    # NEW: Export/import workflow (Scenario 5)
+    ├── keyboard-navigation.test.js # NEW: Keyboard accessibility (Scenario 6)
+    └── data-migration.test.js      # NEW: v1 to v2 migration (Scenario 8)
 ```
 
 **Structure Decision**: Single project structure maintained. This is a static Eleventy site with client-side JavaScript. New files follow existing conventions: Markdown pages in `src/assessment/`, JavaScript modules in `src/assets/`, Nunjucks templates in `src/_includes/`.
@@ -224,6 +229,8 @@ The following design enhancements were clarified to strengthen implementation su
 **Privacy & Simplicity**:
 
 - ❌ No analytics or telemetry (fully client-side and private)
+
+**Note**: Additional content separation clarifications documented in spec.md Session 2025-09-30 (Report Compilation shows "How to determine if this good enough" only; Report page shows "How do I do better?" only).
 
 ### Updated Task Categories
 

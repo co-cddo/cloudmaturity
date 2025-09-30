@@ -39,6 +39,7 @@
 
 ### Session 2025-09-30
 
+- Q: What content should appear on the Report Compilation step vs the Report page? → A: Compilation shows question + answer + "How to determine if this good enough" section. Report page shows only "How to do better" section (not "How to determine if this good enough")
 - Q: When a user has NOT marked any questions as "I need to do better" and proceeds to the Report page, what should happen? → A: Show all questions with a banner message indicating "No items selected for improvement - showing all results"
 - Q: When a user navigates directly to the Report page URL without having completed the "Report Compilation" step, what should happen? → A: Show the unfiltered report with a banner notice explaining they should visit Report Compilation to filter
 - Q: When a user accesses the "Report Compilation" step but has not yet answered all assessment questions (only partial completion), what should the Report Compilation page show? → A: Show only the questions they have answered so far, allowing partial progress
@@ -98,7 +99,7 @@ With the new three-step process, after completing all assessment questions (Step
 
 - **FR-002**: The "Report Compilation" step MUST display questions organized by category. Categories with answered questions MUST show those questions with the user's selected answer. Categories with zero answered questions MUST be shown with a message stating "No questions answered in this category yet". The step supports partial assessment completion.
 
-- **FR-003**: For each answered question displayed on the "Report Compilation" step, system MUST show only the "How to determine if this good enough" guidance text that is associated with the user's selected answer level. Full "How do I do better?" guidance and recommendations appear on the subsequent Report page, not on the Report Compilation step.
+- **FR-003**: For each answered question displayed on the "Report Compilation" step, system MUST show the question text, the user's selected answer, and the "How to determine if this good enough" guidance text that is associated with that answer level. The "How do I do better?" guidance does NOT appear on the Report Compilation step.
 
 - **FR-004**: Each question on the "Report Compilation" step MUST have a checkbox labeled "I need to do better" that is unchecked by default. The page MUST display a count of marked questions (e.g., "You've marked 8 questions for improvement") and checked checkboxes MUST be visually distinguished from unchecked ones through styling (e.g., highlighting, color, or iconography).
 
@@ -108,7 +109,7 @@ With the new three-step process, after completing all assessment questions (Step
 
 - **FR-007**: The Report page MUST filter displayed questions to show only those where the user has checked "I need to do better" on the "Report Compilation" step. If no questions are marked for improvement, the report MUST display all questions with a notification banner stating "No items selected for improvement - showing all results". When filtering is active, the report MUST display filter indicators showing both overall counts (e.g., "Showing 8 of 24 questions") and per-category counts (e.g., "Security: showing 3 of 8 questions").
 
-- **FR-008**: The filtered report MUST display the same level of detail (recommendations, guidance, vendor solutions) as the current unfiltered report for the selected questions.
+- **FR-008**: The Report page MUST display only the "How do I do better?" guidance sections for each question, NOT the "How to determine if this good enough" sections (which were shown on the Report Compilation step). The filtered report displays the same "How do I do better?" detail (recommendations, guidance, vendor solutions) for selected questions as an unfiltered report shows for all questions.
 
 - **FR-009**: System MUST include "I need to do better" selections when saving reports to file via the existing "Save this report" functionality. The saved file format MUST include metadata containing the report creation timestamp and improvement selections in a structured format.
 
@@ -138,7 +139,9 @@ With the new three-step process, after completing all assessment questions (Step
 
 - **Session Data Structure**: Currently stores assessment answers organized by category and question ID with the selected answer value (0-5). Must be extended to include a boolean flag for each answered question indicating whether "I need to do better" is checked. When saved to file, must include metadata with report creation timestamp.
 
-- **Report Compilation Entry**: Represents a single question on the "Report Compilation" step, containing: the question text, the user's selected answer level, the corresponding "How to determine if this good enough" guidance text for that answer level, and the "I need to do better" checkbox state.
+- **Report Compilation Entry**: Represents a single question on the "Report Compilation" step, containing: the question text, the user's selected answer level, the corresponding "How to determine if this good enough" guidance text for that answer level, and the "I need to do better" checkbox state. Does NOT include "How do I do better?" guidance.
+
+- **Report Page Entry**: Represents a single question on the Report page, containing: the question text and the "How do I do better?" guidance text for the user's selected answer level. Does NOT include "How to determine if this good enough" guidance (which was shown on the Report Compilation step).
 
 - **Filtered Report Data**: A subset of the full assessment results containing only questions where "I need to do better" is true, used to generate the filtered report view.
 
