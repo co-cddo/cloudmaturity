@@ -1,3 +1,5 @@
+/* global safeLocalStorageGet, safeLocalStorageSet */
+
 const titles = {
   cost: "Cost & Sustainability",
   data: "Data",
@@ -9,7 +11,13 @@ const titles = {
 };
 function cmm() {
   const data = { categories: {} };
-  const payload = JSON.parse(localStorage.getItem("cmm"));
+  let payload;
+  try {
+    payload = JSON.parse(localStorage.getItem("cmm"));
+  } catch (error) {
+    console.error("Failed to parse session data:", error);
+    payload = null;
+  }
   if (payload)
     Object.entries(payload).forEach(([category, v]) => {
       if (category === "intro" || category === "metadata") return;

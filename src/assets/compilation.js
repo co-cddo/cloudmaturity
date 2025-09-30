@@ -2,6 +2,7 @@
 // T020: Progress indicators component
 // T021: Improvement counter
 // Works with server-rendered question HTML from compilation.md
+/* global DataMigrationService, safeDOMQuery, safeDOMOperation, safeLocalStorageGet, safeLocalStorageSet */
 
 if (typeof Storage === "undefined") {
   alert(
@@ -52,7 +53,14 @@ function renderProgressIndicators(answeredCount, totalPossible, markedCount) {
 // T021: Update improvement counter
 function updateImprovementCount() {
   const checkboxes = document.querySelectorAll(".improvement-checkbox:checked");
-  const sessionData = JSON.parse(localStorage.getItem("cmm")) || {};
+
+  let sessionData;
+  try {
+    sessionData = JSON.parse(localStorage.getItem("cmm")) || {};
+  } catch (error) {
+    console.error("Failed to load session data for count:", error);
+    sessionData = {};
+  }
 
   let totalAnswered = 0;
   Object.entries(sessionData).forEach(([key, value]) => {
@@ -75,28 +83,46 @@ function updateImprovementCount() {
 
 // T019: Load and show answered questions from server-rendered HTML
 function renderCompilationPage() {
-  const sessionData = JSON.parse(localStorage.getItem("cmm"));
-
-  if (!sessionData || !sessionData.metadata) {
-    document.getElementById("compilation-questions").innerHTML = `
-      <div class="govuk-notification-banner" role="region" aria-labelledby="no-data-title">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="no-data-title">
-            No assessment data found
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <p class="govuk-notification-banner__heading">
-            Please complete your assessment first.
-          </p>
-          <p class="govuk-body">
-            <a class="govuk-notification-banner__link" href="/assessment/">Go to Assessment</a>
-          </p>
-        </div>
-      </div>
-    `;
+  let sessionData;
+  try {
+    sessionData = JSON.parse(localStorage.getItem("cmm"));
+  } catch (e) {
+    console.error("Invalid session data:", e);
+    showErrorMessage(
+      "Your session data appears corrupted. Please start over.",
+      "/assessment/",
+    );
     return;
   }
+
+  if (!sessionData || !sessionData.metadata) {
+    showErrorMessage(
+      "Please complete your assessment first.",
+      "/assessment/",
+      "No assessment data found",
+    );
+    return;
+  }
+
+  // Validate schema structure
+  if (typeof DataMigrationService !== "undefined" && !DataMigrationService.validateSchema(sessionData)) {
+    console.error("Invalid session format");
+    showErrorMessage(
+      "Invalid session format. Please refresh and try again.",
+      "/assessment/",
+    );
+    return;
+  }
+
+  const compilationContainer = document.getElementById("compilation-questions");
+  if (!compilationContainer) {
+    console.error("Compilation container not found");
+    return;
+  }
+
+  // Clear previous error messages if any
+  const existingBanners = compilationContainer.querySelectorAll(".govuk-notification-banner");
+  existingBanners.forEach(banner => banner.remove());
 
   let totalAnswered = 0;
   let totalMarked = 0;
@@ -161,9 +187,21 @@ function renderCompilationPage() {
   renderProgressIndicators(totalAnswered, totalPossibleQuestions, totalMarked);
 
   // T019: Add event listeners to checkboxes for auto-save
+  cleanupEventListeners();
   document.querySelectorAll(".improvement-checkbox").forEach((checkbox) => {
     checkbox.addEventListener("change", handleCheckboxChange);
+    eventListeners.set(checkbox, handleCheckboxChange);
   });
+}
+
+// Store references for cleanup
+const eventListeners = new Map();
+
+function cleanupEventListeners() {
+  eventListeners.forEach((handler, element) => {
+    element.removeEventListener("change", handler);
+  });
+  eventListeners.clear();
 }
 
 // T019: Handle checkbox changes with auto-save
@@ -172,7 +210,15 @@ function handleCheckboxChange(event) {
   const category = checkbox.getAttribute("data-category");
   const question = checkbox.getAttribute("data-question");
 
-  const sessionData = JSON.parse(localStorage.getItem("cmm"));
+  let sessionData;
+  try {
+    sessionData = JSON.parse(localStorage.getItem("cmm"));
+  } catch (error) {
+    console.error("Failed to load session data:", error);
+    alert("Failed to load your data. Please refresh the page.");
+    return;
+  }
+
   if (
     !sessionData ||
     !sessionData[category] ||
@@ -188,7 +234,15 @@ function handleCheckboxChange(event) {
   sessionData.metadata.lastModified = new Date().toISOString();
 
   // Save to localStorage
-  localStorage.setItem("cmm", JSON.stringify(sessionData));
+  try {
+    localStorage.setItem("cmm", JSON.stringify(sessionData));
+  } catch (error) {
+    console.error("Failed to save changes:", error);
+    alert("Failed to save your selection. Please try again.");
+    // Revert checkbox state
+    checkbox.checked = !checkbox.checked;
+    return;
+  }
 
   // T021: Update counter
   updateImprovementCount();
@@ -212,6 +266,58 @@ window.addEventListener("load", () => {
     renderCompilationPage();
   }
 });
+
+// Clean up on page unload
+window.addEventListener("unload", cleanupEventListeners);
+
+// Helper function to show error messages
+function showErrorMessage(message, linkHref, title = "Error") {
+  const container = document.getElementById("compilation-questions");
+  if (!container) return;
+
+  // Clear existing content
+  while (container.firstChild) {
+    container.removeChild(container.firstChild);
+  }
+
+  const banner = document.createElement("div");
+  banner.className = "govuk-notification-banner";
+  banner.setAttribute("role", "region");
+  banner.setAttribute("aria-labelledby", "error-title");
+
+  const header = document.createElement("div");
+  header.className = "govuk-notification-banner__header";
+
+  const headerTitle = document.createElement("h2");
+  headerTitle.className = "govuk-notification-banner__title";
+  headerTitle.id = "error-title";
+  headerTitle.textContent = title;
+
+  header.appendChild(headerTitle);
+  banner.appendChild(header);
+
+  const content = document.createElement("div");
+  content.className = "govuk-notification-banner__content";
+
+  const heading = document.createElement("p");
+  heading.className = "govuk-notification-banner__heading";
+  heading.textContent = message;
+
+  const body = document.createElement("p");
+  body.className = "govuk-body";
+
+  const link = document.createElement("a");
+  link.className = "govuk-notification-banner__link";
+  link.href = linkHref;
+  link.textContent =
+    linkHref === "/assessment/" ? "Go to Assessment" : "Go back";
+
+  body.appendChild(link);
+  content.appendChild(heading);
+  content.appendChild(body);
+  banner.appendChild(content);
+  container.appendChild(banner);
+}
 
 if (typeof module === "object") {
   module.exports = {
