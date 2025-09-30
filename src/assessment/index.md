@@ -43,6 +43,7 @@ You can **begin** a new assessment now or **load** an existing report to build u
   classes: "govuk-button--secondary"
 })}}
 
+<script src="/{{"assets/domHelpers.js" | htmlBaseUrl}}"></script>
 <script src="/{{"assets/dataMigration.js" | htmlBaseUrl}}"></script>
 <script src="/{{"assets/cmm_report.js" | htmlBaseUrl}}"></script>
 <script src="/{{"assets/cmm_assessment.js" | htmlBaseUrl}}"></script>

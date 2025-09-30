@@ -1,3 +1,5 @@
+/* global safeDOMQuery, safeDOMOperation, safeLocalStorageGet, safeLocalStorageSet */
+
 const titles = {
   cost: "Cost & Sustainability",
   data: "Data",
@@ -9,7 +11,10 @@ const titles = {
 };
 function cmm() {
   const data = { categories: {} };
-  const payload = JSON.parse(localStorage.getItem("cmm"));
+  const payload =
+    typeof safeLocalStorageGet !== "undefined"
+      ? safeLocalStorageGet("cmm")
+      : JSON.parse(localStorage.getItem("cmm") || "null");
   if (payload)
     Object.entries(payload).forEach(([category, v]) => {
       if (category === "intro" || category === "metadata") return;

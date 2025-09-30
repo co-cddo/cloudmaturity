@@ -2,7 +2,7 @@
 // T020: Progress indicators component
 // T021: Improvement counter
 // Works with server-rendered question HTML from compilation.md
-/* global DataMigrationService */
+/* global DataMigrationService, safeDOMQuery, safeDOMOperation, safeLocalStorageGet, safeLocalStorageSet */
 
 if (typeof Storage === "undefined") {
   alert(
@@ -315,84 +315,13 @@ function showErrorMessage(message, linkHref, title = "Error") {
   container.appendChild(banner);
 }
 
-// Validate session data schema
+// Validate session data schema - delegates to DataMigrationService
 function validateSessionSchema(data) {
   if (typeof DataMigrationService !== "undefined") {
     return DataMigrationService.validateSchema(data);
   }
-
-  // Fallback validation if migration service not available
-  if (!data || typeof data !== "object") return false;
-  if (!data.metadata || typeof data.metadata !== "object") return false;
-  if (
-    !data.metadata.version ||
-    typeof data.metadata.version !== "string" ||
-    !data.metadata.version.match(/^\d+\.\d+\.\d+$/)
-  )
-    return false;
-  if (
-    !data.metadata.createdAt ||
-    typeof data.metadata.createdAt !== "string"
-  )
-    return false;
-
-  // Validate category structure
-  const validCategories = [
-    "cost",
-    "data",
-    "governance",
-    "operations",
-    "people",
-    "security",
-    "tech",
-  ];
-  for (const category of validCategories) {
-    if (data[category]) {
-      if (typeof data[category] !== "object") return false;
-      // Validate each question in category
-      for (const questionHash in data[category]) {
-        const question = data[category][questionHash];
-        if (typeof question !== "object") return false;
-        if (
-          typeof question.answer !== "number" ||
-          question.answer < 0 ||
-          question.answer > 5
-        )
-          return false;
-        if (typeof question.needsImprovement !== "boolean") return false;
-      }
-    }
-  }
-
-  return true;
-}
-
-// Safe DOM query wrapper
-function safeDOMQuery(selector) {
-  try {
-    const element = document.querySelector(selector);
-    if (!element) {
-      console.warn(`Element not found: ${selector}`);
-    }
-    return element;
-  } catch (error) {
-    console.error(`DOM query failed for ${selector}:`, error);
-    return null;
-  }
-}
-
-// Safe DOM operation wrapper
-function safeDOMOperation(element, operation) {
-  if (!element) {
-    console.warn("Cannot perform operation on null element");
-    return null;
-  }
-  try {
-    return operation(element);
-  } catch (error) {
-    console.error("DOM operation failed:", error);
-    return null;
-  }
+  console.error("DataMigrationService not loaded");
+  return false;
 }
 
 if (typeof module === "object") {
