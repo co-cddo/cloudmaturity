@@ -51,9 +51,9 @@
 
 ## Phase 3.1: Setup & Infrastructure
 
-- [ ] T001 **Verify dependencies installed**: Run `npm install` to ensure Eleventy 3.0.0, @x-govuk/govuk-eleventy-plugin 6.7.2, Jest 29.7.0, jest-environment-jsdom installed
-- [ ] T002 **[P] Add Ajv for schema validation**: Install `ajv` and `ajv-formats` for JSON Schema validation in tests (`npm install --save-dev ajv ajv-formats`)
-- [ ] T003 **[P] Configure Jest for localStorage**: Verify `tests/setup.js` includes localStorage mock for jsdom environment
+- [x] T001 **Verify dependencies installed**: Run `npm install` to ensure Eleventy 3.0.0, @x-govuk/govuk-eleventy-plugin 6.7.2, Jest 29.7.0, jest-environment-jsdom installed
+- [x] T002 **[P] Add Ajv for schema validation**: Install `ajv` and `ajv-formats` for JSON Schema validation in tests (`npm install --save-dev ajv ajv-formats`)
+- [x] T003 **[P] Configure Jest for localStorage**: Verify `tests/setup.js` includes localStorage mock for jsdom environment
 
 ## Phase 3.2: Tests First (TDD) ⚠️ MUST COMPLETE BEFORE 3.3
 
@@ -230,18 +230,15 @@ wait
 _Applied during main() execution_
 
 1. **From Contracts**:
-
    - session-data.schema.json → T004 (schema validation test)
 
 2. **From Data Model**:
-
    - Session Data entity → T013, T014 (extend structure, migration)
    - Export File Format entity → T015, T016 (metadata generation, import handling)
    - Compilation View Model entity → T019, T020 (page logic, progress indicators)
    - Report Filter Model entity → T022, T023 (filtering logic, summary table)
 
 3. **From User Stories (quickstart.md)**:
-
    - Scenario 1 (Complete workflow) → T006
    - Scenario 2 (No improvements) → T007
    - Scenario 3 (Partial completion) → T008
@@ -253,7 +250,6 @@ _Applied during main() execution_
    - Manual validation → T033
 
 4. **From Plan Enhancements**:
-
    - Progress visualization (%, progress bar) → T020
    - Summary table → T023
    - Visual indicators → T027

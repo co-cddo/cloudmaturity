@@ -68,42 +68,49 @@ describe("saveFormValues", () => {
     `;
     m.saveFormValues();
   });
-  it("should save form values correctly", () =>
-    expect(JSON.parse(localStorage.getItem("model1"))).toEqual({
-      section1: {
-        question1: "answer1",
-      },
-    }));
+  it("should save form values correctly", () => {
+    const result = JSON.parse(localStorage.getItem("model1"));
+    expect(result.metadata).toBeDefined();
+    expect(result.metadata.version).toBe("2.0.0");
+    expect(result.section1.question1).toEqual({
+      answer: 0, // "answer1" parses to 0
+      needsImprovement: false,
+    });
+  });
 
   it("shouldn't overwrite other sections", () => {
-    document.body.innerHTML = `<input type="text" name="model1_section2_question1" value="answer1">`;
+    document.body.innerHTML = `<input type="text" name="model1_section2_question1" value="3">`;
     m.saveFormValues();
-    expect(JSON.parse(localStorage.getItem("model1"))).toEqual({
-      section1: {
-        question1: "answer1",
-      },
-      section2: {
-        question1: "answer1",
-      },
+    const result = JSON.parse(localStorage.getItem("model1"));
+    expect(result.metadata).toBeDefined();
+    expect(result.section1.question1).toEqual({
+      answer: 0,
+      needsImprovement: false,
+    });
+    expect(result.section2.question1).toEqual({
+      answer: 3,
+      needsImprovement: false,
     });
   });
   it("shouldn't overwrite other models", () => {
-    document.body.innerHTML = `<input type="text" name="model2_section1_question1" value="answer5">`;
+    document.body.innerHTML = `<input type="text" name="model2_section1_question1" value="5">`;
     m.saveFormValues();
-    expect(JSON.parse(localStorage.getItem("model1"))).toEqual({
-      section1: {
-        question1: "answer1",
-      },
+    const result = JSON.parse(localStorage.getItem("model1"));
+    expect(result.metadata).toBeDefined();
+    expect(result.section1.question1).toEqual({
+      answer: 0,
+      needsImprovement: false,
     });
   });
 
   it("should overwrite sections supplied", () => {
-    document.body.innerHTML = `<input type="text" name="model1_section1_question4" value="answer5">`;
+    document.body.innerHTML = `<input type="text" name="model1_section1_question4" value="5">`;
     m.saveFormValues();
-    expect(JSON.parse(localStorage.getItem("model1"))).toEqual({
-      section1: {
-        question4: "answer5",
-      },
+    const result = JSON.parse(localStorage.getItem("model1"));
+    expect(result.metadata).toBeDefined();
+    expect(result.section1.question4).toEqual({
+      answer: 5,
+      needsImprovement: false,
     });
   });
 });
