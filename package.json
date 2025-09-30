@@ -7,7 +7,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "lint": "eslint .",
+    "lint": "eslint --stats --exit-on-fatal-error .",
     "test": "jest",
     "prepare": "husky install"
   },
