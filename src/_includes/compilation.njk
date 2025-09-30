@@ -1,0 +1,31 @@
+{# Compilation page partial - questions are rendered by compilation.js #}
+
+<div class="compilation-category">
+  <h3 class="govuk-heading-m">
+    <span class="category-title"></span>
+    <span class="category-count govuk-body-s"></span>
+  </h3>
+
+  <div class="category-questions">
+    {# Questions will be inserted here by JavaScript #}
+  </div>
+</div>
+
+{# Template for individual question (used by JavaScript) #}
+<template id="question-template">
+  <div class="govuk-checkboxes__item compilation-question" data-category="" data-question="">
+    <div class="question-content">
+      <h4 class="govuk-heading-s question-title"></h4>
+      <p class="govuk-body-s"><strong>Your answer:</strong> <span class="answer-text"></span></p>
+      <div class="guidance-text govuk-inset-text"></div>
+    </div>
+    <input
+      class="govuk-checkboxes__input improvement-checkbox"
+      type="checkbox"
+      name="improvement"
+      id="">
+    <label class="govuk-label govuk-checkboxes__label" for="">
+      I need to do better
+    </label>
+  </div>
+</template>

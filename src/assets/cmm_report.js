@@ -114,8 +114,8 @@ function renderFullReport() {
 
     if (parseInt(provided_answer) === parseInt(answer)) {
       elem.style.display = "initial";
-      if (getPreviousSibling(elem, "h2"))
-        getPreviousSibling(elem, "h2").style.display = "block";
+      if (getPreviousSibling(elem, "h3"))
+        getPreviousSibling(elem, "h3").style.display = "block";
       continue;
     }
     elem.style.display = "none";
@@ -215,8 +215,180 @@ function download(content, fileName, contentType) {
   a.click();
 }
 
+// T022: Report filtering logic
+function buildFilteredReport() {
+  const sessionData = JSON.parse(localStorage.getItem("cmm"));
+  if (!sessionData) return null;
+
+  let hasImprovements = false;
+  let totalAnswered = 0;
+  let totalMarked = 0;
+  const categoryCounts = {};
+
+  Object.entries(sessionData).forEach(([category, questions]) => {
+    if (category === "intro" || category === "metadata") return;
+
+    const answered = Object.keys(questions).length;
+    const marked = Object.values(questions).filter(
+      (q) => q.needsImprovement,
+    ).length;
+
+    categoryCounts[category] = { answered, marked };
+    totalAnswered += answered;
+    totalMarked += marked;
+
+    if (marked > 0) hasImprovements = true;
+  });
+
+  return {
+    filterActive: hasImprovements,
+    totalAnswered,
+    totalMarked,
+    categoryCounts,
+  };
+}
+
+// T023: Summary table component
+function renderSummaryTable(filterStats) {
+  const summaryDiv = document.getElementById("summary-table");
+  if (!summaryDiv || !filterStats) return;
+
+  if (filterStats.filterActive) {
+    summaryDiv.innerHTML = `
+      <div class="govuk-!-margin-bottom-6">
+        <h2 class="govuk-heading-m">Your improvement focus</h2>
+        <p class="govuk-body">
+          Showing <strong>${filterStats.totalMarked}</strong> of <strong>${filterStats.totalAnswered}</strong> questions you marked for improvement.
+        </p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Category</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Answered</th>
+              <th scope="col" class="govuk-table__header govuk-table__header--numeric">Focus areas</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            ${Object.entries(filterStats.categoryCounts)
+              .filter(([_, counts]) => counts.answered > 0)
+              .map(
+                ([category, counts]) => `
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">${titles[category]}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">${counts.answered}</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric ${counts.marked > 0 ? "govuk-!-font-weight-bold" : ""}">${counts.marked}</td>
+              </tr>
+            `,
+              )
+              .join("")}
+          </tbody>
+        </table>
+      </div>
+    `;
+  } else {
+    summaryDiv.innerHTML = "";
+  }
+}
+
+// T025: Banner notifications
+function renderFilterBanner(filterStats) {
+  const bannerDiv = document.getElementById("filter-banner");
+  if (!bannerDiv || !filterStats) return;
+
+  const compilationVisited = JSON.parse(localStorage.getItem("cmm"))?.metadata
+    ?.lastModified;
+
+  if (!filterStats.filterActive && !compilationVisited) {
+    // Direct access without visiting compilation
+    bannerDiv.innerHTML = `
+      <div class="govuk-notification-banner" role="region" aria-labelledby="direct-access-title">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="direct-access-title">
+            Notice
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            You haven't selected improvement areas yet.
+          </p>
+          <p class="govuk-body">
+            <a class="govuk-notification-banner__link" href="/assessment/compilation/">Visit Report Compilation</a> to focus your report on specific areas.
+          </p>
+        </div>
+      </div>
+    `;
+  } else if (!filterStats.filterActive && compilationVisited) {
+    // No improvements selected
+    bannerDiv.innerHTML = `
+      <div class="govuk-notification-banner" role="region" aria-labelledby="no-selections-title">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="no-selections-title">
+            Information
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            No items selected for improvement - showing all results
+          </p>
+        </div>
+      </div>
+    `;
+  } else {
+    bannerDiv.innerHTML = "";
+  }
+}
+
+// Apply filtering to report display
+function applyReportFilter() {
+  const filterStats = buildFilteredReport();
+  if (!filterStats) return;
+
+  renderFilterBanner(filterStats);
+  renderSummaryTable(filterStats);
+
+  // If filtering is active, hide questions not marked for improvement
+  if (filterStats.filterActive) {
+    const sessionData = JSON.parse(localStorage.getItem("cmm"));
+
+    document.querySelectorAll(".report_answer_section").forEach((elem) => {
+      const [category, question, answer] = elem.id.split("_");
+      const questionData = sessionData?.[category]?.[question];
+
+      // If question not answered or not marked for improvement, hide it
+      if (!questionData || !questionData.needsImprovement) {
+        elem.style.display = "none";
+
+        // Hide the h3 question title (check if not already hidden to avoid redundant operations)
+        const h3 = getPreviousSibling(elem, "h3");
+        if (h3 && h3.style.display !== "none") {
+          h3.style.display = "none";
+        }
+      }
+    });
+
+    // Add "no areas marked for improvement" message to empty categories
+    document
+      .querySelectorAll(".govuk-accordion__section-content")
+      .forEach((section) => {
+        const visibleH3 = section.querySelectorAll(
+          'h3[style*="display: block"], h3:not([style*="display: none"])',
+        );
+        if (visibleH3.length === 0) {
+          // Check if message already exists
+          if (!section.querySelector(".no-improvements-message")) {
+            const message = document.createElement("p");
+            message.className = "govuk-body no-improvements-message";
+            message.textContent = "No areas marked for improvement";
+            section.insertBefore(message, section.firstChild);
+          }
+        }
+      });
+  }
+}
+
 window.addEventListener("load", renderReport);
 window.addEventListener("load", renderFullReport);
+window.addEventListener("load", applyReportFilter);
 
 if (typeof module === "object")
   module.exports = {
@@ -233,4 +405,8 @@ if (typeof module === "object")
     renderFullReport,
     saveReport,
     getPreviousSibling,
+    buildFilteredReport,
+    renderSummaryTable,
+    renderFilterBanner,
+    applyReportFilter,
   };

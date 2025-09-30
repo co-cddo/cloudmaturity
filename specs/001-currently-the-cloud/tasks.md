@@ -132,11 +132,11 @@
 
 ## Phase 3.7: Polish & Validation
 
-- [ ] T031 **[P] Accessibility validation**: Run `npm run test` for accessibility tests (T011 keyboard navigation). Verify all checkboxes have proper ARIA labels, focus visible, Tab order logical, Space/Enter work. Use jest-axe for automated WCAG 2.1 AA checks.
+- [x] T031 **[P] Accessibility validation**: Run `npm run test` for accessibility tests (T011 keyboard navigation). Verify all checkboxes have proper ARIA labels, focus visible, Tab order logical, Space/Enter work. Use jest-axe for automated WCAG 2.1 AA checks.
 
-- [ ] T032 **[P] Performance validation**: Measure page load times for compilation page with 35 questions. Target <2s. Measure localStorage read/write operations. Target <100ms. Log results to confirm within performance budget.
+- [x] T032 **[P] Performance validation**: Measure page load times for compilation page with 35 questions. Target <2s. Measure localStorage read/write operations. Target <100ms. Log results to confirm within performance budget.
 
-- [ ] T033 **Manual quickstart validation**: Execute all 8 scenarios from `specs/001-currently-the-cloud/quickstart.md` manually in browser. Verify each acceptance criterion passes. For Scenario 7 (Screen reader), test with NVDA, JAWS, or VoiceOver to verify announcements of page title, explanatory text, progress indicators, question text, checkbox states, and "I need to do better" labels. Document any issues found.
+- [x] T033 **Manual quickstart validation**: Execute all 8 scenarios from `specs/001-currently-the-cloud/quickstart.md` manually in browser. Verify each acceptance criterion passes. For Scenario 7 (Screen reader), test with NVDA, JAWS, or VoiceOver to verify announcements of page title, explanatory text, progress indicators, question text, checkbox states, and "I need to do better" labels. Document any issues found.
 
 ## Dependencies
 
@@ -230,15 +230,18 @@ wait
 _Applied during main() execution_
 
 1. **From Contracts**:
+
    - session-data.schema.json → T004 (schema validation test)
 
 2. **From Data Model**:
+
    - Session Data entity → T013, T014 (extend structure, migration)
    - Export File Format entity → T015, T016 (metadata generation, import handling)
    - Compilation View Model entity → T019, T020 (page logic, progress indicators)
    - Report Filter Model entity → T022, T023 (filtering logic, summary table)
 
 3. **From User Stories (quickstart.md)**:
+
    - Scenario 1 (Complete workflow) → T006
    - Scenario 2 (No improvements) → T007
    - Scenario 3 (Partial completion) → T008
@@ -250,6 +253,7 @@ _Applied during main() execution_
    - Manual validation → T033
 
 4. **From Plan Enhancements**:
+
    - Progress visualization (%, progress bar) → T020
    - Summary table → T023
    - Visual indicators → T027

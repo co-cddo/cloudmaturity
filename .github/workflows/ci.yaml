@@ -34,8 +34,8 @@ jobs:
       - name: 📦 Install dependencies
         run: yarn
 
-      - run: npm run lint
-      - run: npm test
+      - run: yarn lint
+      - run: yarn test
       - run: PATH_PREFIX=/cloudmaturity/ npm run build
 
       - name: Tar files
