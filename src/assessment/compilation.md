@@ -90,4 +90,6 @@ Your report will then show detailed guidance for only the areas you've selected,
   <a href="/assessment/" class="govuk-link">Back to Assessment</a>
 </div>
 
+<script src="/assets/domHelpers.js"></script>
+<script src="/assets/dataMigration.js"></script>
 <script src="/assets/compilation.js"></script>
