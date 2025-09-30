@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://cloudmaturity.cddo.gov.uk/schemas/session-data-v2.json",
+  "title": "Cloud Maturity Model Session Data v2",
+  "description": "Schema for CMM assessment session data stored in localStorage and exported to files",
+  "type": "object",
+  "required": ["metadata"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["version", "createdAt"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "const": "2.0.0",
+          "description": "Schema version for migration compatibility"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ISO-8601 timestamp when assessment started"
+        }
+      },
+      "additionalProperties": false
+    },
+    "intro": {
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "format": "email" },
+        "organisation": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "patternProperties": {
+    "^(cost|data|governance|operations|people|security|tech)$": {
+      "type": "object",
+      "description": "Category containing answered questions",
+      "patternProperties": {
+        "^question\\d+$": {
+          "type": "object",
+          "required": ["answer", "needsImprovement"],
+          "properties": {
+            "answer": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 5,
+              "description": "Selected answer level (0=unanswered, 1-5=answer levels)"
+            },
+            "needsImprovement": {
+              "type": "boolean",
+              "description": "Whether user marked this question for improvement"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

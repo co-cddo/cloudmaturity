@@ -7,6 +7,16 @@ title: Report
 {% from "govuk/components/button/macro.njk" import govukButton %}
 {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
+<!-- T024: Filter indicators and modify selections button -->
+<div id="filter-banner"></div>
+<div id="summary-table"></div>
+
+{{ govukButton({
+  text: "Modify improvement selections",
+  href: "/assessment/compilation/",
+  classes: "govuk-button--secondary govuk-!-margin-bottom-4"
+})}}
+
 <div id="report-goes-here"></div>
 <style>
   :root {

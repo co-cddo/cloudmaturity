@@ -7,7 +7,7 @@
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
-    "lint": "prettier -c .",
+    "lint": "eslint --stats --exit-on-fatal-error .",
     "test": "jest",
     "prepare": "husky install"
   },
@@ -23,19 +23,30 @@
   "homepage": "https://github.com/co-cddo/cloudmaturity#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@eslint/css": "^0.11.1",
+    "@eslint/js": "^9.36.0",
+    "@eslint/json": "^0.13.2",
+    "@eslint/markdown": "^7.3.0",
     "@x-govuk/govuk-eleventy-plugin": "^6.7.2",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "eslint": "^9.36.0",
+    "globals": "^16.4.0",
     "husky": "^9.1.7",
     "jest": "^29.7.0",
+    "jest-axe": "^10.0.0",
     "jest-environment-jsdom": "^29.7.0",
-    "lint-staged": "^15.3.0",
-    "prettier": "^3.4.2"
+    "lint-staged": "^15.3.0"
   },
   "dependencies": {
     "add": "^2.0.6",
     "chaarts": "github:ffoodd/chaarts"
   },
   "jest": {
-    "testEnvironment": "jsdom"
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ]
   },
   "packageManager": "yarn@4.5.1"
 }

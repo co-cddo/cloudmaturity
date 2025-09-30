@@ -14,3 +14,10 @@ _site
 .cache/
 *.css
 .yarn
+
+# Claude Code commands (user-specific)
+.claude/commands/
+
+# Specify framework scripts and templates (user-specific)
+.specify/scripts/
+.specify/templates/

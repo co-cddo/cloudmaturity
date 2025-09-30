@@ -6,20 +6,15 @@
 {%- for section in collections.cmm -%}
   {%- set contentHtml -%}
     {%- for question in collections[section.fileSlug] -%}
-      <h3 class="govuk-heading-l">{{question.data.title | safe}} <br/><a href="/assessment/{{section.fileSlug}}#{{(question.data.title | hash)}}" aria-label="change your answer to {{question.data.title | safe}}" class="govuk-link govuk-body">[change your answer to this question]</a></h3>
+      <h3 class="govuk-heading-l">{{question.data.title | safe}} <a href="/assessment/{{section.fileSlug}}#{{(question.data.title | hash)}}" aria-label="change your answer to {{question.data.title | safe}}" class="govuk-link">[change your answer]</a></h3>
       <div id="{{section.fileSlug + "_" + (question.data.title | hash) + "_0"}}" class="report_answer_section">
       <p class="govuk-body">You did not answer this question.</p>
       </div>
       {%- for answer in question.content | getContentsAfterTags("h3") -%}
       <div id="{{section.fileSlug + "_" + (question.data.title | hash) + "_" + loop.index}}" class="report_answer_section">
-        {{- (answer | getContentsAfterTags("h4"))[0] -}}
-        {{- (answer | getContentsAfterTags("h4"))[1] -}}
-        {%- set howtodobetter = ((answer | getContentsAfterTags("h4"))[2]) -%}
-        {{- govukDetails({
-          open: true,
-          summaryHtml: "<h4 class='govuk-heading-s'>" + howtodobetter | tagfilter("h4") + "</h2>",
-          html: howtodobetter | replace("How to do better", "")
-        }) -}}
+        {%- set answerParts = answer | getContentsAfterTags("h4") -%}
+        {# Show ONLY "How to do better" section (answerParts[2]) - not collapsible #}
+        {{- answerParts[2] | safe -}}
       </div>
       {%- endfor -%}
       {% if loop.last == false %}
