@@ -1,6 +1,8 @@
 import js from "@eslint/js";
 import globals from "globals";
 import json from "@eslint/json";
+import markdown from "@eslint/markdown";
+import css from "@eslint/css";
 
 export default [
   // Ignore patterns
@@ -10,8 +12,6 @@ export default [
       "**/_site/**",
       "**/.cache/**",
       "**/dist/**",
-      "**/*.css",
-      "**/*.md",
       "**/.yarn/**",
       "**/.devcontainer/**",
     ],
@@ -43,8 +43,13 @@ export default [
       sourceType: "commonjs",
     },
     rules: {
-      // Disable no-unused-vars for now
-      "no-unused-vars": "off",
+      // Warn about unused vars but don't break builds
+      "no-unused-vars": ["warn", {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+        caughtErrorsIgnorePattern: "^_"
+      }],
+      "no-undef": "error",
     },
   },
 
@@ -55,16 +60,7 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
-        ...globals.jest,
-        describe: "readonly",
-        test: "readonly",
-        it: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-        jest: "readonly",
+        ...globals.jest, // Already includes describe, test, it, expect, etc.
       },
     },
   },
@@ -75,9 +71,35 @@ export default [
     plugins: { json },
     language: "json/json",
     ...json.configs.recommended,
+  },
+
+  // Markdown files - disable all rules for now to allow progressive fixing
+  {
+    files: ["**/*.md"],
+    plugins: { markdown },
+    language: "markdown/commonmark",
     rules: {
-      // Ignore JSON parsing errors for now
-      "json/no-duplicate-keys": "off",
+      // Disable all markdown rules - will enable progressively
+      "markdown/fenced-code-language": "off",
+      "markdown/no-missing-label-refs": "off",
+      "markdown/no-invalid-label-refs": "off",
+      "markdown/no-duplicate-headings": "off",
+      "markdown/no-empty-links": "off",
+    },
+  },
+
+  // CSS files - disable all rules for now to allow progressive fixing
+  {
+    files: ["**/*.css"],
+    plugins: { css },
+    language: "css/css",
+    rules: {
+      // Disable all CSS rules - will enable progressively
+      "css/no-invalid-properties": "off",
+      "css/no-important": "off",
+      "css/use-baseline": "off",
+      "css/no-duplicate-properties": "off",
+      "css/no-shorthand-property-overrides": "off",
     },
   },
 ];
