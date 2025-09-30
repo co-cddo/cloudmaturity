@@ -118,7 +118,7 @@ With the new three-step process, after completing all assessment questions (Step
 
 - **FR-012**: System MUST NOT modify any content within the `src/assessment` directory (existing question files and guidance content must remain unchanged).
 
-- **FR-013**: The "Report Compilation" step MUST be clearly labeled with the title "Report Compilation" and include brief explanatory text that instructs users to review their answers and select areas where they need to improve. The page MUST display progress indicators showing both overall question count (e.g., "24 of 35 questions answered") and per-category counts (e.g., "Cost: 5/7, Security: 6/14").
+- **FR-013**: The "Report Compilation" step MUST be clearly labeled with the title "Report Compilation" and include brief explanatory text that instructs users to review their answers and select areas where they need to improve. The page MUST display progress indicators showing both overall question count (e.g., "24 of 35 questions answered"), per-category counts (e.g., "Cost: 5/7, Security: 6/14"), percentage of marked items (e.g., "40% marked for improvement"), and a visual progress bar. The progress bar MUST use either HTML5 `<progress>` element or a styled div with `role="progressbar"` ARIA attribute for accessibility.
 
 - **FR-014**: When users access the Report page directly via URL without having visited the "Report Compilation" step, system MUST display the unfiltered report with a notification banner explaining that users should visit the "Report Compilation" step to filter results to their improvement areas.
 
@@ -126,7 +126,7 @@ With the new three-step process, after completing all assessment questions (Step
 
 ### Non-Functional Requirements
 
-- **Performance**: The "Report Compilation" step should load all answered questions and their "How to determine if this good enough" text within 2 seconds on standard broadband connections.
+- **Performance**: The "Report Compilation" step should load all answered questions and their "How to determine if this good enough" text within 2 seconds on standard broadband connections (5+ Mbps download, 1+ Mbps upload). LocalStorage read/write operations should complete within 100ms.
 
 - **Accessibility**: The "Report Compilation" step must be fully keyboard navigable, all checkboxes must have proper ARIA labels, and screen readers must be able to announce the question text, answer selection, and guidance text clearly.
 

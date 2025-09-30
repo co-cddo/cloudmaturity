@@ -131,7 +131,7 @@
 
 - [ ] T032 **[P] Performance validation**: Measure page load times for compilation page with 35 questions. Target <2s. Measure localStorage read/write operations. Target <100ms. Log results to confirm within performance budget.
 
-- [ ] T033 **Manual quickstart validation**: Execute all 8 scenarios from `specs/001-currently-the-cloud/quickstart.md` manually in browser. Verify each acceptance criterion passes. Document any issues found.
+- [ ] T033 **Manual quickstart validation**: Execute all 8 scenarios from `specs/001-currently-the-cloud/quickstart.md` manually in browser. Verify each acceptance criterion passes. For Scenario 7 (Screen reader), test with NVDA, JAWS, or VoiceOver to verify announcements of page title, explanatory text, progress indicators, question text, checkbox states, and "I need to do better" labels. Document any issues found.
 
 ## Dependencies
 
@@ -243,6 +243,7 @@ _Applied during main() execution_
    - Scenario 4 (Direct access) → T009
    - Scenario 5 (Save/load) → T010
    - Scenario 6 (Keyboard) → T011
+   - Scenario 7 (Screen reader) → T011 (keyboard navigation), T031 (WCAG validation)
    - Scenario 8 (Migration) → T012
    - Manual validation → T033
 
