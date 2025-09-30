@@ -2,8 +2,6 @@
 layout: sub-navigation
 order: 2
 title: Report
-eleventyNavigation:
-  parent: Assessment
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
