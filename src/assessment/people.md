@@ -2,6 +2,7 @@
 layout: sub-navigation
 tags: cmm
 title: People
+sectionKey: Assessment
 eleventyNavigation:
   parent: Assessment
 ---
