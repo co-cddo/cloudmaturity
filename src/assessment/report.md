@@ -5,6 +5,7 @@ title: Report
 sectionKey: Assessment
 eleventyNavigation:
   parent: Assessment
+  order: 2
 ---
 
 {% from "govuk/components/button/macro.njk" import govukButton %}
