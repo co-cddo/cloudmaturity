@@ -1,95 +1,109 @@
 # Cloud Maturity Model and Assessment Tool
 
-[![CI](https://github.com/co-cddo/cloudmaturity/actions/workflows/ci.yaml/badge.svg)](https://github.com/co-cddo/cloudmaturity/actions/workflows/ci.yaml) [![CodeQL](https://github.com/co-cddo/cloudmaturity/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/co-cddo/cloudmaturity/actions/workflows/github-code-scanning/codeql) ![GitHub License](https://img.shields.io/github/license/co-cddo/cloudmaturity) ![GitHub deployments](https://img.shields.io/github/deployments/co-cddo/cloudmaturity/github-pages) ![GitHub language count](https://img.shields.io/github/languages/count/co-cddo/cloudmaturity) ![GitHub top language](https://img.shields.io/github/languages/top/co-cddo/cloudmaturity) [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/co-cddo/cloudmaturity/badge)](https://scorecard.dev/viewer/?uri=github.com/co-cddo/cloudmaturity) [![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8980/badge)](https://www.bestpractices.dev/projects/8980)
+[![CI](https://github.com/co-cddo/cloudmaturity/actions/workflows/ci.yaml/badge.svg)](https://github.com/co-cddo/cloudmaturity/actions/workflows/ci.yaml)
+[![CodeQL](https://github.com/co-cddo/cloudmaturity/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/co-cddo/cloudmaturity/actions/workflows/github-code-scanning/codeql)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/co-cddo/cloudmaturity/badge)](https://scorecard.dev/viewer/?uri=github.com/co-cddo/cloudmaturity)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8980/badge)](https://www.bestpractices.dev/projects/8980)
+![GitHub License](https://img.shields.io/github/license/co-cddo/cloudmaturity)
+![GitHub deployments](https://img.shields.io/github/deployments/co-cddo/cloudmaturity/github-pages)
+
+A self-assessment tool that helps organisations understand their cloud maturity and provides targeted, actionable guidance for improvement.
 
 ![Screenshot from report page](images/report-screengrab.png)
 
-This repository is the home of the GDS Cloud Maturity Model and Assessment Tool
+## Overview
 
-The project is currently in an alpha phase, contributions are very welcome.
+The Cloud Maturity Model provides a structured way to evaluate your organisation's cloud capabilities across multiple dimensions. Rather than producing a simple score, it delivers contextual guidance that respects the principle of proportionality—what's appropriate for a critical national service differs from what's needed for a departmental intranet.
 
-The intend of the maturity model tool and report is to provide targeted actionable guidance.
+**This project is currently in alpha.** Contributions are very welcome.
 
-The questions are structured with 5 potential answers that are intended to range from the worst it could be, to the best it could be, with a distributed spread between that.
+## How It Works
 
-The answers are framed as attestations you should be able to make based on your current state, scoring 'low' is not necessarily a 'bad thing' in fact scoring too 'high' might in fact indicate over optimisation and a disproportionate solution.
+### The Assessment
 
-For example having a highly resilient and secure solution for the passport validating service makes sense, however would be disproportionate for the canteen menu.
+Each question presents five attestation levels, ranging from minimal capability to best practice. You select the statement that best describes your current state.
 
-Likewise there is little value creating robust privileged access processes that require management sign off to exercise if you're a small parish council with only one person qualified to manage the small IT infrastructure footprint.
+The intent is not to push everyone toward the highest level. Scoring "low" isn't necessarily bad—in fact, scoring too "high" might indicate over-engineering for your context. A highly resilient, zero-trust architecture makes sense for passport validation services but would be disproportionate for publishing the canteen menu.
 
-The report in response to the attestations is structured firstly as helping the reader understand if the current state is good enough, and if not provide very explicit and targeted guidance on how to work towards the next attestation.
+### The Report
 
-## What it isn't
+Based on your attestations, the report helps you:
 
-Its important to clarify what this is not, this is not intended to be a assurance tool, or for results to be collected, it is first and foremost a tool to help provide targeted explicit guidance that will help organisations recognise where they are, what risks they're operating with, and specifically how to improve their position.
+1. **Understand if your current state is appropriate** for your risk profile and service criticality
+2. **Get explicit, targeted guidance** on how to reach the next level when improvement is warranted
 
-## Contributions / _❤️ Pull Requests_
+## What This Tool Is Not
 
-The repository is configured with [dev containers](https://containers.dev/) so should be able to use [Github Codespaces](https://github.com/features/codespaces) or your preferred [compatible editor](https://containers.dev/supporting#editors).
+This is **not** an assurance or compliance tool. Results are not collected or reported centrally. It exists solely to help organisations:
 
-You will find all the questions and guidance in [./src/assessment](./src/assessment/).
-The format of these are in markdown in the following convention, _the details are capitalised for effect, but should be normal sentence case in actual use_.
+- Recognise where they are
+- Understand what risks they're operating with
+- Learn specifically how to improve their position
 
-You can add a new question simply by adding a new file, or modify existing ones as necessary.
+## Getting Started
 
-To preview your changes, run `npm start` and then open [http://localhost:8080](http://localhost:8080) in your browser.
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start the development server
+npm start
+```
+
+Then open [http://localhost:8080](http://localhost:8080) in your browser.
+
+### Running Tests
+
+```bash
+npm test
+```
+
+## Contributing
+
+Contributions are welcome! The repository is configured with [dev containers](https://containers.dev/), so you can use [GitHub Codespaces](https://github.com/features/codespaces) or any [compatible editor](https://containers.dev/supporting#editors).
+
+### Adding or Modifying Questions
+
+All questions and guidance live in [`./src/assessment`](./src/assessment/). Each question is a markdown file with the following structure:
 
 ```markdown
 ---
-title: QUESTION TITLE
-tags: CATEGORY E.G. 'cost'
+title: Question Title
+tags: category
 eleventyNavigation:
-  parent: CATEGORY E.G. 'cost'
+  parent: category
 ---
 
-### ANSWER:1
+### Answer 1
 
 #### **How to determine if this good enough**
 
-INSERT SOME TEXT HERE
+Guidance text...
 
 #### **How to do better**
 
-INSERT SOME TEXT HERE
+Improvement guidance...
 
-### ANSWER:2
+### Answer 2
 
-#### **How to determine if this good enough**
-
-INSERT SOME TEXT HERE
-
-#### **How to do better**
-
-INSERT SOME TEXT HERE
-
-### ANSWER:3
-
-#### **How to determine if this good enough**
-
-INSERT SOME TEXT HERE
-
-#### **How to do better**
-
-INSERT SOME TEXT HERE
-
-### ANSWER:4
-
-#### **How to determine if this good enough**
-
-INSERT SOME TEXT HERE
-
-#### **How to do better**
-
-INSERT SOME TEXT HERE
-
-### ANSWER:5
-
-#### **How to determine if this good enough**
-
-INSERT SOME TEXT HERE
-
-#### **How to do better**
-
-INSERT SOME TEXT HERE
+...and so on through Answer 5
 ```
+
+Simply add a new file to create a new question, or modify existing ones as needed.
+
+## Tech Stack
+
+- [Eleventy 3.0](https://www.11ty.dev/) - Static site generator
+- [@x-govuk/govuk-eleventy-plugin](https://x-govuk.github.io/govuk-eleventy-plugin/) - GOV.UK Design System integration
+- [Jest](https://jestjs.io/) - Testing framework
+
+## Licence
+
+[MIT](LICENSE)
