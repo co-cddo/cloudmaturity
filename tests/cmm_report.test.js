@@ -100,7 +100,8 @@ describe("addRule", () => {
   it("Should add the CSS rule to the document", () => {
     m.addRule("div", { background: "blue" });
     const el = document.createElement("div");
-    expect(getComputedStyle(el).background).toBe("blue");
+    // jsdom in Jest 30 returns computed colors as RGB values
+    expect(getComputedStyle(el).background).toMatch(/blue|rgb\(0, 0, 255\)/);
   });
 });
 describe("getScoreTable", () => {
