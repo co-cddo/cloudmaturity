@@ -1,9 +1,9 @@
-const govukEleventyPlugin = require("@x-govuk/govuk-eleventy-plugin");
-const tagFilter = require("./plugins/tagFilter");
-const hashFilter = require("./plugins/hashFilter");
-const getContentsAfterTags = require("./plugins/getContentsAfterTags");
-const fs = require("fs");
-const util = require("util");
+import { govukEleventyPlugin } from "@x-govuk/govuk-eleventy-plugin";
+import tagFilter from "./plugins/tagFilter.js";
+import hashFilter from "./plugins/hashFilter.js";
+import getContentsAfterTags from "./plugins/getContentsAfterTags.js";
+import fs from "fs";
+import util from "util";
 
 function gitRev() {
   const rev = fs.readFileSync(".git/HEAD").toString().trim();
@@ -18,7 +18,7 @@ function gitSHA() {
   return gitRev().slice(0, 8);
 }
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
       productName: `Cloud Maturity Model <strong class="govuk-tag govuk-phase-banner__content__tag">Alpha</strong>`,
@@ -27,6 +27,9 @@ module.exports = function (eleventyConfig) {
       meta: {
         text: `Page built from <a href="https://github.com/co-cddo/cloudmaturity/commit/${gitRev()}">${gitSHA()}</a> at ${new Date().toISOString()}`,
       },
+    },
+    templates: {
+      error404: false,
     },
   });
 
@@ -54,7 +57,6 @@ module.exports = function (eleventyConfig) {
     markdownTemplateEngine: "njk",
     dir: {
       input: "./src",
-      layouts: "../node_modules/@x-govuk/govuk-eleventy-plugin/layouts",
     },
   };
-};
+}
