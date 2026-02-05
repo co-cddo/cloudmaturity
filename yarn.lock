@@ -832,6 +832,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@eslint/core@npm:^1.0.1":
+  version: 1.1.0
+  resolution: "@eslint/core@npm:1.1.0"
+  dependencies:
+    "@types/json-schema": "npm:^7.0.15"
+  checksum: 10c0/0f875d6f24fbf67cc796e01c2ca82884f755488052ed84183e56377c5b90fe10b491a26e600642db4daea1d5d8ab7906ec12f2bd5cbdb5004b0ef73c802bdb57
+  languageName: node
+  linkType: hard
+
 "@eslint/css-tree@npm:^3.6.6":
   version: 3.6.8
   resolution: "@eslint/css-tree@npm:3.6.8"
@@ -877,15 +886,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/json@npm:^0.14.0":
-  version: 0.14.0
-  resolution: "@eslint/json@npm:0.14.0"
+"@eslint/json@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@eslint/json@npm:1.0.0"
   dependencies:
-    "@eslint/core": "npm:^0.17.0"
-    "@eslint/plugin-kit": "npm:^0.4.1"
+    "@eslint/core": "npm:^1.0.1"
+    "@eslint/plugin-kit": "npm:^0.5.1"
     "@humanwhocodes/momoa": "npm:^3.3.10"
     natural-compare: "npm:^1.4.0"
-  checksum: 10c0/1832b0d07dbf314213e02ba8c391b8f2095e72c8ff091226b0048d8db24900048015e51e2906ae71423174c1524779d94e32140db2d608d4337deb2a208c5fb5
+  checksum: 10c0/3ce7d8a09171a59d23e6de819fbf4bccc9b0021ee1e3d86d8129ab8a904756a26b71968dcbbdf07b646c77ddc09e5dc140b25b5ada10a48dda8493ab657a4f7e
   languageName: node
   linkType: hard
 
@@ -920,6 +929,16 @@ __metadata:
     "@eslint/core": "npm:^0.17.0"
     levn: "npm:^0.4.1"
   checksum: 10c0/51600f78b798f172a9915dffb295e2ffb44840d583427bc732baf12ecb963eb841b253300e657da91d890f4b323d10a1bd12934bf293e3018d8bb66fdce5217b
+  languageName: node
+  linkType: hard
+
+"@eslint/plugin-kit@npm:^0.5.1":
+  version: 0.5.1
+  resolution: "@eslint/plugin-kit@npm:0.5.1"
+  dependencies:
+    "@eslint/core": "npm:^1.0.1"
+    levn: "npm:^0.4.1"
+  checksum: 10c0/877ecb0ccad8eddd9f066821bdee4d6839aa1afc621a5b9442443854beab8d2d2198467481d8a9c2d0df860ca5b7fac177b83ad8b786c34ba221e59d59307e77
   languageName: node
   linkType: hard
 
@@ -2776,7 +2795,7 @@ __metadata:
     "@11ty/eleventy": "npm:^3.0.0"
     "@eslint/css": "npm:^0.14.1"
     "@eslint/js": "npm:^9.39.2"
-    "@eslint/json": "npm:^0.14.0"
+    "@eslint/json": "npm:^1.0.0"
     "@eslint/markdown": "npm:^7.5.1"
     "@x-govuk/govuk-eleventy-plugin": "npm:^8.3.0"
     add: "npm:^2.0.6"
@@ -2784,7 +2803,7 @@ __metadata:
     ajv-formats: "npm:^3.0.1"
     chaarts: "github:ffoodd/chaarts"
     eslint: "npm:^9.39.2"
-    globals: "npm:^17.2.0"
+    globals: "npm:^17.3.0"
     husky: "npm:^9.1.7"
     jest: "npm:^30.2.0"
     jest-axe: "npm:^10.0.0"
@@ -3771,10 +3790,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^17.2.0":
-  version: 17.2.0
-  resolution: "globals@npm:17.2.0"
-  checksum: 10c0/fd25a98b08c1d31082337cbbb5ff1b90b9980e1db69a8621fb942bdb2cdca8aa54d61466742e8bf4910578ea5fa903b8bf83bffd1b2d45551cc614830dba910b
+"globals@npm:^17.3.0":
+  version: 17.3.0
+  resolution: "globals@npm:17.3.0"
+  checksum: 10c0/7f21443ecaa60c6e9ff56d9fb6f10a9b5f9514e7f22e5392f715472bb220ce31c865ebf414a32695150e733fb3e1013e6322dbce70fddd1e066f372b8d55a4b8
   languageName: node
   linkType: hard
 
