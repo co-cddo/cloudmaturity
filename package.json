@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/co-cddo/cloudmaturity#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy": "^3.1.5",
     "@eslint/css": "^1.0.0",
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^1.1.0",
@@ -36,7 +36,7 @@
     "jest": "^30.3.0",
     "jest-axe": "^10.0.0",
     "jest-environment-jsdom": "^30.3.0",
-    "lint-staged": "^16.3.2"
+    "lint-staged": "^16.4.0"
   },
   "dependencies": {
     "add": "^2.0.6",
