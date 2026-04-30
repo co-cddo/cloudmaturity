@@ -30,7 +30,7 @@
     "@x-govuk/govuk-eleventy-plugin": "^9.0.1",
     "ajv": "^8.18.0",
     "ajv-formats": "^3.0.1",
-    "eslint": "^10.1.0",
+    "eslint": "^10.2.1",
     "globals": "^17.5.0",
     "husky": "^9.1.7",
     "jest": "^30.3.0",
