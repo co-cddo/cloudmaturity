@@ -23,20 +23,20 @@
   "homepage": "https://github.com/co-cddo/cloudmaturity#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.5",
-    "@eslint/css": "^1.1.0",
+    "@eslint/css": "^1.2.0",
     "@eslint/js": "^10.0.1",
     "@eslint/json": "^1.2.0",
     "@eslint/markdown": "^8.0.1",
     "@x-govuk/govuk-eleventy-plugin": "^9.0.1",
-    "ajv": "^8.18.0",
+    "ajv": "^8.20.0",
     "ajv-formats": "^3.0.1",
-    "eslint": "^10.1.0",
-    "globals": "^17.5.0",
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
     "husky": "^9.1.7",
     "jest": "^30.3.0",
     "jest-axe": "^10.0.0",
     "jest-environment-jsdom": "^30.3.0",
-    "lint-staged": "^16.4.0"
+    "lint-staged": "^17.0.2"
   },
   "dependencies": {
     "add": "^2.0.6",
